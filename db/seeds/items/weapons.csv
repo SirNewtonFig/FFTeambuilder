@@ -1,0 +1,75 @@
+Name,WP,W-EV,Flags,Classes,Extras,Add,Cancels,Element,Proc,Strengthens,Always,Formula
+Dagger,3,10,2-swords,Sq Ch Th Me Nj Dc,+1 speed,,,,,,,(PA+SP)/2*WP
+Mythril Knife,4,10,2-swords,Sq Ch Th Me Nj Dc,+1 speed,,,,,,,(PA+SP)/2*WP
+Blind Knife,5,10,2-swords,Sq Ch Th Me Nj Dc,+1 speed,Darkness,,,,,,(PA+SP)/2*WP
+Mage Masher,5,10,2-swords / leeches MP,Sq Ch Th Me Nj Dc,,,,,,,,PA*WP
+Platina Dagger,6,10,2-swords,Sq Ch Th Me Nj Dc,+1 speed,,,,,,,(PA+SP)/2*WP
+Main Gauche,7,40,2-swords,Sq Ch Th Me Nj Dc,+1 speed,,,,,,,(PA+SP)/2*WP
+Orichalcum,8,10,2-swords,Sq Ch Th Me Nj Dc,+1 speed,,,,,,,(PA+SP)/2*WP
+Assassin Dagger,9,10,2-swords,Sq Ch Th Me Nj Dc,+1 speed,Death Sentence,,,,,,(PA+SP)/2*WP
+Hidden Knife,8,20,2-swords 2-hands,Th Nj,,,,,,,,(PA+SP)/2*WP
+Ninja Knife,9,20,2-swords 2-hands,Th Nj,,,,,,,,(PA+SP)/2*WP
+Short Edge,10,20,2-swords 2-hands,Th Nj,,,,,,,,(PA+SP)/2*WP
+Broad Sword,4,25,2-swords 2-hands,Sq Kn Ge Sg,,,,,,,,PA*WP
+Long Sword,5,25,2-swords 2-hands,Sq Kn Ge Sg,,,,,,,,PA*WP
+Parrying Sword,6,40,2-swords 2-hands,Sq Kn Ge Sg,,,,,,,,PA*WP
+Mythril Sword,7,25,2-swords 2-hands,Sq Kn Ge Sg,+2 MA,,,,,,,PA*WP
+Blood Sword,10,25,2-swords 2-hands / leeches HP,Sq Kn Ge Sg,,,,Dark,,,,PA*WP
+Coral Sword,8,25,2-swords 2-hands,Sq Kn Ge Sg,,,,Lightning,Mjollnir,,,PA*WP
+Ancient Sword,11,25,2-swords 2-hands,Sq Kn Ge Sg,,Don't Move,,,,,,PA*WP
+Scramasax,9,25,2-swords 2-hands,Sq Kn Ge Sg,,,,,Double Blow,,,PA*WP
+Paladin Sword,10,25,2-swords 2-hands,Sq Kn Ge Sg,,,,Holy,Holy Strike,,,PA*WP
+Demon Hilt,10,25,2-swords 2-hands,Sq Kn Ge Sg,,,,Fire,Demon Fire,,,PA*WP
+Asura Knife,8,35,2-swords 2-hands,Sm,,,,,Double Blow,,,(PA * BR)/100 * WP
+Koutetsu Knife,9,35,2-swords 2-hands,Sm,,,,,Double Blow,,,(PA * BR)/100 * WP
+Bizen Boat,10,15,2-swords 2-hands,Sm,,,,,Double Blow,,,(PA * BR)/100 * WP
+Murasame,11,35,2-swords 2-hands,Sm,,,,,Double Blow,,,(PA * BR)/100 * WP
+Heaven's Cloud,12,35,2-swords 2-hands,Sm,,,,,Double Blow,,,(PA * BR)/100 * WP
+Kiyomori,13,35,,Sm,,,,,Double Blow,,,(PA * BR)/100 * WP
+Battle Axe,12,40,2-hands only,Sq Ge,,,,,Decapitate,,,(1..PA) * WP
+Rod,3,20,2-swords 2-hands,Wi Su Or Sg,,,,,,,,PA*WP
+Thunder Rod,5,20,2-swords 2-hands,Wi Su Or Sg,,,,Lightning,Chain Lightning,Lightning,,PA*WP
+Flame Rod,5,20,2-swords 2-hands,Wi Su Or Sg,,,,Fire,Explosion,Fire,,PA*WP
+Ice Rod,5,20,2-swords 2-hands,Wi Su Or Sg,,,,Ice,Ice Bracelet,Ice,,PA*WP
+Poison Rod,8,20,2-swords 2-hands,Wi Su Or Sg,,Poison,,,,,,PA*WP
+Wizard Rod,4,20,2-swords 2-hands,Wi Su Or Sg,+2 MA,,,,,,,PA*WP
+Oak Staff,3,20,2-swords 2-hands,Pr TM Su Or Sg,,,,,,,,MA*WP
+White Staff,3,20,2-swords 2-hands,Pr TM Su Or Sg,,,Negative Status,,,,,PA*WP
+Healing Staff,8,20,2-swords 2-hands / Heals target,Pr TM Su Or Sg,,,,,,,,MA*WP
+Rainbow Staff,5,20,2-swords 2-hands,Pr TM Su Or Sg,,Positive Status,,,,,,PA*WP
+Wizard Staff,4,20,2-swords 2-hands,Pr TM Su Or Sg,+1 MA,,,,,,,MA*WP
+Gold Staff,6,20,2-swords 2-hands,Pr TM Su Or Sg,,,Positive Status,,,,,PA*WP
+Flail,8,5,2-swords 2-hands / Concentrate,Sq Pr Nj,,,,,,,,WP*WP
+Flame Whip,9,5,2-swords 2-hands,Sq Pr Nj,,,,,Explosion,,,(1..PA) * WP
+Morning Star,10,5,2-swords 2-hands / Concentrate,Sq Pr Nj,,,,,,,,WP*WP
+Romanda Gun,8,5,8 Range,Ch Me,,,,,,,,WP*WP
+Chocobo Gun,12,5,Exactly 3 Range,Ch Me,,,,,,,,WP*WP
+Bow Gun,4,5,4 Range,Sq Ar,,,,,Doubleshot,,,PA*WP
+Night Killer,5,5,4 Range,Sq Ar,,,,,Doubleshot,,,PA*WP
+Lava Bolt,7,5,4 Range,Sq Ar,,,,,Lava Ball,,,PA*WP
+Arbalest,9,5,4 Range,Sq Ar,,,,,Doubleshot,,,PA*WP
+Hunting Bow,10,5,4 Range,Sq Ar,,,,,Doubleshot,,,PA*WP
+Long Bow,5,20,6 Range / 2-hands only,Ar,,,,,,,,(PA+SP)/2*WP
+Silver Bow,6,20,6 Range / 2-hands only,Ar,,,,,,,,(PA+SP)/2*WP
+Ice Bow,7,20,6 Range / 2-hands only,Ar,,,,Ice,Ice Bracelet,,,(PA+SP)/2*WP
+Lightning Bow,8,20,6 Range / 2-hands only,Ar,,,,Lightning,Mjollnir,,,(PA+SP)/2*WP
+Windslash Bow,12,20,6 Range / 2-hands only,Ar,,,,Wind,Gusty Wind,,,(PA+SP)/2*WP
+Mythril Bow,10,20,6 Range / 2-hands only,Ar,+3 MA,,,,,,,(PA+SP)/2*WP
+Ramia Harp,10,10,Exactly 3 Range,Bd,,Confusion,,,,,,(PA+MA)/2 * WP
+Bloody Strings,13,10,Exactly 3 Range / leeches HP,Bd,,,,,,,,(PA+MA)/2 * WP
+Battle Dict,9,15,Exactly 3 Range,Su Me Or Sg,,,,,Diminish,,,(PA+MA)/2 * WP
+Monster Dict,11,15,Exactly 3 Range,Su Me Or Sg,,,,,Bio 3,,,(PA+MA)/2 * WP
+Papyrus Plate,13,15,Exactly 3 Range,Su Me Or Sg,,,,,Flare,,,(PA+MA)/2 * WP
+Javelin,8,20,2 Range / 2-hands,Ln,+2 Jump,,,,,,,PA*WP
+Spear,9,20,2 Range / 2-hands,Ln,+2 Jump,,,,,,,PA*WP
+Mythril Spear,10,20,2 Range / 2-hands,Ln,+2 Jump,,,,,,,PA*WP
+Partisan,11,20,2 Range / 2-hands,Ln,+2 Jump,,,,,,,PA*WP
+Cypress Rod,6,30,2 Range / 2-hands,Or Sg,+1 Move,,,,,,,MA*WP
+Battle Bamboo,7,30,2 Range / 2-hands,Or Sg,+1 Move,,,,,,,MA*WP
+Musk Rod,8,30,2 Range / 2-hands,Or Sg,+1 Move,,,,,,,MA*WP
+Iron Fan,9,30,2 Range / 2-hands,Or Sg,+1 Move,,,,,,,MA*WP
+Gokuu Rod,10,30,2 Range / 2-hands,Or Sg,+1 Move,Innocent,,,,,,MA*WP
+C Bag,10,5,,Female,+1 MA,,,,,,,(1..PA) * WP
+P Bag,12,5,,Female,,,,,,,Regen,(1..PA) * WP
+Persia,10,50,2 Range,Dc,,,,,Cancel Charging,,,(PA+MA)/2 * WP
+Cashmere,12,50,2 Range,Dc,,,,,Cancel Charging,,,(PA+MA)/2 * WP

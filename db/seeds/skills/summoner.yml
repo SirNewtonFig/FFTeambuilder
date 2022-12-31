@@ -1,0 +1,64 @@
+- name: Moogle
+  job_id: 9
+  jp_cost: 80
+  skill_type: action
+
+- name: Shiva
+  job_id: 9
+  jp_cost: 180
+  skill_type: action
+
+- name: Ramuh
+  job_id: 9
+  jp_cost: 180
+  skill_type: action
+
+- name: Ifrit
+  job_id: 9
+  jp_cost: 180
+  skill_type: action
+
+- name: Fairy
+  job_id: 9
+  jp_cost: 200
+  skill_type: action
+
+- name: Silf
+  job_id: 9
+  jp_cost: 200
+  skill_type: action
+
+- name: Carbunkle
+  job_id: 9
+  jp_cost: 350
+  skill_type: action
+
+- name: Titan
+  job_id: 9
+  jp_cost: 200
+  skill_type: action
+
+- name: Odin
+  job_id: 9
+  jp_cost: 200
+  skill_type: action
+
+- name: Salamander
+  job_id: 9
+  jp_cost: 200
+  skill_type: action
+
+- name: Lich
+  job_id: 9
+  jp_cost: 200
+  skill_type: action
+
+- name: MP Restore
+  job_id: 9
+  jp_cost: 400
+  skill_type: reaction
+
+- name: Half of MP
+  job_id: 9
+  jp_cost: 750
+  skill_type: support

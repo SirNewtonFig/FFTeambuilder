@@ -1,0 +1,304 @@
+class Character
+  extend Memoist
+
+  DEFAULT_DATA = {
+    name: 'Rad',
+    sex: 'm',
+    zodiac: 'aries',
+    job: 1,
+    brave: 60,
+    faith: 60,
+    secondary: 2,
+    reaction: nil,
+    support: nil,
+    movement: nil,
+    skills: {
+      primary: [],
+      secondary: []
+    },
+    rhand: nil,
+    lhand: nil,
+    helmet: nil,
+    armor: nil,
+    accessory: nil
+  }
+
+  ZODIACS = %w{ aries taurus gemini cancer leo virgo libra scorpio sagittarius capricorn aquarius pisces }
+
+  attr_accessor :data
+
+  def initialize(data)
+    @data = data
+  end
+
+  def name
+    data['name']
+  end
+
+  memoize def job
+    Job.find(data['job'])
+  end
+
+  def sex
+    data['sex']
+  end
+
+  def brave
+    data['brave']
+  end
+
+  def faith
+    data['faith']
+  end
+
+  def zodiac
+    data['zodiac']
+  end
+
+  def hp
+    job_data['hp'] +
+      items.map{|i| i.data['hp'].to_i}.sum
+  end
+
+  def mp
+    job_data['mp'] +
+      items.map{|i| i.data['mp'].to_i}.sum
+  end
+
+  def move
+    job_data['move'] +
+      items.map{|i| i.data['move'].to_i}.sum +
+      (movement&.data&.dig('move') || 0)
+  end
+
+  def jump
+    job_data['jump'] +
+      items.map{|i| i.data['jump'].to_i}.sum +
+      (movement&.data&.dig('jump') || 0)
+  end
+
+  def speed
+    job_data['speed'] +
+      items.map{|i| i.data['speed'].to_i}.sum
+  end
+
+  def magic
+    job_data['magic'] +
+      items.map{|i| i.data['magic'].to_i}.sum
+  end
+
+  def attack
+    job_data['attack'] +
+      items.map{|i| i.data['attack'].to_i}.sum
+  end
+
+  def class_evade
+    job_data['evade']
+  end
+
+  def shield_evade_physical
+    return 0 unless shield.present?
+
+    shield.data['ev_p'] || 0
+  end
+
+  def shield_evade_magical
+    return 0 unless shield.present?
+
+    shield.data['ev_m'] || 0
+  end
+
+  def accessory_evade_physical
+    return 0 unless accessory.present?
+
+    accessory.data['ev_p'] || 0
+  end
+
+  def accessory_evade_magical
+    return 0 unless accessory.present?
+
+    accessory.data['ev_m'] || 0
+  end
+
+  def wp_right
+    return 0 unless rhand.present? && rhand.weapon?
+
+    rhand.data['wp']
+  end
+
+  def wp_left
+    return 0 unless lhand.present? && lhand.weapon?
+
+    lhand.data['wp']
+  end
+
+  def w_ev_right
+    return 0 unless rhand.present? && rhand.weapon?
+
+    rhand.data['w_ev']
+  end
+
+  def w_ev_left
+    return 0 unless lhand.present? && lhand.weapon?
+
+    lhand.data['w_ev']
+  end
+
+  def job_data
+    job.data[sex]
+  end
+
+  memoize def items
+    [rhand, lhand, helmet, armor, accessory].compact
+  end
+
+  memoize def shield
+    return rhand if rhand&.shield?
+
+    lhand if lhand&.shield?
+  end
+
+  memoize def weapon
+    [rhand, lhand].compact.first
+  end
+
+  memoize def rhand
+    Item.find(data['rhand']) if data['rhand'].present?
+  end
+
+  memoize def lhand
+    Item.find(data['lhand']) if data['lhand'].present?
+  end
+
+  memoize def helmet
+    Item.find(data['helmet']) if data['helmet'].present?
+  end
+
+  memoize def armor
+    Item.find(data['armor']) if data['armor'].present?
+  end
+
+  memoize def accessory
+    Item.find(data['accessory']) if data['accessory'].present?
+  end
+
+  memoize def secondary
+    Job.find(data['secondary']) if data['secondary'].present?
+  end
+
+  memoize def reaction
+    Skill.find(data['reaction']) if data['reaction'].present?
+  end
+
+  memoize def support
+    Skill.find(data['support']) if data['support'].present?
+  end
+
+  memoize def movement
+    Skill.find(data['movement']) if data['movement'].present?
+  end
+
+  memoize def primary_skills
+    Skill.where(job: job, id: data.dig('skills','primary')&.map(&:to_i))
+  end
+
+  memoize def secondary_skills
+    return [] if secondary.blank?
+
+    Skill.where(job: secondary, id: data.dig('skills','secondary')&.map(&:to_i))
+  end
+
+  memoize def primary_skill_ids
+    return [] if data.dig('skills', 'primary').blank?
+
+    data.dig('skills', 'primary').map(&:to_i)
+  end
+
+  memoize def secondary_skill_ids
+    return [] if data.dig('skills', 'secondary').blank?
+    
+    data.dig('skills', 'secondary').map(&:to_i)
+  end
+
+  def can_equip_skills?
+    job.name != 'Mime'
+  end
+
+  def can_equip_items?
+    job.name != 'Mime'
+  end
+
+  def two_hands_engaged?
+    return false if weapon.blank?
+
+    (two_hands? || weapon.data['flags']&.match('2-hands only')) &&
+      [lhand, rhand].compact.count == 1 &&
+      weapon.data['flags']&.match('2-hands')
+  end
+
+  def two_hands?
+    support&.name&.match('Two Hands') || job.innate_skills.exists?(name: 'Two Hands')
+  end
+
+  def two_swords?
+    support&.name&.match('Two Swords') || job.innate_skills.exists?(name: 'Two Swords')
+  end
+
+  def enforce_constraints!
+    data['brave'] = [[brave.to_i, 40].max, 70].min
+    data['faith'] = [[faith.to_i, 40].max, 70].min
+
+    data['sex'] = 'm' if job.name == 'Bard'
+    data['sex'] = 'f' if job.name == 'Dancer'
+
+    data['skills']['primary'] = primary_skills.pluck(:id)
+    data['skills']['secondary'] = secondary_skills.pluck(:id)
+
+    data['secondary'] = nil unless Job.secondary(self).valid(self).exists?(id: data['secondary'].to_i)
+    data['reaction'] = nil unless Skill.reaction.valid(self).exists?(id: data['reaction'].to_i)
+    data['support'] = nil unless Skill.support.valid(self).exists?(id: data['support'].to_i)
+    data['movement'] = nil unless Skill.movement.valid(self).exists?(id: data['movement'].to_i)
+
+    # %w{ }
+
+    # if job.name == 'Mime'
+    #   data['skills'] = {}
+    #   data['secondary'] = nil
+    #   data['reaction'] = nil
+    #   data['support'] = nil
+    #   data['movement'] = nil
+    # end
+
+    
+
+    
+
+    # puts 'DEBUG:'
+    # puts data['secondary'].inspect
+
+    # data['secondary'] = nil if data['secondary'].to_i == 19 && data['sex'] == 'm'
+    # data['secondary'] = nil if data['secondary'].to_i == 18 && data['sex'] == 'f'
+
+
+
+    flush_cache
+  end
+
+  memoize def jp_total
+    job_prereqs = Job::CalculatePrerequisiteJp.perform(job: job).jp
+
+    skill_costs = Job::CalculateSkillJp.perform(character: self).jp
+
+    skill_prereq_costs = skill_costs.keys.map do |j|
+      Job::CalculatePrerequisiteJp.perform(job: j).jp
+    end
+
+    total_costs = [job_prereqs, skill_costs, *skill_prereq_costs].each_with_object({}) do |splat, memo|
+      splat.each do |job, jp|
+        memo[job] = jp if memo[job].to_i < jp
+      end
+    end
+
+    total_costs.values.sum
+  end
+end

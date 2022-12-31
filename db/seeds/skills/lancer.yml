@@ -1,0 +1,45 @@
+- name: Range 4
+  job_id: 14
+  jp_cost: 50
+  skill_type: action
+
+- name: Range 5
+  job_id: 14
+  jp_cost: 200
+  skill_type: action
+
+- name: Range 6
+  job_id: 14
+  jp_cost: 500
+  skill_type: action
+
+- name: Vertical 5
+  job_id: 14
+  jp_cost: 50
+  skill_type: action
+
+- name: Vertical 7
+  job_id: 14
+  jp_cost: 200
+  skill_type: action
+
+- name: Infinite Vertical
+  job_id: 14
+  jp_cost: 500
+  skill_type: action
+
+- name: Dragon Spirit
+  job_id: 14
+  jp_cost: 500
+  skill_type: reaction
+
+- name: Equip Spear
+  job_id: 14
+  jp_cost: 350
+  skill_type: support
+
+- name: Ignore Height
+  job_id: 14
+  jp_cost: 500
+  skill_type: movement
+

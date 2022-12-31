@@ -1,0 +1,75 @@
+- name: Blind
+  job_id: 12
+  jp_cost: 80
+  skill_type: action
+
+- name: Spell Absorb
+  job_id: 12
+  jp_cost: 100
+  skill_type: action
+
+- name: Pray Faith
+  job_id: 12
+  jp_cost: 150
+  skill_type: action
+
+- name: Doubt Faith
+  job_id: 12
+  jp_cost: 150
+  skill_type: action
+
+- name: Zombie
+  job_id: 12
+  jp_cost: 200
+  skill_type: action
+
+- name: Silence Song
+  job_id: 12
+  jp_cost: 170
+  skill_type: action
+
+- name: Blind Rage
+  job_id: 12
+  jp_cost: 300
+  skill_type: action
+
+- name: Petrify
+  job_id: 12
+  jp_cost: 300
+  skill_type: action
+
+- name: Confusion Song
+  job_id: 12
+  jp_cost: 200
+  skill_type: action
+
+- name: Dispel Magic
+  job_id: 12
+  jp_cost: 250
+  skill_type: action
+
+- name: Paralyze
+  job_id: 12
+  jp_cost: 100
+  skill_type: action
+
+- name: Sleep
+  job_id: 12
+  jp_cost: 300
+  skill_type: action
+
+- name: Barrier
+  job_id: 12
+  jp_cost: 700
+  skill_type: reaction
+
+- name: Absorb Used MP
+  job_id: 12
+  jp_cost: 200
+  skill_type: reaction
+
+- name: Defense UP
+  job_id: 12
+  jp_cost: 350
+  skill_type: support
+

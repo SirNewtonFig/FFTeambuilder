@@ -1,0 +1,54 @@
+- name: Witch Hunt
+  job_id: 19
+  jp_cost: 100
+  skill_type: action
+
+- name: Wiznaibus
+  job_id: 19
+  jp_cost: 100
+  skill_type: action
+
+- name: Polka Polka
+  job_id: 19
+  jp_cost: 100
+  skill_type: action
+
+- name: Disillusion
+  job_id: 19
+  jp_cost: 100
+  skill_type: action
+
+- name: Nameless Dance
+  job_id: 19
+  jp_cost: 100
+  skill_type: action
+
+- name: A Save
+  job_id: 19
+  jp_cost: 550
+  skill_type: reaction
+
+- name: MP Switch
+  job_id: 19
+  jp_cost: 350
+  skill_type: reaction
+
+- name: Fly
+  job_id: 19
+  jp_cost: 600
+  skill_type: movement
+
+- name: Move+3
+  job_id: 19
+  jp_cost: 900
+  skill_type: movement
+  data:
+    move: 3
+
+- name: Jump+3
+  job_id: 19
+  jp_cost: 300
+  skill_type: movement
+  data:
+    jump: 3
+

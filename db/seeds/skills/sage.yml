@@ -1,0 +1,54 @@
+- name: Zombie 2
+  job_id: 17
+  jp_cost: 300
+  skill_type: action
+
+- name: Sleep 2
+  job_id: 17
+  jp_cost: 300
+  skill_type: action
+
+- name: Confuse 2
+  job_id: 17
+  jp_cost: 300
+  skill_type: action
+
+- name: Frog 2
+  job_id: 17
+  jp_cost: 400
+  skill_type: action
+
+- name: Gravi 2
+  job_id: 17
+  jp_cost: 400
+  skill_type: action
+
+- name: Flare 2
+  job_id: 17
+  jp_cost: 600
+  skill_type: action
+
+- name: Despair 2
+  job_id: 17
+  jp_cost: 100
+  skill_type: action
+
+- name: Deathspell 2
+  job_id: 17
+  jp_cost: 200
+  skill_type: action
+
+- name: Meditation
+  job_id: 17
+  jp_cost: 800
+  skill_type: reaction
+
+- name: Distribute
+  job_id: 17
+  jp_cost: 150
+  skill_type: reaction
+
+- name: Damage Split
+  job_id: 17
+  jp_cost: 800
+  skill_type: reaction

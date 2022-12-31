@@ -1,0 +1,11 @@
+Name,Phys Evade,Magic Evade,Classes,Extras,Absorbs,Halves,Weakness
+Escutcheon,10,5,Kn Ar Ge Ln,,,,
+Buckler,13,5,Sq Kn Ar Ge Ln,,,,
+Bronze Shield,16,5,Sq Kn Ar Ge Ln,,,,
+Round Shield,19,5,Sq Kn Ar Ge Ln,,,,
+Mythril Shield,22,10,Sq Kn Ar Ge Ln,MA +1,,,
+Gold Shield,25,10,Sq Kn Ar Ge Ln,,,,
+Ice Shield,28,10,Sq Kn Ar Ge Ln,,Ice,Fire,Lightning
+Flame Shield,31,10,Sq Kn Ar Ge Ln,,Fire,Ice,Water
+Aegis Shield,10,50,Sq Kn Ar Ge Ln,MA +1,,,
+Diamond Shield,34,15,Sq Kn Ar Ge Ln,,,,

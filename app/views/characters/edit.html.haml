@@ -1,0 +1,27 @@
+= turbo_frame_tag(:character_editor) do
+  = form_with(url: character_path(id: params[:id]), method: :patch, data: { controller: 'form' }) do
+    .flex-col.space-y-3
+      .flex.items-stretch
+        = render 'characters/portrait', char: @char
+        = render 'characters/vitals', char: @char
+        = render 'characters/meta', char: @char
+
+      #attributes.bg-menu-texture.border-2.border-menu-dark.flex.px-4.py-2.justify-between
+        = render 'characters/mobility', char: @char
+        = render 'characters/weapons', char: @char
+        = render 'characters/attack_evasion', char: @char
+
+      .bg-menu-texture.border-2.border-menu-dark.flex.space-x-3
+        = render 'characters/equipment', char: @char
+        = render 'characters/skills', char: @char
+
+      .flex.space-x-3
+        = render 'characters/primary', char: @char
+        = render 'characters/secondary', char: @char
+
+  - 4.times do |i|
+    = turbo_stream.replace("character-#{i}") do
+      = render 'characters/summary', selected: i == params[:id].to_i, char: @team.characters[i], i: i
+
+  = turbo_stream.replace("team-summary") do
+    = render 'teams/summary', team: @team

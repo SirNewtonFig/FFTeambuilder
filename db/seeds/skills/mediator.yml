@@ -1,0 +1,55 @@
+- name: Invitation
+  job_id: 11
+  jp_cost: 100
+  skill_type: action
+
+- name: Threaten
+  job_id: 11
+  jp_cost: 100
+  skill_type: action
+
+- name: Preach
+  job_id: 11
+  jp_cost: 200
+  skill_type: action
+
+- name: Refute
+  job_id: 11
+  jp_cost: 200
+  skill_type: action
+
+- name: Death Sentence
+  job_id: 11
+  jp_cost: 400
+  skill_type: action
+
+- name: Insult
+  job_id: 11
+  jp_cost: 300
+  skill_type: action
+
+- name: Mimic Daravon
+  job_id: 11
+  jp_cost: 300
+  skill_type: action
+
+- name: Finger Guard
+  job_id: 11
+  jp_cost: 250
+  skill_type: reaction
+
+- name: Equip Gun
+  job_id: 11
+  jp_cost: 300
+  skill_type: support
+
+- name: Train
+  job_id: 11
+  jp_cost: 400
+  skill_type: support
+
+- name: Monster Talk
+  job_id: 11
+  jp_cost: 100
+  skill_type: support
+

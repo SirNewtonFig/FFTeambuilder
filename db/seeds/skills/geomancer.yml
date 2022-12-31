@@ -1,0 +1,79 @@
+- name: Pitfall
+  job_id: 13
+  jp_cost: 50
+  skill_type: action
+
+- name: Water Ball
+  job_id: 13
+  jp_cost: 50
+  skill_type: action
+
+- name: Hell Ivy
+  job_id: 13
+  jp_cost: 50
+  skill_type: action
+
+- name: Carve Model
+  job_id: 13
+  jp_cost: 50
+  skill_type: action
+
+- name: Local Quake
+  job_id: 13
+  jp_cost: 50
+  skill_type: action
+
+- name: Kamaitachi
+  job_id: 13
+  jp_cost: 50
+  skill_type: action
+
+- name: Demon Fire
+  job_id: 13
+  jp_cost: 50
+  skill_type: action
+
+- name: Quicksand
+  job_id: 13
+  jp_cost: 50
+  skill_type: action
+
+- name: Sand Storm
+  job_id: 13
+  jp_cost: 50
+  skill_type: action
+
+- name: Blizzard
+  job_id: 13
+  jp_cost: 50
+  skill_type: action
+
+- name: Gusty Wind
+  job_id: 13
+  jp_cost: 50
+  skill_type: action
+
+- name: Lava Ball
+  job_id: 13
+  jp_cost: 50
+  skill_type: action
+
+- name: Counter Flood
+  job_id: 13
+  jp_cost: 400
+  skill_type: reaction
+
+- name: Attack UP
+  job_id: 13
+  jp_cost: 400
+  skill_type: support
+
+- name: Any Ground
+  job_id: 13
+  jp_cost: 220
+  skill_type: movement
+
+- name: Move on Lava
+  job_id: 13
+  jp_cost: 150
+  skill_type: movement

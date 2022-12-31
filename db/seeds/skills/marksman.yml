@@ -1,0 +1,57 @@
+- name: Timed Strike
+  job_id: 4
+  jp_cost: 100
+  skill_type: action
+
+- name: Stunning Strike
+  job_id: 4
+  jp_cost: 150
+  skill_type: action
+
+- name: Cursed Strike
+  job_id: 4
+  jp_cost: 200
+  skill_type: action
+
+- name: Mocking Strike
+  job_id: 4
+  jp_cost: 250
+  skill_type: action
+
+- name: Heartache Strike
+  job_id: 4
+  jp_cost: 220
+  skill_type: action
+
+- name: Temporal Strike
+  job_id: 4
+  jp_cost: 400
+  skill_type: action
+
+- name: CT Save
+  job_id: 4
+  jp_cost: 600
+  skill_type: reaction
+
+- name: Arrow Guard
+  job_id: 4
+  jp_cost: 400
+  skill_type: reaction
+
+- name: Equip Bows
+  job_id: 4
+  jp_cost: 200
+  skill_type: support
+
+- name: Concentrate
+  job_id: 4
+  jp_cost: 350
+  skill_type: support
+
+- name: Jump+1
+  job_id: 4
+  jp_cost: 100
+  skill_type: movement
+  data:
+    jump: 1
+

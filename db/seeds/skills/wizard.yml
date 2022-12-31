@@ -1,0 +1,55 @@
+- name: Explosion
+  job_id: 7
+  jp_cost: 50
+  skill_type: action
+
+- name: Chain Lightning
+  job_id: 7
+  jp_cost: 150
+  skill_type: action
+
+- name: Cyclone
+  job_id: 7
+  jp_cost: 200
+  skill_type: action
+
+- name: Mjollnir
+  job_id: 7
+  jp_cost: 280
+  skill_type: action
+
+- name: Blizzard
+  job_id: 7
+  jp_cost: 400
+  skill_type: action
+
+- name: Comet
+  job_id: 7
+  jp_cost: 200
+  skill_type: action
+
+- name: Meltdown
+  job_id: 7
+  jp_cost: 280
+  skill_type: action
+
+- name: Frog
+  job_id: 7
+  jp_cost: 300
+  skill_type: action
+
+- name: Dark Holy
+  job_id: 7
+  jp_cost: 600
+  skill_type: action
+
+- name: Counter Magic
+  job_id: 7
+  jp_cost: 700
+  skill_type: reaction
+
+- name: Magic AttackUP
+  job_id: 7
+  jp_cost: 350
+  skill_type: support
+

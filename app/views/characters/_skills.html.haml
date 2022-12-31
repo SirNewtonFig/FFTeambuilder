@@ -1,0 +1,49 @@
+.flex-1.px-4.py-2
+  %table.table-auto.border-spacing-0.border-collapse.w-full
+    %tr
+      %td.w-8.h-8
+        .flex.items-center.justify-center
+          = image_tag('icons/skill-action.png', class: 'h-6')
+      %td.pl-1.text-xl= char.job.skillset
+    %tr
+      %td.w-8.h-8
+        .flex.items-center.justify-center
+          = image_tag('icons/skill-action.png', class: 'h-6')
+      %td.pl-1{ class: ('text-menu-dark' if char.secondary.blank?) }
+        %select.w-64.text-xl.cursor-pointer.py-0.px-0.bg-transparent.border-0.border-b-2.border-transparent.hover:border-menu-dark.appearance-none.focus:outline-none.focus:ring-0.focus:border-menu-dark.peer{ name: 'character[secondary]', data: { action: 'change->form#submit' } }
+          %option{ selected: ('selected' if char.secondary.blank?), value: nil } Secondary
+          - if char.can_equip_skills?
+            - Job.secondary(char).valid(char).order(:id).each do |job|
+              %option{ selected: ('selected' if job == char.secondary), value: job.id }= job.skillset
+    %tr
+      %td.w-8.h-8
+        .flex.items-center.justify-center
+          = image_tag('icons/skill-reaction.png', class: 'h-6')
+      %td.pl-1.text-xl{ class: ('text-menu-dark' if char.reaction.blank?) }
+        %select.w-64.text-xl.cursor-pointer.py-0.px-0.bg-transparent.border-0.border-b-2.border-transparent.hover:border-menu-dark.appearance-none.focus:outline-none.focus:ring-0.focus:border-menu-dark.peer{ name: 'character[reaction]', data: { action: 'change->form#submit' } }
+          %option{ selected: ('selected' if char.reaction.blank?), value: nil } Reaction
+          - if char.can_equip_skills?
+            - Skill.reaction.valid(char).order(:name).each do |skill|
+              %option{ selected: ('selected' if skill == char.reaction), value: skill.id }= skill.name
+
+    %tr
+      %td.w-8.h-8
+        .flex.items-center.justify-center
+          = image_tag('icons/skill-support.png', class: 'h-6')
+      %td.pl-1.text-xl{ class: ('text-menu-dark' if char.support.blank?) }
+        %select.w-64.text-xl.cursor-pointer.py-0.px-0.bg-transparent.border-0.border-b-2.border-transparent.hover:border-menu-dark.appearance-none.focus:outline-none.focus:ring-0.focus:border-menu-dark.peer{ name: 'character[support]', data: { action: 'change->form#submit' } }
+          %option{ selected: ('selected' if char.support.blank?), value: nil } Support
+          - if char.can_equip_skills?
+            - Skill.support.valid(char).order(:name).each do |skill|
+              %option{ selected: ('selected' if skill == char.support), value: skill.id }= skill.name
+
+    %tr
+      %td.w-8.h-8
+        .flex.items-center.justify-center
+          = image_tag('icons/skill-movement.png', class: 'h-6')
+      %td.pl-1.text-xl{ class: ('text-menu-dark' if char.movement.blank?) }
+        %select.w-64.text-xl.cursor-pointer.py-0.px-0.bg-transparent.border-0.border-b-2.border-transparent.hover:border-menu-dark.appearance-none.focus:outline-none.focus:ring-0.focus:border-menu-dark.peer{ name: 'character[movement]', data: { action: 'change->form#submit' } }
+          %option{ selected: ('selected' if char.movement.blank?), value: nil } Movement
+          - if char.can_equip_skills?
+            - Skill.movement.valid(char).order(:name).each do |skill|
+              %option{ selected: ('selected' if skill == char.movement), value: skill.id }= skill.name

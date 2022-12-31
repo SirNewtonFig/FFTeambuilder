@@ -1,0 +1,30 @@
+%table#attack-evasion.table-auto.border-spacing-0.border-collapse.text-center
+  %tr
+    %td.px-1.text-menu-dark
+    %td.px-1.text-menu-dark AT
+    %td
+    %td.px-1.text-menu-dark C-EV
+    %td
+    %td.px-1.text-menu-dark S-EV
+    %td
+    %td.px-1.text-menu-dark A-EV
+
+  %tr
+    %td.px-2= image_tag('icons/pa.png', class: 'h-6')
+    %td.px-1= char.attack
+    %td.text-menu-dark /
+    %td.px-1 #{char.class_evade}%
+    %td.text-menu-dark /
+    %td.px-1 #{char.shield_evade_physical}%
+    %td.text-menu-dark /
+    %td.px-1 #{char.accessory_evade_physical}%
+
+  %tr
+    %td.px-2= image_tag('icons/ma.png', class: 'h-6')
+    %td.px-1= char.magic
+    %td.text-menu-dark /
+    %td.px-1 00%
+    %td.text-menu-dark /
+    %td.px-1 #{char.shield_evade_magical}%
+    %td.text-menu-dark /
+    %td.px-1 #{char.accessory_evade_magical}%

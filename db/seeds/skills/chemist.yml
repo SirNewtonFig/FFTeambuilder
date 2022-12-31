@@ -1,0 +1,74 @@
+- name: Potion
+  job_id: 2
+  jp_cost: 0
+  skill_type: action
+
+- name: Hi-Potion
+  job_id: 2
+  jp_cost: 100
+  skill_type: action
+
+- name: X-Potion
+  job_id: 2
+  jp_cost: 200
+  skill_type: action
+
+- name: Ether
+  job_id: 2
+  jp_cost: 100
+  skill_type: action
+
+- name: Hi-Ether
+  job_id: 2
+  jp_cost: 200
+  skill_type: action
+
+- name: Eye Drop
+  job_id: 2
+  jp_cost: 25
+  skill_type: action
+
+- name: Echo Grass
+  job_id: 2
+  jp_cost: 25
+  skill_type: action
+
+- name: Maiden's Kiss
+  job_id: 2
+  jp_cost: 25
+  skill_type: action
+
+- name: Soft
+  job_id: 2
+  jp_cost: 25
+  skill_type: action
+
+- name: Holy Water
+  job_id: 2
+  jp_cost: 25
+  skill_type: action
+
+- name: Remedy
+  job_id: 2
+  jp_cost: 200
+  skill_type: action
+
+- name: Phoenix Down
+  job_id: 2
+  jp_cost: 0
+  skill_type: action
+
+- name: Auto Potion
+  job_id: 2
+  jp_cost: 600
+  skill_type: reaction
+
+- name: Throw Item
+  job_id: 2
+  jp_cost: 250
+  skill_type: support
+
+- name: Maintenance
+  job_id: 2
+  jp_cost: 200
+  skill_type: support

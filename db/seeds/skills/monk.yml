@@ -1,0 +1,60 @@
+- name: Spin Fist
+  job_id: 5
+  jp_cost: 150
+  skill_type: action
+
+- name: Repeating Fist
+  job_id: 5
+  jp_cost: 250
+  skill_type: action
+
+- name: Wave Fist
+  job_id: 5
+  jp_cost: 250
+  skill_type: action
+
+- name: Earth Slash
+  job_id: 5
+  jp_cost: 500
+  skill_type: action
+
+- name: Secret Fist
+  job_id: 5
+  jp_cost: 300
+  skill_type: action
+
+- name: Stigma Magic
+  job_id: 5
+  jp_cost: 100
+  skill_type: action
+
+- name: Chakra
+  job_id: 5
+  jp_cost: 300
+  skill_type: action
+
+- name: Revive
+  job_id: 5
+  jp_cost: 420
+  skill_type: action
+
+- name: HP Restore
+  job_id: 5
+  jp_cost: 400
+  skill_type: reaction
+
+- name: Meatbone Slash
+  job_id: 5
+  jp_cost: 200
+  skill_type: reaction
+
+- name: Martial Arts
+  job_id: 5
+  jp_cost: 600
+  skill_type: support
+
+- name: Move-HP Up
+  job_id: 5
+  jp_cost: 270
+  skill_type: movement
+

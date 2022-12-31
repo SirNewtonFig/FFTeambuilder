@@ -1,0 +1,65 @@
+- name: Power Ruin
+  job_id: 3
+  jp_cost: 200
+  skill_type: action
+
+- name: Mind Ruin
+  job_id: 3
+  jp_cost: 200
+  skill_type: action
+
+- name: Speed Ruin
+  job_id: 3
+  jp_cost: 200
+  skill_type: action
+
+- name: Magic Ruin
+  job_id: 3
+  jp_cost: 100
+  skill_type: action
+
+- name: Weapon Break
+  job_id: 3
+  jp_cost: 350
+  skill_type: action
+
+- name: Head Break
+  job_id: 3
+  jp_cost: 100
+  skill_type: action
+
+- name: Armor Break
+  job_id: 3
+  jp_cost: 300
+  skill_type: action
+
+- name: Shield Break
+  job_id: 3
+  jp_cost: 100
+  skill_type: action
+
+- name: Counter
+  job_id: 3
+  jp_cost: 250
+  skill_type: reaction
+
+- name: Defend
+  job_id: 3
+  jp_cost: 350
+  skill_type: support
+
+- name: Equip Armor
+  job_id: 3
+  jp_cost: 250
+  skill_type: support
+
+- name: Equip Shield
+  job_id: 3
+  jp_cost: 350
+  skill_type: support
+
+- name: Equip Sword
+  job_id: 3
+  jp_cost: 350
+  skill_type: support
+
