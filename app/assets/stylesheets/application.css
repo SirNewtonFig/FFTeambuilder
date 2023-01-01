@@ -14,7 +14,6 @@
  *= require_self
  */
 
-@font-face {
-  font-family: 'Altima';
-  src: url('Altima.ttf');
+.bg-menu-texture {
+  background-image: url('bg.gif');
 }
