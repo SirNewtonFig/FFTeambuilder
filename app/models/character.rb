@@ -245,6 +245,8 @@ class Character
   end
 
   def enforce_constraints!
+    flush_cache
+    
     data['brave'] = [[brave.to_i, 40].max, 70].min
     data['faith'] = [[faith.to_i, 40].max, 70].min
 

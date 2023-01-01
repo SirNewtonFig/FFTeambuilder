@@ -23,6 +23,7 @@ class Job < ApplicationRecord
   
   scope :secondary, ->(char) {
     s = where.not(name: 'Mime')
+    s = where.not(id: char.data['job'])
     s = s.where('1=0') if char.data['job'].to_i == 20
 
     s
