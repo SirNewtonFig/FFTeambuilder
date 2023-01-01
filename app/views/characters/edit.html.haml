@@ -13,11 +13,11 @@
 
       .bg-menu-texture.border-2.border-menu-dark.flex.space-x-3
         = render 'characters/equipment', char: @char
-        = render 'characters/skills', char: @char
+        = render 'characters/skills', char: @char, team: @team
 
       .flex.space-x-3
-        = render 'characters/primary', char: @char
-        = render 'characters/secondary', char: @char
+        = render 'characters/primary', char: @char, team: @team
+        = render 'characters/secondary', char: @char, team: @team
 
   - 4.times do |i|
     = turbo_stream.replace("character-#{i}") do
