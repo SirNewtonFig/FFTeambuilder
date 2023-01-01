@@ -259,27 +259,11 @@ class Character
     data['support'] = nil unless Skill.support.valid(self).exists?(id: data['support'].to_i)
     data['movement'] = nil unless Skill.movement.valid(self).exists?(id: data['movement'].to_i)
 
-    # %w{ }
-
-    # if job.name == 'Mime'
-    #   data['skills'] = {}
-    #   data['secondary'] = nil
-    #   data['reaction'] = nil
-    #   data['support'] = nil
-    #   data['movement'] = nil
-    # end
-
-    
-
-    
-
-    # puts 'DEBUG:'
-    # puts data['secondary'].inspect
-
-    # data['secondary'] = nil if data['secondary'].to_i == 19 && data['sex'] == 'm'
-    # data['secondary'] = nil if data['secondary'].to_i == 18 && data['sex'] == 'f'
-
-
+    data['rhand'] = nil unless Item.rhand(self).exists?(id: data['rhand'].to_i)
+    data['lhand'] = nil unless Item.lhand(self).exists?(id: data['lhand'].to_i)
+    data['helmet'] = nil unless Item.proficient(self).exists?(id: data['helmet'].to_i)
+    data['armor'] = nil unless Item.proficient(self).exists?(id: data['armor'].to_i)
+    data['accessory'] = nil unless Item.proficient(self).exists?(id: data['accessory'].to_i)
 
     flush_cache
   end
