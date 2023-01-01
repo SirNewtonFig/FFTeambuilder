@@ -10,21 +10,21 @@ class Item < ApplicationRecord
     s = joins(:jobs).where(jobs: { id: char.data['job'].to_i })
       .union(joins(:skills).where(skills: { id: char.data['support'].to_i }))
 
-    s = s.union(where("(data -> 'female_only')::boolean")) if char.data['sex'] == 'f'
+    s = s.union(where("(items.data -> 'female_only')::boolean")) if char.data['sex'] == 'f'
 
     s
   }
 
   scope :two_swords, -> {
-    where("data ->> 'flags' ilike '%2-swords%'")
+    where("items.data ->> 'flags' ilike '%2-swords%'")
   }
 
   scope :two_hands, -> {
-    where("data ->> 'flags' ilike '%2-hands%'")
+    where("items.data ->> 'flags' ilike '%2-hands%'")
   }
 
   scope :two_hands_only, -> {
-    where("data ->> 'flags' ilike '%2-hands only%'")
+    where("items.data ->> 'flags' ilike '%2-hands only%'")
   }
 
   scope :rhand, ->(char) {
@@ -37,7 +37,7 @@ class Item < ApplicationRecord
       s
     elsif char.lhand.shield?
       weapon.proficient(char)
-        .where.not("data ->> 'flags' ilike '%2-hands only%'")
+        .where.not("items.data ->> 'flags' ilike '%2-hands only%'")
     else
       none
     end
@@ -53,7 +53,7 @@ class Item < ApplicationRecord
       s
     elsif char.rhand.shield?
       weapon.proficient(char)
-        .where.not("data ->> 'flags' ilike '%2-hands only%'")
+        .where.not("items.data ->> 'flags' ilike '%2-hands only%'")
     else
       none
     end
