@@ -2,56 +2,67 @@
   job_id: 10
   jp_cost: 10
   skill_type: action
+  data: {}
 
 - name: Steal Heart
   job_id: 10
   jp_cost: 120
   skill_type: action
+  data: {}
 
 - name: Steal Helmet
   job_id: 10
   jp_cost: 300
   skill_type: action
+  data: {}
 
 - name: Steal Armor
   job_id: 10
   jp_cost: 400
   skill_type: action
+  data: {}
 
 - name: Steal Shield
   job_id: 10
   jp_cost: 300
   skill_type: action
+  data: {}
 
 - name: Steal Weapon
   job_id: 10
   jp_cost: 500
   skill_type: action
+  data: {}
 
 - name: Steal Accessory
   job_id: 10
   jp_cost: 450
   skill_type: action
+  data: {}
 
 - name: Caution
   job_id: 10
   jp_cost: 150
   skill_type: reaction
+  data: {}
 
 - name: Gilgame Heart
   job_id: 10
   jp_cost: 200
   skill_type: reaction
+  data: {}
 
 - name: Catch
   job_id: 10
   jp_cost: 200
   skill_type: reaction
+  data: {}
 
 - name: Secret Hunt
   job_id: 10
   jp_cost: 150
   skill_type: support
+  data: {}
 
 - name: Move+2
   job_id: 10
