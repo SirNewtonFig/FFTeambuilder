@@ -10,7 +10,7 @@ class Item < ApplicationRecord
     s = joins(:jobs).where(jobs: { id: char.data['job'].to_i })
       .union(joins(:skills).where(skills: { id: char.data['support'].to_i }))
 
-    s = s.union(where("(data -> 'female_only') is not null")) if char.data['sex'] == 'f'
+    s = s.union(where("(data -> 'female_only')::boolean")) if char.data['sex'] == 'f'
 
     s
   }
