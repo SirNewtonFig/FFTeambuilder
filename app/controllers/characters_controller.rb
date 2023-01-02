@@ -7,7 +7,13 @@ class CharactersController < ApplicationController
 
   def update
     @char = @team.characters[i]
+
+    puts character_params.inspect
+
     @char.data.merge!(character_params)
+
+    puts @char.data.inspect
+
     @char.enforce_constraints!
 
     @team.data[i] = @char.data

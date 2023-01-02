@@ -28,4 +28,15 @@ class Job < ApplicationRecord
 
     s
   }
+
+  scope :generic, -> { where("(jobs.data -> 'x') is null") }
+  scope :monster, -> { where("(jobs.data -> 'x') is not null") }
+
+  def generic?
+    !data.key?('x')
+  end
+
+  def monster?
+    data.key?('x')
+  end
 end

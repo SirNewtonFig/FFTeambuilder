@@ -4,7 +4,10 @@
 .w-40.p-2.cursor-pointer.hover:bg-gray-700.text-gray-300.hover:text-white.rounded-sm{ id: "character-#{i}", class: ('bg-gray-700 border-r-blue-600 border-r-4' if selected) }
   .flex
     .w-12
-      = image_tag("sprites/#{char.job.name}-#{char.sex}.png".downcase, class: 'h-16')
+      - if char.generic?
+        = image_tag("sprites/generics/#{char.job.name}-#{char.sex}.png".downcase, class: 'h-16')
+      - else
+        = image_tag("sprites/monsters/placeholder.png".downcase, class: 'h-16')
     .ml-1.text-white
       .text-sm Br: #{char.brave}
       .text-sm Fa: #{char.faith}

@@ -53,3 +53,34 @@ Dir.glob('db/seeds/items/*.csv').each do |f|
     end
   end
 end
+
+monsters = CSV.parse(File.read(Rails.root.join('db/seeds/monsters.csv')), headers: true)
+
+monsters.each do |row|
+  monster = Job.create(
+    name: row['Name'],
+    data: {
+      'x' => {
+        hp: row['HP'],
+        mp: row['MP'],
+        speed: row['Speed'],
+        move: row['Move'],
+        jump: row['Jump'],
+        attack: row['PA'],
+        magic: row['MA'],
+        abilities: [
+          row['Ability 1'],
+          row['Ability 2'],
+          row['Ability 3']
+        ],
+        monster_skill: row['Monster Skill'],
+        notes: [
+          (row['Note 1'] unless row['Note 1'] == 'None' || row['Note 1'].blank?),
+          (row['Note 2'] unless row['Note 2'] == 'None' || row['Note 2'].blank?),
+          (row['Note 3'] unless row['Note 3'] == 'None' || row['Note 3'].blank?),
+          (row['Note 4'] unless row['Note 4'] == 'None' || row['Note 4'].blank?)
+        ].compact
+      }
+    }
+  )
+end

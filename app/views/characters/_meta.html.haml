@@ -11,12 +11,14 @@
     %input.text-xl.bg-right.py-0.px-0.bg-transparent.border-0.border-b-2.border-transparent.hover:border-menu-dark.appearance-none.focus:outline-none.focus:ring-0.focus:border-menu-dark.peer{ type: 'text', name: 'character[name]', value: char.name, data: { action: 'change->form#submit' } }
     
     .flex.space-x-2
-      %select.bg-right.cursor-pointer.w-10.py-0.px-0.bg-transparent.border-0.border-b-2.border-transparent.hover:border-menu-dark.appearance-none.focus:outline-none.focus:ring-0.focus:border-menu-dark.peer{ name: 'character[sex]', data: { action: 'change->form#submit' } }
-        %option{ selected: ('selected' if char.sex == 'm'), value: 'm' } M
-        %option{ selected: ('selected' if char.sex == 'f'), value: 'f' } F
+      %select.bg-right.cursor-pointer.w-24.py-0.px-0.bg-transparent.border-0.border-b-2.border-transparent.hover:border-menu-dark.appearance-none.focus:outline-none.focus:ring-0.focus:border-menu-dark.peer{ name: 'character[sex]', data: { action: 'change->form#submit' } }
+        %option{ selected: ('selected' if char.sex == 'm'), value: 'm' } Male
+        %option{ selected: ('selected' if char.sex == 'f'), value: 'f' } Female
+        %option{ selected: ('selected' if char.sex == 'x'), value: 'x' } Monster
 
       %select.bg-right.cursor-pointer.flex-1.py-0.px-0.bg-transparent.border-0.border-b-2.border-transparent.hover:border-menu-dark.appearance-none.focus:outline-none.focus:ring-0.focus:border-menu-dark.peer{ name: 'character[job]', data: { action: 'change->form#submit' } }
-        - Job.order(:id).map do |job|
+        - jobs = char.sex == 'x' ? Job.monster.order(:id) : Job.generic.order(:id)
+        - jobs.map do |job|
           %option{ selected: ('selected' if job == char.job), value: job.id }= job.name
 
     .flex.space-x-4

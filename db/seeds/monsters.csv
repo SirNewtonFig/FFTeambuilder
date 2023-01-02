@@ -1,0 +1,49 @@
+Name,HP,MP,Speed,Move,Jump,PA,MA,Ability 1,Ability 2,Ability 3,Monster Skill,Note 1,Note 2,Note 3,Note 4
+Chocobo,287,126,10,6,5,13,27,Choco Ball,Choco Esuna,Choco Cure,Choco Jinx,Counter,None,None,Move in Water
+Black Chocobo,287,126,9,6,5,18,30,Choco Ball,Choco Esuna,Choco Guard,Choco Jinx,Counter,Fly,None,Move in Water
+Red Chocobo,306,126,10,6,5,14,28,Choco Ball,Choco Esuna,Choco Meteor,Choco Jinx,Counter,Ignore Height,None,Move in Water
+Goblin,320,126,9,4,4,12,13,Tackle,Eye Gouge,Turn Punch,Triple Impact,Counter Throw,None,None,
+Black Goblin,342,126,9,4,4,13,13,Tackle,Goblin Punch,Revive,Triple Impact,Counter Throw,None,None,
+Gobbledeguck,363,126,9,4,4,17,13,Mutilate,Goblin Punch,Turn Punch,Triple Impact,Counter Throw,None,None,
+Bomb,342,3,9,4,4,12,26,Flame Attack,Douse,Self Destruct,Living Fire,Critical Quick,Float,None,Cannot Enter Water
+Grenade,363,5,9,4,4,13,27,Flame Attack,Douse,Self Destruct,Living Fire,Critical Quick,Float,None,Cannot Enter Water
+Explosive,384,7,9,4,4,14,27,Flame Attack,Douse,Self Destruct,Living Fire,Critical Quick,Float,None,Cannot Enter Water
+Tonberry,344,17,9,3,3,14,12,Chef's Knife,Everyone's Grudge,Voodoo,Damnation,Counter,Meatbone Slash,None,Cannot Enter Water
+Master Tonberry,364,17,9,3,3,16,12,Chef's Knife,Everyone's Grudge,Remorse,Damnation,Counter,Meatbone Slash,None,Cannot Enter Water
+Blood Stalker,325,17,9,3,3,17,12,Chef's Knife,Everyone's Grudge,Vampiric Gaze,Damnation,Counter,Meatbone Slash,None,Cannot Enter Water
+Pisco Demon,384,126,9,4,3,11,12,Aqualung,Time Blast,Energy Blast,Acid Rain,Counter Flood,Absorbs Water,None,Move Under Water
+Squidlarkin,384,126,9,4,3,12,12,Aqualung,Time Blast,Psionic Wave,Acid Rain,Counter Flood,Absorbs Water,None,Move Under Water
+Mindflare,427,126,9,4,3,13,12,Aqualung,Time Blast,Mind Blast,Acid Rain,Counter Flood,Absorbs Water,None,Move Under Water
+Skeleton,340,126,9,4,4,13,15,Knife Hand,Thunder Soul,Demi,Night Ritual,HP Restore,Absorbs Dark,Undead,
+Bone Snatch,389,126,9,4,4,14,15,Knife Hand,Aqua Soul,Demi 2,Night Ritual,HP Restore,Absorbs Dark,Undead,
+Living Bone,364,126,9,4,4,16,15,Knife Hand,Ice Soul,Death,Night Ritual,Counter,Absorbs Dark,Undead,
+Ghoul,249,22,10,6,4,13,11,Throw Spirit,Drain Touch,Zombie Touch,Unholy Champion,Blade Grasp,Absorbs Dark / Float,Teleport / Undead,Cannot Enter Water
+Gust,229,17,10,6,4,13,11,Throw Spirit,Drain Touch,Sleep Touch,Unholy Champion,Blade Grasp,Absorbs Dark / Float,Teleport / Undead,Cannot Enter Water
+Revnant,249,11,10,6,4,13,11,Throw Spirit,Drain Touch,Grease Touch,Unholy Champion,Blade Grasp,Absorbs Dark / Float,Teleport / Undead,Cannot Enter Water
+Flotiball,299,126,9,5,5,12,25,Eye Beam,Gaze of Doom,Gaze of Fear,Light Pillar,Counter Magic,Halves All Elements,Fly,Cannot Enter Water
+Ahriman,320,126,9,5,5,14,25,Eye Beam,Gaze of Doom,Gaze of Terror,Light Pillar,Counter Magic,Halves All Elements,Fly,Cannot Enter Water
+Plague,342,126,9,5,5,16,25,Eye Beam,Gaze of Doom,Counterspell,Light Pillar,Counter Magic,Halves All Elements,Fly,Cannot Enter Water
+Juravis,320,7,10,6,6,12,24,Zephyr,Wind Strike,Pure Flight,Tempest,Hamedo,Absorbs Wind,Fly,Cannot Enter Water
+Steel Hawk,342,10,10,6,6,14,25,Zephyr,Wind Strike,Updraft,Tempest,Hamedo,Absorbs Wind,Fly,Cannot Enter Water
+Cocatoris,363,1,10,6,6,17,28,Zephyr,Wind Strike,Beak,Tempest,Hamedo,Absorbs Wind,Fly,Cannot Enter Water
+Uribo,240,126,11,4,3,12,13,Straight Dash,Nose Breath,Please Eat,Uribo Song,Critical Quick,None,None,Cannot Enter Water
+Porky,256,126,11,4,3,13,13,Straight Dash,Nose Breath,Pooh-,Uribo Song,Critical Quick,None,None,Cannot Enter Water
+Wildbow,273,126,11,4,3,19,13,Straight Dash,Nose Breath,Oink,Uribo Song,Critical Quick,None,None,Cannot Enter Water
+Woodman,406,28,8,3,3,13,28,Leaf Dance,Magic Spirit,Protect Spirit,Nature's Fury,Damage Split,Absorbs Earth,None,Cannot Enter Water
+Trent,427,32,8,3,3,13,27,Leaf Dance,Magic Spirit,Clam Spirit,Nature's Fury,Damage Split,Absorbs Earth,None,Cannot Enter Water
+Taiju,448,26,8,3,3,14,28,Leaf Dance,Magic Spirit,Spirit of Life,Nature's Fury,Damage Split,Absorbs Earth,None,Cannot Enter Water
+Bull Demon,486,126,9,4,3,14,28,Shake Off,Berserk,Wave Around,Sacred Cleave,Counter,Absorbs Earth,None,Cannot Enter Water
+Minitaurus,535,126,9,4,3,17,28,Shake Off,Berserk,Blow Fire,Sacred Cleave,Counter,Absorbs Fire and Earth,None,Cannot Enter Water
+Sacred,559,126,9,4,3,19,28,Shake Off,Berserk,Mimic Titan,Sacred Cleave,Counter,Absorbs Earth,None,Cannot Enter Water
+Morbol,470,126,8,4,3,13,11,Tentacle,Bad Bracelet,Lick,Malboro Acid,Regenerator,None,None,Move on Water
+Ochu,448,126,8,4,3,14,13,Tentacle,Bad Bracelet,Goo,Malboro Acid,Regenerator,None,None,Move on Water
+Great Morbol,491,126,8,4,3,14,12,Tentacle,Bad Bracelet,Moldball Virus,Malboro Acid,Regenerator,None,None,Move on Water
+Behemoth,384,17,8,4,3,16,13,Stab Up,Sudden Cry,Lifebreak,Meteorain,MP Switch,None,None,Cannot Enter Water
+King Behemoth,406,17,8,4,3,19,13,Stab Up,Sudden Cry,Ulmaguest,Meteorain,MP Switch,None,None,Cannot Enter Water
+Dark Behemoth,427,17,8,4,3,21,13,Stab Up,Sudden Cry,Giga Flare,Meteorain,MP Switch,None,None,Cannot Enter Water
+Dragon,462,13,8,5,3,16,13,Dash,Tail Swing,Thnder Brcelet,Dragon Beam,Dragon Spirit,None,None,Cannot Enter Water
+Blue Dragon,486,19,8,5,3,17,13,Dash,Tail Swing,Ice Bracelet,Dragon Beam,Dragon Spirit,None,None,Cannot Enter Water
+Red Dragon,535,20,8,5,3,18,13,Dash,Tail Swing,Fire Bracelet,Dragon Beam,Dragon Spirit,None,None,Cannot Enter Water
+Hyudra,342,8,8,4,4,18,12,Triple Brcelet,Dark Whisper,Triple Venom,Dragon Force,Counter,None,Fly,Cannot Enter Water
+Hydra,320,28,8,4,4,17,12,Triple Brcelet,Dark Whisper,Triple Flame,Dragon Force,Counter,None,Fly,Cannot Enter Water
+Tiamat,320,16,8,4,4,17,12,Triple Brcelet,Dark Whisper,Triple Thunder,Dragon Force,Counter,None,Fly,Cannot Enter Water

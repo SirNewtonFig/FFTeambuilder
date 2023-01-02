@@ -43,6 +43,10 @@ class Character
     data['sex']
   end
 
+  def generic?
+    ['m', 'f'].include?(sex)
+  end
+
   def brave
     data['brave']
   end
@@ -56,44 +60,44 @@ class Character
   end
 
   def hp
-    job_data['hp'] +
+    job_data['hp'].to_i +
       items.map{|i| i.data['hp'].to_i}.sum
   end
 
   def mp
-    job_data['mp'] +
+    job_data['mp'].to_i +
       items.map{|i| i.data['mp'].to_i}.sum
   end
 
   def move
-    job_data['move'] +
+    job_data['move'].to_i +
       items.map{|i| i.data['move'].to_i}.sum +
       (movement&.data&.dig('move') || 0)
   end
 
   def jump
-    job_data['jump'] +
+    job_data['jump'].to_i +
       items.map{|i| i.data['jump'].to_i}.sum +
       (movement&.data&.dig('jump') || 0)
   end
 
   def speed
-    job_data['speed'] +
+    job_data['speed'].to_i +
       items.map{|i| i.data['speed'].to_i}.sum
   end
 
   def magic
-    job_data['magic'] +
+    job_data['magic'].to_i +
       items.map{|i| i.data['magic'].to_i}.sum
   end
 
   def attack
-    job_data['attack'] +
+    job_data['attack'].to_i +
       items.map{|i| i.data['attack'].to_i}.sum
   end
 
   def class_evade
-    job_data['evade']
+    job_data['evade'].to_i
   end
 
   def shield_evade_physical
@@ -246,9 +250,38 @@ class Character
 
   def enforce_constraints!
     flush_cache
-    
+
     data['brave'] = [[brave.to_i, 40].max, 70].min
     data['faith'] = [[faith.to_i, 40].max, 70].min
+
+    if data['sex'] == 'x'
+      enforce_monster_stuff! 
+    else
+      enforce_generic_stuff!
+    end
+  end
+
+  def enforce_monster_stuff!
+    data['job'] = Job.monster.order(:id).first.id if job.generic?
+    
+    data['skills'] = {}
+
+    data['secondary'] = nil
+    data['reaction'] = nil
+    data['support'] = nil
+    data['movement'] = nil
+
+    data['rhand'] = nil
+    data['lhand'] = nil
+    data['helmet'] = nil
+    data['armor'] = nil
+    data['accessory'] = nil
+
+    flush_cache
+  end
+
+  def enforce_generic_stuff!
+    data.merge!(DEFAULT_DATA.except(:name, :sex, :zodiac, :brave, :faith).stringify_keys) if job.monster?
 
     data['sex'] = 'm' if job.name == 'Bard'
     data['sex'] = 'f' if job.name == 'Dancer'
@@ -271,6 +304,8 @@ class Character
   end
 
   memoize def jp_total
+    return 4000 unless generic?
+
     job_prereqs = Job::CalculatePrerequisiteJp.perform(job: job).jp
 
     skill_costs = Job::CalculateSkillJp.perform(character: self).jp

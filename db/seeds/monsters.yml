@@ -1,336 +1,384 @@
 - name: Chocobo
   data:
-    hp: 287
-    mp: 126
-    speed: 10
-    attack: 13
-    magic: 27
+    x:
+      hp: 287
+      mp: 126
+      speed: 10
+      attack: 13
+      magic: 27
 - name: Black Chocobo
   data:
-    hp: 287
-    mp: 126
-    speed: 9
-    attack: 18
-    magic: 30
+    x:
+      hp: 287
+      mp: 126
+      speed: 9
+      attack: 18
+      magic: 30
 - name: Red Chocobo
   data:
-    hp: 306
-    mp: 126
-    speed: 10
-    attack: 14
-    magic: 28
+    x:
+      hp: 306
+      mp: 126
+      speed: 10
+      attack: 14
+      magic: 28
 - name: Goblin
   data:
-    hp: 320
-    mp: 126
-    speed: 9
-    attack: 12
-    magic: 13
+    x:
+      hp: 320
+      mp: 126
+      speed: 9
+      attack: 12
+      magic: 13
 - name: Black Goblin
   data:
-    hp: 342
-    mp: 126
-    speed: 9
-    attack: 13
-    magic: 13
+    x:
+      hp: 342
+      mp: 126
+      speed: 9
+      attack: 13
+      magic: 13
 - name: Gobbledeguck
   data:
-    hp: 363
-    mp: 126
-    speed: 9
-    attack: 17
-    magic: 13
+    x:
+      hp: 363
+      mp: 126
+      speed: 9
+      attack: 17
+      magic: 13
 - name: Bomb
   data:
-    hp: 342
-    mp: 3
-    speed: 9
-    attack: 12
-    magic: 26
+    x:
+      hp: 342
+      mp: 3
+      speed: 9
+      attack: 12
+      magic: 26
 - name: Grenade
   data:
-    hp: 363
-    mp: 5
-    speed: 9
-    attack: 13
-    magic: 27
+    x:
+      hp: 363
+      mp: 5
+      speed: 9
+      attack: 13
+      magic: 27
 - name: Explosive
   data:
-    hp: 384
-    mp: 7
-    speed: 9
-    attack: 14
-    magic: 27
+    x:
+      hp: 384
+      mp: 7
+      speed: 9
+      attack: 14
+      magic: 27
 - name: Tonberry
   data:
-    hp: 344
-    mp: 17
-    speed: 9
-    attack: 14
-    magic: 12
+    x:
+      hp: 344
+      mp: 17
+      speed: 9
+      attack: 14
+      magic: 12
 - name: Master Tonberry
   data:
-    hp: 364
-    mp: 17
-    speed: 9
-    attack: 16
-    magic: 12
+    x:
+      hp: 364
+      mp: 17
+      speed: 9
+      attack: 16
+      magic: 12
 - name: Blood Stalker
   data:
-    hp: 325
-    mp: 17
-    speed: 9
-    attack: 17
-    magic: 12
+    x:
+      hp: 325
+      mp: 17
+      speed: 9
+      attack: 17
+      magic: 12
 - name: Pisco Demon
   data:
-    hp: 384
-    mp: 126
-    speed: 9
-    attack: 11
-    magic: 12
+    x:
+      hp: 384
+      mp: 126
+      speed: 9
+      attack: 11
+      magic: 12
 - name: Squidlarkin
   data:
-    hp: 384
-    mp: 126
-    speed: 9
-    attack: 12
-    magic: 12
+    x:
+      hp: 384
+      mp: 126
+      speed: 9
+      attack: 12
+      magic: 12
 - name: Mindflare
   data:
-    hp: 427
-    mp: 126
-    speed: 9
-    attack: 13
-    magic: 12
+    x:
+      hp: 427
+      mp: 126
+      speed: 9
+      attack: 13
+      magic: 12
 - name: Skeleton
   data:
-    hp: 340
-    mp: 126
-    speed: 9
-    attack: 13
-    magic: 15
+    x:
+      hp: 340
+      mp: 126
+      speed: 9
+      attack: 13
+      magic: 15
 - name: Bone Snatch
   data:
-    hp: 389
-    mp: 126
-    speed: 9
-    attack: 14
-    magic: 15
+    x:
+      hp: 389
+      mp: 126
+      speed: 9
+      attack: 14
+      magic: 15
 - name: Living Bone
   data:
-    hp: 365
-    mp: 126
-    speed: 9
-    attack: 16
-    magic: 15
+    x:
+      hp: 365
+      mp: 126
+      speed: 9
+      attack: 16
+      magic: 15
 - name: Ghoul
   data:
-    hp: 249
-    mp: 22
-    speed: 10
-    attack: 13
-    magic: 11
+    x:
+      hp: 249
+      mp: 22
+      speed: 10
+      attack: 13
+      magic: 11
 - name: Gust
   data:
-    hp: 229
-    mp: 17
-    speed: 10
-    attack: 13
-    magic: 11
+    x:
+      hp: 229
+      mp: 17
+      speed: 10
+      attack: 13
+      magic: 11
 - name: Revnant
   data:
-    hp: 249
-    mp: 11
-    speed: 10
-    attack: 13
-    magic: 11
+    x:
+      hp: 249
+      mp: 11
+      speed: 10
+      attack: 13
+      magic: 11
 - name: Flotiball
   data:
-    hp: 299
-    mp: 126
-    speed: 9
-    attack: 12
-    magic: 25
+    x:
+      hp: 299
+      mp: 126
+      speed: 9
+      attack: 12
+      magic: 25
 - name: Ahriman
   data:
-    hp: 320
-    mp: 126
-    speed: 9
-    attack: 14
-    magic: 25
+    x:
+      hp: 320
+      mp: 126
+      speed: 9
+      attack: 14
+      magic: 25
 - name: Plague
   data:
-    hp: 342
-    mp: 126
-    speed: 9
-    attack: 16
-    magic: 25
+    x:
+      hp: 342
+      mp: 126
+      speed: 9
+      attack: 16
+      magic: 25
 - name: Juravis
   data:
-    hp: 320
-    mp: 7
-    speed: 10
-    attack: 12
-    magic: 24
+    x:
+      hp: 320
+      mp: 7
+      speed: 10
+      attack: 12
+      magic: 24
 - name: Steel Hawk
   data:
-    hp: 342
-    mp: 10
-    speed: 10
-    attack: 14
-    magic: 25
+    x:
+      hp: 342
+      mp: 10
+      speed: 10
+      attack: 14
+      magic: 25
 - name: Cocatoris
   data:
-    hp: 363
-    mp: 1
-    speed: 10
-    attack: 17
-    magic: 28
+    x:
+      hp: 363
+      mp: 1
+      speed: 10
+      attack: 17
+      magic: 28
 - name: Uribo
   data:
-    hp: 240
-    mp: 126
-    speed: 11
-    attack: 12
-    magic: 13
+    x:
+      hp: 240
+      mp: 126
+      speed: 11
+      attack: 12
+      magic: 13
 - name: Porky
   data:
-    hp: 256
-    mp: 126
-    speed: 11
-    attack: 13
-    magic: 13
+    x:
+      hp: 256
+      mp: 126
+      speed: 11
+      attack: 13
+      magic: 13
 - name: Wildbow
   data:
-    hp: 273
-    mp: 126
-    speed: 11
-    attack: 19
-    magic: 13
+    x:
+      hp: 273
+      mp: 126
+      speed: 11
+      attack: 19
+      magic: 13
 - name: Woodman
   data:
-    hp: 406
-    mp: 28
-    speed: 8
-    attack: 13
-    magic: 28
+    x:
+      hp: 406
+      mp: 28
+      speed: 8
+      attack: 13
+      magic: 28
 - name: Trent
   data:
-    hp: 427
-    mp: 32
-    speed: 8
-    attack: 13
-    magic: 27
+    x:
+      hp: 427
+      mp: 32
+      speed: 8
+      attack: 13
+      magic: 27
 - name: Taiju
   data:
-    hp: 448
-    mp: 26
-    speed: 8
-    attack: 14
-    magic: 28
+    x:
+      hp: 448
+      mp: 26
+      speed: 8
+      attack: 14
+      magic: 28
 - name: Bull Demon
   data:
-    hp: 486
-    mp: 126
-    speed: 9
-    attack: 14
-    magic: 28
+    x:
+      hp: 486
+      mp: 126
+      speed: 9
+      attack: 14
+      magic: 28
 - name: Minitaurus
   data:
-    hp: 535
-    mp: 126
-    speed: 9
-    attack: 17
-    magic: 28
+    x:
+      hp: 535
+      mp: 126
+      speed: 9
+      attack: 17
+      magic: 28
 - name: Sacred
   data:
-    hp: 559
-    mp: 126
-    speed: 9
-    attack: 19
-    magic: 28
+    x:
+      hp: 559
+      mp: 126
+      speed: 9
+      attack: 19
+      magic: 28
 - name: Morbol
   data:
-    hp: 470
-    mp: 126
-    speed: 8
-    attack: 13
-    magic: 11
+    x:
+      hp: 470
+      mp: 126
+      speed: 8
+      attack: 13
+      magic: 11
 - name: Ochu
   data:
-    hp: 448
-    mp: 126
-    speed: 8
-    attack: 14
-    magic: 13
+    x:
+      hp: 448
+      mp: 126
+      speed: 8
+      attack: 14
+      magic: 13
 - name: Great Morbol
   data:
-    hp: 491
-    mp: 126
-    speed: 8
-    attack: 14
-    magic: 12
+    x:
+      hp: 491
+      mp: 126
+      speed: 8
+      attack: 14
+      magic: 12
 - name: Behemoth
   data:
-    hp: 384
-    mp: 17
-    speed: 8
-    attack: 16
-    magic: 13
+    x:
+      hp: 384
+      mp: 17
+      speed: 8
+      attack: 16
+      magic: 13
 - name: King Behemoth
   data:
-    hp: 406
-    mp: 17
-    speed: 8
-    attack: 19
-    magic: 13
+    x:
+      hp: 406
+      mp: 17
+      speed: 8
+      attack: 19
+      magic: 13
 - name: Dark Behemoth
   data:
-    hp: 427
-    mp: 17
-    speed: 8
-    attack: 21
-    magic: 13
+    x:
+      hp: 427
+      mp: 17
+      speed: 8
+      attack: 21
+      magic: 13
 - name: Dragon
   data:
-    hp: 462
-    mp: 13
-    speed: 8
-    attack: 16
-    magic: 13
+    x:
+      hp: 462
+      mp: 13
+      speed: 8
+      attack: 16
+      magic: 13
 - name: Blue Dragon
   data:
-    hp: 486
-    mp: 19
-    speed: 8
-    attack: 17
-    magic: 13
+    x:
+      hp: 486
+      mp: 19
+      speed: 8
+      attack: 17
+      magic: 13
 - name: Red Dragon
   data:
-    hp: 535
-    mp: 20
-    speed: 8
-    attack: 18
-    magic: 13
+    x:
+      hp: 535
+      mp: 20
+      speed: 8
+      attack: 18
+      magic: 13
 - name: Hyudra
   data:
-    hp: 342
-    mp: 8
-    speed: 8
-    attack: 18
-    magic: 12
+    x:
+      hp: 342
+      mp: 8
+      speed: 8
+      attack: 18
+      magic: 12
 - name: Hydra
   data:
-    hp: 320
-    mp: 28
-    speed: 8
-    attack: 17
-    magic: 12
+    x:
+      hp: 320
+      mp: 28
+      speed: 8
+      attack: 17
+      magic: 12
 - name: Tiamat
   data:
-    hp: 320
-    mp: 16
-    speed: 8
-    attack: 17
-    magic: 12
+    x:
+      hp: 320
+      mp: 16
+      speed: 8
+      attack: 17
+      magic: 12
