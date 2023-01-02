@@ -51,6 +51,9 @@ Dir.glob('db/seeds/items/*.csv').each do |f|
     equippable_jobs.where.not(id: 20).each do |job|
       Proficiency.create(item: item, record: job)
     end
+
+    skill = Skill.find_by(name: row['Skill'])
+    Proficiency.create(item: item, record: skill) if skill.present?
   end
 end
 

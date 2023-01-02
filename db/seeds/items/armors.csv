@@ -1,26 +1,26 @@
-Name,HP,MP,Classes,Extras,Cancels,Absorbs,Halves,Strengthens
-Leather Armor,20,0,Kn Ln Sm,,,,,
-Linen Cuirass,30,0,Kn Ln Sm,,,,,
-Bronze Armor,40,0,Kn Ln Sm,,,,,
-Chain Mail,55,0,Kn Ln Sm,,,,,
-Mythril Armor,65,0,Kn Ln Sm,+1 MA,,,,
-Plate Mail,80,0,Kn Ln Sm,,,,,
-Gold Armor,100,0,Kn Ln Sm,,,,,
-Diamond Armor,120,0,Kn Ln Sm,,,,,
-Platina Armor,135,0,Kn Ln Sm,,,,,
-Clothes,5,0,NOT Kn Ln Sm,,,,,
-Leather Outfit,10,0,NOT Kn Ln Sm,,,,,
-Leather Vest,18,0,NOT Kn Ln Sm,,,,,
-Chain Vest,24,0,NOT Kn Ln Sm,,,,,
-Mythril Vest,30,0,NOT Kn Ln Sm,+1 MA,,,,
-Adaman Vest,36,0,NOT Kn Ln Sm,,,,,
-Wizard Outfit,42,15,NOT Kn Ln Sm,,,,,
-Brigandine,50,0,NOT Kn Ln Sm,,,,,
-Judo Outfit,60,0,NOT Kn Ln Sm,+1 PA,Dead,,,
-Power Sleeve,70,0,NOT Kn Ln Sm,+2 PA,,,,
-Linen Robe,10,10,Kn Pr Wi TM Su Me Or Ge Ln Sm Sg,,,,,
-Silk Robe,20,16,Kn Pr Wi TM Su Me Or Ge Ln Sm Sg,,,,,
-Wizard Robe,30,22,Kn Pr Wi TM Su Me Or Ge Ln Sm Sg,+2 MA,,,,
-Chameleon Robe,40,28,Kn Pr Wi TM Su Me Or Ge Ln Sm Sg,,Dead,Holy,,
-White Robe,50,34,Kn Pr Wi TM Su Me Or Ge Ln Sm Sg,,,,Fire/Ice/Lightning,
-Black Robe,60,30,Kn Pr Wi TM Su Me Or Ge Ln Sm Sg,,,,,Fire/Ice/Lightning
+Name,HP,MP,Classes,Extras,Cancels,Absorbs,Halves,Strengthens,Skill
+Leather Armor,20,0,Kn Ln Sm,,,,,,Equip Armor
+Linen Cuirass,30,0,Kn Ln Sm,,,,,,Equip Armor
+Bronze Armor,40,0,Kn Ln Sm,,,,,,Equip Armor
+Chain Mail,55,0,Kn Ln Sm,,,,,,Equip Armor
+Mythril Armor,65,0,Kn Ln Sm,+1 MA,,,,,Equip Armor
+Plate Mail,80,0,Kn Ln Sm,,,,,,Equip Armor
+Gold Armor,100,0,Kn Ln Sm,,,,,,Equip Armor
+Diamond Armor,120,0,Kn Ln Sm,,,,,,Equip Armor
+Platina Armor,135,0,Kn Ln Sm,,,,,,Equip Armor
+Clothes,5,0,NOT Kn Ln Sm,,,,,,
+Leather Outfit,10,0,NOT Kn Ln Sm,,,,,,
+Leather Vest,18,0,NOT Kn Ln Sm,,,,,,
+Chain Vest,24,0,NOT Kn Ln Sm,,,,,,
+Mythril Vest,30,0,NOT Kn Ln Sm,+1 MA,,,,,
+Adaman Vest,36,0,NOT Kn Ln Sm,,,,,,
+Wizard Outfit,42,15,NOT Kn Ln Sm,,,,,,
+Brigandine,50,0,NOT Kn Ln Sm,,,,,,
+Judo Outfit,60,0,NOT Kn Ln Sm,+1 PA,Dead,,,,
+Power Sleeve,70,0,NOT Kn Ln Sm,+2 PA,,,,,
+Linen Robe,10,10,Kn Pr Wi TM Su Me Or Ge Ln Sm Sg,,,,,,
+Silk Robe,20,16,Kn Pr Wi TM Su Me Or Ge Ln Sm Sg,,,,,,
+Wizard Robe,30,22,Kn Pr Wi TM Su Me Or Ge Ln Sm Sg,+2 MA,,,,,
+Chameleon Robe,40,28,Kn Pr Wi TM Su Me Or Ge Ln Sm Sg,,Dead,Holy,,,
+White Robe,50,34,Kn Pr Wi TM Su Me Or Ge Ln Sm Sg,,,,Fire/Ice/Lightning,,
+Black Robe,60,30,Kn Pr Wi TM Su Me Or Ge Ln Sm Sg,,,,,Fire/Ice/Lightning,

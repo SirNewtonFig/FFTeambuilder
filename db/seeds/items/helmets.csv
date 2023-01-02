@@ -1,21 +1,21 @@
-Name,HP,MP,Classes,Extras,Cancels:
-Leather Helmet,20,0,Kn Ln Sm,,
-Bronze Helmet,30,0,Kn Ln Sm,,
-Iron Helmet,45,0,Kn Ln Sm,,
-Barbuta,55,0,Kn Ln Sm,,
-Mythril Helmet,65,0,Kn Ln Sm,+1 MA,
-Gold Helmet,80,0,Kn Ln Sm,,
-Cross Helmet,90,0,Kn Ln Sm,,
-Diamond Helmet,100,0,Kn Ln Sm,,
-Platina Helmet,110,0,Kn Ln Sm,,
-Circlet,130,0,Kn Ln Sm,+1 MA,
-Leather Hat,8,0,NOT Kn Mk Ln Sm,,
-Feather Hat,16,5,NOT Kn Mk Ln Sm,,
-Red Hood,24,8,NOT Kn Mk Ln Sm,,
-Headgear,32,0,NOT Kn Mk Ln Sm,+1 PA,
-Triangle Hat,40,12,NOT Kn Mk Ln Sm,+1 MA,
-Green Beret,48,0,NOT Kn Mk Ln Sm,+1 Speed,
-Twist Headband,56,0,NOT Kn Mk Ln Sm,+2 PA,
-Holy Miter,64,20,NOT Kn Mk Ln Sm,+1 MA,
-Black Hood,115,0,NOT Kn Mk Ln Sm,,
-Golden Hairpin,80,50,NOT Kn Mk Ln Sm,,Silence
+Name,HP,MP,Classes,Extras,Cancels,Skill
+Leather Helmet,20,0,Kn Ln Sm,,,Equip Armor
+Bronze Helmet,30,0,Kn Ln Sm,,,Equip Armor
+Iron Helmet,45,0,Kn Ln Sm,,,Equip Armor
+Barbuta,55,0,Kn Ln Sm,,,Equip Armor
+Mythril Helmet,65,0,Kn Ln Sm,+1 MA,,Equip Armor
+Gold Helmet,80,0,Kn Ln Sm,,,Equip Armor
+Cross Helmet,90,0,Kn Ln Sm,,,Equip Armor
+Diamond Helmet,100,0,Kn Ln Sm,,,Equip Armor
+Platina Helmet,110,0,Kn Ln Sm,,,Equip Armor
+Circlet,130,0,Kn Ln Sm,+1 MA,,Equip Armor
+Leather Hat,8,0,NOT Kn Mk Ln Sm,,,
+Feather Hat,16,5,NOT Kn Mk Ln Sm,,,
+Red Hood,24,8,NOT Kn Mk Ln Sm,,,
+Headgear,32,0,NOT Kn Mk Ln Sm,+1 PA,,
+Triangle Hat,40,12,NOT Kn Mk Ln Sm,+1 MA,,
+Green Beret,48,0,NOT Kn Mk Ln Sm,+1 Speed,,
+Twist Headband,56,0,NOT Kn Mk Ln Sm,+2 PA,,
+Holy Miter,64,20,NOT Kn Mk Ln Sm,+1 MA,,
+Black Hood,115,0,NOT Kn Mk Ln Sm,,,
+Golden Hairpin,80,50,NOT Kn Mk Ln Sm,,Silence,
