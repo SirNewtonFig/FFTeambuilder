@@ -53,7 +53,9 @@ skills.each do |row|
       formula: row['Formula'],
       counter: row['Counter?'],
       counter_magic: row['Counter Magic?'],
-      counter_flood: row['Counter Flood?']
+      counter_flood: row['Counter Flood?'],
+      move: row['Mv'],
+      jump: row['Jp']
     }
   )
 
