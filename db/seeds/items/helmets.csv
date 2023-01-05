@@ -1,26 +1,26 @@
 Name,Classes,HP,MP,PA,MA,Sp,Mv,Jp,Cancels:,Absorbs:,Weak:,Halves:,Strengthens:,Start:,Always:,Skill
-Bronze Helmet,Kn Ln Sm,180,0,,,-1,,,,,,,,,Equip Armor
-Iron Helmet,Kn Ln Sm,120,0,,,,,,,,,,,Don't Move,Equip Armor
-Barbuta,Kn Ln Sm,180,0,,,,,,,,,,,Slow,Equip Armor
-Mythril Helmet,Kn Ln Sm,130,0,,1,,,,,,,,,,Equip Armor
-Gold Helmet,Kn Ln Sm,50,10,,,,,,,,,,,,Equip Armor
-Cross Helmet,Kn Ln Sm,130,0,,,,,,Dead,Holy,,,Holy,,Equip Armor
-Diamond Helmet,Kn Ln Sm,100,0,1,1,,,,,,,,,,Equip Armor
-Platina Helmet,Kn Ln Sm,150,0,,,,,,,,,Fire/Dark/Water,,,Equip Armor
-Crystal Helmet,Kn Ln Sm,110,0,,,,,,,Ice,,,Ice,,Equip Armor
-Genji Helmet,Kn Ln Sm,110,0,,,,,,Stop Frog,,,,,,Equip Armor
-Grand Helmet,Kn Ln Sm,130,0,,,,,,Blind Faith,,,,,,Equip Armor
-Leather Hat,NOT Kn Mk Ln Sm,20,20,1,1,,,,,,,,,,
-Leather Helmet,NOT Kn Mk Ln Sm,90,0,,,,,,,Water,,,,,
-Feather Hat,NOT Kn Mk Ln Sm,30,20,,,,,,,Wind,,,Wind,,
-Red Hood,NOT Kn Mk Ln Sm,30,70,,,,,,,,,,,,
-Headgear,NOT Kn Mk Ln Sm,85,0,1,,,,,,,,,,,
-Triangle Hat,NOT Kn Mk Ln Sm,50,30,,1,,,,,,,,,,
-Green Beret,NOT Kn Mk Ln Sm,70,0,,,,,,,Earth,,,Earth,,
-Twist Headband,NOT Kn Mk Ln Sm,55,0,2,,,,,,,,,,,
-Holy Miter,NOT Kn Mk Ln Sm,64,20,,,,,,,,,,,Faith,
-Circlet,NOT Kn Mk Ln Sm,90,0,,1,,,,,,,,,,
-Black Hood,NOT Kn Mk Ln Sm,115,0,,,,,,,,,,,,
-Golden Hairpin,NOT Kn Mk Ln Sm,80,50,,,,,,Silence,,,,,,
-Flash Hat,NOT Kn Mk Ln Sm,0,20,,1,1,,,,,,,,,
-Thief Hat,NOT Kn Mk Ln Sm,50,0,,,1,,,,,,,,,
+Bronze Helmet,Kn Ln Sm,180,0,,,-1,,,,,,,,,,Equip Armor
+Iron Helmet,Kn Ln Sm,120,0,,,,,,,,,,,Don't Move,,Equip Armor
+Barbuta,Kn Ln Sm,180,0,,,,,,,,,,,Slow,,Equip Armor
+Mythril Helmet,Kn Ln Sm,130,0,,1,,,,,,,,,,,Equip Armor
+Gold Helmet,Kn Ln Sm,50,10,,,,,,,,,,,,,Equip Armor
+Cross Helmet,Kn Ln Sm,130,0,,,,,,Dead,Holy,,,Holy,,,Equip Armor
+Diamond Helmet,Kn Ln Sm,100,0,1,1,,,,,,,,,,,Equip Armor
+Platina Helmet,Kn Ln Sm,150,0,,,,,,,,,Fire/Dark/Water,,,,Equip Armor
+Crystal Helmet,Kn Ln Sm,110,0,,,,,,,Ice,,,Ice,,,Equip Armor
+Genji Helmet,Kn Ln Sm,110,0,,,,,,Stop Frog,,,,,,,Equip Armor
+Grand Helmet,Kn Ln Sm,130,0,,,,,,Blind Faith,,,,,,,Equip Armor
+Leather Hat,NOT Kn Mk Ln Sm,20,20,1,1,,,,,,,,,,,
+Leather Helmet,NOT Kn Mk Ln Sm,90,0,,,,,,,Water,,,,,,
+Feather Hat,NOT Kn Mk Ln Sm,30,20,,,,,,,Wind,,,Wind,,,
+Red Hood,NOT Kn Mk Ln Sm,30,70,,,,,,,,,,,,,
+Headgear,NOT Kn Mk Ln Sm,85,0,1,,,,,,,,,,,,
+Triangle Hat,NOT Kn Mk Ln Sm,50,30,,1,,,,,,,,,,,
+Green Beret,NOT Kn Mk Ln Sm,70,0,,,,,,,Earth,,,Earth,,,
+Twist Headband,NOT Kn Mk Ln Sm,55,0,2,,,,,,,,,,,,
+Holy Miter,NOT Kn Mk Ln Sm,64,20,,,,,,,,,,,Faith,,
+Circlet,NOT Kn Mk Ln Sm,90,0,,1,,,,,,,,,,,
+Black Hood,NOT Kn Mk Ln Sm,115,0,,,,,,,,,,,,,
+Golden Hairpin,NOT Kn Mk Ln Sm,80,50,,,,,,Silence,,,,,,,
+Flash Hat,NOT Kn Mk Ln Sm,0,20,,1,1,,,,,,,,,,
+Thief Hat,NOT Kn Mk Ln Sm,50,0,,,1,,,,,,,,,,
