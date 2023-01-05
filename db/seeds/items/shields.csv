@@ -1,11 +1,17 @@
-Name,Phys Evade,Magic Evade,Classes,Extras,Absorbs,Halves,Weakness,Skill
-Escutcheon,10,5,Kn Ar Ge Ln,,,,,Equip Shield
-Buckler,13,5,Sq Kn Ar Ge Ln,,,,,Equip Shield
-Bronze Shield,16,5,Sq Kn Ar Ge Ln,,,,,Equip Shield
-Round Shield,19,5,Sq Kn Ar Ge Ln,,,,,Equip Shield
-Mythril Shield,22,10,Sq Kn Ar Ge Ln,MA +1,,,,Equip Shield
-Gold Shield,25,10,Sq Kn Ar Ge Ln,,,,,Equip Shield
-Ice Shield,28,10,Sq Kn Ar Ge Ln,,Ice,Fire,Lightning,Equip Shield
-Flame Shield,31,10,Sq Kn Ar Ge Ln,,Fire,Ice,Water,Equip Shield
-Aegis Shield,10,50,Sq Kn Ar Ge Ln,MA +1,,,,Equip Shield
-Diamond Shield,34,15,Sq Kn Ar Ge Ln,,,,,Equip Shield
+Name,Classes,Phys Evade,Magic Evade,PA,MA,Sp,Mv,Jm,Cancels:,Absorbs:,Weak:,Halves:,Strengthens:,Start:,Always:,Skill
+Escutcheon,Sq Kn Ar Ge Ln,25,0,,,,,,,,Fire,,,Haste,,Equip Shield
+Buckler,Sq Kn Ar Ge Ln,20,45,,,,,,,,,,,,Silence,Equip Shield
+Bronze Shield,Sq Kn Ar Ge Ln,30,0,,,,,,,,,,,,Reflect,Equip Shield
+Round Shield,Sq Kn Ar Ge Ln,0,0,,,-1,,,,,,,,,Shell,Equip Shield
+Mythril Shield,Sq Kn Ar Ge Ln,40,0,,1,,,,,,,,,,,Equip Shield
+Gold Shield,Sq Kn Ar Ge Ln,35,25,,,,,,,,,,,,,Equip Shield
+Ice Shield,Sq Kn Ar Ge Ln,34,15,,,,,,,Ice,Lightning,Fire,,,,Equip Shield
+Flame Shield,Sq Kn Ar Ge Ln,34,15,,,,,,,Fire,Water,Ice,,,,Equip Shield
+Aegis Shield,Sq Kn Ar Ge Ln,10,45,,1,,,,,,,,,,,Equip Shield
+Diamond Shield,Sq Kn Ar Ge Ln,15,15,1,1,,,,,,,,,,,Equip Shield
+Platina Shield,Sq Kn Ar Ge Ln,25,35,,,,,,,,,,,,,Equip Shield
+Crystal Shield,Sq Kn Ar Ge Ln,20,20,,,,,,,Ice,,,Ice,,,Equip Shield
+Genji Shield,Sq Kn Ar Ge Ln,30,20,,,,,,Chicken Petrify,,,,,,,Equip Shield
+Kaiser Plate,Sq Kn Ar Ge Ln,0,0,,2,,,,,,,,Ice/Lightning/Wind,,,Equip Shield
+Venetian Shield,Sq Kn Ar Ge Ln,0,0,,,,,,,,,Fire/Water/Dark,,,,Equip Shield
+Escutcheon II,Sq Kn Ar Ge Ln,5,5,,,,,,,,,,,,Defend,Equip Shield

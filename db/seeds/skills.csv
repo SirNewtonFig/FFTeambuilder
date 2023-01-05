@@ -1,0 +1,253 @@
+Class,Skill Name,JP Cost,Range,AoE,Target,Vertical Tolerance,CT,MP,Element,Evade Type,Reflectable?,Silence?,Formula,Counter?,Counter Magic?,Counter Flood?
+Squire,Defy Pain,50,0,,Self,,,,,,,,Heal 100% Max HP. Useable only in critical,,,
+Squire,Throw Stone,100,4,,Any,,,,Earth,Phys,,,Dmg_((1...10)*PA) 100% Knockback,,,
+Squire,Heal,150,1,,Any,2,,,,,,,Cure: Silence+Blind+Stop+Poison+Berserk,,,
+Squire,Wish,200,1,,Any,3,,,,,,,Revive 1% Hit_(PA+70)%,,,
+Squire,Cheer Up,200,3,,Any,3,,,,,,,Add: Regen HealMP(4*MA),,,
+Squire,Wild Swing,100,0,1,Any,1,,,,Phys,,,Dmg_((PA+2)/2*PA),Yes,,Yes
+Squire,Target,200,Weapon,,Any,,,,,,,,Dmg_(PA*(WP-2)),Yes,,Yes
+Squire,Warn,100,0,2,Self,3,,,,,,,Add: Defend Hit_(100)%,,,
+Squire,R:Weapon Guard,0,,,,,,,,,,,Activate weapon evasion %,,,
+Squire,R:Counter Throw,180,,,,,,,,,,,Counter PA-based skills and knock back,,,
+Squire,S:Equip Axe,150,,,,,,,,,,,Can equip axe regardless of job,,,
+Squire,S:Monster Skill,400,,,,,,,,,,,Standing beside ally monster unlocks its hidden skill,,,
+Squire,M:Move+1,180,,,,,,,,,,,"Read the name, this isn't complicated",,,
+Chemist,Potion,0,1,,Any,,,,,,,,Recover 30 HP,,,
+Chemist,Hi-Potion,100,1,,Any,,,,,,,,Recover 60 HP,,,
+Chemist,X-Potion,200,1,,Any,,,,,,,,Recover 90 HP,,,
+Chemist,Ether,100,1,,Any,,,,,,,,Recover 20 MP,,,
+Chemist,Hi-Ether,200,1,,Any,,,,,,,,Recover 50 MP,,,
+Chemist,Maiden's Kiss,25,1,,Any,,,,,,,,Cure: Frog,,,
+Chemist,Soft,25,1,,Any,,,,,,,,Cure: Petrify,,,
+Chemist,Holy Water,25,1,,Any,,,,,,,,Cure: Blood Suck,,,
+Chemist,Remedy,200,1,,Any,,,,,,,,Cure: Blind+Confuse+Silence+Sleep+Poison+Oil,,,
+Chemist,Phoenix Down,0,1,,Any,,,,,,,,Revive 1-19 HP,,,
+Chemist,Mega Potion,400,1,,Any,,,,,,,,Recover 180 HP,,,
+Chemist,Power Source,1000,1,,Any,,,,,,,,Recover 180 HP 50 MP,,,
+Chemist,R:Auto Potion,600,,,,,,,,,,,Heal 90 on HP damage,,,
+Chemist,S:Throw Item,250,,,,,,,,,,,Item ability range increased to 4 (CLASS INNATE),,,
+Chemist,S:Maintenance,200,,,,,,,,,,,Protects gear from Break/Steal,,,
+Chemist,S:Equip Change,0,,,,,,,,,,,Does nothing in AI battles (CLASS INNATE),,,
+Chemist,M:Move-Find Item,100,,,,,,,,,,,Does nothing in AI battles (CLASS INNATE),,,
+Knight,Power Ruin,200,3,,Any,,,6,,,,,-3 PA Hit_(PA+65)%,Yes,Yes,Yes
+Knight,Mind Ruin,200,3,,Any,,,6,,,,,-3 MA Hit_(PA+65)%,Yes,Yes,Yes
+Knight,Speed Ruin,200,3,,Any,,,6,,,,,Add: Slow Hit_(PA+60)%,Yes,Yes,Yes
+Knight,Magic Ruin,100,3,,Any,,,6,,,,,DmgMP_(50% max) Hit_(PA+60)%,Yes,Yes,Yes
+Knight,Hellcry Punch,600,,,Any,,,15,,,,,Dmg_(PA*WP/2) Break Weapon ELSE miss,Yes,,Yes
+Knight,Blastar Punch,200,,,Any,,,15,,,,,Dmg_(PA*WP/2) Break Helm ELSE miss,Yes,,Yes
+Knight,Shellbust Stab,400,,,Any,,,15,,,,,Dmg_(PA*WP/2) Break Armor ELSE miss,Yes,,Yes
+Knight,Icewolf Bite,200,,,Any,,,15,,,,,Dmg_(PA*WP/2) Break Accessory ELSE miss,Yes,,Yes
+Knight,R:Counter,300,,,,,,,,,,,Counter with attack command if in range,,,
+Knight,S:Defend,50,,,,,,,,,,,"Add: Defend until next turn (double evasion, -25% damage taken)",,,
+Knight,S:Equip Armor,400,,,,,,,,,,,Can equip heavy armor or helmets regardless of class,,,
+Knight,S:Equip Shield,200,,,,,,,,,,,Can equip shield regardless of job,,,
+Knight,S:Equip Sword,350,,,,,,,,,,,Can equip sword regardless of job,,,
+Marksman,Timed Strike,100,Weapon,,,,4,,,Phys,,,Dmg_(PA*(WP+4)),Yes,,Yes
+Marksman,Stunning Strike,100,Weapon,,,,,,,Phys,,,"Cancel: Charging, Performing Hit_(Speed+65)%",Yes,,Yes
+Marksman,Cursed Strike,200,Weapon,,,,,,,Phys,,,"Add: Oil, Blind Hit_(Speed+70)%",Yes,,Yes
+Marksman,Mocking Strike,250,Weapon,,,,,,,Phys,,,Brave -15 Hit_(MA+75)%,Yes,,Yes
+Marksman,Heartache Strike,200,Weapon,,,,,,,Phys,,,Add to opposite sex: Confuse or Berserk or Slow or Charm or Sleep or Don't Act Hit_(MA+70)%,Yes,,Yes
+Marksman,Temporal Strike,400,Weapon,,,,,,,Mag,,,Cancel: Haste Dmg_(66% max HP) Hit_F(MA+250)%,Yes,,Yes
+Marksman,R:CT Save,600,,,,,,,,,,,Increase CT by 20 upon taking damage,,,
+Marksman,R:Arrow Guard,400,,,,,,,,,,,Raise evasion vs Arrows by Brave%,,,
+Marksman,S:Equip Bows,200,,,,,,,,,,,Can equip bow or crossbow regardless of job,,,
+Marksman,S:Concentrate,350,,,,,,,,,,,Physical attacks and skills ignore evasion (THIEF INNATE),,,
+Marksman,M:Jump+1,100,,,,,,,,,,,"Read the name, this isn't complicated",,,
+Monk,Spin Fist,150,0,2,Any,,,,,Phys,,,Dmg_((PA)/2*PA),Yes,,Yes
+Monk,Repeating Fist,250,1,,Any,0,,,,,,,Dmg_((PA+2)/2*PA),Yes,,Yes
+Monk,Wave Fist,250,3,,Any,3,,,,Phys,,,Dmg_((PA+2)/2*PA),Yes,,Yes
+Monk,Earth Slash,500,5,Linear,Any,2,,,Earth,Phys,,,Dmg_((PA)/2*PA),Yes,,Yes
+Monk,Secret Fist,300,1,,Any,0,,,,Phys,,,Add: Death Sentence Hit_(MA+70)%,Yes,,Yes
+Monk,Stigma Magic,100,0,1,Any,,,,,,,,Cancel: All negative status Hit_(100)%,,,
+Monk,Chakra,300,0,1,Any,,,,,,,,Heal HP PA*5 Heal MP PA*5/2,,,
+Monk,Revive,420,1,,Dead,0,,,,,,,Revive 20% Hit_(PA+70)%,,,
+Monk,R:HP Restore,400,,,,,,,,,,,Heal to full when put into critical,,,
+Monk,R:Meatbone Slash,200,,,,,,,,,,,Deal your max HP in unevadable melee damage when put into critical,,,
+Monk,S:Martial Arts,600,,,,,,,,,,,50% bonus PA to PA-based skills and fist attacks (CLASS INNATE),,,
+Monk,M:Move-HP Up,270,,,,,,,,,,,Recover HP as you move,,,
+Priest,Cure,50,4,1,Any,1,3,6,Holy,,Yes,Yes,Heal_F(MA*20),,,
+Priest,Holy Strike,100,Weapon,,Any,,,6,Holy,Mag,,,Dmg_((PA+6)/2*MA) 20% Add: Confuse,Yes,Yes,Yes
+Priest,Rejuvenate,220,4,2,Any,2,5,16,Holy,,Yes,Yes,Heal_F(MA*30),,,
+Priest,Flash Heal,300,4,,Any,,,20,,,Yes,Yes,Heal_F(MA*30),,,
+Priest,Life,150,4,,Any,,3,10,,,Yes,Yes,Revive 50% Hit_F(MA+255)%,,,
+Priest,Full Life,400,4,,Any,,6,20,,,Yes,Yes,Revive 100% Hit_F(MA+190)%,,,
+Priest,Reraise,400,3,,Any,,5,16,,,Yes,Yes,Add: Reraise Hit_F(MA+170)%,,,
+Priest,Regen,250,3,1,Any,2,2,8,,,Yes,Yes,Add: Regen Hit_F(MA+200)%,,,
+Priest,Protect,70,3,1,Any,1,2,6,,,Yes,Yes,Add: Protect Hit_F(MA+200)%,,,
+Priest,Shell,70,3,1,Any,1,2,6,,,Yes,Yes,Add: Shell Hit_F(MA+200)%,,,
+Priest,Wall,200,3,,Any,,3,12,,,Yes,Yes,Add: Protect+Shell Hit_F(MA+255)%,,,
+Priest,Esuna,280,3,1,Any,2,3,14,,,Yes,Yes,Cancel: All negative status Hit_F(MA+140)%,,,
+Priest,Holy,200,5,,Any,,3,10,Holy,Mag,Yes,Yes,Dmg_F(MA*18),,Yes,Yes
+Priest,R:Regenerator,350,,,,,,,,,,,Add: Regen on HP damage,,,
+Priest,S:Magic DefendUP,350,,,,,,,,,,,Reduce magic damage received by 33%,,,
+Wizard,Explosion,50,5,,Any,,3,6,Fire,Mag,Yes,Yes,Dmg_F(MA*19) 20% Add: Oil,,Yes,Yes
+Wizard,Chain Lightning,150,7,Linear,Any,,,8,Lightning,Mag,Yes,Yes,Dmg_F(MA*16),,Yes,Yes
+Wizard,Cyclone,200,4,2,Any,2,4,12,Wind,Mag,Yes,Yes,Dmg_F(MA*16) 20% Add: Float,,Yes,Yes
+Wizard,Mjollnir,280,5,,Any,,5,20,Lightning,Mag,Yes,Yes,Dmg_F(MA*28) 20% Add: Stop,,Yes,Yes
+Wizard,Blizzard,400,4,2,Any,3,5,24,Ice,Mag,Yes,Yes,Dmg_F(MA*24) 20% Add: Slow,,Yes,Yes
+Wizard,Comet,200,4,1,Any,2,4,16,Fire,Mag,Yes,Yes,Dmg_F(MA*18),,Yes,Yes
+Wizard,Meltdown,280,0,2,Any,2,5,16,,,Yes,Yes,Dmg_(Missing HP) Add: Dead to self,,Yes,Yes
+Wizard,Frog,300,4,,Any,,5,12,,Mag,Yes,Yes,Add: Frog Hit_F(MA+140)%,,Yes,Yes
+Wizard,Dark Holy,600,5,,Any,,6,46,,,Yes,Yes,Dmg_F(MA*40),,Yes,Yes
+Wizard,R:Counter Magic,700,,,,,,,,,,,Cast the same spell just used on yourself,,,
+Wizard,S:Magic AttackUP,350,,,,,,,,,,,Increases magic damage by 33%,,,
+Time Mage,Haste,80,3,1,Any,,2,8,,,Yes,Yes,Add: Haste Hit_F(MA+180)%,,,
+Time Mage,Haste 2,500,3,2,Any,2,6,30,,,Yes,Yes,Add: Haste Hit_F(MA+240)%,,,
+Time Mage,Slow,80,3,1,Any,,2,8,,Mag,Yes,Yes,Add: Slow Hit_F(MA+180)%,,Yes,Yes
+Time Mage,Slow 2,500,3,2,Any,2,5,30,,Mag,Yes,Yes,Add: Slow Hit_F(MA+240)%,,Yes,Yes
+Time Mage,Stop,300,3,1,Any,1,6,14,,Mag,Yes,Yes,Add: Stop Hit_F(MA+150)%,,Yes,Yes
+Time Mage,Don't Move,80,3,1,Any,1,3,10,,Mag,Yes,Yes,Add: Don't Move Hit_F(MA+190)%,,Yes,Yes
+Time Mage,Reflect,250,4,,Any,,1,12,,,Yes,Yes,Add: Reflect Hit_F(MA+180)%,,,
+Time Mage,Quick,800,4,,Any,,5,24,,,Yes,Yes,Set CT to 100 Hit_F(MA+110)%,,,
+Time Mage,Demi,200,4,1,Any,1,2,12,,Mag,Yes,Yes,Dmg_(25% Max HP) Hit_F(MA+200)%,,Yes,Yes
+Time Mage,Demi 2,450,4,1,Any,1,4,26,,Mag,Yes,Yes,Dmg_(50% Max HP) Hit_F(MA+170)%,,Yes,Yes
+Time Mage,R:Critical Quick,700,,,,,,,,,,,Set CT to 100 on becoming critical,,,
+Time Mage,S:Short Charge,800,,,,,,,,,,,Spell Charge Time cut by 50%,,,
+Time Mage,M:Teleport,800,,,,,,,,,,,"Move Anywhere, ignoring height and obstacles. 10% chance to fail per space beyond your move",,,
+Time Mage,M:Float,0,,,,,,,,,,,"Float 1H above ground, ignoring effects of terrain (float makes you immune to earth element)",,,
+Summoner,Moogle,80,4,2,Any,2,4,10,,Mag,,Yes,Heal_F(MA*20),,,
+Summoner,Shiva,180,4,2,Any,2,4,20,Ice,Mag,,Yes,Dmg_F(MA*16),,Yes,Yes
+Summoner,Ramuh,180,4,2,Any,2,4,20,Lightning,Mag,,Yes,Dmg_F(MA*16),,Yes,Yes
+Summoner,Ifrit,180,4,2,Any,2,4,20,Fire,Mag,,Yes,Dmg_F(MA*16),,Yes,Yes
+Summoner,Fairy,200,4,1,Any,2,4,30,,,,Yes,Revive 33% Hit_F(MA+180)%,,,
+Summoner,Silf,200,4,2,Any,2,4,26,Wind,Mag,,Yes,Dmg_F(MA*16) 20% Add: Float,,Yes,Yes
+Summoner,Carbunkle,350,4,2,Any,2,3,20,,,,Yes,Add: Reflect+Defend Hit_F(MA+225)%,,,
+Summoner,Titan,200,4,2,Any,2,5,30,Earth,Mag,,Yes,Dmg_F(MA*24),,Yes,Yes
+Summoner,Odin,200,4,2,Any,2,5,30,,Mag,,Yes,Dmg_F(MA*24),,Yes,Yes
+Summoner,Salamander,200,4,2,Any,2,5,30,Fire,Mag,,Yes,Dmg_F(MA*24),,Yes,Yes
+Summoner,Lich,200,4,2,Any,2,5,30,,Mag,,Yes,Dmg_F(MA*18) 19% Add: Dead,,Yes,Yes
+Summoner,Leviathan,500,4,3,Any,3,6,40,Water,Mag,,Yes,Dmg_F(MA*20),,Yes,Yes
+Summoner,Bahamut,500,4,3,Any,3,8,40,,Mag,,Yes,Dmg_F(MA*20),,Yes,Yes
+Summoner,Cyclops,600,4,2,Any,2,8,50,,Mag,,Yes,Dmg_F(MA*28),,Yes,Yes
+Summoner,Zodiac,1000,4,3,Any,3,12,99,,Mag,,Yes,Dmg_F(MA*30),,Yes,Yes
+Summoner,R:MP Restore,400,,,,,,,,,,,Restore all MP on becoming critical,,,
+Summoner,S:Half of MP,750,,,,,,,,,,,MP Costs reduced by 50%,,,
+Thief,Gil Toss,100,3,,Any,3,,,,,,,Add: Defend or Berserk Hit_(PA+60)%,Yes,,Yes
+Thief,Steal Energy,100,1,,Any,,,,,,,,Leech 50% target max_MP Hit_(SP+50),,,Yes
+Thief,Steal Heart,200,3,,Any,3,,,,,,,Add: Charm opposite sex Hit_(MA+40)%,,,
+Thief,Steal Strength,300,1,,Any,,,,,,,,"Target -1 PA, Self +1 PA Hit_(SP+60)%",,,Yes
+Thief,Backstab,300,1,,Any,,,,,Phys,,,If behind: Dmg_(SP*WP) ELSE: miss,Yes,,Yes
+Thief,Throat Punch,300,1,,Any,,,,,Phys,,,Dmg_((PA-2)*SP) Cancel: Charging,Yes,,Yes
+Thief,Kidney Shot,400,1,,Any,,,,,Phys,,,Dmg_((PA/2)*SP) -25 CT,Yes,,Yes
+Thief,Disarm,500,1,,Any,2,,,,Phys,,,Steal Weapon Hit_(SP+60)%,,,Yes
+Thief,R:Caution,150,,,,,,,,,,,"Add: Defend until next turn (double evasion, -25% damage taken) on taking damage",,,
+Thief,R:Gilgame Heart,200,,,,,,,,,,,Does nothing in AI battles,,,
+Thief,R:Catch,200,,,,,,,,,,,Catch thrown weapons,,,
+Thief,S:Secret Hunt,150,,,,,,,,,,,Finishing off a monster with Attack removes it from the battle entirely,,,
+Thief,M:Move+2,420,,,,,,,,,,,"Read the name, this isn't complicated",,,
+Thief,M:Jump+2,200,,,,,,,,,,,"Read the name, this isn't complicated",,,
+Mediator,Invitation,300,3,,Any,3,,,,,,Yes,Add: Confusion or Charm Hit_(MA+50)%,,,
+Mediator,Persuade,100,3,,Any,3,,,,,,Yes,Add: Stop Hit_(MA+50)%,,,
+Mediator,Threaten,100,3,,Any,3,,,,,,Yes,Add: Don't Act Hit_(MA+45)%,,,
+Mediator,Preach,200,3,,Any,3,,,,,,Yes,Add: Reraise Hit_(MA+70)%,,,
+Mediator,Solution,200,3,,Any,3,,,,,,Yes,Cancel: All status Hit_(MA+50)%,,,
+Mediator,Death Sentence,200,3,,Any,3,,,,,,Yes,Add: Death Sentence Hit_(MA+45)%,,,
+Mediator,Insult,300,3,,Any,3,,,,,,Yes,Add: Berserk Hit_(MA+60)%,,,
+Mediator,Mimic Daravon,300,3,1,Any,3,,,,,,Yes,Add: Sleep Hit_(MA+40)%,,,
+Mediator,R:Finger Guard,250,,,,,,,,,,,Evade Talk Skills Brave%,,,
+Mediator,S:Equip Gun,300,,,,,,,,,,,Can equip gun regardless of job,,,
+Mediator,S:Train,400,,,,,,,,,,,Attack that takes a monster to critical auto invites them,,,
+Mediator,S:Monster Talk,100,,,,,,,,,,,Talk Skills can affect monsters (CLASS INNATE),,,
+Oracle,Blind,80,4,2,Any,3,,4,,Mag,Yes,Yes,Add: Blind Hit_F(MA+250)%,,Yes,Yes
+Oracle,Spell Absorb,100,4,,Any,,2,2,,Mag,Yes,Yes,Leech 33% target max MP Hit_F(MA+255)%,,Yes,Yes
+Oracle,Pray Faith,150,4,,Any,,3,6,,Mag,Yes,Yes,Add: Faith Hit_F(MA+150)%,,Yes,Yes
+Oracle,Doubt Faith,150,4,,Any,,3,6,,Mag,Yes,Yes,Add: Innocent Hit_F(MA+150)%,,Yes,Yes
+Oracle,Zombie,200,4,,Any,,3,12,,Mag,Yes,Yes,Add: Zombie Hit_F(MA+180)%,,Yes,Yes
+Oracle,Silence Song,170,4,1,Any,1,3,12,,Mag,Yes,Yes,Add: Silence Hit_F(MA+180)%,,Yes,Yes
+Oracle,Blind Rage,200,4,,Any,,3,16,,Mag,Yes,Yes,Add: Berserk Hit_F(MA+150)%,,Yes,Yes
+Oracle,Petrify,300,4,,Any,,5,16,,Mag,Yes,Yes,Add: Petrify Hit_F(MA+130)%,,Yes,Yes
+Oracle,Confusion Song,200,4,,Any,,3,12,,Mag,Yes,Yes,Add: Confusion Hit_F(MA+150)%,,Yes,Yes
+Oracle,Dispel Magic,250,4,,Any,,2,20,,,,Yes,Cancel: All positive status Hit_F(MA+200)%,,Yes,Yes
+Oracle,Paralyze,200,4,1,Any,,4,10,,Mag,Yes,Yes,Add: Don't Act Hit_F(MA+185)%,,Yes,Yes
+Oracle,Sleep,300,4,1,Any,1,5,24,,Mag,Yes,Yes,Add: Sleep Hit_F(MA+170)%,,Yes,Yes
+Oracle,R:Barrier,700,,,,,,,,,,,Add Protect and Shell on Physical attack or skill,,,
+Oracle,R:Absorb Used MP,200,,,,,,,,,,,Gain MP equal to the cost of a spell or skill used on you,,,
+Oracle,S:Defense UP,350,,,,,,,,,,,Reduce physical damage by 33%,,,
+Geomancer,Pitfall,50,4,1,Any,,,,,,,,Dmg_((PA+4/2*MA) 20% Don't Move,,Yes,Yes
+Geomancer,Waterball,50,4,1,Any,,,,Water,,,,Dmg_((PA+4/2*MA) 20% Frog,,Yes,Yes
+Geomancer,Hell Ivy,50,4,1,Any,,,,,,,,Dmg_((PA+4/2*MA) 20% Stop,,Yes,Yes
+Geomancer,Carve Model,50,4,1,Any,,,,,,,,Dmg_((PA+4/2*MA) 20% Petrify,,Yes,Yes
+Geomancer,Local Quake,50,4,1,Any,,,,Earth,,,,Dmg_((PA+4/2*MA) 20% Confusion,,Yes,Yes
+Geomancer,Kamaitachi,50,4,1,Any,,,,Wind,,,,Dmg_((PA+4/2*MA) 20% Don't Act,,Yes,Yes
+Geomancer,Demon Fire,50,4,1,Any,,,,Fire,,,,Dmg_((PA+4/2*MA) 20% Sleep,,Yes,Yes
+Geomancer,Quicksand,50,4,1,Any,,,,Earth,,,,Dmg_((PA+4/2*MA) 20% Death Sentence,,Yes,Yes
+Geomancer,Sand Storm,50,4,1,Any,,,,Wind,,,,Dmg_((PA+4/2*MA) 20% Blind,,Yes,Yes
+Geomancer,Blizzard,50,4,1,Any,,,,Ice,,,,Dmg_((PA+4/2*MA) 20% Silence,,Yes,Yes
+Geomancer,Gusty Wind,50,4,1,Any,,,,Wind,,,,Dmg_((PA+4/2*MA) 20% Slow,,Yes,Yes
+Geomancer,Lava Ball,50,4,1,Any,,,,Fire,,,,Dmg_((PA+6/2*MA),,Yes,Yes
+Geomancer,R:Counter Flood,400,,,,,,,,,,,"Counter with Geomancy, regardless of if skill is learned",,,
+Geomancer,S:Attack UP,400,,,,,,,,,,,Increase physical damage by 33%,,,
+Geomancer,M:Any Ground,220,,,,,,,,,,,Move on any type of ground unhindered by terrain (CLASS INHERENT),,,
+Geomancer,M:Move on Lava,150,,,,,,,,,,,Able to walk on lava panels (CLASS INHERENT),,,
+Lancer,Range 4,50,4,,Any,,RU(50/Speed),,,,,,Dmg_(PA*WP). If using Spear: Dmg_((PA*1.5)*WP) instead,Yes,,Yes
+Lancer,Range 5,200,5,,Any,,RU(50/Speed),,,,,,Dmg_(PA*WP). If using Spear: Dmg_((PA*1.5)*WP) instead,Yes,,Yes
+Lancer,Range 6,500,6,,Any,,RU(50/Speed),,,,,,Dmg_(PA*WP). If using Spear: Dmg_((PA*1.5)*WP) instead,Yes,,Yes
+Lancer,Vertical 5,50,,,Any,5,RU(50/Speed),,,,,,Dmg_(PA*WP). If using Spear: Dmg_((PA*1.5)*WP) instead,Yes,,Yes
+Lancer,Vertical 7,200,,,Any,7,RU(50/Speed),,,,,,Dmg_(PA*WP). If using Spear: Dmg_((PA*1.5)*WP) instead,Yes,,Yes
+Lancer,Infinite Vertical,500,,,Any,255,RU(50/Speed),,,,,,Dmg_(PA*WP). If using Spear: Dmg_((PA*1.5)*WP) instead,Yes,,Yes
+Lancer,R:Dragon Spirit,500,,,,,,,,,,,Add: Reraise on hit from a Physical attack,,,
+Lancer,S:Equip Spear,350,,,,,,,,,,,Can equip spear regardless of job,,,
+Lancer,M:Ignore Height,500,,,,,,,,,,,"Jump to any panel, regardless of height value",,,
+Samurai,Asura,250,0,2,Any,2,,,Fire,,,,Dmg_(MA*10),,Yes,Yes
+Samurai,Koutetsu,250,0,2,Any,2,,,Dark,,,,Dmg_(MA*10),,Yes,Yes
+Samurai,Bizen Boat,200,0,2,Any,2,,,,,,,Dmg_MP(MA*12),,Yes,Yes
+Samurai,Murasame,300,0,2,Any,2,,,,,,,HealHP_(MA*10),,,
+Samurai,Heaven's Cloud,250,0,2,Any,2,,,Water,,,,Dmg_(MA*10),,Yes,Yes
+Samurai,Kiyomori,100,0,2,Any,2,,,,,,,Add: Protect or Shell Hit_(100)%,,,
+Samurai,Muramasa,500,0,2,Any,2,,,,,,,Dmg_(MA*8) 20% Add: Death Sentence or Confuse,,Yes,Yes
+Samurai,Kikuichimonji,200,5,2,Any,2,,,,,,,Dmg_(MA*8) Linear,,Yes,Yes
+Samurai,Masamune,400,0,2,Any,2,,,,,,,Add: Haste or Regen or Defending Hit_(100)%,,,
+Samurai,Chirijiraden,600,0,2,Any,3,,,,,,,Dmg_(MA*13) also hits self,,Yes,Yes
+Samurai,Stasis Sword,400,2,1,Any,,,8,,Phys,,,Dmg_((PA-2)*(WP-2)) 20% Add: Stop,,Yes,Yes
+Samurai,Split Punch,500,2,,Any,2,,10,,,,,Dmg_((PA-2)*(WP-1) 20% Add: Death Sentence,,Yes,Yes
+Samurai,Crush Punch,600,2,,Any,1,,30,,Phys,,,Dmg_((PA-2)*WP) 20% Add: Dead,,Yes,Yes
+Samurai,Lightning Stab,400,2,1,Any,3,,8,,Phys,,,Dmg_((PA-2)*(WP-2)) 20% Add: Silence,,Yes,Yes
+Samurai,Holy Explosion,800,5,Linear,Any,2,,40,,Phys,,,Dmg_((PA-2)*(WP-1)),,Yes,Yes
+Samurai,R:Hamedo,1000,,,,,,,,,,,Cancel incoming attack command with your own,,,
+Samurai,S:Equip Katana,350,,,,,,,,,,,Can equip katana regardless of job,,,
+Samurai,S:Two Hands,600,,,,,,,,,,,"Hold weapon in both hands, doubling WP value (CLASS INNATE)",,,
+Samurai,M:Move in Water,300,,,,,,,,,,,Move in water unhindered,,,
+Ninja,Shuriken,100,Move,,Any,,,,,Phys,,,Hit_(Speed * thrown weapon WP),Yes,,Yes
+Ninja,Ball,100,Move,,Any,,,,,Phys,,,Hit_(Speed * thrown weapon WP),Yes,,Yes
+Ninja,Knife,100,Move,,Any,,,,,Phys,,,Hit_(Speed * thrown weapon WP),Yes,,Yes
+Ninja,Sword,100,Move,,Any,,,,,Phys,,,Hit_(Speed * thrown weapon WP),Yes,,Yes
+Ninja,Hammer,100,Move,,Any,,,,,Phys,,,Hit_(Speed * thrown weapon WP),Yes,,Yes
+Ninja,Ninja Sword,100,Move,,Any,,,,,Phys,,,Hit_(Speed * thrown weapon WP),Yes,,Yes
+Ninja,Stick,100,Move,,Any,,,,,Phys,,,Hit_(Speed * thrown weapon WP),Yes,,Yes
+Ninja,Dictionary,100,Move,,Any,,,,,Phys,,,Hit_(Speed * thrown weapon WP),Yes,,Yes
+Ninja,R:Sunken State,200,,,,,,,,,,,Add: Transparent on damage,,,
+Ninja,R:Abandon,800,,,,,,,,,,,Doubles all evasion attributes (ignores Brave),,,
+Ninja,S:Two Swords,900,,,,,,,,,,,Can equip one weapon in each hand (CLASS INNATE),,,
+Ninja,M:Walk on Water,100,,,,,,,,,,,Move on top of water panels as if they were ground,,,
+Sage,Zombie 2,300,4,2,Any,2,4,20,,Mag,,Yes,Add: Zombie Hit_F(MA+200)%,,Yes,Yes
+Sage,Sleep 2,300,4,2,Any,2,6,20,,Mag,,Yes,Add: Sleep Hit_F(MA+160)%,,Yes,Yes
+Sage,Confuse 2,300,4,2,Any,2,4,20,,Mag,,Yes,Add: Confusion Hit_F(MA+170)%,,Yes,Yes
+Sage,Toad 2,400,4,2,Any,2,6,20,,Mag,,Yes,Add: Frog Hit_F(MA+120)%,,Yes,Yes
+Sage,Gravi 2,400,4,2,Any,2,6,30,,Mag,,Yes,Dmg_(66% Max HP) Hit_F(MA+140)%,,Yes,Yes
+Sage,Flare 2,600,4,2,Any,3,7,,,Mag,,Yes,Dmg_F(MA*44),,Yes,Yes
+Sage,Despair 2,100,4,2,Any,3,4,,,,,Yes,Cancel: All positive status Hit_F(MA+200)%,,Yes,Yes
+Sage,Deathspell 2,200,4,2,Any,2,3,16,,,,Yes,Cancel: All negative status Hit_F(MA+200)%,,,
+Sage,R:Distribute,150,,,,,,,,,,,Excess healing from others to this split among non-full team members,,,
+Sage,R:Damage Split,800,,,,,,,,,,,Return 50% of damage received and heal the same amount,,,
+Sage,R:Meditation,800,,,,,,,,,,,Add: Faith when targetted with a magic effect,,,
+Bard,Angel Song,100,ALL,ALL,Any,ALL,4,,,,,Yes,Heal_(MA+30) MP,,,
+Bard,Life Song,100,ALL,ALL,Any,ALL,4,,,,,Yes,Heal_(MA+40) HP,,,
+Bard,Battle Song,100,ALL,ALL,Any,ALL,5,,,,,Yes,Add: 1 PA Hit_(60)%,,,
+Bard,Magic Song,100,ALL,ALL,Any,ALL,5,,,,,Yes,Add: 1 MA Hit_(60)%,,,
+Bard,Nameless Song,100,ALL,ALL,Any,ALL,6,,,,,Yes,Add: Reraise or Regen or Haste or Protect or Shell or Reflect Hit_(50)%,,,
+Bard,Last Song,100,ALL,ALL,Any,ALL,8,,,,,Yes,Set CT to 100 Hit_(50)%,,,
+Bard,R:MA Save,550,,,,,,,,,,,Gain 1 MA on HP Damage,,,
+Bard,M:Move-MP Up,350,,,,,,,,,,,Recover MP as you move,,,
+Bard,M:Fly,600,,,,,,,,,,,"Fly over units, obstacles, and ignore height when moving",,,
+Bard,M:Move+3,900,,,,,,,,,,,"Read the name, this isn't complicated",,,
+Bard,M:Jump+3,300,,,,,,,,,,,"Read the name, this isn't complicated",,,
+Dancer,Witch Hunt,100,ALL,ALL,Any,ALL,4,,,,,Yes,DmgMP_(PA+(PA*Brave)/100),,,
+Dancer,Wiznaibus,100,ALL,ALL,Any,ALL,4,,,,,Yes,DmgHP_(PA+(PA*Brave)/100),,,
+Dancer,Polka Polka,100,ALL,ALL,Any,ALL,5,,,,,Yes,-1 PA Hit_(60)%,,,
+Dancer,Disillusion,100,ALL,ALL,Any,ALL,5,,,,,Yes,-1 MA Hit_(60)%,,,
+Dancer,Nameless Dance,100,ALL,ALL,Any,ALL,7,,,,,Yes,Add: Blind or Confusion or Silence or Poison or Slow Hit_(60)%,,,
+Dancer,R:A Save,550,,,,,,,,,,,Gain 1 PA on HP Damage,,,
+Dancer,R:MP Switch,350,,,,,,,,,,,Take all damage from an attack to your MP instead of HP if you have more than 0 MP,,,
+Dancer,M:Fly,600,,,,,,,,,,,"Fly over units, obstacles, and ignore height when moving",,,
+Dancer,M:Move+3,900,,,,,,,,,,,"Read the name, this isn't complicated",,,
+Dancer,M:Jump+3,300,,,,,,,,,,,"Read the name, this isn't complicated",,,

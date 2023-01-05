@@ -1,21 +1,70 @@
 require 'csv'
 
-Job.upsert_all(YAML.safe_load_file(Rails.root.join('db/seeds/jobs.yml')))
+jobs = CSV.parse(File.read(Rails.root.join('db/seeds/jobs.csv')), headers: true)
+jobs.each do |row|
+  job = Job.find_or_initialize_by(name: row['Class'])
 
-Prerequisite.upsert_all(YAML.safe_load_file(Rails.root.join('db/seeds/prerequisites.yml')))
+  sex = row['Sex'].downcase
 
-Dir.glob('db/seeds/skills/*.yml').each do |f|
-  Skill.upsert_all(YAML.safe_load_file(f))
+  job.update(
+    skillset: row['Secondary Name'],
+    data: job.data.merge({
+      sex => {
+        hp: row['HP'],
+        mp: row['MP'],
+        speed: row['Speed'],
+        move: row['Move'],
+        jump: row['Jump'],
+        attack: row['PA'],
+        magic: row['MA'],
+
+      }
+    })
+  )
 end
 
-Innate.upsert_all(YAML.safe_load_file(Rails.root.join('db/seeds/innates.yml')))
+skills = CSV.parse(File.read(Rails.root.join('db/seeds/skills.csv')), headers: true)
+skills.each do |row|
+  job = Job.find_by(name: row['Class'])
+  skill = Skill.find_or_initialize_by(job_id: job.id, name: row['Skill Name'].gsub(/^R:|^S:|^M:/, ''))
+
+  skill_type = 'action'
+  skill_type = 'reaction' if row['Skill Name'].match?(/^R:/)
+  skill_type = 'support' if row['Skill Name'].match?(/^S:/)
+  skill_type = 'movement' if row['Skill Name'].match?(/^M:/)
+
+  skill.update(
+    jp_cost: row['JP Cost'],
+    skill_type: skill_type,
+    data: {
+      range: row['Range'],
+      area: row['AoE'],
+      target: row['Target'],
+      vert: row['Vertical Tolerance'],
+      ct: row['CT'],
+      mp: row['MP'],
+      element: row['Element'],
+      evade: row['Evade Type'],
+      reflectable: row['Reflectable?'],
+      silence: row['Silence?'],
+      formula: row['Formula'],
+      counter: row['Counter?'],
+      counter_magic: row['Counter Magic?'],
+      counter_flood: row['Counter Flood?']
+    }
+  )
+
+  skill.save
+end
+
+# Innate.upsert_all(YAML.safe_load_file(Rails.root.join('db/seeds/innates.yml')))
 
 Dir.glob('db/seeds/items/*.csv').each do |f|
   items = CSV.parse(File.read(f), headers: true)
-
   items.each do |row|
-    item = Item.create(
-      name: row['Name'],
+    item = Item.find_or_initialize_by(name: row['Name'])
+
+    item.update(
       item_type: File.basename(f, '.csv').singularize,
       data: {
         wp: row['WP'],
@@ -25,43 +74,40 @@ Dir.glob('db/seeds/items/*.csv').each do |f|
         flags: row['Flags'],
         hp: row['HP'],
         mp: row['MP'],
-        speed: row['Extras']&.match(/\+(\d+) speed/i)&.captures&.first,
-        magic: row['Extras']&.match(/\+(\d+) MA/i)&.captures&.first,
-        attack: row['Extras']&.match(/\+(\d+) PA/i)&.captures&.first,
-        jump: row['Extras']&.match(/\+(\d+) jump/i)&.captures&.first,
-        move: row['Extras']&.match(/\+(\d+) move/i)&.captures&.first,
-        add: row['Add'],
-        cancels: row['Cancels'],
-        element: row['Element'],
-        proc: row['Proc'],
-        strengthens: row['Strengthens'],
-        always: row['Always'],
-        formula: row['Formula'],
-        absorbs: row['Absorbs'],
-        halves: row['Halves'],
-        weakness: row['Weakness'],
+        speed: row['Sp'],
+        magic: row['MA'],
+        attack: row['PA'],
+        jump: row['Jp'],
+        move: row['Mv'],
+        add: row['Add:'],
+        cancels: row['Cancels:'],
+        element: row['Element:'],
+        proc: row['Proc:'],
+        strengthens: row['Strengthens:'],
+        always: row['Always:'],
+        formula: row['Formula:'],
+        absorbs: row['Absorbs:'],
+        halves: row['Halves:'],
+        weakness: row['Weak:'],
         female_only: row['Classes'] == 'Female'
       }
     )
 
-    equippable_jobs = Job.where(abbreviation: row['Classes'].split(' ')) if row['Classes'].present? && row['Classes'] !~ /NOT/
+    equippable_jobs = Job.none
+    equippable_jobs = Job.where(abbreviation: row['Classes'].split(' ')) if row['Classes'].present? && row['Classes'] !~ /NOT|ALL/
     equippable_jobs = Job.where.not(abbreviation: row['Classes'].split(' ')[1..-1]) if row['Classes'].present? && row['Classes'] =~ /NOT/
-    equippable_jobs = Job.all if row['Classes'].blank?
+    equippable_jobs = Job.all if row['Classes'] =~ /ALL/
 
-    equippable_jobs.where.not(id: 20).each do |job|
-      Proficiency.create(item: item, record: job)
-    end
-
-    skill = Skill.find_by(name: row['Skill'])
-    Proficiency.create(item: item, record: skill) if skill.present?
+    item.job_ids = equippable_jobs.pluck(:id)
+    item.skill_ids = Skill.where(name: row['Skill']).pluck(:id)
   end
 end
 
 monsters = CSV.parse(File.read(Rails.root.join('db/seeds/monsters.csv')), headers: true)
-
 monsters.each do |row|
-  monster = Job.create(
-    name: row['Name'],
+  monster = Job.find_or_initialize_by(name: row['Name'])
+
+  monster.update(
     data: {
       'x' => {
         hp: row['HP'],

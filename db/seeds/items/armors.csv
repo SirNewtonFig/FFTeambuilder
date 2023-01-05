@@ -1,26 +1,37 @@
-Name,HP,MP,Classes,Extras,Cancels,Absorbs,Halves,Strengthens,Skill
-Leather Armor,20,0,Kn Ln Sm,,,,,,Equip Armor
-Linen Cuirass,30,0,Kn Ln Sm,,,,,,Equip Armor
-Bronze Armor,40,0,Kn Ln Sm,,,,,,Equip Armor
-Chain Mail,55,0,Kn Ln Sm,,,,,,Equip Armor
-Mythril Armor,65,0,Kn Ln Sm,+1 MA,,,,,Equip Armor
-Plate Mail,80,0,Kn Ln Sm,,,,,,Equip Armor
-Gold Armor,100,0,Kn Ln Sm,,,,,,Equip Armor
-Diamond Armor,120,0,Kn Ln Sm,,,,,,Equip Armor
-Platina Armor,135,0,Kn Ln Sm,,,,,,Equip Armor
-Clothes,5,0,NOT Kn Ln Sm,,,,,,
-Leather Outfit,10,0,NOT Kn Ln Sm,,,,,,
-Leather Vest,18,0,NOT Kn Ln Sm,,,,,,
-Chain Vest,24,0,NOT Kn Ln Sm,,,,,,
-Mythril Vest,30,0,NOT Kn Ln Sm,+1 MA,,,,,
-Adaman Vest,36,0,NOT Kn Ln Sm,,,,,,
-Wizard Outfit,42,15,NOT Kn Ln Sm,,,,,,
-Brigandine,50,0,NOT Kn Ln Sm,,,,,,
-Judo Outfit,60,0,NOT Kn Ln Sm,+1 PA,Dead,,,,
-Power Sleeve,70,0,NOT Kn Ln Sm,+2 PA,,,,,
-Linen Robe,10,10,Kn Pr Wi TM Su Me Or Ge Ln Sm Sg,,,,,,
-Silk Robe,20,16,Kn Pr Wi TM Su Me Or Ge Ln Sm Sg,,,,,,
-Wizard Robe,30,22,Kn Pr Wi TM Su Me Or Ge Ln Sm Sg,+2 MA,,,,,
-Chameleon Robe,40,28,Kn Pr Wi TM Su Me Or Ge Ln Sm Sg,,Dead,Holy,,,
-White Robe,50,34,Kn Pr Wi TM Su Me Or Ge Ln Sm Sg,,,,Fire/Ice/Lightning,,
-Black Robe,60,30,Kn Pr Wi TM Su Me Or Ge Ln Sm Sg,,,,,Fire/Ice/Lightning,
+Name,Classes,HP,MP,PA,MA,Sp,Mv,Jp,Cancels:,Absorbs:,Weak:,Halves:,Strengthens:,Start:,Always:,Skill
+Leather Armor,Kn Ln Sm,140,0,,,,1,,,,,,,,,Equip Armor
+Linen Cuirass,Kn Ln Sm,120,40,-2,,,,,,,,,,,,Equip Armor
+Bronze Armor,Kn Ln Sm,120,0,,,,,,Petrify Stop,,,,,,,Equip Armor
+Chain Mail,Kn Ln Sm,70,0,,,,,,,,,,,,Regen,Equip Armor
+Mythril Armor,Kn Ln Sm,65,0,,2,,,,,,,,,,,Equip Armor
+Plate Mail,Kn Ln Sm,195,0,,,-1,,,,,,,,,,Equip Armor
+Gold Armor,Kn Ln Sm,100,10,,,,,,,,,,,,,Equip Armor
+Diamond Armor,Kn Ln Sm,135,0,1,1,,,,,,,,,,,Equip Armor
+Platina Armor,Kn Ln Sm,135,0,,,,,,,,Fire,,,Haste,,Equip Armor
+Carabini Mail,Kn Ln Sm,70,0,,,1,,,,,,,,,,Equip Armor
+Crystal Mail,Kn Ln Sm,120,0,,,,,,,Ice,,,Ice,,,Equip Armor
+Genji Armor,Kn Ln Sm,120,0,,,,,,Chicken Frog,,,,,,,Equip Armor
+Reflect Mail,Kn Ln Sm,120,0,,,,,,,,,,,,Reflect,Equip Armor
+Maximillian,Kn Ln Sm,155,0,,,,,,,,,,,,,Equip Armor
+Clothes,NOT Kn Ln Sm,70,0,,,,1,3,,,,,,,,
+Leather Outfit,NOT Kn Ln Sm,70,0,,,,,,,,,Fire/Dark/Water,,,,
+Leather Vest,NOT Kn Ln Sm,85,0,,,,1,,,,,,,,,
+Chain Vest,NOT Kn Ln Sm,30,0,,,,,,,,,,,,Regen,
+Mythril Vest,NOT Kn Ln Sm,70,10,,1,,,,,,,,,,,
+Adaman Vest,NOT Kn Ln Sm,70,0,1,1,,,,,,,,,,,
+Wizard Outfit,NOT Kn Ln Sm,60,30,,,,,,,,,,,,,
+Brigandine,NOT Kn Ln Sm,100,0,,,,,,,,,,,,,
+Judo Outfit,NOT Kn Ln Sm,70,0,1,,,,,Dead,,,,,,,
+Power Sleeve,NOT Kn Ln Sm,70,0,2,,,,,,,,,,,,
+Earth Clothes,NOT Kn Ln Sm,85,10,,,,,,,Earth,,,Earth,,,
+Secret Clothes,NOT Kn Ln Sm,50,0,,,1,,,,,,,,,,
+Black Costume,NOT Kn Ln Sm,70,0,,,,,,Stop,Fire,,,,,,
+Rubber Costume,NOT Kn Ln Sm,20,0,,,,,,Charm,Lightning,,,,,,
+Linen Robe,Pr Wi TM Su Me Or Ge Sg,20,50,,,,,,,,,,,,,
+Silk Robe,Pr Wi TM Su Me Or Ge Sg,60,30,,,-1,,,,,,,,,,
+Wizard Robe,Pr Wi TM Su Me Or Ge Sg,30,22,,2,,,,,,,,,,,
+Chameleon Robe,Pr Wi TM Su Me Or Ge Sg,50,34,,,,,,,,,Fire/Dark/Water,,,,
+White Robe,Pr Wi TM Su Me Or Ge Sg,50,34,,,,,,Dead,Holy,,,Holy,,,
+Black Robe,Pr Wi TM Su Me Or Ge Sg,60,30,,,,,,,,,,Ice/Lightning/Wind,,,
+Light Robe,Pr Wi TM Su Me Or Ge Sg,0,25,,,,,,,,,,,,Regen,
+Robe of Lords,Pr Wi TM Su Me Or Ge Sg,40,20,,,,,,,,Fire,,,,Faith,
