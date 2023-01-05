@@ -23,6 +23,9 @@ jobs.each do |row|
   )
 end
 
+Prerequisite.destroy_all
+Prerequisite.upsert_all(YAML.safe_load_file(Rails.root.join('db/seeds/prerequisites.yml')))
+
 skills = CSV.parse(File.read(Rails.root.join('db/seeds/skills.csv')), headers: true)
 skills.each do |row|
   job = Job.find_by(name: row['Class'])

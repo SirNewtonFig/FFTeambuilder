@@ -6,9 +6,9 @@ class Job < ApplicationRecord
     350,  # level 3
     550,  # level 4
     800,  # level 5
-    800,  # level 6 (unused)
-    800,  # level 7 (unused)
-    800   # level 8 (unused)
+    1150, # level 6 (unused)
+    1550, # level 7 (unused)
+    2100  # level 8 (unused)
   ].freeze
 
   # serialize :data, HashWithIndifferentAccess

@@ -306,6 +306,12 @@ class Character
   memoize def jp_total
     return 4000 unless generic?
 
+    jp_spread.values.sum
+  end
+
+  memoize def jp_spread
+    return {} unless generic?
+
     job_prereqs = Job::CalculatePrerequisiteJp.perform(job: job).jp
 
     skill_costs = Job::CalculateSkillJp.perform(character: self).jp
@@ -319,7 +325,5 @@ class Character
         memo[job] = jp if memo[job].to_i < jp
       end
     end
-
-    total_costs.values.sum
   end
 end
