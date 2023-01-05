@@ -19,8 +19,8 @@ Iga Knife,9,,2-swords 2-hands,Th Nj,,,,,,,,Wind,Tornado,,,,,,(PA+SP)/2*WP,Dmg_F(
 Koga Knife,9,,2-swords 2-hands,Th Nj,,,,,,,,Earth,Quake,,,,,,(PA+SP)/2*WP,Dmg_F(MA*50),2,,
 Broad Sword,11,25,2-swords 2-hands,Sq Kn Ge Sg,,,,,,,,,,,,,Defending,,PA*WP,,1,,Equip Sword
 Long Sword,11,25,2-swords 2-hands,Sq Kn Ge Sg,,,,1,,,,,,,,,,,PA*WP,,1,,Equip Sword
-Parrying Sword,10,50,2-swords 2-hands,Sq Kn Ge Sg,,2,,,,,,,,,,,,,PA*WP,,1,,Equip Sword
-Mythril Sword,7,25,2-swords 2-hands,Sq Kn Ge Sg,,,,,,,,,,,,,,,PA*WP,,1,,Equip Sword
+Parrying Sword,10,50,2-swords 2-hands,Sq Kn Ge Sg,,,,,,,,,,,,,,,PA*WP,,1,,Equip Sword
+Mythril Sword,7,25,2-swords 2-hands,Sq Kn Ge Sg,,2,,,,,,,,,,,,,PA*WP,,1,,Equip Sword
 Blood Sword,10,25,2-swords 2-hands / leeches HP,Sq Kn Ge Sg,,,,,,,,Dark,,,,,,,PA*WP,,1,,Equip Sword
 Coral Sword,9,25,2-swords 2-hands,Sq Kn Ge Sg,,,,,,,,Lightning,Mjollnir,,,,,,PA*WP,Dmg_F(MA*28),1,,Equip Sword
 Ancient Sword,11,25,2-swords 2-hands,Sq Kn Ge Sg,,,,,,Don't Move,,,,,,,,,PA*WP,,1,,Equip Sword

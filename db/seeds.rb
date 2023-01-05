@@ -85,6 +85,7 @@ Dir.glob('db/seeds/items/*.csv').each do |f|
         proc: row['Proc:'],
         strengthens: row['Strengthens:'],
         always: row['Always:'],
+        start: row['Start:'],
         formula: row['Formula:'],
         absorbs: row['Absorbs:'],
         halves: row['Halves:'],
