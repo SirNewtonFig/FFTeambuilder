@@ -17,7 +17,7 @@ jobs.each do |row|
         jump: row['Jump'],
         attack: row['PA'],
         magic: row['MA'],
-
+        evade: row['Evade']
       }
     })
   )
