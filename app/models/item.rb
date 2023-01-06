@@ -37,7 +37,11 @@ class Item < ApplicationRecord
       s
     elsif char.lhand.shield?
       weapon.proficient(char)
-        .where.not("items.data ->> 'flags' ilike '%2-hands only%'")
+        .where("(items.data ->> 'flags') is null")
+        .union(
+          weapon.proficient(char)
+            .where.not("items.data ->> 'flags' ilike '%2-hands only%'")
+        )
     else
       none
     end
