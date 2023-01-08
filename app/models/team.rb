@@ -3,8 +3,8 @@ class Team < ApplicationRecord
 
   DEFAULT_DATA = ([Character::DEFAULT_DATA] * 4 )
 
-  enum :palette_a, %i{ blue red green white purple yellow brown black }
-  # enum :palette_b, %i{ blue red green white purple yellow brown black }
+  enum :palette_a, %i{ blue red green white purple yellow brown black }, suffix: true, _scopes: false
+  enum :palette_b, %i{ blue red green white purple yellow brown black }, suffix: true, _scopes: false
 
   validates :user_id, presence: true
 

@@ -12,15 +12,23 @@ class TeamsController < ApplicationController
     redirect_to teams_path
   end
 
+  def export
+    load_team
+
+    render layout: 'modal'    
+  end
+
   def download
     load_team
+
+    @team.update(team_attributes)
 
     f = Tempfile.new('team', Rails.root.join('tmp'))
     f.write(@team.attributes.except('id', 'created_at', 'updated_at', 'user_id').to_yaml)
 
-    send_file(f.path, filename: 'team.yml')
+    send_file(f.path, filename: "#{@team.name}.yml")
     f.open
-  rescue
+  ensure
     f.close
     f.unlink
   end
@@ -35,11 +43,23 @@ class TeamsController < ApplicationController
     redirect_to teams_path
   end
 
+  def update
+    load_team
+
+    @team.update(team_attributes)
+
+    head :ok
+  end
+
   private
 
     def load_team
       @team = Team.find_or_initialize_by(user_id: session[:user_id])
 
-      @team.update(data: Team::DEFAULT_DATA.dup) if @team.new_record?
+      @team.update(palette_a: 'blue', palette_b: 'red', data: Team::DEFAULT_DATA.dup) if @team.new_record?
+    end
+
+    def team_attributes
+      params.require(:team).permit(:name, :player_name, :palette_a, :palette_b)
     end
 end

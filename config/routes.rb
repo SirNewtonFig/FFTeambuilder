@@ -3,8 +3,10 @@ Rails.application.routes.draw do
   root "teams#index"
 
   resources :teams do
-    member do
-      get :download
+    collection do
+      patch :update
+      get :export
+      post :download
     end
   end
   

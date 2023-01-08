@@ -1,7 +1,20 @@
 #team-summary.text-gray-300.space-y-2
-  .text-md{ class: ('text-red-400' if team.brave_total > 240) }
-    Brave: #{team.brave_total}/240
-  .text-md{ class: ('text-red-400' if team.faith_total < 220) }
-    Faith: #{team.faith_total}/220
-  .text-md{ class: ('text-red-400' if team.jp_total > 18000) }
-    JP: #{team.jp_total}/18000
+  .text-md
+    %div Team Brave:
+    %div
+      %span{ class: ('text-red-400' if team.brave_total > 240) }
+        #{team.brave_total}
+      %span.text-gray-500 ≤ 240
+  .text-md
+    %div Team Faith:
+    %div
+      %span{ class: ('text-red-400' if team.faith_total < 220) }
+        #{team.faith_total}
+      %span.text-gray-500 ≥ 220
+  .text-md
+    %div Team JP:
+    %div
+      %span{ class: ('text-red-400' if team.jp_total > 18000) }
+        #{team.jp_total}
+      %span.text-gray-500 ≤ 18000
+
