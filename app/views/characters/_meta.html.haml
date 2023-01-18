@@ -1,10 +1,11 @@
 
 #meta.p-2.flex-1.flex.bg-menu-texture.border-2.border-menu-dark{ class: 'h-[7.25rem]' }
-  %label.w-24.text-center.flex.flex-col.items-center.justify-between.hover:contrast-75.cursor-pointer{ for: 'zodiac' }
-    = image_tag("zodiacs/#{char.zodiac}.png", class: 'h-16 contrast-[.35]')
+  %div
+    %label.w-24.text-center.flex.flex-col.items-center.justify-between.hover:contrast-75.cursor-pointer{ for: 'zodiac' }
+      = image_tag("zodiacs/#{char.zodiac}.png", class: 'h-16 contrast-[.35]')
 
     %select#zodiac.text-sm.text-center.bg-none.cursor-pointer.py-0.px-0.bg-transparent.border-0.border-b-2.border-transparent.hover:border-menu-dark.appearance-none.focus:outline-none.focus:ring-0.focus:border-menu-dark.peer{ name: 'character[zodiac]', data: { action: 'change->form#submit' } }
-      - Character::ZODIACS.each do |sign|
+      - Character::ZODIACS.keys.each do |sign|
         %option{ selected: ('selected' if sign == char.zodiac), value: sign }= sign.titleize
 
   .ml-4.space-y-2.flex.flex-col.justify-between

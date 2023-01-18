@@ -35,3 +35,4 @@
 /convert
 
 .DS_Store
+*.fly.txt

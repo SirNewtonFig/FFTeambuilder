@@ -1,0 +1,28 @@
+.m-4.rounded-lg.bg-gray-800.p-4{ class: 'w-full md:w-[22rem]' }
+  .text-white.text-lg Slot #{i+1}
+  .mt-2.flex.flex-col.space-y-4{ id: "slot_#{i}" }
+    %div
+      %label.block.mb-1.text-sm.font-medium.text-white{ for: "save-name-#{i}" } Save File Name
+      %input.border.text-sm.rounded-lg.focus:ring-blue-500.focus:border-blue-500.block.w-full.bg-gray-700.border-gray-600.placeholder-gray-400.text-white.focus:ring-blue-500.focus:border-blue-500{name: 'slot[][save_name]', id: "save-name-#{i}", class: "p-2", required: "", type: "text", placeholder: "e.g. Ramza vs Algus" }
+
+    %div
+      %label.block.mb-1.text-sm.font-medium.text-white{ for: "file-#{i}-a" } Team A
+      %input.block.w-full.text-sm.border.rounded-lg.cursor-pointer.text-gray-400.focus:outline-none.bg-gray-700.border-gray-600.placeholder-gray-400{ name: 'slot[][team_a]', id: "file-#{i}-a", "aria-describedby" => "file_input_help", type: "file", accept: '.yml' }
+      %p.mt-1.text-sm.text-gray-500.dark:text-gray-300 YML builder saves only!
+
+    %div
+      %label.block.mb-1.text-sm.font-medium.text-white{ for: "palette_a_#{i}" } Team A Color
+      %select.border.text-sm.rounded-lg.focus:ring-blue-500.focus:border-blue-500.block.w-full.bg-gray-700.border-gray-600.placeholder-gray-400.text-white{ name: 'slot[][palette_a]', id: "palette_a_#{i}", class: "p-2"}
+        - Team.palette_as.each do |color, index|
+          %option{ value: index }= color.titleize
+
+    %div
+      %label.block.mb-1.text-sm.font-medium.text-white{ for: "file-#{i}-b" } Team B
+      %input.block.w-full.text-sm.border.rounded-lg.cursor-pointer.text-gray-400.focus:outline-none.bg-gray-700.border-gray-600.placeholder-gray-400{ name: 'slot[][team_b]', id: "file-#{i}-b", "aria-describedby" => "file_input_help", type: "file", accept: '.yml' }
+      %p#file_input_help.mt-1.text-sm.text-gray-500.dark:text-gray-300 YML builder saves only!
+
+    %div
+      %label.block.mb-1.text-sm.font-medium.text-white{ for: "palette_b_#{i}" } Team B Color
+      %select.border.text-sm.rounded-lg.focus:ring-blue-500.focus:border-blue-500.block.w-full.bg-gray-700.border-gray-600.placeholder-gray-400.text-white{ name: 'slot[][palette_b]', id: "palette_b_#{i}", class: "p-2"}
+        - Team.palette_as.each do |color, index|
+          %option{ value: index }= color.titleize

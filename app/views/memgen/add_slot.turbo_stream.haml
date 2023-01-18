@@ -1,0 +1,6 @@
+= turbo_stream.append('slots') do
+  = render 'memgen/slot', i: params[:i].to_i
+
+= turbo_stream.replace('new-slot') do
+  - if params[:i].to_i < 14
+    = render 'memgen/add_slot_button', i: params[:i].to_i + 1

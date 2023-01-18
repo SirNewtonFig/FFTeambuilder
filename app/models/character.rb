@@ -23,7 +23,20 @@ class Character
     accessory: nil
   }
 
-  ZODIACS = %w{ aries taurus gemini cancer leo virgo libra scorpio sagittarius capricorn aquarius pisces }
+  ZODIACS = {
+    'aries' => 0x00,
+    'taurus' => 0x10,
+    'gemini' => 0x20,
+    'cancer' => 0x30,
+    'leo' => 0x40,
+    'virgo' => 0x50,
+    'libra' => 0x60,
+    'scorpio' => 0x70,
+    'sagittarius' => 0x80,
+    'capricorn' => 0x90,
+    'aquarius' => 0xA0,
+    'pisces' => 0xB0
+  }
 
   attr_accessor :data
 
@@ -325,5 +338,15 @@ class Character
         memo[job] = jp if memo[job].to_i < jp
       end
     end
+  end
+
+  def encode_character_set
+    return 0x82 if job.monster?
+
+    0x80
+  end
+
+  def encode_zodiac
+
   end
 end

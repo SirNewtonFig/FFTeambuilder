@@ -17,7 +17,12 @@ jobs.each do |row|
         jump: row['Jump'],
         attack: row['PA'],
         magic: row['MA'],
-        evade: row['Evade']
+        evade: row['Evade'],
+        hp_mult: row['HPmult'],
+        mp_mult: row['MPmult'],
+        sp_mult: row['SPmult'],
+        pa_mult: row['PAmult'],
+        ma_mult: row['MAmult']
       }
     })
   )
@@ -134,7 +139,13 @@ monsters.each do |row|
           (row['Note 2'] unless row['Note 2'] == 'None' || row['Note 2'].blank?),
           (row['Note 3'] unless row['Note 3'] == 'None' || row['Note 3'].blank?),
           (row['Note 4'] unless row['Note 4'] == 'None' || row['Note 4'].blank?)
-        ].compact
+        ].compact,
+        evade: row['Evade'],
+        hp_mult: row['HPmult'],
+        mp_mult: row['MPmult'],
+        sp_mult: row['SPmult'],
+        pa_mult: row['PAmult'],
+        ma_mult: row['MAmult']
       }
     }
   )
