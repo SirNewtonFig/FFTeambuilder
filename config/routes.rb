@@ -9,4 +9,10 @@ Rails.application.routes.draw do
   end
   
   resources :characters
+
+  resource :memgen, controller: 'memgen', only: %i{ new create } do
+    member do
+      post :add_slot
+    end
+  end
 end

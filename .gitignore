@@ -35,3 +35,5 @@
 /convert
 
 .DS_Store
+*.fly.txt
+node_modules
