@@ -24,9 +24,7 @@ class Card::Memgen < ActiveInteractor::Base
       matchups.each do |data|
         block << Match::Memgen.perform(
           team_a: data[:team_a],
-          palette_a: data[:palette_a],
           team_b: data[:team_b],
-          palette_b: data[:palette_b],
           title: data[:title]
         ).block.join
       end

@@ -11,18 +11,6 @@
       %p.mt-1.text-sm.text-gray-500.dark:text-gray-300 YML builder saves only!
 
     %div
-      %label.block.mb-1.text-sm.font-medium.text-white{ for: "palette_a_#{i}" } Team A Color
-      %select.border.text-sm.rounded-lg.focus:ring-blue-500.focus:border-blue-500.block.w-full.bg-gray-700.border-gray-600.placeholder-gray-400.text-white{ name: 'slot[][palette_a]', id: "palette_a_#{i}", class: "p-2"}
-        - Team.palette_as.each do |color, index|
-          %option{ value: index }= color.titleize
-
-    %div
       %label.block.mb-1.text-sm.font-medium.text-white{ for: "file-#{i}-b" } Team B
       %input.block.w-full.text-sm.border.rounded-lg.cursor-pointer.text-gray-400.focus:outline-none.bg-gray-700.border-gray-600.placeholder-gray-400{ name: 'slot[][team_b]', id: "file-#{i}-b", "aria-describedby" => "file_input_help", type: "file", accept: '.yml' }
       %p#file_input_help.mt-1.text-sm.text-gray-500.dark:text-gray-300 YML builder saves only!
-
-    %div
-      %label.block.mb-1.text-sm.font-medium.text-white{ for: "palette_b_#{i}" } Team B Color
-      %select.border.text-sm.rounded-lg.focus:ring-blue-500.focus:border-blue-500.block.w-full.bg-gray-700.border-gray-600.placeholder-gray-400.text-white{ name: 'slot[][palette_b]', id: "palette_b_#{i}", class: "p-2"}
-        - Team.palette_as.each do |color, index|
-          %option{ value: index }= color.titleize

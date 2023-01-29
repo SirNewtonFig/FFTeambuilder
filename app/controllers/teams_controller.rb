@@ -23,14 +23,18 @@ class TeamsController < ApplicationController
 
     @team.update(team_attributes)
 
-    f = Tempfile.new('team', Rails.root.join('tmp'))
-    f.write(@team.attributes.except('id', 'created_at', 'updated_at', 'user_id').to_yaml)
+    begin
+      f = Tempfile.new('team', Rails.root.join('tmp'))
+      f.write(@team.attributes.except('id', 'created_at', 'updated_at', 'user_id').to_yaml)
+      f.open
 
-    send_file(f.path, filename: "#{@team.name}.yml")
-    f.open
-  ensure
-    f.close
-    f.unlink
+      File.open(f.path, 'r') do |ff|
+        send_data(ff.read, filename: "#{@team.name}.yml")
+      end
+    ensure
+      f.close
+      f.unlink
+    end
   end
 
   def create

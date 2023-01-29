@@ -4,8 +4,6 @@ class MemgenController < ApplicationController
       {
         team_a: Team.new(**YAML.safe_load_file(x[:team_a])),
         team_b: Team.new(**YAML.safe_load_file(x[:team_b])),
-        palette_a: x[:palette_a].to_i,
-        palette_b: x[:palette_b].to_i,
         title: x[:save_name]
       }
     end
