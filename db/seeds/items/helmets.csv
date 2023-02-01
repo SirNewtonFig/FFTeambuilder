@@ -1,4 +1,4 @@
-Name,Classes,HP,MP,PA,MA,Sp,Mv,Jp,Cancels:,Absorbs:,Weak:,Halves:,Strengthens:,Start:,Always:,Skill
+Name,Classes,HP,MP,PA,MA,Sp,Mv,Jm,Cancels:,Absorbs:,Weak:,Halves:,Strengthens:,Start:,Always:,Skill
 Bronze Helmet,Kn Ln Sm,180,0,,,-1,,,,,,,,,,Equip Armor
 Iron Helmet,Kn Ln Sm,120,0,,,,,,,,,,,Don't Move,,Equip Armor
 Barbuta,Kn Ln Sm,180,0,,,,,,,,,,,Slow,,Equip Armor

@@ -60,7 +60,7 @@ class TeamsController < ApplicationController
     def load_team
       @team = Team.find_or_initialize_by(user_id: session[:user_id])
 
-      @team.update(palette_a: 'blue', palette_b: 'red', data: Team::DEFAULT_DATA.dup) if @team.new_record?
+      @team.update(Team.blank_team_attributes) if @team.new_record?
     end
 
     def team_attributes

@@ -1,4 +1,4 @@
-Name,WP,W-EV,Flags,Classes,PA,MA,Sp,Mv,Jp,Add:,Cancels:,Element:,Proc:,Weak:,Absorbs:,Strengthens:,Start:,Always:,Formula:,Proc Formula:,Formula Table,Proc Table:,Skill
+Name,WP,W-EV,Flags,Classes,PA,MA,Sp,Mv,Jm,Add:,Cancels:,Element:,Proc:,Weak:,Absorbs:,Strengthens:,Start:,Always:,Formula:,Proc Formula:,Formula Table,Proc Table:,Skill
 Dagger,10,10,2-swords,Sq Ch Th Me Nj Dc,,,1,,,,,,,,,,,,(PA+SP)/2*WP,,2,,
 Mythril Knife,8,10,2-swords,Sq Ch Th Me Nj Dc,,,1,,,,Charging,,,,,,,,(PA+SP)/2*WP,,2,,
 Blind Knife,9,10,2-swords,Sq Ch Th Me Nj Dc,,,1,,,Darkness,,,,,,,,,(PA+SP)/2*WP,,2,,

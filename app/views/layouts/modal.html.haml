@@ -3,11 +3,15 @@
     .fixed.w-full.h-full.top-0.left-0.right-0.z-10.bg-gray-700.opacity-70
 
     .fixed.top-0.left-0.right-0.z-20.overflow-x-hidden.overflow-y-auto.md:inset-0.h-modal.md:h-full
-      .flex.h-full.max-w-xl.md:h-auto.mx-auto.p-4
-        .relative.mx-auto.bg-menu-texture.border-2.border-menu-dark{ data: { controller: 'modal', action: 'keydown@window->modal#keydown' } }
-          %button.absolute.top-3.text-gray-900.bg-transparent.hover:text-gray-700.text-sm.ml-auto.inline-flex.items-center{class: "right-2.5 p-1.5", type: "button", data: { action: 'modal#close' } }
-            %svg.w-5.h-5{"aria-hidden" => "true", fill: "currentColor", viewbox: "0 0 20 20", xmlns: "http://www.w3.org/2000/svg"}
-              %path{"clip-rule" => "evenodd", d: "M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z", "fill-rule" => "evenodd"}
-            %span.sr-only Close modal
-          .p-6
+      .flex.h-full.md:h-auto.mx-auto.p-4
+        .modal-controller.relative.mx-auto.bg-menu-texture.border-2.border-menu-dark{ data: { controller: 'modal', action: 'keydown@window->modal#keydown' } }
+          .sticky.top-0.flex.justify-between.items-center.bg-menu-texture
+            .p-4
+              = yield :heading
+
+            %button.absolute.top-3.text-gray-900.bg-transparent.hover:text-gray-700.text-sm.ml-auto.inline-flex.items-center{class: "right-2.5 p-1.5", type: "button", data: { action: 'modal#close' } }
+              %svg.w-5.h-5{"aria-hidden" => "true", fill: "currentColor", viewbox: "0 0 20 20", xmlns: "http://www.w3.org/2000/svg"}
+                %path{"clip-rule" => "evenodd", d: "M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z", "fill-rule" => "evenodd"}
+              %span.sr-only Close modal
+          .px-4
             = yield

@@ -94,7 +94,7 @@ Proficiency.upsert_all(YAML.safe_load_file(Rails.root.join('db/seeds/yml/profici
 #         speed: row['Sp'],
 #         magic: row['MA'],
 #         attack: row['PA'],
-#         jump: row['Jp'],
+#         jump: row['Jm'],
 #         move: row['Mv'],
 #         add: row['Add:'],
 #         cancels: row['Cancels:'],

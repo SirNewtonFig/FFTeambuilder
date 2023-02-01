@@ -10,7 +10,19 @@ Rails.application.routes.draw do
     end
   end
   
-  resources :characters
+  resources :characters do
+    resources :items, only: %i{ index show }, controller: 'characters/items' do
+      collection do
+        patch :update
+      end
+    end
+
+    resources :zodiacs, only: %i{ index }, controller: 'characters/zodiacs' do
+      collection do
+        patch :update
+      end
+    end
+  end
 
   resource :memgen, controller: 'memgen', only: %i{ new create } do
     member do

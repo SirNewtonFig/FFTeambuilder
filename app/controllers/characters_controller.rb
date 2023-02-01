@@ -32,7 +32,7 @@ class CharactersController < ApplicationController
       x = { 'skills' => { 'primary' => [], 'secondary' => [] } }
         .deep_merge(params.require(:character).permit(:name, :job, :sex, :brave, :faith, :zodiac, :rhand, :lhand, :helmet, :armor, :accessory, :secondary, :reaction, :support, :movement, skills: {}).to_h)
 
-      if x['job'] == x['secondary']
+      if x.key?('job') && x['job'] == x['secondary']
         primary = x.dig('skills', 'primary')
         secondary = x.dig('skills', 'secondary')
         primary_id = @char.data['job']

@@ -1,0 +1,17 @@
+- content_for :heading do
+  .flex.items-center
+    %h2.text-xl Select #{scope.titleize}:
+    .flex-1.ml-4.relative
+      .absolute.inset-y-0.left-0.flex.items-center.pl-1.pointer-events-none
+        %svg.w-5.h-5.text-menu-dark{"aria-hidden" => "true", fill: "none", stroke: "currentColor", viewbox: "0 0 24 24", xmlns: "http://www.w3.org/2000/svg"}
+          %path{d: "M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z", "stroke-linecap" => "round", "stroke-linejoin" => "round", "stroke-width" => "2"}
+
+      %input.pl-8.w-full{ type: 'search', placeholder: 'Filter', class: text_field_classes, data: { action: 'quick-filter#filter', controller: 'quick-filter', quick_filter_filterable_outlet: '.filterable' } }
+
+
+.divide-y.divide-menu-dark{ class: 'w-[34rem]' }
+  = render "characters/items/empty" unless @char.send(scope).blank?
+
+  - @items.each do |item|
+    .filterable{ data: { controller: 'filterable' } }
+      = render "characters/items/#{item.item_type}", item: item
