@@ -1,37 +1,29 @@
-.flex-1.px-4.py-2
+- i = params[:id] || params[:character_id]
+
+#equipment.w-full.px-2.py-2.bg-menu-texture.border-2.border-menu-dark.sm:bg-transparent.sm:border-0
+  .text-xl.mb-1.text-menu-dark.pl-2 Equipment
+
   %table.table-auto.border-spacing-0.border-collapse
     %tr
-      %td.w-8.h-8
+      %td.w-8.h-8.p-0
         .flex.items-center.justify-center
-          = image_tag("icons/rhand.png", class: 'h-6') unless char.two_hands_engaged?
-          = image_tag("icons/2hand.png", class: 'h-6') if char.two_hands_engaged? && char.rhand.present?
-      %td.pl-1.text-xl{ class: ('text-menu-dark' if char.rhand.blank?) }
-        %select.w-64.text-xl.cursor-pointer.py-0.px-0.bg-transparent.border-0.border-b-2.border-transparent.hover:border-menu-dark.appearance-none.focus:outline-none.focus:ring-0.focus:border-menu-dark.peer{ name: 'character[rhand]', data: { action: 'change->form#submit' } }
-          %option{ selected: ('selected' if char.rhand.blank?), value: nil } Empty
-          - if char.can_equip_items?
-            - Item.rhand(char).order(:id).each do |item|
-              %option{ selected: ('selected' if item == char.rhand), value: item.id }= item.name
+          = image_tag("icons/rhand.png", class: 'h-8') unless char.two_hands_engaged?
+          = image_tag("icons/2hand.png", class: 'h-8') if char.two_hands_engaged? && char.rhand.present?
+      %td.pl-1.text-lg{ class: ('text-menu-dark' if char.rhand.blank?) }
+        = link_to(char.rhand&.name || 'Empty', character_items_path(character_id: i, scope: 'rhand'), data: { turbo_frame: 'modal' })
 
     %tr
-      %td.w-8.h-8
+      %td.w-8.h-8.p-0
         .flex.items-center.justify-center
-          = image_tag("icons/lhand.png", class: 'h-6') unless char.two_hands_engaged?
-          = image_tag("icons/2hand.png", class: 'h-6') if char.two_hands_engaged? && char.lhand.present?
-      %td.pl-1.text-xl{ class: ('text-menu-dark' if char.lhand.blank?) }
-        %select.w-64.text-xl.cursor-pointer.py-0.px-0.bg-transparent.border-0.border-b-2.border-transparent.hover:border-menu-dark.appearance-none.focus:outline-none.focus:ring-0.focus:border-menu-dark.peer{ name: 'character[lhand]', data: { action: 'change->form#submit' } }
-          %option{ selected: ('selected' if char.lhand.blank?), value: nil } Empty
-          - if char.can_equip_items?
-            - Item.lhand(char).order(:id).each do |item|
-              %option{ selected: ('selected' if item == char.lhand), value: item.id }= item.name
+          = image_tag("icons/lhand.png", class: 'h-8') unless char.two_hands_engaged?
+          = image_tag("icons/2hand.png", class: 'h-8') if char.two_hands_engaged? && char.lhand.present?
+      %td.pl-1.text-lg{ class: ('text-menu-dark' if char.lhand.blank?) }
+        = link_to(char.lhand&.name || 'Empty', character_items_path(character_id: i, scope: 'lhand'), data: { turbo_frame: 'modal' })
 
     - %w{ helmet armor accessory}.each do |slot|
       %tr
-        %td.w-8.h-8
+        %td.w-8.h-8.p-0
           .flex.items-center.justify-center
-            = image_tag("icons/#{slot}.png", class: 'h-6')
-        %td.pl-1.text-xl{ class: ('text-menu-dark' if char.send(slot).blank?) }
-          %select.w-64.text-xl.cursor-pointer.py-0.px-0.bg-transparent.border-0.border-b-2.border-transparent.hover:border-menu-dark.appearance-none.focus:outline-none.focus:ring-0.focus:border-menu-dark.peer{ name: "character[#{slot}]", data: { action: 'change->form#submit' } }
-            %option{ selected: ('selected' if char.send(slot).blank?), value: nil } Empty
-            - if char.can_equip_items?
-              - Item.send(slot).proficient(char).order(:id).each do |item|
-                %option{ selected: ('selected' if item == char.send(slot)), value: item.id }= item.name
+            = image_tag("icons/#{slot}.png", class: 'h-8')
+        %td.pl-1.text-lg{ class: ('text-menu-dark' if char.send(slot).blank?) }
+          = link_to(char.send(slot)&.name || 'Empty', character_items_path(character_id: i, scope: slot), data: { turbo_frame: 'modal' })

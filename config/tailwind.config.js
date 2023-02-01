@@ -21,12 +21,12 @@ module.exports = {
           'dark': '#726C5E'
         },
 
-        'hp': {
+        'mp': {
           'light': '#A2AD7D',
           'dark': '#556872'
         },
 
-        'mp': {
+        'hp': {
           'light': '#C9985D',
           'dark': '#78483F'
         },

@@ -1,50 +1,43 @@
-.m-2.md:m-4.max-w-5xl
-  .flex.space-x-3.mt-3
-    .flex.flex-col.space-y-3
-      = link_to(edit_character_path(id: 0), data: { turbo_frame: 'character_editor' }) do
-        = render 'characters/summary', selected: true, char: @team.characters[0], i: 0
+.w-full.relative.mb-3
+  .z-10.sticky.top-0{ class: 'bg-gray-900/75' }
+    .relative.px-3.flex.py-2.items-center.sm:mx-auto{ class: 'w-full sm:w-[48rem]'}
+      = render 'teams/summary', team: @team
 
-      = link_to(edit_character_path(id: 1), data: { turbo_frame: 'character_editor' }) do
-        = render 'characters/summary', char: @team.characters[1], i: 1
+      .absolute.flex.flex-col.items-end.top-2.right-3.group{"data-dial-init" => ""}
+        %button.flex.items-center.justify-center.text-white.group-hover:bg-gray-700.rounded-lg.w-10.h-10.focus:ring-4.focus:ring-blue-300.focus:outline-none{"aria-controls" => "file-actions", "aria-expanded" => "false", "data-dial-toggle" => "file-actions", type: "button"}
+          %svg.w-6.h-6{fill: "none", stroke: "currentColor", "stroke-width" => "1.5", viewbox: "0 0 24 24", xmlns: "http://www.w3.org/2000/svg"}
+            %path{d: "M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5", "stroke-linecap" => "round", "stroke-linejoin" => "round"}
 
-      = link_to(edit_character_path(id: 2), data: { turbo_frame: 'character_editor' }) do
-        = render 'characters/summary', char: @team.characters[2], i: 2
+        #file-actions.flex.flex-col.items-end.hidden.mt-2.space-y-2
+          = form_with(url: teams_path, multipart: true, data: { controller: 'form' }) do
+            %label.cursor-pointer.px-4.h-10.flex.justify-center.items-center.text-white.bg-gray-700.rounded-full.shadow-sm.hover:bg-gray-600.focus:ring-4.focus:ring-gray-300.focus:outline-none{ for: 'upload-team' }
+              .mr-2 Load
+              %svg.w-6.h-6{fill: "currentColor", viewbox: "0 0 24 24", xmlns: "http://www.w3.org/2000/svg"}
+                %path{d: "M19.906 9c.382 0 .749.057 1.094.162V9a3 3 0 00-3-3h-3.879a.75.75 0 01-.53-.22L11.47 3.66A2.25 2.25 0 009.879 3H6a3 3 0 00-3 3v3.162A3.756 3.756 0 014.094 9h15.812zM4.094 10.5a2.25 2.25 0 00-2.227 2.568l.857 6A2.25 2.25 0 004.951 21H19.05a2.25 2.25 0 002.227-1.932l.857-6a2.25 2.25 0 00-2.227-2.568H4.094z"}
+              %input#upload-team.hidden{ type: 'file', name: 'team_file', accept: '.yml', data: { action: 'form#submit' } }
+          
+          = link_to(export_teams_path, class: 'flex items-center group cursor-pointer', data: { turbo_frame: 'modal' }) do
+            .px-4.h-10.flex.justify-center.items-center.text-white.bg-gray-700.rounded-full.shadow-sm.hover:bg-gray-600.focus:ring-4.focus:ring-gray-300.focus:outline-none{ for: 'upload-team' }
+              .mr-2 Save
+              %svg.w-6.h-6{fill: "currentColor", viewbox: "0 0 24 24", xmlns: "http://www.w3.org/2000/svg"}
+                %path{"clip-rule" => "evenodd", d: "M19.5 21a3 3 0 003-3V9a3 3 0 00-3-3h-5.379a.75.75 0 01-.53-.22L11.47 3.66A2.25 2.25 0 009.879 3H4.5a3 3 0 00-3 3v12a3 3 0 003 3h15zm-6.75-10.5a.75.75 0 00-1.5 0v4.19l-1.72-1.72a.75.75 0 00-1.06 1.06l3 3a.75.75 0 001.06 0l3-3a.75.75 0 10-1.06-1.06l-1.72 1.72V10.5z", "fill-rule" => "evenodd"}
 
-      = link_to(edit_character_path(id: 3), data: { turbo_frame: 'character_editor' }) do
-        = render 'characters/summary', char: @team.characters[3], i: 3
-    
-    %div
-      = turbo_frame_tag(:character_editor, src: edit_character_path(id: 0))
+          = link_to(team_path(@team), class: 'flex items-center group', data: { turbo_method: :delete, turbo_confirm: 'Are you sure you want to reset your team?' }) do
+            .px-4.h-10.flex.justify-center.items-center.text-white.bg-gray-700.rounded-full.shadow-sm.hover:bg-gray-600.focus:ring-4.focus:ring-gray-300.focus:outline-none{ for: 'upload-team' }
+              .mr-2 Reset
+              %svg.w-6.h-6{fill: "currentColor", viewbox: "0 0 24 24", xmlns: "http://www.w3.org/2000/svg"}
+                %path{"clip-rule" => "evenodd", d: "M16.5 4.478v.227a48.816 48.816 0 013.878.512.75.75 0 11-.256 1.478l-.209-.035-1.005 13.07a3 3 0 01-2.991 2.77H8.084a3 3 0 01-2.991-2.77L4.087 6.66l-.209.035a.75.75 0 01-.256-1.478A48.567 48.567 0 017.5 4.705v-.227c0-1.564 1.213-2.9 2.816-2.951a52.662 52.662 0 013.369 0c1.603.051 2.815 1.387 2.815 2.951zm-6.136-1.452a51.196 51.196 0 013.273 0C14.39 3.05 15 3.684 15 4.478v.113a49.488 49.488 0 00-6 0v-.113c0-.794.609-1.428 1.364-1.452zm-.355 5.945a.75.75 0 10-1.5.058l.347 9a.75.75 0 101.499-.058l-.346-9zm5.48.058a.75.75 0 10-1.498-.058l-.347 9a.75.75 0 001.5.058l.345-9z", "fill-rule" => "evenodd"}
 
-    .flex.flex-col
-      .space-y-4.flex.flex-col
-        = link_to(export_teams_path, class: 'flex items-center group', data: { turbo_frame: 'modal' }) do
-          .border.border-gray-500.text-gray-300.rounded-full.p-1.group-hover:border-gray-400.grouphover:text-gray-200
-            %svg.w-5.h-5{fill: "none", stroke: "currentColor", "stroke-width" => "1.5", viewbox: "0 0 24 24", xmlns: "http://www.w3.org/2000/svg"}
-              %path{d: "M9 13.5l3 3m0 0l3-3m-3 3v-6m1.06-4.19l-2.12-2.12a1.5 1.5 0 00-1.061-.44H4.5A2.25 2.25 0 002.25 6v12a2.25 2.25 0 002.25 2.25h15A2.25 2.25 0 0021.75 18V9a2.25 2.25 0 00-2.25-2.25h-5.379a1.5 1.5 0 01-1.06-.44z", "stroke-linecap" => "round", "stroke-linejoin" => "round"}
-          .ml-2.text-gray-300.group-hover:text-gray-100 Save
-
-        = form_with(url: teams_path, multipart: true, data: { controller: 'form' }) do
-          %label.flex.items-center.group.cursor-pointer{ for: 'upload-team' }
-            .border.border-gray-500.text-gray-300.rounded-full.p-1.group-hover:border-gray-400.grouphover:text-gray-200
-              %svg.w-5.h-5{fill: "none", stroke: "currentColor", "stroke-width" => "1.5", viewbox: "0 0 24 24", xmlns: "http://www.w3.org/2000/svg"}
-                %path{d: "M3.75 9.776c.112-.017.227-.026.344-.026h15.812c.117 0 .232.009.344.026m-16.5 0a2.25 2.25 0 00-1.883 2.542l.857 6a2.25 2.25 0 002.227 1.932H19.05a2.25 2.25 0 002.227-1.932l.857-6a2.25 2.25 0 00-1.883-2.542m-16.5 0V6A2.25 2.25 0 016 3.75h3.879a1.5 1.5 0 011.06.44l2.122 2.12a1.5 1.5 0 001.06.44H18A2.25 2.25 0 0120.25 9v.776", "stroke-linecap" => "round", "stroke-linejoin" => "round"}
-            .ml-2.text-gray-300.group-hover:text-gray-100 Load
-            %input#upload-team.hidden{ type: 'file', name: 'team_file', accept: '.yml', data: { action: 'form#submit' } }
-
-        = link_to(team_path(@team), class: 'flex items-center group', data: { turbo_method: :delete, turbo_confirm: 'Are you sure you want to reset your team?' }) do
-          .border.border-gray-500.text-gray-300.rounded-full.p-1.group-hover:border-gray-400.grouphover:text-gray-200
-            %svg.w-5.h-5{fill: "none", stroke: "currentColor", "stroke-width" => "1.5", viewbox: "0 0 24 24", xmlns: "http://www.w3.org/2000/svg"}
-              %path{d: "M14.74 9l-.346 9m-4.788 0L9.26 9m9.968-3.21c.342.052.682.107 1.022.166m-1.022-.165L18.16 19.673a2.25 2.25 0 01-2.244 2.077H8.084a2.25 2.25 0 01-2.244-2.077L4.772 5.79m14.456 0a48.108 48.108 0 00-3.478-.397m-12 .562c.34-.059.68-.114 1.022-.165m0 0a48.11 48.11 0 013.478-.397m7.5 0v-.916c0-1.18-.91-2.164-2.09-2.201a51.964 51.964 0 00-3.32 0c-1.18.037-2.09 1.022-2.09 2.201v.916m7.5 0a48.667 48.667 0 00-7.5 0", "stroke-linecap" => "round", "stroke-linejoin" => "round"}
-          .ml-2.text-gray-300.group-hover:text-gray-200 Clear
-
-        = render 'teams/summary', team: @team
-
-      -# TODO: implement a JP summary overlay
-      -# .flex.items-center.group.cursor-pointer
-      -#   %button.border.border-gray-500.text-gray-300.rounded-full.p-1.group-hover:border-gray-400.grouphover:text-gray-200
-      -#     %svg.w-5.h-5{fill: "none", stroke: "currentColor", "stroke-width" => "1.5", viewbox: "0 0 24 24", xmlns: "http://www.w3.org/2000/svg"}
-      -#       %path{d: "M8.25 6.75h12M8.25 12h12m-12 5.25h12M3.75 6.75h.007v.008H3.75V6.75zm.375 0a.375.375 0 11-.75 0 .375.375 0 01.75 0zM3.75 12h.007v.008H3.75V12zm.375 0a.375.375 0 11-.75 0 .375.375 0 01.75 0zm-.375 5.25h.007v.008H3.75v-.008zm.375 0a.375.375 0 11-.75 0 .375.375 0 01.75 0z", "stroke-linecap" => "round", "stroke-linejoin" => "round"}
-      -#   .ml-2.text-gray-300.group-hover:text-gray-200 JP Breakdown
-
+  .mx-auto.relative{ class: 'w-128 sm:w-[48rem]'}
+    .flex.mt-1
+      .relative
+        .fixed.flex.flex-col.space-y-3.sticky.top-0{ class: 'top-[3.75rem]', data: { lineup_target: 'container' } }
+          = turbo_frame_tag(:lineup) do
+            = form_with(url: lineup_path, method: :patch, data: { controller: 'form lineup', lineup_target: 'form', turbo_frame: :lineup}) do
+              - 4.times do |i|
+                .draggable{ data: { index: i, action: 'click->lineup#select:stop', lineup_target: 'character' }}
+                  = render 'characters/summary', selected: i == params[:id].to_i, char: @team.characters[i], i: i
       
+      .w-full.mx-3
+        = turbo_frame_tag(:character_editor, src: edit_character_path(id: 0))
+

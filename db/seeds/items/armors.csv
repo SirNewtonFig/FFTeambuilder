@@ -1,4 +1,4 @@
-Name,Classes,HP,MP,PA,MA,Sp,Mv,Jp,Cancels:,Absorbs:,Weak:,Halves:,Strengthens:,Start:,Always:,Skill
+Name,Classes,HP,MP,PA,MA,Sp,Mv,Jm,Cancels:,Absorbs:,Weak:,Halves:,Strengthens:,Start:,Always:,Skill
 Leather Armor,Kn Ln Sm,140,0,,,,1,,,,,,,,,Equip Armor
 Linen Cuirass,Kn Ln Sm,120,40,-2,,,,,,,,,,,,Equip Armor
 Bronze Armor,Kn Ln Sm,120,0,,,,,,Petrify Stop,,,,,,,Equip Armor

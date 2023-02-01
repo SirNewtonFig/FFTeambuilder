@@ -1,7 +1,8 @@
 :ruby
   selected ||= false
 
-.w-40.p-2.cursor-pointer.hover:bg-gray-700.text-gray-300.hover:text-white.rounded-sm{ id: "character-#{i}", class: ('bg-gray-700 border-r-blue-600 border-r-4' if selected) }
+.container.w-40.p-2.cursor-pointer.hover:bg-gray-700.text-gray-300.hover:text-white.rounded-sm{ id: "character-#{i}", class: ('bg-gray-700 border-r-blue-600 border-r-4' if selected) }
+  %input{ type: 'hidden', name: 'chars[]', value: i }
   .flex
     .w-12
       - if char.generic?

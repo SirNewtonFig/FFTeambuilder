@@ -7,10 +7,29 @@ Rails.application.routes.draw do
       patch :update
       get :export
       post :download
+
+      resource :lineup, only: %i{ update }, controller: 'teams/lineup'
     end
   end
   
-  resources :characters
+  resources :characters do
+    resource :meta, only: %i{ update }, controller: 'characters/meta'
+
+    resources :items, only: %i{ index show }, controller: 'characters/items' do
+      collection do
+        patch :update
+      end
+    end
+
+    resources :zodiacs, only: %i{ index }, controller: 'characters/zodiacs' do
+      collection do
+        patch :update
+      end
+    end
+
+    resource :job, only: %i{ update }, controller: 'characters/job'
+    resource :skills, only: %i{ update }, controller: 'characters/skills'
+  end
 
   resource :memgen, controller: 'memgen', only: %i{ new create } do
     member do

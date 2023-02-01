@@ -1,26 +1,32 @@
 = turbo_frame_tag(:character_editor) do
-  = form_with(url: character_path(id: params[:id]), method: :patch, data: { controller: 'form' }) do
-    .flex-col.space-y-3
-      .flex.items-stretch
+  .flex-col.space-y-3
+    .flex.flex-col.sm:flex-row.space-y-3.sm:space-y-0.sm:space-x-3
+      .flex.flex-1
         = render 'characters/portrait', char: @char
         = render 'characters/vitals', char: @char
+      .flex.flex-1
         = render 'characters/meta', char: @char
 
-      #attributes.bg-menu-texture.border-2.border-menu-dark.flex.px-4.py-2.justify-between
+    #attributes.flex.flex-col.sm:flex-row.space-y-3.sm:space-y-0.sm:space-x-3.sm:bg-menu-texture.sm:border-2.sm:border-menu-dark.sm:px-4.sm:py-2
+      .flex.flex-1.space-x-10.bg-menu-texture.border-2.border-menu-dark.flex.px-4.py-2.sm:bg-transparent.sm:border-0.sm:p-0
         = render 'characters/mobility', char: @char
         = render 'characters/weapons', char: @char
+      .flex.flex-1.bg-menu-texture.border-2.border-menu-dark.flex.px-4.py-2.sm:bg-transparent.sm:border-0.sm:p-0
         = render 'characters/attack_evasion', char: @char
 
-      .bg-menu-texture.border-2.border-menu-dark.flex.space-x-3
+  .mt-3
+    .flex-col.space-y-3
+      .flex.flex-col.sm:flex-row.space-y-3.sm:space-y-0.sm:space-x-3.sm:bg-menu-texture.sm:border-2.sm:border-menu-dark
         - if @char.generic?
           = render 'characters/equipment', char: @char
           = render 'characters/skills', char: @char, team: @team
+
         - else
           = render 'characters/equipment_monster', char: @char
           = render 'characters/skills_monster', char: @char
 
       - if @char.generic?
-        .flex.space-x-3
+        .flex.flex-col.sm:flex-row.space-y-3.sm:space-x-3.sm:space-y-0
           = render 'characters/primary', char: @char, team: @team
           = render 'characters/secondary', char: @char, team: @team
 

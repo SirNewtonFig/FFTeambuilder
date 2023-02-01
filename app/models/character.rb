@@ -2,12 +2,9 @@ class Character
   extend Memoist
 
   DEFAULT_DATA = {
-    name: 'Rad',
-    sex: 'm',
-    zodiac: 'aries',
     job: 1,
-    brave: 60,
-    faith: 60,
+    brave: 55,
+    faith: 55,
     secondary: 2,
     reaction: nil,
     support: nil,
@@ -39,6 +36,14 @@ class Character
   }
 
   attr_accessor :data
+
+  def self.blank_character
+    new(DEFAULT_DATA.merge(
+      name: Faker::Name.first_name_neutral,
+      sex: ['m', 'f'].sample,
+      zodiac: ZODIACS.keys.sample
+    ).stringify_keys)
+  end
 
   def initialize(data)
     @data = data
@@ -344,9 +349,5 @@ class Character
     return 0x82 if job.monster?
 
     0x80
-  end
-
-  def encode_zodiac
-
   end
 end

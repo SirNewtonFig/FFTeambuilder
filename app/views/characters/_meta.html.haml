@@ -1,31 +1,27 @@
 
-#meta.p-2.flex-1.flex.bg-menu-texture.border-2.border-menu-dark{ class: 'h-[7.25rem]' }
-  %div
-    %label.w-24.text-center.flex.flex-col.items-center.justify-between.hover:contrast-75.cursor-pointer{ for: 'zodiac' }
-      = image_tag("zodiacs/#{char.zodiac}.png", class: 'h-16 contrast-[.35]')
-
-    %select#zodiac.text-sm.text-center.bg-none.cursor-pointer.py-0.px-0.bg-transparent.border-0.border-b-2.border-transparent.hover:border-menu-dark.appearance-none.focus:outline-none.focus:ring-0.focus:border-menu-dark.peer{ name: 'character[zodiac]', data: { action: 'change->form#submit' } }
-      - Character::ZODIACS.keys.each do |sign|
-        %option{ selected: ('selected' if sign == char.zodiac), value: sign }= sign.titleize
-
-  .ml-4.space-y-2.flex.flex-col.justify-between
-    %input.text-xl.bg-right.py-0.px-0.bg-transparent.border-0.border-b-2.border-transparent.hover:border-menu-dark.appearance-none.focus:outline-none.focus:ring-0.focus:border-menu-dark.peer{ type: 'text', name: 'character[name]', value: char.name, data: { action: 'change->form#submit' } }
+#meta.py-2.px-4.flex-1.flex.bg-menu-texture.border-2.border-menu-dark.h-30
+  .space-y-2.flex.flex-col.justify-between.w-full
+    = form_with(url: character_meta_path(character_id: params[:id]), method: :patch, data: { controller: 'form' }, class: 'w-full') do |f|
+      %input.text-xl.bg-right.py-0.px-0.bg-transparent.border-0.border-b-2.border-transparent.hover:border-menu-dark.appearance-none.focus:outline-none.focus:ring-0.focus:border-menu-dark.peer{ type: 'text', name: 'character[name]', value: char.name, data: { action: 'change->form#submit' } }
     
-    .flex.space-x-2
-      %select.bg-right.cursor-pointer.w-24.py-0.px-0.bg-transparent.border-0.border-b-2.border-transparent.hover:border-menu-dark.appearance-none.focus:outline-none.focus:ring-0.focus:border-menu-dark.peer{ name: 'character[sex]', data: { action: 'change->form#submit' } }
-        %option{ selected: ('selected' if char.sex == 'm'), value: 'm' } Male
-        %option{ selected: ('selected' if char.sex == 'f'), value: 'f' } Female
-        %option{ selected: ('selected' if char.sex == 'x'), value: 'x' } Monster
+    = form_with(url: character_path(id: params[:id]), method: :patch, data: { controller: 'form' }, class: 'w-full') do |f|
+      .flex
+        %select.bg-right.cursor-pointer.py-0.px-0.pr-4.bg-transparent.border-0.border-b-2.border-transparent.hover:border-menu-dark.appearance-none.focus:outline-none.focus:ring-0.focus:border-menu-dark.peer{ name: 'character[sex]', data: { action: 'change->form#submit' } }
+          %option{ selected: ('selected' if char.sex == 'm'), value: 'm' } Male
+          %option{ selected: ('selected' if char.sex == 'f'), value: 'f' } Female
+          %option{ selected: ('selected' if char.sex == 'x'), value: 'x' } Monster
 
-      %select.bg-right.cursor-pointer.flex-1.py-0.px-0.bg-transparent.border-0.border-b-2.border-transparent.hover:border-menu-dark.appearance-none.focus:outline-none.focus:ring-0.focus:border-menu-dark.peer{ name: 'character[job]', data: { action: 'change->form#submit' } }
-        - jobs = char.sex == 'x' ? Job.monster.order(:id) : Job.generic.order(:id)
-        - jobs.map do |job|
-          %option{ selected: ('selected' if job == char.job), value: job.id }= job.name
+        %select.bg-right.cursor-pointer.flex-1.py-0.px-0.pr-4.bg-transparent.border-0.border-b-2.border-transparent.hover:border-menu-dark.appearance-none.focus:outline-none.focus:ring-0.focus:border-menu-dark.peer{ name: 'character[job]', data: { action: 'change->form#submit' } }
+          - jobs = char.sex == 'x' ? Job.monster.order(:id) : Job.generic.order(:id)
+          - jobs.map do |job|
+            %option{ selected: ('selected' if job == char.job), value: job.id }= job.name
 
-    .flex.space-x-4
-      %div
-        %label.mr-1{ for: 'brave' } Brave
-        %input#brave.bg-right.w-6.py-0.px-0.bg-transparent.border-0.border-b-2.border-transparent.hover:border-menu-dark.appearance-none.focus:outline-none.focus:ring-0.focus:border-menu-dark.peer{ type: 'text', pattern: '[0-9]{2}', name: 'character[brave]', value: char.brave.to_i, data: { action: 'change->form#submit' } }
-      %div
-        %label.mr-1{ for: 'faith' } Faith
-        %input#faith.bg-right.w-6.py-0.px-0.bg-transparent.border-0.border-b-2.border-transparent.hover:border-menu-dark.appearance-none.focus:outline-none.focus:ring-0.focus:border-menu-dark.peer{ type: 'text', pattern: '[0-9]{2}', name: 'character[faith]', value: char.faith.to_i, data: { action: 'change->form#submit' } }
+    
+    = form_with(url: character_meta_path(character_id: params[:id]), method: :patch, data: { controller: 'form' }, class: 'w-full') do |f|
+      .flex
+        .flex-1
+          %label.mr-1{ for: 'brave' } Brave
+          %input#brave.bg-right.w-10.py-0.px-0.bg-transparent.border-0.border-b-2.border-transparent.hover:border-menu-dark.appearance-none.focus:outline-none.focus:ring-0.focus:border-menu-dark.peer{ type: 'number', max: 70, min: 40, name: 'character[brave]', value: char.brave.to_i, data: { action: 'change->form#submit' } }
+        .flex-1
+          %label.mr-1{ for: 'faith' } Faith
+          %input#faith.bg-right.w-10.py-0.px-0.bg-transparent.border-0.border-b-2.border-transparent.hover:border-menu-dark.appearance-none.focus:outline-none.focus:ring-0.focus:border-menu-dark.peer{ type: 'number', max: 70, min: 40, name: 'character[faith]', value: char.faith.to_i, data: { action: 'change->form#submit' } }
