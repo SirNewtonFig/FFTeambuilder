@@ -38,6 +38,7 @@ gem "active_record_union"
 gem "faker"
 gem "haml"
 gem "hashie"
+gem "inline_svg"
 gem "memoist"
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem

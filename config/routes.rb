@@ -11,6 +11,8 @@ Rails.application.routes.draw do
   end
   
   resources :characters do
+    resource :meta, only: %i{ update }, controller: 'characters/meta'
+
     resources :items, only: %i{ index show }, controller: 'characters/items' do
       collection do
         patch :update

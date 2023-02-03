@@ -1,19 +1,18 @@
-#vitals.w-52.px-2
-  .flex.justify-center.space-x-4.mb-3
-    .text-white Lv. 35
-    .text-white Exp. 99
-
-  .flex.space-x-2.items-center.mb-1
-    .text-white HP
+#vitals.flex-1.px-2.flex.flex-col.justify-end.pb-1.h-30
+  .flex.space-x-3.items-center.mb-2
+    .relative
+      %svg.text-hp-dark.w-6.h-6{fill: "currentColor", viewbox: "0 0 24 24", xmlns: "http://www.w3.org/2000/svg"}
+        %path{d: "M11.645 20.91l-.007-.003-.022-.012a15.247 15.247 0 01-.383-.218 25.18 25.18 0 01-4.244-3.17C4.688 15.36 2.25 12.174 2.25 8.25 2.25 5.322 4.714 3 7.688 3A5.5 5.5 0 0112 5.052 5.5 5.5 0 0116.313 3c2.973 0 5.437 2.322 5.437 5.25 0 3.925-2.438 7.111-4.739 9.256a25.175 25.175 0 01-4.244 3.17 15.247 15.247 0 01-.383.219l-.022.012-.007.004-.003.001a.752.752 0 01-.704 0l-.003-.001z"}
+      .absolute.-right-1.-bottom-1.text-sm.text-white HP
     .flex-1.skew-x-45.h-2.bg-gradient-to-r.from-hp-dark.to-hp-light
-    .text-white.w-8.text-right= char.hp
+    .text-white.w-8= char.hp
 
-  .flex.space-x-2.items-center.mb-1
-    .text-white MP
+  .flex.space-x-3.items-center.mb-2
+    .relative
+      %svg.text-mp-dark.w-6.h-6{fill: "currentColor", viewbox: "0 0 24 24", xmlns: "http://www.w3.org/2000/svg"}
+        %path{"clip-rule" => "evenodd", d: "M14.615 1.595a.75.75 0 01.359.852L12.982 9.75h7.268a.75.75 0 01.548 1.262l-10.5 11.25a.75.75 0 01-1.272-.71l1.992-7.302H3.75a.75.75 0 01-.548-1.262l10.5-11.25a.75.75 0 01.913-.143z", "fill-rule" => "evenodd"}
+      .absolute.-right-1.-bottom-1.text-sm.text-white MP
     .flex-1.skew-x-45.h-2.bg-gradient-to-r.from-mp-dark.to-mp-light
-    .text-white.w-8.text-right= char.mp
+    .text-white.w-8= char.mp
 
-  .flex.space-x-2.items-center
-    .text-white CT
-    .flex-1.skew-x-45.h-2.bg-gradient-to-r.from-ct-dark.to-ct-light
-    .text-white.w-8.text-right ---
+  = render 'characters/meta/zodiac', char: @char, i: params[:id]

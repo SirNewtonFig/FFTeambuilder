@@ -108,6 +108,9 @@ GEM
     importmap-rails (1.1.5)
       actionpack (>= 6.0.0)
       railties (>= 6.0.0)
+    inline_svg (1.8.0)
+      activesupport (>= 3.0)
+      nokogiri (>= 1.6)
     io-console (0.6.0)
     irb (1.6.1)
       reline (>= 0.3.0)
@@ -240,6 +243,7 @@ DEPENDENCIES
   haml
   hashie
   importmap-rails
+  inline_svg
   jbuilder
   memoist
   pg (~> 1.1)

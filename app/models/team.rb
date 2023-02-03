@@ -24,11 +24,11 @@ class Team < ApplicationRecord
   end
 
   def brave_total
-    characters.map(&:brave).sum
+    characters.map(&:brave).map(&:to_i).sum
   end
 
   def faith_total
-    characters.map(&:faith).sum
+    characters.map(&:faith).map(&:to_i).sum
   end
 
   def jp_total
