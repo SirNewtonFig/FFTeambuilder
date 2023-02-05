@@ -1,14 +1,9 @@
-# fly.toml file generated for ffteambuilder on 2022-12-31T20:46:19-04:00
+# fly.toml file generated for ffteambuilder on 2023-02-04T20:10:57-04:00
 
 app = "ffteambuilder"
 kill_signal = "SIGINT"
 kill_timeout = 5
 processes = []
-
-[build]
-  [build.args]
-    BUILD_COMMAND = "bin/rails fly:build"
-    SERVER_COMMAND = "bin/rails fly:server"
 
 [deploy]
   release_command = "bin/rails fly:release"
