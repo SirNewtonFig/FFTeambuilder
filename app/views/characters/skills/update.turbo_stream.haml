@@ -8,14 +8,16 @@
   = turbo_stream.replace('secondary-skills') do
     = render 'characters/secondary', char: @char, team: @team, i: i
 
-= turbo_stream.replace('mobility') do
-  = render 'characters/mobility', char: @char
+- if @support_changed || @movement_changed
+  = turbo_stream.replace('mobility') do
+    = render 'characters/mobility', char: @char
 
-= turbo_stream.replace('attack-evasion') do
-  = render 'characters/attack_evasion', char: @char
+- if @support_changed
+  = turbo_stream.replace('attack-evasion') do
+    = render 'characters/attack_evasion', char: @char
 
-= turbo_stream.replace('equipment') do
-  = render 'characters/equipment', char: @char
+  = turbo_stream.replace('equipment') do
+    = render 'characters/equipment', char: @char
 
-= turbo_stream.replace('vitals') do
-  = render 'characters/vitals', char: @char
+  = turbo_stream.replace('vitals') do
+    = render 'characters/vitals', char: @char

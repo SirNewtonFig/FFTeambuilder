@@ -7,8 +7,12 @@ class Characters::SkillsController < ApplicationController
 
   def update
     @refresh_secondary = secondary_changed?
+    @support_changed = support_changed?
+    @movement_changed = movement_changed? 
+
     @char.data.deep_merge!(skill_params)
-    @char.enforce_constraints!
+
+    @char.enforce_constraints! if @support_changed
     
     @team.data[i] = @char.data
     @team.save
@@ -33,6 +37,14 @@ class Characters::SkillsController < ApplicationController
       end
 
       x
+    end
+
+    def support_changed?
+      (support = params.dig(:character, :support)).present? && support.to_i != @char.data['support'].to_i
+    end
+
+    def movement_changed?
+      (movement = params.dig(:character, :movement)).present? && movement.to_i != @char.data['movement'].to_i
     end
 
     def secondary_changed?
