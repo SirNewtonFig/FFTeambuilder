@@ -2,10 +2,10 @@ import { Controller } from "@hotwired/stimulus"
 import { Sortable } from '@shopify/draggable'
 
 export default class LineupController extends Controller {
-  static targets = ['form', 'container', 'character']
+  static targets = ['form', 'character']
 
   connect() {
-    this.sortable = new Sortable(this.containerTarget, { draggable: '.draggable', distance: 15 })
+    this.sortable = new Sortable(this.element, { draggable: '.draggable', distance: 15 })
 
     this.sortable.on('drag:stopped', () => {
       fetch(this.formTarget.action, {
