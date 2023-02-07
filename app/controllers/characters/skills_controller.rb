@@ -41,14 +41,20 @@ class Characters::SkillsController < ApplicationController
     end
 
     def support_changed?
+      return false unless params[:character].key?(:support)
+
       params.dig(:character, :support).to_i != @char.data['support'].to_i
     end
 
     def movement_changed?
+      return false unless params[:character].key?(:movement)
+
       params.dig(:character, :movement).to_i != @char.data['movement'].to_i
     end
 
     def secondary_changed?
+      return false unless params[:character].key?(:secondary)
+
       params.dig(:character, :secondary).to_i != @char.data['secondary'].to_i
     end
 

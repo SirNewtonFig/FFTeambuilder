@@ -6,6 +6,8 @@
     %div JP
 
   = form_with(url: character_skills_path(character_id: i), method: :patch, data: { controller: 'form' }) do |f|
+    %input{ name: 'character[skills][primary][]', type: "hidden", value: '' }
+
     - available = char.job.skills.action.unique(char, team)
     - char.job.skills.action.order(:id).each_with_index do |skill, i|
       - disabled = !available.include?(skill)
