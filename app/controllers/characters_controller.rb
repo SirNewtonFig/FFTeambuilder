@@ -16,6 +16,12 @@ class CharactersController < ApplicationController
     render action: :edit
   end
 
+  def jp_summary
+    @char = @team.characters[i]
+
+    render layout: 'modal'
+  end
+
   private
 
     def load_team
@@ -23,23 +29,7 @@ class CharactersController < ApplicationController
     end
 
     def character_params
-      x = params.require(:character).permit(:job, :sex, :secondary).to_h
-
-      if x.key?('job') && x['job'] == @char.data['secondary']
-        primary = @char.data.dig('skills', 'primary')
-        secondary = @char.data.dig('skills', 'secondary')
-
-        x.merge!({
-          'secondary' => @char.data['job'],
-          'job' => @char.data['secondary'],
-          'skills' => {
-            'primary' => secondary,
-            'secondary' => primary
-          }
-        })
-      end
-
-      x
+      params.require(:character).permit(:sex, :secondary).to_h
     end
 
     def i

@@ -1,0 +1,32 @@
+= turbo_stream.replace("character-#{i}") do
+  = render 'characters/summary', selected: true, char: @char, i: i
+
+= turbo_stream.replace("team-summary") do
+  = render 'teams/summary', team: @team
+
+= turbo_stream.replace('primary-skills') do
+  = render 'characters/primary', char: @char, team: @team, i: i
+
+= turbo_stream.replace('secondary-skills') do
+  = render 'characters/secondary', char: @char, team: @team, i: i
+
+= turbo_stream.replace('mobility') do
+  = render 'characters/mobility', char: @char
+
+= turbo_stream.replace('attack-evasion') do
+  = render 'characters/attack_evasion', char: @char
+
+= turbo_stream.replace('equipment') do
+  = render 'characters/equipment', char: @char
+
+= turbo_stream.replace('vitals') do
+  = render 'characters/vitals', char: @char
+
+= turbo_stream.replace('meta') do
+  = render 'characters/meta', char: @char
+
+= turbo_stream.replace('portrait') do
+  = render 'characters/portrait', char: @char
+
+= turbo_stream.replace('skills') do
+  = render 'characters/skills', char: @char, team: @team

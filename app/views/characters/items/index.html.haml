@@ -10,7 +10,7 @@
 
 
 .divide-y.divide-menu-dark.w-full{ class: 'sm:w-[34rem]' }
-  = render "characters/items/empty" unless @char.send(scope).blank?
+  = render "characters/items/empty", current: @char.send(scope) unless @char.send(scope).blank?
 
   - @items.each do |item|
     .filterable{ data: { controller: 'filterable' } }

@@ -3,14 +3,14 @@
 #equipment.w-full.px-2.py-2.bg-menu-texture.border-2.border-menu-dark.sm:bg-transparent.sm:border-0
   .text-xl.mb-1.text-menu-dark.pl-2 Equipment
 
-  %table.table-auto.border-spacing-0.border-collapse
+  %table.table-auto.border-spacing-0.border-collapse.w-full
     %tr
       %td.w-8.h-8.p-0
         .flex.items-center.justify-center
           = image_tag("icons/rhand.png", class: 'h-8') unless char.two_hands_engaged?
           = image_tag("icons/2hand.png", class: 'h-8') if char.two_hands_engaged? && char.rhand.present?
       %td.pl-1.text-lg{ class: ('text-menu-dark' if char.rhand.blank?) }
-        = link_to(char.rhand&.name || 'Empty', character_items_path(character_id: i, scope: 'rhand'), data: { turbo_frame: 'modal' })
+        = link_to(char.rhand&.name || 'Empty', character_items_path(character_id: i, scope: 'rhand'), data: { turbo_frame: 'modal' }, class: 'block w-full text-lg border-0 border-b-2 border-transparent hover:border-menu-dark')
 
     %tr
       %td.w-8.h-8.p-0
@@ -18,7 +18,7 @@
           = image_tag("icons/lhand.png", class: 'h-8') unless char.two_hands_engaged?
           = image_tag("icons/2hand.png", class: 'h-8') if char.two_hands_engaged? && char.lhand.present?
       %td.pl-1.text-lg{ class: ('text-menu-dark' if char.lhand.blank?) }
-        = link_to(char.lhand&.name || 'Empty', character_items_path(character_id: i, scope: 'lhand'), data: { turbo_frame: 'modal' })
+        = link_to(char.lhand&.name || 'Empty', character_items_path(character_id: i, scope: 'lhand'), data: { turbo_frame: 'modal' }, class: 'block w-full text-lg border-0 border-b-2 border-transparent hover:border-menu-dark')
 
     - %w{ helmet armor accessory}.each do |slot|
       %tr
@@ -26,4 +26,4 @@
           .flex.items-center.justify-center
             = image_tag("icons/#{slot}.png", class: 'h-8')
         %td.pl-1.text-lg{ class: ('text-menu-dark' if char.send(slot).blank?) }
-          = link_to(char.send(slot)&.name || 'Empty', character_items_path(character_id: i, scope: slot), data: { turbo_frame: 'modal' })
+          = link_to(char.send(slot)&.name || 'Empty', character_items_path(character_id: i, scope: slot), data: { turbo_frame: 'modal' }, class: 'block w-full text-lg border-0 border-b-2 border-transparent hover:border-menu-dark')

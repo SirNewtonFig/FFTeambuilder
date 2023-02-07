@@ -13,6 +13,10 @@ Rails.application.routes.draw do
   end
   
   resources :characters do
+    member do
+      get :jp_summary
+    end
+
     resource :meta, only: %i{ update }, controller: 'characters/meta'
 
     resources :items, only: %i{ index show }, controller: 'characters/items' do
@@ -27,8 +31,8 @@ Rails.application.routes.draw do
       end
     end
 
-    resource :job, only: %i{ update }, controller: 'characters/job'
-    resource :skills, only: %i{ update }, controller: 'characters/skills'
+    resource :job, only: %i{ edit update }, controller: 'characters/job'
+    resource :skills, only: %i{ edit update }, controller: 'characters/skills'
   end
 
   resource :memgen, controller: 'memgen', only: %i{ new create } do

@@ -1,7 +1,9 @@
 class Characters::SkillsController < ApplicationController
   before_action :load_character
 
-  def index
+  def edit
+    @skills = Skill.send(scope).valid(@char).unique(@char, @team).order(:name)
+
     render layout: 'modal'
   end
 
@@ -25,7 +27,6 @@ class Characters::SkillsController < ApplicationController
       @char = @team.characters[params[:character_id].to_i]
     end
 
-
     def skill_params
       params[:character] ||= {}
 
@@ -40,18 +41,22 @@ class Characters::SkillsController < ApplicationController
     end
 
     def support_changed?
-      (support = params.dig(:character, :support)).present? && support.to_i != @char.data['support'].to_i
+      params.dig(:character, :support).to_i != @char.data['support'].to_i
     end
 
     def movement_changed?
-      (movement = params.dig(:character, :movement)).present? && movement.to_i != @char.data['movement'].to_i
+      params.dig(:character, :movement).to_i != @char.data['movement'].to_i
     end
 
     def secondary_changed?
-      (secondary = params.dig(:character, :secondary)).present? && secondary.to_i != @char.data['secondary'].to_i
+      params.dig(:character, :secondary).to_i != @char.data['secondary'].to_i
     end
 
     helper_method def i
       params[:character_id].to_i
+    end
+
+    helper_method def scope
+      params[:scope] if %w{ reaction support movement }.include?(params[:scope])
     end
 end

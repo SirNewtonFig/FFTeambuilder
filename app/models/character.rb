@@ -345,6 +345,29 @@ class Character
     end
   end
 
+  memoize def jp_summary
+    return {} unless generic?
+
+    job_prereqs = Job::CalculatePrerequisiteJp.perform(job: job).jp
+
+    skill_costs = Job::CalculateSkillJp.perform(character: self).jp
+
+    skill_prereq_costs = skill_costs.keys.map do |j|
+      Job::CalculatePrerequisiteJp.perform(job: j).jp
+    end
+
+    prereq_costs = [job_prereqs, *skill_prereq_costs].each_with_object({}) do |splat, memo|
+      splat.each do |job, jp|
+        memo[job] = jp if memo[job].to_i < jp
+      end
+    end
+
+    {
+      prereq_costs: prereq_costs,
+      skill_costs: skill_costs
+    }
+  end
+
   def encode_character_set
     return 0x82 if job.monster?
 

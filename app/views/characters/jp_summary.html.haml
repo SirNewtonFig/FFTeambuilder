@@ -1,0 +1,19 @@
+- content_for :heading do
+  .flex.items-center
+    %h2.text-xl JP Summary
+
+%table{ class: 'sm:w-[34rem]' }
+  %thead
+    %tr
+      %th.text-right.px-4 Job
+      %th.text-right.px-4 Prereqs
+      %th.text-right.px-4 Skills
+      %th.text-right.px-4 Left
+
+  %tbody
+    - Job.valid(@char).order(:id).each do |job|
+      %tr
+        %td.text-right.px-4= job.name
+        %td.text-right.px-4= prereq = @char.jp_summary[:prereq_costs][job] || 0
+        %td.text-right.px-4= spent = @char.jp_summary[:skill_costs][job] || 0
+        %td.text-right.px-4= [prereq - spent, 0].max

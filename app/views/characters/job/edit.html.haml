@@ -1,0 +1,55 @@
+- content_for :heading do
+  .flex.items-center
+    %h2.text-xl Select Job:
+    .flex-1.ml-4.relative
+      .absolute.inset-y-0.left-0.flex.items-center.pl-1.pointer-events-none
+        %svg.w-5.h-5.text-menu-dark{"aria-hidden" => "true", fill: "none", stroke: "currentColor", viewbox: "0 0 24 24", xmlns: "http://www.w3.org/2000/svg"}
+          %path{d: "M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z", "stroke-linecap" => "round", "stroke-linejoin" => "round", "stroke-width" => "2"}
+
+      %input.pl-8.w-full{ type: 'search', placeholder: 'Filter', class: text_field_classes, data: { action: 'quick-filter#filter', controller: 'quick-filter', quick_filter_filterable_outlet: '.filterable' } }
+
+.divide-y.divide-menu-dark.w-full{ class: 'sm:w-[34rem]' }
+  - @jobs.each do |job|
+    .filterable.-mx-2.px-2.py-3.cursor-pointer{ class: 'hover:bg-menu-dark/25 min-h-[6.75rem]', data: { controller: 'filterable' } }
+      = form_with(url: character_job_path(character_id: params[:character_id]), method: :patch, data: { controller: 'form', form_modal_outlet: '.modal-controller', turbo_frame: '_top' }) do |f|
+        = tag.button(class: 'w-full', data: { action: 'form#submit' }) do
+          %input{ type: 'hidden', name: "character[job]", value: job.id }
+            .flex
+              .w-12
+                - if job.generic?
+                  = image_tag("sprites/generics/#{job.name}-#{@char.sex}.png".downcase, class: 'h-16')
+                - else
+                  = image_tag("sprites/monsters/placeholder.png".downcase, class: 'h-16')
+
+              .ml-2.space-y-1
+                .flex.items-center.space-x-6
+                  .text-lg= job.name
+
+                  - ['hp', 'mp'].each do |prop|
+                    .flex
+                      .text-red-900.capitalize #{prop.dasherize.upcase}:
+                      .ml-2= job.data[@char.sex][prop]
+
+                  .flex
+                    .text-red-900.capitalize C-EV:
+                    .ml-2
+                      #{job.data[@char.sex]['evade']}%
+
+
+                .flex.flex-wrap
+                  - ['attack', 'magic', 'speed', 'move', 'jump'].each do |prop|
+                    .flex.mr-6
+                      .text-red-900.capitalize #{stat_label(prop)}:
+                      .ml-2= job.data[@char.sex][prop]
+
+                - if job.innates.present?
+                  .flex.flex-wrap
+                    .flex.mr-6
+                      .text-red-900.capitalize Innate:
+                      .ml-2= job.innates.map(&:skill).map(&:name).join(', ')
+
+                - if job.data[@char.sex]['notes'].present?
+                  .flex.flex-wrap
+                    .flex.mr-6
+                      .text-red-900.capitalize Notes:
+                      .ml-2= job.data[@char.sex]['notes'].join(', ')
