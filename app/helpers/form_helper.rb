@@ -71,4 +71,8 @@ module FormHelper
       py-2.5
     '.squish
   end
+
+  def wrap_tooltip(&block)
+    tag.div(capture(&block), class: 'z-30 absolute hidden px-3 pointer-events-none shadow-lg bg-menu-texture border-2 border-menu-dark min-w-[29rem]', data: { context_target: 'tooltip' })
+  end
 end

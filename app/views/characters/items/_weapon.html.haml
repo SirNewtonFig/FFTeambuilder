@@ -1,35 +1,32 @@
-= form_with(url: character_items_path(character_id: params[:character_id]), method: :patch, data: { controller: 'form', turbo_frame: 'character_editor', form_modal_outlet: '.modal-controller' }) do |f|
-  = tag.button(class: 'w-full', data: { action: 'form#submit' }) do
-    %input{ type: 'hidden', name: "character[#{scope}]", value: item.id }
-    .-mx-2.px-2.py-3.space-y-1.cursor-pointer{ class: 'hover:bg-menu-dark/25' }
-      .flex.justify-between.items-center
-        .flex.items-center.space-x-6
-          .text-lg= item.name
+.-mx-2.px-2.py-3.space-y-1.cursor-pointer{ class: 'hover:bg-menu-dark/25' }
+  .flex.justify-between.items-center
+    .flex.items-center.space-x-4
+      .text-lg= item.name
 
-          - ['wp', 'w_ev'].each do |prop|
-            - next if item.data[prop].blank?
-            .flex
-              .text-red-900.capitalize #{prop.dasherize.upcase}:
-              .ml-2= item.data[prop]
-
+      - ['wp', 'w_ev'].each do |prop|
+        - next if item.data[prop].blank?
         .flex
-          .ml-2.text-cyan-900
-            [#{item.data['formula']}]
+          .text-red-900.capitalize #{prop.dasherize.upcase}:
+          .ml-2= item.data[prop]
 
-      .flex.flex-wrap
-        - ['attack', 'magic', 'speed', 'move', 'jump'].each do |prop|
-          - next if item.data[prop].blank?
-          .flex.mr-6
-            .text-red-900.capitalize #{stat_label(prop)}:
-            .ml-2= "%+d" % item.data[prop].to_i
-        - ['element', 'strengthens', 'absorbs', 'halves', 'weakness', 'proc', 'add', 'cancels', 'start', 'always'].each do |prop|
-          - next if item.data[prop].blank?
-          .flex.mr-6
-            .text-red-900.capitalize #{prop}:
-            .ml-2= item.data[prop]
+    .flex
+      .ml-2.text-cyan-900
+        [#{item.data['formula']}]
 
-      .flex.space-x-6.flex-wrap
-        - if item.data['flags'].present?
-          %div= item.data['flags']
-        - if item.data['female_only']
-          %div Female Only
+  .flex.flex-wrap
+    - ['attack', 'magic', 'speed', 'move', 'jump'].each do |prop|
+      - next if item.data[prop].blank?
+      .flex.mr-4
+        .text-red-900.capitalize #{stat_label(prop)}:
+        .ml-2= "%+d" % item.data[prop].to_i
+    - ['element', 'strengthens', 'absorbs', 'halves', 'weakness', 'proc', 'add', 'cancels', 'start', 'always'].each do |prop|
+      - next if item.data[prop].blank?
+      .flex.mr-4
+        .text-red-900.capitalize #{prop}:
+        .ml-2= item.data[prop]
+
+  .flex.space-x-4.flex-wrap
+    - if item.data['flags'].present?
+      %div= item.data['flags']
+    - if item.data['female_only']
+      %div Female Only
