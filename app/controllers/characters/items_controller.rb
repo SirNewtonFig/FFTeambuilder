@@ -4,7 +4,7 @@ class Characters::ItemsController < ApplicationController
   def index
     @items = hands? ? Item.send(scope, @char) : Item.send(scope)
 
-    @items = @items.proficient(@char).order(:id)
+    @items = @items.proficient(@char).order(Arel.sql("data ->> 'memgen_id'"))
 
     render layout: 'modal'
   end

@@ -1,29 +1,29 @@
-Name,Classes,Phys Evade,Magic Evade,PA,MA,Sp,Mv,Jm,Cancels:,Absorbs:,Weak:,Halves:,Strengthens:,Start:,Always:
-Battle Boots,ALL,,,1,,,1,,,,,,,,
-Spike Shoes,ALL,,,,,,,2,,,,,,,
-Germinas Boots,ALL,,,,,,1,1,,,,,,,
-Rubber Shoes,ALL,,,,,,,,Don't Move / Lightning,,,,,,
-Feather Boots,ALL,,,,,,1,,,,,Wind,,,Float
-Sprint Shoes,ALL,,,,,1,,,,,,,,,
-Power Wrist,ALL,,,1,,,,,,,,,,Shell,
-Magic Gauntlet,ALL,,,,2,,,,,,,,,,
-Heroic Gloves,ALL,,,1,,,,,Dead / Death Sentence / Crystal / Treasure,,,,,,
-Reflect Ring,ALL,,,,,,,,,,,,,,Reflect
-Defense Ring,ALL,,,,,,,,Sleep / Death Sentence,,,,,,
-Magic Ring,ALL,,,,1,,,,Silence,Wind / Earth / Water,,,,,
-Diamond Armlet,ALL,,,1,1,,,,Slow,,,,,,
-Jade Armlet,ALL,,,,,,,,Petrify / Stop,,,,,,
-108 Gems,ALL,,,,,,,,Undead / Blood Suck / Poison,,,,Lit/Ice/Wind/Earth/Holy,,
-N-Kai Armlet,ALL,,,,,,,,Confusion / Charm,,,Dark,,,
-Defense Armlet,ALL,,,,,,,,Don't Move / Don't Act,,,,,,
-Red Shoes,ALL,,,1,,,1,,,,,,,,Berserk
-Genji Gauntlet,ALL,,,,,,,,Chicken / Frog / Petrify,,,,,,
-Cursed Ring,ALL,,,1,1,1,,,Crystal / Treasure / Invitation,,,,,,Undead
-Angel Ring,ALL,,,-1,-1,,,,,,,,,Reraise,
-Small Mantle,ALL,15,15,,,,,,,,,Fire/Dark/Water,,,
-Leather Mantle,ALL,15,15,,,,,,,,,,Fire/Dark/Water,,
-Wizard Mantle,ALL,18,18,,1,,,,,,,,,,
-Elf Mantle,ALL,24,24,,,,,,,,,,,,
-Dracula Mantle,ALL,15,30,,,,,,,,,,,,
-Feather Mantle,ALL,30,15,,,,,,,,,,,,
-Vanish Mantle,ALL,35,0,,,,,,,,,,,Transparent,
+Name,Item ID,Classes,Phys Evade,Magic Evade,PA,MA,Speed,Move,Jump,Cancels:,Absorbs:,Weak:,Halves:,Strengthens:,Start:,Always:
+Battle Boots,D0,ALL,,,1,,,1,,,,,,,,
+Spike Shoes,D1,ALL,,,,,,,2,,,,,,,
+Germinas Boots,D2,ALL,,,,,,1,1,,,,,,,
+Rubber Shoes,D3,ALL,,,,,,,,Don't Move / Lightning,,,,,,
+Feather Boots,D4,ALL,,,,,,1,,,,,Wind,,,Float
+Sprint Shoes,D5,ALL,,,,,1,1,,,,,,,,
+Power Wrist,D7,ALL,,,1,,,,,,,,,,Shell,
+Magic Gauntlet,D9,ALL,,,,2,,,,,,,,,,
+Heroic Gloves,DA,ALL,,,1,,,,,Dead / Death Sentence / Crystal / Treasure,,,,,,
+Reflect Ring,DB,ALL,,,,,,,,,,,,,,Reflect
+Defense Ring,DC,ALL,,,,,,,,Sleep / Death Sentence,,,,,,
+Magic Ring,DD,ALL,,,,1,,,,Silence,Wind / Earth / Water,,,,,
+Diamond Armlet,E0,ALL,,,1,1,,,,Slow,,,,,,
+Jade Armlet,E1,ALL,,,,,,,,Petrify / Stop,,,,,,
+108 Gems,E2,ALL,,,,,,,,Undead / Blood Suck / Poison,,,,Lit/Ice/Wind/Earth/Holy,,
+N-Kai Armlet,E3,ALL,,,,,,,,Confusion / Charm,,,Dark,,,
+Defense Armlet,E4,ALL,,,,,,,,Don't Move / Don't Act,,,,,,
+Red Shoes,D6,ALL,,,1,,,1,,,,,,,,Berserk
+Genji Gauntlet,D8,ALL,,,,,,,,Chicken / Frog / Petrify,,,,,,
+Cursed Ring,DE,ALL,,,1,1,1,,,Crystal / Treasure / Invitation,,,,,,Undead
+Angel Ring,DF,ALL,,,-1,-1,,,,,,,,,Reraise,
+Small Mantle,E5,ALL,0,15,,,,,,,,,,Fire,,
+Leather Mantle,E6,ALL,5,20,1,,,,,,,,,,,
+Wizard Mantle,E7,ALL,0,20,,1,,,,,,,,,,
+Elf Mantle,E8,ALL,0,15,,,1,,,,,,,,,
+Dracula Mantle,E9,ALL,0,10,,,,,,,Dark,,,,,
+Feather Mantle,EA,ALL,10,15,,,,,,,,,,,,
+Vanish Mantle,EB,ALL,0,25,,,,,,,,,,,Transparent,
