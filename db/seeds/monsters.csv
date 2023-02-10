@@ -1,25 +1,25 @@
-Name,Job ID,JP Cost,HP,MP,Speed,Move,Jump,PA,MA,Ability 1,Ability 2,Ability 3,Monster Skill,Reaction,Support,Move,Water,Family Notes:,Evade,HPmult,MPmult,SPmult,PAmult,MAmult
-Chocobo,5E,2000,287,126,10,6,5,13,30,Choco Cure,Choco Esuna,Choco Guard,,Regenerator,None,None,Move in Water,"Immune: frog, berserk, charm, confuse, don't act",15,150,255,150,130,94
-Black Chocobo,5F,4000,345,126,9,6,5,19,30,Choco Cure,Choco Esuna,Choco Ball,,Regenerator,None,Fly,Move in Water,"Immune: frog, berserk, charm, confuse, don't act",25,150,255,130,170,105
-Red Chocobo,60,6000,360,126,10,6,5,14,38,Choco Cure,Choco Esuna,Choco Meteor,,Regenerator,None,Ignore Height,Move in Water,"Immune: frog, berserk, charm, confuse, don't act",10,160,255,80,140,99
+Name,Job ID,JP Cost,HP,MP,Speed,Move,Jump,PA,MA,Ability 1,Ability 2,Ability 3,Monster Skill,Reaction,Support,Movement,Water,Family Notes:,Evade,HPmult,MPmult,SPmult,PAmult,MAmult
+Chocobo,5E,2000,287,126,10,6,5,13,30,Choco Cure,Choco Esuna,Choco Guard,,Regenerator,None,None,Move in Water,"Immune: Frog, Berserk, Charm, Confuse, Don't Act",15,150,255,150,130,94
+Black Chocobo,5F,4000,345,126,9,6,5,19,30,Choco Cure,Choco Esuna,Choco Ball,,Regenerator,Fly,None,Move in Water,"Immune: Frog, Berserk, Charm, Confuse, Don't Act",25,150,255,130,170,105
+Red Chocobo,60,6000,360,126,10,6,5,14,38,Choco Cure,Choco Esuna,Choco Meteor,,Regenerator,Ignore Height,None,Move in Water,"Immune: Frog, Berserk, Charm, Confuse, Don't Act",10,160,255,80,140,99
 Goblin,61,2000,252,126,8,4,4,15,2,Shatter,Turn Punch,Eye Gouge,,Counter Throw,AttackUP,None,,,18,150,255,130,120,160
 Black Goblin,62,4000,287,126,9,4,4,15,2,Shatter,Turn Punch,Revive,,Counter Throw,AttackUP,None,,,19,160,255,130,130,160
 Gobbledeguck,63,6000,319,126,9,4,4,15,2,Shatter,Turn Punch,Mutilate,,Counter Throw,AttackUP,None,,,20,170,255,130,160,160
-Bomb,64,2000,138,3,9,4,4,12,22,Flame Attack,Self Destruct,Douse,,Critical Quick,"Guts, Undead",Float,Cannot Enter Water,"Defend UP+, MDefend UP+, Absorbs: Fire",10,160,20,130,120,93
-Grenade,65,4000,173,5,9,4,4,13,22,Flame Attack,Self Destruct,Triple Flame,,Critical Quick,"Guts, Undead",Float,Cannot Enter Water,"Defend UP+, MDefend UP+, Absorbs: Fire",11,170,30,130,130,94
-Explosive,66,6000,195,7,9,4,4,14,22,Flame Attack,Self Destruct,Flame Spin,,Critical Quick,"Guts, Undead",Float,Cannot Enter Water,"Defend UP+, MDefend UP+, Absorbs: Fire",12,180,40,130,140,96
+Bomb,64,2000,138,3,9,4,4,12,22,Flame Attack,Self Destruct,Douse,,Critical Quick,Guts Float Undead,None,Cannot Enter Water,"Defend UP+, MDefend UP+, Absorbs: Fire",10,160,20,130,120,93
+Grenade,65,4000,173,5,9,4,4,13,22,Flame Attack,Self Destruct,Triple Flame,,Critical Quick,Guts Float Undead,None,Cannot Enter Water,"Defend UP+, MDefend UP+, Absorbs: Fire",11,170,30,130,130,94
+Explosive,66,6000,195,7,9,4,4,14,22,Flame Attack,Self Destruct,Flame Spin,,Critical Quick,Guts Float Undead,None,Cannot Enter Water,"Defend UP+, MDefend UP+, Absorbs: Fire",12,180,40,130,140,96
 Tonberry,67,2000,344,17,9,3,3,14,12,Chef's Knife,Everyone's Grudge,Voodoo,,Meatbone Slash,Guts,None,Cannot Enter Water,,15,180,100,80,140,150
 Master Tonberry,68,4000,362,17,9,3,3,16,12,Chef's Knife,Everyone's Grudge,Shadow Stitch,,Meatbone Slash,Guts,None,Cannot Enter Water,,13,190,100,130,150,150
 Blood Stalker,69,6000,387,17,9,3,3,17,12,Chef's Knife,Everyone's Grudge,Blood Ritual,,Meatbone Slash,Guts,None,Cannot Enter Water,,20,170,100,130,160,150
 Pisco Demon,6A,2000,361,126,9,4,3,13,14,Aqualung,Time Blast,Energy Blast,,Counter Flood,Absorbs Water,None,Move Under Water,"MagAtkUP, Overflow",8,180,255,130,110,150
 Squidlarkin,6B,4000,384,126,9,4,3,14,14,Aqualung,Time Blast,Psionic Wave,,Counter Flood,Absorbs Water,None,Move Under Water,"MagAtkUP, Overflow",9,180,255,130,120,150
 Mindflare,6C,6000,427,126,9,4,3,15,14,Aqualung,Time Blast,Mind Control,,Counter Flood,Absorbs Water,None,Move Under Water,"MagAtkUP, Overflow",10,200,255,130,130,150
-Skeleton,6D,2000,301,126,9,4,4,15,15,Knife Hand,Death,Dark Demi,,Hamedo,DefenseUP,Undead,,"Always: Protect, Absorbs Dark",11,140,255,130,130,135
-Bone Snatch,6E,4000,324,126,9,4,4,15,20,Knife Hand,Death,Dark Demi 2,,Hamedo,DefenseUP,Undead,,"Always: Protect, Absorbs Dark",12,160,255,130,140,135
-Living Bone,6F,6000,279,126,9,4,4,16,25,Knife Hand,Death,Koutetsu,,Hamedo,DefenseUP,Undead,,"Always: Protect, Absorbs Dark",13,150,255,130,150,135
-Ghoul,70,2000,249,22,10,6,4,15,11,Throw Spirit,Drain Touch,Difference,,Blade Grasp,Absorbs Dark / Float,Teleport / Undead,Cannot Enter Water,,0,130,124,150,127,99
-Gust,71,4000,229,17,10,6,4,16,11,Throw Spirit,Drain Touch,Wither,,Blade Grasp,Absorbs Dark / Float,Teleport / Undead,Cannot Enter Water,,0,120,96,150,124,99
-Revnant,72,6000,249,11,10,6,4,17,11,Throw Spirit,Drain Touch,Terror,,Blade Grasp,Absorbs Dark / Float,Teleport / Undead,Cannot Enter Water,,0,130,64,150,123,99
+Skeleton,6D,2000,301,126,9,4,4,15,15,Knife Hand,Death,Dark Demi,,Hamedo,DefenseUP,Undead,,"Always: Protect, Weak: Holy, Absorbs: Dark",11,140,255,130,130,135
+Bone Snatch,6E,4000,324,126,9,4,4,15,20,Knife Hand,Death,Dark Demi 2,,Hamedo,DefenseUP,Undead,,"Always: Protect, Weak: Holy, Absorbs: Dark",12,160,255,130,140,135
+Living Bone,6F,6000,279,126,9,4,4,16,25,Knife Hand,Death,Koutetsu,,Hamedo,DefenseUP,Undead,,"Always: Protect, Weak: Holy, Absorbs: Dark",13,150,255,130,150,135
+Ghoul,70,2000,249,22,10,6,4,15,11,Throw Spirit,Drain Touch,Difference,,Blade Grasp,Absorbs Dark / Float,Teleport / Undead,Cannot Enter Water,Weak: Holy,0,130,124,150,127,99
+Gust,71,4000,229,17,10,6,4,16,11,Throw Spirit,Drain Touch,Wither,,Blade Grasp,Absorbs Dark / Float,Teleport / Undead,Cannot Enter Water,Weak: Holy,0,120,96,150,124,99
+Revnant,72,6000,249,11,10,6,4,17,11,Throw Spirit,Drain Touch,Terror,,Blade Grasp,Absorbs Dark / Float,Teleport / Undead,Cannot Enter Water,Weak: Holy,0,130,64,150,123,99
 Flotiball,73,2000,299,126,9,5,5,12,25,Eye Beam,Mana Burn,Gaze of Terror,,Counter Magic,Halves All Elements,Fly,Cannot Enter Water,,12,140,255,130,120,220
 Ahriman,74,4000,320,126,9,5,5,14,25,Eye Beam,Mana Burn,Dampen,,Counter Magic,Halves All Elements,Fly,Cannot Enter Water,,13,150,255,130,140,220
 Plague,75,6000,342,126,9,5,5,16,25,Eye Beam,Mana Burn,Gaze,,Counter Magic,Halves All Elements,Fly,Cannot Enter Water,,11,160,255,130,150,220
@@ -29,21 +29,21 @@ Cocatoris,78,6000,363,1,12,6,6,17,28,Tailwind,Wind Strike,Gaze,,CT Save,Absorbs 
 Uribo,79,2000,304,126,11,4,3,19,13,Straight Dash,Nose Breath,Please Eat,,HP Restore,DefenseUP,None,Cannot Enter Water,,42,150,255,160,120,160
 Porky,7A,4000,333,126,11,4,3,19,13,Straight Dash,Nose Breath,Oink,,HP Restore,DefenseUP,None,Cannot Enter Water,,36,160,255,160,130,160
 Wildbow,7B,6000,368,126,11,4,3,19,13,Straight Dash,Nose Breath,Pooh-,,HP Restore,DefenseUP,None,Cannot Enter Water,,39,170,255,160,180,160
-Woodman,7C,2000,406,28,8,3,3,13,28,Leaf Dance,Magic Spirit,Protect Spirit,,Damage Split,Mdef UP,None,Cannot Enter Water,Absorbs Earth,0,190,160,115,130,100
-Trent,7D,4000,427,32,8,3,3,13,28,Leaf Dance,Magic Spirit,Blessing of Nature,,Damage Split,Mdef UP,None,Cannot Enter Water,Absorbs Earth,0,200,180,115,130,95
-Taiju,7E,6000,448,26,8,3,3,14,28,Leaf Dance,Magic Spirit,Spirit of Life,,Damage Split,Mdef UP,None,Cannot Enter Water,Absorbs Earth,0,210,150,115,140,99
-Bull Demon,7F,2000,486,126,9,4,3,15,28,Shake Off,Berserk,Wave Around,,Counter,Absorbs Earth,None,Cannot Enter Water,,11,200,255,130,140,100
-Minitaurus,80,4000,535,126,9,4,3,15,30,Shake Off,Berserk,Blow Fire,,Counter,Absorbs Fire and Earth,None ,Cannot Enter Water,,15,220,255,130,160,100
-Sacred,81,6000,559,126,9,4,3,18,35,Shake Off,Berserk,Mimic Titan,,Counter,Absorbs Earth,None,Cannot Enter Water,,12,230,255,130,180,100
-Morbol,82,2000,470,126,8,4,3,15,17,Tentacle,Bad Breath,Lick,,Regenerator,Sicken,None,Move on Water,,0,220,255,115,130,99
-Ochu,83,4000,448,126,8,4,3,16,17,Tentacle,Bad Breath,Goo,,Regenerator,Sicken,None,Move on Water,,0,210,255,115,135,110
-Great Morbol,84,6000,491,126,8,4,3,17,17,Tentacle,Bad Breath,Decay,,Regenerator,Sicken,None,Move on Water,,0,230,255,115,140,95
-Behemoth,85,2000,384,17,8,4,3,15,17,Stab Up,Lifebreak,Gigaflare,,MP Switch,None,None,Cannot Enter Water,,13,180,100,115,150,160
-King Behemoth,86,4000,406,17,8,4,3,15,13,Stab Up,Lifebreak,Ulmaguest,,MP Switch,None,None,Cannot Enter Water,,13,190,100,115,180,160
-Dark Behemoth,87,6000,427,17,8,4,3,15,13,Stab Up,Lifebreak,Sudden Cry,,MP Switch,None,None,Cannot Enter Water,,18,200,100,115,200,160
-Red Dragon,8A,2000,462,20,8,5,3,16,13,Dash,Tail Swing,Fire Breath,,Dragon Spirit,None,Move-HP UP,Cannot Enter Water,,20,190,75,115,150,130
-Blue Dragon,89,4000,486,19,8,5,3,16,13,Dash,Tail Swing,Ice Breath,,Dragon Spirit,None,Move-HP UP,Cannot Enter Water,,20,200,110,115,160,130
-Dragon,88,6000,535,13,8,5,3,17,13,Dash,Tail Swing,Thunder Breath,,Dragon Spirit,None,Move-HP UP,Cannot Enter Water,,20,220,115,115,170,130
-Hyudra,8B,2000,342,8,8,4,4,17,18,Triple Breath,Dark Whisper,Triple Venom,,Counter,Overflow,Fly,Cannot Enter Water,,0,160,50,115,170,110
-Hydra,8C,4000,320,28,8,4,4,17,18,Triple Breath,Dark Whisper,Triple Flame,,Counter,Overflow,Fly,Cannot Enter Water,,0,150,160,115,165,110
-Tiamat,8D,6000,320,16,8,4,4,17,19,Triple Breath,Dark Whisper,Triple Thunder,,Counter,Overflow,Fly,Cannot Enter Water,,0,150,90,115,160,110
+Woodman,7C,2000,406,28,8,3,3,13,28,Leaf Dance,Magic Spirit,Protect Spirit,,Damage Split,Mdef UP,None,Cannot Enter Water,"Absorbs Earth, Immune: Float",0,190,160,115,130,100
+Trent,7D,4000,427,32,8,3,3,13,28,Leaf Dance,Magic Spirit,Blessing of Nature,,Damage Split,Mdef UP,None,Cannot Enter Water,"Absorbs Earth, Immune: Float",0,200,180,115,130,95
+Taiju,7E,6000,448,26,8,3,3,14,28,Leaf Dance,Magic Spirit,Spirit of Life,,Damage Split,Mdef UP,None,Cannot Enter Water,"Absorbs Earth, Immune: Float",0,210,150,115,140,99
+Bull Demon,7F,2000,486,126,9,4,3,15,28,Shake Off,Berserk,Wave Around,,Counter,Absorbs Earth,None,Cannot Enter Water,Immune: Float,11,200,255,130,140,100
+Minitaurus,80,4000,535,126,9,4,3,15,30,Shake Off,Berserk,Blow Fire,,Counter,Absorbs Fire and Earth,None ,Cannot Enter Water,Immune: Float,15,220,255,130,160,100
+Sacred,81,6000,559,126,9,4,3,18,35,Shake Off,Berserk,Mimic Titan,,Counter,Absorbs Earth,None,Cannot Enter Water,Immune: Float,12,230,255,130,180,100
+Morbol,82,2000,470,126,8,4,3,15,17,Tentacle,Bad Breath,Lick,,Regenerator,Sicken,None,Move on Water,"Immune: Poison, Float",0,220,255,115,130,99
+Ochu,83,4000,448,126,8,4,3,16,17,Tentacle,Bad Breath,Goo,,Regenerator,Sicken,None,Move on Water,"Immune: Poison, Float",0,210,255,115,135,110
+Great Morbol,84,6000,491,126,8,4,3,17,17,Tentacle,Bad Breath,Decay,,Regenerator,Sicken,None,Move on Water,"Immune: Poison, Float",0,230,255,115,140,95
+Behemoth,85,2000,384,17,8,4,3,15,17,Stab Up,Lifebreak,Gigaflare,,MP Switch,None,None,Cannot Enter Water,Immune: Float,13,180,100,115,150,160
+King Behemoth,86,4000,406,17,8,4,3,15,13,Stab Up,Lifebreak,Ulmaguest,,MP Switch,None,None,Cannot Enter Water,Immune: Float,13,190,100,115,180,160
+Dark Behemoth,87,6000,427,17,8,4,3,15,13,Stab Up,Lifebreak,Sudden Cry,,MP Switch,None,None,Cannot Enter Water,Immune: Float,18,200,100,115,200,160
+Red Dragon,8A,2000,462,20,8,5,3,16,13,Dash,Tail Swing,Fire Breath,,Dragon Spirit,None,Move-HP UP,Cannot Enter Water,"Immune: Float, Absorbs: Fire",20,190,75,115,150,130
+Blue Dragon,89,4000,486,19,8,5,3,16,13,Dash,Tail Swing,Ice Breath,,Dragon Spirit,None,Move-HP UP,Cannot Enter Water,"Immune: Float, Absorbs: Ice",20,200,110,115,160,130
+Dragon,88,6000,535,13,8,5,3,17,13,Dash,Tail Swing,Thunder Breath,,Dragon Spirit,None,Move-HP UP,Cannot Enter Water,"Immune: Float, Absorbs: Thunder",20,220,115,115,170,130
+Hyudra,8B,2000,342,8,8,4,4,17,18,Triple Breath,Dark Whisper,Triple Venom,,Counter,Overflow,Fly,Cannot Enter Water,"Immune: Float, Absorbs: Dark",0,160,50,115,170,110
+Hydra,8C,4000,320,28,8,4,4,17,18,Triple Breath,Dark Whisper,Triple Flame,,Counter,Overflow,Fly,Cannot Enter Water,"Immune: Float, Absorbs: Fire, Dark",0,150,160,115,165,110
+Tiamat,8D,6000,320,16,8,4,4,17,19,Triple Breath,Dark Whisper,Triple Thunder,,Counter,Overflow,Fly,Cannot Enter Water,"Immune: Float, Absorbs: Lightning, Dark",0,150,90,115,160,110

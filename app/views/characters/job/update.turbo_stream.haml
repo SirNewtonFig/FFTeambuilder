@@ -17,7 +17,10 @@
   = render 'characters/attack_evasion', char: @char
 
 = turbo_stream.replace('equipment') do
-  = render 'characters/equipment', char: @char
+  - if @char.generic?  
+    = render 'characters/equipment', char: @char
+  - else
+    = render 'characters/equipment_monster', char: @char
 
 = turbo_stream.replace('vitals') do
   = render 'characters/vitals', char: @char
@@ -29,4 +32,7 @@
   = render 'characters/portrait', char: @char
 
 = turbo_stream.replace('skills') do
-  = render 'characters/skills', char: @char, team: @team
+  - if @char.generic?
+    = render 'characters/skills', char: @char, team: @team
+  - else
+    = render 'characters/skills_monster', char: @char

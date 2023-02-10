@@ -322,7 +322,7 @@ class Character
   end
 
   memoize def jp_total
-    return 4000 unless generic?
+    return job.data[sex]['jp_cost'].to_i unless generic?
 
     jp_spread.values.sum
   end

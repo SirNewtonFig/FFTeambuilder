@@ -23,4 +23,7 @@
     .flex.items-center.justify-between
       = render 'characters/meta/zodiac', char: @char, i: i
 
-      = link_to("#{char.jp_total} JP", jp_summary_character_path(i), data: { turbo_frame: 'modal' }, class: 'border-0 border-b-2 border-transparent hover:border-menu-dark -mb-1')
+      - if char.generic?
+        = link_to("#{char.jp_total} JP", jp_summary_character_path(i), data: { turbo_frame: 'modal' }, class: 'border-0 border-b-2 border-transparent hover:border-menu-dark -mb-1')
+      - else
+        #{char.jp_total} JP

@@ -148,19 +148,20 @@ monsters.each do |row|
         ],
         monster_skill: row['Monster Skill'],
         notes: [
-          (row['Reaction'] unless row['Reaction'] == 'None' || row['Reaction'].blank?),
-          (row['Support'] unless row['Support'] == 'None' || row['Support'].blank?),
-          (row['Move'] unless row['Move'] == 'None' || row['Move'].blank?),
-          (row['Water'] unless row['Water'] == 'None' || row['Water'].blank?),
-          (row['Family Notes'] unless row['Family Notes'] == 'None' || row['Family Notes'].blank?)
-        ].compact,
+          row['Reaction'],
+          row['Support'],
+          row['Movement'],
+          row['Water'],
+          row['Family Notes:']
+        ].reject{|x| x.blank? || x == 'None' },
         evade: row['Evade'],
         hp_mult: row['HPmult'],
         mp_mult: row['MPmult'],
         sp_mult: row['SPmult'],
         pa_mult: row['PAmult'],
         ma_mult: row['MAmult'],
-        memgen_id: row['Job ID']
+        memgen_id: row['Job ID'],
+        jp_cost: row['JP Cost']
       }
     }
   )
