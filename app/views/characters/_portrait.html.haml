@@ -2,4 +2,4 @@
   - if char.generic?
     = image_tag("portraits/generics/#{char.job.name}-#{char.sex}.png".downcase, class: 'h-28')
   - else
-    = image_tag("portraits/monsters/placeholder.png".downcase, class: 'h-28')
+    = image_tag("portraits/monsters/#{char.job.name}.png".downcase, class: 'h-28')
