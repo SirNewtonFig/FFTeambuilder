@@ -6,12 +6,85 @@ class Match::MemgenContext < ActiveInteractor::Context::Base
 end
 
 class Match::Memgen < ActiveInteractor::Base
+  TEXT_ENCODINGS = {
+    "0" => '00',
+    "1" => '01',
+    "2" => '02',
+    "3" => '03',
+    "4" => '04',
+    "5" => '05',
+    "6" => '06',
+    "7" => '07',
+    "8" => '08',
+    "9" => '09',
+    "A" => '0A',
+    "B" => '0B',
+    "C" => '0C',
+    "D" => '0D',
+    "E" => '0E',
+    "F" => '0F',
+    "G" => '10',
+    "H" => '11',
+    "I" => '12',
+    "J" => '13',
+    "K" => '14',
+    "L" => '15',
+    "M" => '16',
+    "N" => '17',
+    "O" => '18',
+    "P" => '19',
+    "Q" => '1A',
+    "R" => '1B',
+    "S" => '1C',
+    "T" => '1D',
+    "U" => '1E',
+    "V" => '1F',
+    "W" => '20',
+    "X" => '21',
+    "Y" => '22',
+    "Z" => '23',
+    "a" => '24',
+    "b" => '25',
+    "c" => '26',
+    "d" => '27',
+    "e" => '28',
+    "f" => '29',
+    "g" => '2A',
+    "h" => '2B',
+    "i" => '2C',
+    "j" => '2D',
+    "k" => '2E',
+    "l" => '2F',
+    "m" => '30',
+    "n" => '31',
+    "o" => '32',
+    "p" => '33',
+    "q" => '34',
+    "r" => '35',
+    "s" => '36',
+    "t" => '37',
+    "u" => '38',
+    "v" => '39',
+    "w" => '3A',
+    "x" => '3B',
+    "y" => '3C',
+    "z" => '3D',
+    "!" => '3E',
+    "?" => '40',
+    "+" => '42',
+    "'" => '93',
+    "-" => 'D11D',
+    "." => 'D9B6',
+    " " => 'fa'
+  }
+
   delegate :team_a, :team_b, :title, :block, to: :context
 
   def perform
     serialize_id!
-    serialize_title!
     serialize_static_crap!
+    serialize_title!
+    serialize_more_static_crap!
     8.times { serialize_blank_unit! }
     serialize_teams!
     4.times { serialize_blank_unit! }
@@ -20,18 +93,37 @@ class Match::Memgen < ActiveInteractor::Base
 
   private
 
+    def pad!(byte, n = 1)
+      n.times do
+        block << byte
+      end
+    end
+
     def serialize_id!
       block << '53431101'
     end
 
-    def serialize_title!
+    def serialize_static_crap!
       block << '826582658273814082658268826B8264824F82508140824F824F8146825082518146825082560000FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF'
+      block << '00000000000000000000000000000000000000000000000000000000'
+      block << '9546323A6C51CF451B47DA32792A5B67FC4A9A423732D52592252E1DEA18C7186C5AA665BACCCBDD664C668AB6CBDDDC656B64DA65BBEC1D55BA65D6CDB6EC1E4B9C5CBBAAACECCD51AD6BDD91CBCDDCB0DE6AF987CBDADC10FB99E888BA1AD100B1888888A90DE10090888888E901D100B0888898DA01C100008A8A98C911BC0000B188C9A9BDB6000010EEBCA9EFB60010EEDBAB99CEBE102322BFAD996DEC00'
     end
 
-    def serialize_static_crap!
-      block << '00000000000000000000000000000000000000000000000000000000'
-      block << '9546323A6C51CF451B47DA32792A5B67FC4A9A423732D52592252E1DEA18C7186C5AA665BACCCBDD664C668AB6CBDDDC656B64DA65BBEC1D55BA65D6CDB6EC1E4B9C5CBBAAACECCD51AD6BDD91CBCDDCB0DE6AF987CBDADC10FB99E888BA1AD100B1888888A90DE10090888888E901D100B0888898DA01C100008A8A98C911BC0000B188C9A9BDB6000010EEBCA9EFB60010EEDBAB99CEBE102322BFAD996DEC000B323C36FA1F1CFA102C352F36FAFAFAFA00'
-      block << '645A031604EE6AD40498E0D4F500000000'
+    def serialize_title!
+      chars = title
+        .chars
+        .map{|c| TEXT_ENCODINGS[c] }
+        .join
+
+      block << chars.first(32)
+
+      pad!('FA', 16 - chars.length/2)
+
+      block << 'FE'
+    end
+
+    def serialize_more_static_crap!
+      block << '00645A031604EE6AD40498E0D4F500000000'
       block << '000000000000000000000000000000000000000000000000000000000000000000008062000064CB3611000000FEB24DE408201B00'
       block << '000000000000000000000000000000000000'
       block << '000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000'
