@@ -1,0 +1,81 @@
+Ability,Range,AoE,Target,Vertical Tolerance,CT,Element,Evade Type,Formula,Counter?,Counter Magic?,Counter Flood?
+Choco Cure,0,1,Any,2,,,,Heal_(MA*4),,,
+Choco Esuna,0,1,Any,2,,,,Remove Debuffs Hit_(MA+65)%,,,
+Choco Guard,0,2,Any,3,,,,"Add Shell, Protect, Sturdy Hit_(MA+65)%",,,
+Choco Ball,4,,Any,,,,Phys,Dmg_((PA)/2*PA),Yes,,Yes
+Choco Meteor,5,,Any,,,,,Dmg_(MA*4),,Yes,Yes
+Shatter,1,,Any,2,,,Phys,"Dmg_(PA*4) 15% break each slot. If empty, no break.",Yes,,Yes
+Turn Punch,0,2,Any,1,,,Phys,Dmg_((PA/2)*PA),Yes,,Yes
+Eye Gouge,1,,Any,2,,,Phys,Add Discord+Confuse Hit_(MA+75)%,Yes,,Yes
+Revive,1,,Dead,,,,,Revive 20% Hit_(PA+70)%,,,
+Mutilate,1,,Any,2,,,Phys,Dmg_(PA*(PA*Brave/100)) 20% add:Dead,Yes,,Yes
+Flame Attack,3,,Any,,,Fire,Mag,Dmg_(MA*8),,Yes,Yes
+Self Destruct,,1,Any,3,,,,Dmg_Missing HP add: Oil,,,
+Douse,4,2,Any,2,,,Mag,Add: Oil Hit_(MA+75)%,,Yes,Yes
+Triple Flame,4,1,Any,1,,Fire,,Dmg_((MA/2)*MA) 3 Random Hits,,,
+Flame Spin,,2,ALL,3,,Fire,Mag,Dmg_(MA*7) Hits self (absorbs),,Yes,Yes
+Chef's Knife,1,,Any,2,,,Phys,Dmg_(PA*(PA*Brave/100)) 20% add:Dead,Yes,,Yes
+Everyone's Grudge,4,,Any,,,,Mag,Dmg_Missing HP,,Yes,Yes
+Voodoo,4,,Any,,,,Mag,Add Slow+Poison Hit_(MA+70)%,,Yes,Yes
+Shadow Stitch,4,,Any,,,,,Add Stop Hit_(100)%,,,
+Blood Ritual,3,,Any,,,Dark,Mag,Dmg_(MA*20) if hit: DmgSelf_(MA*10),,Yes,Yes
+Aqualung,4,,Any,3,,Water,Mag,Dmg_((PA+5)/2*MA),,Yes,Yes
+Time Blast,3,,Any,,,,,Add: Haste Hit_(100%),,,
+Energy Blast,3,2,Any,3,,,,CT_00 Hit_F(MA+140)%,,,
+Psionic Wave,0,2,Any,1,,,Mag,Dmg_((PA+4)/2*MA) 20% Dispel,,Yes,Yes
+Mind Control,3,1,Any,1,,,Mag,Add: Charm Hit_(MA+60)%,,Yes,Yes
+Knife Hand,1,,Any,,,,Phys,Dmg_(PA*(PA*Brave/100)),Yes,,Yes
+Death,4,,Any,,5,Dark,Mag,Dmg(100% max) Hit_F(MA+100)%,,Yes,Yes
+Dark Demi,4,1,Any,1,2,Dark,Mag,Dmg(25% max) Hit_F(MA+200)%,,Yes,Yes
+Dark Demi 2,4,1,Any,1,4,Dark,Mag,Dmg(50% max) Hit_F(MA+180)%,,Yes,Yes
+Koutetsu,,2,Any,2,,Dark,,Dmg_(MA*6),,Yes,Yes
+Throw Spirit,3,,Any,,,,,Dmg_(PA*(PA*Brave/100)) 20% add:Undead,,Yes,Yes
+Drain Touch,1,,Any,2,,,Mag,Leech MP (50)% Hit_F(MA+150)%,Yes,,Yes
+Difference,3,,Any,,,,Mag,Dmg_(Target Missing MP*2),,Yes,Yes
+Wither,3,,Any,,,,Mag,Dmg_(Target Missing HP),,Yes,Yes
+Terror,3,,Any,,,,Mag,Dmg_(Target Missing Brave * 5),,Yes,Yes
+Eye Beam,4,,Any,,,,Mag,Dmg_(MA*6),,Yes,Yes
+Mana Burn,3,,Any,,,,Mag,Dmg_(tarCurMP*2),,Yes,Yes
+Gaze of Terror,3,,Any,,,,Mag,Brave -25 Hit_(MA+45)%,,Yes,Yes
+Dampen,ALL,,Enemies,,,,,MA -1 Hit_(60)%,,,
+Gaze,4,,Any,,,,Mag,Add: Petrify Hit_(MA+37)%,,Yes,Yes
+Tailwind,0,1,Any,3,,,,Add: Haste Hit_(100%),,,
+Wind Strike,1,,Any,3,,Wind,Mag,Dmg_(MA*7),,Yes,Yes
+Zephyr,3,,Any,,,,Phys,"Dmg_(SP*(PA*BR/100)) (SP is XA, +50% if hasted)",Yes,,Yes
+Peck,1,,Any,1,,,Phys,Dmg_((PA*Brave/100)*PA),Yes,,Yes
+Gaze,3,,Any,,,,Mag,Add: Petrify Hit_(MA+37)%,,Yes,Yes
+Straight Dash,1,,Any,2,,,Phys,Dmg_(PA*(PA*Brave/100)),Yes,,Yes
+Nose Breath,1,,Any,2,,,,Charm Hit_(MA+50)%,Yes,,Yes
+Please Eat,1,,Any,1,,,,Add: Reraise+Haste+Shell+Protect+Regen Hit_(MA+40)%,,,
+Oink,1,,Any,1,,,,Revive 100% Hit_(PA+70)%,,,
+Pooh-,1,,Any,1,,,,Add: Confuse or Sleep Hit_(100)%,Yes,,Yes
+Leaf Dance,,2,Enemies,3,,,,Dmg_(MA*5),,Yes,Yes
+Magic Spirit,,2,Any,3,,,,Heal HP PA*10 Heal MP PA*5,,,
+Protect Spirit,,2,Any,3,,,,Add: Protect and Shell Hit_(MA+70)%,,,
+Blessing of Nature,,2,Any,3,,,,Add: Protect and Shell and Reraise Hit_(MA+70)%,,,
+Spirit of Life,,2,Any,3,,,,Revive 20% Hit_(PA+55)%,,,
+Shake Off,1,,Any,2,,,Phys,Dmg_(PA*(PA*Brave/100)) Add: Petrify,Yes,,Yes
+Berserk,3,,Any,,,,Mag,Hit_F(MA+150)%,,Yes,Yes
+Wave Around,0,1,Any,1,,,,Dmg_((PA+1)/2*PA),Yes,,Yes
+Blow Fire,2,,Any,2,,Fire,Mag,Dmg_(MA*6),,Yes,Yes
+Mimic Titan,0,2,Any,2,,Earth,Mag,Dmg_(MA*5),,Yes,Yes
+Tentacle,1,,Any,2,,,Phys,Dmg_(PA*(PA*Brave/100)),Yes,,Yes
+Bad Breath,0,2,Any,1,,,,Add: Random debuff Hit_(100)%,,,Yes
+Lick,1,,Any,1,,,,Dispel all buffs and debuffs Hit_(100)%,,,
+Goo,1,,Any,1,,,,Add: Don't Act Hit_(MA+50)%,,,
+Decay,1,,Any,,,,,Add: Dead or Poison or Death Sentence Hit_(100)%,,,Yes
+Stab Up,1,,Any,2,,,Phys,Dmg_(PA*(PA*Brave/100)) self: PA+1,Yes,,Yes
+Lifebreak,4,,Any,,,,Mag,Dmg_(Lost HP) Hit_(MA+55)%,,Yes,Yes
+Gigaflare,4,2,Any,2,,,Mag,Dmg_(MA*9),,Yes,Yes
+Ulmaguest,4,2,Any,1,,,Mag,Dmg_(Lost HP) Hit_(MA+40)%,,Yes,Yes
+Sudden Cry,1,,Any,,,,Phys,Add: Crystal Hit_(Speed+35)%,Yes,Yes,Yes
+Dash,1,,Any,2,,,Phys,Dmg_(PA*(PA*Brave/100)),Yes,,Yes
+Tail Swing,0,1,Any,2,,,,Dmg_((PA-2)*(PA*Brave/100)),Yes,,Yes
+Fire Breath,2,,Any,2,,Fire,Mag,Dmg_(MA*15),,Yes,Yes
+Ice Breath,2,,Any,2,,Ice,Mag,Dmg_(MA*14),,Yes,Yes
+Thunder Breath,2,,Any,2,,Lightning,Mag,Dmg_(MA*13),,Yes,Yes
+Triple Breath,2,Tri-Direction,Any,2,,,Phys,Dmg_(PA*(PA*Brave/100)),Yes,,Yes
+Dark Whisper,4,1,Any,1,,Dark,,Dmg_((MA-2)/2*MA) 5 Random Hits 20% Add: Dead or Sleep,,Yes,Yes
+Triple Venom,4,1,Any,1,,,,Add: Slow+Poison+Discord Hit_(Speed+75)%,,Yes,Yes
+Triple Flame,4,1,Any,1,,Fire,,Dmg_((MA+10)/2*MA) 3 Random Hits,,Yes,Yes
+Triple Thunder,4,1,Any,1,,Lightning,,Dmg_((MA+10)/2*MA) 3 Random Hits,,Yes,Yes

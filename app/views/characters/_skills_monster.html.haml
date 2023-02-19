@@ -3,19 +3,21 @@
 
   %table.table-auto.border-spacing-0.border-collapse.w-full
     - char.job.data.dig('x', 'abilities').each do |ability|
-      %tr
+      %tr{ data: { controller: 'context', action: 'keydown.esc@window->context#close contextmenu->context#open:prevent' } }
         %td.w-8.h-8
           .flex.items-center.justify-center
             = image_tag('icons/skill-monster.png', class: 'h-6')
         %td.pl-1
           .text-lg.py-0.px-0= ability
-    - if (monster_skill = char.job.data.dig('x', 'monster_skill')).present?
-      %tr
-        %td.w-8.h-8
-
-      %tr
-        %td.w-8.h-8
-          .flex.items-center.justify-center
-            = image_tag('icons/skill-monster.png', class: 'h-6')
-        %td.pl-1
-          .text-lg.py-0.px-0.text-menu-dark= monster_skill
+          = wrap_tooltip do
+            = render "characters/skills/action", skill: MonsterSkill.find_by(name: ability)
+    
+    -# - if (monster_skill = char.job.data.dig('x', 'monster_skill')).present?
+    -#   %tr
+    -#     %td.w-8.h-8
+    -#   %tr
+    -#     %td.w-8.h-8
+    -#       .flex.items-center.justify-center
+    -#         = image_tag('icons/skill-monster.png', class: 'h-6')
+    -#     %td.pl-1
+    -#       .text-lg.py-0.px-0.text-menu-dark= monster_skill

@@ -2,7 +2,7 @@ class Skill < ApplicationRecord
   enum :skill_type, %i{ action reaction support movement }
   # serialize :data, HashWithIndifferentAccess
 
-  belongs_to :job
+  belongs_to :job, optional: true
 
   scope :valid, ->(char) {
     s = joins(:job).merge(Job.valid(char))

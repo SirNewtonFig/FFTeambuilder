@@ -130,6 +130,30 @@ Dir.glob('db/seeds/items/*.csv').each do |f|
   end
 end
 
+mskills = CSV.parse(File.read(Rails.root.join('db/seeds/monster_skills.csv')), headers: true)
+mskills.each do |row|
+  skill = MonsterSkill.find_or_initialize_by(name: row['Ability'])
+
+  skill.update(
+    data: {
+      range: row['Range'],
+      area: row['AoE'],
+      target: row['Target'],
+      vert: row['Vertical Tolerance'],
+      ct: row['CT'],
+      element: row['Element'],
+      evade: row['Evade Type'],
+      reflectable: row['Reflectable?'],
+      formula: row['Formula'],
+      counter: row['Counter?'],
+      counter_magic: row['Counter Magic?'],
+      counter_flood: row['Counter Flood?']
+    }
+  )
+
+  skill.save
+end
+
 monsters = CSV.parse(File.read(Rails.root.join('db/seeds/monsters.csv')), headers: true)
 monsters.each do |row|
   monster = Job.find_or_initialize_by(name: row['Name'])

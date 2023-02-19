@@ -2,11 +2,13 @@
   .flex.justify-between.items-center
     .flex.items-center.space-x-2
       .text-lg= skill.name
-      %span.text-gray-700 (#{skill.job.skillset})
+      - if skill.respond_to?(:job)
+        %span.text-gray-700 (#{skill.job.skillset})
 
-    .flex
-      .ml-2.text-cyan-900
-        #{skill.jp_cost} JP
+    - if skill.respond_to?(:jp_cost)
+      .flex
+        .ml-2.text-cyan-900
+          #{skill.jp_cost} JP
 
   .flex.flex-wrap
     .flex.mr-6
