@@ -1,0 +1,22 @@
+.-mx-2.px-2.py-3.space-y-1.cursor-pointer{ class: 'hover:bg-menu-dark/25' }
+  .flex.justify-between.items-center
+    .flex.items-center.space-x-2
+      .text-lg= skill.name
+      %span.text-gray-700 (#{skill.job.name})
+
+    .flex
+      .ml-2.text-cyan-900
+        #{skill.jp_cost} JP
+
+  - if skill.data['move'].present? || skill.data['jump'].present?
+    .flex.flex-wrap
+      - ['move', 'jump'].each do |prop|
+        - next if skill.data[prop].blank?
+        .flex.mr-6
+          .text-red-900.capitalize #{stat_label(prop)}:
+          .ml-2= "%+d" % skill.data[prop].to_i
+    
+  %p.text-left
+    %span.text-red-900.capitalize Description:
+    %br
+    %span= skill.data['formula']

@@ -20,26 +20,34 @@
             - if char.can_equip_skills?
               - Job.secondary(char).valid(char).order(:id).each do |job|
                 %option{ selected: ('selected' if job == char.secondary), value: job.id }= job.skillset
-      %tr
+      %tr{ data: { controller: 'context', action: 'keydown.esc@window->context#close' } }
         %td.w-8.h-8
           .flex.items-center.justify-center
             = image_tag('icons/skill-reaction.png', class: 'h-6')
         %td.pl-1
           - if char.can_equip_skills?
-            = link_to(char.reaction&.name || 'Reaction', edit_character_skills_path(character_id: i, scope: 'reaction'), data: { turbo_frame: 'modal' }, class: "block w-full text-lg border-0 border-b-2 border-transparent hover:border-menu-dark #{'text-menu-dark' if char.reaction.blank?}")
+            = link_to(char.reaction&.name || 'Reaction', edit_character_skills_path(character_id: i, scope: 'reaction'), data: { action: 'contextmenu->context#open:prevent', turbo_frame: 'modal' }, class: "block w-full text-lg border-0 border-b-2 border-transparent hover:border-menu-dark #{'text-menu-dark' if char.reaction.blank?}")
+            - if char.reaction.present?
+              = wrap_tooltip do
+                = render "characters/skills/rsm", skill: char.reaction
 
-      %tr
+      %tr{ data: { controller: 'context', action: 'keydown.esc@window->context#close' } }
         %td.w-8.h-8
           .flex.items-center.justify-center
             = image_tag('icons/skill-support.png', class: 'h-6')
         %td.pl-1
           - if char.can_equip_skills?
-            = link_to(char.support&.name || 'Support', edit_character_skills_path(character_id: i, scope: 'support'), data: { turbo_frame: 'modal' }, class: "block w-full text-lg border-0 border-b-2 border-transparent hover:border-menu-dark #{'text-menu-dark' if char.support.blank?}")
-
-      %tr
+            = link_to(char.support&.name || 'Support', edit_character_skills_path(character_id: i, scope: 'support'), data: { action: 'contextmenu->context#open:prevent', turbo_frame: 'modal' }, class: "block w-full text-lg border-0 border-b-2 border-transparent hover:border-menu-dark #{'text-menu-dark' if char.support.blank?}")
+            - if char.support.present?
+              = wrap_tooltip do
+                = render "characters/skills/rsm", skill: char.support
+      %tr{ data: { controller: 'context', action: 'keydown.esc@window->context#close' } }
         %td.w-8.h-8
           .flex.items-center.justify-center
             = image_tag('icons/skill-movement.png', class: 'h-6')
         %td.pl-1
           - if char.can_equip_skills?
-            = link_to(char.movement&.name || 'Movement', edit_character_skills_path(character_id: i, scope: 'movement'), data: { turbo_frame: 'modal' }, class: "block w-full text-lg border-0 border-b-2 border-transparent hover:border-menu-dark #{'text-menu-dark' if char.movement.blank?}")
+            = link_to(char.movement&.name || 'Movement', edit_character_skills_path(character_id: i, scope: 'movement'), data: { action: 'contextmenu->context#open:prevent', turbo_frame: 'modal' }, class: "block w-full text-lg border-0 border-b-2 border-transparent hover:border-menu-dark #{'text-menu-dark' if char.movement.blank?}")
+            - if char.movement.present?
+              = wrap_tooltip do
+                = render "characters/skills/rsm", skill: char.movement
