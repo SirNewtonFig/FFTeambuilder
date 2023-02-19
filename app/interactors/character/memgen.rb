@@ -35,100 +35,7 @@ class Character::Memgen < ActiveInteractor::Base
     'pisces' => 'B0'
   }
 
-  PRIMARIES = {
-    'Squire' => '4a',
-    'Chemist' => '4b',
-    'Knight' => '4c',
-    'Marksman' => '4d',
-    'Monk' => '4e',
-    'Priest' => '4f',
-    'Wizard' => '50',
-    'Time Mage' => '51',
-    'Summoner' => '52',
-    'Thief' => '53',
-    'Mediator' => '54',
-    'Oracle' => '55',
-    'Geomancer' => '56',
-    'Lancer' => '57',
-    'Samurai' => '58',
-    'Ninja' => '59',
-    'Spellblade' => '5a',
-    'Bard' => '5b',
-    'Dancer' => '5c',
-    'Mime' => '5d',
-    'Chocobo' => '5e',
-    'Black Chocobo' => '5f',
-    'Red Chocobo' => '60',
-    'Goblin' => '61',
-    'Black Goblin' => '62',
-    'Gobbledeguck' => '63',
-    'Bomb' => '64',
-    'Grenade' => '65',
-    'Explosive' => '66',
-    'Tonberry' => '67',
-    'Master Tonberry' => '68',
-    'Blood Stalker' => '69',
-    'Pisco Demon' => '6a',
-    'Squidlarkin' => '6b',
-    'Mindflare' => '6c',
-    'Skeleton' => '6d',
-    'Bone Snatch' => '6e',
-    'Living Bone' => '6f',
-    'Ghoul' => '70',
-    'Gust' => '71',
-    'Revnant' => '72',
-    'Flotiball' => '73',
-    'Ahriman' => '74',
-    'Plague' => '75',
-    'Juravis' => '76',
-    'Steel Hawk' => '77',
-    'Cocatoris' => '78',
-    'Uribo' => '79',
-    'Porky' => '7a',
-    'Wildbow' => '7b',
-    'Woodman' => '7c',
-    'Trent' => '7d',
-    'Taiju' => '7e',
-    'Bull Demon' => '7f',
-    'Minitaurus' => '80',
-    'Sacred' => '81',
-    'Morbol' => '82',
-    'Ochu' => '83',
-    'Great Morbol' => '84',
-    'Behemoth' => '85',
-    'King Behemoth' => '86',
-    'Dark Behemoth' => '87',
-    'Dragon' => '88',
-    'Blue Dragon' => '89',
-    'Red Dragon' => '8a',
-    'Hyudra' => '8b',
-    'Hydra' => '8c',
-    'Tiamat' => '8d'
-  }
-
-  SECONDARIES = {
-    'Basic Skill' => '05',
-    'Item' => '06',
-    'Battle Skill' => '07',
-    'Precision' => '08',
-    'Punch Art' => '09',
-    'White Magic' => '0a',
-    'Black Magic' => '0b',
-    'Time Magic' => '0c',
-    'Summon Magic' => '0d',
-    'Steal' => '0e',
-    'Talk Skill' => '0f',
-    'Yin Yang Magic' => '10',
-    'Elemental' => '11',
-    'Jump' => '12',
-    'Draw Out' => '13',
-    'Throw' => '14',
-    'Sword Magic' => '15',
-    'Sing' => '16',
-    'Dance' => '17'
-  }
-
-  SKILLFLAGS_JOBS = ['Squire', 'Chemist', 'Knight', 'Marksman', 'Monk', 'Priest', 'Wizard', 'Time Mage', 'Summoner', 'Thief', 'Mediator', 'Oracle', 'Geomancer', 'Lancer', 'Samurai', 'Ninja', 'Sage', 'Bard', 'Dancer']
+  SKILLFLAGS_JOBS = ['4a','4b','4c','4d','4e','4f','50','51','52','53','54','55','56','57','58','59','5a','5b','5c']
 
   TEXT_ENCODINGS = {
     "0" => '00',
@@ -199,8 +106,7 @@ class Character::Memgen < ActiveInteractor::Base
     "'" => '93',
     "-" => 'D11D',
     "." => 'D9B6',
-    " " => 'fa',
-
+    " " => 'fa'
   }
 
   delegate :character, :slot, :palette, :block, to: :context
@@ -256,7 +162,7 @@ class Character::Memgen < ActiveInteractor::Base
     end
 
     def serialize_primary!
-      block << PRIMARIES[character.job.name]
+      block << character.job.data.dig(character.sex, 'memgen_id')
     end
 
     def serialize_palette!
@@ -272,10 +178,12 @@ class Character::Memgen < ActiveInteractor::Base
     end
 
     def serialize_secondary!
-      block << (SECONDARIES[character.secondary&.skillset] || backup_secondary)
+      block << (character.secondary&.data&.dig(character.sex, 'secondary_id') || backup_secondary)
     end
 
     def backup_secondary
+      return '00' if character.job.name == 'Mime' || character.job.monster?
+
       return '05' unless character.job.name == 'Squire'
 
       return '06'
@@ -399,9 +307,9 @@ class Character::Memgen < ActiveInteractor::Base
       pad!('00', 3)
 
       SKILLFLAGS_JOBS.each do |job|
-        if job == character.job.name
+        if job == character.job.data.dig(character.sex, 'memgen_id')
           encode_skills!(job, character.primary_skills)
-        elsif job == character.secondary&.name
+        elsif job == character.secondary&.data&.dig(character.sex, 'memgen_id')
           encode_skills!(job, character.secondary_skills)
         else
           pad!('00', 3)

@@ -18,6 +18,7 @@ jobs.each do |row|
     abbreviation: row['Abbreviation'],
     skillset: row['Secondary Name'],
     data: job.data.merge({
+
       sex => {
         hp: row['HP'],
         mp: row['MP'],
@@ -31,7 +32,9 @@ jobs.each do |row|
         mp_mult: row['MPmult'],
         sp_mult: row['SPmult'],
         pa_mult: row['PAmult'],
-        ma_mult: row['MAmult']
+        ma_mult: row['MAmult'],
+        memgen_id: row['Job ID'],
+        secondary_id: row['Secondary ID']
       }
     })
   )
