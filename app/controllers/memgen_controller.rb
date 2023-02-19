@@ -15,7 +15,7 @@ class MemgenController < ApplicationController
       cardfile.write([hexstr].pack('H*'))
 
       File.open(cardfile.path, 'rb') do |f|
-        send_data(f.read, filename: 'Final_Fantasy_Tactics_USA.mcd')
+        send_data(f.read, filename: 'Final Fantasy Tactics (USA)_1.mcd')
       end
     ensure
       cardfile.close
