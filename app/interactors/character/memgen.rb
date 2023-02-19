@@ -197,7 +197,10 @@ class Character::Memgen < ActiveInteractor::Base
     "?" => '40',
     "+" => '42',
     "'" => '93',
-    " " => 'fa'
+    "-" => 'D11D',
+    "." => 'D9B6',
+    " " => 'fa',
+
   }
 
   delegate :character, :slot, :palette, :block, to: :context
@@ -428,15 +431,14 @@ class Character::Memgen < ActiveInteractor::Base
     end
 
     def serialize_name!
-      16.times do |i|
-        block << 'FE' and next if character.name[i].nil?
+      chars = character.name
+        .chars
+        .map{|c| TEXT_ENCODINGS[c] }
+        .join
 
-        char = TEXT_ENCODINGS[character.name[i]]
+      block << chars.first(32)
 
-        block << char unless char.blank?
-      end
-
-      block << 'FE'
+      pad!('FE', 17 - chars.length/2)
     end
 
     def little_endian(str, bytes)
