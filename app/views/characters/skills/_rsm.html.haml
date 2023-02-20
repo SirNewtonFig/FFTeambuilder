@@ -6,7 +6,15 @@
 
     .flex
       .ml-2.text-cyan-900
-        #{skill.jp_cost} JP
+        #{skill.jp_cost} JP&nbsp;
+
+      - if character.unlock_costs[skill.job].positive?
+        .text-gray-600{ title: 'Additional prerequisite costs to unlock this skill'}
+          (+#{character.unlock_costs[skill.job]})
+
+      - if (surplus = character.jp_summary.dig(:prereq_costs, skill.job).to_i - character.jp_summary.dig(:skill_costs, skill.job).to_i).positive?
+        .text-gray-600{ title: 'Discount for surplus banked JP' }
+          (-#{[surplus, skill.jp_cost].min})
 
   - if skill.data['move'].present? || skill.data['jump'].present?
     .flex.flex-wrap

@@ -368,6 +368,10 @@ class Character
     }
   end
 
+  memoize def unlock_costs
+    Character::CalculateUnlockJp.perform(character: self).spread
+  end
+
   def encode_character_set
     return 0x82 if job.monster?
 
