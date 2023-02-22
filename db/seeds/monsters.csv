@@ -1,7 +1,7 @@
 Name,Job ID,JP Cost,HP,MP,Speed,Move,Jump,PA,MA,Ability 1,Ability 2,Ability 3,Monster Skill,Reaction,Support,Movement,Water,Family Notes:,Evade,HPmult,MPmult,SPmult,PAmult,MAmult
 Chocobo,5E,2000,287,126,10,6,5,13,30,Choco Cure,Choco Esuna,Choco Guard,,Regenerator,None,None,Move in Water,"Immune: Frog, Berserk, Charm, Confuse, Don't Act",15,150,255,150,130,94
 Black Chocobo,5F,4000,345,126,9,6,5,19,30,Choco Cure,Choco Esuna,Choco Ball,,Regenerator,Fly,None,Move in Water,"Immune: Frog, Berserk, Charm, Confuse, Don't Act",25,150,255,130,170,105
-Red Chocobo,60,6000,360,126,10,6,5,14,38,Choco Cure,Choco Esuna,Choco Meteor,,Regenerator,Ignore Height,None,Move in Water,"Immune: Frog, Berserk, Charm, Confuse, Don't Act",10,160,255,80,140,99
+Red Chocobo,60,6000,360,126,10,6,5,14,38,Choco Cure,Choco Esuna,Choco Meteor,,Regenerator,Ignore Height,None,Move in Water,"Immune: Frog, Berserk, Charm, Confuse, Don't Act",10,160,255,150,140,99
 Goblin,61,2000,252,126,8,4,4,15,2,Shatter,Turn Punch,Eye Gouge,,Counter Throw,AttackUP,None,,,18,150,255,130,120,160
 Black Goblin,62,4000,287,126,9,4,4,15,2,Shatter,Turn Punch,Revive,,Counter Throw,AttackUP,None,,,19,160,255,130,130,160
 Gobbledeguck,63,6000,319,126,9,4,4,15,2,Shatter,Turn Punch,Mutilate,,Counter Throw,AttackUP,None,,,20,170,255,130,160,160
