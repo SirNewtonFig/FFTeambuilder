@@ -11,7 +11,7 @@
 .divide-y.divide-menu-dark.w-full{ class: 'sm:w-[34rem]' }
   - @jobs.each do |job|
     .filterable.-mx-2.px-2.py-3.cursor-pointer{ class: 'hover:bg-menu-dark/25 min-h-[6.75rem]', data: { controller: 'filterable' } }
-      = form_with(url: character_job_path(character_id: params[:character_id]), method: :patch, data: { controller: 'form', form_modal_outlet: '.modal-controller', turbo_frame: '_top' }) do |f|
+      = form_with(url: character_job_path(character_id: params[:character_id]), method: :patch, data: { controller: "form #{'auto-scroll' if job == @char.job}", form_modal_outlet: '.modal-controller', turbo_frame: '_top' }) do |f|
         = tag.button(class: 'w-full', data: { action: 'form#submit' }) do
           %input{ type: 'hidden', name: "character[job]", value: job.id }
             .flex

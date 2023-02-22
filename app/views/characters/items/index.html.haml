@@ -14,7 +14,7 @@
 
   - @items.each do |item|
     .filterable{ data: { controller: 'filterable' } }
-      = form_with(url: character_items_path(character_id: params[:character_id]), method: :patch, data: { controller: 'form', turbo_frame: 'character_editor', form_modal_outlet: '.modal-controller' }) do |f|
+      = form_with(url: character_items_path(character_id: params[:character_id]), method: :patch, data: { controller: "form #{'auto-scroll' if item == @char.send(scope)}", turbo_frame: 'character_editor', form_modal_outlet: '.modal-controller' }) do |f|
         = tag.button(class: 'w-full', data: { action: 'form#submit' }) do
           %input{ type: 'hidden', name: "character[#{scope}]", value: item.id }
           = render "characters/items/#{item.item_type}", item: item

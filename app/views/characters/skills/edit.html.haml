@@ -14,7 +14,7 @@
 
   - @skills.each do |skill|
     .filterable{ data: { controller: 'filterable' } }
-      = form_with(url: character_skills_path(character_id: params[:character_id]), method: :patch, data: { controller: 'form', form_modal_outlet: '.modal-controller' }) do |f|
+      = form_with(url: character_skills_path(character_id: params[:character_id]), method: :patch, data: { controller: "form #{'auto-scroll' if skill == @char.send(scope)}", form_modal_outlet: '.modal-controller' }) do |f|
         = tag.button(class: 'w-full', data: { action: 'form#submit' }) do
           %input{ type: 'hidden', name: "character[#{scope}]", value: skill.id }
           = render "characters/skills/rsm", skill: skill, character: @char
