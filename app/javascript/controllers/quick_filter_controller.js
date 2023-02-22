@@ -1,11 +1,17 @@
 import { Controller } from "@hotwired/stimulus"
+import { UAParser } from 'ua-parser-js'
 import _ from 'lodash'
 
 export default class QuickFilterController extends Controller {
   static outlets = ['filterable']
 
   connect() {
-    this.element.focus()
+    const ua = new UAParser(),
+      deviceType = ua.getDevice().type
+
+    if (deviceType !== 'mobile' && deviceType !== 'tablet') {
+      this.element.focus()
+    }
   }
 
   filter() {
