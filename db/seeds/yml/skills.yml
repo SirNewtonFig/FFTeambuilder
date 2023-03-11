@@ -1,2224 +1,1360 @@
----
-- id: 16
-  value: 
-  jp_cost: 200
-  name: Hi-Ether
-  skill_type: action
-  data:
-    ct: 
-    mp: 
-    area: 
-    jump: 
-    move: 
-    vert: 
-    evade: 
-    range: '1'
-    target: Any
-    counter: 
-    element: 
-    formula: Recover 50 MP
-    silence: 
-    reflectable: 
-    counter_flood: 
-    counter_magic: 
-  job_id: 2
-
-- id: 22
-  value: 
-  jp_cost: 200
-  name: Remedy
-  skill_type: action
-  data:
-    ct: 
-    mp: 
-    area: 
-    jump: 
-    move: 
-    vert: 
-    evade: 
-    range: '1'
-    target: Any
-    counter: 
-    element: 
-    formula: 'Cure: Blind+Confuse+Silence+Sleep+Poison+Oil'
-    silence: 
-    reflectable: 
-    counter_flood: 
-    counter_magic: 
-  job_id: 2
-
-- id: 26
-  value: 
-  jp_cost: 200
-  name: Maintenance
-  skill_type: support
-  data:
-    ct: 
-    mp: 
-    area: 
-    jump: 
-    move: 
-    vert: 
-    evade: 
-    range: 
-    target: 
-    counter: 
-    element: 
-    formula: Protects gear from Break/Steal
-    silence: 
-    reflectable: 
-    counter_flood: 
-    counter_magic: 
-  job_id: 2
-
-- id: 56
-  value: 
-  jp_cost: 100
-  name: Magic Ruin
-  skill_type: action
-  data:
-    ct: 
-    mp: '6'
-    area: 
-    jump: 
-    move: 
-    vert: 
-    evade: 
-    range: '3'
-    target: Any
-    counter: 'Yes'
-    element: 
-    formula: DmgMP_(50% max) Hit_(PA+60)%
-    silence: 
-    reflectable: 
-    counter_flood: 'Yes'
-    counter_magic: 'Yes'
-  job_id: 3
-
-- id: 64
-  value: 
-  jp_cost: 200
-  name: Equip Shield
-  skill_type: support
-  data:
-    ct: 
-    mp: 
-    area: 
-    jump: 
-    move: 
-    vert: 
-    evade: 
-    range: 
-    target: 
-    counter: 
-    element: 
-    formula: Can equip shield regardless of job
-    silence: 
-    reflectable: 
-    counter_flood: 
-    counter_magic: 
-  job_id: 3
-
-- id: 77
-  value: 
-  jp_cost: 200
-  name: Cursed Strike
-  skill_type: action
-  data:
-    ct: 
-    mp: 
-    area: 
-    jump: 
-    move: 
-    vert: 
-    evade: Phys
-    range: Weapon
-    target: 
-    counter: 'Yes'
-    element: 
-    formula: 'Add: Oil, Blind Hit_(Speed+70)%'
-    silence: 
-    reflectable: 
-    counter_flood: 'Yes'
-    counter_magic: 
-  job_id: 4
-
-- id: 81
-  value: 
-  jp_cost: 600
-  name: CT Save
-  skill_type: reaction
-  data:
-    ct: 
-    mp: 
-    area: 
-    jump: 
-    move: 
-    vert: 
-    evade: 
-    range: 
-    target: 
-    counter: 
-    element: 
-    formula: Increase CT by 20 upon taking damage
-    silence: 
-    reflectable: 
-    counter_flood: 
-    counter_magic: 
-  job_id: 4
-
-- id: 84
-  value: 
-  jp_cost: 350
-  name: Concentrate
-  skill_type: support
-  data:
-    ct: 
-    mp: 
-    area: 
-    jump: 
-    move: 
-    vert: 
-    evade: 
-    range: 
-    target: 
-    counter: 
-    element: 
-    formula: Physical attacks and skills ignore evasion (THIEF INNATE)
-    silence: 
-    reflectable: 
-    counter_flood: 
-    counter_magic: 
-  job_id: 4
-
-- id: 39
-  value: 
-  jp_cost: 50
-  name: Hell Ivy
-  skill_type: action
-  data:
-    ct: 
-    mp: 
-    area: '1'
-    jump: 
-    move: 
-    vert: 
-    evade: 
-    range: '4'
-    target: Any
-    counter: 
-    element: 
-    formula: Dmg_((PA+4/2*MA) 20% Stop
-    silence: 
-    reflectable: 
-    counter_flood: 'Yes'
-    counter_magic: 'Yes'
-  job_id: 13
-
-- id: 43
-  value: 
-  jp_cost: 50
-  name: Demon Fire
-  skill_type: action
-  data:
-    ct: 
-    mp: 
-    area: '1'
-    jump: 
-    move: 
-    vert: 
-    evade: 
-    range: '4'
-    target: Any
-    counter: 
-    element: Fire
-    formula: Dmg_((PA+4/2*MA) 20% Sleep
-    silence: 
-    reflectable: 
-    counter_flood: 'Yes'
-    counter_magic: 'Yes'
-  job_id: 13
-
-- id: 47
-  value: 
-  jp_cost: 50
-  name: Gusty Wind
-  skill_type: action
-  data:
-    ct: 
-    mp: 
-    area: '1'
-    jump: 
-    move: 
-    vert: 
-    evade: 
-    range: '4'
-    target: Any
-    counter: 
-    element: Wind
-    formula: Dmg_((PA+4/2*MA) 20% Slow
-    silence: 
-    reflectable: 
-    counter_flood: 'Yes'
-    counter_magic: 'Yes'
-  job_id: 13
-
-- id: 50
-  value: 
-  jp_cost: 400
-  name: Attack UP
-  skill_type: support
-  data:
-    ct: 
-    mp: 
-    area: 
-    jump: 
-    move: 
-    vert: 
-    evade: 
-    range: 
-    target: 
-    counter: 
-    element: 
-    formula: Increase physical damage by 33%
-    silence: 
-    reflectable: 
-    counter_flood: 
-    counter_magic: 
-  job_id: 13
-
-- id: 68
-  value: 
-  jp_cost: 500
-  name: Range 6
-  skill_type: action
-  data:
-    ct: RU(50/Speed)
-    mp: 
-    area: 
-    jump: 
-    move: 
-    vert: 
-    evade: 
-    range: '6'
-    target: Any
-    counter: 'Yes'
-    element: 
-    formula: 'Dmg_(PA*WP). If using Spear: Dmg_((PA*1.5)*WP) instead'
-    silence: 
-    reflectable: 
-    counter_flood: 'Yes'
-    counter_magic: 
-  job_id: 14
-
-- id: 72
-  value: 
-  jp_cost: 500
-  name: Dragon Spirit
-  skill_type: reaction
-  data:
-    ct: 
-    mp: 
-    area: 
-    jump: 
-    move: 
-    vert: 
-    evade: 
-    range: 
-    target: 
-    counter: 
-    element: 
-    formula: 'Add: Reraise on hit from a Physical attack'
-    silence: 
-    reflectable: 
-    counter_flood: 
-    counter_magic: 
-  job_id: 14
-
-- id: 2
-  value: 
-  jp_cost: 100
-  name: Life Song
-  skill_type: action
-  data:
-    ct: '4'
-    mp: 
-    area: ALL
-    jump: 
-    move: 
-    vert: ALL
-    evade: 
-    range: ALL
-    target: Any
-    counter: 
-    element: 
-    formula: Heal_(MA+40) HP
-    silence: 'Yes'
-    reflectable: 
-    counter_flood: 
-    counter_magic: 
-  job_id: 18
-
-- id: 6
-  value: 
-  jp_cost: 100
-  name: Last Song
-  skill_type: action
-  data:
-    ct: '8'
-    mp: 
-    area: ALL
-    jump: 
-    move: 
-    vert: ALL
-    evade: 
-    range: ALL
-    target: Any
-    counter: 
-    element: 
-    formula: Set CT to 100 Hit_(50)%
-    silence: 'Yes'
-    reflectable: 
-    counter_flood: 
-    counter_magic: 
-  job_id: 18
-
-- id: 9
-  value: 
-  jp_cost: 600
-  name: Fly
-  skill_type: movement
-  data:
-    ct: 
-    mp: 
-    area: 
-    jump: 
-    move: 
-    vert: 
-    evade: 
-    range: 
-    target: 
-    counter: 
-    element: 
-    formula: Fly over units, obstacles, and ignore height when moving
-    silence: 
-    reflectable: 
-    counter_flood: 
-    counter_magic: 
-  job_id: 18
-
-- id: 27
-  value: 
-  jp_cost: 100
-  name: Witch Hunt
-  skill_type: action
-  data:
-    ct: '4'
-    mp: 
-    area: ALL
-    jump: 
-    move: 
-    vert: ALL
-    evade: 
-    range: ALL
-    target: Any
-    counter: 
-    element: 
-    formula: DmgMP_(PA+(PA*Brave)/100)
-    silence: 'Yes'
-    reflectable: 
-    counter_flood: 
-    counter_magic: 
-  job_id: 19
-
-- id: 31
-  value: 
-  jp_cost: 100
-  name: Nameless Dance
-  skill_type: action
-  data:
-    ct: '7'
-    mp: 
-    area: ALL
-    jump: 
-    move: 
-    vert: ALL
-    evade: 
-    range: ALL
-    target: Any
-    counter: 
-    element: 
-    formula: 'Add: Blind or Confusion or Silence or Poison or Slow Hit_(60)%'
-    silence: 'Yes'
-    reflectable: 
-    counter_flood: 
-    counter_magic: 
-  job_id: 19
-
-- id: 35
-  value: 
-  jp_cost: 900
-  name: Move+3
-  skill_type: movement
-  data:
-    ct: 
-    mp: 
-    area: 
-    jump: 
-    move: '3'
-    vert: 
-    evade: 
-    range: 
-    target: 
-    counter: 
-    element: 
-    formula: Read the name, this isn't complicated
-    silence: 
-    reflectable: 
-    counter_flood: 
-    counter_magic: 
-  job_id: 19
-
-- id: 176
-  value: 
-  jp_cost: 200
-  name: Cheer Up
-  skill_type: action
-  data:
-    ct: 
-    mp: 
-    area: 
-    jump: 
-    move: 
-    vert: '3'
-    evade: 
-    range: '3'
-    target: Any
-    counter: 
-    element: 
-    formula: 'Add: Regen HealMP(4*MA)'
-    silence: 
-    reflectable: 
-    counter_flood: 
-    counter_magic: 
-  job_id: 1
-
-- id: 99
-  value: 
-  jp_cost: 250
-  name: Wave Fist
-  skill_type: action
-  data:
-    ct: 
-    mp: 
-    area: 
-    jump: 
-    move: 
-    vert: '3'
-    evade: Phys
-    range: '3'
-    target: Any
-    counter: 'Yes'
-    element: 
-    formula: Dmg_((PA+2)/2*PA)
-    silence: 
-    reflectable: 
-    counter_flood: 'Yes'
-    counter_magic: 
-  job_id: 5
-
-- id: 102
-  value: 
-  jp_cost: 100
-  name: Stigma Magic
-  skill_type: action
-  data:
-    ct: 
-    mp: 
-    area: '1'
-    jump: 
-    move: 
-    vert: 
-    evade: 
-    range: '0'
-    target: Any
-    counter: 
-    element: 
-    formula: 'Cancel: All negative status Hit_(100)%'
-    silence: 
-    reflectable: 
-    counter_flood: 
-    counter_magic: 
-  job_id: 5
-
-- id: 107
-  value: 
-  jp_cost: 600
-  name: Martial Arts
-  skill_type: support
-  data:
-    ct: 
-    mp: 
-    area: 
-    jump: 
-    move: 
-    vert: 
-    evade: 
-    range: 
-    target: 
-    counter: 
-    element: 
-    formula: 50% bonus PA to PA-based skills and fist attacks (CLASS INNATE)
-    silence: 
-    reflectable: 
-    counter_flood: 
-    counter_magic: 
-  job_id: 5
-
-- id: 138
-  value: 
-  jp_cost: 220
-  name: Rejuvenate
-  skill_type: action
-  data:
-    ct: '5'
-    mp: '16'
-    area: '2'
-    jump: 
-    move: 
-    vert: '2'
-    evade: 
-    range: '4'
-    target: Any
-    counter: 
-    element: Holy
-    formula: Heal_F(MA*30)
-    silence: 'Yes'
-    reflectable: 'Yes'
-    counter_flood: 
-    counter_magic: 
-  job_id: 6
-
-- id: 143
-  value: 
-  jp_cost: 250
-  name: Regen
-  skill_type: action
-  data:
-    ct: '2'
-    mp: '8'
-    area: '1'
-    jump: 
-    move: 
-    vert: '2'
-    evade: 
-    range: '3'
-    target: Any
-    counter: 
-    element: 
-    formula: 'Add: Regen Hit_F(MA+200)%'
-    silence: 'Yes'
-    reflectable: 'Yes'
-    counter_flood: 
-    counter_magic: 
-  job_id: 6
-
-- id: 87
-  value: 
-  jp_cost: 100
-  name: Threaten
-  skill_type: action
-  data:
-    ct: 
-    mp: 
-    area: 
-    jump: 
-    move: 
-    vert: '3'
-    evade: 
-    range: '3'
-    target: Any
-    counter: 
-    element: 
-    formula: 'Add: Don''t Act Hit_(MA+45)%'
-    silence: 'Yes'
-    reflectable: 
-    counter_flood: 
-    counter_magic: 
-  job_id: 11
-
-- id: 92
-  value: 
-  jp_cost: 300
-  name: Mimic Daravon
-  skill_type: action
-  data:
-    ct: 
-    mp: 
-    area: '1'
-    jump: 
-    move: 
-    vert: '3'
-    evade: 
-    range: '3'
-    target: Any
-    counter: 
-    element: 
-    formula: 'Add: Sleep Hit_(MA+40)%'
-    silence: 'Yes'
-    reflectable: 
-    counter_flood: 
-    counter_magic: 
-  job_id: 11
-
-- id: 121
-  value: 
-  jp_cost: 80
-  name: Blind
-  skill_type: action
-  data:
-    ct: 
-    mp: '4'
-    area: '2'
-    jump: 
-    move: 
-    vert: '3'
-    evade: Mag
-    range: '4'
-    target: Any
-    counter: 
-    element: 
-    formula: 'Add: Blind Hit_F(MA+250)%'
-    silence: 'Yes'
-    reflectable: 'Yes'
-    counter_flood: 'Yes'
-    counter_magic: 'Yes'
-  job_id: 12
-
-- id: 125
-  value: 
-  jp_cost: 200
-  name: Zombie
-  skill_type: action
-  data:
-    ct: '3'
-    mp: '12'
-    area: 
-    jump: 
-    move: 
-    vert: 
-    evade: Mag
-    range: '4'
-    target: Any
-    counter: 
-    element: 
-    formula: 'Add: Zombie Hit_F(MA+180)%'
-    silence: 'Yes'
-    reflectable: 'Yes'
-    counter_flood: 'Yes'
-    counter_magic: 'Yes'
-  job_id: 12
-
-- id: 129
-  value: 
-  jp_cost: 200
-  name: Confusion Song
-  skill_type: action
-  data:
-    ct: '3'
-    mp: '12'
-    area: 
-    jump: 
-    move: 
-    vert: 
-    evade: Mag
-    range: '4'
-    target: Any
-    counter: 
-    element: 
-    formula: 'Add: Confusion Hit_F(MA+150)%'
-    silence: 'Yes'
-    reflectable: 'Yes'
-    counter_flood: 'Yes'
-    counter_magic: 'Yes'
-  job_id: 12
-
-- id: 133
-  value: 
-  jp_cost: 700
-  name: Barrier
-  skill_type: reaction
-  data:
-    ct: 
-    mp: 
-    area: 
-    jump: 
-    move: 
-    vert: 
-    evade: 
-    range: 
-    target: 
-    counter: 
-    element: 
-    formula: Add Protect and Shell on Physical attack or skill
-    silence: 
-    reflectable: 
-    counter_flood: 
-    counter_magic: 
-  job_id: 12
-
-- id: 163
-  value: 
-  jp_cost: 250
-  name: Koutetsu
-  skill_type: action
-  data:
-    ct: 
-    mp: 
-    area: '2'
-    jump: 
-    move: 
-    vert: '2'
-    evade: 
-    range: '0'
-    target: Any
-    counter: 
-    element: Dark
-    formula: Dmg_(MA*10)
-    silence: 
-    reflectable: 
-    counter_flood: 'Yes'
-    counter_magic: 'Yes'
-  job_id: 15
-
-- id: 167
-  value: 
-  jp_cost: 100
-  name: Kiyomori
-  skill_type: action
-  data:
-    ct: 
-    mp: 
-    area: '2'
-    jump: 
-    move: 
-    vert: '2'
-    evade: 
-    range: '0'
-    target: Any
-    counter: 
-    element: 
-    formula: 'Add: Protect or Shell Hit_(100)%'
-    silence: 
-    reflectable: 
-    counter_flood: 
-    counter_magic: 
-  job_id: 15
-
-- id: 171
-  value: 
-  jp_cost: 300
-  name: Move in Water
-  skill_type: movement
-  data:
-    ct: 
-    mp: 
-    area: 
-    jump: 
-    move: 
-    vert: 
-    evade: 
-    range: 
-    target: 
-    counter: 
-    element: 
-    formula: Move in water unhindered
-    silence: 
-    reflectable: 
-    counter_flood: 
-    counter_magic: 
-  job_id: 15
-
-- id: 111
-  value: 
-  jp_cost: 100
-  name: Knife
-  skill_type: action
-  data:
-    ct: 
-    mp: 
-    area: 
-    jump: 
-    move: 
-    vert: 
-    evade: Phys
-    range: Move
-    target: Any
-    counter: 'Yes'
-    element: 
-    formula: Hit_(Speed * thrown weapon WP)
-    silence: 
-    reflectable: 
-    counter_flood: 'Yes'
-    counter_magic: 
-  job_id: 16
-
-- id: 116
-  value: 
-  jp_cost: 100
-  name: Dictionary
-  skill_type: action
-  data:
-    ct: 
-    mp: 
-    area: 
-    jump: 
-    move: 
-    vert: 
-    evade: Phys
-    range: Move
-    target: Any
-    counter: 'Yes'
-    element: 
-    formula: Hit_(Speed * thrown weapon WP)
-    silence: 
-    reflectable: 
-    counter_flood: 'Yes'
-    counter_magic: 
-  job_id: 16
-
-- id: 120
-  value: 
-  jp_cost: 100
-  name: Walk on Water
-  skill_type: movement
-  data:
-    ct: 
-    mp: 
-    area: 
-    jump: 
-    move: 
-    vert: 
-    evade: 
-    range: 
-    target: 
-    counter: 
-    element: 
-    formula: Move on top of water panels as if they were ground
-    silence: 
-    reflectable: 
-    counter_flood: 
-    counter_magic: 
-  job_id: 16
-
-- id: 155
-  value: 
-  jp_cost: 400
-  name: Gravi 2
-  skill_type: action
-  data:
-    ct: '6'
-    mp: '30'
-    area: '2'
-    jump: 
-    move: 
-    vert: '2'
-    evade: Mag
-    range: '4'
-    target: Any
-    counter: 
-    element: 
-    formula: Dmg_(66% Max HP) Hit_F(MA+140)%
-    silence: 'Yes'
-    reflectable: 
-    counter_flood: 'Yes'
-    counter_magic: 'Yes'
-  job_id: 17
-
-- id: 160
-  value: 
-  jp_cost: 150
-  name: Distribute
-  skill_type: reaction
-  data:
-    ct: 
-    mp: 
-    area: 
-    jump: 
-    move: 
-    vert: 
-    evade: 
-    range: 
-    target: 
-    counter: 
-    element: 
-    formula: Excess healing from others to this split among non-full team members
-    silence: 
-    reflectable: 
-    counter_flood: 
-    counter_magic: 
-  job_id: 17
-
-- id: 172
-  value: 
-  jp_cost: 50
-  name: Defy Pain
-  skill_type: action
-  data:
-    ct: 
-    mp: 
-    area: 
-    jump: 
-    move: 
-    vert: 
-    evade: 
+---                                     
+- id: 1                                 
+  value:                                
+  jp_cost: 50                           
+  name: Defy Pain                       
+  skill_type: action                    
+  data:                                 
+    ct:                                 
+    mp:                                 
+    area:                               
+    jump:                               
+    move:                               
+    vert:                               
+    evade:                              
     range: '0'
     target: Self
-    counter: 
-    element: 
-    formula: Heal 100% Max HP. Useable only in critical
-    silence: 
-    reflectable: 
-    counter_flood: 
-    counter_magic: 
+    counter:
+    element:
+    formula: Heal 225 HP. Useable only in critical
+    silence:
+    memgen_id: '8000'
+    reflectable:
+    counter_flood:
+    counter_magic:
   job_id: 1
-
-- id: 173
-  value: 
+- id: 2
+  value:
   jp_cost: 100
   name: Throw Stone
   skill_type: action
   data:
-    ct: 
-    mp: 
-    area: 
-    jump: 
-    move: 
-    vert: 
+    ct:
+    mp:
+    area:
+    jump:
+    move:
+    vert:
     evade: Phys
     range: '4'
     target: Any
-    counter: 
+    counter:
     element: Earth
     formula: Dmg_((1...10)*PA) 100% Knockback
-    silence: 
-    reflectable: 
-    counter_flood: 
-    counter_magic: 
+    silence:
+    memgen_id: '4000'
+    reflectable:
+    counter_flood:
+    counter_magic:
   job_id: 1
-
-- id: 174
-  value: 
+- id: 3
+  value:
   jp_cost: 150
   name: Heal
   skill_type: action
   data:
-    ct: 
-    mp: 
-    area: 
-    jump: 
-    move: 
+    ct:
+    mp:
+    area:
+    jump:
+    move:
     vert: '2'
-    evade: 
+    evade:
     range: '1'
     target: Any
-    counter: 
-    element: 
-    formula: 'Cure: Silence+Blind+Stop+Poison+Berserk'
-    silence: 
-    reflectable: 
-    counter_flood: 
-    counter_magic: 
+    counter:
+    element:
+    formula: 'Cure: Silence+Discord+Stop+Poison+Berserk+Frog'
+    silence:
+    memgen_id: '2000'
+    reflectable:
+    counter_flood:
+    counter_magic:
   job_id: 1
-
-- id: 175
-  value: 
+- id: 4
+  value:
   jp_cost: 200
   name: Wish
   skill_type: action
   data:
-    ct: 
-    mp: 
-    area: 
-    jump: 
-    move: 
+    ct:
+    mp:
+    area:
+    jump:
+    move:
     vert: '3'
-    evade: 
+    evade:
     range: '1'
     target: Any
-    counter: 
-    element: 
+    counter:
+    element:
     formula: Revive 1% Hit_(PA+70)%
-    silence: 
-    reflectable: 
-    counter_flood: 
-    counter_magic: 
+    silence:
+    memgen_id: '1000'
+    reflectable:
+    counter_flood:
+    counter_magic:
   job_id: 1
-
-- id: 177
-  value: 
+- id: 5
+  value:
+  jp_cost: 200
+  name: Cheer Up
+  skill_type: action
+  data:
+    ct:
+    mp:
+    area:
+    jump:
+    move:
+    vert: '3'
+    evade:
+    range: '3'
+    target: Any
+    counter:
+    element:
+    formula: 'Add: Regen HealMP(4*MA)'
+    silence:
+    memgen_id: '0800'
+    reflectable:
+    counter_flood:
+    counter_magic:
+  job_id: 1
+- id: 6
+  value:
   jp_cost: 100
   name: Wild Swing
   skill_type: action
   data:
-    ct: 
-    mp: 
+    ct:
+    mp:
     area: '1'
-    jump: 
-    move: 
+    jump:
+    move:
     vert: '1'
     evade: Phys
     range: '0'
     target: Any
     counter: 'Yes'
-    element: 
+    element:
     formula: Dmg_((PA+2)/2*PA)
-    silence: 
-    reflectable: 
+    silence:
+    memgen_id: '0200'
+    reflectable:
     counter_flood: 'Yes'
-    counter_magic: 
+    counter_magic:
   job_id: 1
-
-- id: 178
-  value: 
+- id: 7
+  value:
   jp_cost: 200
   name: Target
   skill_type: action
   data:
-    ct: 
-    mp: 
-    area: 
-    jump: 
-    move: 
-    vert: 
-    evade: 
+    ct:
+    mp:
+    area:
+    jump:
+    move:
+    vert:
+    evade:
     range: Weapon
     target: Any
     counter: 'Yes'
-    element: 
+    element:
     formula: Dmg_(PA*(WP-2))
-    silence: 
-    reflectable: 
+    silence:
+    memgen_id: '0400'
+    reflectable:
     counter_flood: 'Yes'
-    counter_magic: 
+    counter_magic:
   job_id: 1
-
-- id: 234
-  value: 
+- id: 8
+  value:
   jp_cost: 100
   name: Warn
   skill_type: action
   data:
-    ct: 
-    mp: 
+    ct:
+    mp:
     area: '2'
-    jump: 
-    move: 
+    jump:
+    move:
     vert: '3'
-    evade: 
+    evade:
     range: '0'
     target: Self
-    counter: 
-    element: 
+    counter:
+    element:
     formula: 'Add: Defend Hit_(100)%'
-    silence: 
-    reflectable: 
-    counter_flood: 
-    counter_magic: 
+    silence:
+    memgen_id: '0100'
+    reflectable:
+    counter_flood:
+    counter_magic:
   job_id: 1
-
-- id: 179
-  value: 
+- id: 9
+  value:
   jp_cost: 0
   name: Weapon Guard
   skill_type: reaction
   data:
-    ct: 
-    mp: 
-    area: 
-    jump: 
-    move: 
-    vert: 
-    evade: 
-    range: 
-    target: 
-    counter: 
-    element: 
+    ct:
+    mp:
+    area:
+    jump:
+    move:
+    vert:
+    evade:
+    range:
+    target:
+    counter:
+    element:
     formula: Activate weapon evasion %
-    silence: 
-    reflectable: 
-    counter_flood: 
-    counter_magic: 
+    silence:
+    memgen_id: 01BF
+    reflectable:
+    counter_flood:
+    counter_magic:
   job_id: 1
-
-- id: 180
-  value: 
+- id: 10
+  value:
   jp_cost: 180
   name: Counter Throw
   skill_type: reaction
   data:
-    ct: 
-    mp: 
-    area: 
-    jump: 
-    move: 
-    vert: 
-    evade: 
-    range: 
-    target: 
-    counter: 
-    element: 
+    ct:
+    mp:
+    area:
+    jump:
+    move:
+    vert:
+    evade:
+    range:
+    target:
+    counter:
+    element:
     formula: Counter PA-based skills and knock back
-    silence: 
-    reflectable: 
-    counter_flood: 
-    counter_magic: 
+    silence:
+    memgen_id: 01B4
+    reflectable:
+    counter_flood:
+    counter_magic:
   job_id: 1
-
-- id: 182
-  value: 
-  jp_cost: 180
-  name: Move+1
-  skill_type: movement
-  data:
-    ct: 
-    mp: 
-    area: 
-    jump: 
-    move: '1'
-    vert: 
-    evade: 
-    range: 
-    target: 
-    counter: 
-    element: 
-    formula: Read the name, this isn't complicated
-    silence: 
-    reflectable: 
-    counter_flood: 
-    counter_magic: 
-  job_id: 1
-
-- id: 226
-  value: 
-  jp_cost: 280
-  name: Mjollnir
-  skill_type: action
-  data:
-    ct: '5'
-    mp: '20'
-    area: 
-    jump: 
-    move: 
-    vert: 
-    evade: Mag
-    range: '5'
-    target: Any
-    counter: 
-    element: Lightning
-    formula: 'Dmg_F(MA*28) 20% Add: Stop'
-    silence: 'Yes'
-    reflectable: 'Yes'
-    counter_flood: 'Yes'
-    counter_magic: 'Yes'
-  job_id: 7
-
-- id: 230
-  value: 
-  jp_cost: 300
-  name: Frog
-  skill_type: action
-  data:
-    ct: '5'
-    mp: '12'
-    area: 
-    jump: 
-    move: 
-    vert: 
-    evade: Mag
-    range: '4'
-    target: Any
-    counter: 
-    element: 
-    formula: 'Add: Frog Hit_F(MA+140)%'
-    silence: 'Yes'
-    reflectable: 'Yes'
-    counter_flood: 'Yes'
-    counter_magic: 'Yes'
-  job_id: 7
-
-- id: 209
-  value: 
-  jp_cost: 80
-  name: Haste
-  skill_type: action
-  data:
-    ct: '2'
-    mp: '8'
-    area: '1'
-    jump: 
-    move: 
-    vert: 
-    evade: 
-    range: '3'
-    target: Any
-    counter: 
-    element: 
-    formula: 'Add: Haste Hit_F(MA+180)%'
-    silence: 'Yes'
-    reflectable: 'Yes'
-    counter_flood: 
-    counter_magic: 
-  job_id: 8
-
-- id: 214
-  value: 
-  jp_cost: 80
-  name: Don't Move
-  skill_type: action
-  data:
-    ct: '3'
-    mp: '10'
-    area: '1'
-    jump: 
-    move: 
-    vert: '1'
-    evade: Mag
-    range: '3'
-    target: Any
-    counter: 
-    element: 
-    formula: 'Add: Don''t Move Hit_F(MA+190)%'
-    silence: 'Yes'
-    reflectable: 'Yes'
-    counter_flood: 'Yes'
-    counter_magic: 'Yes'
-  job_id: 8
-
-- id: 218
-  value: 
-  jp_cost: 450
-  name: Demi 2
-  skill_type: action
-  data:
-    ct: '4'
-    mp: '26'
-    area: '1'
-    jump: 
-    move: 
-    vert: '1'
-    evade: Mag
-    range: '4'
-    target: Any
-    counter: 
-    element: 
-    formula: Dmg_(50% Max HP) Hit_F(MA+170)%
-    silence: 'Yes'
-    reflectable: 'Yes'
-    counter_flood: 'Yes'
-    counter_magic: 'Yes'
-  job_id: 8
-
-- id: 183
-  value: 
-  jp_cost: 80
-  name: Moogle
-  skill_type: action
-  data:
-    ct: '4'
-    mp: '10'
-    area: '2'
-    jump: 
-    move: 
-    vert: '2'
-    evade: Mag
-    range: '4'
-    target: Any
-    counter: 
-    element: 
-    formula: Heal_F(MA*20)
-    silence: 'Yes'
-    reflectable: 
-    counter_flood: 
-    counter_magic: 
-  job_id: 9
-
-- id: 190
-  value: 
-  jp_cost: 200
-  name: Titan
-  skill_type: action
-  data:
-    ct: '5'
-    mp: '30'
-    area: '2'
-    jump: 
-    move: 
-    vert: '2'
-    evade: Mag
-    range: '4'
-    target: Any
-    counter: 
-    element: Earth
-    formula: Dmg_F(MA*24)
-    silence: 'Yes'
-    reflectable: 
-    counter_flood: 'Yes'
-    counter_magic: 'Yes'
-  job_id: 9
-
-- id: 195
-  value: 
-  jp_cost: 750
-  name: Half of MP
+- id: 11
+  value:
+  jp_cost: 150
+  name: Equip Axe
   skill_type: support
   data:
-    ct: 
-    mp: 
-    area: 
-    jump: 
-    move: 
-    vert: 
-    evade: 
-    range: 
-    target: 
-    counter: 
-    element: 
-    formula: MP Costs reduced by 50%
-    silence: 
-    reflectable: 
-    counter_flood: 
-    counter_magic: 
-  job_id: 9
-
-- id: 203
-  value: 
-  jp_cost: 150
-  name: Caution
-  skill_type: reaction
-  data:
-    ct: 
-    mp: 
-    area: 
-    jump: 
-    move: 
-    vert: 
-    evade: 
-    range: 
-    target: 
-    counter: 
-    element: 
-    formula: 'Add: Defend until next turn (double evasion, -25% damage taken) on taking
-      damage'
-    silence: 
-    reflectable: 
-    counter_flood: 
-    counter_magic: 
-  job_id: 10
-
-- id: 207
-  value: 
-  jp_cost: 420
-  name: Move+2
-  skill_type: movement
-  data:
-    ct: 
-    mp: 
-    area: 
-    jump: 
-    move: '2'
-    vert: 
-    evade: 
-    range: 
-    target: 
-    counter: 
-    element: 
-    formula: Read the name, this isn't complicated
-    silence: 
-    reflectable: 
-    counter_flood: 
-    counter_magic: 
-  job_id: 10
-
-- id: 235
-  value: 
+    ct:
+    mp:
+    area:
+    jump:
+    move:
+    vert:
+    evade:
+    range:
+    target:
+    counter:
+    element:
+    formula: Can equip axe regardless of job
+    silence:
+    memgen_id: 01CC
+    reflectable:
+    counter_flood:
+    counter_magic:
+  job_id: 1
+- id: 12
+  value:
   jp_cost: 400
   name: Monster Skill
   skill_type: support
   data:
-    ct: 
-    mp: 
-    area: 
-    jump: 
-    move: 
-    vert: 
-    evade: 
-    range: 
-    target: 
-    counter: 
-    element: 
-    formula: Standing beside ally monster unlocks its hidden skill
-    silence: 
-    reflectable: 
-    counter_flood: 
-    counter_magic: 
+    ct:
+    mp:
+    area:
+    jump:
+    move:
+    vert:
+    evade:
+    range:
+    target:
+    counter:
+    element:
+    formula: TEMPORARILY REMOVED
+    silence:
+    memgen_id: 01DE
+    reflectable:
+    counter_flood:
+    counter_magic:
   job_id: 1
-
-- id: 12
-  value: 
+- id: 13
+  value:
+  jp_cost: 180
+  name: Move+1
+  skill_type: movement
+  data:
+    ct:
+    mp:
+    area:
+    jump:
+    move: '1'
+    vert:
+    evade:
+    range:
+    target:
+    counter:
+    element:
+    formula: Read the name, this isn't complicated
+    silence:
+    memgen_id: 01E6
+    reflectable:
+    counter_flood:
+    counter_magic:
+  job_id: 1
+- id: 14
+  value:
   jp_cost: 0
   name: Potion
   skill_type: action
   data:
-    ct: 
-    mp: 
-    area: 
-    jump: 
-    move: 
-    vert: 
-    evade: 
+    ct:
+    mp:
+    area:
+    jump:
+    move:
+    vert:
+    evade:
     range: '1'
     target: Any
-    counter: 
-    element: 
+    counter:
+    element:
     formula: Recover 30 HP
-    silence: 
-    reflectable: 
-    counter_flood: 
-    counter_magic: 
+    silence:
+    memgen_id: '8000'
+    reflectable:
+    counter_flood:
+    counter_magic:
   job_id: 2
-
-- id: 13
-  value: 
+- id: 15
+  value:
   jp_cost: 100
   name: Hi-Potion
   skill_type: action
   data:
-    ct: 
-    mp: 
-    area: 
-    jump: 
-    move: 
-    vert: 
-    evade: 
+    ct:
+    mp:
+    area:
+    jump:
+    move:
+    vert:
+    evade:
     range: '1'
     target: Any
-    counter: 
-    element: 
+    counter:
+    element:
     formula: Recover 60 HP
-    silence: 
-    reflectable: 
-    counter_flood: 
-    counter_magic: 
+    silence:
+    memgen_id: '4000'
+    reflectable:
+    counter_flood:
+    counter_magic:
   job_id: 2
-
-- id: 15
-  value: 
+- id: 16
+  value:
+  jp_cost: 200
+  name: X-Potion
+  skill_type: action
+  data:
+    ct:
+    mp:
+    area:
+    jump:
+    move:
+    vert:
+    evade:
+    range: '1'
+    target: Any
+    counter:
+    element:
+    formula: Recover 90 HP
+    silence:
+    memgen_id: '2000'
+    reflectable:
+    counter_flood:
+    counter_magic:
+  job_id: 2
+- id: 17
+  value:
   jp_cost: 100
   name: Ether
   skill_type: action
   data:
-    ct: 
-    mp: 
-    area: 
-    jump: 
-    move: 
-    vert: 
-    evade: 
+    ct:
+    mp:
+    area:
+    jump:
+    move:
+    vert:
+    evade:
     range: '1'
     target: Any
-    counter: 
-    element: 
+    counter:
+    element:
     formula: Recover 20 MP
-    silence: 
-    reflectable: 
-    counter_flood: 
-    counter_magic: 
+    silence:
+    memgen_id: '1000'
+    reflectable:
+    counter_flood:
+    counter_magic:
   job_id: 2
-
+- id: 18
+  value:
+  jp_cost: 200
+  name: Hi-Ether
+  skill_type: action
+  data:
+    ct:
+    mp:
+    area:
+    jump:
+    move:
+    vert:
+    evade:
+    range: '1'
+    target: Any
+    counter:
+    element:
+    formula: Recover 50 MP
+    silence:
+    memgen_id: '0800'
+    reflectable:
+    counter_flood:
+    counter_magic:
+  job_id: 2
 - id: 19
-  value: 
+  value:
   jp_cost: 25
   name: Maiden's Kiss
   skill_type: action
   data:
-    ct: 
-    mp: 
-    area: 
-    jump: 
-    move: 
-    vert: 
-    evade: 
+    ct:
+    mp:
+    area:
+    jump:
+    move:
+    vert:
+    evade:
     range: '1'
     target: Any
-    counter: 
-    element: 
+    counter:
+    element:
     formula: 'Cure: Frog'
-    silence: 
-    reflectable: 
-    counter_flood: 
-    counter_magic: 
+    silence:
+    memgen_id: '0040'
+    reflectable:
+    counter_flood:
+    counter_magic:
   job_id: 2
-
 - id: 20
-  value: 
+  value:
   jp_cost: 25
   name: Soft
   skill_type: action
   data:
-    ct: 
-    mp: 
-    area: 
-    jump: 
-    move: 
-    vert: 
-    evade: 
+    ct:
+    mp:
+    area:
+    jump:
+    move:
+    vert:
+    evade:
     range: '1'
     target: Any
-    counter: 
-    element: 
+    counter:
+    element:
     formula: 'Cure: Petrify'
-    silence: 
-    reflectable: 
-    counter_flood: 
-    counter_magic: 
+    silence:
+    memgen_id: '0020'
+    reflectable:
+    counter_flood:
+    counter_magic:
   job_id: 2
-
 - id: 21
-  value: 
+  value:
   jp_cost: 25
   name: Holy Water
   skill_type: action
   data:
-    ct: 
-    mp: 
-    area: 
-    jump: 
-    move: 
-    vert: 
-    evade: 
+    ct:
+    mp:
+    area:
+    jump:
+    move:
+    vert:
+    evade:
     range: '1'
     target: Any
-    counter: 
-    element: 
-    formula: 'Cure: Blood Suck'
-    silence: 
-    reflectable: 
-    counter_flood: 
-    counter_magic: 
+    counter:
+    element:
+    formula: 'Cure: Undead'
+    silence:
+    memgen_id: '0010'
+    reflectable:
+    counter_flood:
+    counter_magic:
   job_id: 2
-
+- id: 22
+  value:
+  jp_cost: 200
+  name: Remedy
+  skill_type: action
+  data:
+    ct:
+    mp:
+    area:
+    jump:
+    move:
+    vert:
+    evade:
+    range: '1'
+    target: Any
+    counter:
+    element:
+    formula: 'Cure: Discord+Confuse+Silence+Sleep+Poison+Oil'
+    silence:
+    memgen_id: '0008'
+    reflectable:
+    counter_flood:
+    counter_magic:
+  job_id: 2
 - id: 23
-  value: 
+  value:
   jp_cost: 0
   name: Phoenix Down
   skill_type: action
   data:
-    ct: 
-    mp: 
-    area: 
-    jump: 
-    move: 
-    vert: 
-    evade: 
+    ct:
+    mp:
+    area:
+    jump:
+    move:
+    vert:
+    evade:
     range: '1'
     target: Any
-    counter: 
-    element: 
+    counter:
+    element:
     formula: Revive 1-19 HP
-    silence: 
-    reflectable: 
-    counter_flood: 
-    counter_magic: 
+    silence:
+    memgen_id: '0004'
+    reflectable:
+    counter_flood:
+    counter_magic:
   job_id: 2
-
-- id: 236
-  value: 
+- id: 24
+  value:
   jp_cost: 400
   name: Mega Potion
   skill_type: action
   data:
-    ct: 
-    mp: 
-    area: 
-    jump: 
-    move: 
-    vert: 
-    evade: 
+    ct:
+    mp:
+    area:
+    jump:
+    move:
+    vert:
+    evade:
     range: '1'
     target: Any
-    counter: 
-    element: 
+    counter:
+    element:
     formula: Recover 180 HP
-    silence: 
-    reflectable: 
-    counter_flood: 
-    counter_magic: 
+    silence:
+    memgen_id: '0200'
+    reflectable:
+    counter_flood:
+    counter_magic:
   job_id: 2
-
-- id: 237
-  value: 
+- id: 25
+  value:
   jp_cost: 1000
   name: Power Source
   skill_type: action
   data:
-    ct: 
-    mp: 
-    area: 
-    jump: 
-    move: 
-    vert: 
-    evade: 
+    ct:
+    mp:
+    area:
+    jump:
+    move:
+    vert:
+    evade:
     range: '1'
     target: Any
-    counter: 
-    element: 
+    counter:
+    element:
     formula: Recover 180 HP 50 MP
-    silence: 
-    reflectable: 
-    counter_flood: 
-    counter_magic: 
+    silence:
+    memgen_id: '0002'
+    reflectable:
+    counter_flood:
+    counter_magic:
   job_id: 2
-
-- id: 24
-  value: 
+- id: 26
+  value:
   jp_cost: 600
   name: Auto Potion
   skill_type: reaction
   data:
-    ct: 
-    mp: 
-    area: 
-    jump: 
-    move: 
-    vert: 
-    evade: 
-    range: 
-    target: 
-    counter: 
-    element: 
+    ct:
+    mp:
+    area:
+    jump:
+    move:
+    vert:
+    evade:
+    range:
+    target:
+    counter:
+    element:
     formula: Heal 90 on HP damage
-    silence: 
-    reflectable: 
-    counter_flood: 
-    counter_magic: 
+    silence:
+    memgen_id: 01B9
+    reflectable:
+    counter_flood:
+    counter_magic:
   job_id: 2
-
-- id: 25
-  value: 
+- id: 27
+  value:
   jp_cost: 250
   name: Throw Item
   skill_type: support
   data:
-    ct: 
-    mp: 
-    area: 
-    jump: 
-    move: 
-    vert: 
-    evade: 
-    range: 
-    target: 
-    counter: 
-    element: 
+    ct:
+    mp:
+    area:
+    jump:
+    move:
+    vert:
+    evade:
+    range:
+    target:
+    counter:
+    element:
     formula: Item ability range increased to 4 (CLASS INNATE)
-    silence: 
-    reflectable: 
-    counter_flood: 
-    counter_magic: 
+    silence:
+    memgen_id: 01DA
+    reflectable:
+    counter_flood:
+    counter_magic:
   job_id: 2
-
-- id: 238
-  value: 
-  jp_cost: 0
-  name: Equip Change
+- id: 28
+  value:
+  jp_cost: 200
+  name: Maintenance
   skill_type: support
   data:
-    ct: 
-    mp: 
-    area: 
-    jump: 
-    move: 
-    vert: 
-    evade: 
-    range: 
-    target: 
-    counter: 
-    element: 
-    formula: Does nothing in AI battles (CLASS INNATE)
-    silence: 
-    reflectable: 
-    counter_flood: 
-    counter_magic: 
+    ct:
+    mp:
+    area:
+    jump:
+    move:
+    vert:
+    evade:
+    range:
+    target:
+    counter:
+    element:
+    formula: Protects gear from Break/Steal
+    silence:
+    memgen_id: 01DB
+    reflectable:
+    counter_flood:
+    counter_magic:
   job_id: 2
-
-- id: 239
-  value: 
+- id: 29
+  value:
+  jp_cost: 350
+  name: Sicken
+  skill_type: support
+  data:
+    ct:
+    mp:
+    area:
+    jump:
+    move:
+    vert:
+    evade:
+    range:
+    target:
+    counter:
+    element:
+    formula: 'Attacks add: poison 100% of the time'
+    silence:
+    memgen_id: 01E0
+    reflectable:
+    counter_flood:
+    counter_magic:
+  job_id: 2
+- id: 30
+  value:
   jp_cost: 100
   name: Move-Find Item
   skill_type: movement
   data:
-    ct: 
-    mp: 
-    area: 
-    jump: 
-    move: 
-    vert: 
-    evade: 
-    range: 
-    target: 
-    counter: 
-    element: 
+    ct:
+    mp:
+    area:
+    jump:
+    move:
+    vert:
+    evade:
+    range:
+    target:
+    counter:
+    element:
     formula: Does nothing in AI battles (CLASS INNATE)
-    silence: 
-    reflectable: 
-    counter_flood: 
-    counter_magic: 
+    silence:
+    memgen_id: 01FD
+    reflectable:
+    counter_flood:
+    counter_magic:
   job_id: 2
-
-- id: 54
-  value: 
+- id: 31
+  value:
+  jp_cost: 200
+  name: Power Ruin
+  skill_type: action
+  data:
+    ct:
+    mp: '3'
+    area:
+    jump:
+    move:
+    vert:
+    evade:
+    range: '3'
+    target: Any
+    counter: 'Yes'
+    element:
+    formula: "-3 PA Hit_(PA+65)%"
+    silence:
+    memgen_id: '8000'
+    reflectable:
+    counter_flood: 'Yes'
+    counter_magic: 'Yes'
+  job_id: 3
+- id: 32
+  value:
   jp_cost: 200
   name: Mind Ruin
   skill_type: action
   data:
-    ct: 
-    mp: '6'
-    area: 
-    jump: 
-    move: 
-    vert: 
-    evade: 
+    ct:
+    mp: '3'
+    area:
+    jump:
+    move:
+    vert:
+    evade:
     range: '3'
     target: Any
     counter: 'Yes'
-    element: 
+    element:
     formula: "-3 MA Hit_(PA+65)%"
-    silence: 
-    reflectable: 
+    silence:
+    memgen_id: '4000'
+    reflectable:
     counter_flood: 'Yes'
     counter_magic: 'Yes'
   job_id: 3
-
-- id: 55
-  value: 
+- id: 33
+  value:
   jp_cost: 200
   name: Speed Ruin
   skill_type: action
   data:
-    ct: 
-    mp: '6'
-    area: 
-    jump: 
-    move: 
-    vert: 
-    evade: 
+    ct:
+    mp: '3'
+    area:
+    jump:
+    move:
+    vert:
+    evade:
     range: '3'
     target: Any
     counter: 'Yes'
-    element: 
+    element:
     formula: 'Add: Slow Hit_(PA+60)%'
-    silence: 
-    reflectable: 
+    silence:
+    memgen_id: '2000'
+    reflectable:
     counter_flood: 'Yes'
     counter_magic: 'Yes'
   job_id: 3
-
-- id: 240
-  value: 
+- id: 34
+  value:
+  jp_cost: 100
+  name: Magic Ruin
+  skill_type: action
+  data:
+    ct:
+    mp: '3'
+    area:
+    jump:
+    move:
+    vert:
+    evade:
+    range: '3'
+    target: Any
+    counter: 'Yes'
+    element:
+    formula: DmgMP_(50% max) Hit_(PA+60)%
+    silence:
+    memgen_id: '1000'
+    reflectable:
+    counter_flood: 'Yes'
+    counter_magic: 'Yes'
+  job_id: 3
+- id: 35
+  value:
   jp_cost: 600
   name: Hellcry Punch
   skill_type: action
   data:
-    ct: 
-    mp: '15'
-    area: 
-    jump: 
-    move: 
-    vert: 
-    evade: 
-    range: 
+    ct:
+    mp: '10'
+    area:
+    jump:
+    move:
+    vert:
+    evade:
+    range:
     target: Any
     counter: 'Yes'
-    element: 
-    formula: Dmg_(PA*WP/2) Break Weapon ELSE miss
-    silence: 
-    reflectable: 
+    element:
+    formula: Dmg_(PA*WP/2) Break Weapon ELSE miss (20% break failure rate)
+    silence:
+    memgen_id: '0200'
+    reflectable:
     counter_flood: 'Yes'
-    counter_magic: 
+    counter_magic:
   job_id: 3
-
-- id: 241
-  value: 
+- id: 36
+  value:
   jp_cost: 200
   name: Blastar Punch
   skill_type: action
   data:
-    ct: 
-    mp: '15'
-    area: 
-    jump: 
-    move: 
-    vert: 
-    evade: 
-    range: 
+    ct:
+    mp: '10'
+    area:
+    jump:
+    move:
+    vert:
+    evade:
+    range:
     target: Any
     counter: 'Yes'
-    element: 
-    formula: Dmg_(PA*WP/2) Break Helm ELSE miss
-    silence: 
-    reflectable: 
+    element:
+    formula: Dmg_(PA*WP/2) Break Helm ELSE miss (20% break failure rate)
+    silence:
+    memgen_id: '0400'
+    reflectable:
     counter_flood: 'Yes'
-    counter_magic: 
+    counter_magic:
   job_id: 3
-
-- id: 242
-  value: 
+- id: 37
+  value:
   jp_cost: 400
   name: Shellbust Stab
   skill_type: action
   data:
-    ct: 
-    mp: '15'
-    area: 
-    jump: 
-    move: 
-    vert: 
-    evade: 
-    range: 
+    ct:
+    mp: '10'
+    area:
+    jump:
+    move:
+    vert:
+    evade:
+    range:
     target: Any
     counter: 'Yes'
-    element: 
-    formula: Dmg_(PA*WP/2) Break Armor ELSE miss
-    silence: 
-    reflectable: 
+    element:
+    formula: Dmg_(PA*WP/2) Break Armor ELSE miss (20% break failure rate)
+    silence:
+    memgen_id: '0800'
+    reflectable:
     counter_flood: 'Yes'
-    counter_magic: 
+    counter_magic:
   job_id: 3
-
-- id: 243
-  value: 
+- id: 38
+  value:
   jp_cost: 200
   name: Icewolf Bite
   skill_type: action
   data:
-    ct: 
-    mp: '15'
-    area: 
-    jump: 
-    move: 
-    vert: 
-    evade: 
-    range: 
+    ct:
+    mp: '10'
+    area:
+    jump:
+    move:
+    vert:
+    evade:
+    range:
     target: Any
     counter: 'Yes'
-    element: 
-    formula: Dmg_(PA*WP/2) Break Accessory ELSE miss
-    silence: 
-    reflectable: 
+    element:
+    formula: Dmg_(PA*WP/2) Break Accessory ELSE miss (20% break failure rate)
+    silence:
+    memgen_id: '0100'
+    reflectable:
     counter_flood: 'Yes'
-    counter_magic: 
+    counter_magic:
   job_id: 3
-
-- id: 61
-  value: 
+- id: 39
+  value:
   jp_cost: 300
   name: Counter
   skill_type: reaction
   data:
-    ct: 
-    mp: 
-    area: 
-    jump: 
-    move: 
-    vert: 
-    evade: 
-    range: 
-    target: 
-    counter: 
-    element: 
+    ct:
+    mp:
+    area:
+    jump:
+    move:
+    vert:
+    evade:
+    range:
+    target:
+    counter:
+    element:
     formula: Counter with attack command if in range
-    silence: 
-    reflectable: 
-    counter_flood: 
-    counter_magic: 
+    silence:
+    memgen_id: 01BA
+    reflectable:
+    counter_flood:
+    counter_magic:
   job_id: 3
-
-- id: 63
-  value: 
+- id: 40
+  value:
   jp_cost: 400
   name: Equip Armor
   skill_type: support
   data:
-    ct: 
-    mp: 
-    area: 
-    jump: 
-    move: 
-    vert: 
-    evade: 
-    range: 
-    target: 
-    counter: 
-    element: 
+    ct:
+    mp:
+    area:
+    jump:
+    move:
+    vert:
+    evade:
+    range:
+    target:
+    counter:
+    element:
     formula: Can equip heavy armor or helmets regardless of class
-    silence: 
-    reflectable: 
-    counter_flood: 
-    counter_magic: 
+    silence:
+    memgen_id: 01C6
+    reflectable:
+    counter_flood:
+    counter_magic:
   job_id: 3
-
-- id: 65
-  value: 
+- id: 41
+  value:
+  jp_cost: 200
+  name: Equip Shield
+  skill_type: support
+  data:
+    ct:
+    mp:
+    area:
+    jump:
+    move:
+    vert:
+    evade:
+    range:
+    target:
+    counter:
+    element:
+    formula: Can equip shield regardless of job
+    silence:
+    memgen_id: 01C7
+    reflectable:
+    counter_flood:
+    counter_magic:
+  job_id: 3
+- id: 42
+  value:
   jp_cost: 350
   name: Equip Sword
   skill_type: support
   data:
-    ct: 
-    mp: 
-    area: 
-    jump: 
-    move: 
-    vert: 
-    evade: 
-    range: 
-    target: 
-    counter: 
-    element: 
+    ct:
+    mp:
+    area:
+    jump:
+    move:
+    vert:
+    evade:
+    range:
+    target:
+    counter:
+    element:
     formula: Can equip sword regardless of job
-    silence: 
-    reflectable: 
-    counter_flood: 
-    counter_magic: 
+    silence:
+    memgen_id: 01C8
+    reflectable:
+    counter_flood:
+    counter_magic:
   job_id: 3
-
-- id: 75
-  value: 
+- id: 43
+  value:
   jp_cost: 100
   name: Timed Strike
   skill_type: action
   data:
     ct: '4'
-    mp: 
-    area: 
-    jump: 
-    move: 
-    vert: 
+    mp:
+    area:
+    jump:
+    move:
+    vert:
     evade: Phys
     range: Weapon
-    target: 
+    target:
     counter: 'Yes'
-    element: 
+    element:
     formula: Dmg_(PA*(WP+4))
-    silence: 
-    reflectable: 
+    silence:
+    memgen_id: '8000'
+    reflectable:
     counter_flood: 'Yes'
-    counter_magic: 
+    counter_magic:
   job_id: 4
-
-- id: 76
-  value: 
+- id: 44
+  value:
   jp_cost: 100
   name: Stunning Strike
   skill_type: action
   data:
-    ct: 
-    mp: 
-    area: 
-    jump: 
-    move: 
-    vert: 
+    ct:
+    mp:
+    area:
+    jump:
+    move:
+    vert:
     evade: Phys
     range: Weapon
-    target: 
+    target:
     counter: 'Yes'
-    element: 
+    element:
     formula: 'Cancel: Charging, Performing Hit_(Speed+65)%'
-    silence: 
-    reflectable: 
+    silence:
+    memgen_id: '4000'
+    reflectable:
     counter_flood: 'Yes'
-    counter_magic: 
+    counter_magic:
   job_id: 4
-
-- id: 78
-  value: 
+- id: 45
+  value:
+  jp_cost: 200
+  name: Cursed Strike
+  skill_type: action
+  data:
+    ct:
+    mp:
+    area:
+    jump:
+    move:
+    vert:
+    evade: Phys
+    range: Weapon
+    target:
+    counter: 'Yes'
+    element:
+    formula: 'Add: Oil, Discord Hit_(Speed+70)%'
+    silence:
+    memgen_id: '2000'
+    reflectable:
+    counter_flood: 'Yes'
+    counter_magic:
+  job_id: 4
+- id: 46
+  value:
   jp_cost: 250
   name: Mocking Strike
   skill_type: action
   data:
-    ct: 
-    mp: 
-    area: 
-    jump: 
-    move: 
-    vert: 
+    ct:
+    mp:
+    area:
+    jump:
+    move:
+    vert:
     evade: Phys
     range: Weapon
-    target: 
+    target:
     counter: 'Yes'
-    element: 
+    element:
     formula: Brave -15 Hit_(MA+75)%
-    silence: 
-    reflectable: 
+    silence:
+    memgen_id: '1000'
+    reflectable:
     counter_flood: 'Yes'
-    counter_magic: 
+    counter_magic:
   job_id: 4
-
-- id: 80
-  value: 
+- id: 47
+  value:
+  jp_cost: 200
+  name: Heartache Strike
+  skill_type: action
+  data:
+    ct:
+    mp:
+    area:
+    jump:
+    move:
+    vert:
+    evade: Phys
+    range: Weapon
+    target:
+    counter: 'Yes'
+    element:
+    formula: 'Add to opposite sex: Confuse or Berserk or Slow or Charm or Sleep or
+      Don''t Act Hit_(MA+70)%'
+    silence:
+    memgen_id: '0800'
+    reflectable:
+    counter_flood: 'Yes'
+    counter_magic:
+  job_id: 4
+- id: 48
+  value:
   jp_cost: 400
   name: Temporal Strike
   skill_type: action
   data:
-    ct: 
-    mp: 
-    area: 
-    jump: 
-    move: 
-    vert: 
+    ct:
+    mp:
+    area:
+    jump:
+    move:
+    vert:
     evade: Mag
     range: Weapon
-    target: 
+    target:
     counter: 'Yes'
-    element: 
-    formula: 'Cancel: Haste Dmg_(66% max HP) Hit_F(MA+250)%'
-    silence: 
-    reflectable: 
+    element:
+    formula: 'Cancel: Haste Dmg_(66% max HP) Hit_F(MA+250)% Fails if target not hasted'
+    silence:
+    memgen_id: '0400'
+    reflectable:
     counter_flood: 'Yes'
-    counter_magic: 
+    counter_magic:
   job_id: 4
-
-- id: 82
-  value: 
+- id: 49
+  value:
+  jp_cost: 600
+  name: CT Save
+  skill_type: reaction
+  data:
+    ct:
+    mp:
+    area:
+    jump:
+    move:
+    vert:
+    evade:
+    range:
+    target:
+    counter:
+    element:
+    formula: Increase CT by 20 upon taking damage
+    silence:
+    memgen_id: 01A8
+    reflectable:
+    counter_flood:
+    counter_magic:
+  job_id: 4
+- id: 50
+  value:
   jp_cost: 400
   name: Arrow Guard
   skill_type: reaction
   data:
-    ct: 
-    mp: 
-    area: 
-    jump: 
-    move: 
-    vert: 
-    evade: 
-    range: 
-    target: 
-    counter: 
-    element: 
+    ct:
+    mp:
+    area:
+    jump:
+    move:
+    vert:
+    evade:
+    range:
+    target:
+    counter:
+    element:
     formula: Raise evasion vs Arrows by Brave%
-    silence: 
-    reflectable: 
-    counter_flood: 
-    counter_magic: 
+    silence:
+    memgen_id: 01C4
+    reflectable:
+    counter_flood:
+    counter_magic:
   job_id: 4
-
-- id: 83
-  value: 
+- id: 51
+  value:
   jp_cost: 200
   name: Equip Bows
   skill_type: support
   data:
-    ct: 
-    mp: 
-    area: 
-    jump: 
-    move: 
-    vert: 
-    evade: 
-    range: 
-    target: 
-    counter: 
-    element: 
+    ct:
+    mp:
+    area:
+    jump:
+    move:
+    vert:
+    evade:
+    range:
+    target:
+    counter:
+    element:
     formula: Can equip bow or crossbow regardless of job
-    silence: 
-    reflectable: 
-    counter_flood: 
-    counter_magic: 
+    silence:
+    memgen_id: 01CA
+    reflectable:
+    counter_flood:
+    counter_magic:
   job_id: 4
-
-- id: 85
-  value: 
+- id: 52
+  value:
+  jp_cost: 350
+  name: Concentrate
+  skill_type: support
+  data:
+    ct:
+    mp:
+    area:
+    jump:
+    move:
+    vert:
+    evade:
+    range:
+    target:
+    counter:
+    element:
+    formula: Physical attacks and skills ignore evasion (THIEF INNATE)
+    silence:
+    memgen_id: 01D5
+    reflectable:
+    counter_flood:
+    counter_magic:
+  job_id: 4
+- id: 53
+  value:
   jp_cost: 100
   name: Jump+1
   skill_type: movement
   data:
-    ct: 
-    mp: 
-    area: 
+    ct:
+    mp:
+    area:
     jump: '1'
-    move: 
-    vert: 
-    evade: 
-    range: 
-    target: 
-    counter: 
-    element: 
+    move:
+    vert:
+    evade:
+    range:
+    target:
+    counter:
+    element:
     formula: Read the name, this isn't complicated
-    silence: 
-    reflectable: 
-    counter_flood: 
-    counter_magic: 
+    silence:
+    memgen_id: 01E9
+    reflectable:
+    counter_flood:
+    counter_magic:
   job_id: 4
-
-- id: 97
-  value: 
+- id: 54
+  value:
   jp_cost: 150
   name: Spin Fist
   skill_type: action
   data:
-    ct: 
-    mp: 
+    ct:
+    mp:
     area: '2'
-    jump: 
-    move: 
-    vert: 
+    jump:
+    move:
+    vert:
     evade: Phys
     range: '0'
     target: Any
     counter: 'Yes'
-    element: 
+    element:
     formula: Dmg_((PA)/2*PA)
-    silence: 
-    reflectable: 
+    silence:
+    memgen_id: '8000'
+    reflectable:
     counter_flood: 'Yes'
-    counter_magic: 
+    counter_magic:
   job_id: 5
-
-- id: 98
-  value: 
+- id: 55
+  value:
   jp_cost: 250
   name: Repeating Fist
   skill_type: action
   data:
-    ct: 
-    mp: 
-    area: 
-    jump: 
-    move: 
+    ct:
+    mp:
+    area:
+    jump:
+    move:
     vert: '0'
-    evade: 
+    evade:
     range: '1'
     target: Any
     counter: 'Yes'
-    element: 
+    element:
     formula: Dmg_((PA+2)/2*PA)
-    silence: 
-    reflectable: 
+    silence:
+    memgen_id: '4000'
+    reflectable:
     counter_flood: 'Yes'
-    counter_magic: 
+    counter_magic:
   job_id: 5
-
-- id: 100
-  value: 
+- id: 56
+  value:
+  jp_cost: 250
+  name: Wave Fist
+  skill_type: action
+  data:
+    ct:
+    mp:
+    area:
+    jump:
+    move:
+    vert: '3'
+    evade: Phys
+    range: '3'
+    target: Any
+    counter: 'Yes'
+    element:
+    formula: Dmg_((PA+2)/2*PA)
+    silence:
+    memgen_id: '2000'
+    reflectable:
+    counter_flood: 'Yes'
+    counter_magic:
+  job_id: 5
+- id: 57
+  value:
   jp_cost: 500
   name: Earth Slash
   skill_type: action
   data:
-    ct: 
-    mp: 
+    ct:
+    mp:
     area: Linear
-    jump: 
-    move: 
+    jump:
+    move:
     vert: '2'
     evade: Phys
     range: '5'
@@ -2226,158 +1362,254 @@
     counter: 'Yes'
     element: Earth
     formula: Dmg_((PA)/2*PA)
-    silence: 
-    reflectable: 
+    silence:
+    memgen_id: '1000'
+    reflectable:
     counter_flood: 'Yes'
-    counter_magic: 
+    counter_magic:
   job_id: 5
-
-- id: 101
-  value: 
+- id: 58
+  value:
   jp_cost: 300
   name: Secret Fist
   skill_type: action
   data:
-    ct: 
-    mp: 
-    area: 
-    jump: 
-    move: 
+    ct:
+    mp:
+    area:
+    jump:
+    move:
     vert: '0'
     evade: Phys
     range: '1'
     target: Any
     counter: 'Yes'
-    element: 
+    element:
     formula: 'Add: Death Sentence Hit_(MA+70)%'
-    silence: 
-    reflectable: 
+    silence:
+    memgen_id: '0800'
+    reflectable:
     counter_flood: 'Yes'
-    counter_magic: 
+    counter_magic:
   job_id: 5
-
-- id: 103
-  value: 
+- id: 59
+  value:
+  jp_cost: 400
+  name: Disharmony
+  skill_type: action
+  data:
+    ct:
+    mp:
+    area:
+    jump:
+    move:
+    vert:
+    evade:
+    range: '1'
+    target: Any
+    counter: 'Yes'
+    element:
+    formula: 'Add: Discord Hit_(100)%'
+    silence:
+    memgen_id: '0400'
+    reflectable:
+    counter_flood: 'Yes'
+    counter_magic:
+  job_id: 5
+- id: 60
+  value:
+  jp_cost: 100
+  name: Stigma Magic
+  skill_type: action
+  data:
+    ct:
+    mp:
+    area: '1'
+    jump:
+    move:
+    vert:
+    evade:
+    range: '0'
+    target: Any
+    counter:
+    element:
+    formula: 'Cancel: All negative status Hit_(100)%'
+    silence:
+    memgen_id: '0200'
+    reflectable:
+    counter_flood:
+    counter_magic:
+  job_id: 5
+- id: 61
+  value:
   jp_cost: 300
   name: Chakra
   skill_type: action
   data:
-    ct: 
-    mp: 
+    ct:
+    mp:
     area: '1'
-    jump: 
-    move: 
-    vert: 
-    evade: 
+    jump:
+    move:
+    vert:
+    evade:
     range: '0'
     target: Any
-    counter: 
-    element: 
+    counter:
+    element:
     formula: Heal HP PA*5 Heal MP PA*5/2
-    silence: 
-    reflectable: 
-    counter_flood: 
-    counter_magic: 
+    silence:
+    memgen_id: '0100'
+    reflectable:
+    counter_flood:
+    counter_magic:
   job_id: 5
-
-- id: 104
-  value: 
+- id: 62
+  value:
   jp_cost: 420
   name: Revive
   skill_type: action
   data:
-    ct: 
-    mp: 
-    area: 
-    jump: 
-    move: 
+    ct:
+    mp:
+    area:
+    jump:
+    move:
     vert: '0'
-    evade: 
+    evade:
     range: '1'
     target: Dead
-    counter: 
-    element: 
+    counter:
+    element:
     formula: Revive 20% Hit_(PA+70)%
-    silence: 
-    reflectable: 
-    counter_flood: 
-    counter_magic: 
+    silence:
+    memgen_id: '0080'
+    reflectable:
+    counter_flood:
+    counter_magic:
   job_id: 5
-
-- id: 105
-  value: 
+- id: 63
+  value:
   jp_cost: 400
   name: HP Restore
   skill_type: reaction
   data:
-    ct: 
-    mp: 
-    area: 
-    jump: 
-    move: 
-    vert: 
-    evade: 
-    range: 
-    target: 
-    counter: 
-    element: 
+    ct:
+    mp:
+    area:
+    jump:
+    move:
+    vert:
+    evade:
+    range:
+    target:
+    counter:
+    element:
     formula: Heal to full when put into critical
-    silence: 
-    reflectable: 
-    counter_flood: 
-    counter_magic: 
+    silence:
+    memgen_id: 01AF
+    reflectable:
+    counter_flood:
+    counter_magic:
   job_id: 5
-
-- id: 106
-  value: 
+- id: 64
+  value:
   jp_cost: 200
   name: Meatbone Slash
   skill_type: reaction
   data:
-    ct: 
-    mp: 
-    area: 
-    jump: 
-    move: 
-    vert: 
-    evade: 
-    range: 
-    target: 
-    counter: 
-    element: 
+    ct:
+    mp:
+    area:
+    jump:
+    move:
+    vert:
+    evade:
+    range:
+    target:
+    counter:
+    element:
     formula: Deal your max HP in unevadable melee damage when put into critical
-    silence: 
-    reflectable: 
-    counter_flood: 
-    counter_magic: 
+    silence:
+    memgen_id: 01B2
+    reflectable:
+    counter_flood:
+    counter_magic:
   job_id: 5
-
-- id: 108
-  value: 
+- id: 65
+  value:
+  jp_cost: 400
+  name: Guts
+  skill_type: support
+  data:
+    ct:
+    mp:
+    area:
+    jump:
+    move:
+    vert:
+    evade:
+    range:
+    target:
+    counter:
+    element:
+    formula: 30% chance to survive lethal damage at 1 hp
+    silence:
+    memgen_id: 01D6
+    reflectable:
+    counter_flood:
+    counter_magic:
+  job_id: 5
+- id: 66
+  value:
+  jp_cost: 600
+  name: Martial Arts
+  skill_type: support
+  data:
+    ct:
+    mp:
+    area:
+    jump:
+    move:
+    vert:
+    evade:
+    range:
+    target:
+    counter:
+    element:
+    formula: 50% bonus PA to PA-based skills and fist attacks (CLASS INNATE)
+    silence:
+    memgen_id: 01D8
+    reflectable:
+    counter_flood:
+    counter_magic:
+  job_id: 5
+- id: 67
+  value:
   jp_cost: 270
   name: Move-HP Up
   skill_type: movement
   data:
-    ct: 
-    mp: 
-    area: 
-    jump: 
-    move: 
-    vert: 
-    evade: 
-    range: 
-    target: 
-    counter: 
-    element: 
+    ct:
+    mp:
+    area:
+    jump:
+    move:
+    vert:
+    evade:
+    range:
+    target:
+    counter:
+    element:
     formula: Recover HP as you move
-    silence: 
-    reflectable: 
-    counter_flood: 
-    counter_magic: 
+    silence:
+    memgen_id: 01ED
+    reflectable:
+    counter_flood:
+    counter_magic:
   job_id: 5
-
-- id: 136
-  value: 
+- id: 68
+  value:
   jp_cost: 50
   name: Cure
   skill_type: action
@@ -2385,95 +1617,191 @@
     ct: '3'
     mp: '6'
     area: '1'
-    jump: 
-    move: 
+    jump:
+    move:
     vert: '1'
-    evade: 
+    evade:
     range: '4'
     target: Any
-    counter: 
+    counter:
     element: Holy
     formula: Heal_F(MA*20)
     silence: 'Yes'
+    memgen_id: '8000'
     reflectable: 'Yes'
-    counter_flood: 
-    counter_magic: 
+    counter_flood:
+    counter_magic:
   job_id: 6
-
-- id: 244
-  value: 
+- id: 69
+  value:
+  jp_cost: 100
+  name: Holy Strike
+  skill_type: action
+  data:
+    ct:
+    mp: '6'
+    area:
+    jump:
+    move:
+    vert:
+    evade: Mag
+    range: Weapon
+    target: Any
+    counter: 'Yes'
+    element: Holy
+    formula: 'Dmg_((PA+6)/2*MA) 20% Add: Confuse'
+    silence:
+    memgen_id: '4000'
+    reflectable:
+    counter_flood: 'Yes'
+    counter_magic: 'Yes'
+  job_id: 6
+- id: 70
+  value:
+  jp_cost: 220
+  name: Rejuvenate
+  skill_type: action
+  data:
+    ct: '5'
+    mp: '16'
+    area: '2'
+    jump:
+    move:
+    vert: '2'
+    evade:
+    range: '4'
+    target: Any
+    counter:
+    element: Holy
+    formula: Heal_F(MA*30)
+    silence: 'Yes'
+    memgen_id: '2000'
+    reflectable: 'Yes'
+    counter_flood:
+    counter_magic:
+  job_id: 6
+- id: 71
+  value:
   jp_cost: 300
   name: Flash Heal
   skill_type: action
   data:
-    ct: 
+    ct:
     mp: '20'
-    area: 
-    jump: 
-    move: 
-    vert: 
-    evade: 
+    area:
+    jump:
+    move:
+    vert:
+    evade:
     range: '4'
     target: Any
-    counter: 
-    element: 
+    counter:
+    element:
     formula: Heal_F(MA*30)
     silence: 'Yes'
+    memgen_id: '1000'
     reflectable: 'Yes'
-    counter_flood: 
-    counter_magic: 
+    counter_flood:
+    counter_magic:
   job_id: 6
-
-- id: 141
-  value: 
+- id: 72
+  value:
+  jp_cost: 150
+  name: Life
+  skill_type: action
+  data:
+    ct: '3'
+    mp: '10'
+    area:
+    jump:
+    move:
+    vert:
+    evade:
+    range: '4'
+    target: Any
+    counter:
+    element:
+    formula: Revive 50% Hit_F(MA+255)%
+    silence: 'Yes'
+    memgen_id: '0800'
+    reflectable: 'Yes'
+    counter_flood:
+    counter_magic:
+  job_id: 6
+- id: 73
+  value:
   jp_cost: 400
   name: Full Life
   skill_type: action
   data:
     ct: '6'
     mp: '20'
-    area: 
-    jump: 
-    move: 
-    vert: 
-    evade: 
+    area:
+    jump:
+    move:
+    vert:
+    evade:
     range: '4'
     target: Any
-    counter: 
-    element: 
+    counter:
+    element:
     formula: Revive 100% Hit_F(MA+190)%
     silence: 'Yes'
+    memgen_id: '0400'
     reflectable: 'Yes'
-    counter_flood: 
-    counter_magic: 
+    counter_flood:
+    counter_magic:
   job_id: 6
-
-- id: 142
-  value: 
+- id: 74
+  value:
   jp_cost: 400
   name: Reraise
   skill_type: action
   data:
     ct: '5'
     mp: '16'
-    area: 
-    jump: 
-    move: 
-    vert: 
-    evade: 
+    area:
+    jump:
+    move:
+    vert:
+    evade:
     range: '3'
     target: Any
-    counter: 
-    element: 
+    counter:
+    element:
     formula: 'Add: Reraise Hit_F(MA+170)%'
     silence: 'Yes'
+    memgen_id: '0200'
     reflectable: 'Yes'
-    counter_flood: 
-    counter_magic: 
+    counter_flood:
+    counter_magic:
   job_id: 6
-
-- id: 144
-  value: 
+- id: 75
+  value:
+  jp_cost: 250
+  name: Regen
+  skill_type: action
+  data:
+    ct: '2'
+    mp: '8'
+    area: '1'
+    jump:
+    move:
+    vert: '2'
+    evade:
+    range: '3'
+    target: Any
+    counter:
+    element:
+    formula: 'Add: Regen Hit_F(MA+200)%'
+    silence: 'Yes'
+    memgen_id: '0100'
+    reflectable: 'Yes'
+    counter_flood:
+    counter_magic:
+  job_id: 6
+- id: 76
+  value:
   jp_cost: 70
   name: Protect
   skill_type: action
@@ -2481,23 +1809,23 @@
     ct: '2'
     mp: '6'
     area: '1'
-    jump: 
-    move: 
+    jump:
+    move:
     vert: '1'
-    evade: 
+    evade:
     range: '3'
     target: Any
-    counter: 
-    element: 
+    counter:
+    element:
     formula: 'Add: Protect Hit_F(MA+200)%'
     silence: 'Yes'
+    memgen_id: '0080'
     reflectable: 'Yes'
-    counter_flood: 
-    counter_magic: 
+    counter_flood:
+    counter_magic:
   job_id: 6
-
-- id: 145
-  value: 
+- id: 77
+  value:
   jp_cost: 70
   name: Shell
   skill_type: action
@@ -2505,3001 +1833,47 @@
     ct: '2'
     mp: '6'
     area: '1'
-    jump: 
-    move: 
+    jump:
+    move:
     vert: '1'
-    evade: 
+    evade:
     range: '3'
     target: Any
-    counter: 
-    element: 
+    counter:
+    element:
     formula: 'Add: Shell Hit_F(MA+200)%'
     silence: 'Yes'
+    memgen_id: '0040'
     reflectable: 'Yes'
-    counter_flood: 
-    counter_magic: 
+    counter_flood:
+    counter_magic:
   job_id: 6
-
-- id: 146
-  value: 
+- id: 78
+  value:
   jp_cost: 200
   name: Wall
   skill_type: action
   data:
     ct: '3'
     mp: '12'
-    area: 
-    jump: 
-    move: 
-    vert: 
-    evade: 
+    area:
+    jump:
+    move:
+    vert:
+    evade:
     range: '3'
     target: Any
-    counter: 
-    element: 
+    counter:
+    element:
     formula: 'Add: Protect+Shell Hit_F(MA+255)%'
     silence: 'Yes'
+    memgen_id: '0020'
     reflectable: 'Yes'
-    counter_flood: 
-    counter_magic: 
+    counter_flood:
+    counter_magic:
   job_id: 6
-
-- id: 148
-  value: 
-  jp_cost: 200
-  name: Holy
-  skill_type: action
-  data:
-    ct: '3'
-    mp: '10'
-    area: 
-    jump: 
-    move: 
-    vert: 
-    evade: Mag
-    range: '5'
-    target: Any
-    counter: 
-    element: Holy
-    formula: Dmg_F(MA*18)
-    silence: 'Yes'
-    reflectable: 'Yes'
-    counter_flood: 'Yes'
-    counter_magic: 'Yes'
-  job_id: 6
-
-- id: 149
-  value: 
-  jp_cost: 350
-  name: Regenerator
-  skill_type: reaction
-  data:
-    ct: 
-    mp: 
-    area: 
-    jump: 
-    move: 
-    vert: 
-    evade: 
-    range: 
-    target: 
-    counter: 
-    element: 
-    formula: 'Add: Regen on HP damage'
-    silence: 
-    reflectable: 
-    counter_flood: 
-    counter_magic: 
-  job_id: 6
-
-- id: 150
-  value: 
-  jp_cost: 350
-  name: Magic DefendUP
-  skill_type: support
-  data:
-    ct: 
-    mp: 
-    area: 
-    jump: 
-    move: 
-    vert: 
-    evade: 
-    range: 
-    target: 
-    counter: 
-    element: 
-    formula: Reduce magic damage received by 33%
-    silence: 
-    reflectable: 
-    counter_flood: 
-    counter_magic: 
-  job_id: 6
-
-- id: 224
-  value: 
-  jp_cost: 150
-  name: Chain Lightning
-  skill_type: action
-  data:
-    ct: 
-    mp: '8'
-    area: Linear
-    jump: 
-    move: 
-    vert: 
-    evade: Mag
-    range: '7'
-    target: Any
-    counter: 
-    element: Lightning
-    formula: Dmg_F(MA*16)
-    silence: 'Yes'
-    reflectable: 'Yes'
-    counter_flood: 'Yes'
-    counter_magic: 'Yes'
-  job_id: 7
-
-- id: 225
-  value: 
-  jp_cost: 200
-  name: Cyclone
-  skill_type: action
-  data:
-    ct: '4'
-    mp: '12'
-    area: '2'
-    jump: 
-    move: 
-    vert: '2'
-    evade: Mag
-    range: '4'
-    target: Any
-    counter: 
-    element: Wind
-    formula: 'Dmg_F(MA*16) 20% Add: Float'
-    silence: 'Yes'
-    reflectable: 'Yes'
-    counter_flood: 'Yes'
-    counter_magic: 'Yes'
-  job_id: 7
-
-- id: 227
-  value: 
-  jp_cost: 400
-  name: Blizzard
-  skill_type: action
-  data:
-    ct: '5'
-    mp: '24'
-    area: '2'
-    jump: 
-    move: 
-    vert: '3'
-    evade: Mag
-    range: '4'
-    target: Any
-    counter: 
-    element: Ice
-    formula: 'Dmg_F(MA*24) 20% Add: Slow'
-    silence: 'Yes'
-    reflectable: 'Yes'
-    counter_flood: 'Yes'
-    counter_magic: 'Yes'
-  job_id: 7
-
-- id: 228
-  value: 
-  jp_cost: 200
-  name: Comet
-  skill_type: action
-  data:
-    ct: '4'
-    mp: '16'
-    area: '1'
-    jump: 
-    move: 
-    vert: '2'
-    evade: Mag
-    range: '4'
-    target: Any
-    counter: 
-    element: Fire
-    formula: Dmg_F(MA*18)
-    silence: 'Yes'
-    reflectable: 'Yes'
-    counter_flood: 'Yes'
-    counter_magic: 'Yes'
-  job_id: 7
-
-- id: 229
-  value: 
-  jp_cost: 280
-  name: Meltdown
-  skill_type: action
-  data:
-    ct: '5'
-    mp: '16'
-    area: '2'
-    jump: 
-    move: 
-    vert: '2'
-    evade: 
-    range: '0'
-    target: Any
-    counter: 
-    element: 
-    formula: 'Dmg_(Missing HP) Add: Dead to self'
-    silence: 'Yes'
-    reflectable: 'Yes'
-    counter_flood: 'Yes'
-    counter_magic: 'Yes'
-  job_id: 7
-
-- id: 231
-  value: 
-  jp_cost: 600
-  name: Dark Holy
-  skill_type: action
-  data:
-    ct: '6'
-    mp: '46'
-    area: 
-    jump: 
-    move: 
-    vert: 
-    evade: 
-    range: '5'
-    target: Any
-    counter: 
-    element: 
-    formula: Dmg_F(MA*40)
-    silence: 'Yes'
-    reflectable: 'Yes'
-    counter_flood: 'Yes'
-    counter_magic: 'Yes'
-  job_id: 7
-
-- id: 232
-  value: 
-  jp_cost: 700
-  name: Counter Magic
-  skill_type: reaction
-  data:
-    ct: 
-    mp: 
-    area: 
-    jump: 
-    move: 
-    vert: 
-    evade: 
-    range: 
-    target: 
-    counter: 
-    element: 
-    formula: Cast the same spell just used on yourself
-    silence: 
-    reflectable: 
-    counter_flood: 
-    counter_magic: 
-  job_id: 7
-
-- id: 233
-  value: 
-  jp_cost: 350
-  name: Magic AttackUP
-  skill_type: support
-  data:
-    ct: 
-    mp: 
-    area: 
-    jump: 
-    move: 
-    vert: 
-    evade: 
-    range: 
-    target: 
-    counter: 
-    element: 
-    formula: Increases magic damage by 33%
-    silence: 
-    reflectable: 
-    counter_flood: 
-    counter_magic: 
-  job_id: 7
-
-- id: 210
-  value: 
-  jp_cost: 500
-  name: Haste 2
-  skill_type: action
-  data:
-    ct: '6'
-    mp: '30'
-    area: '2'
-    jump: 
-    move: 
-    vert: '2'
-    evade: 
-    range: '3'
-    target: Any
-    counter: 
-    element: 
-    formula: 'Add: Haste Hit_F(MA+240)%'
-    silence: 'Yes'
-    reflectable: 'Yes'
-    counter_flood: 
-    counter_magic: 
-  job_id: 8
-
-- id: 211
-  value: 
-  jp_cost: 80
-  name: Slow
-  skill_type: action
-  data:
-    ct: '2'
-    mp: '8'
-    area: '1'
-    jump: 
-    move: 
-    vert: 
-    evade: Mag
-    range: '3'
-    target: Any
-    counter: 
-    element: 
-    formula: 'Add: Slow Hit_F(MA+180)%'
-    silence: 'Yes'
-    reflectable: 'Yes'
-    counter_flood: 'Yes'
-    counter_magic: 'Yes'
-  job_id: 8
-
-- id: 212
-  value: 
-  jp_cost: 500
-  name: Slow 2
-  skill_type: action
-  data:
-    ct: '5'
-    mp: '30'
-    area: '2'
-    jump: 
-    move: 
-    vert: '2'
-    evade: Mag
-    range: '3'
-    target: Any
-    counter: 
-    element: 
-    formula: 'Add: Slow Hit_F(MA+240)%'
-    silence: 'Yes'
-    reflectable: 'Yes'
-    counter_flood: 'Yes'
-    counter_magic: 'Yes'
-  job_id: 8
-
-- id: 213
-  value: 
-  jp_cost: 300
-  name: Stop
-  skill_type: action
-  data:
-    ct: '6'
-    mp: '14'
-    area: '1'
-    jump: 
-    move: 
-    vert: '1'
-    evade: Mag
-    range: '3'
-    target: Any
-    counter: 
-    element: 
-    formula: 'Add: Stop Hit_F(MA+150)%'
-    silence: 'Yes'
-    reflectable: 'Yes'
-    counter_flood: 'Yes'
-    counter_magic: 'Yes'
-  job_id: 8
-
-- id: 215
-  value: 
-  jp_cost: 250
-  name: Reflect
-  skill_type: action
-  data:
-    ct: '1'
-    mp: '12'
-    area: 
-    jump: 
-    move: 
-    vert: 
-    evade: 
-    range: '4'
-    target: Any
-    counter: 
-    element: 
-    formula: 'Add: Reflect Hit_F(MA+180)%'
-    silence: 'Yes'
-    reflectable: 'Yes'
-    counter_flood: 
-    counter_magic: 
-  job_id: 8
-
-- id: 217
-  value: 
-  jp_cost: 200
-  name: Demi
-  skill_type: action
-  data:
-    ct: '2'
-    mp: '12'
-    area: '1'
-    jump: 
-    move: 
-    vert: '1'
-    evade: Mag
-    range: '4'
-    target: Any
-    counter: 
-    element: 
-    formula: Dmg_(25% Max HP) Hit_F(MA+200)%
-    silence: 'Yes'
-    reflectable: 'Yes'
-    counter_flood: 'Yes'
-    counter_magic: 'Yes'
-  job_id: 8
-
-- id: 219
-  value: 
-  jp_cost: 700
-  name: Critical Quick
-  skill_type: reaction
-  data:
-    ct: 
-    mp: 
-    area: 
-    jump: 
-    move: 
-    vert: 
-    evade: 
-    range: 
-    target: 
-    counter: 
-    element: 
-    formula: Set CT to 100 on becoming critical
-    silence: 
-    reflectable: 
-    counter_flood: 
-    counter_magic: 
-  job_id: 8
-
-- id: 220
-  value: 
-  jp_cost: 800
-  name: Short Charge
-  skill_type: support
-  data:
-    ct: 
-    mp: 
-    area: 
-    jump: 
-    move: 
-    vert: 
-    evade: 
-    range: 
-    target: 
-    counter: 
-    element: 
-    formula: Spell Charge Time cut by 50%
-    silence: 
-    reflectable: 
-    counter_flood: 
-    counter_magic: 
-  job_id: 8
-
-- id: 221
-  value: 
-  jp_cost: 800
-  name: Teleport
-  skill_type: movement
-  data:
-    ct: 
-    mp: 
-    area: 
-    jump: 
-    move: 
-    vert: 
-    evade: 
-    range: 
-    target: 
-    counter: 
-    element: 
-    formula: Move Anywhere, ignoring height and obstacles. 10% chance to fail per space
-      beyond your move
-    silence: 
-    reflectable: 
-    counter_flood: 
-    counter_magic: 
-  job_id: 8
-
-- id: 184
-  value: 
-  jp_cost: 180
-  name: Shiva
-  skill_type: action
-  data:
-    ct: '4'
-    mp: '20'
-    area: '2'
-    jump: 
-    move: 
-    vert: '2'
-    evade: Mag
-    range: '4'
-    target: Any
-    counter: 
-    element: Ice
-    formula: Dmg_F(MA*16)
-    silence: 'Yes'
-    reflectable: 
-    counter_flood: 'Yes'
-    counter_magic: 'Yes'
-  job_id: 9
-
-- id: 185
-  value: 
-  jp_cost: 180
-  name: Ramuh
-  skill_type: action
-  data:
-    ct: '4'
-    mp: '20'
-    area: '2'
-    jump: 
-    move: 
-    vert: '2'
-    evade: Mag
-    range: '4'
-    target: Any
-    counter: 
-    element: Lightning
-    formula: Dmg_F(MA*16)
-    silence: 'Yes'
-    reflectable: 
-    counter_flood: 'Yes'
-    counter_magic: 'Yes'
-  job_id: 9
-
-- id: 187
-  value: 
-  jp_cost: 200
-  name: Fairy
-  skill_type: action
-  data:
-    ct: '4'
-    mp: '30'
-    area: '1'
-    jump: 
-    move: 
-    vert: '2'
-    evade: 
-    range: '4'
-    target: Any
-    counter: 
-    element: 
-    formula: Revive 33% Hit_F(MA+180)%
-    silence: 'Yes'
-    reflectable: 
-    counter_flood: 
-    counter_magic: 
-  job_id: 9
-
-- id: 188
-  value: 
-  jp_cost: 200
-  name: Silf
-  skill_type: action
-  data:
-    ct: '4'
-    mp: '26'
-    area: '2'
-    jump: 
-    move: 
-    vert: '2'
-    evade: Mag
-    range: '4'
-    target: Any
-    counter: 
-    element: Wind
-    formula: 'Dmg_F(MA*16) 20% Add: Float'
-    silence: 'Yes'
-    reflectable: 
-    counter_flood: 'Yes'
-    counter_magic: 'Yes'
-  job_id: 9
-
-- id: 189
-  value: 
-  jp_cost: 350
-  name: Carbunkle
-  skill_type: action
-  data:
-    ct: '3'
-    mp: '20'
-    area: '2'
-    jump: 
-    move: 
-    vert: '2'
-    evade: 
-    range: '4'
-    target: Any
-    counter: 
-    element: 
-    formula: 'Add: Reflect+Defend Hit_F(MA+225)%'
-    silence: 'Yes'
-    reflectable: 
-    counter_flood: 
-    counter_magic: 
-  job_id: 9
-
-- id: 191
-  value: 
-  jp_cost: 200
-  name: Odin
-  skill_type: action
-  data:
-    ct: '5'
-    mp: '30'
-    area: '2'
-    jump: 
-    move: 
-    vert: '2'
-    evade: Mag
-    range: '4'
-    target: Any
-    counter: 
-    element: 
-    formula: Dmg_F(MA*24)
-    silence: 'Yes'
-    reflectable: 
-    counter_flood: 'Yes'
-    counter_magic: 'Yes'
-  job_id: 9
-
-- id: 192
-  value: 
-  jp_cost: 200
-  name: Salamander
-  skill_type: action
-  data:
-    ct: '5'
-    mp: '30'
-    area: '2'
-    jump: 
-    move: 
-    vert: '2'
-    evade: Mag
-    range: '4'
-    target: Any
-    counter: 
-    element: Fire
-    formula: Dmg_F(MA*24)
-    silence: 'Yes'
-    reflectable: 
-    counter_flood: 'Yes'
-    counter_magic: 'Yes'
-  job_id: 9
-
-- id: 193
-  value: 
-  jp_cost: 200
-  name: Lich
-  skill_type: action
-  data:
-    ct: '5'
-    mp: '30'
-    area: '2'
-    jump: 
-    move: 
-    vert: '2'
-    evade: Mag
-    range: '4'
-    target: Any
-    counter: 
-    element: 
-    formula: 'Dmg_F(MA*18) 19% Add: Dead'
-    silence: 'Yes'
-    reflectable: 
-    counter_flood: 'Yes'
-    counter_magic: 'Yes'
-  job_id: 9
-
-- id: 245
-  value: 
-  jp_cost: 500
-  name: Leviathan
-  skill_type: action
-  data:
-    ct: '6'
-    mp: '40'
-    area: '3'
-    jump: 
-    move: 
-    vert: '3'
-    evade: Mag
-    range: '4'
-    target: Any
-    counter: 
-    element: Water
-    formula: Dmg_F(MA*20)
-    silence: 'Yes'
-    reflectable: 
-    counter_flood: 'Yes'
-    counter_magic: 'Yes'
-  job_id: 9
-
-- id: 246
-  value: 
-  jp_cost: 500
-  name: Bahamut
-  skill_type: action
-  data:
-    ct: '8'
-    mp: '40'
-    area: '3'
-    jump: 
-    move: 
-    vert: '3'
-    evade: Mag
-    range: '4'
-    target: Any
-    counter: 
-    element: 
-    formula: Dmg_F(MA*20)
-    silence: 'Yes'
-    reflectable: 
-    counter_flood: 'Yes'
-    counter_magic: 'Yes'
-  job_id: 9
-
-- id: 247
-  value: 
-  jp_cost: 600
-  name: Cyclops
-  skill_type: action
-  data:
-    ct: '8'
-    mp: '50'
-    area: '2'
-    jump: 
-    move: 
-    vert: '2'
-    evade: Mag
-    range: '4'
-    target: Any
-    counter: 
-    element: 
-    formula: Dmg_F(MA*28)
-    silence: 'Yes'
-    reflectable: 
-    counter_flood: 'Yes'
-    counter_magic: 'Yes'
-  job_id: 9
-
-- id: 248
-  value: 
-  jp_cost: 1000
-  name: Zodiac
-  skill_type: action
-  data:
-    ct: '12'
-    mp: '99'
-    area: '3'
-    jump: 
-    move: 
-    vert: '3'
-    evade: Mag
-    range: '4'
-    target: Any
-    counter: 
-    element: 
-    formula: Dmg_F(MA*30)
-    silence: 'Yes'
-    reflectable: 
-    counter_flood: 'Yes'
-    counter_magic: 'Yes'
-  job_id: 9
-
-- id: 194
-  value: 
-  jp_cost: 400
-  name: MP Restore
-  skill_type: reaction
-  data:
-    ct: 
-    mp: 
-    area: 
-    jump: 
-    move: 
-    vert: 
-    evade: 
-    range: 
-    target: 
-    counter: 
-    element: 
-    formula: Restore all MP on becoming critical
-    silence: 
-    reflectable: 
-    counter_flood: 
-    counter_magic: 
-  job_id: 9
-
-- id: 196
-  value: 
-  jp_cost: 100
-  name: Gil Toss
-  skill_type: action
-  data:
-    ct: 
-    mp: 
-    area: 
-    jump: 
-    move: 
-    vert: '3'
-    evade: 
-    range: '3'
-    target: Any
-    counter: 'Yes'
-    element: 
-    formula: 'Add: Defend or Berserk Hit_(PA+60)%'
-    silence: 
-    reflectable: 
-    counter_flood: 'Yes'
-    counter_magic: 
-  job_id: 10
-
-- id: 249
-  value: 
-  jp_cost: 100
-  name: Steal Energy
-  skill_type: action
-  data:
-    ct: 
-    mp: 
-    area: 
-    jump: 
-    move: 
-    vert: 
-    evade: 
-    range: '1'
-    target: Any
-    counter: 
-    element: 
-    formula: Leech 50% target max_MP Hit_(SP+50)
-    silence: 
-    reflectable: 
-    counter_flood: 'Yes'
-    counter_magic: 
-  job_id: 10
-
-- id: 197
-  value: 
-  jp_cost: 200
-  name: Steal Heart
-  skill_type: action
-  data:
-    ct: 
-    mp: 
-    area: 
-    jump: 
-    move: 
-    vert: '3'
-    evade: 
-    range: '3'
-    target: Any
-    counter: 
-    element: 
-    formula: 'Add: Charm opposite sex Hit_(MA+40)%'
-    silence: 
-    reflectable: 
-    counter_flood: 
-    counter_magic: 
-  job_id: 10
-
-- id: 252
-  value: 
-  jp_cost: 300
-  name: Throat Punch
-  skill_type: action
-  data:
-    ct: 
-    mp: 
-    area: 
-    jump: 
-    move: 
-    vert: 
-    evade: Phys
-    range: '1'
-    target: Any
-    counter: 'Yes'
-    element: 
-    formula: 'Dmg_((PA-2)*SP) Cancel: Charging'
-    silence: 
-    reflectable: 
-    counter_flood: 'Yes'
-    counter_magic: 
-  job_id: 10
-
-- id: 253
-  value: 
-  jp_cost: 400
-  name: Kidney Shot
-  skill_type: action
-  data:
-    ct: 
-    mp: 
-    area: 
-    jump: 
-    move: 
-    vert: 
-    evade: Phys
-    range: '1'
-    target: Any
-    counter: 'Yes'
-    element: 
-    formula: Dmg_((PA/2)*SP) -25 CT
-    silence: 
-    reflectable: 
-    counter_flood: 'Yes'
-    counter_magic: 
-  job_id: 10
-
-- id: 254
-  value: 
-  jp_cost: 500
-  name: Disarm
-  skill_type: action
-  data:
-    ct: 
-    mp: 
-    area: 
-    jump: 
-    move: 
-    vert: '2'
-    evade: Phys
-    range: '1'
-    target: Any
-    counter: 
-    element: 
-    formula: Steal Weapon Hit_(SP+60)%
-    silence: 
-    reflectable: 
-    counter_flood: 'Yes'
-    counter_magic: 
-  job_id: 10
-
-- id: 204
-  value: 
-  jp_cost: 200
-  name: Gilgame Heart
-  skill_type: reaction
-  data:
-    ct: 
-    mp: 
-    area: 
-    jump: 
-    move: 
-    vert: 
-    evade: 
-    range: 
-    target: 
-    counter: 
-    element: 
-    formula: Does nothing in AI battles
-    silence: 
-    reflectable: 
-    counter_flood: 
-    counter_magic: 
-  job_id: 10
-
-- id: 205
-  value: 
-  jp_cost: 200
-  name: Catch
-  skill_type: reaction
-  data:
-    ct: 
-    mp: 
-    area: 
-    jump: 
-    move: 
-    vert: 
-    evade: 
-    range: 
-    target: 
-    counter: 
-    element: 
-    formula: Catch thrown weapons
-    silence: 
-    reflectable: 
-    counter_flood: 
-    counter_magic: 
-  job_id: 10
-
-- id: 206
-  value: 
-  jp_cost: 150
-  name: Secret Hunt
-  skill_type: support
-  data:
-    ct: 
-    mp: 
-    area: 
-    jump: 
-    move: 
-    vert: 
-    evade: 
-    range: 
-    target: 
-    counter: 
-    element: 
-    formula: Finishing off a monster with Attack removes it from the battle entirely
-    silence: 
-    reflectable: 
-    counter_flood: 
-    counter_magic: 
-  job_id: 10
-
-- id: 208
-  value: 
-  jp_cost: 200
-  name: Jump+2
-  skill_type: movement
-  data:
-    ct: 
-    mp: 
-    area: 
-    jump: '2'
-    move: 
-    vert: 
-    evade: 
-    range: 
-    target: 
-    counter: 
-    element: 
-    formula: Read the name, this isn't complicated
-    silence: 
-    reflectable: 
-    counter_flood: 
-    counter_magic: 
-  job_id: 10
-
-- id: 86
-  value: 
-  jp_cost: 300
-  name: Invitation
-  skill_type: action
-  data:
-    ct: 
-    mp: 
-    area: 
-    jump: 
-    move: 
-    vert: '3'
-    evade: 
-    range: '3'
-    target: Any
-    counter: 
-    element: 
-    formula: 'Add: Confusion or Charm Hit_(MA+50)%'
-    silence: 'Yes'
-    reflectable: 
-    counter_flood: 
-    counter_magic: 
-  job_id: 11
-
-- id: 88
-  value: 
-  jp_cost: 200
-  name: Preach
-  skill_type: action
-  data:
-    ct: 
-    mp: 
-    area: 
-    jump: 
-    move: 
-    vert: '3'
-    evade: 
-    range: '3'
-    target: Any
-    counter: 
-    element: 
-    formula: 'Add: Reraise Hit_(MA+70)%'
-    silence: 'Yes'
-    reflectable: 
-    counter_flood: 
-    counter_magic: 
-  job_id: 11
-
-- id: 256
-  value: 
-  jp_cost: 200
-  name: Solution
-  skill_type: action
-  data:
-    ct: 
-    mp: 
-    area: 
-    jump: 
-    move: 
-    vert: '3'
-    evade: 
-    range: '3'
-    target: Any
-    counter: 
-    element: 
-    formula: 'Cancel: All status Hit_(MA+50)%'
-    silence: 'Yes'
-    reflectable: 
-    counter_flood: 
-    counter_magic: 
-  job_id: 11
-
-- id: 90
-  value: 
-  jp_cost: 200
-  name: Death Sentence
-  skill_type: action
-  data:
-    ct: 
-    mp: 
-    area: 
-    jump: 
-    move: 
-    vert: '3'
-    evade: 
-    range: '3'
-    target: Any
-    counter: 
-    element: 
-    formula: 'Add: Death Sentence Hit_(MA+45)%'
-    silence: 'Yes'
-    reflectable: 
-    counter_flood: 
-    counter_magic: 
-  job_id: 11
-
-- id: 91
-  value: 
-  jp_cost: 300
-  name: Insult
-  skill_type: action
-  data:
-    ct: 
-    mp: 
-    area: 
-    jump: 
-    move: 
-    vert: '3'
-    evade: 
-    range: '3'
-    target: Any
-    counter: 
-    element: 
-    formula: 'Add: Berserk Hit_(MA+60)%'
-    silence: 'Yes'
-    reflectable: 
-    counter_flood: 
-    counter_magic: 
-  job_id: 11
-
-- id: 93
-  value: 
-  jp_cost: 250
-  name: Finger Guard
-  skill_type: reaction
-  data:
-    ct: 
-    mp: 
-    area: 
-    jump: 
-    move: 
-    vert: 
-    evade: 
-    range: 
-    target: 
-    counter: 
-    element: 
-    formula: Evade Talk Skills Brave%
-    silence: 
-    reflectable: 
-    counter_flood: 
-    counter_magic: 
-  job_id: 11
-
-- id: 94
-  value: 
-  jp_cost: 300
-  name: Equip Gun
-  skill_type: support
-  data:
-    ct: 
-    mp: 
-    area: 
-    jump: 
-    move: 
-    vert: 
-    evade: 
-    range: 
-    target: 
-    counter: 
-    element: 
-    formula: Can equip gun regardless of job
-    silence: 
-    reflectable: 
-    counter_flood: 
-    counter_magic: 
-  job_id: 11
-
-- id: 95
-  value: 
-  jp_cost: 400
-  name: Train
-  skill_type: support
-  data:
-    ct: 
-    mp: 
-    area: 
-    jump: 
-    move: 
-    vert: 
-    evade: 
-    range: 
-    target: 
-    counter: 
-    element: 
-    formula: Attack that takes a monster to critical auto invites them
-    silence: 
-    reflectable: 
-    counter_flood: 
-    counter_magic: 
-  job_id: 11
-
-- id: 96
-  value: 
-  jp_cost: 100
-  name: Monster Talk
-  skill_type: support
-  data:
-    ct: 
-    mp: 
-    area: 
-    jump: 
-    move: 
-    vert: 
-    evade: 
-    range: 
-    target: 
-    counter: 
-    element: 
-    formula: Talk Skills can affect monsters (CLASS INNATE)
-    silence: 
-    reflectable: 
-    counter_flood: 
-    counter_magic: 
-  job_id: 11
-
-- id: 122
-  value: 
-  jp_cost: 100
-  name: Spell Absorb
-  skill_type: action
-  data:
-    ct: '2'
-    mp: '2'
-    area: 
-    jump: 
-    move: 
-    vert: 
-    evade: Mag
-    range: '4'
-    target: Any
-    counter: 
-    element: 
-    formula: Leech 33% target max MP Hit_F(MA+255)%
-    silence: 'Yes'
-    reflectable: 'Yes'
-    counter_flood: 'Yes'
-    counter_magic: 'Yes'
-  job_id: 12
-
-- id: 123
-  value: 
-  jp_cost: 150
-  name: Pray Faith
-  skill_type: action
-  data:
-    ct: '3'
-    mp: '6'
-    area: 
-    jump: 
-    move: 
-    vert: 
-    evade: Mag
-    range: '4'
-    target: Any
-    counter: 
-    element: 
-    formula: 'Add: Faith Hit_F(MA+150)%'
-    silence: 'Yes'
-    reflectable: 'Yes'
-    counter_flood: 'Yes'
-    counter_magic: 'Yes'
-  job_id: 12
-
-- id: 124
-  value: 
-  jp_cost: 150
-  name: Doubt Faith
-  skill_type: action
-  data:
-    ct: '3'
-    mp: '6'
-    area: 
-    jump: 
-    move: 
-    vert: 
-    evade: Mag
-    range: '4'
-    target: Any
-    counter: 
-    element: 
-    formula: 'Add: Innocent Hit_F(MA+150)%'
-    silence: 'Yes'
-    reflectable: 'Yes'
-    counter_flood: 'Yes'
-    counter_magic: 'Yes'
-  job_id: 12
-
-- id: 127
-  value: 
-  jp_cost: 200
-  name: Blind Rage
-  skill_type: action
-  data:
-    ct: '3'
-    mp: '16'
-    area: 
-    jump: 
-    move: 
-    vert: 
-    evade: Mag
-    range: '4'
-    target: Any
-    counter: 
-    element: 
-    formula: 'Add: Berserk Hit_F(MA+150)%'
-    silence: 'Yes'
-    reflectable: 'Yes'
-    counter_flood: 'Yes'
-    counter_magic: 'Yes'
-  job_id: 12
-
-- id: 130
-  value: 
-  jp_cost: 250
-  name: Dispel Magic
-  skill_type: action
-  data:
-    ct: '2'
-    mp: '20'
-    area: 
-    jump: 
-    move: 
-    vert: 
-    evade: 
-    range: '4'
-    target: Any
-    counter: 
-    element: 
-    formula: 'Cancel: All positive status Hit_F(MA+200)%'
-    silence: 'Yes'
-    reflectable: 
-    counter_flood: 'Yes'
-    counter_magic: 'Yes'
-  job_id: 12
-
-- id: 131
-  value: 
-  jp_cost: 200
-  name: Paralyze
-  skill_type: action
-  data:
-    ct: '4'
-    mp: '10'
-    area: '1'
-    jump: 
-    move: 
-    vert: 
-    evade: Mag
-    range: '4'
-    target: Any
-    counter: 
-    element: 
-    formula: 'Add: Don''t Act Hit_F(MA+185)%'
-    silence: 'Yes'
-    reflectable: 'Yes'
-    counter_flood: 'Yes'
-    counter_magic: 'Yes'
-  job_id: 12
-
-- id: 132
-  value: 
-  jp_cost: 300
-  name: Sleep
-  skill_type: action
-  data:
-    ct: '5'
-    mp: '24'
-    area: '1'
-    jump: 
-    move: 
-    vert: '1'
-    evade: Mag
-    range: '4'
-    target: Any
-    counter: 
-    element: 
-    formula: 'Add: Sleep Hit_F(MA+170)%'
-    silence: 'Yes'
-    reflectable: 'Yes'
-    counter_flood: 'Yes'
-    counter_magic: 'Yes'
-  job_id: 12
-
-- id: 134
-  value: 
-  jp_cost: 200
-  name: Absorb Used MP
-  skill_type: reaction
-  data:
-    ct: 
-    mp: 
-    area: 
-    jump: 
-    move: 
-    vert: 
-    evade: 
-    range: 
-    target: 
-    counter: 
-    element: 
-    formula: Gain MP equal to the cost of a spell or skill used on you
-    silence: 
-    reflectable: 
-    counter_flood: 
-    counter_magic: 
-  job_id: 12
-
-- id: 135
-  value: 
-  jp_cost: 350
-  name: Defense UP
-  skill_type: support
-  data:
-    ct: 
-    mp: 
-    area: 
-    jump: 
-    move: 
-    vert: 
-    evade: 
-    range: 
-    target: 
-    counter: 
-    element: 
-    formula: Reduce physical damage by 33%
-    silence: 
-    reflectable: 
-    counter_flood: 
-    counter_magic: 
-  job_id: 12
-
-- id: 37
-  value: 
-  jp_cost: 50
-  name: Pitfall
-  skill_type: action
-  data:
-    ct: 
-    mp: 
-    area: '1'
-    jump: 
-    move: 
-    vert: 
-    evade: 
-    range: '4'
-    target: Any
-    counter: 
-    element: 
-    formula: Dmg_((PA+4/2*MA) 20% Don't Move
-    silence: 
-    reflectable: 
-    counter_flood: 'Yes'
-    counter_magic: 'Yes'
-  job_id: 13
-
-- id: 257
-  value: 
-  jp_cost: 50
-  name: Waterball
-  skill_type: action
-  data:
-    ct: 
-    mp: 
-    area: '1'
-    jump: 
-    move: 
-    vert: 
-    evade: 
-    range: '4'
-    target: Any
-    counter: 
-    element: Water
-    formula: Dmg_((PA+4/2*MA) 20% Frog
-    silence: 
-    reflectable: 
-    counter_flood: 'Yes'
-    counter_magic: 'Yes'
-  job_id: 13
-
-- id: 40
-  value: 
-  jp_cost: 50
-  name: Carve Model
-  skill_type: action
-  data:
-    ct: 
-    mp: 
-    area: '1'
-    jump: 
-    move: 
-    vert: 
-    evade: 
-    range: '4'
-    target: Any
-    counter: 
-    element: 
-    formula: Dmg_((PA+4/2*MA) 20% Petrify
-    silence: 
-    reflectable: 
-    counter_flood: 'Yes'
-    counter_magic: 'Yes'
-  job_id: 13
-
-- id: 41
-  value: 
-  jp_cost: 50
-  name: Local Quake
-  skill_type: action
-  data:
-    ct: 
-    mp: 
-    area: '1'
-    jump: 
-    move: 
-    vert: 
-    evade: 
-    range: '4'
-    target: Any
-    counter: 
-    element: Earth
-    formula: Dmg_((PA+4/2*MA) 20% Confusion
-    silence: 
-    reflectable: 
-    counter_flood: 'Yes'
-    counter_magic: 'Yes'
-  job_id: 13
-
-- id: 42
-  value: 
-  jp_cost: 50
-  name: Kamaitachi
-  skill_type: action
-  data:
-    ct: 
-    mp: 
-    area: '1'
-    jump: 
-    move: 
-    vert: 
-    evade: 
-    range: '4'
-    target: Any
-    counter: 
-    element: Wind
-    formula: Dmg_((PA+4/2*MA) 20% Don't Act
-    silence: 
-    reflectable: 
-    counter_flood: 'Yes'
-    counter_magic: 'Yes'
-  job_id: 13
-
-- id: 44
-  value: 
-  jp_cost: 50
-  name: Quicksand
-  skill_type: action
-  data:
-    ct: 
-    mp: 
-    area: '1'
-    jump: 
-    move: 
-    vert: 
-    evade: 
-    range: '4'
-    target: Any
-    counter: 
-    element: Earth
-    formula: Dmg_((PA+4/2*MA) 20% Death Sentence
-    silence: 
-    reflectable: 
-    counter_flood: 'Yes'
-    counter_magic: 'Yes'
-  job_id: 13
-
-- id: 45
-  value: 
-  jp_cost: 50
-  name: Sand Storm
-  skill_type: action
-  data:
-    ct: 
-    mp: 
-    area: '1'
-    jump: 
-    move: 
-    vert: 
-    evade: 
-    range: '4'
-    target: Any
-    counter: 
-    element: Wind
-    formula: Dmg_((PA+4/2*MA) 20% Blind
-    silence: 
-    reflectable: 
-    counter_flood: 'Yes'
-    counter_magic: 'Yes'
-  job_id: 13
-
-- id: 48
-  value: 
-  jp_cost: 50
-  name: Lava Ball
-  skill_type: action
-  data:
-    ct: 
-    mp: 
-    area: '1'
-    jump: 
-    move: 
-    vert: 
-    evade: 
-    range: '4'
-    target: Any
-    counter: 
-    element: Fire
-    formula: Dmg_((PA+6/2*MA)
-    silence: 
-    reflectable: 
-    counter_flood: 'Yes'
-    counter_magic: 'Yes'
-  job_id: 13
-
-- id: 49
-  value: 
-  jp_cost: 400
-  name: Counter Flood
-  skill_type: reaction
-  data:
-    ct: 
-    mp: 
-    area: 
-    jump: 
-    move: 
-    vert: 
-    evade: 
-    range: 
-    target: 
-    counter: 
-    element: 
-    formula: Counter with Geomancy, regardless of if skill is learned
-    silence: 
-    reflectable: 
-    counter_flood: 
-    counter_magic: 
-  job_id: 13
-
-- id: 51
-  value: 
-  jp_cost: 220
-  name: Any Ground
-  skill_type: movement
-  data:
-    ct: 
-    mp: 
-    area: 
-    jump: 
-    move: 
-    vert: 
-    evade: 
-    range: 
-    target: 
-    counter: 
-    element: 
-    formula: Move on any type of ground unhindered by terrain (CLASS INHERENT)
-    silence: 
-    reflectable: 
-    counter_flood: 
-    counter_magic: 
-  job_id: 13
-
-- id: 52
-  value: 
-  jp_cost: 150
-  name: Move on Lava
-  skill_type: movement
-  data:
-    ct: 
-    mp: 
-    area: 
-    jump: 
-    move: 
-    vert: 
-    evade: 
-    range: 
-    target: 
-    counter: 
-    element: 
-    formula: Able to walk on lava panels (CLASS INHERENT)
-    silence: 
-    reflectable: 
-    counter_flood: 
-    counter_magic: 
-  job_id: 13
-
-- id: 66
-  value: 
-  jp_cost: 50
-  name: Range 4
-  skill_type: action
-  data:
-    ct: RU(50/Speed)
-    mp: 
-    area: 
-    jump: 
-    move: 
-    vert: 
-    evade: 
-    range: '4'
-    target: Any
-    counter: 'Yes'
-    element: 
-    formula: 'Dmg_(PA*WP). If using Spear: Dmg_((PA*1.5)*WP) instead'
-    silence: 
-    reflectable: 
-    counter_flood: 'Yes'
-    counter_magic: 
-  job_id: 14
-
-- id: 67
-  value: 
-  jp_cost: 200
-  name: Range 5
-  skill_type: action
-  data:
-    ct: RU(50/Speed)
-    mp: 
-    area: 
-    jump: 
-    move: 
-    vert: 
-    evade: 
-    range: '5'
-    target: Any
-    counter: 'Yes'
-    element: 
-    formula: 'Dmg_(PA*WP). If using Spear: Dmg_((PA*1.5)*WP) instead'
-    silence: 
-    reflectable: 
-    counter_flood: 'Yes'
-    counter_magic: 
-  job_id: 14
-
-- id: 69
-  value: 
-  jp_cost: 50
-  name: Vertical 5
-  skill_type: action
-  data:
-    ct: RU(50/Speed)
-    mp: 
-    area: 
-    jump: 
-    move: 
-    vert: '5'
-    evade: 
-    range: 
-    target: Any
-    counter: 'Yes'
-    element: 
-    formula: 'Dmg_(PA*WP). If using Spear: Dmg_((PA*1.5)*WP) instead'
-    silence: 
-    reflectable: 
-    counter_flood: 'Yes'
-    counter_magic: 
-  job_id: 14
-
-- id: 70
-  value: 
-  jp_cost: 200
-  name: Vertical 7
-  skill_type: action
-  data:
-    ct: RU(50/Speed)
-    mp: 
-    area: 
-    jump: 
-    move: 
-    vert: '7'
-    evade: 
-    range: 
-    target: Any
-    counter: 'Yes'
-    element: 
-    formula: 'Dmg_(PA*WP). If using Spear: Dmg_((PA*1.5)*WP) instead'
-    silence: 
-    reflectable: 
-    counter_flood: 'Yes'
-    counter_magic: 
-  job_id: 14
-
-- id: 73
-  value: 
-  jp_cost: 350
-  name: Equip Spear
-  skill_type: support
-  data:
-    ct: 
-    mp: 
-    area: 
-    jump: 
-    move: 
-    vert: 
-    evade: 
-    range: 
-    target: 
-    counter: 
-    element: 
-    formula: Can equip spear regardless of job
-    silence: 
-    reflectable: 
-    counter_flood: 
-    counter_magic: 
-  job_id: 14
-
-- id: 74
-  value: 
-  jp_cost: 500
-  name: Ignore Height
-  skill_type: movement
-  data:
-    ct: 
-    mp: 
-    area: 
-    jump: 
-    move: 
-    vert: 
-    evade: 
-    range: 
-    target: 
-    counter: 
-    element: 
-    formula: Jump to any panel, regardless of height value
-    silence: 
-    reflectable: 
-    counter_flood: 
-    counter_magic: 
-  job_id: 14
-
-- id: 162
-  value: 
-  jp_cost: 250
-  name: Asura
-  skill_type: action
-  data:
-    ct: 
-    mp: 
-    area: '2'
-    jump: 
-    move: 
-    vert: '2'
-    evade: 
-    range: '0'
-    target: Any
-    counter: 
-    element: Fire
-    formula: Dmg_(MA*10)
-    silence: 
-    reflectable: 
-    counter_flood: 'Yes'
-    counter_magic: 'Yes'
-  job_id: 15
-
-- id: 164
-  value: 
-  jp_cost: 200
-  name: Bizen Boat
-  skill_type: action
-  data:
-    ct: 
-    mp: 
-    area: '2'
-    jump: 
-    move: 
-    vert: '2'
-    evade: 
-    range: '0'
-    target: Any
-    counter: 
-    element: 
-    formula: Dmg_MP(MA*12)
-    silence: 
-    reflectable: 
-    counter_flood: 'Yes'
-    counter_magic: 'Yes'
-  job_id: 15
-
-- id: 165
-  value: 
-  jp_cost: 300
-  name: Murasame
-  skill_type: action
-  data:
-    ct: 
-    mp: 
-    area: '2'
-    jump: 
-    move: 
-    vert: '2'
-    evade: 
-    range: '0'
-    target: Any
-    counter: 
-    element: 
-    formula: HealHP_(MA*10)
-    silence: 
-    reflectable: 
-    counter_flood: 
-    counter_magic: 
-  job_id: 15
-
-- id: 166
-  value: 
-  jp_cost: 250
-  name: Heaven's Cloud
-  skill_type: action
-  data:
-    ct: 
-    mp: 
-    area: '2'
-    jump: 
-    move: 
-    vert: '2'
-    evade: 
-    range: '0'
-    target: Any
-    counter: 
-    element: Water
-    formula: Dmg_(MA*10)
-    silence: 
-    reflectable: 
-    counter_flood: 'Yes'
-    counter_magic: 'Yes'
-  job_id: 15
-
-- id: 259
-  value: 
-  jp_cost: 200
-  name: Kikuichimonji
-  skill_type: action
-  data:
-    ct: 
-    mp: 
-    area: '2'
-    jump: 
-    move: 
-    vert: '2'
-    evade: 
-    range: '5'
-    target: Any
-    counter: 
-    element: 
-    formula: Dmg_(MA*8) Linear
-    silence: 
-    reflectable: 
-    counter_flood: 'Yes'
-    counter_magic: 'Yes'
-  job_id: 15
-
-- id: 260
-  value: 
-  jp_cost: 400
-  name: Masamune
-  skill_type: action
-  data:
-    ct: 
-    mp: 
-    area: '2'
-    jump: 
-    move: 
-    vert: '2'
-    evade: 
-    range: '0'
-    target: Any
-    counter: 
-    element: 
-    formula: 'Add: Haste or Regen or Defending Hit_(100)%'
-    silence: 
-    reflectable: 
-    counter_flood: 
-    counter_magic: 
-  job_id: 15
-
-- id: 261
-  value: 
-  jp_cost: 600
-  name: Chirijiraden
-  skill_type: action
-  data:
-    ct: 
-    mp: 
-    area: '2'
-    jump: 
-    move: 
-    vert: '3'
-    evade: 
-    range: '0'
-    target: Any
-    counter: 
-    element: 
-    formula: Dmg_(MA*13) also hits self
-    silence: 
-    reflectable: 
-    counter_flood: 'Yes'
-    counter_magic: 'Yes'
-  job_id: 15
-
-- id: 262
-  value: 
-  jp_cost: 400
-  name: Stasis Sword
-  skill_type: action
-  data:
-    ct: 
-    mp: '8'
-    area: '1'
-    jump: 
-    move: 
-    vert: 
-    evade: Phys
-    range: '2'
-    target: Any
-    counter: 
-    element: 
-    formula: 'Dmg_((PA-2)*(WP-2)) 20% Add: Stop'
-    silence: 
-    reflectable: 
-    counter_flood: 'Yes'
-    counter_magic: 'Yes'
-  job_id: 15
-
-- id: 263
-  value: 
-  jp_cost: 500
-  name: Split Punch
-  skill_type: action
-  data:
-    ct: 
-    mp: '10'
-    area: 
-    jump: 
-    move: 
-    vert: '2'
-    evade: 
-    range: '2'
-    target: Any
-    counter: 
-    element: 
-    formula: 'Dmg_((PA-2)*(WP-1) 20% Add: Death Sentence'
-    silence: 
-    reflectable: 
-    counter_flood: 'Yes'
-    counter_magic: 'Yes'
-  job_id: 15
-
-- id: 264
-  value: 
-  jp_cost: 600
-  name: Crush Punch
-  skill_type: action
-  data:
-    ct: 
-    mp: '30'
-    area: 
-    jump: 
-    move: 
-    vert: '1'
-    evade: Phys
-    range: '2'
-    target: Any
-    counter: 
-    element: 
-    formula: 'Dmg_((PA-2)*WP) 20% Add: Dead'
-    silence: 
-    reflectable: 
-    counter_flood: 'Yes'
-    counter_magic: 'Yes'
-  job_id: 15
-
-- id: 265
-  value: 
-  jp_cost: 400
-  name: Lightning Stab
-  skill_type: action
-  data:
-    ct: 
-    mp: '8'
-    area: '1'
-    jump: 
-    move: 
-    vert: '3'
-    evade: Phys
-    range: '2'
-    target: Any
-    counter: 
-    element: 
-    formula: 'Dmg_((PA-2)*(WP-2)) 20% Add: Silence'
-    silence: 
-    reflectable: 
-    counter_flood: 'Yes'
-    counter_magic: 'Yes'
-  job_id: 15
-
-- id: 266
-  value: 
-  jp_cost: 800
-  name: Holy Explosion
-  skill_type: action
-  data:
-    ct: 
-    mp: '40'
-    area: Linear
-    jump: 
-    move: 
-    vert: '2'
-    evade: Phys
-    range: '5'
-    target: Any
-    counter: 
-    element: 
-    formula: Dmg_((PA-2)*(WP-1))
-    silence: 
-    reflectable: 
-    counter_flood: 'Yes'
-    counter_magic: 'Yes'
-  job_id: 15
-
-- id: 168
-  value: 
-  jp_cost: 1000
-  name: Hamedo
-  skill_type: reaction
-  data:
-    ct: 
-    mp: 
-    area: 
-    jump: 
-    move: 
-    vert: 
-    evade: 
-    range: 
-    target: 
-    counter: 
-    element: 
-    formula: Cancel incoming attack command with your own
-    silence: 
-    reflectable: 
-    counter_flood: 
-    counter_magic: 
-  job_id: 15
-
-- id: 169
-  value: 
-  jp_cost: 350
-  name: Equip Katana
-  skill_type: support
-  data:
-    ct: 
-    mp: 
-    area: 
-    jump: 
-    move: 
-    vert: 
-    evade: 
-    range: 
-    target: 
-    counter: 
-    element: 
-    formula: Can equip katana regardless of job
-    silence: 
-    reflectable: 
-    counter_flood: 
-    counter_magic: 
-  job_id: 15
-
-- id: 170
-  value: 
-  jp_cost: 600
-  name: Two Hands
-  skill_type: support
-  data:
-    ct: 
-    mp: 
-    area: 
-    jump: 
-    move: 
-    vert: 
-    evade: 
-    range: 
-    target: 
-    counter: 
-    element: 
-    formula: Hold weapon in both hands, doubling WP value (CLASS INNATE)
-    silence: 
-    reflectable: 
-    counter_flood: 
-    counter_magic: 
-  job_id: 15
-
-- id: 109
-  value: 
-  jp_cost: 100
-  name: Shuriken
-  skill_type: action
-  data:
-    ct: 
-    mp: 
-    area: 
-    jump: 
-    move: 
-    vert: 
-    evade: Phys
-    range: Move
-    target: Any
-    counter: 'Yes'
-    element: 
-    formula: Hit_(Speed * thrown weapon WP)
-    silence: 
-    reflectable: 
-    counter_flood: 'Yes'
-    counter_magic: 
-  job_id: 16
-
-- id: 110
-  value: 
-  jp_cost: 100
-  name: Ball
-  skill_type: action
-  data:
-    ct: 
-    mp: 
-    area: 
-    jump: 
-    move: 
-    vert: 
-    evade: Phys
-    range: Move
-    target: Any
-    counter: 'Yes'
-    element: 
-    formula: Hit_(Speed * thrown weapon WP)
-    silence: 
-    reflectable: 
-    counter_flood: 'Yes'
-    counter_magic: 
-  job_id: 16
-
-- id: 113
-  value: 
-  jp_cost: 100
-  name: Hammer
-  skill_type: action
-  data:
-    ct: 
-    mp: 
-    area: 
-    jump: 
-    move: 
-    vert: 
-    evade: Phys
-    range: Move
-    target: Any
-    counter: 'Yes'
-    element: 
-    formula: Hit_(Speed * thrown weapon WP)
-    silence: 
-    reflectable: 
-    counter_flood: 'Yes'
-    counter_magic: 
-  job_id: 16
-
-- id: 115
-  value: 
-  jp_cost: 100
-  name: Stick
-  skill_type: action
-  data:
-    ct: 
-    mp: 
-    area: 
-    jump: 
-    move: 
-    vert: 
-    evade: Phys
-    range: Move
-    target: Any
-    counter: 'Yes'
-    element: 
-    formula: Hit_(Speed * thrown weapon WP)
-    silence: 
-    reflectable: 
-    counter_flood: 'Yes'
-    counter_magic: 
-  job_id: 16
-
-- id: 117
-  value: 
-  jp_cost: 200
-  name: Sunken State
-  skill_type: reaction
-  data:
-    ct: 
-    mp: 
-    area: 
-    jump: 
-    move: 
-    vert: 
-    evade: 
-    range: 
-    target: 
-    counter: 
-    element: 
-    formula: 'Add: Transparent on damage'
-    silence: 
-    reflectable: 
-    counter_flood: 
-    counter_magic: 
-  job_id: 16
-
-- id: 118
-  value: 
-  jp_cost: 800
-  name: Abandon
-  skill_type: reaction
-  data:
-    ct: 
-    mp: 
-    area: 
-    jump: 
-    move: 
-    vert: 
-    evade: 
-    range: 
-    target: 
-    counter: 
-    element: 
-    formula: Doubles all evasion attributes (ignores Brave)
-    silence: 
-    reflectable: 
-    counter_flood: 
-    counter_magic: 
-  job_id: 16
-
-- id: 119
-  value: 
-  jp_cost: 900
-  name: Two Swords
-  skill_type: support
-  data:
-    ct: 
-    mp: 
-    area: 
-    jump: 
-    move: 
-    vert: 
-    evade: 
-    range: 
-    target: 
-    counter: 
-    element: 
-    formula: Can equip one weapon in each hand (CLASS INNATE)
-    silence: 
-    reflectable: 
-    counter_flood: 
-    counter_magic: 
-  job_id: 16
-
-- id: 151
-  value: 
-  jp_cost: 300
-  name: Zombie 2
-  skill_type: action
-  data:
-    ct: '4'
-    mp: '20'
-    area: '2'
-    jump: 
-    move: 
-    vert: '2'
-    evade: Mag
-    range: '4'
-    target: Any
-    counter: 
-    element: 
-    formula: 'Add: Zombie Hit_F(MA+200)%'
-    silence: 'Yes'
-    reflectable: 
-    counter_flood: 'Yes'
-    counter_magic: 'Yes'
-  job_id: 17
-
-- id: 152
-  value: 
-  jp_cost: 300
-  name: Sleep 2
-  skill_type: action
-  data:
-    ct: '6'
-    mp: '20'
-    area: '2'
-    jump: 
-    move: 
-    vert: '2'
-    evade: Mag
-    range: '4'
-    target: Any
-    counter: 
-    element: 
-    formula: 'Add: Sleep Hit_F(MA+160)%'
-    silence: 'Yes'
-    reflectable: 
-    counter_flood: 'Yes'
-    counter_magic: 'Yes'
-  job_id: 17
-
-- id: 267
-  value: 
-  jp_cost: 400
-  name: Toad 2
-  skill_type: action
-  data:
-    ct: '6'
-    mp: '20'
-    area: '2'
-    jump: 
-    move: 
-    vert: '2'
-    evade: Mag
-    range: '4'
-    target: Any
-    counter: 
-    element: 
-    formula: 'Add: Frog Hit_F(MA+120)%'
-    silence: 'Yes'
-    reflectable: 
-    counter_flood: 'Yes'
-    counter_magic: 'Yes'
-  job_id: 17
-
-- id: 156
-  value: 
-  jp_cost: 600
-  name: Flare 2
-  skill_type: action
-  data:
-    ct: '7'
-    mp: 
-    area: '2'
-    jump: 
-    move: 
-    vert: '3'
-    evade: Mag
-    range: '4'
-    target: Any
-    counter: 
-    element: 
-    formula: Dmg_F(MA*44)
-    silence: 'Yes'
-    reflectable: 
-    counter_flood: 'Yes'
-    counter_magic: 'Yes'
-  job_id: 17
-
-- id: 157
-  value: 
-  jp_cost: 100
-  name: Despair 2
-  skill_type: action
-  data:
-    ct: '4'
-    mp: 
-    area: '2'
-    jump: 
-    move: 
-    vert: '3'
-    evade: 
-    range: '4'
-    target: Any
-    counter: 
-    element: 
-    formula: 'Cancel: All positive status Hit_F(MA+200)%'
-    silence: 'Yes'
-    reflectable: 
-    counter_flood: 'Yes'
-    counter_magic: 'Yes'
-  job_id: 17
-
-- id: 158
-  value: 
-  jp_cost: 200
-  name: Deathspell 2
-  skill_type: action
-  data:
-    ct: '3'
-    mp: '16'
-    area: '2'
-    jump: 
-    move: 
-    vert: '2'
-    evade: 
-    range: '4'
-    target: Any
-    counter: 
-    element: 
-    formula: 'Cancel: All negative status Hit_F(MA+200)%'
-    silence: 'Yes'
-    reflectable: 
-    counter_flood: 
-    counter_magic: 
-  job_id: 17
-
-- id: 161
-  value: 
-  jp_cost: 800
-  name: Damage Split
-  skill_type: reaction
-  data:
-    ct: 
-    mp: 
-    area: 
-    jump: 
-    move: 
-    vert: 
-    evade: 
-    range: 
-    target: 
-    counter: 
-    element: 
-    formula: Return 50% of damage received and heal the same amount
-    silence: 
-    reflectable: 
-    counter_flood: 
-    counter_magic: 
-  job_id: 17
-
-- id: 159
-  value: 
-  jp_cost: 800
-  name: Meditation
-  skill_type: reaction
-  data:
-    ct: 
-    mp: 
-    area: 
-    jump: 
-    move: 
-    vert: 
-    evade: 
-    range: 
-    target: 
-    counter: 
-    element: 
-    formula: 'Add: Faith when targetted with a magic effect'
-    silence: 
-    reflectable: 
-    counter_flood: 
-    counter_magic: 
-  job_id: 17
-
-- id: 1
-  value: 
-  jp_cost: 100
-  name: Angel Song
-  skill_type: action
-  data:
-    ct: '4'
-    mp: 
-    area: ALL
-    jump: 
-    move: 
-    vert: ALL
-    evade: 
-    range: ALL
-    target: Any
-    counter: 
-    element: 
-    formula: Heal_(MA+30) MP
-    silence: 'Yes'
-    reflectable: 
-    counter_flood: 
-    counter_magic: 
-  job_id: 18
-
-- id: 3
-  value: 
-  jp_cost: 100
-  name: Battle Song
-  skill_type: action
-  data:
-    ct: '5'
-    mp: 
-    area: ALL
-    jump: 
-    move: 
-    vert: ALL
-    evade: 
-    range: ALL
-    target: Any
-    counter: 
-    element: 
-    formula: 'Add: 1 PA Hit_(60)%'
-    silence: 'Yes'
-    reflectable: 
-    counter_flood: 
-    counter_magic: 
-  job_id: 18
-
-- id: 4
-  value: 
-  jp_cost: 100
-  name: Magic Song
-  skill_type: action
-  data:
-    ct: '5'
-    mp: 
-    area: ALL
-    jump: 
-    move: 
-    vert: ALL
-    evade: 
-    range: ALL
-    target: Any
-    counter: 
-    element: 
-    formula: 'Add: 1 MA Hit_(60)%'
-    silence: 'Yes'
-    reflectable: 
-    counter_flood: 
-    counter_magic: 
-  job_id: 18
-
-- id: 5
-  value: 
-  jp_cost: 100
-  name: Nameless Song
-  skill_type: action
-  data:
-    ct: '6'
-    mp: 
-    area: ALL
-    jump: 
-    move: 
-    vert: ALL
-    evade: 
-    range: ALL
-    target: Any
-    counter: 
-    element: 
-    formula: 'Add: Reraise or Regen or Haste or Protect or Shell or Reflect Hit_(50)%'
-    silence: 'Yes'
-    reflectable: 
-    counter_flood: 
-    counter_magic: 
-  job_id: 18
-
-- id: 7
-  value: 
-  jp_cost: 550
-  name: MA Save
-  skill_type: reaction
-  data:
-    ct: 
-    mp: 
-    area: 
-    jump: 
-    move: 
-    vert: 
-    evade: 
-    range: 
-    target: 
-    counter: 
-    element: 
-    formula: Gain 1 MA on HP Damage
-    silence: 
-    reflectable: 
-    counter_flood: 
-    counter_magic: 
-  job_id: 18
-
-- id: 8
-  value: 
-  jp_cost: 350
-  name: Move-MP Up
-  skill_type: movement
-  data:
-    ct: 
-    mp: 
-    area: 
-    jump: 
-    move: 
-    vert: 
-    evade: 
-    range: 
-    target: 
-    counter: 
-    element: 
-    formula: Recover MP as you move
-    silence: 
-    reflectable: 
-    counter_flood: 
-    counter_magic: 
-  job_id: 18
-
-- id: 10
-  value: 
-  jp_cost: 900
-  name: Move+3
-  skill_type: movement
-  data:
-    ct: 
-    mp: 
-    area: 
-    jump: 
-    move: '3'
-    vert: 
-    evade: 
-    range: 
-    target: 
-    counter: 
-    element: 
-    formula: Read the name, this isn't complicated
-    silence: 
-    reflectable: 
-    counter_flood: 
-    counter_magic: 
-  job_id: 18
-
-- id: 28
-  value: 
-  jp_cost: 100
-  name: Wiznaibus
-  skill_type: action
-  data:
-    ct: '4'
-    mp: 
-    area: ALL
-    jump: 
-    move: 
-    vert: ALL
-    evade: 
-    range: ALL
-    target: Any
-    counter: 
-    element: 
-    formula: DmgHP_(PA+(PA*Brave)/100)
-    silence: 'Yes'
-    reflectable: 
-    counter_flood: 
-    counter_magic: 
-  job_id: 19
-
-- id: 181
-  value: 
-  jp_cost: 150
-  name: Equip Axe
-  skill_type: support
-  data:
-    ct: 
-    mp: 
-    area: 
-    jump: 
-    move: 
-    vert: 
-    evade: 
-    range: 
-    target: 
-    counter: 
-    element: 
-    formula: Can equip axe regardless of job
-    silence: 
-    reflectable: 
-    counter_flood: 
-    counter_magic: 
-  job_id: 1
-
-- id: 14
-  value: 
-  jp_cost: 200
-  name: X-Potion
-  skill_type: action
-  data:
-    ct: 
-    mp: 
-    area: 
-    jump: 
-    move: 
-    vert: 
-    evade: 
-    range: '1'
-    target: Any
-    counter: 
-    element: 
-    formula: Recover 90 HP
-    silence: 
-    reflectable: 
-    counter_flood: 
-    counter_magic: 
-  job_id: 2
-
-- id: 53
-  value: 
-  jp_cost: 200
-  name: Power Ruin
-  skill_type: action
-  data:
-    ct: 
-    mp: '6'
-    area: 
-    jump: 
-    move: 
-    vert: 
-    evade: 
-    range: '3'
-    target: Any
-    counter: 'Yes'
-    element: 
-    formula: "-3 PA Hit_(PA+65)%"
-    silence: 
-    reflectable: 
-    counter_flood: 'Yes'
-    counter_magic: 'Yes'
-  job_id: 3
-
-- id: 62
-  value: 
-  jp_cost: 50
-  name: Defend
-  skill_type: support
-  data:
-    ct: 
-    mp: 
-    area: 
-    jump: 
-    move: 
-    vert: 
-    evade: 
-    range: 
-    target: 
-    counter: 
-    element: 
-    formula: 'Add: Defend until next turn (double evasion, -25% damage taken)'
-    silence: 
-    reflectable: 
-    counter_flood: 
-    counter_magic: 
-  job_id: 3
-
 - id: 79
-  value: 
-  jp_cost: 200
-  name: Heartache Strike
-  skill_type: action
-  data:
-    ct: 
-    mp: 
-    area: 
-    jump: 
-    move: 
-    vert: 
-    evade: Phys
-    range: Weapon
-    target: 
-    counter: 'Yes'
-    element: 
-    formula: 'Add to opposite sex: Confuse or Berserk or Slow or Charm or Sleep or Don''t
-      Act Hit_(MA+70)%'
-    silence: 
-    reflectable: 
-    counter_flood: 'Yes'
-    counter_magic: 
-  job_id: 4
-
-- id: 137
-  value: 
-  jp_cost: 100
-  name: Holy Strike
-  skill_type: action
-  data:
-    ct: 
-    mp: '6'
-    area: 
-    jump: 
-    move: 
-    vert: 
-    evade: Mag
-    range: Weapon
-    target: Any
-    counter: 'Yes'
-    element: Holy
-    formula: 'Dmg_((PA+6)/2*MA) 20% Add: Confuse'
-    silence: 
-    reflectable: 
-    counter_flood: 'Yes'
-    counter_magic: 'Yes'
-  job_id: 6
-
-- id: 140
-  value: 
-  jp_cost: 150
-  name: Life
-  skill_type: action
-  data:
-    ct: '3'
-    mp: '10'
-    area: 
-    jump: 
-    move: 
-    vert: 
-    evade: 
-    range: '4'
-    target: Any
-    counter: 
-    element: 
-    formula: Revive 50% Hit_F(MA+255)%
-    silence: 'Yes'
-    reflectable: 'Yes'
-    counter_flood: 
-    counter_magic: 
-  job_id: 6
-
-- id: 147
-  value: 
+  value:
   jp_cost: 280
   name: Esuna
   skill_type: action
@@ -5507,192 +1881,1873 @@
     ct: '3'
     mp: '14'
     area: '1'
-    jump: 
-    move: 
+    jump:
+    move:
     vert: '2'
-    evade: 
+    evade:
     range: '3'
     target: Any
-    counter: 
-    element: 
-    formula: 'Cancel: All negative status Hit_F(MA+140)%'
+    counter:
+    element:
+    formula: 'Cancel: All negative status and add: Sturdy Hit_F(MA+140)%'
     silence: 'Yes'
+    memgen_id: '0010'
     reflectable: 'Yes'
-    counter_flood: 
-    counter_magic: 
+    counter_flood:
+    counter_magic:
   job_id: 6
-
-- id: 223
-  value: 
+- id: 80
+  value:
+  jp_cost: 200
+  name: Holy
+  skill_type: action
+  data:
+    ct: '3'
+    mp: '10'
+    area:
+    jump:
+    move:
+    vert:
+    evade: Mag
+    range: '5'
+    target: Any
+    counter:
+    element: Holy
+    formula: Dmg_F(MA*18)
+    silence: 'Yes'
+    memgen_id: '0008'
+    reflectable: 'Yes'
+    counter_flood: 'Yes'
+    counter_magic: 'Yes'
+  job_id: 6
+- id: 81
+  value:
+  jp_cost: 350
+  name: Regenerator
+  skill_type: reaction
+  data:
+    ct:
+    mp:
+    area:
+    jump:
+    move:
+    vert:
+    evade:
+    range:
+    target:
+    counter:
+    element:
+    formula: 'Add: Regen on HP damage'
+    silence:
+    memgen_id: 01AC
+    reflectable:
+    counter_flood:
+    counter_magic:
+  job_id: 6
+- id: 82
+  value:
+  jp_cost: 350
+  name: Magic DefendUP
+  skill_type: support
+  data:
+    ct:
+    mp:
+    area:
+    jump:
+    move:
+    vert:
+    evade:
+    range:
+    target:
+    counter:
+    element:
+    formula: Reduce magic damage received by 33%
+    silence:
+    memgen_id: 01D4
+    reflectable:
+    counter_flood:
+    counter_magic:
+  job_id: 6
+- id: 83
+  value:
   jp_cost: 50
   name: Explosion
   skill_type: action
   data:
     ct: '3'
     mp: '6'
-    area: 
-    jump: 
-    move: 
-    vert: 
+    area:
+    jump:
+    move:
+    vert:
     evade: Mag
     range: '5'
     target: Any
-    counter: 
+    counter:
     element: Fire
     formula: 'Dmg_F(MA*19) 20% Add: Oil'
     silence: 'Yes'
+    memgen_id: '8000'
     reflectable: 'Yes'
     counter_flood: 'Yes'
     counter_magic: 'Yes'
   job_id: 7
-
-- id: 216
-  value: 
+- id: 84
+  value:
+  jp_cost: 150
+  name: Chain Lightning
+  skill_type: action
+  data:
+    ct:
+    mp: '8'
+    area: Linear
+    jump:
+    move:
+    vert:
+    evade: Mag
+    range: '7'
+    target: Any
+    counter:
+    element: Lightning
+    formula: Dmg_F(MA*16)
+    silence: 'Yes'
+    memgen_id: '4000'
+    reflectable: 'Yes'
+    counter_flood: 'Yes'
+    counter_magic: 'Yes'
+  job_id: 7
+- id: 85
+  value:
+  jp_cost: 200
+  name: Cyclone
+  skill_type: action
+  data:
+    ct: '4'
+    mp: '12'
+    area: '2'
+    jump:
+    move:
+    vert: '2'
+    evade: Mag
+    range: '4'
+    target: Any
+    counter:
+    element: Wind
+    formula: 'Dmg_F(MA*16) 20% Add: Float'
+    silence: 'Yes'
+    memgen_id: '2000'
+    reflectable: 'Yes'
+    counter_flood: 'Yes'
+    counter_magic: 'Yes'
+  job_id: 7
+- id: 86
+  value:
+  jp_cost: 280
+  name: Mjollnir
+  skill_type: action
+  data:
+    ct: '5'
+    mp: '20'
+    area:
+    jump:
+    move:
+    vert:
+    evade: Mag
+    range: '5'
+    target: Any
+    counter:
+    element: Lightning
+    formula: 'Dmg_F(MA*28) 20% Add: Stop'
+    silence: 'Yes'
+    memgen_id: '1000'
+    reflectable: 'Yes'
+    counter_flood: 'Yes'
+    counter_magic: 'Yes'
+  job_id: 7
+- id: 87
+  value:
+  jp_cost: 400
+  name: Blizzard
+  skill_type: action
+  data:
+    ct: '5'
+    mp: '24'
+    area: '2'
+    jump:
+    move:
+    vert: '3'
+    evade: Mag
+    range: '4'
+    target: Any
+    counter:
+    element: Ice
+    formula: 'Dmg_F(MA*24) 20% Add: Slow'
+    silence: 'Yes'
+    memgen_id: '0800'
+    reflectable: 'Yes'
+    counter_flood: 'Yes'
+    counter_magic: 'Yes'
+  job_id: 7
+- id: 88
+  value:
+  jp_cost: 200
+  name: Comet
+  skill_type: action
+  data:
+    ct: '4'
+    mp: '16'
+    area: '1'
+    jump:
+    move:
+    vert: '2'
+    evade: Mag
+    range: '4'
+    target: Any
+    counter:
+    element: Fire
+    formula: Dmg_F(MA*18)
+    silence: 'Yes'
+    memgen_id: '0400'
+    reflectable: 'Yes'
+    counter_flood: 'Yes'
+    counter_magic: 'Yes'
+  job_id: 7
+- id: 89
+  value:
+  jp_cost: 280
+  name: Meltdown
+  skill_type: action
+  data:
+    ct: '5'
+    mp: '16'
+    area: '2'
+    jump:
+    move:
+    vert: '2'
+    evade:
+    range: '0'
+    target: Any
+    counter:
+    element:
+    formula: 'Dmg_(Missing HP) Add: Dead to self'
+    silence: 'Yes'
+    memgen_id: '0200'
+    reflectable: 'Yes'
+    counter_flood: 'Yes'
+    counter_magic: 'Yes'
+  job_id: 7
+- id: 90
+  value:
+  jp_cost: 300
+  name: Frog
+  skill_type: action
+  data:
+    ct: '5'
+    mp: '12'
+    area:
+    jump:
+    move:
+    vert:
+    evade: Mag
+    range: '4'
+    target: Any
+    counter:
+    element:
+    formula: 'Add: Frog Hit_F(MA+140)%'
+    silence: 'Yes'
+    memgen_id: '0100'
+    reflectable: 'Yes'
+    counter_flood: 'Yes'
+    counter_magic: 'Yes'
+  job_id: 7
+- id: 91
+  value:
+  jp_cost: 600
+  name: Dark Holy
+  skill_type: action
+  data:
+    ct: '6'
+    mp: '46'
+    area:
+    jump:
+    move:
+    vert:
+    evade:
+    range: '5'
+    target: Any
+    counter:
+    element:
+    formula: Dmg_F(MA*40)
+    silence: 'Yes'
+    memgen_id: '0080'
+    reflectable: 'Yes'
+    counter_flood: 'Yes'
+    counter_magic: 'Yes'
+  job_id: 7
+- id: 92
+  value:
+  jp_cost: 600
+  name: Flare 2
+  skill_type: action
+  data:
+    ct: '7'
+    mp: '70'
+    area: '2'
+    jump:
+    move:
+    vert: '3'
+    evade:
+    range: '4'
+    target: Any
+    counter:
+    element:
+    formula: Dmg_F(MA*44)
+    silence: 'Yes'
+    memgen_id: '0040'
+    reflectable:
+    counter_flood: 'Yes'
+    counter_magic: 'Yes'
+  job_id: 7
+- id: 93
+  value:
+  jp_cost: 700
+  name: Counter Magic
+  skill_type: reaction
+  data:
+    ct:
+    mp:
+    area:
+    jump:
+    move:
+    vert:
+    evade:
+    range:
+    target:
+    counter:
+    element:
+    formula: Cast the same spell just used on yourself
+    silence:
+    memgen_id: 01B3
+    reflectable:
+    counter_flood:
+    counter_magic:
+  job_id: 7
+- id: 94
+  value:
+  jp_cost: 350
+  name: Magic AttackUP
+  skill_type: support
+  data:
+    ct:
+    mp:
+    area:
+    jump:
+    move:
+    vert:
+    evade:
+    range:
+    target:
+    counter:
+    element:
+    formula: Increases magic damage by 33%
+    silence:
+    memgen_id: 01D3
+    reflectable:
+    counter_flood:
+    counter_magic:
+  job_id: 7
+- id: 95
+  value:
+  jp_cost: 80
+  name: Haste
+  skill_type: action
+  data:
+    ct: '2'
+    mp: '8'
+    area: '1'
+    jump:
+    move:
+    vert:
+    evade:
+    range: '3'
+    target: Any
+    counter:
+    element:
+    formula: 'Add: Haste Hit_F(MA+180)%'
+    silence: 'Yes'
+    memgen_id: '8000'
+    reflectable: 'Yes'
+    counter_flood:
+    counter_magic:
+  job_id: 8
+- id: 96
+  value:
+  jp_cost: 500
+  name: Haste 2
+  skill_type: action
+  data:
+    ct: '6'
+    mp: '30'
+    area: '2'
+    jump:
+    move:
+    vert: '2'
+    evade:
+    range: '3'
+    target: Any
+    counter:
+    element:
+    formula: 'Add: Haste Hit_F(MA+240)%'
+    silence: 'Yes'
+    memgen_id: '4000'
+    reflectable: 'Yes'
+    counter_flood:
+    counter_magic:
+  job_id: 8
+- id: 97
+  value:
+  jp_cost: 80
+  name: Slow
+  skill_type: action
+  data:
+    ct: '2'
+    mp: '8'
+    area: '1'
+    jump:
+    move:
+    vert:
+    evade: Mag
+    range: '3'
+    target: Any
+    counter:
+    element:
+    formula: 'Add: Slow Hit_F(MA+180)%'
+    silence: 'Yes'
+    memgen_id: '2000'
+    reflectable: 'Yes'
+    counter_flood: 'Yes'
+    counter_magic: 'Yes'
+  job_id: 8
+- id: 98
+  value:
+  jp_cost: 500
+  name: Slow 2
+  skill_type: action
+  data:
+    ct: '5'
+    mp: '30'
+    area: '2'
+    jump:
+    move:
+    vert: '2'
+    evade: Mag
+    range: '3'
+    target: Any
+    counter:
+    element:
+    formula: 'Add: Slow Hit_F(MA+240)%'
+    silence: 'Yes'
+    memgen_id: '1000'
+    reflectable: 'Yes'
+    counter_flood: 'Yes'
+    counter_magic: 'Yes'
+  job_id: 8
+- id: 99
+  value:
+  jp_cost: 300
+  name: Stop
+  skill_type: action
+  data:
+    ct: '6'
+    mp: '14'
+    area: '1'
+    jump:
+    move:
+    vert: '1'
+    evade: Mag
+    range: '3'
+    target: Any
+    counter:
+    element:
+    formula: 'Add: Stop Hit_F(MA+150)%'
+    silence: 'Yes'
+    memgen_id: '0800'
+    reflectable: 'Yes'
+    counter_flood: 'Yes'
+    counter_magic: 'Yes'
+  job_id: 8
+- id: 100
+  value:
+  jp_cost: 80
+  name: Don't Move
+  skill_type: action
+  data:
+    ct: '3'
+    mp: '10'
+    area: '1'
+    jump:
+    move:
+    vert: '1'
+    evade: Mag
+    range: '3'
+    target: Any
+    counter:
+    element:
+    formula: 'Add: Don''t Move Hit_F(MA+190)%'
+    silence: 'Yes'
+    memgen_id: '0400'
+    reflectable: 'Yes'
+    counter_flood: 'Yes'
+    counter_magic: 'Yes'
+  job_id: 8
+- id: 101
+  value:
+  jp_cost: 250
+  name: Reflect
+  skill_type: action
+  data:
+    ct: '1'
+    mp: '12'
+    area:
+    jump:
+    move:
+    vert:
+    evade:
+    range: '4'
+    target: Any
+    counter:
+    element:
+    formula: 'Add: Reflect Hit_F(MA+180)%'
+    silence: 'Yes'
+    memgen_id: '0100'
+    reflectable: 'Yes'
+    counter_flood:
+    counter_magic:
+  job_id: 8
+- id: 102
+  value:
   jp_cost: 800
   name: Quick
   skill_type: action
   data:
     ct: '5'
     mp: '24'
-    area: 
-    jump: 
-    move: 
-    vert: 
-    evade: 
+    area:
+    jump:
+    move:
+    vert:
+    evade:
     range: '4'
     target: Any
-    counter: 
-    element: 
+    counter:
+    element:
     formula: Set CT to 100 Hit_F(MA+110)%
     silence: 'Yes'
+    memgen_id: '0080'
     reflectable: 'Yes'
-    counter_flood: 
-    counter_magic: 
+    counter_flood:
+    counter_magic:
   job_id: 8
-
-- id: 222
-  value: 
+- id: 103
+  value:
+  jp_cost: 200
+  name: Demi
+  skill_type: action
+  data:
+    ct: '2'
+    mp: '12'
+    area: '1'
+    jump:
+    move:
+    vert: '1'
+    evade: Mag
+    range: '4'
+    target: Any
+    counter:
+    element:
+    formula: Dmg_(25% Max HP) Hit_F(MA+225)%
+    silence: 'Yes'
+    memgen_id: '0040'
+    reflectable: 'Yes'
+    counter_flood: 'Yes'
+    counter_magic: 'Yes'
+  job_id: 8
+- id: 104
+  value:
+  jp_cost: 450
+  name: Demi 2
+  skill_type: action
+  data:
+    ct: '4'
+    mp: '26'
+    area: '1'
+    jump:
+    move:
+    vert: '1'
+    evade: Mag
+    range: '4'
+    target: Any
+    counter:
+    element:
+    formula: Dmg_(50% Max HP) Hit_F(MA+200)%
+    silence: 'Yes'
+    memgen_id: '0020'
+    reflectable: 'Yes'
+    counter_flood: 'Yes'
+    counter_magic: 'Yes'
+  job_id: 8
+- id: 105
+  value:
+  jp_cost: 600
+  name: Gravi 2
+  skill_type: action
+  data:
+    ct: '6'
+    mp: '30'
+    area: '2'
+    jump:
+    move:
+    vert: '2'
+    evade: Mag
+    range: '4'
+    target: Any
+    counter:
+    element:
+    formula: Dmg_(66% Max HP) Hit_F(MA+175)%
+    silence: 'Yes'
+    memgen_id: '0010'
+    reflectable:
+    counter_flood: 'Yes'
+    counter_magic: 'Yes'
+  job_id: 8
+- id: 106
+  value:
+  jp_cost: 700
+  name: Critical Quick
+  skill_type: reaction
+  data:
+    ct:
+    mp:
+    area:
+    jump:
+    move:
+    vert:
+    evade:
+    range:
+    target:
+    counter:
+    element:
+    formula: Set CT to 100 on becoming critical
+    silence:
+    memgen_id: 01B1
+    reflectable:
+    counter_flood:
+    counter_magic:
+  job_id: 8
+- id: 107
+  value:
+  jp_cost: 800
+  name: Short Charge
+  skill_type: support
+  data:
+    ct:
+    mp:
+    area:
+    jump:
+    move:
+    vert:
+    evade:
+    range:
+    target:
+    counter:
+    element:
+    formula: Spell Charge Time cut by 50%
+    silence:
+    memgen_id: 01E2
+    reflectable:
+    counter_flood:
+    counter_magic:
+  job_id: 8
+- id: 108
+  value:
+  jp_cost: 800
+  name: Teleport
+  skill_type: movement
+  data:
+    ct:
+    mp:
+    area:
+    jump:
+    move:
+    vert:
+    evade:
+    range:
+    target:
+    counter:
+    element:
+    formula: Move Anywhere, ignoring height and obstacles. 10% chance to fail per
+      space beyond your move
+    silence:
+    memgen_id: 01F2
+    reflectable:
+    counter_flood:
+    counter_magic:
+  job_id: 8
+- id: 109
+  value:
   jp_cost: 0
   name: Float
   skill_type: movement
   data:
-    ct: 
-    mp: 
-    area: 
-    jump: 
-    move: 
-    vert: 
-    evade: 
-    range: 
-    target: 
-    counter: 
-    element: 
+    ct:
+    mp:
+    area:
+    jump:
+    move:
+    vert:
+    evade:
+    range:
+    target:
+    counter:
+    element:
     formula: Float 1H above ground, ignoring effects of terrain (float makes you immune
       to earth element)
-    silence: 
-    reflectable: 
-    counter_flood: 
-    counter_magic: 
+    silence:
+    memgen_id: 01FA
+    reflectable:
+    counter_flood:
+    counter_magic:
   job_id: 8
-
-- id: 186
-  value: 
+- id: 110
+  value:
+  jp_cost: 80
+  name: Moogle
+  skill_type: action
+  data:
+    ct: '4'
+    mp: '10'
+    area: '2'
+    jump:
+    move:
+    vert: '2'
+    evade: Mag
+    range: '4'
+    target: Allies
+    counter:
+    element:
+    formula: Heal_F(MA*20)
+    silence: 'Yes'
+    memgen_id: '8000'
+    reflectable:
+    counter_flood:
+    counter_magic:
+  job_id: 9
+- id: 111
+  value:
+  jp_cost: 180
+  name: Shiva
+  skill_type: action
+  data:
+    ct: '4'
+    mp: '10'
+    area: '2'
+    jump:
+    move:
+    vert: '2'
+    evade: Mag
+    range: '4'
+    target: Enemies
+    counter:
+    element: Ice
+    formula: Dmg_F(MA*16)
+    silence: 'Yes'
+    memgen_id: '4000'
+    reflectable:
+    counter_flood: 'Yes'
+    counter_magic: 'Yes'
+  job_id: 9
+- id: 112
+  value:
+  jp_cost: 180
+  name: Ramuh
+  skill_type: action
+  data:
+    ct: '4'
+    mp: '10'
+    area: '2'
+    jump:
+    move:
+    vert: '2'
+    evade: Mag
+    range: '4'
+    target: Enemies
+    counter:
+    element: Lightning
+    formula: Dmg_F(MA*16)
+    silence: 'Yes'
+    memgen_id: '2000'
+    reflectable:
+    counter_flood: 'Yes'
+    counter_magic: 'Yes'
+  job_id: 9
+- id: 113
+  value:
   jp_cost: 180
   name: Ifrit
   skill_type: action
   data:
     ct: '4'
-    mp: '20'
+    mp: '10'
     area: '2'
-    jump: 
-    move: 
+    jump:
+    move:
     vert: '2'
     evade: Mag
     range: '4'
-    target: Any
-    counter: 
+    target: Enemies
+    counter:
     element: Fire
     formula: Dmg_F(MA*16)
     silence: 'Yes'
-    reflectable: 
+    memgen_id: '1000'
+    reflectable:
     counter_flood: 'Yes'
     counter_magic: 'Yes'
   job_id: 9
-
-- id: 250
-  value: 
+- id: 114
+  value:
+  jp_cost: 200
+  name: Fairy
+  skill_type: action
+  data:
+    ct: '4'
+    mp: '30'
+    area: '1'
+    jump:
+    move:
+    vert: '2'
+    evade:
+    range: '4'
+    target: Allies
+    counter:
+    element:
+    formula: Revive 33% Hit_F(MA+180)%
+    silence: 'Yes'
+    memgen_id: '0800'
+    reflectable:
+    counter_flood:
+    counter_magic:
+  job_id: 9
+- id: 115
+  value:
+  jp_cost: 200
+  name: Silf
+  skill_type: action
+  data:
+    ct: '4'
+    mp: '15'
+    area: '2'
+    jump:
+    move:
+    vert: '2'
+    evade: Mag
+    range: '4'
+    target: Enemies
+    counter:
+    element: Wind
+    formula: 'Dmg_F(MA*16) 20% Add: Float'
+    silence: 'Yes'
+    memgen_id: '0400'
+    reflectable:
+    counter_flood: 'Yes'
+    counter_magic: 'Yes'
+  job_id: 9
+- id: 116
+  value:
+  jp_cost: 350
+  name: Carbunkle
+  skill_type: action
+  data:
+    ct: '3'
+    mp: '20'
+    area: '2'
+    jump:
+    move:
+    vert: '2'
+    evade:
+    range: '4'
+    target: Allies
+    counter:
+    element:
+    formula: 'Add: Reflect+Defend Hit_F(MA+225)%'
+    silence: 'Yes'
+    memgen_id: '0200'
+    reflectable:
+    counter_flood:
+    counter_magic:
+  job_id: 9
+- id: 117
+  value:
+  jp_cost: 200
+  name: Titan
+  skill_type: action
+  data:
+    ct: '5'
+    mp: '30'
+    area: '2'
+    jump:
+    move:
+    vert: '2'
+    evade: Mag
+    range: '4'
+    target: Enemies
+    counter:
+    element: Earth
+    formula: Dmg_F(MA*24)
+    silence: 'Yes'
+    memgen_id: '0100'
+    reflectable:
+    counter_flood: 'Yes'
+    counter_magic: 'Yes'
+  job_id: 9
+- id: 118
+  value:
+  jp_cost: 200
+  name: Odin
+  skill_type: action
+  data:
+    ct: '5'
+    mp: '30'
+    area: '2'
+    jump:
+    move:
+    vert: '2'
+    evade: Mag
+    range: '4'
+    target: Enemies
+    counter:
+    element:
+    formula: Dmg_F(MA*24)
+    silence: 'Yes'
+    memgen_id: '0080'
+    reflectable:
+    counter_flood: 'Yes'
+    counter_magic: 'Yes'
+  job_id: 9
+- id: 119
+  value:
+  jp_cost: 200
+  name: Salamander
+  skill_type: action
+  data:
+    ct: '5'
+    mp: '30'
+    area: '2'
+    jump:
+    move:
+    vert: '2'
+    evade: Mag
+    range: '4'
+    target: Enemies
+    counter:
+    element: Fire
+    formula: Dmg_F(MA*24)
+    silence: 'Yes'
+    memgen_id: '0040'
+    reflectable:
+    counter_flood: 'Yes'
+    counter_magic: 'Yes'
+  job_id: 9
+- id: 120
+  value:
+  jp_cost: 200
+  name: Lich
+  skill_type: action
+  data:
+    ct: '5'
+    mp: '30'
+    area: '2'
+    jump:
+    move:
+    vert: '2'
+    evade: Mag
+    range: '4'
+    target: Enemies
+    counter:
+    element:
+    formula: 'Dmg_F(MA*18) 19% Add: Dead'
+    silence: 'Yes'
+    memgen_id: '0020'
+    reflectable:
+    counter_flood: 'Yes'
+    counter_magic: 'Yes'
+  job_id: 9
+- id: 121
+  value:
+  jp_cost: 500
+  name: Leviathan
+  skill_type: action
+  data:
+    ct: '6'
+    mp: '40'
+    area: '3'
+    jump:
+    move:
+    vert: '3'
+    evade: Mag
+    range: '4'
+    target: Enemies
+    counter:
+    element: Water
+    formula: Dmg_F(MA*30)
+    silence: 'Yes'
+    memgen_id: '0010'
+    reflectable:
+    counter_flood: 'Yes'
+    counter_magic: 'Yes'
+  job_id: 9
+- id: 122
+  value:
+  jp_cost: 500
+  name: Bahamut
+  skill_type: action
+  data:
+    ct: '8'
+    mp: '40'
+    area: '3'
+    jump:
+    move:
+    vert: '3'
+    evade: Mag
+    range: '4'
+    target: Enemies
+    counter:
+    element:
+    formula: Dmg_F(MA*30)
+    silence: 'Yes'
+    memgen_id: '0008'
+    reflectable:
+    counter_flood: 'Yes'
+    counter_magic: 'Yes'
+  job_id: 9
+- id: 123
+  value:
+  jp_cost: 600
+  name: Cyclops
+  skill_type: action
+  data:
+    ct: '8'
+    mp: '50'
+    area: '2'
+    jump:
+    move:
+    vert: '2'
+    evade: Mag
+    range: '4'
+    target: Enemies
+    counter:
+    element:
+    formula: Dmg_F(MA*35)
+    silence: 'Yes'
+    memgen_id: '0004'
+    reflectable:
+    counter_flood: 'Yes'
+    counter_magic: 'Yes'
+  job_id: 9
+- id: 124
+  value:
+  jp_cost: 1000
+  name: Zodiac
+  skill_type: action
+  data:
+    ct: '12'
+    mp: '99'
+    area: '3'
+    jump:
+    move:
+    vert: '3'
+    evade: Mag
+    range: '4'
+    target: Enemies
+    counter:
+    element:
+    formula: Dmg_F(MA*30), always good compat
+    silence: 'Yes'
+    memgen_id: '0002'
+    reflectable:
+    counter_flood: 'Yes'
+    counter_magic: 'Yes'
+  job_id: 9
+- id: 125
+  value:
+  jp_cost: 400
+  name: MP Restore
+  skill_type: reaction
+  data:
+    ct:
+    mp:
+    area:
+    jump:
+    move:
+    vert:
+    evade:
+    range:
+    target:
+    counter:
+    element:
+    formula: Restore all MP on becoming critical
+    silence:
+    memgen_id: 01B0
+    reflectable:
+    counter_flood:
+    counter_magic:
+  job_id: 9
+- id: 126
+  value:
+  jp_cost: 750
+  name: Half of MP
+  skill_type: support
+  data:
+    ct:
+    mp:
+    area:
+    jump:
+    move:
+    vert:
+    evade:
+    range:
+    target:
+    counter:
+    element:
+    formula: MP Costs reduced by 50%
+    silence:
+    memgen_id: 01CE
+    reflectable:
+    counter_flood:
+    counter_magic:
+  job_id: 9
+- id: 127
+  value:
+  jp_cost: 100
+  name: Gil Toss
+  skill_type: action
+  data:
+    ct:
+    mp:
+    area:
+    jump:
+    move:
+    vert: '3'
+    evade:
+    range: '3'
+    target: Any
+    counter: 'Yes'
+    element:
+    formula: 'Add: Defend or Berserk Hit_(PA+60)%'
+    silence:
+    memgen_id: '8000'
+    reflectable:
+    counter_flood: 'Yes'
+    counter_magic:
+  job_id: 10
+- id: 128
+  value:
+  jp_cost: 100
+  name: Steal Energy
+  skill_type: action
+  data:
+    ct:
+    mp:
+    area:
+    jump:
+    move:
+    vert:
+    evade:
+    range: '1'
+    target: Any
+    counter:
+    element:
+    formula: Leech 50% target max_MP Hit_(SP+50)
+    silence:
+    memgen_id: '4000'
+    reflectable:
+    counter_flood: 'Yes'
+    counter_magic:
+  job_id: 10
+- id: 129
+  value:
+  jp_cost: 200
+  name: Steal Heart
+  skill_type: action
+  data:
+    ct:
+    mp:
+    area:
+    jump:
+    move:
+    vert: '3'
+    evade:
+    range: '3'
+    target: Any
+    counter:
+    element:
+    formula: 'Add: Charm opposite sex Hit_(MA+40)%'
+    silence:
+    memgen_id: '2000'
+    reflectable:
+    counter_flood:
+    counter_magic:
+  job_id: 10
+- id: 130
+  value:
   jp_cost: 300
   name: Steal Strength
   skill_type: action
   data:
-    ct: 
-    mp: 
-    area: 
-    jump: 
-    move: 
-    vert: 
-    evade: 
+    ct:
+    mp:
+    area:
+    jump:
+    move:
+    vert:
+    evade:
     range: '1'
     target: Any
-    counter: 
-    element: 
+    counter:
+    element:
     formula: Target -1 PA, Self +1 PA Hit_(SP+60)%
-    silence: 
-    reflectable: 
+    silence:
+    memgen_id: '1000'
+    reflectable:
     counter_flood: 'Yes'
-    counter_magic: 
+    counter_magic:
   job_id: 10
-
-- id: 251
-  value: 
+- id: 131
+  value:
   jp_cost: 300
   name: Backstab
   skill_type: action
   data:
-    ct: 
-    mp: 
-    area: 
-    jump: 
-    move: 
-    vert: 
+    ct:
+    mp:
+    area:
+    jump:
+    move:
+    vert:
     evade: Phys
     range: '1'
     target: Any
     counter: 'Yes'
-    element: 
+    element:
     formula: 'If behind: Dmg_(SP*WP) ELSE: miss'
-    silence: 
-    reflectable: 
+    silence:
+    memgen_id: '0800'
+    reflectable:
     counter_flood: 'Yes'
-    counter_magic: 
+    counter_magic:
   job_id: 10
-
-- id: 255
-  value: 
+- id: 132
+  value:
+  jp_cost: 300
+  name: Throat Punch
+  skill_type: action
+  data:
+    ct:
+    mp:
+    area:
+    jump:
+    move:
+    vert:
+    evade: Phys
+    range: '1'
+    target: Any
+    counter: 'Yes'
+    element:
+    formula: 'Dmg_((PA-2)*SP) Cancel: Charging'
+    silence:
+    memgen_id: '0400'
+    reflectable:
+    counter_flood: 'Yes'
+    counter_magic:
+  job_id: 10
+- id: 133
+  value:
+  jp_cost: 400
+  name: Kidney Shot
+  skill_type: action
+  data:
+    ct:
+    mp:
+    area:
+    jump:
+    move:
+    vert:
+    evade: Phys
+    range: '1'
+    target: Any
+    counter: 'Yes'
+    element:
+    formula: Dmg_((PA/2)*SP) -25 CT
+    silence:
+    memgen_id: '0200'
+    reflectable:
+    counter_flood: 'Yes'
+    counter_magic:
+  job_id: 10
+- id: 134
+  value:
+  jp_cost: 500
+  name: Disarm
+  skill_type: action
+  data:
+    ct:
+    mp:
+    area:
+    jump:
+    move:
+    vert: '2'
+    evade: Phys
+    range: '1'
+    target: Any
+    counter:
+    element:
+    formula: Steal Weapon Hit_(SP+60)%
+    silence:
+    memgen_id: '0100'
+    reflectable:
+    counter_flood: 'Yes'
+    counter_magic:
+  job_id: 10
+- id: 135
+  value:
+  jp_cost: 150
+  name: Caution
+  skill_type: reaction
+  data:
+    ct:
+    mp:
+    area:
+    jump:
+    move:
+    vert:
+    evade:
+    range:
+    target:
+    counter:
+    element:
+    formula: 'Add: Defend until next turn (double evasion) on taking damage'
+    silence:
+    memgen_id: 01AA
+    reflectable:
+    counter_flood:
+    counter_magic:
+  job_id: 10
+- id: 136
+  value:
+  jp_cost: 200
+  name: Gilgame Heart
+  skill_type: reaction
+  data:
+    ct:
+    mp:
+    area:
+    jump:
+    move:
+    vert:
+    evade:
+    range:
+    target:
+    counter:
+    element:
+    formula: Does nothing in AI battles
+    silence:
+    memgen_id: 01B7
+    reflectable:
+    counter_flood:
+    counter_magic:
+  job_id: 10
+- id: 137
+  value:
+  jp_cost: 200
+  name: Catch
+  skill_type: reaction
+  data:
+    ct:
+    mp:
+    area:
+    jump:
+    move:
+    vert:
+    evade:
+    range:
+    target:
+    counter:
+    element:
+    formula: Catch thrown weapons
+    silence:
+    memgen_id: 01C2
+    reflectable:
+    counter_flood:
+    counter_magic:
+  job_id: 10
+- id: 138
+  value:
+  jp_cost: 150
+  name: Secret Hunt
+  skill_type: support
+  data:
+    ct:
+    mp:
+    area:
+    jump:
+    move:
+    vert:
+    evade:
+    range:
+    target:
+    counter:
+    element:
+    formula: Finishing off a monster with Attack removes it from the battle entirely
+    silence:
+    memgen_id: 01D7
+    reflectable:
+    counter_flood:
+    counter_magic:
+  job_id: 10
+- id: 139
+  value:
+  jp_cost: 420
+  name: Move+2
+  skill_type: movement
+  data:
+    ct:
+    mp:
+    area:
+    jump:
+    move: '2'
+    vert:
+    evade:
+    range:
+    target:
+    counter:
+    element:
+    formula: Read the name, this isn't complicated
+    silence:
+    memgen_id: 01E7
+    reflectable:
+    counter_flood:
+    counter_magic:
+  job_id: 10
+- id: 140
+  value:
+  jp_cost: 200
+  name: Jump+2
+  skill_type: movement
+  data:
+    ct:
+    mp:
+    area:
+    jump: '2'
+    move:
+    vert:
+    evade:
+    range:
+    target:
+    counter:
+    element:
+    formula: Read the name, this isn't complicated
+    silence:
+    memgen_id: 01EA
+    reflectable:
+    counter_flood:
+    counter_magic:
+  job_id: 10
+- id: 141
+  value:
+  jp_cost: 300
+  name: Invitation
+  skill_type: action
+  data:
+    ct:
+    mp:
+    area:
+    jump:
+    move:
+    vert: '3'
+    evade:
+    range: '3'
+    target: Any
+    counter:
+    element:
+    formula: 'Add: Confusion or Charm Hit_(MA+60)%'
+    silence: 'Yes'
+    memgen_id: '8000'
+    reflectable:
+    counter_flood:
+    counter_magic:
+  job_id: 11
+- id: 142
+  value:
   jp_cost: 100
   name: Persuade
   skill_type: action
   data:
-    ct: 
-    mp: 
-    area: 
-    jump: 
-    move: 
+    ct:
+    mp:
+    area:
+    jump:
+    move:
     vert: '3'
-    evade: 
+    evade:
     range: '3'
     target: Any
-    counter: 
-    element: 
-    formula: 'Add: Stop Hit_(MA+50)%'
+    counter:
+    element:
+    formula: 'Add: Stop Hit_(MA+60)%'
     silence: 'Yes'
-    reflectable: 
-    counter_flood: 
-    counter_magic: 
+    memgen_id: '4000'
+    reflectable:
+    counter_flood:
+    counter_magic:
   job_id: 11
-
-- id: 126
-  value: 
+- id: 143
+  value:
+  jp_cost: 100
+  name: Threaten
+  skill_type: action
+  data:
+    ct:
+    mp:
+    area:
+    jump:
+    move:
+    vert: '3'
+    evade:
+    range: '3'
+    target: Any
+    counter:
+    element:
+    formula: 'Add: Don''t Act Hit_(MA+55)%'
+    silence: 'Yes'
+    memgen_id: '1000'
+    reflectable:
+    counter_flood:
+    counter_magic:
+  job_id: 11
+- id: 144
+  value:
+  jp_cost: 200
+  name: Preach
+  skill_type: action
+  data:
+    ct:
+    mp:
+    area:
+    jump:
+    move:
+    vert: '3'
+    evade:
+    range: '3'
+    target: Any
+    counter:
+    element:
+    formula: 'Add: Reraise Hit_(MA+80)%'
+    silence: 'Yes'
+    memgen_id: '0800'
+    reflectable:
+    counter_flood:
+    counter_magic:
+  job_id: 11
+- id: 145
+  value:
+  jp_cost: 200
+  name: Refute
+  skill_type: action
+  data:
+    ct:
+    mp:
+    area:
+    jump:
+    move:
+    vert: '3'
+    evade:
+    range: '3'
+    target: Any
+    counter:
+    element:
+    formula: 'Cancel: All status Hit_(MA+60)%'
+    silence: 'Yes'
+    memgen_id: '0400'
+    reflectable:
+    counter_flood:
+    counter_magic:
+  job_id: 11
+- id: 146
+  value:
+  jp_cost: 200
+  name: Death Sentence
+  skill_type: action
+  data:
+    ct:
+    mp:
+    area:
+    jump:
+    move:
+    vert: '3'
+    evade:
+    range: '3'
+    target: Any
+    counter:
+    element:
+    formula: 'Add: Death Sentence Hit_(MA+55)%'
+    silence: 'Yes'
+    memgen_id: '0200'
+    reflectable:
+    counter_flood:
+    counter_magic:
+  job_id: 11
+- id: 147
+  value:
+  jp_cost: 300
+  name: Insult
+  skill_type: action
+  data:
+    ct:
+    mp:
+    area:
+    jump:
+    move:
+    vert: '3'
+    evade:
+    range: '3'
+    target: Any
+    counter:
+    element:
+    formula: 'Add: Berserk Hit_(MA+70)%'
+    silence: 'Yes'
+    memgen_id: '0100'
+    reflectable:
+    counter_flood:
+    counter_magic:
+  job_id: 11
+- id: 148
+  value:
+  jp_cost: 300
+  name: Mimic Daravon
+  skill_type: action
+  data:
+    ct:
+    mp:
+    area: '1'
+    jump:
+    move:
+    vert: '3'
+    evade:
+    range: '3'
+    target: Any
+    counter:
+    element:
+    formula: 'Add: Sleep Hit_(MA+50)%'
+    silence: 'Yes'
+    memgen_id: '0080'
+    reflectable:
+    counter_flood:
+    counter_magic:
+  job_id: 11
+- id: 149
+  value:
+  jp_cost: 250
+  name: Finger Guard
+  skill_type: reaction
+  data:
+    ct:
+    mp:
+    area:
+    jump:
+    move:
+    vert:
+    evade:
+    range:
+    target:
+    counter:
+    element:
+    formula: Evade Talk Skills Brave%
+    silence:
+    memgen_id: 01C0
+    reflectable:
+    counter_flood:
+    counter_magic:
+  job_id: 11
+- id: 150
+  value:
+  jp_cost: 300
+  name: Equip Gun
+  skill_type: support
+  data:
+    ct:
+    mp:
+    area:
+    jump:
+    move:
+    vert:
+    evade:
+    range:
+    target:
+    counter:
+    element:
+    formula: Can equip gun regardless of job
+    silence:
+    memgen_id: 01CD
+    reflectable:
+    counter_flood:
+    counter_magic:
+  job_id: 11
+- id: 151
+  value:
+  jp_cost: 100
+  name: Monster Talk
+  skill_type: support
+  data:
+    ct:
+    mp:
+    area:
+    jump:
+    move:
+    vert:
+    evade:
+    range:
+    target:
+    counter:
+    element:
+    formula: Talk Skills can affect monsters (CLASS INNATE)
+    silence:
+    memgen_id: 01D9
+    reflectable:
+    counter_flood:
+    counter_magic:
+  job_id: 11
+- id: 152
+  value:
+  jp_cost: 80
+  name: Discord
+  skill_type: action
+  data:
+    ct:
+    mp: '12'
+    area:
+    jump:
+    move:
+    vert:
+    evade:
+    range: '4'
+    target: Any
+    counter:
+    element:
+    formula: 'Add: Discord Hit_F(MA+250)%'
+    silence: 'Yes'
+    memgen_id: '4000'
+    reflectable: 'Yes'
+    counter_flood: 'Yes'
+    counter_magic: 'Yes'
+  job_id: 12
+- id: 153
+  value:
+  jp_cost: 100
+  name: Spell Absorb
+  skill_type: action
+  data:
+    ct: '2'
+    mp: '2'
+    area:
+    jump:
+    move:
+    vert:
+    evade: Mag
+    range: '4'
+    target: Any
+    counter:
+    element:
+    formula: Leech 33% target max MP Hit_F(MA+255)%
+    silence: 'Yes'
+    memgen_id: '2000'
+    reflectable: 'Yes'
+    counter_flood: 'Yes'
+    counter_magic: 'Yes'
+  job_id: 12
+- id: 154
+  value:
+  jp_cost: 150
+  name: Pray Faith
+  skill_type: action
+  data:
+    ct: '3'
+    mp: '6'
+    area:
+    jump:
+    move:
+    vert:
+    evade: Mag
+    range: '4'
+    target: Any
+    counter:
+    element:
+    formula: 'Add: Faith Hit_F(MA+150)%'
+    silence: 'Yes'
+    memgen_id: '1000'
+    reflectable: 'Yes'
+    counter_flood: 'Yes'
+    counter_magic: 'Yes'
+  job_id: 12
+- id: 155
+  value:
+  jp_cost: 150
+  name: Doubt Faith
+  skill_type: action
+  data:
+    ct: '3'
+    mp: '6'
+    area:
+    jump:
+    move:
+    vert:
+    evade: Mag
+    range: '4'
+    target: Any
+    counter:
+    element:
+    formula: 'Add: Innocent Hit_F(MA+150)%'
+    silence: 'Yes'
+    memgen_id: '0800'
+    reflectable: 'Yes'
+    counter_flood: 'Yes'
+    counter_magic: 'Yes'
+  job_id: 12
+- id: 156
+  value:
+  jp_cost: 200
+  name: Zombie
+  skill_type: action
+  data:
+    ct: '3'
+    mp: '12'
+    area:
+    jump:
+    move:
+    vert:
+    evade: Mag
+    range: '4'
+    target: Any
+    counter:
+    element:
+    formula: 'Add: Zombie Hit_F(MA+180)%'
+    silence: 'Yes'
+    memgen_id: '0400'
+    reflectable: 'Yes'
+    counter_flood: 'Yes'
+    counter_magic: 'Yes'
+  job_id: 12
+- id: 157
+  value:
   jp_cost: 170
   name: Silence Song
   skill_type: action
@@ -5700,354 +3755,2347 @@
     ct: '3'
     mp: '12'
     area: '1'
-    jump: 
-    move: 
+    jump:
+    move:
     vert: '1'
     evade: Mag
     range: '4'
     target: Any
-    counter: 
-    element: 
+    counter:
+    element:
     formula: 'Add: Silence Hit_F(MA+180)%'
     silence: 'Yes'
+    memgen_id: '0200'
     reflectable: 'Yes'
     counter_flood: 'Yes'
     counter_magic: 'Yes'
   job_id: 12
-
-- id: 30
-  value: 
-  jp_cost: 100
-  name: Disillusion
+- id: 158
+  value:
+  jp_cost: 200
+  name: Blind Rage
   skill_type: action
   data:
-    ct: '5'
-    mp: 
-    area: ALL
-    jump: 
-    move: 
-    vert: ALL
-    evade: 
-    range: ALL
+    ct: '3'
+    mp: '16'
+    area:
+    jump:
+    move:
+    vert:
+    evade: Mag
+    range: '4'
     target: Any
-    counter: 
-    element: 
-    formula: "-1 MA Hit_(60)%"
+    counter:
+    element:
+    formula: 'Add: Berserk Hit_F(MA+150)%'
     silence: 'Yes'
-    reflectable: 
-    counter_flood: 
-    counter_magic: 
-  job_id: 19
-
-- id: 32
-  value: 
-  jp_cost: 550
-  name: A Save
-  skill_type: reaction
-  data:
-    ct: 
-    mp: 
-    area: 
-    jump: 
-    move: 
-    vert: 
-    evade: 
-    range: 
-    target: 
-    counter: 
-    element: 
-    formula: Gain 1 PA on HP Damage
-    silence: 
-    reflectable: 
-    counter_flood: 
-    counter_magic: 
-  job_id: 19
-
-- id: 34
-  value: 
-  jp_cost: 600
-  name: Fly
-  skill_type: movement
-  data:
-    ct: 
-    mp: 
-    area: 
-    jump: 
-    move: 
-    vert: 
-    evade: 
-    range: 
-    target: 
-    counter: 
-    element: 
-    formula: Fly over units, obstacles, and ignore height when moving
-    silence: 
-    reflectable: 
-    counter_flood: 
-    counter_magic: 
-  job_id: 19
-
-- id: 36
-  value: 
-  jp_cost: 300
-  name: Jump+3
-  skill_type: movement
-  data:
-    ct: 
-    mp: 
-    area: 
-    jump: '3'
-    move: 
-    vert: 
-    evade: 
-    range: 
-    target: 
-    counter: 
-    element: 
-    formula: Read the name, this isn't complicated
-    silence: 
-    reflectable: 
-    counter_flood: 
-    counter_magic: 
-  job_id: 19
-
-- id: 128
-  value: 
+    memgen_id: '0100'
+    reflectable: 'Yes'
+    counter_flood: 'Yes'
+    counter_magic: 'Yes'
+  job_id: 12
+- id: 159
+  value:
   jp_cost: 300
   name: Petrify
   skill_type: action
   data:
     ct: '5'
     mp: '16'
-    area: 
-    jump: 
-    move: 
-    vert: 
+    area:
+    jump:
+    move:
+    vert:
     evade: Mag
     range: '4'
     target: Any
-    counter: 
-    element: 
+    counter:
+    element:
     formula: 'Add: Petrify Hit_F(MA+130)%'
     silence: 'Yes'
+    memgen_id: '0080'
     reflectable: 'Yes'
     counter_flood: 'Yes'
     counter_magic: 'Yes'
   job_id: 12
-
-- id: 46
-  value: 
-  jp_cost: 50
-  name: Blizzard
+- id: 160
+  value:
+  jp_cost: 200
+  name: Confusion Song
   skill_type: action
   data:
-    ct: 
-    mp: 
-    area: '1'
-    jump: 
-    move: 
-    vert: 
-    evade: 
+    ct: '3'
+    mp: '12'
+    area:
+    jump:
+    move:
+    vert:
+    evade: Mag
     range: '4'
     target: Any
-    counter: 
-    element: Ice
-    formula: Dmg_((PA+4/2*MA) 20% Silence
-    silence: 
-    reflectable: 
+    counter:
+    element:
+    formula: 'Add: Confusion Hit_F(MA+150)%'
+    silence: 'Yes'
+    memgen_id: '0040'
+    reflectable: 'Yes'
     counter_flood: 'Yes'
     counter_magic: 'Yes'
-  job_id: 13
-
-- id: 71
-  value: 
-  jp_cost: 500
-  name: Infinite Vertical
+  job_id: 12
+- id: 161
+  value:
+  jp_cost: 250
+  name: Dispel Magic
   skill_type: action
   data:
-    ct: RU(50/Speed)
-    mp: 
-    area: 
-    jump: 
-    move: 
-    vert: '255'
-    evade: 
-    range: 
+    ct: '2'
+    mp: '20'
+    area:
+    jump:
+    move:
+    vert:
+    evade:
+    range: '4'
     target: Any
-    counter: 'Yes'
-    element: 
-    formula: 'Dmg_(PA*WP). If using Spear: Dmg_((PA*1.5)*WP) instead'
-    silence: 
-    reflectable: 
+    counter:
+    element:
+    formula: 'Cancel: All positive status Hit_F(MA+200)%'
+    silence: 'Yes'
+    memgen_id: '0020'
+    reflectable:
     counter_flood: 'Yes'
-    counter_magic: 
-  job_id: 14
-
-- id: 258
-  value: 
-  jp_cost: 500
-  name: Muramasa
+    counter_magic: 'Yes'
+  job_id: 12
+- id: 162
+  value:
+  jp_cost: 200
+  name: Paralyze
   skill_type: action
   data:
-    ct: 
-    mp: 
+    ct: '4'
+    mp: '20'
+    area: '1'
+    jump:
+    move:
+    vert:
+    evade: Mag
+    range: '4'
+    target: Any
+    counter:
+    element:
+    formula: 'Add: Don''t Act Hit_F(MA+185)%'
+    silence: 'Yes'
+    memgen_id: '0010'
+    reflectable: 'Yes'
+    counter_flood: 'Yes'
+    counter_magic: 'Yes'
+  job_id: 12
+- id: 163
+  value:
+  jp_cost: 300
+  name: Sleep
+  skill_type: action
+  data:
+    ct: '5'
+    mp: '24'
+    area: '1'
+    jump:
+    move:
+    vert: '1'
+    evade: Mag
+    range: '4'
+    target: Any
+    counter:
+    element:
+    formula: 'Add: Sleep Hit_F(MA+170)%'
+    silence: 'Yes'
+    memgen_id: '0008'
+    reflectable: 'Yes'
+    counter_flood: 'Yes'
+    counter_magic: 'Yes'
+  job_id: 12
+- id: 164
+  value:
+  jp_cost: 300
+  name: Zombie 2
+  skill_type: action
+  data:
+    ct: '4'
+    mp: '30'
     area: '2'
-    jump: 
-    move: 
+    jump:
+    move:
     vert: '2'
-    evade: 
-    range: '0'
+    evade: Mag
+    range: '4'
     target: Any
-    counter: 
-    element: 
-    formula: 'Dmg_(MA*8) 20% Add: Death Sentence or Confuse'
-    silence: 
-    reflectable: 
+    counter:
+    element:
+    formula: 'Add: Zombie Hit_F(MA+200)%'
+    silence: 'Yes'
+    memgen_id: '0004'
+    reflectable:
     counter_flood: 'Yes'
     counter_magic: 'Yes'
-  job_id: 15
-
-- id: 112
-  value: 
-  jp_cost: 100
-  name: Sword
-  skill_type: action
-  data:
-    ct: 
-    mp: 
-    area: 
-    jump: 
-    move: 
-    vert: 
-    evade: Phys
-    range: Move
-    target: Any
-    counter: 'Yes'
-    element: 
-    formula: Hit_(Speed * thrown weapon WP)
-    silence: 
-    reflectable: 
-    counter_flood: 'Yes'
-    counter_magic: 
-  job_id: 16
-
-- id: 114
-  value: 
-  jp_cost: 100
-  name: Ninja Sword
-  skill_type: action
-  data:
-    ct: 
-    mp: 
-    area: 
-    jump: 
-    move: 
-    vert: 
-    evade: Phys
-    range: Move
-    target: Any
-    counter: 'Yes'
-    element: 
-    formula: Hit_(Speed * thrown weapon WP)
-    silence: 
-    reflectable: 
-    counter_flood: 'Yes'
-    counter_magic: 
-  job_id: 16
-
-- id: 153
-  value: 
+  job_id: 12
+- id: 165
+  value:
   jp_cost: 300
   name: Confuse 2
   skill_type: action
   data:
     ct: '4'
-    mp: '20'
+    mp: '30'
     area: '2'
-    jump: 
-    move: 
+    jump:
+    move:
     vert: '2'
     evade: Mag
     range: '4'
     target: Any
-    counter: 
-    element: 
+    counter:
+    element:
     formula: 'Add: Confusion Hit_F(MA+170)%'
     silence: 'Yes'
-    reflectable: 
+    memgen_id: '0002'
+    reflectable:
+    counter_flood: 'Yes'
+    counter_magic: 'Yes'
+  job_id: 12
+- id: 166
+  value:
+  jp_cost: 400
+  name: Frog 2
+  skill_type: action
+  data:
+    ct: '6'
+    mp: '30'
+    area: '2'
+    jump:
+    move:
+    vert: '2'
+    evade: Mag
+    range: '4'
+    target: Any
+    counter:
+    element:
+    formula: 'Add: Frog Hit_F(MA+120)%'
+    silence: 'Yes'
+    memgen_id: '0001'
+    reflectable:
+    counter_flood: 'Yes'
+    counter_magic: 'Yes'
+  job_id: 12
+- id: 167
+  value:
+  jp_cost: 700
+  name: Barrier
+  skill_type: reaction
+  data:
+    ct:
+    mp:
+    area:
+    jump:
+    move:
+    vert:
+    evade:
+    range:
+    target:
+    counter:
+    element:
+    formula: Add Protect and Shell on Physical attack or skill
+    silence:
+    memgen_id: 01AD
+    reflectable:
+    counter_flood:
+    counter_magic:
+  job_id: 12
+- id: 168
+  value:
+  jp_cost: 200
+  name: Absorb Used MP
+  skill_type: reaction
+  data:
+    ct:
+    mp:
+    area:
+    jump:
+    move:
+    vert:
+    evade:
+    range:
+    target:
+    counter:
+    element:
+    formula: Gain MP equal to the cost of a spell or skill used on you
+    silence:
+    memgen_id: 01B6
+    reflectable:
+    counter_flood:
+    counter_magic:
+  job_id: 12
+- id: 169
+  value:
+  jp_cost: 350
+  name: Defense UP
+  skill_type: support
+  data:
+    ct:
+    mp:
+    area:
+    jump:
+    move:
+    vert:
+    evade:
+    range:
+    target:
+    counter:
+    element:
+    formula: Reduce physical damage by 33%
+    silence:
+    memgen_id: 01D2
+    reflectable:
+    counter_flood:
+    counter_magic:
+  job_id: 12
+- id: 170
+  value:
+  jp_cost: 50
+  name: Pitfall
+  skill_type: action
+  data:
+    ct:
+    mp:
+    area: '1'
+    jump:
+    move:
+    vert:
+    evade:
+    range: '4'
+    target: Any
+    counter:
+    element:
+    formula: Dmg_((PA+4/2*MA) 20% Don't Move
+    silence:
+    memgen_id: '8000'
+    reflectable:
+    counter_flood: 'Yes'
+    counter_magic: 'Yes'
+  job_id: 13
+- id: 171
+  value:
+  jp_cost: 50
+  name: Waterball
+  skill_type: action
+  data:
+    ct:
+    mp:
+    area: '1'
+    jump:
+    move:
+    vert:
+    evade:
+    range: '4'
+    target: Any
+    counter:
+    element: Water
+    formula: Dmg_((PA+4/2*MA) 20% Frog
+    silence:
+    memgen_id: '4000'
+    reflectable:
+    counter_flood: 'Yes'
+    counter_magic: 'Yes'
+  job_id: 13
+- id: 172
+  value:
+  jp_cost: 50
+  name: Hell Ivy
+  skill_type: action
+  data:
+    ct:
+    mp:
+    area: '1'
+    jump:
+    move:
+    vert:
+    evade:
+    range: '4'
+    target: Any
+    counter:
+    element:
+    formula: Dmg_((PA+4/2*MA) 20% Stop
+    silence:
+    memgen_id: '2000'
+    reflectable:
+    counter_flood: 'Yes'
+    counter_magic: 'Yes'
+  job_id: 13
+- id: 173
+  value:
+  jp_cost: 50
+  name: Carve Model
+  skill_type: action
+  data:
+    ct:
+    mp:
+    area: '1'
+    jump:
+    move:
+    vert:
+    evade:
+    range: '4'
+    target: Any
+    counter:
+    element:
+    formula: Dmg_((PA+4/2*MA) 20% Petrify
+    silence:
+    memgen_id: '1000'
+    reflectable:
+    counter_flood: 'Yes'
+    counter_magic: 'Yes'
+  job_id: 13
+- id: 174
+  value:
+  jp_cost: 50
+  name: Local Quake
+  skill_type: action
+  data:
+    ct:
+    mp:
+    area: '1'
+    jump:
+    move:
+    vert:
+    evade:
+    range: '4'
+    target: Any
+    counter:
+    element: Earth
+    formula: Dmg_((PA+4/2*MA) 20% Confusion
+    silence:
+    memgen_id: '0800'
+    reflectable:
+    counter_flood: 'Yes'
+    counter_magic: 'Yes'
+  job_id: 13
+- id: 175
+  value:
+  jp_cost: 50
+  name: Kamaitachi
+  skill_type: action
+  data:
+    ct:
+    mp:
+    area: '1'
+    jump:
+    move:
+    vert:
+    evade:
+    range: '4'
+    target: Any
+    counter:
+    element: Wind
+    formula: Dmg_((PA+4/2*MA) 20% Don't Act
+    silence:
+    memgen_id: '0400'
+    reflectable:
+    counter_flood: 'Yes'
+    counter_magic: 'Yes'
+  job_id: 13
+- id: 176
+  value:
+  jp_cost: 50
+  name: Demon Fire
+  skill_type: action
+  data:
+    ct:
+    mp:
+    area: '1'
+    jump:
+    move:
+    vert:
+    evade:
+    range: '4'
+    target: Any
+    counter:
+    element: Fire
+    formula: Dmg_((PA+4/2*MA) 20% Sleep
+    silence:
+    memgen_id: '0200'
+    reflectable:
+    counter_flood: 'Yes'
+    counter_magic: 'Yes'
+  job_id: 13
+- id: 177
+  value:
+  jp_cost: 50
+  name: Quicksand
+  skill_type: action
+  data:
+    ct:
+    mp:
+    area: '1'
+    jump:
+    move:
+    vert:
+    evade:
+    range: '4'
+    target: Any
+    counter:
+    element: Earth
+    formula: Dmg_((PA+4/2*MA) 20% Death Sentence
+    silence:
+    memgen_id: '0100'
+    reflectable:
+    counter_flood: 'Yes'
+    counter_magic: 'Yes'
+  job_id: 13
+- id: 178
+  value:
+  jp_cost: 50
+  name: Sand Storm
+  skill_type: action
+  data:
+    ct:
+    mp:
+    area: '1'
+    jump:
+    move:
+    vert:
+    evade:
+    range: '4'
+    target: Any
+    counter:
+    element: Wind
+    formula: Dmg_((PA+4/2*MA) 20% Discord
+    silence:
+    memgen_id: '0080'
+    reflectable:
+    counter_flood: 'Yes'
+    counter_magic: 'Yes'
+  job_id: 13
+- id: 179
+  value:
+  jp_cost: 50
+  name: Blizzard
+  skill_type: action
+  data:
+    ct:
+    mp:
+    area: '1'
+    jump:
+    move:
+    vert:
+    evade:
+    range: '4'
+    target: Any
+    counter:
+    element: Ice
+    formula: Dmg_((PA+4/2*MA) 20% Silence
+    silence:
+    memgen_id: '0040'
+    reflectable:
+    counter_flood: 'Yes'
+    counter_magic: 'Yes'
+  job_id: 13
+- id: 180
+  value:
+  jp_cost: 50
+  name: Gusty Wind
+  skill_type: action
+  data:
+    ct:
+    mp:
+    area: '1'
+    jump:
+    move:
+    vert:
+    evade:
+    range: '4'
+    target: Any
+    counter:
+    element: Wind
+    formula: Dmg_((PA+4/2*MA) 20% Slow
+    silence:
+    memgen_id: '0020'
+    reflectable:
+    counter_flood: 'Yes'
+    counter_magic: 'Yes'
+  job_id: 13
+- id: 181
+  value:
+  jp_cost: 50
+  name: Lava Ball
+  skill_type: action
+  data:
+    ct:
+    mp:
+    area: '1'
+    jump:
+    move:
+    vert:
+    evade:
+    range: '4'
+    target: Any
+    counter:
+    element: Fire
+    formula: Dmg_((PA+6/2*MA)
+    silence:
+    memgen_id: '0010'
+    reflectable:
+    counter_flood: 'Yes'
+    counter_magic: 'Yes'
+  job_id: 13
+- id: 182
+  value:
+  jp_cost: 400
+  name: Counter Flood
+  skill_type: reaction
+  data:
+    ct:
+    mp:
+    area:
+    jump:
+    move:
+    vert:
+    evade:
+    range:
+    target:
+    counter:
+    element:
+    formula: Counter with Geomancy, regardless of if skill is learned
+    silence:
+    memgen_id: 01B5
+    reflectable:
+    counter_flood:
+    counter_magic:
+  job_id: 13
+- id: 183
+  value:
+  jp_cost: 400
+  name: Attack UP
+  skill_type: support
+  data:
+    ct:
+    mp:
+    area:
+    jump:
+    move:
+    vert:
+    evade:
+    range:
+    target:
+    counter:
+    element:
+    formula: Increase physical damage by 33%
+    silence:
+    memgen_id: 01D1
+    reflectable:
+    counter_flood:
+    counter_magic:
+  job_id: 13
+- id: 184
+  value:
+  jp_cost: 220
+  name: Any Ground
+  skill_type: movement
+  data:
+    ct:
+    mp:
+    area:
+    jump:
+    move:
+    vert:
+    evade:
+    range:
+    target:
+    counter:
+    element:
+    formula: Move on any type of ground unhindered by terrain (CLASS INHERENT)
+    silence:
+    memgen_id: 01F5
+    reflectable:
+    counter_flood:
+    counter_magic:
+  job_id: 13
+- id: 185
+  value:
+  jp_cost: 150
+  name: Move on Lava
+  skill_type: movement
+  data:
+    ct:
+    mp:
+    area:
+    jump:
+    move:
+    vert:
+    evade:
+    range:
+    target:
+    counter:
+    element:
+    formula: Able to walk on lava panels (CLASS INHERENT)
+    silence:
+    memgen_id: 01F8
+    reflectable:
+    counter_flood:
+    counter_magic:
+  job_id: 13
+- id: 186
+  value:
+  jp_cost: 50
+  name: Range 4
+  skill_type: action
+  data:
+    ct: RU(50/Speed)
+    mp:
+    area:
+    jump:
+    move:
+    vert:
+    evade:
+    range: '4'
+    target: Any
+    counter: 'Yes'
+    element:
+    formula: 'Dmg_(PA*WP). If using Spear: Dmg_((PA*1.5)*WP) instead'
+    silence:
+    memgen_id: '8000'
+    reflectable:
+    counter_flood: 'Yes'
+    counter_magic:
+  job_id: 14
+- id: 187
+  value:
+  jp_cost: 200
+  name: Range 5
+  skill_type: action
+  data:
+    ct: RU(50/Speed)
+    mp:
+    area:
+    jump:
+    move:
+    vert:
+    evade:
+    range: '5'
+    target: Any
+    counter: 'Yes'
+    element:
+    formula: 'Dmg_(PA*WP). If using Spear: Dmg_((PA*1.5)*WP) instead'
+    silence:
+    memgen_id: '4000'
+    reflectable:
+    counter_flood: 'Yes'
+    counter_magic:
+  job_id: 14
+- id: 188
+  value:
+  jp_cost: 500
+  name: Range 6
+  skill_type: action
+  data:
+    ct: RU(50/Speed)
+    mp:
+    area:
+    jump:
+    move:
+    vert:
+    evade:
+    range: '6'
+    target: Any
+    counter: 'Yes'
+    element:
+    formula: 'Dmg_(PA*WP). If using Spear: Dmg_((PA*1.5)*WP) instead'
+    silence:
+    memgen_id: '2000'
+    reflectable:
+    counter_flood: 'Yes'
+    counter_magic:
+  job_id: 14
+- id: 189
+  value:
+  jp_cost: 50
+  name: Vertical 5
+  skill_type: action
+  data:
+    ct: RU(50/Speed)
+    mp:
+    area:
+    jump:
+    move:
+    vert: '5'
+    evade:
+    range:
+    target: Any
+    counter: 'Yes'
+    element:
+    formula: 'Dmg_(PA*WP). If using Spear: Dmg_((PA*1.5)*WP) instead'
+    silence:
+    memgen_id: '1000'
+    reflectable:
+    counter_flood: 'Yes'
+    counter_magic:
+  job_id: 14
+- id: 190
+  value:
+  jp_cost: 200
+  name: Vertical 7
+  skill_type: action
+  data:
+    ct: RU(50/Speed)
+    mp:
+    area:
+    jump:
+    move:
+    vert: '7'
+    evade:
+    range:
+    target: Any
+    counter: 'Yes'
+    element:
+    formula: 'Dmg_(PA*WP). If using Spear: Dmg_((PA*1.5)*WP) instead'
+    silence:
+    memgen_id: '0800'
+    reflectable:
+    counter_flood: 'Yes'
+    counter_magic:
+  job_id: 14
+- id: 191
+  value:
+  jp_cost: 500
+  name: Infinite Vertical
+  skill_type: action
+  data:
+    ct: RU(50/Speed)
+    mp:
+    area:
+    jump:
+    move:
+    vert: '255'
+    evade:
+    range:
+    target: Any
+    counter: 'Yes'
+    element:
+    formula: 'Dmg_(PA*WP). If using Spear: Dmg_((PA*1.5)*WP) instead'
+    silence:
+    memgen_id: '0400'
+    reflectable:
+    counter_flood: 'Yes'
+    counter_magic:
+  job_id: 14
+- id: 192
+  value:
+  jp_cost: 500
+  name: Dragon Spirit
+  skill_type: reaction
+  data:
+    ct:
+    mp:
+    area:
+    jump:
+    move:
+    vert:
+    evade:
+    range:
+    target:
+    counter:
+    element:
+    formula: 'Add: Reraise on hit from a Physical attack'
+    silence:
+    memgen_id: 01AB
+    reflectable:
+    counter_flood:
+    counter_magic:
+  job_id: 14
+- id: 193
+  value:
+  jp_cost: 350
+  name: Equip Spear
+  skill_type: support
+  data:
+    ct:
+    mp:
+    area:
+    jump:
+    move:
+    vert:
+    evade:
+    range:
+    target:
+    counter:
+    element:
+    formula: Can equip spear regardless of job
+    silence:
+    memgen_id: 01CB
+    reflectable:
+    counter_flood:
+    counter_magic:
+  job_id: 14
+- id: 194
+  value:
+  jp_cost: 500
+  name: Ignore Height
+  skill_type: movement
+  data:
+    ct:
+    mp:
+    area:
+    jump:
+    move:
+    vert:
+    evade:
+    range:
+    target:
+    counter:
+    element:
+    formula: Jump to any panel, regardless of height value
+    silence:
+    memgen_id: 01EC
+    reflectable:
+    counter_flood:
+    counter_magic:
+  job_id: 14
+- id: 195
+  value:
+  jp_cost: 250
+  name: Asura
+  skill_type: action
+  data:
+    ct:
+    mp:
+    area: '2'
+    jump:
+    move:
+    vert: '2'
+    evade:
+    range: '0'
+    target: Any
+    counter:
+    element: Fire
+    formula: Dmg_(MA*6)
+    silence:
+    memgen_id: '8000'
+    reflectable:
+    counter_flood: 'Yes'
+    counter_magic: 'Yes'
+  job_id: 15
+- id: 196
+  value:
+  jp_cost: 250
+  name: Koutetsu
+  skill_type: action
+  data:
+    ct:
+    mp:
+    area: '2'
+    jump:
+    move:
+    vert: '2'
+    evade:
+    range: '0'
+    target: Any
+    counter:
+    element: Dark
+    formula: Dmg_(MA*6)
+    silence:
+    memgen_id: '4000'
+    reflectable:
+    counter_flood: 'Yes'
+    counter_magic: 'Yes'
+  job_id: 15
+- id: 197
+  value:
+  jp_cost: 200
+  name: Bizen Boat
+  skill_type: action
+  data:
+    ct:
+    mp:
+    area: '2'
+    jump:
+    move:
+    vert: '2'
+    evade:
+    range: '0'
+    target: Any
+    counter:
+    element:
+    formula: Dmg_MP(MA*12)
+    silence:
+    memgen_id: '2000'
+    reflectable:
+    counter_flood: 'Yes'
+    counter_magic: 'Yes'
+  job_id: 15
+- id: 198
+  value:
+  jp_cost: 300
+  name: Murasame
+  skill_type: action
+  data:
+    ct:
+    mp:
+    area: '2'
+    jump:
+    move:
+    vert: '2'
+    evade:
+    range: '0'
+    target: Any
+    counter:
+    element:
+    formula: HealHP_(MA*10)
+    silence:
+    memgen_id: '1000'
+    reflectable:
+    counter_flood:
+    counter_magic:
+  job_id: 15
+- id: 199
+  value:
+  jp_cost: 250
+  name: Heaven's Cloud
+  skill_type: action
+  data:
+    ct:
+    mp:
+    area: '2'
+    jump:
+    move:
+    vert: '2'
+    evade:
+    range: '0'
+    target: Any
+    counter:
+    element: Water
+    formula: Dmg_(MA*6)
+    silence:
+    memgen_id: '0800'
+    reflectable:
+    counter_flood: 'Yes'
+    counter_magic: 'Yes'
+  job_id: 15
+- id: 200
+  value:
+  jp_cost: 100
+  name: Kiyomori
+  skill_type: action
+  data:
+    ct:
+    mp:
+    area: '2'
+    jump:
+    move:
+    vert: '2'
+    evade:
+    range: '0'
+    target: Any
+    counter:
+    element:
+    formula: 'Add: Protect or Shell Hit_(100)%'
+    silence:
+    memgen_id: '0400'
+    reflectable:
+    counter_flood:
+    counter_magic:
+  job_id: 15
+- id: 201
+  value:
+  jp_cost: 500
+  name: Muramasa
+  skill_type: action
+  data:
+    ct:
+    mp:
+    area: '2'
+    jump:
+    move:
+    vert: '2'
+    evade:
+    range: '0'
+    target: Any
+    counter:
+    element:
+    formula: 'Dmg_(MA*8) 20% Add: Death Sentence or Confuse'
+    silence:
+    memgen_id: '0200'
+    reflectable:
+    counter_flood: 'Yes'
+    counter_magic: 'Yes'
+  job_id: 15
+- id: 202
+  value:
+  jp_cost: 200
+  name: Kikuichimonji
+  skill_type: action
+  data:
+    ct:
+    mp:
+    area: '2'
+    jump:
+    move:
+    vert: '2'
+    evade:
+    range: '5'
+    target: Any
+    counter:
+    element:
+    formula: Dmg_(MA*8) Linear
+    silence:
+    memgen_id: '0100'
+    reflectable:
+    counter_flood: 'Yes'
+    counter_magic: 'Yes'
+  job_id: 15
+- id: 203
+  value:
+  jp_cost: 400
+  name: Masamune
+  skill_type: action
+  data:
+    ct:
+    mp:
+    area: '2'
+    jump:
+    move:
+    vert: '2'
+    evade:
+    range: '0'
+    target: Any
+    counter:
+    element:
+    formula: 'Add: Haste or Regen or Defending Hit_(100)%'
+    silence:
+    memgen_id: '0080'
+    reflectable:
+    counter_flood:
+    counter_magic:
+  job_id: 15
+- id: 204
+  value:
+  jp_cost: 600
+  name: Chirijiraden
+  skill_type: action
+  data:
+    ct:
+    mp:
+    area: '2'
+    jump:
+    move:
+    vert: '3'
+    evade:
+    range: '0'
+    target: Any
+    counter:
+    element:
+    formula: Dmg_(MA*13) also hits self
+    silence:
+    memgen_id: '0040'
+    reflectable:
+    counter_flood: 'Yes'
+    counter_magic: 'Yes'
+  job_id: 15
+- id: 205
+  value:
+  jp_cost: 1000
+  name: Hamedo
+  skill_type: reaction
+  data:
+    ct:
+    mp:
+    area:
+    jump:
+    move:
+    vert:
+    evade:
+    range:
+    target:
+    counter:
+    element:
+    formula: Cancel incoming attack command with your own
+    silence:
+    memgen_id: 01C5
+    reflectable:
+    counter_flood:
+    counter_magic:
+  job_id: 15
+- id: 206
+  value:
+  jp_cost: 350
+  name: Equip Katana
+  skill_type: support
+  data:
+    ct:
+    mp:
+    area:
+    jump:
+    move:
+    vert:
+    evade:
+    range:
+    target:
+    counter:
+    element:
+    formula: Can equip katana regardless of job
+    silence:
+    memgen_id: 01C9
+    reflectable:
+    counter_flood:
+    counter_magic:
+  job_id: 15
+- id: 207
+  value:
+  jp_cost: 600
+  name: Two Hands
+  skill_type: support
+  data:
+    ct:
+    mp:
+    area:
+    jump:
+    move:
+    vert:
+    evade:
+    range:
+    target:
+    counter:
+    element:
+    formula: Hold weapon in both hands, increasing WP value by 50% (CLASS INNATE)
+    silence:
+    memgen_id: 01DC
+    reflectable:
+    counter_flood:
+    counter_magic:
+  job_id: 15
+- id: 208
+  value:
+  jp_cost: 300
+  name: Move in Water
+  skill_type: movement
+  data:
+    ct:
+    mp:
+    area:
+    jump:
+    move:
+    vert:
+    evade:
+    range:
+    target:
+    counter:
+    element:
+    formula: Move in water unhindered
+    silence:
+    memgen_id: 01F7
+    reflectable:
+    counter_flood:
+    counter_magic:
+  job_id: 15
+- id: 209
+  value:
+  jp_cost: 100
+  name: Shuriken
+  skill_type: action
+  data:
+    ct:
+    mp:
+    area:
+    jump:
+    move:
+    vert:
+    evade: Phys
+    range: Move
+    target: Any
+    counter: 'Yes'
+    element:
+    formula: Hit_(Speed * thrown weapon WP)
+    silence:
+    memgen_id: '8000'
+    reflectable:
+    counter_flood: 'Yes'
+    counter_magic:
+  job_id: 16
+- id: 210
+  value:
+  jp_cost: 100
+  name: Ball
+  skill_type: action
+  data:
+    ct:
+    mp:
+    area:
+    jump:
+    move:
+    vert:
+    evade: Phys
+    range: Move
+    target: Any
+    counter: 'Yes'
+    element:
+    formula: Hit_(Speed * thrown weapon WP)
+    silence:
+    memgen_id: '4000'
+    reflectable:
+    counter_flood: 'Yes'
+    counter_magic:
+  job_id: 16
+- id: 211
+  value:
+  jp_cost: 100
+  name: Knife
+  skill_type: action
+  data:
+    ct:
+    mp:
+    area:
+    jump:
+    move:
+    vert:
+    evade: Phys
+    range: Move
+    target: Any
+    counter: 'Yes'
+    element:
+    formula: Hit_(Speed * thrown weapon WP)
+    silence:
+    memgen_id: '2000'
+    reflectable:
+    counter_flood: 'Yes'
+    counter_magic:
+  job_id: 16
+- id: 212
+  value:
+  jp_cost: 100
+  name: Sword
+  skill_type: action
+  data:
+    ct:
+    mp:
+    area:
+    jump:
+    move:
+    vert:
+    evade: Phys
+    range: Move
+    target: Any
+    counter: 'Yes'
+    element:
+    formula: Hit_(Speed * thrown weapon WP)
+    silence:
+    memgen_id: '1000'
+    reflectable:
+    counter_flood: 'Yes'
+    counter_magic:
+  job_id: 16
+- id: 213
+  value:
+  jp_cost: 100
+  name: Hammer
+  skill_type: action
+  data:
+    ct:
+    mp:
+    area:
+    jump:
+    move:
+    vert:
+    evade: Phys
+    range: Move
+    target: Any
+    counter: 'Yes'
+    element:
+    formula: Hit_(Speed * thrown weapon WP)
+    silence:
+    memgen_id: '0800'
+    reflectable:
+    counter_flood: 'Yes'
+    counter_magic:
+  job_id: 16
+- id: 214
+  value:
+  jp_cost: 100
+  name: Ninja Sword
+  skill_type: action
+  data:
+    ct:
+    mp:
+    area:
+    jump:
+    move:
+    vert:
+    evade: Phys
+    range: Move
+    target: Any
+    counter: 'Yes'
+    element:
+    formula: Hit_(Speed * thrown weapon WP)
+    silence:
+    memgen_id: '0200'
+    reflectable:
+    counter_flood: 'Yes'
+    counter_magic:
+  job_id: 16
+- id: 215
+  value:
+  jp_cost: 100
+  name: Stick
+  skill_type: action
+  data:
+    ct:
+    mp:
+    area:
+    jump:
+    move:
+    vert:
+    evade: Phys
+    range: Move
+    target: Any
+    counter: 'Yes'
+    element:
+    formula: Hit_(Speed * thrown weapon WP)
+    silence:
+    memgen_id: '0040'
+    reflectable:
+    counter_flood: 'Yes'
+    counter_magic:
+  job_id: 16
+- id: 216
+  value:
+  jp_cost: 100
+  name: Dictionary
+  skill_type: action
+  data:
+    ct:
+    mp:
+    area:
+    jump:
+    move:
+    vert:
+    evade: Phys
+    range: Move
+    target: Any
+    counter: 'Yes'
+    element:
+    formula: Hit_(Speed * thrown weapon WP)
+    silence:
+    memgen_id: '0010'
+    reflectable:
+    counter_flood: 'Yes'
+    counter_magic:
+  job_id: 16
+- id: 217
+  value:
+  jp_cost: 200
+  name: Sunken State
+  skill_type: reaction
+  data:
+    ct:
+    mp:
+    area:
+    jump:
+    move:
+    vert:
+    evade:
+    range:
+    target:
+    counter:
+    element:
+    formula: 'Add: Transparent on damage'
+    silence:
+    memgen_id: 01A9
+    reflectable:
+    counter_flood:
+    counter_magic:
+  job_id: 16
+- id: 218
+  value:
+  jp_cost: 800
+  name: Abandon
+  skill_type: support
+  data:
+    ct:
+    mp:
+    area:
+    jump:
+    move:
+    vert:
+    evade:
+    range:
+    target:
+    counter:
+    element:
+    formula: Doubles all evasion attributes
+    silence:
+    memgen_id: 01C1
+    reflectable:
+    counter_flood:
+    counter_magic:
+  job_id: 16
+- id: 219
+  value:
+  jp_cost: 900
+  name: Two Swords
+  skill_type: support
+  data:
+    ct:
+    mp:
+    area:
+    jump:
+    move:
+    vert:
+    evade:
+    range:
+    target:
+    counter:
+    element:
+    formula: Can equip one weapon in each hand (CLASS INNATE)
+    silence:
+    memgen_id: 01DD
+    reflectable:
+    counter_flood:
+    counter_magic:
+  job_id: 16
+- id: 220
+  value:
+  jp_cost: 100
+  name: Walk on Water
+  skill_type: movement
+  data:
+    ct:
+    mp:
+    area:
+    jump:
+    move:
+    vert:
+    evade:
+    range:
+    target:
+    counter:
+    element:
+    formula: Move on top of water panels as if they were ground
+    silence:
+    memgen_id: 01F6
+    reflectable:
+    counter_flood:
+    counter_magic:
+  job_id: 16
+- id: 221
+  value:
+  jp_cost: 400
+  name: Stasis Sword
+  skill_type: action
+  data:
+    ct:
+    mp: '8'
+    area: '1'
+    jump:
+    move:
+    vert:
+    evade: Phys
+    range: '2'
+    target: Any
+    counter:
+    element:
+    formula: 'Dmg_((PA-2)*(WP+2)) 20% Add: Stop'
+    silence:
+    memgen_id: '8000'
+    reflectable:
     counter_flood: 'Yes'
     counter_magic: 'Yes'
   job_id: 17
-
-- id: 11
-  value: 
+- id: 222
+  value:
+  jp_cost: 500
+  name: Split Punch
+  skill_type: action
+  data:
+    ct:
+    mp: '10'
+    area:
+    jump:
+    move:
+    vert: '2'
+    evade: Phys
+    range: '3'
+    target: Any
+    counter:
+    element:
+    formula: 'Dmg_((PA-2)*(WP+2) 20% Add: Death Sentence'
+    silence:
+    memgen_id: '4000'
+    reflectable:
+    counter_flood: 'Yes'
+    counter_magic: 'Yes'
+  job_id: 17
+- id: 223
+  value:
+  jp_cost: 600
+  name: Crush Punch
+  skill_type: action
+  data:
+    ct:
+    mp: '30'
+    area:
+    jump:
+    move:
+    vert: '1'
+    evade:
+    range: '3'
+    target: Any
+    counter:
+    element:
+    formula: 'Dmg_((PA-2)*WP+2) 20% Add: Dead'
+    silence:
+    memgen_id: '2000'
+    reflectable:
+    counter_flood: 'Yes'
+    counter_magic: 'Yes'
+  job_id: 17
+- id: 224
+  value:
+  jp_cost: 400
+  name: Lightning Stab
+  skill_type: action
+  data:
+    ct:
+    mp: '8'
+    area: '1'
+    jump:
+    move:
+    vert: '3'
+    evade: Phys
+    range: '2'
+    target: Any
+    counter:
+    element:
+    formula: 'Dmg_((PA-2)*(WP+2)) 20% Add: Silence'
+    silence:
+    memgen_id: '1000'
+    reflectable:
+    counter_flood: 'Yes'
+    counter_magic: 'Yes'
+  job_id: 17
+- id: 225
+  value:
+  jp_cost: 800
+  name: Holy Explosion
+  skill_type: action
+  data:
+    ct:
+    mp: '40'
+    area: Linear
+    jump:
+    move:
+    vert: '2'
+    evade: Phys
+    range: '5'
+    target: Any
+    counter:
+    element:
+    formula: Dmg_((MA-2)*(WP+2))
+    silence:
+    memgen_id: '0800'
+    reflectable:
+    counter_flood: 'Yes'
+    counter_magic: 'Yes'
+  job_id: 17
+- id: 226
+  value:
+  jp_cost: 1000
+  name: Night Sword
+  skill_type: action
+  data:
+    ct:
+    mp: '30'
+    area:
+    jump:
+    move:
+    vert:
+    evade:
+    range: '3'
+    target: Any
+    counter:
+    element:
+    formula: AbsorbHP_(PA*WP)
+    silence:
+    memgen_id: '0400'
+    reflectable:
+    counter_flood: 'Yes'
+    counter_magic: 'Yes'
+  job_id: 17
+- id: 227
+  value:
+  jp_cost: 100
+  name: Despair 2
+  skill_type: action
+  data:
+    ct: '4'
+    mp: '16'
+    area: '2'
+    jump:
+    move:
+    vert: '3'
+    evade:
+    range: '4'
+    target: Any
+    counter:
+    element:
+    formula: 'Cancel: All positive status Hit_F(MA+200)%'
+    silence: 'Yes'
+    memgen_id: '0200'
+    reflectable:
+    counter_flood: 'Yes'
+    counter_magic: 'Yes'
+  job_id: 17
+- id: 228
+  value:
+  jp_cost: 200
+  name: Deathspell 2
+  skill_type: action
+  data:
+    ct: '3'
+    mp: '16'
+    area: '2'
+    jump:
+    move:
+    vert: '2'
+    evade:
+    range: '4'
+    target: Any
+    counter:
+    element:
+    formula: 'Cancel: All negative status and add: Sturdy Hit_F(MA+200)%'
+    silence: 'Yes'
+    memgen_id: '0100'
+    reflectable:
+    counter_flood:
+    counter_magic:
+  job_id: 17
+- id: 229
+  value:
+  jp_cost: 300
+  name: Disrupt
+  skill_type: action
+  data:
+    ct:
+    mp: '12'
+    area:
+    jump:
+    move:
+    vert:
+    evade:
+    range: Weapon
+    target: Any
+    counter:
+    element:
+    formula: 'Add: Discord Hit_(100)%'
+    silence:
+    memgen_id: '0080'
+    reflectable:
+    counter_flood:
+    counter_magic:
+  job_id: 17
+- id: 230
+  value:
+  jp_cost: 150
+  name: Distribute
+  skill_type: reaction
+  data:
+    ct:
+    mp:
+    area:
+    jump:
+    move:
+    vert:
+    evade:
+    range:
+    target:
+    counter:
+    element:
+    formula: Excess healing from others to this split among non-full team members
+    silence:
+    memgen_id: 01BC
+    reflectable:
+    counter_flood:
+    counter_magic:
+  job_id: 17
+- id: 231
+  value:
+  jp_cost: 800
+  name: Damage Split
+  skill_type: reaction
+  data:
+    ct:
+    mp:
+    area:
+    jump:
+    move:
+    vert:
+    evade:
+    range:
+    target:
+    counter:
+    element:
+    formula: Return 50% of damage received and heal the same amount
+    silence:
+    memgen_id: 01BE
+    reflectable:
+    counter_flood:
+    counter_magic:
+  job_id: 17
+- id: 232
+  value:
+  jp_cost: 800
+  name: Meditation
+  skill_type: reaction
+  data:
+    ct:
+    mp:
+    area:
+    jump:
+    move:
+    vert:
+    evade:
+    range:
+    target:
+    counter:
+    element:
+    formula: 'Add: Faith when targetted with a magic effect'
+    silence:
+    memgen_id: 01AE
+    reflectable:
+    counter_flood:
+    counter_magic:
+  job_id: 17
+- id: 233
+  value:
+  jp_cost: 1000
+  name: Overflow
+  skill_type: support
+  data:
+    ct:
+    mp:
+    area:
+    jump:
+    move:
+    vert:
+    evade:
+    range:
+    target:
+    counter:
+    element:
+    formula: Doubles all proc rates
+    silence:
+    memgen_id: 01DF
+    reflectable:
+    counter_flood:
+    counter_magic:
+  job_id: 17
+- id: 234
+  value:
+  jp_cost: 100
+  name: Angel Song
+  skill_type: action
+  data:
+    ct: '4'
+    mp:
+    area: ALL
+    jump:
+    move:
+    vert: ALL
+    evade:
+    range: ALL
+    target: Any
+    counter:
+    element:
+    formula: Heal_(MA+30) MP
+    silence: 'Yes'
+    memgen_id: '8000'
+    reflectable:
+    counter_flood:
+    counter_magic:
+  job_id: 18
+- id: 235
+  value:
+  jp_cost: 100
+  name: Life Song
+  skill_type: action
+  data:
+    ct: '4'
+    mp:
+    area: ALL
+    jump:
+    move:
+    vert: ALL
+    evade:
+    range: ALL
+    target: Any
+    counter:
+    element:
+    formula: Heal_(MA+40) HP
+    silence: 'Yes'
+    memgen_id: '4000'
+    reflectable:
+    counter_flood:
+    counter_magic:
+  job_id: 18
+- id: 236
+  value:
+  jp_cost: 100
+  name: Battle Song
+  skill_type: action
+  data:
+    ct: '5'
+    mp:
+    area: ALL
+    jump:
+    move:
+    vert: ALL
+    evade:
+    range: ALL
+    target: Any
+    counter:
+    element:
+    formula: 'Add: 1 PA Hit_(60)%'
+    silence: 'Yes'
+    memgen_id: '1000'
+    reflectable:
+    counter_flood:
+    counter_magic:
+  job_id: 18
+- id: 237
+  value:
+  jp_cost: 100
+  name: Magic Song
+  skill_type: action
+  data:
+    ct: '5'
+    mp:
+    area: ALL
+    jump:
+    move:
+    vert: ALL
+    evade:
+    range: ALL
+    target: Any
+    counter:
+    element:
+    formula: 'Add: 1 MA Hit_(60)%'
+    silence: 'Yes'
+    memgen_id: '0800'
+    reflectable:
+    counter_flood:
+    counter_magic:
+  job_id: 18
+- id: 238
+  value:
+  jp_cost: 100
+  name: Nameless Song
+  skill_type: action
+  data:
+    ct: '6'
+    mp:
+    area: ALL
+    jump:
+    move:
+    vert: ALL
+    evade:
+    range: ALL
+    target: Any
+    counter:
+    element:
+    formula: 'Add: Reraise or Regen or Haste or Protect or Shell or Reflect Hit_(60)%'
+    silence: 'Yes'
+    memgen_id: '0400'
+    reflectable:
+    counter_flood:
+    counter_magic:
+  job_id: 18
+- id: 239
+  value:
+  jp_cost: 100
+  name: Last Song
+  skill_type: action
+  data:
+    ct: '8'
+    mp:
+    area: ALL
+    jump:
+    move:
+    vert: ALL
+    evade:
+    range: ALL
+    target: Any
+    counter:
+    element:
+    formula: Set CT to 100 Hit_(50)%
+    silence: 'Yes'
+    memgen_id: '0200'
+    reflectable:
+    counter_flood:
+    counter_magic:
+  job_id: 18
+- id: 240
+  value:
+  jp_cost: 550
+  name: MA Save
+  skill_type: reaction
+  data:
+    ct:
+    mp:
+    area:
+    jump:
+    move:
+    vert:
+    evade:
+    range:
+    target:
+    counter:
+    element:
+    formula: Gain 1 MA on HP Damage
+    silence:
+    memgen_id: 01A7
+    reflectable:
+    counter_flood:
+    counter_magic:
+  job_id: 18
+- id: 241
+  value:
+  jp_cost: 350
+  name: Move-MP Up
+  skill_type: movement
+  data:
+    ct:
+    mp:
+    area:
+    jump:
+    move:
+    vert:
+    evade:
+    range:
+    target:
+    counter:
+    element:
+    formula: Recover MP as you move
+    silence:
+    memgen_id: 01EE
+    reflectable:
+    counter_flood:
+    counter_magic:
+  job_id: 18
+- id: 242
+  value:
+  jp_cost: 600
+  name: Fly
+  skill_type: movement
+  data:
+    ct:
+    mp:
+    area:
+    jump:
+    move:
+    vert:
+    evade:
+    range:
+    target:
+    counter:
+    element:
+    formula: Fly over units, obstacles, and ignore height when moving
+    silence:
+    memgen_id: 01FB
+    reflectable:
+    counter_flood:
+    counter_magic:
+  job_id: 18
+- id: 243
+  value:
+  jp_cost: 900
+  name: Move+3
+  skill_type: movement
+  data:
+    ct:
+    mp:
+    area:
+    jump:
+    move: '3'
+    vert:
+    evade:
+    range:
+    target:
+    counter:
+    element:
+    formula: Read the name, this isn't complicated
+    silence:
+    memgen_id: 01E8
+    reflectable:
+    counter_flood:
+    counter_magic:
+  job_id: 18
+- id: 244
+  value:
   jp_cost: 300
   name: Jump+3
   skill_type: movement
   data:
-    ct: 
-    mp: 
-    area: 
+    ct:
+    mp:
+    area:
     jump: '3'
-    move: 
-    vert: 
-    evade: 
-    range: 
-    target: 
-    counter: 
-    element: 
+    move:
+    vert:
+    evade:
+    range:
+    target:
+    counter:
+    element:
     formula: Read the name, this isn't complicated
-    silence: 
-    reflectable: 
-    counter_flood: 
-    counter_magic: 
+    silence:
+    memgen_id: 01EB
+    reflectable:
+    counter_flood:
+    counter_magic:
   job_id: 18
-
-- id: 29
-  value: 
+- id: 245
+  value:
+  jp_cost: 100
+  name: Witch Hunt
+  skill_type: action
+  data:
+    ct: '4'
+    mp:
+    area: ALL
+    jump:
+    move:
+    vert: ALL
+    evade:
+    range: ALL
+    target: Any
+    counter:
+    element:
+    formula: DmgMP_(PA+10)
+    silence: 'Yes'
+    memgen_id: '8000'
+    reflectable:
+    counter_flood:
+    counter_magic:
+  job_id: 19
+- id: 246
+  value:
+  jp_cost: 100
+  name: Wiznaibus
+  skill_type: action
+  data:
+    ct: '4'
+    mp:
+    area: ALL
+    jump:
+    move:
+    vert: ALL
+    evade:
+    range: ALL
+    target: Any
+    counter:
+    element:
+    formula: DmgHP_(PA+20)
+    silence: 'Yes'
+    memgen_id: '4000'
+    reflectable:
+    counter_flood:
+    counter_magic:
+  job_id: 19
+- id: 247
+  value:
   jp_cost: 100
   name: Polka Polka
   skill_type: action
   data:
     ct: '5'
-    mp: 
+    mp:
     area: ALL
-    jump: 
-    move: 
+    jump:
+    move:
     vert: ALL
-    evade: 
+    evade:
     range: ALL
     target: Any
-    counter: 
-    element: 
+    counter:
+    element:
     formula: "-1 PA Hit_(60)%"
     silence: 'Yes'
-    reflectable: 
-    counter_flood: 
-    counter_magic: 
+    memgen_id: '1000'
+    reflectable:
+    counter_flood:
+    counter_magic:
   job_id: 19
-
-- id: 33
-  value: 
+- id: 248
+  value:
+  jp_cost: 100
+  name: Disillusion
+  skill_type: action
+  data:
+    ct: '5'
+    mp:
+    area: ALL
+    jump:
+    move:
+    vert: ALL
+    evade:
+    range: ALL
+    target: Any
+    counter:
+    element:
+    formula: "-1 MA Hit_(60)%"
+    silence: 'Yes'
+    memgen_id: '0800'
+    reflectable:
+    counter_flood:
+    counter_magic:
+  job_id: 19
+- id: 249
+  value:
+  jp_cost: 100
+  name: Nameless Dance
+  skill_type: action
+  data:
+    ct: '7'
+    mp:
+    area: ALL
+    jump:
+    move:
+    vert: ALL
+    evade:
+    range: ALL
+    target: Any
+    counter:
+    element:
+    formula: 'Add: Don''t Move or Confusion or Silence or Poison or Slow Hit_(60)%'
+    silence: 'Yes'
+    memgen_id: '0400'
+    reflectable:
+    counter_flood:
+    counter_magic:
+  job_id: 19
+- id: 250
+  value:
+  jp_cost: 550
+  name: A Save
+  skill_type: reaction
+  data:
+    ct:
+    mp:
+    area:
+    jump:
+    move:
+    vert:
+    evade:
+    range:
+    target:
+    counter:
+    element:
+    formula: Gain 1 PA on HP Damage
+    silence:
+    memgen_id: 01A6
+    reflectable:
+    counter_flood:
+    counter_magic:
+  job_id: 19
+- id: 251
+  value:
   jp_cost: 350
   name: MP Switch
   skill_type: reaction
   data:
-    ct: 
-    mp: 
-    area: 
-    jump: 
-    move: 
-    vert: 
-    evade: 
-    range: 
-    target: 
-    counter: 
-    element: 
+    ct:
+    mp:
+    area:
+    jump:
+    move:
+    vert:
+    evade:
+    range:
+    target:
+    counter:
+    element:
     formula: Take all damage from an attack to your MP instead of HP if you have more
       than 0 MP
-    silence: 
-    reflectable: 
-    counter_flood: 
-    counter_magic: 
+    silence:
+    memgen_id: 01BD
+    reflectable:
+    counter_flood:
+    counter_magic:
+  job_id: 19
+- id: 252
+  value:
+  jp_cost: 600
+  name: Fly
+  skill_type: movement
+  data:
+    ct:
+    mp:
+    area:
+    jump:
+    move:
+    vert:
+    evade:
+    range:
+    target:
+    counter:
+    element:
+    formula: Fly over units, obstacles, and ignore height when moving
+    silence:
+    memgen_id: 01FB
+    reflectable:
+    counter_flood:
+    counter_magic:
+  job_id: 19
+- id: 253
+  value:
+  jp_cost: 900
+  name: Move+3
+  skill_type: movement
+  data:
+    ct:
+    mp:
+    area:
+    jump:
+    move: '3'
+    vert:
+    evade:
+    range:
+    target:
+    counter:
+    element:
+    formula: Read the name, this isn't complicated
+    silence:
+    memgen_id: 01E8
+    reflectable:
+    counter_flood:
+    counter_magic:
+  job_id: 19
+- id: 254
+  value:
+  jp_cost: 300
+  name: Jump+3
+  skill_type: movement
+  data:
+    ct:
+    mp:
+    area:
+    jump: '3'
+    move:
+    vert:
+    evade:
+    range:
+    target:
+    counter:
+    element:
+    formula: Read the name, this isn't complicated
+    silence:
+    memgen_id: 01EB
+    reflectable:
+    counter_flood:
+    counter_magic:
   job_id: 19

@@ -1,220 +1,17 @@
----
-- id: 5
-  name: Feather Boots
-  item_type: accessory
-  data:
-    hp:
-    mp:
-    wp:
-    add:
-    ev_m:
-    ev_p:
-    jump:
-    move: '1'
-    proc:
-    w_ev:
-    flags:
-    magic:
-    speed:
-    start:
-    always: Float
-    attack:
-    halves: Wind
-    absorbs:
-    cancels:
-    element:
-    formula:
-    weakness:
-    female_only: false
-    strengthens:
-
-- id: 16
-  name: N-Kai Armlet
-  item_type: accessory
-  data:
-    hp:
-    mp:
-    wp:
-    add:
-    ev_m:
-    ev_p:
-    jump:
-    move:
-    proc:
-    w_ev:
-    flags:
-    magic:
-    speed:
-    start:
-    always:
-    attack:
-    halves: Dark
-    absorbs:
-    cancels: Confusion / Charm
-    element:
-    formula:
-    weakness:
-    female_only: false
-    strengthens:
-
-- id: 19
-  name: Leather Mantle
-  item_type: accessory
-  data:
-    hp:
-    mp:
-    wp:
-    add:
-    ev_m: '15'
-    ev_p: '15'
-    jump:
-    move:
-    proc:
-    w_ev:
-    flags:
-    magic:
-    speed:
-    start:
-    always:
-    attack:
-    halves:
-    absorbs:
-    cancels:
-    element:
-    formula:
-    weakness:
-    female_only: false
-    strengthens: Fire/Dark/Water
-
-- id: 20
-  name: Wizard Mantle
-  item_type: accessory
-  data:
-    hp:
-    mp:
-    wp:
-    add:
-    ev_m: '18'
-    ev_p: '18'
-    jump:
-    move:
-    proc:
-    w_ev:
-    flags:
-    magic: '1'
-    speed:
-    start:
-    always:
-    attack:
-    halves:
-    absorbs:
-    cancels:
-    element:
-    formula:
-    weakness:
-    female_only: false
-    strengthens:
-
-- id: 6
-  name: Sprint Shoes
-  item_type: accessory
-  data:
-    hp:
-    mp:
-    wp:
-    add:
-    ev_m:
-    ev_p:
-    jump:
-    move:
-    proc:
-    w_ev:
-    flags:
-    magic:
-    speed: '1'
-    start:
-    always:
-    attack:
-    halves:
-    absorbs:
-    cancels:
-    element:
-    formula:
-    weakness:
-    female_only: false
-    strengthens:
-
-- id: 7
-  name: Power Wrist
-  item_type: accessory
-  data:
-    hp:
-    mp:
-    wp:
-    add:
-    ev_m:
-    ev_p:
-    jump:
-    move:
-    proc:
-    w_ev:
-    flags:
-    magic:
-    speed:
-    start: Shell
-    always:
-    attack: '1'
-    halves:
-    absorbs:
-    cancels:
-    element:
-    formula:
-    weakness:
-    female_only: false
-    strengthens:
-
-- id: 8
-  name: Magic Gauntlet
-  item_type: accessory
-  data:
-    hp:
-    mp:
-    wp:
-    add:
-    ev_m:
-    ev_p:
-    jump:
-    move:
-    proc:
-    w_ev:
-    flags:
-    magic: '2'
-    speed:
-    start:
-    always:
-    attack:
-    halves:
-    absorbs:
-    cancels:
-    element:
-    formula:
-    weakness:
-    female_only: false
-    strengthens:
-
-- id: 9
-  name: Heroic Gloves
-  item_type: accessory
-  data:
-    hp:
-    mp:
-    wp:
-    add:
-    ev_m:
-    ev_p:
-    jump:
-    move:
-    proc:
+---                                              
+- id: 1                                          
+  name: Battle Boots                             
+  item_type: accessory                           
+  data:                                          
+    hp:                                          
+    mp:                                          
+    wp:                                          
+    add:                                         
+    ev_m:                                        
+    ev_p:                                        
+    jump:                                        
+    move: '1'                                    
+    proc:                                        
     w_ev:
     flags:
     magic:
@@ -224,6016 +21,14 @@
     attack: '1'
     halves:
     absorbs:
-    cancels: Dead / Death Sentence / Crystal / Treasure
-    element:
-    formula:
-    weakness:
-    female_only: false
-    strengthens:
-
-- id: 10
-  name: Reflect Ring
-  item_type: accessory
-  data:
-    hp:
-    mp:
-    wp:
-    add:
-    ev_m:
-    ev_p:
-    jump:
-    move:
-    proc:
-    w_ev:
-    flags:
-    magic:
-    speed:
-    start:
-    always: Reflect
-    attack:
-    halves:
-    absorbs:
-    cancels:
-    element:
-    formula:
-    weakness:
-    female_only: false
-    strengthens:
-
-- id: 11
-  name: Defense Ring
-  item_type: accessory
-  data:
-    hp:
-    mp:
-    wp:
-    add:
-    ev_m:
-    ev_p:
-    jump:
-    move:
-    proc:
-    w_ev:
-    flags:
-    magic:
-    speed:
-    start:
-    always:
-    attack:
-    halves:
-    absorbs:
-    cancels: Sleep / Death Sentence
-    element:
-    formula:
-    weakness:
-    female_only: false
-    strengthens:
-
-- id: 12
-  name: Magic Ring
-  item_type: accessory
-  data:
-    hp:
-    mp:
-    wp:
-    add:
-    ev_m:
-    ev_p:
-    jump:
-    move:
-    proc:
-    w_ev:
-    flags:
-    magic: '1'
-    speed:
-    start:
-    always:
-    attack:
-    halves:
-    absorbs: Wind / Earth / Water
-    cancels: Silence
-    element:
-    formula:
-    weakness:
-    female_only: false
-    strengthens:
-
-- id: 13
-  name: Diamond Armlet
-  item_type: accessory
-  data:
-    hp:
-    mp:
-    wp:
-    add:
-    ev_m:
-    ev_p:
-    jump:
-    move:
-    proc:
-    w_ev:
-    flags:
-    magic: '1'
-    speed:
-    start:
-    always:
-    attack: '1'
-    halves:
-    absorbs:
-    cancels: Slow
-    element:
-    formula:
-    weakness:
-    female_only: false
-    strengthens:
-
-- id: 14
-  name: Jade Armlet
-  item_type: accessory
-  data:
-    hp:
-    mp:
-    wp:
-    add:
-    ev_m:
-    ev_p:
-    jump:
-    move:
-    proc:
-    w_ev:
-    flags:
-    magic:
-    speed:
-    start:
-    always:
-    attack:
-    halves:
-    absorbs:
-    cancels: Petrify / Stop
-    element:
-    formula:
-    weakness:
-    female_only: false
-    strengthens:
-
-- id: 17
-  name: Defense Armlet
-  item_type: accessory
-  data:
-    hp:
-    mp:
-    wp:
-    add:
-    ev_m:
-    ev_p:
-    jump:
-    move:
-    proc:
-    w_ev:
-    flags:
-    magic:
-    speed:
-    start:
-    always:
-    attack:
-    halves:
-    absorbs:
-    cancels: Don't Move / Don't Act
-    element:
-    formula:
-    weakness:
-    female_only: false
-    strengthens:
-
-- id: 18
-  name: Small Mantle
-  item_type: accessory
-  data:
-    hp:
-    mp:
-    wp:
-    add:
-    ev_m: '15'
-    ev_p: '15'
-    jump:
-    move:
-    proc:
-    w_ev:
-    flags:
-    magic:
-    speed:
-    start:
-    always:
-    attack:
-    halves: Fire/Dark/Water
-    absorbs:
-    cancels:
-    element:
-    formula:
-    weakness:
-    female_only: false
-    strengthens:
-
-- id: 25
-  name: Bronze Armor
-  item_type: armor
-  data:
-    hp: '120'
-    mp: '0'
-    wp:
-    add:
-    ev_m:
-    ev_p:
-    jump:
-    move:
-    proc:
-    w_ev:
-    flags:
-    magic:
-    speed:
-    start:
-    always:
-    attack:
-    halves:
-    absorbs:
-    cancels: Petrify Stop
-    element:
-    formula:
-    weakness:
-    female_only: false
-    strengthens:
-
-- id: 3
-  name: Germinas Boots
-  item_type: accessory
-  data:
-    hp:
-    mp:
-    wp:
-    add:
-    ev_m:
-    ev_p:
-    jump: '1'
-    move: '1'
-    proc:
-    w_ev:
-    flags:
-    magic:
-    speed:
-    start:
-    always:
-    attack:
-    halves:
-    absorbs:
-    cancels:
-    element:
-    formula:
-    weakness:
-    female_only: false
-    strengthens:
-
-- id: 15
-  name: 108 Gems
-  item_type: accessory
-  data:
-    hp:
-    mp:
-    wp:
-    add:
-    ev_m:
-    ev_p:
-    jump:
-    move:
-    proc:
-    w_ev:
-    flags:
-    magic:
-    speed:
-    start:
-    always:
-    attack:
-    halves:
-    absorbs:
-    cancels: Undead / Blood Suck / Poison
-    element:
-    formula:
-    weakness:
-    female_only: false
-    strengthens: Lightning/Ice/Wind/Earth/Holy
-
-- id: 26
-  name: Chain Mail
-  item_type: armor
-  data:
-    hp: '70'
-    mp: '0'
-    wp:
-    add:
-    ev_m:
-    ev_p:
-    jump:
-    move:
-    proc:
-    w_ev:
-    flags:
-    magic:
-    speed:
-    start:
-    always: Regen
-    attack:
-    halves:
-    absorbs:
-    cancels:
-    element:
-    formula:
-    weakness:
-    female_only: false
-    strengthens:
-
-- id: 27
-  name: Mythril Armor
-  item_type: armor
-  data:
-    hp: '65'
-    mp: '0'
-    wp:
-    add:
-    ev_m:
-    ev_p:
-    jump:
-    move:
-    proc:
-    w_ev:
-    flags:
-    magic: '2'
-    speed:
-    start:
-    always:
-    attack:
-    halves:
-    absorbs:
-    cancels:
-    element:
-    formula:
-    weakness:
-    female_only: false
-    strengthens:
-
-- id: 28
-  name: Plate Mail
-  item_type: armor
-  data:
-    hp: '195'
-    mp: '0'
-    wp:
-    add:
-    ev_m:
-    ev_p:
-    jump:
-    move:
-    proc:
-    w_ev:
-    flags:
-    magic:
-    speed: "-1"
-    start:
-    always:
-    attack:
-    halves:
-    absorbs:
-    cancels:
-    element:
-    formula:
-    weakness:
-    female_only: false
-    strengthens:
-
-- id: 29
-  name: Gold Armor
-  item_type: armor
-  data:
-    hp: '100'
-    mp: '10'
-    wp:
-    add:
-    ev_m:
-    ev_p:
-    jump:
-    move:
-    proc:
-    w_ev:
-    flags:
-    magic:
-    speed:
-    start:
-    always:
-    attack:
-    halves:
-    absorbs:
-    cancels:
-    element:
-    formula:
-    weakness:
-    female_only: false
-    strengthens:
-
-- id: 30
-  name: Diamond Armor
-  item_type: armor
-  data:
-    hp: '135'
-    mp: '0'
-    wp:
-    add:
-    ev_m:
-    ev_p:
-    jump:
-    move:
-    proc:
-    w_ev:
-    flags:
-    magic: '1'
-    speed:
-    start:
-    always:
-    attack: '1'
-    halves:
-    absorbs:
-    cancels:
-    element:
-    formula:
-    weakness:
-    female_only: false
-    strengthens:
-
-- id: 31
-  name: Platina Armor
-  item_type: armor
-  data:
-    hp: '135'
-    mp: '0'
-    wp:
-    add:
-    ev_m:
-    ev_p:
-    jump:
-    move:
-    proc:
-    w_ev:
-    flags:
-    magic:
-    speed:
-    start: Haste
-    always:
-    attack:
-    halves:
-    absorbs:
-    cancels:
-    element:
-    formula:
-    weakness: Fire
-    female_only: false
-    strengthens:
-
-- id: 34
-  name: Leather Vest
-  item_type: armor
-  data:
-    hp: '85'
-    mp: '0'
-    wp:
-    add:
-    ev_m:
-    ev_p:
-    jump:
-    move: '1'
-    proc:
-    w_ev:
-    flags:
-    magic:
-    speed:
-    start:
-    always:
-    attack:
-    halves:
-    absorbs:
-    cancels:
-    element:
-    formula:
-    weakness:
-    female_only: false
-    strengthens:
-
-- id: 35
-  name: Chain Vest
-  item_type: armor
-  data:
-    hp: '30'
-    mp: '0'
-    wp:
-    add:
-    ev_m:
-    ev_p:
-    jump:
-    move:
-    proc:
-    w_ev:
-    flags:
-    magic:
-    speed:
-    start:
-    always: Regen
-    attack:
-    halves:
-    absorbs:
-    cancels:
-    element:
-    formula:
-    weakness:
-    female_only: false
-    strengthens:
-
-- id: 36
-  name: Mythril Vest
-  item_type: armor
-  data:
-    hp: '70'
-    mp: '10'
-    wp:
-    add:
-    ev_m:
-    ev_p:
-    jump:
-    move:
-    proc:
-    w_ev:
-    flags:
-    magic: '1'
-    speed:
-    start:
-    always:
-    attack:
-    halves:
-    absorbs:
-    cancels:
-    element:
-    formula:
-    weakness:
-    female_only: false
-    strengthens:
-
-- id: 37
-  name: Adaman Vest
-  item_type: armor
-  data:
-    hp: '70'
-    mp: '0'
-    wp:
-    add:
-    ev_m:
-    ev_p:
-    jump:
-    move:
-    proc:
-    w_ev:
-    flags:
-    magic: '1'
-    speed:
-    start:
-    always:
-    attack: '1'
-    halves:
-    absorbs:
-    cancels:
-    element:
-    formula:
-    weakness:
-    female_only: false
-    strengthens:
-
-- id: 38
-  name: Wizard Outfit
-  item_type: armor
-  data:
-    hp: '60'
-    mp: '30'
-    wp:
-    add:
-    ev_m:
-    ev_p:
-    jump:
-    move:
-    proc:
-    w_ev:
-    flags:
-    magic:
-    speed:
-    start:
-    always:
-    attack:
-    halves:
-    absorbs:
-    cancels:
-    element:
-    formula:
-    weakness:
-    female_only: false
-    strengthens:
-
-- id: 39
-  name: Brigandine
-  item_type: armor
-  data:
-    hp: '100'
-    mp: '0'
-    wp:
-    add:
-    ev_m:
-    ev_p:
-    jump:
-    move:
-    proc:
-    w_ev:
-    flags:
-    magic:
-    speed:
-    start:
-    always:
-    attack:
-    halves:
-    absorbs:
-    cancels:
-    element:
-    formula:
-    weakness:
-    female_only: false
-    strengthens:
-
-- id: 40
-  name: Judo Outfit
-  item_type: armor
-  data:
-    hp: '70'
-    mp: '0'
-    wp:
-    add:
-    ev_m:
-    ev_p:
-    jump:
-    move:
-    proc:
-    w_ev:
-    flags:
-    magic:
-    speed:
-    start:
-    always:
-    attack: '1'
-    halves:
-    absorbs:
-    cancels: Dead
-    element:
-    formula:
-    weakness:
-    female_only: false
-    strengthens:
-
-- id: 21
-  name: Elf Mantle
-  item_type: accessory
-  data:
-    hp:
-    mp:
-    wp:
-    add:
-    ev_m: '24'
-    ev_p: '24'
-    jump:
-    move:
-    proc:
-    w_ev:
-    flags:
-    magic:
-    speed:
-    start:
-    always:
-    attack:
-    halves:
-    absorbs:
-    cancels:
-    element:
-    formula:
-    weakness:
-    female_only: false
-    strengthens:
-
-- id: 22
-  name: Dracula Mantle
-  item_type: accessory
-  data:
-    hp:
-    mp:
-    wp:
-    add:
-    ev_m: '30'
-    ev_p: '15'
-    jump:
-    move:
-    proc:
-    w_ev:
-    flags:
-    magic:
-    speed:
-    start:
-    always:
-    attack:
-    halves:
-    absorbs:
-    cancels:
-    element:
-    formula:
-    weakness:
-    female_only: false
-    strengthens:
-
-- id: 24
-  name: Linen Cuirass
-  item_type: armor
-  data:
-    hp: '120'
-    mp: '40'
-    wp:
-    add:
-    ev_m:
-    ev_p:
-    jump:
-    move:
-    proc:
-    w_ev:
-    flags:
-    magic:
-    speed:
-    start:
-    always:
-    attack: "-2"
-    halves:
-    absorbs:
-    cancels:
-    element:
-    formula:
-    weakness:
-    female_only: false
-    strengthens:
-
-- id: 44
-  name: Wizard Robe
-  item_type: armor
-  data:
-    hp: '30'
-    mp: '22'
-    wp:
-    add:
-    ev_m:
-    ev_p:
-    jump:
-    move:
-    proc:
-    w_ev:
-    flags:
-    magic: '2'
-    speed:
-    start:
-    always:
-    attack:
-    halves:
-    absorbs:
-    cancels:
-    element:
-    formula:
-    weakness:
-    female_only: false
-    strengthens:
-
-- id: 46
-  name: White Robe
-  item_type: armor
-  data:
-    hp: '50'
-    mp: '34'
-    wp:
-    add:
-    ev_m:
-    ev_p:
-    jump:
-    move:
-    proc:
-    w_ev:
-    flags:
-    magic:
-    speed:
-    start:
-    always:
-    attack:
-    halves:
-    absorbs: Holy
-    cancels: Dead
-    element:
-    formula:
-    weakness:
-    female_only: false
-    strengthens: Holy
-
-- id: 47
-  name: Black Robe
-  item_type: armor
-  data:
-    hp: '60'
-    mp: '30'
-    wp:
-    add:
-    ev_m:
-    ev_p:
-    jump:
-    move:
-    proc:
-    w_ev:
-    flags:
-    magic:
-    speed:
-    start:
-    always:
-    attack:
-    halves:
-    absorbs:
-    cancels:
-    element:
-    formula:
-    weakness:
-    female_only: false
-    strengthens: Ice/Lightning/Wind
-
-- id: 49
-  name: Bronze Helmet
-  item_type: helmet
-  data:
-    hp: '180'
-    mp: '0'
-    wp:
-    add:
-    ev_m:
-    ev_p:
-    jump:
-    move:
-    proc:
-    w_ev:
-    flags:
-    magic:
-    speed: "-1"
-    start:
-    always:
-    attack:
-    halves:
-    absorbs:
-    cancels:
-    element:
-    formula:
-    weakness:
-    female_only: false
-    strengthens:
-
-- id: 51
-  name: Barbuta
-  item_type: helmet
-  data:
-    hp: '180'
-    mp: '0'
-    wp:
-    add:
-    ev_m:
-    ev_p:
-    jump:
-    move:
-    proc:
-    w_ev:
-    flags:
-    magic:
-    speed:
-    start: Slow
-    always:
-    attack:
-    halves:
-    absorbs:
-    cancels:
-    element:
-    formula:
-    weakness:
-    female_only: false
-    strengthens:
-
-- id: 52
-  name: Mythril Helmet
-  item_type: helmet
-  data:
-    hp: '130'
-    mp: '0'
-    wp:
-    add:
-    ev_m:
-    ev_p:
-    jump:
-    move:
-    proc:
-    w_ev:
-    flags:
-    magic: '1'
-    speed:
-    start:
-    always:
-    attack:
-    halves:
-    absorbs:
-    cancels:
-    element:
-    formula:
-    weakness:
-    female_only: false
-    strengthens:
-
-- id: 54
-  name: Cross Helmet
-  item_type: helmet
-  data:
-    hp: '130'
-    mp: '0'
-    wp:
-    add:
-    ev_m:
-    ev_p:
-    jump:
-    move:
-    proc:
-    w_ev:
-    flags:
-    magic:
-    speed:
-    start:
-    always:
-    attack:
-    halves:
-    absorbs: Holy
-    cancels: Dead
-    element:
-    formula:
-    weakness:
-    female_only: false
-    strengthens: Holy
-
-- id: 55
-  name: Diamond Helmet
-  item_type: helmet
-  data:
-    hp: '100'
-    mp: '0'
-    wp:
-    add:
-    ev_m:
-    ev_p:
-    jump:
-    move:
-    proc:
-    w_ev:
-    flags:
-    magic: '1'
-    speed:
-    start:
-    always:
-    attack: '1'
-    halves:
-    absorbs:
-    cancels:
-    element:
-    formula:
-    weakness:
-    female_only: false
-    strengthens:
-
-- id: 56
-  name: Platina Helmet
-  item_type: helmet
-  data:
-    hp: '150'
-    mp: '0'
-    wp:
-    add:
-    ev_m:
-    ev_p:
-    jump:
-    move:
-    proc:
-    w_ev:
-    flags:
-    magic:
-    speed:
-    start:
-    always:
-    attack:
-    halves: Fire/Dark/Water
-    absorbs:
-    cancels:
-    element:
-    formula:
-    weakness:
-    female_only: false
-    strengthens:
-
-- id: 58
-  name: Leather Hat
-  item_type: helmet
-  data:
-    hp: '20'
-    mp: '20'
-    wp:
-    add:
-    ev_m:
-    ev_p:
-    jump:
-    move:
-    proc:
-    w_ev:
-    flags:
-    magic: '1'
-    speed:
-    start:
-    always:
-    attack: '1'
-    halves:
-    absorbs:
-    cancels:
-    element:
-    formula:
-    weakness:
-    female_only: false
-    strengthens:
-
-- id: 48
-  name: Leather Helmet
-  item_type: helmet
-  data:
-    hp: '90'
-    mp: '0'
-    wp:
-    add:
-    ev_m:
-    ev_p:
-    jump:
-    move:
-    proc:
-    w_ev:
-    flags:
-    magic:
-    speed:
-    start:
-    always:
-    attack:
-    halves:
-    absorbs: Water
-    cancels:
-    element:
-    formula:
-    weakness:
-    female_only: false
-    strengthens:
-
-- id: 41
-  name: Power Sleeve
-  item_type: armor
-  data:
-    hp: '70'
-    mp: '0'
-    wp:
-    add:
-    ev_m:
-    ev_p:
-    jump:
-    move:
-    proc:
-    w_ev:
-    flags:
-    magic:
-    speed:
-    start:
-    always:
-    attack: '2'
-    halves:
-    absorbs:
-    cancels:
-    element:
-    formula:
-    weakness:
-    female_only: false
-    strengthens:
-
-- id: 59
-  name: Feather Hat
-  item_type: helmet
-  data:
-    hp: '30'
-    mp: '20'
-    wp:
-    add:
-    ev_m:
-    ev_p:
-    jump:
-    move:
-    proc:
-    w_ev:
-    flags:
-    magic:
-    speed:
-    start:
-    always:
-    attack:
-    halves:
-    absorbs: Wind
-    cancels:
-    element:
-    formula:
-    weakness:
-    female_only: false
-    strengthens: Wind
-
-- id: 60
-  name: Red Hood
-  item_type: helmet
-  data:
-    hp: '30'
-    mp: '70'
-    wp:
-    add:
-    ev_m:
-    ev_p:
-    jump:
-    move:
-    proc:
-    w_ev:
-    flags:
-    magic:
-    speed:
-    start:
-    always:
-    attack:
-    halves:
-    absorbs:
-    cancels:
-    element:
-    formula:
-    weakness:
-    female_only: false
-    strengthens:
-
-- id: 57
-  name: Circlet
-  item_type: helmet
-  data:
-    hp: '90'
-    mp: '0'
-    wp:
-    add:
-    ev_m:
-    ev_p:
-    jump:
-    move:
-    proc:
-    w_ev:
-    flags:
-    magic: '1'
-    speed:
-    start:
-    always:
-    attack:
-    halves:
-    absorbs:
-    cancels:
-    element:
-    formula:
-    weakness:
-    female_only: false
-    strengthens:
-
-- id: 50
-  name: Iron Helmet
-  item_type: helmet
-  data:
-    hp: '120'
-    mp: '0'
-    wp:
-    add:
-    ev_m:
-    ev_p:
-    jump:
-    move:
-    proc:
-    w_ev:
-    flags:
-    magic:
-    speed:
-    start: Don't Move
-    always:
-    attack:
-    halves:
-    absorbs:
-    cancels:
-    element:
-    formula:
-    weakness:
-    female_only: false
-    strengthens:
-
-- id: 43
-  name: Silk Robe
-  item_type: armor
-  data:
-    hp: '60'
-    mp: '30'
-    wp:
-    add:
-    ev_m:
-    ev_p:
-    jump:
-    move:
-    proc:
-    w_ev:
-    flags:
-    magic:
-    speed: "-1"
-    start:
-    always:
-    attack:
-    halves:
-    absorbs:
-    cancels:
-    element:
-    formula:
-    weakness:
-    female_only: false
-    strengthens:
-
-- id: 45
-  name: Chameleon Robe
-  item_type: armor
-  data:
-    hp: '50'
-    mp: '34'
-    wp:
-    add:
-    ev_m:
-    ev_p:
-    jump:
-    move:
-    proc:
-    w_ev:
-    flags:
-    magic:
-    speed:
-    start:
-    always:
-    attack:
-    halves: Fire/Dark/Water
-    absorbs:
-    cancels:
-    element:
-    formula:
-    weakness:
-    female_only: false
-    strengthens:
-
-- id: 63
-  name: Green Beret
-  item_type: helmet
-  data:
-    hp: '70'
-    mp: '0'
-    wp:
-    add:
-    ev_m:
-    ev_p:
-    jump:
-    move:
-    proc:
-    w_ev:
-    flags:
-    magic:
-    speed:
-    start:
-    always:
-    attack:
-    halves:
-    absorbs: Earth
-    cancels:
-    element:
-    formula:
-    weakness:
-    female_only: false
-    strengthens: Earth
-
-- id: 64
-  name: Twist Headband
-  item_type: helmet
-  data:
-    hp: '55'
-    mp: '0'
-    wp:
-    add:
-    ev_m:
-    ev_p:
-    jump:
-    move:
-    proc:
-    w_ev:
-    flags:
-    magic:
-    speed:
-    start:
-    always:
-    attack: '2'
-    halves:
-    absorbs:
-    cancels:
-    element:
-    formula:
-    weakness:
-    female_only: false
-    strengthens:
-
-- id: 65
-  name: Holy Miter
-  item_type: helmet
-  data:
-    hp: '64'
-    mp: '20'
-    wp:
-    add:
-    ev_m:
-    ev_p:
-    jump:
-    move:
-    proc:
-    w_ev:
-    flags:
-    magic:
-    speed:
-    start: Faith
-    always:
-    attack:
-    halves:
-    absorbs:
-    cancels:
-    element:
-    formula:
-    weakness:
-    female_only: false
-    strengthens:
-
-- id: 66
-  name: Black Hood
-  item_type: helmet
-  data:
-    hp: '115'
-    mp: '0'
-    wp:
-    add:
-    ev_m:
-    ev_p:
-    jump:
-    move:
-    proc:
-    w_ev:
-    flags:
-    magic:
-    speed:
-    start:
-    always:
-    attack:
-    halves:
-    absorbs:
-    cancels:
-    element:
-    formula:
-    weakness:
-    female_only: false
-    strengthens:
-
-- id: 69
-  name: Buckler
-  item_type: shield
-  data:
-    hp:
-    mp:
-    wp:
-    add:
-    ev_m: '45'
-    ev_p: '20'
-    jump:
-    move:
-    proc:
-    w_ev:
-    flags:
-    magic:
-    speed:
-    start:
-    always: Silence
-    attack:
-    halves:
-    absorbs:
-    cancels:
-    element:
-    formula:
-    weakness:
-    female_only: false
-    strengthens:
-
-- id: 70
-  name: Bronze Shield
-  item_type: shield
-  data:
-    hp:
-    mp:
-    wp:
-    add:
-    ev_m: '0'
-    ev_p: '30'
-    jump:
-    move:
-    proc:
-    w_ev:
-    flags:
-    magic:
-    speed:
-    start:
-    always: Reflect
-    attack:
-    halves:
-    absorbs:
-    cancels:
-    element:
-    formula:
-    weakness:
-    female_only: false
-    strengthens:
-
-- id: 71
-  name: Round Shield
-  item_type: shield
-  data:
-    hp:
-    mp:
-    wp:
-    add:
-    ev_m: '0'
-    ev_p: '0'
-    jump:
-    move:
-    proc:
-    w_ev:
-    flags:
-    magic:
-    speed: "-1"
-    start:
-    always: Shell
-    attack:
-    halves:
-    absorbs:
-    cancels:
-    element:
-    formula:
-    weakness:
-    female_only: false
-    strengthens:
-
-- id: 72
-  name: Mythril Shield
-  item_type: shield
-  data:
-    hp:
-    mp:
-    wp:
-    add:
-    ev_m: '0'
-    ev_p: '40'
-    jump:
-    move:
-    proc:
-    w_ev:
-    flags:
-    magic: '1'
-    speed:
-    start:
-    always:
-    attack:
-    halves:
-    absorbs:
-    cancels:
-    element:
-    formula:
-    weakness:
-    female_only: false
-    strengthens:
-
-- id: 73
-  name: Gold Shield
-  item_type: shield
-  data:
-    hp:
-    mp:
-    wp:
-    add:
-    ev_m: '25'
-    ev_p: '35'
-    jump:
-    move:
-    proc:
-    w_ev:
-    flags:
-    magic:
-    speed:
-    start:
-    always:
-    attack:
-    halves:
-    absorbs:
-    cancels:
-    element:
-    formula:
-    weakness:
-    female_only: false
-    strengthens:
-
-- id: 74
-  name: Ice Shield
-  item_type: shield
-  data:
-    hp:
-    mp:
-    wp:
-    add:
-    ev_m: '15'
-    ev_p: '34'
-    jump:
-    move:
-    proc:
-    w_ev:
-    flags:
-    magic:
-    speed:
-    start:
-    always:
-    attack:
-    halves: Fire
-    absorbs: Ice
-    cancels:
-    element:
-    formula:
-    weakness: Lightning
-    female_only: false
-    strengthens:
-
-- id: 75
-  name: Flame Shield
-  item_type: shield
-  data:
-    hp:
-    mp:
-    wp:
-    add:
-    ev_m: '15'
-    ev_p: '34'
-    jump:
-    move:
-    proc:
-    w_ev:
-    flags:
-    magic:
-    speed:
-    start:
-    always:
-    attack:
-    halves: Ice
-    absorbs: Fire
-    cancels:
-    element:
-    formula:
-    weakness: Water
-    female_only: false
-    strengthens:
-
-- id: 76
-  name: Aegis Shield
-  item_type: shield
-  data:
-    hp:
-    mp:
-    wp:
-    add:
-    ev_m: '45'
-    ev_p: '10'
-    jump:
-    move:
-    proc:
-    w_ev:
-    flags:
-    magic: '1'
-    speed:
-    start:
-    always:
-    attack:
-    halves:
-    absorbs:
-    cancels:
-    element:
-    formula:
-    weakness:
-    female_only: false
-    strengthens:
-
-- id: 77
-  name: Diamond Shield
-  item_type: shield
-  data:
-    hp:
-    mp:
-    wp:
-    add:
-    ev_m: '15'
-    ev_p: '15'
-    jump:
-    move:
-    proc:
-    w_ev:
-    flags:
-    magic: '1'
-    speed:
-    start:
-    always:
-    attack: '1'
-    halves:
-    absorbs:
-    cancels:
-    element:
-    formula:
-    weakness:
-    female_only: false
-    strengthens:
-
-- id: 79
-  name: Mythril Knife
-  item_type: weapon
-  data:
-    hp:
-    mp:
-    wp: '8'
-    add:
-    ev_m:
-    ev_p:
-    jump:
-    move:
-    proc:
-    w_ev: '10'
-    flags: 2-swords
-    magic:
-    speed: '1'
-    start:
-    always:
-    attack:
-    halves:
-    absorbs:
-    cancels: Charging
-    element:
-    formula: "(PA+SP)/2*WP"
-    weakness:
-    female_only: false
-    strengthens:
-
-- id: 80
-  name: Blind Knife
-  item_type: weapon
-  data:
-    hp:
-    mp:
-    wp: '9'
-    add: Darkness
-    ev_m:
-    ev_p:
-    jump:
-    move:
-    proc:
-    w_ev: '10'
-    flags: 2-swords
-    magic:
-    speed: '1'
-    start:
-    always:
-    attack:
-    halves:
-    absorbs:
-    cancels:
-    element:
-    formula: "(PA+SP)/2*WP"
-    weakness:
-    female_only: false
-    strengthens:
-
-- id: 78
-  name: Dagger
-  item_type: weapon
-  data:
-    hp:
-    mp:
-    wp: '10'
-    add:
-    ev_m:
-    ev_p:
-    jump:
-    move:
-    proc:
-    w_ev: '10'
-    flags: 2-swords
-    magic:
-    speed: '1'
-    start:
-    always:
-    attack:
-    halves:
-    absorbs:
-    cancels:
-    element:
-    formula: "(PA+SP)/2*WP"
-    weakness:
-    female_only: false
-    strengthens:
-
-- id: 62
-  name: Triangle Hat
-  item_type: helmet
-  data:
-    hp: '50'
-    mp: '30'
-    wp:
-    add:
-    ev_m:
-    ev_p:
-    jump:
-    move:
-    proc:
-    w_ev:
-    flags:
-    magic: '1'
-    speed:
-    start:
-    always:
-    attack:
-    halves:
-    absorbs:
-    cancels:
-    element:
-    formula:
-    weakness:
-    female_only: false
-    strengthens:
-
-- id: 68
-  name: Escutcheon
-  item_type: shield
-  data:
-    hp:
-    mp:
-    wp:
-    add:
-    ev_m: '0'
-    ev_p: '25'
-    jump:
-    move:
-    proc:
-    w_ev:
-    flags:
-    magic:
-    speed:
-    start: Haste
-    always:
-    attack:
-    halves:
-    absorbs:
-    cancels:
-    element:
-    formula:
-    weakness: Fire
-    female_only: false
-    strengthens:
-
-- id: 84
-  name: Orichalcum
-  item_type: weapon
-  data:
-    hp:
-    mp:
-    wp: '8'
-    add:
-    ev_m:
-    ev_p:
-    jump:
-    move:
-    proc:
-    w_ev: '10'
-    flags: 2-swords
-    magic: '1'
-    speed: '1'
-    start:
-    always:
-    attack:
-    halves:
-    absorbs:
-    cancels:
-    element:
-    formula: "(PA+SP)/2*WP"
-    weakness:
-    female_only: false
-    strengthens:
-
-- id: 85
-  name: Assassin Dagger
-  item_type: weapon
-  data:
-    hp:
-    mp:
-    wp: '9'
-    add: Death Sentence
-    ev_m:
-    ev_p:
-    jump:
-    move:
-    proc:
-    w_ev: '10'
-    flags: 2-swords
-    magic:
-    speed: '1'
-    start:
-    always:
-    attack:
-    halves:
-    absorbs:
-    cancels:
-    element:
-    formula: "(PA+SP)/2*WP"
-    weakness:
-    female_only: false
-    strengthens:
-
-- id: 90
-  name: Long Sword
-  item_type: weapon
-  data:
-    hp:
-    mp:
-    wp: '11'
-    add:
-    ev_m:
-    ev_p:
-    jump:
-    move: '1'
-    proc:
-    w_ev: '25'
-    flags: 2-swords 2-hands
-    magic:
-    speed:
-    start:
-    always:
-    attack:
-    halves:
-    absorbs:
-    cancels:
-    element:
-    formula: PA*WP
-    weakness:
-    female_only: false
-    strengthens:
-
-- id: 86
-  name: Hidden Knife
-  item_type: weapon
-  data:
-    hp:
-    mp:
-    wp: '11'
-    add:
-    ev_m:
-    ev_p:
-    jump:
-    move:
-    proc:
-    w_ev: '20'
-    flags: 2-swords 2-hands
-    magic:
-    speed:
-    start:
-    always:
-    attack:
-    halves:
-    absorbs:
-    cancels:
-    element:
-    formula: "(PA+SP)/2*WP"
-    weakness:
-    female_only: false
-    strengthens:
-
-- id: 89
-  name: Broad Sword
-  item_type: weapon
-  data:
-    hp:
-    mp:
-    wp: '11'
-    add:
-    ev_m:
-    ev_p:
-    jump:
-    move:
-    proc:
-    w_ev: '25'
-    flags: 2-swords 2-hands
-    magic:
-    speed:
-    start: Defending
-    always:
-    attack:
-    halves:
-    absorbs:
-    cancels:
-    element:
-    formula: PA*WP
-    weakness:
-    female_only: false
-    strengthens:
-
-- id: 91
-  name: Parrying Sword
-  item_type: weapon
-  data:
-    hp:
-    mp:
-    wp: '10'
-    add:
-    ev_m:
-    ev_p:
-    jump:
-    move:
-    proc:
-    w_ev: '50'
-    flags: 2-swords 2-hands
-    magic:
-    speed:
-    start:
-    always:
-    attack:
-    halves:
-    absorbs:
-    cancels:
-    element:
-    formula: PA*WP
-    weakness:
-    female_only: false
-    strengthens:
-
-- id: 92
-  name: Mythril Sword
-  item_type: weapon
-  data:
-    hp:
-    mp:
-    wp: '7'
-    add:
-    ev_m:
-    ev_p:
-    jump:
-    move:
-    proc:
-    w_ev: '25'
-    flags: 2-swords 2-hands
-    magic: '2'
-    speed:
-    start:
-    always:
-    attack:
-    halves:
-    absorbs:
-    cancels:
-    element:
-    formula: PA*WP
-    weakness:
-    female_only: false
-    strengthens:
-
-- id: 93
-  name: Blood Sword
-  item_type: weapon
-  data:
-    hp:
-    mp:
-    wp: '10'
-    add:
-    ev_m:
-    ev_p:
-    jump:
-    move:
-    proc:
-    w_ev: '25'
-    flags: 2-swords 2-hands / leeches HP
-    magic:
-    speed:
-    start:
-    always:
-    attack:
-    halves:
-    absorbs:
-    cancels:
-    element: Dark
-    formula: PA*WP
-    weakness:
-    female_only: false
-    strengthens:
-
-- id: 94
-  name: Coral Sword
-  item_type: weapon
-  data:
-    hp:
-    mp:
-    wp: '9'
-    add:
-    ev_m:
-    ev_p:
-    jump:
-    move:
-    proc: Mjollnir
-    w_ev: '25'
-    flags: 2-swords 2-hands
-    magic:
-    speed:
-    start:
-    always:
-    attack:
-    halves:
-    absorbs:
-    cancels:
-    element: Lightning
-    formula: PA*WP
-    weakness:
-    female_only: false
-    strengthens:
-
-- id: 95
-  name: Ancient Sword
-  item_type: weapon
-  data:
-    hp:
-    mp:
-    wp: '11'
-    add: Don't Move
-    ev_m:
-    ev_p:
-    jump:
-    move:
-    proc:
-    w_ev: '25'
-    flags: 2-swords 2-hands
-    magic:
-    speed:
-    start:
-    always:
-    attack:
-    halves:
-    absorbs:
-    cancels:
-    element:
-    formula: PA*WP
-    weakness:
-    female_only: false
-    strengthens:
-
-- id: 97
-  name: Paladin Sword
-  item_type: weapon
-  data:
-    hp:
-    mp:
-    wp: '10'
-    add:
-    ev_m:
-    ev_p:
-    jump:
-    move:
-    proc: Holy Strike
-    w_ev: '25'
-    flags: 2-swords 2-hands
-    magic:
-    speed:
-    start:
-    always:
-    attack:
-    halves:
-    absorbs:
-    cancels:
-    element: Holy
-    formula: PA*WP
-    weakness:
-    female_only: false
-    strengthens:
-
-- id: 99
-  name: Asura Knife
-  item_type: weapon
-  data:
-    hp:
-    mp:
-    wp: '18'
-    add:
-    ev_m:
-    ev_p:
-    jump:
-    move:
-    proc: Double Blow
-    w_ev: '35'
-    flags: 2-swords 2-hands
-    magic:
-    speed:
-    start:
-    always:
-    attack:
-    halves:
-    absorbs:
-    cancels:
-    element: Fire
-    formula: "(PA * BR)/100 * WP"
-    weakness:
-    female_only: false
-    strengthens:
-
-- id: 83
-  name: Main Gauche
-  item_type: weapon
-  data:
-    hp:
-    mp:
-    wp: '9'
-    add:
-    ev_m:
-    ev_p:
-    jump:
-    move:
-    proc:
-    w_ev: '40'
-    flags: 2-swords
-    magic:
-    speed: '1'
-    start:
-    always:
-    attack:
-    halves:
-    absorbs:
-    cancels:
-    element:
-    formula: "(PA+SP)/2*WP"
-    weakness:
-    female_only: false
-    strengthens:
-
-- id: 96
-  name: Scramasax
-  item_type: weapon
-  data:
-    hp:
-    mp:
-    wp: '10'
-    add:
-    ev_m:
-    ev_p:
-    jump:
-    move:
-    proc: Double Blow
-    w_ev: '25'
-    flags: 2-swords 2-hands
-    magic:
-    speed:
-    start:
-    always:
-    attack:
-    halves:
-    absorbs:
-    cancels:
-    element:
-    formula: PA*WP
-    weakness:
-    female_only: false
-    strengthens:
-
-- id: 98
-  name: Demon Hilt
-  item_type: weapon
-  data:
-    hp:
-    mp:
-    wp: '18'
-    add:
-    ev_m:
-    ev_p:
-    jump:
-    move:
-    proc: Demon Fire
-    w_ev: '25'
-    flags: 2-swords 2-hands
-    magic:
-    speed:
-    start:
-    always:
-    attack:
-    halves:
-    absorbs:
-    cancels:
-    element: Fire
-    formula: PA*WP
-    weakness:
-    female_only: false
-    strengthens:
-
-- id: 102
-  name: Murasame
-  item_type: weapon
-  data:
-    hp:
-    mp:
-    wp: '14'
-    add:
-    ev_m:
-    ev_p:
-    jump:
-    move:
-    proc: Double Blow
-    w_ev: '35'
-    flags: 2-swords 2-hands
-    magic:
-    speed:
-    start:
-    always:
-    attack: '1'
-    halves:
-    absorbs:
-    cancels:
-    element:
-    formula: "(PA * BR)/100 * WP"
-    weakness:
-    female_only: false
-    strengthens:
-
-- id: 103
-  name: Heaven's Cloud
-  item_type: weapon
-  data:
-    hp:
-    mp:
-    wp: '18'
-    add:
-    ev_m:
-    ev_p:
-    jump:
-    move:
-    proc: Double Blow
-    w_ev: '35'
-    flags: 2-swords 2-hands
-    magic:
-    speed:
-    start:
-    always:
-    attack:
-    halves:
-    absorbs:
-    cancels:
-    element: Water
-    formula: "(PA * BR)/100 * WP"
-    weakness:
-    female_only: false
-    strengthens:
-
-- id: 104
-  name: Kiyomori
-  item_type: weapon
-  data:
-    hp:
-    mp:
-    wp: '10'
-    add:
-    ev_m:
-    ev_p:
-    jump:
-    move:
-    proc: Double Blow
-    w_ev: '35'
-    flags: 2-swords 2-hands
-    magic:
-    speed:
-    start: Protect Shell
-    always:
-    attack:
-    halves:
-    absorbs:
-    cancels:
-    element:
-    formula: "(PA * BR)/100 * WP"
-    weakness:
-    female_only: false
-    strengthens:
-
-- id: 105
-  name: Battle Axe
-  item_type: weapon
-  data:
-    hp:
-    mp:
-    wp: '15'
-    add:
-    ev_m:
-    ev_p:
-    jump:
-    move:
-    proc: Decapitate
-    w_ev: '40'
-    flags: 2-hands only
-    magic:
-    speed:
-    start:
-    always:
-    attack: '1'
-    halves:
-    absorbs:
-    cancels:
-    element:
-    formula: "(1..PA) * WP"
-    weakness:
-    female_only: false
-    strengthens:
-
-- id: 111
-  name: Wizard Rod
-  item_type: weapon
-  data:
-    hp:
-    mp:
-    wp: '4'
-    add:
-    ev_m:
-    ev_p:
-    jump:
-    move:
-    proc:
-    w_ev: '20'
-    flags: 2-swords 2-hands
-    magic: '2'
-    speed:
-    start:
-    always:
-    attack:
-    halves:
-    absorbs:
-    cancels:
-    element:
-    formula: PA*WP
-    weakness:
-    female_only: false
-    strengthens:
-
-- id: 82
-  name: Platina Dagger
-  item_type: weapon
-  data:
-    hp:
-    mp:
-    wp: '9'
-    add:
-    ev_m:
-    ev_p:
-    jump:
-    move:
-    proc:
-    w_ev: '10'
-    flags: 2-swords / No Evade
-    magic:
-    speed:
-    start:
-    always:
-    attack:
-    halves:
-    absorbs:
-    cancels:
-    element:
-    formula: WP*WP
-    weakness:
-    female_only: false
-    strengthens:
-
-- id: 113
-  name: White Staff
-  item_type: weapon
-  data:
-    hp:
-    mp:
-    wp: '3'
-    add:
-    ev_m:
-    ev_p:
-    jump:
-    move:
-    proc:
-    w_ev: '20'
-    flags: 2-swords 2-hands
-    magic:
-    speed:
-    start:
-    always:
-    attack:
-    halves:
-    absorbs:
-    cancels: Negative Status
-    element:
-    formula: PA*WP
-    weakness:
-    female_only: false
-    strengthens:
-
-- id: 117
-  name: Gold Staff
-  item_type: weapon
-  data:
-    hp:
-    mp:
-    wp: '8'
-    add:
-    ev_m:
-    ev_p:
-    jump:
-    move:
-    proc:
-    w_ev: '20'
-    flags: 2-swords 2-hands
-    magic:
-    speed:
-    start:
-    always:
-    attack:
-    halves:
-    absorbs:
-    cancels: Positive Status
-    element:
-    formula: MA*WP
-    weakness:
-    female_only: false
-    strengthens:
-
-- id: 106
-  name: Rod
-  item_type: weapon
-  data:
-    hp:
-    mp:
-    wp: '3'
-    add:
-    ev_m:
-    ev_p:
-    jump:
-    move:
-    proc:
-    w_ev: '20'
-    flags: 2-swords 2-hands
-    magic:
-    speed: "-1"
-    start:
-    always:
-    attack:
-    halves:
-    absorbs:
-    cancels:
-    element:
-    formula: PA*WP
-    weakness:
-    female_only: false
-    strengthens:
-
-- id: 107
-  name: Thunder Rod
-  item_type: weapon
-  data:
-    hp:
-    mp:
-    wp: '5'
-    add:
-    ev_m:
-    ev_p:
-    jump:
-    move:
-    proc: Chain Lightning
-    w_ev: '20'
-    flags: 2-swords 2-hands
-    magic:
-    speed:
-    start:
-    always:
-    attack:
-    halves:
-    absorbs:
-    cancels:
-    element: Lightning
-    formula: PA*WP
-    weakness:
-    female_only: false
-    strengthens: Lightning
-
-- id: 108
-  name: Flame Rod
-  item_type: weapon
-  data:
-    hp:
-    mp:
-    wp: '5'
-    add:
-    ev_m:
-    ev_p:
-    jump:
-    move:
-    proc: Explosion
-    w_ev: '20'
-    flags: 2-swords 2-hands
-    magic:
-    speed:
-    start:
-    always:
-    attack:
-    halves:
-    absorbs:
-    cancels:
-    element: Fire
-    formula: PA*WP
-    weakness:
-    female_only: false
-    strengthens: Fire
-
-- id: 110
-  name: Poison Rod
-  item_type: weapon
-  data:
-    hp:
-    mp:
-    wp: '8'
-    add: Poison
-    ev_m:
-    ev_p:
-    jump:
-    move:
-    proc:
-    w_ev: '20'
-    flags: 2-swords 2-hands
-    magic: '1'
-    speed:
-    start:
-    always:
-    attack:
-    halves:
-    absorbs:
-    cancels:
-    element:
-    formula: PA*WP
-    weakness:
-    female_only: false
-    strengthens:
-
-- id: 112
-  name: Oak Staff
-  item_type: weapon
-  data:
-    hp:
-    mp:
-    wp: '10'
-    add:
-    ev_m:
-    ev_p:
-    jump:
-    move:
-    proc:
-    w_ev: '20'
-    flags: 2-swords 2-hands
-    magic:
-    speed:
-    start:
-    always:
-    attack:
-    halves:
-    absorbs:
-    cancels:
-    element:
-    formula: MA*WP
-    weakness:
-    female_only: false
-    strengthens:
-
-- id: 114
-  name: Healing Staff
-  item_type: weapon
-  data:
-    hp:
-    mp:
-    wp: '8'
-    add:
-    ev_m:
-    ev_p:
-    jump:
-    move:
-    proc:
-    w_ev: '20'
-    flags: 2-swords 2-hands / Heals target
-    magic:
-    speed:
-    start:
-    always:
-    attack:
-    halves:
-    absorbs:
-    cancels:
-    element:
-    formula: MA*WP
-    weakness:
-    female_only: false
-    strengthens:
-
-- id: 115
-  name: Rainbow Staff
-  item_type: weapon
-  data:
-    hp:
-    mp:
-    wp: '5'
-    add: Positive Status
-    ev_m:
-    ev_p:
-    jump:
-    move:
-    proc:
-    w_ev: '20'
-    flags: 2-swords 2-hands
-    magic:
-    speed:
-    start:
-    always:
-    attack:
-    halves:
-    absorbs:
-    cancels:
-    element:
-    formula: PA*WP
-    weakness:
-    female_only: false
-    strengthens:
-
-- id: 116
-  name: Wizard Staff
-  item_type: weapon
-  data:
-    hp:
-    mp:
-    wp: '4'
-    add: Frog
-    ev_m:
-    ev_p:
-    jump:
-    move:
-    proc:
-    w_ev: '20'
-    flags: 2-swords 2-hands
-    magic: '1'
-    speed:
-    start:
-    always:
-    attack:
-    halves:
-    absorbs:
-    cancels:
-    element:
-    formula: MA*WP
-    weakness:
-    female_only: false
-    strengthens:
-
-- id: 123
-  name: Bow Gun
-  item_type: weapon
-  data:
-    hp:
-    mp:
-    wp: '10'
-    add:
-    ev_m:
-    ev_p:
-    jump:
-    move:
-    proc: Doubleshot
-    w_ev: '5'
-    flags: 6 Range
-    magic:
-    speed:
-    start:
-    always:
-    attack:
-    halves:
-    absorbs:
-    cancels:
-    element:
-    formula: PA*WP
-    weakness:
-    female_only: false
-    strengthens:
-
-- id: 126
-  name: Arbalest
-  item_type: weapon
-  data:
-    hp:
-    mp:
-    wp: '7'
-    add:
-    ev_m:
-    ev_p:
-    jump:
-    move:
-    proc: Doubleshot
-    w_ev: '5'
-    flags: 4 Range 2-swords
-    magic:
-    speed:
-    start:
-    always:
-    attack:
-    halves:
-    absorbs:
-    cancels:
-    element:
-    formula: PA*WP
-    weakness:
-    female_only: false
-    strengthens:
-
-- id: 127
-  name: Hunting Bow
-  item_type: weapon
-  data:
-    hp:
-    mp:
-    wp: '11'
-    add:
-    ev_m:
-    ev_p:
-    jump:
-    move:
-    proc: Doubleshot
-    w_ev: '5'
-    flags: 4 Range
-    magic:
-    speed:
-    start: Transparent
-    always:
-    attack:
-    halves:
-    absorbs:
-    cancels:
-    element:
-    formula: PA*WP
-    weakness:
-    female_only: false
-    strengthens:
-
-- id: 128
-  name: Long Bow
-  item_type: weapon
-  data:
-    hp:
-    mp:
-    wp: '12'
-    add:
-    ev_m:
-    ev_p:
-    jump:
-    move:
-    proc:
-    w_ev: '20'
-    flags: 8 Range / 2-hands only
-    magic:
-    speed:
-    start:
-    always:
-    attack:
-    halves:
-    absorbs:
-    cancels:
-    element:
-    formula: "(PA+SP)/2*WP"
-    weakness:
-    female_only: false
-    strengthens:
-
-- id: 121
-  name: Romanda Gun
-  item_type: weapon
-  data:
-    hp:
-    mp:
-    wp: '10'
-    add:
-    ev_m:
-    ev_p:
-    jump:
-    move:
-    proc:
-    w_ev: '5'
-    flags: 5 Range / No Evade
-    magic:
-    speed:
-    start:
-    always:
-    attack:
-    halves:
-    absorbs:
-    cancels:
-    element:
-    formula: WP*WP
-    weakness:
-    female_only: false
-    strengthens:
-
-- id: 122
-  name: Chocobo Gun
-  item_type: weapon
-  data:
-    hp:
-    mp:
-    wp: '12'
-    add:
-    ev_m:
-    ev_p:
-    jump:
-    move:
-    proc:
-    w_ev: '5'
-    flags: Exactly 3 Range / No Evade
-    magic:
-    speed:
-    start:
-    always:
-    attack:
-    halves:
-    absorbs:
-    cancels:
-    element:
-    formula: WP*WP
-    weakness:
-    female_only: false
-    strengthens:
-
-- id: 125
-  name: Lava Bolt
-  item_type: weapon
-  data:
-    hp:
-    mp:
-    wp: '15'
-    add: Oil
-    ev_m:
-    ev_p:
-    jump:
-    move:
-    proc:
-    w_ev: '5'
-    flags: 4 Range / No Evade
-    magic:
-    speed:
-    start:
-    always:
-    attack:
-    halves:
-    absorbs:
-    cancels:
-    element: Fire
-    formula: WP*WP
-    weakness:
-    female_only: false
-    strengthens:
-
-- id: 129
-  name: Silver Bow
-  item_type: weapon
-  data:
-    hp:
-    mp:
-    wp: '13'
-    add:
-    ev_m:
-    ev_p:
-    jump:
-    move:
-    proc:
-    w_ev: '20'
-    flags: 6 Range / 2-hands only
-    magic:
-    speed:
-    start:
-    always:
-    attack:
-    halves:
-    absorbs:
-    cancels:
-    element:
-    formula: "(PA+SP)/2*WP"
-    weakness:
-    female_only: false
-    strengthens:
-
-- id: 130
-  name: Ice Bow
-  item_type: weapon
-  data:
-    hp:
-    mp:
-    wp: '10'
-    add:
-    ev_m:
-    ev_p:
-    jump:
-    move:
-    proc: Ice Bracelet
-    w_ev: '20'
-    flags: 6 Range / 2-hands only
-    magic:
-    speed:
-    start:
-    always:
-    attack:
-    halves:
-    absorbs:
-    cancels:
-    element: Ice
-    formula: "(PA+SP)/2*WP"
-    weakness:
-    female_only: false
-    strengthens:
-
-- id: 132
-  name: Windslash Bow
-  item_type: weapon
-  data:
-    hp:
-    mp:
-    wp: '10'
-    add:
-    ev_m:
-    ev_p:
-    jump:
-    move:
-    proc: Gusty Wind
-    w_ev: '20'
-    flags: 6 Range / 2-hands only
-    magic:
-    speed:
-    start:
-    always:
-    attack:
-    halves:
-    absorbs:
-    cancels:
-    element: Wind
-    formula: "(PA+SP)/2*WP"
-    weakness:
-    female_only: false
-    strengthens:
-
-- id: 133
-  name: Mythril Bow
-  item_type: weapon
-  data:
-    hp:
-    mp:
-    wp: '10'
-    add:
-    ev_m:
-    ev_p:
-    jump:
-    move:
-    proc:
-    w_ev: '20'
-    flags: 6 Range / 2-hands only
-    magic: '3'
-    speed:
-    start:
-    always:
-    attack:
-    halves:
-    absorbs:
-    cancels:
-    element:
-    formula: "(PA+SP)/2*WP"
-    weakness:
-    female_only: false
-    strengthens:
-
-- id: 137
-  name: Monster Dict
-  item_type: weapon
-  data:
-    hp:
-    mp:
-    wp: '13'
-    add:
-    ev_m:
-    ev_p:
-    jump:
-    move:
-    proc: Bio 3
-    w_ev: '15'
-    flags: Exactly 3 Range
-    magic:
-    speed:
-    start:
-    always:
-    attack:
-    halves:
-    absorbs:
-    cancels:
-    element:
-    formula: "(PA+MA)/2 * WP"
-    weakness:
-    female_only: false
-    strengthens:
-
-- id: 124
-  name: Night Killer
-  item_type: weapon
-  data:
-    hp:
-    mp:
-    wp: '10'
-    add:
-    ev_m:
-    ev_p:
-    jump:
-    move:
-    proc: Doubleshot
-    w_ev: '5'
-    flags: 4 Range
-    magic:
-    speed: '1'
-    start:
-    always:
-    attack:
-    halves:
-    absorbs:
-    cancels:
-    element:
-    formula: PA*WP
-    weakness:
-    female_only: false
-    strengthens:
-
-- id: 134
-  name: Ramia Harp
-  item_type: weapon
-  data:
-    hp:
-    mp:
-    wp: '10'
-    add: Confusion
-    ev_m:
-    ev_p:
-    jump:
-    move:
-    proc:
-    w_ev: '10'
-    flags: Exactly 3 Range
-    magic:
-    speed:
-    start:
-    always:
-    attack:
-    halves:
-    absorbs:
-    cancels:
-    element:
-    formula: "(PA+MA)/2 * WP"
-    weakness:
-    female_only: false
-    strengthens:
-
-- id: 135
-  name: Bloody Strings
-  item_type: weapon
-  data:
-    hp:
-    mp:
-    wp: '13'
-    add:
-    ev_m:
-    ev_p:
-    jump:
-    move:
-    proc:
-    w_ev: '10'
-    flags: Exactly 3 Range / leeches HP
-    magic:
-    speed:
-    start:
-    always:
-    attack:
-    halves:
-    absorbs:
-    cancels:
-    element:
-    formula: "(PA+MA)/2 * WP"
-    weakness:
-    female_only: false
-    strengthens:
-
-- id: 136
-  name: Battle Dict
-  item_type: weapon
-  data:
-    hp:
-    mp:
-    wp: '12'
-    add:
-    ev_m:
-    ev_p:
-    jump:
-    move:
-    proc: Diminish
-    w_ev: '15'
-    flags: Exactly 3 Range
-    magic:
-    speed:
-    start:
-    always:
-    attack:
-    halves:
-    absorbs:
-    cancels:
-    element:
-    formula: "(PA+MA)/2 * WP"
-    weakness:
-    female_only: false
-    strengthens:
-
-- id: 143
-  name: Cypress Rod
-  item_type: weapon
-  data:
-    hp:
-    mp:
-    wp: '7'
-    add:
-    ev_m:
-    ev_p:
-    jump:
-    move: '1'
-    proc:
-    w_ev: '30'
-    flags: 2 Range / 2-hands
-    magic:
-    speed:
-    start:
-    always:
-    attack:
-    halves:
-    absorbs:
-    cancels:
-    element: Earth
-    formula: MA*WP
-    weakness:
-    female_only: false
-    strengthens:
-
-- id: 144
-  name: Battle Bamboo
-  item_type: weapon
-  data:
-    hp:
-    mp:
-    wp: '10'
-    add:
-    ev_m:
-    ev_p:
-    jump:
-    move: '1'
-    proc:
-    w_ev: '30'
-    flags: 2 Range / 2-hands
-    magic:
-    speed:
-    start:
-    always:
-    attack: '2'
-    halves:
-    absorbs:
-    cancels:
-    element:
-    formula: PA*WP
-    weakness:
-    female_only: false
-    strengthens:
-
-- id: 145
-  name: Musk Rod
-  item_type: weapon
-  data:
-    hp:
-    mp:
-    wp: '5'
-    add: Charm
-    ev_m:
-    ev_p:
-    jump:
-    move: '1'
-    proc:
-    w_ev: '30'
-    flags: 2 Range / 2-hands
-    magic:
-    speed:
-    start:
-    always:
-    attack:
-    halves:
-    absorbs:
-    cancels:
-    element:
-    formula: MA*WP
-    weakness:
-    female_only: false
-    strengthens:
-
-- id: 146
-  name: Iron Fan
-  item_type: weapon
-  data:
-    hp:
-    mp:
-    wp: '8'
-    add: Confusion
-    ev_m:
-    ev_p:
-    jump:
-    move: '1'
-    proc:
-    w_ev: '30'
-    flags: 2 Range / 2-hands
-    magic:
-    speed:
-    start:
-    always:
-    attack:
-    halves:
-    absorbs:
-    cancels:
-    element:
-    formula: MA*WP
-    weakness:
-    female_only: false
-    strengthens:
-
-- id: 147
-  name: Gokuu Rod
-  item_type: weapon
-  data:
-    hp:
-    mp:
-    wp: '9'
-    add: Innocent
-    ev_m:
-    ev_p:
-    jump:
-    move: '1'
-    proc:
-    w_ev: '30'
-    flags: 2 Range / 2-hands
-    magic:
-    speed:
-    start:
-    always:
-    attack:
-    halves:
-    absorbs:
-    cancels:
-    element:
-    formula: MA*WP
-    weakness:
-    female_only: false
-    strengthens:
-
-- id: 150
-  name: Persia
-  item_type: weapon
-  data:
-    hp:
-    mp:
-    wp: '9'
-    add:
-    ev_m:
-    ev_p:
-    jump:
-    move:
-    proc: Cancel Charging
-    w_ev: '50'
-    flags: 2 Range / 2-hands
-    magic:
-    speed: '1'
-    start:
-    always:
-    attack:
-    halves:
-    absorbs:
-    cancels:
-    element:
-    formula: "(PA+MA)/2 * WP"
-    weakness:
-    female_only: false
-    strengthens:
-
-- id: 149
-  name: P Bag
-  item_type: weapon
-  data:
-    hp:
-    mp:
-    wp: '14'
-    add:
-    ev_m:
-    ev_p:
-    jump:
-    move:
-    proc:
-    w_ev: '5'
-    flags:
-    magic:
-    speed:
-    start:
-    always:
-    attack: '3'
-    halves:
-    absorbs:
-    cancels:
-    element:
-    formula: "(1..PA) * WP"
-    weakness:
-    female_only: true
-    strengthens:
-
-- id: 120
-  name: Morning Star
-  item_type: weapon
-  data:
-    hp:
-    mp:
-    wp: '12'
-    add:
-    ev_m:
-    ev_p:
-    jump:
-    move:
-    proc:
-    w_ev: '10'
-    flags: 2-swords 2-hands / No Evade
-    magic:
-    speed: "-1"
-    start:
-    always:
-    attack:
-    halves:
-    absorbs:
-    cancels:
-    element:
-    formula: WP*WP
-    weakness:
-    female_only: false
-    strengthens:
-
-- id: 1
-  name: Battle Boots
-  item_type: accessory
-  data:
-    hp:
-    mp:
-    wp:
-    add:
-    ev_m:
-    ev_p:
-    jump:
-    move: '1'
-    proc:
-    w_ev:
-    flags:
-    magic:
-    speed:
-    start:
-    always:
-    attack: '1'
-    halves:
-    absorbs:
-    cancels:
-    element:
-    formula:
-    weakness:
-    female_only: false
-    strengthens:
-
-- id: 152
-  name: Red Shoes
-  item_type: accessory
-  data:
-    hp:
-    mp:
-    wp:
-    add:
-    ev_m:
-    ev_p:
-    jump:
-    move: '1'
-    proc:
-    w_ev:
-    flags:
-    magic:
-    speed:
-    start:
-    always: Berserk
-    attack: '1'
-    halves:
-    absorbs:
-    cancels:
-    element:
-    formula:
-    weakness:
-    female_only: false
-    strengthens:
-
-- id: 153
-  name: Genji Gauntlet
-  item_type: accessory
-  data:
-    hp:
-    mp:
-    wp:
-    add:
-    ev_m:
-    ev_p:
-    jump:
-    move:
-    proc:
-    w_ev:
-    flags:
-    magic:
-    speed:
-    start:
-    always:
-    attack:
-    halves:
-    absorbs:
-    cancels: Chicken / Frog / Petrify
-    element:
-    formula:
-    weakness:
-    female_only: false
-    strengthens:
-
-- id: 154
-  name: Cursed Ring
-  item_type: accessory
-  data:
-    hp:
-    mp:
-    wp:
-    add:
-    ev_m:
-    ev_p:
-    jump:
-    move:
-    proc:
-    w_ev:
-    flags:
-    magic: '1'
-    speed: '1'
-    start:
-    always: Undead
-    attack: '1'
-    halves:
-    absorbs:
-    cancels: Crystal / Treasure / Invitation
-    element:
-    formula:
-    weakness:
-    female_only: false
-    strengthens:
-
-- id: 155
-  name: Angel Ring
-  item_type: accessory
-  data:
-    hp:
-    mp:
-    wp:
-    add:
-    ev_m:
-    ev_p:
-    jump:
-    move:
-    proc:
-    w_ev:
-    flags:
-    magic: "-1"
-    speed:
-    start: Reraise
-    always:
-    attack: "-1"
-    halves:
-    absorbs:
-    cancels:
-    element:
-    formula:
-    weakness:
-    female_only: false
-    strengthens:
-
-- id: 171
-  name: Grand Helmet
-  item_type: helmet
-  data:
-    hp: '130'
-    mp: '0'
-    wp:
-    add:
-    ev_m:
-    ev_p:
-    jump:
-    move:
-    proc:
-    w_ev:
-    flags:
-    magic:
-    speed:
-    start:
-    always:
-    attack:
-    halves:
-    absorbs:
-    cancels: Blind Faith
-    element:
-    formula:
-    weakness:
-    female_only: false
-    strengthens:
-
-- id: 61
-  name: Headgear
-  item_type: helmet
-  data:
-    hp: '85'
-    mp: '0'
-    wp:
-    add:
-    ev_m:
-    ev_p:
-    jump:
-    move:
-    proc:
-    w_ev:
-    flags:
-    magic:
-    speed:
-    start:
-    always:
-    attack: '1'
-    halves:
-    absorbs:
-    cancels:
-    element:
-    formula:
-    weakness:
-    female_only: false
-    strengthens:
-
-- id: 156
-  name: Feather Mantle
-  item_type: accessory
-  data:
-    hp:
-    mp:
-    wp:
-    add:
-    ev_m: '15'
-    ev_p: '30'
-    jump:
-    move:
-    proc:
-    w_ev:
-    flags:
-    magic:
-    speed:
-    start:
-    always:
-    attack:
-    halves:
-    absorbs:
-    cancels:
-    element:
-    formula:
-    weakness:
-    female_only: false
-    strengthens:
-
-- id: 157
-  name: Vanish Mantle
-  item_type: accessory
-  data:
-    hp:
-    mp:
-    wp:
-    add:
-    ev_m: '0'
-    ev_p: '35'
-    jump:
-    move:
-    proc:
-    w_ev:
-    flags:
-    magic:
-    speed:
-    start: Transparent
-    always:
-    attack:
-    halves:
-    absorbs:
-    cancels:
-    element:
-    formula:
-    weakness:
-    female_only: false
-    strengthens:
-
-- id: 23
-  name: Leather Armor
-  item_type: armor
-  data:
-    hp: '140'
-    mp: '0'
-    wp:
-    add:
-    ev_m:
-    ev_p:
-    jump:
-    move: '1'
-    proc:
-    w_ev:
-    flags:
-    magic:
-    speed:
-    start:
-    always:
-    attack:
-    halves:
-    absorbs:
-    cancels:
-    element:
-    formula:
-    weakness:
-    female_only: false
-    strengthens:
-
-- id: 158
-  name: Carabini Mail
-  item_type: armor
-  data:
-    hp: '70'
-    mp: '0'
-    wp:
-    add:
-    ev_m:
-    ev_p:
-    jump:
-    move:
-    proc:
-    w_ev:
-    flags:
-    magic:
-    speed: '1'
-    start:
-    always:
-    attack:
-    halves:
-    absorbs:
-    cancels:
-    element:
-    formula:
-    weakness:
-    female_only: false
-    strengthens:
-
-- id: 159
-  name: Crystal Mail
-  item_type: armor
-  data:
-    hp: '120'
-    mp: '0'
-    wp:
-    add:
-    ev_m:
-    ev_p:
-    jump:
-    move:
-    proc:
-    w_ev:
-    flags:
-    magic:
-    speed:
-    start:
-    always:
-    attack:
-    halves:
-    absorbs: Ice
-    cancels:
-    element:
-    formula:
-    weakness:
-    female_only: false
-    strengthens: Ice
-
-- id: 160
-  name: Genji Armor
-  item_type: armor
-  data:
-    hp: '120'
-    mp: '0'
-    wp:
-    add:
-    ev_m:
-    ev_p:
-    jump:
-    move:
-    proc:
-    w_ev:
-    flags:
-    magic:
-    speed:
-    start:
-    always:
-    attack:
-    halves:
-    absorbs:
-    cancels: Chicken Frog
-    element:
-    formula:
-    weakness:
-    female_only: false
-    strengthens:
-
-- id: 161
-  name: Reflect Mail
-  item_type: armor
-  data:
-    hp: '120'
-    mp: '0'
-    wp:
-    add:
-    ev_m:
-    ev_p:
-    jump:
-    move:
-    proc:
-    w_ev:
-    flags:
-    magic:
-    speed:
-    start:
-    always: Reflect
-    attack:
-    halves:
-    absorbs:
-    cancels:
-    element:
-    formula:
-    weakness:
-    female_only: false
-    strengthens:
-
-- id: 162
-  name: Maximillian
-  item_type: armor
-  data:
-    hp: '155'
-    mp: '0'
-    wp:
-    add:
-    ev_m:
-    ev_p:
-    jump:
-    move:
-    proc:
-    w_ev:
-    flags:
-    magic:
-    speed:
-    start:
-    always:
-    attack:
-    halves:
-    absorbs:
-    cancels:
-    element:
-    formula:
-    weakness:
-    female_only: false
-    strengthens:
-
-- id: 163
-  name: Earth Clothes
-  item_type: armor
-  data:
-    hp: '85'
-    mp: '10'
-    wp:
-    add:
-    ev_m:
-    ev_p:
-    jump:
-    move:
-    proc:
-    w_ev:
-    flags:
-    magic:
-    speed:
-    start:
-    always:
-    attack:
-    halves:
-    absorbs: Earth
-    cancels:
-    element:
-    formula:
-    weakness:
-    female_only: false
-    strengthens: Earth
-
-- id: 141
-  name: Mythril Spear
-  item_type: weapon
-  data:
-    hp:
-    mp:
-    wp: '10'
-    add:
-    ev_m:
-    ev_p:
-    jump: '2'
-    move:
-    proc:
-    w_ev: '20'
-    flags: 2 Range / 2-hands
-    magic: '2'
-    speed:
-    start:
-    always:
-    attack:
-    halves:
-    absorbs:
-    cancels:
-    element:
-    formula: PA*WP
-    weakness:
-    female_only: false
-    strengthens:
-
-- id: 140
-  name: Spear
-  item_type: weapon
-  data:
-    hp:
-    mp:
-    wp: '10'
-    add:
-    ev_m:
-    ev_p:
-    jump: '2'
-    move:
-    proc:
-    w_ev: '20'
-    flags: 2 Range / 2-hands
-    magic:
-    speed:
-    start:
-    always:
-    attack: '1'
-    halves:
-    absorbs:
-    cancels:
-    element:
-    formula: PA*WP
-    weakness:
-    female_only: false
-    strengthens:
-
-- id: 165
-  name: Black Costume
-  item_type: armor
-  data:
-    hp: '70'
-    mp: '0'
-    wp:
-    add:
-    ev_m:
-    ev_p:
-    jump:
-    move:
-    proc:
-    w_ev:
-    flags:
-    magic:
-    speed:
-    start:
-    always:
-    attack:
-    halves:
-    absorbs: Fire
-    cancels: Stop
-    element:
-    formula:
-    weakness:
-    female_only: false
-    strengthens:
-
-- id: 166
-  name: Rubber Costume
-  item_type: armor
-  data:
-    hp: '20'
-    mp: '0'
-    wp:
-    add:
-    ev_m:
-    ev_p:
-    jump:
-    move:
-    proc:
-    w_ev:
-    flags:
-    magic:
-    speed:
-    start:
-    always:
-    attack:
-    halves:
-    absorbs: Lightning
-    cancels: Charm
-    element:
-    formula:
-    weakness:
-    female_only: false
-    strengthens:
-
-- id: 42
-  name: Linen Robe
-  item_type: armor
-  data:
-    hp: '20'
-    mp: '50'
-    wp:
-    add:
-    ev_m:
-    ev_p:
-    jump:
-    move:
-    proc:
-    w_ev:
-    flags:
-    magic:
-    speed:
-    start:
-    always:
-    attack:
-    halves:
-    absorbs:
-    cancels:
-    element:
-    formula:
-    weakness:
-    female_only: false
-    strengthens:
-
-- id: 167
-  name: Light Robe
-  item_type: armor
-  data:
-    hp: '0'
-    mp: '25'
-    wp:
-    add:
-    ev_m:
-    ev_p:
-    jump:
-    move:
-    proc:
-    w_ev:
-    flags:
-    magic:
-    speed:
-    start:
-    always: Regen
-    attack:
-    halves:
-    absorbs:
-    cancels:
-    element:
-    formula:
-    weakness:
-    female_only: false
-    strengthens:
-
-- id: 168
-  name: Robe of Lords
-  item_type: armor
-  data:
-    hp: '40'
-    mp: '20'
-    wp:
-    add:
-    ev_m:
-    ev_p:
-    jump:
-    move:
-    proc:
-    w_ev:
-    flags:
-    magic:
-    speed:
-    start:
-    always: Faith
-    attack:
-    halves:
-    absorbs:
-    cancels:
-    element:
-    formula:
-    weakness: Fire
-    female_only: false
-    strengthens:
-
-- id: 170
-  name: Genji Helmet
-  item_type: helmet
-  data:
-    hp: '110'
-    mp: '0'
-    wp:
-    add:
-    ev_m:
-    ev_p:
-    jump:
-    move:
-    proc:
-    w_ev:
-    flags:
-    magic:
-    speed:
-    start:
-    always:
-    attack:
-    halves:
-    absorbs:
-    cancels: Stop Frog
-    element:
-    formula:
-    weakness:
-    female_only: false
-    strengthens:
-
-- id: 172
-  name: Flash Hat
-  item_type: helmet
-  data:
-    hp: '0'
-    mp: '20'
-    wp:
-    add:
-    ev_m:
-    ev_p:
-    jump:
-    move:
-    proc:
-    w_ev:
-    flags:
-    magic: '1'
-    speed: '1'
-    start:
-    always:
-    attack:
-    halves:
-    absorbs:
-    cancels:
-    element:
-    formula:
-    weakness:
-    female_only: false
-    strengthens:
-
-- id: 174
-  name: Platina Shield
-  item_type: shield
-  data:
-    hp:
-    mp:
-    wp:
-    add:
-    ev_m: '35'
-    ev_p: '25'
-    jump:
-    move:
-    proc:
-    w_ev:
-    flags:
-    magic:
-    speed:
-    start:
-    always:
-    attack:
-    halves:
-    absorbs:
-    cancels:
-    element:
-    formula:
-    weakness:
-    female_only: false
-    strengthens:
-
-- id: 175
-  name: Crystal Shield
-  item_type: shield
-  data:
-    hp:
-    mp:
-    wp:
-    add:
-    ev_m: '20'
-    ev_p: '20'
-    jump:
-    move:
-    proc:
-    w_ev:
-    flags:
-    magic:
-    speed:
-    start:
-    always:
-    attack:
-    halves:
-    absorbs: Ice
-    cancels:
-    element:
-    formula:
-    weakness:
-    female_only: false
-    strengthens: Ice
-
-- id: 176
-  name: Genji Shield
-  item_type: shield
-  data:
-    hp:
-    mp:
-    wp:
-    add:
-    ev_m: '20'
-    ev_p: '30'
-    jump:
-    move:
-    proc:
-    w_ev:
-    flags:
-    magic:
-    speed:
-    start:
-    always:
-    attack:
-    halves:
-    absorbs:
-    cancels: Chicken Petrify
-    element:
-    formula:
-    weakness:
-    female_only: false
-    strengthens:
-
-- id: 177
-  name: Kaiser Plate
-  item_type: shield
-  data:
-    hp:
-    mp:
-    wp:
-    add:
-    ev_m: '0'
-    ev_p: '0'
-    jump:
-    move:
-    proc:
-    w_ev:
-    flags:
-    magic: '2'
-    speed:
-    start:
-    always:
-    attack:
-    halves:
-    absorbs:
-    cancels:
-    element:
-    formula:
-    weakness:
-    female_only: false
-    strengthens: Ice/Lightning/Wind
-
-- id: 178
-  name: Venetian Shield
-  item_type: shield
-  data:
-    hp:
-    mp:
-    wp:
-    add:
-    ev_m: '0'
-    ev_p: '0'
-    jump:
-    move:
-    proc:
-    w_ev:
-    flags:
-    magic:
-    speed:
-    start:
-    always:
-    attack:
-    halves: Fire/Water/Dark
-    absorbs:
-    cancels:
-    element:
-    formula:
-    weakness:
-    female_only: false
-    strengthens:
-
-- id: 179
-  name: Escutcheon II
-  item_type: shield
-  data:
-    hp:
-    mp:
-    wp:
-    add:
-    ev_m: '5'
-    ev_p: '5'
-    jump:
-    move:
-    proc:
-    w_ev:
-    flags:
-    magic:
-    speed:
-    start:
-    always: Defend
-    attack:
-    halves:
-    absorbs:
-    cancels:
-    element:
-    formula:
-    weakness:
-    female_only: false
-    strengthens:
-
-- id: 180
-  name: Air Knife
-  item_type: weapon
-  data:
-    hp:
-    mp:
-    wp: '9'
-    add:
-    ev_m:
-    ev_p:
-    jump:
-    move:
-    proc:
-    w_ev: '10'
-    flags: 2-swords
-    magic:
-    speed: '1'
-    start:
-    always:
-    attack:
-    halves:
-    absorbs:
-    cancels:
-    element: Wind
-    formula: "(PA+SP)/2*WP"
-    weakness:
-    female_only: false
-    strengthens:
-
-- id: 181
-  name: Tonberry Knife
-  item_type: weapon
-  data:
-    hp:
-    mp:
-    wp: '1'
-    add: Dead
-    ev_m:
-    ev_p:
-    jump:
-    move:
-    proc:
-    w_ev: '10'
-    flags: 2-swords
-    magic:
-    speed: '1'
-    start:
-    always:
-    attack:
-    halves:
-    absorbs:
-    cancels:
-    element:
-    formula: "(PA+SP)/2*WP"
-    weakness:
-    female_only: false
-    strengthens:
-
-- id: 184
-  name: Sasuke Knife
-  item_type: weapon
-  data:
-    hp:
-    mp:
-    wp: '10'
-    add:
-    ev_m:
-    ev_p:
-    jump:
-    move:
-    proc:
-    w_ev: '20'
-    flags: 2-swords 2-hands
-    magic:
-    speed: '1'
-    start:
-    always:
-    attack:
-    halves:
-    absorbs:
-    cancels:
-    element:
-    formula: "(PA+SP)/2*WP"
-    weakness:
-    female_only: false
-    strengthens:
-
-- id: 182
-  name: Ninja Edge
-  item_type: weapon
-  data:
-    hp:
-    mp:
-    wp: '8'
-    add:
-    ev_m:
-    ev_p:
-    jump:
-    move:
-    proc:
-    w_ev: '20'
-    flags: 2-swords 2-hands
-    magic:
-    speed:
-    start:
-    always:
-    attack:
-    halves:
-    absorbs:
-    cancels:
-    element:
-    formula: SP*WP
-    weakness:
-    female_only: false
-    strengthens:
-
-- id: 183
-  name: Spell Edge
-  item_type: weapon
-  data:
-    hp:
-    mp:
-    wp: '9'
-    add:
-    ev_m:
-    ev_p:
-    jump:
-    move:
-    proc:
-    w_ev: '20'
-    flags: 2-swords 2-hands
-    magic: '2'
-    speed:
-    start:
-    always:
-    attack:
-    halves:
-    absorbs:
-    cancels:
-    element:
-    formula: "(PA+SP)/2*WP"
-    weakness:
-    female_only: false
-    strengthens:
-
-- id: 185
-  name: Iga Knife
-  item_type: weapon
-  data:
-    hp:
-    mp:
-    wp: '9'
-    add:
-    ev_m:
-    ev_p:
-    jump:
-    move:
-    proc: Tornado
-    w_ev:
-    flags: 2-swords 2-hands
-    magic:
-    speed:
-    start:
-    always:
-    attack:
-    halves:
-    absorbs:
-    cancels:
-    element: Wind
-    formula: "(PA+SP)/2*WP"
-    weakness:
-    female_only: false
-    strengthens:
-
-- id: 186
-  name: Koga Knife
-  item_type: weapon
-  data:
-    hp:
-    mp:
-    wp: '9'
-    add:
-    ev_m:
-    ev_p:
-    jump:
-    move:
-    proc: Quake
-    w_ev:
-    flags: 2-swords 2-hands
-    magic:
-    speed:
-    start:
-    always:
-    attack:
-    halves:
-    absorbs:
-    cancels:
-    element: Earth
-    formula: "(PA+SP)/2*WP"
-    weakness:
-    female_only: false
-    strengthens:
-
-- id: 187
-  name: Ice Brand
-  item_type: weapon
-  data:
-    hp:
-    mp:
-    wp: '9'
-    add:
-    ev_m:
-    ev_p:
-    jump:
-    move:
-    proc: Ice Breath
-    w_ev: '25'
-    flags: 2-swords 2-hands
-    magic:
-    speed:
-    start:
-    always:
-    attack:
-    halves:
-    absorbs:
-    cancels:
-    element: Ice
-    formula: PA*WP
-    weakness:
-    female_only: false
-    strengthens:
-
-- id: 188
-  name: Slasher
-  item_type: weapon
-  data:
-    hp:
-    mp:
-    wp: '11'
-    add:
-    ev_m:
-    ev_p:
-    jump:
-    move:
-    proc: Demi
-    w_ev: '25'
-    flags: 2-swords 2-hands
-    magic:
-    speed:
-    start:
-    always:
-    attack:
-    halves:
-    absorbs:
-    cancels:
-    element:
-    formula: PA*WP
-    weakness:
-    female_only: false
-    strengthens:
-
-- id: 81
-  name: Mage Masher
-  item_type: weapon
-  data:
-    hp:
-    mp:
-    wp: '6'
-    add:
-    ev_m:
-    ev_p:
-    jump:
-    move:
-    proc:
-    w_ev: '10'
-    flags: 2-swords / leeches MP
-    magic:
-    speed: '1'
-    start:
-    always:
-    attack:
-    halves:
-    absorbs:
-    cancels:
-    element:
-    formula: PA*WP
-    weakness:
-    female_only: false
-    strengthens:
-
-- id: 192
-  name: Save the Queen
-  item_type: weapon
-  data:
-    hp:
-    mp:
-    wp: '13'
-    add:
-    ev_m:
-    ev_p:
-    jump:
-    move:
-    proc:
-    w_ev: '30'
-    flags: 2-hands only
-    magic:
-    speed:
-    start:
-    always:
-    attack:
-    halves:
-    absorbs:
-    cancels:
-    element: Holy
-    formula: "(PA * BR)/100 * WP"
-    weakness:
-    female_only: false
-    strengthens:
-
-- id: 193
-  name: Excalibur
-  item_type: weapon
-  data:
-    hp:
-    mp:
-    wp: '15'
-    add:
-    ev_m:
-    ev_p:
-    jump:
-    move:
-    proc:
-    w_ev: '30'
-    flags: 2-hands only
-    magic:
-    speed:
-    start:
-    always:
-    attack:
-    halves:
-    absorbs:
-    cancels:
-    element:
-    formula: "(PA * BR)/100 * WP"
-    weakness:
-    female_only: false
-    strengthens:
-
-- id: 194
-  name: Ragnarok
-  item_type: weapon
-  data:
-    hp:
-    mp:
-    wp: '14'
-    add: Death Sentence
-    ev_m:
-    ev_p:
-    jump:
-    move:
-    proc:
-    w_ev: '30'
-    flags: 2-hands only
-    magic:
-    speed:
-    start:
-    always:
-    attack:
-    halves:
-    absorbs:
-    cancels:
-    element:
-    formula: "(PA * BR)/100 * WP"
-    weakness:
-    female_only: false
-    strengthens:
-
-- id: 195
-  name: Chaos Blade
-  item_type: weapon
-  data:
-    hp:
-    mp:
-    wp: '1'
-    add:
-    ev_m:
-    ev_p:
-    jump:
-    move:
-    proc: Crystallize
-    w_ev: '30'
-    flags: 2-hands only
-    magic:
-    speed:
-    start:
-    always:
-    attack:
-    halves:
-    absorbs:
-    cancels:
-    element:
-    formula: "(PA * BR)/100 * WP"
-    weakness:
-    female_only: false
-    strengthens:
-
-- id: 100
-  name: Koutetsu Knife
-  item_type: weapon
-  data:
-    hp:
-    mp:
-    wp: '18'
-    add:
-    ev_m:
-    ev_p:
-    jump:
-    move:
-    proc: Double Blow
-    w_ev: '35'
-    flags: 2-swords 2-hands
-    magic:
-    speed:
-    start:
-    always:
-    attack:
-    halves:
-    absorbs:
-    cancels:
-    element: Dark
-    formula: "(PA * BR)/100 * WP"
-    weakness:
-    female_only: false
-    strengthens:
-
-- id: 196
-  name: Muramasa
-  item_type: weapon
-  data:
-    hp:
-    mp:
-    wp: '15'
-    add:
-    ev_m:
-    ev_p:
-    jump:
-    move:
-    proc: Double Blow
-    w_ev: '35'
-    flags: 2-swords 2-hands
-    magic:
-    speed:
-    start:
-    always:
-    attack:
-    halves:
-    absorbs:
-    cancels:
-    element:
-    formula: "(PA * BR)/100 * WP"
-    weakness:
-    female_only: false
-    strengthens:
-
-- id: 205
-  name: Mace of Zeus
-  item_type: weapon
-  data:
-    hp:
-    mp:
-    wp: '8'
-    add:
-    ev_m:
-    ev_p:
-    jump:
-    move:
-    proc:
-    w_ev: '20'
-    flags: 2-swords 2-hands
-    magic:
-    speed: '1'
-    start:
-    always:
-    attack:
-    halves:
-    absorbs: Lightning
-    cancels:
-    element:
-    formula: MA*WP
-    weakness:
-    female_only: false
-    strengthens: Lightning
-
-- id: 198
-  name: Masamune
-  item_type: weapon
-  data:
-    hp:
-    mp:
-    wp: '12'
-    add:
-    ev_m:
-    ev_p:
-    jump:
-    move:
-    proc: Double Blow
-    w_ev: '35'
-    flags: 2-swords 2-hands
-    magic:
-    speed:
-    start: Haste
-    always:
-    attack:
-    halves:
-    absorbs:
-    cancels:
-    element:
-    formula: "(PA * BR)/100 * WP"
-    weakness: Fire
-    female_only: false
-    strengthens:
-
-- id: 199
-  name: Chirijiraden
-  item_type: weapon
-  data:
-    hp:
-    mp:
-    wp: '14'
-    add:
-    ev_m:
-    ev_p:
-    jump:
-    move:
-    proc: Double Blow
-    w_ev: '35'
-    flags: 2-swords 2-hands
-    magic: '2'
-    speed:
-    start:
-    always:
-    attack:
-    halves:
-    absorbs:
-    cancels:
-    element:
-    formula: "(PA * BR)/100 * WP"
-    weakness:
-    female_only: false
-    strengthens:
-
-- id: 200
-  name: Golem Axe
-  item_type: weapon
-  data:
-    hp:
-    mp:
-    wp: '13'
-    add:
-    ev_m:
-    ev_p:
-    jump:
-    move:
-    proc: Decapitate
-    w_ev: '40'
-    flags: 2-hands only
-    magic:
-    speed:
-    start:
-    always:
-    attack: '3'
-    halves:
-    absorbs:
-    cancels:
-    element: Earth
-    formula: "(1..PA) * WP"
-    weakness:
-    female_only: false
-    strengthens:
-
-- id: 201
-  name: Tidal Axe
-  item_type: weapon
-  data:
-    hp:
-    mp:
-    wp: '20'
-    add:
-    ev_m:
-    ev_p:
-    jump:
-    move:
-    proc: Decapitate
-    w_ev: '40'
-    flags: 2-hands only
-    magic: '3'
-    speed:
-    start:
-    always:
-    attack:
-    halves:
-    absorbs:
-    cancels:
-    element: Water
-    formula: "(1..PA) * WP"
-    weakness:
-    female_only: false
-    strengthens:
-
-- id: 202
-  name: Water Rod
-  item_type: weapon
-  data:
-    hp:
-    mp:
-    wp: '5'
-    add:
-    ev_m:
-    ev_p:
-    jump:
-    move:
-    proc: Hydragon Pit
-    w_ev: '20'
-    flags: 2-swords 2-hands
-    magic:
-    speed:
-    start:
-    always:
-    attack:
-    halves:
-    absorbs:
-    cancels:
-    element: Water
-    formula: PA*WP
-    weakness:
-    female_only: false
-    strengthens: Water
-
-- id: 203
-  name: Dragon Rod
-  item_type: weapon
-  data:
-    hp:
-    mp:
-    wp: '12'
-    add:
-    ev_m:
-    ev_p:
-    jump:
-    move:
-    proc: Bahamut
-    w_ev: '20'
-    flags: 2-swords 2-hands
-    magic:
-    speed:
-    start:
-    always:
-    attack:
-    halves:
-    absorbs:
-    cancels:
-    element:
-    formula: PA*WP
-    weakness:
-    female_only: false
-    strengthens:
-
-- id: 204
-  name: Faith Rod
-  item_type: weapon
-  data:
-    hp:
-    mp:
-    wp: '5'
-    add: Faith
-    ev_m:
-    ev_p:
-    jump:
-    move:
-    proc:
-    w_ev: '20'
-    flags: 2-swords 2-hands
-    magic:
-    speed:
-    start:
-    always: Faith
-    attack:
-    halves:
-    absorbs:
-    cancels:
-    element:
-    formula: PA*WP
-    weakness:
-    female_only: false
-    strengthens:
-
-- id: 206
-  name: Sage Staff
-  item_type: weapon
-  data:
-    hp:
-    mp:
-    wp: '8'
-    add:
-    ev_m:
-    ev_p:
-    jump:
-    move:
-    proc:
-    w_ev: '20'
-    flags: 2-swords 2-hands
-    magic: '2'
-    speed:
-    start:
-    always:
-    attack:
-    halves:
-    absorbs:
-    cancels:
-    element:
-    formula: MA*WP
-    weakness:
-    female_only: false
-    strengthens:
-
-- id: 119
-  name: Flame Whip
-  item_type: weapon
-  data:
-    hp:
-    mp:
-    wp: '15'
-    add:
-    ev_m:
-    ev_p:
-    jump:
-    move:
-    proc: Explosion
-    w_ev: '10'
-    flags: 2-swords 2-hands
-    magic:
-    speed:
-    start:
-    always:
-    attack:
-    halves:
-    absorbs:
-    cancels:
-    element: Fire
-    formula: "(1..PA) * WP"
-    weakness:
-    female_only: false
-    strengthens:
-
-- id: 197
-  name: Kikuichimonji
-  item_type: weapon
-  data:
-    hp:
-    mp:
-    wp: '14'
-    add:
-    ev_m:
-    ev_p:
-    jump:
-    move:
-    proc: Double Blow
-    w_ev: '35'
-    flags: 2-swords 2-hands
-    magic:
-    speed: '1'
-    start:
-    always:
-    attack:
-    halves:
-    absorbs:
-    cancels:
-    element:
-    formula: "(PA * BR)/100 * WP"
-    weakness:
-    female_only: false
-    strengthens:
-
-- id: 210
-  name: Gastrafitis
-  item_type: weapon
-  data:
-    hp:
-    mp:
-    wp: '12'
-    add:
-    ev_m:
-    ev_p:
-    jump:
-    move:
-    proc: Doubleshot
-    w_ev: '5'
-    flags: 4 Range
-    magic:
-    speed:
-    start:
-    always:
-    attack:
-    halves:
-    absorbs:
-    cancels:
-    element:
-    formula: PA*WP
-    weakness:
-    female_only: false
-    strengthens:
-
-- id: 131
-  name: Lightning Bow
-  item_type: weapon
-  data:
-    hp:
-    mp:
-    wp: '10'
-    add:
-    ev_m:
-    ev_p:
-    jump:
-    move:
-    proc: Mjollnir
-    w_ev: '20'
-    flags: 6 Range / 2-hands only
-    magic:
-    speed:
-    start:
-    always:
-    attack:
-    halves:
-    absorbs:
-    cancels:
-    element: Lightning
-    formula: "(PA+SP)/2*WP"
-    weakness:
-    female_only: false
-    strengthens:
-
-- id: 212
-  name: Cupid Bow
-  item_type: weapon
-  data:
-    hp:
-    mp:
-    wp: '8'
-    add: Charm
-    ev_m:
-    ev_p:
-    jump:
-    move:
-    proc:
-    w_ev: '20'
-    flags: 6 Range / 2-hands only
-    magic:
-    speed:
-    start:
-    always:
-    attack:
-    halves:
-    absorbs:
-    cancels:
-    element:
-    formula: "(PA+SP)/2*WP"
-    weakness:
-    female_only: false
-    strengthens:
-
-- id: 213
-  name: Perseus Bow
-  item_type: weapon
-  data:
-    hp:
-    mp:
-    wp: '11'
-    add:
-    ev_m:
-    ev_p:
-    jump:
-    move:
-    proc: Critical Hit
-    w_ev: '20'
-    flags: 6 Range / 2-hands only
-    magic:
-    speed:
-    start:
-    always:
-    attack:
-    halves:
-    absorbs:
-    cancels:
-    element:
-    formula: "(PA+SP)/2*WP"
-    weakness:
-    female_only: false
-    strengthens:
-
-- id: 214
-  name: Fairy Harp
-  item_type: weapon
-  data:
-    hp:
-    mp:
-    wp: '8'
-    add: Charm
-    ev_m:
-    ev_p:
-    jump:
-    move:
-    proc:
-    w_ev: '10'
-    flags: Exactly 3 Range
-    magic:
-    speed:
-    start:
-    always:
-    attack:
-    halves:
-    absorbs:
-    cancels:
-    element:
-    formula: "(PA+MA)/2 * WP"
-    weakness:
-    female_only: false
-    strengthens:
-
-- id: 215
-  name: Madlemgen
-  item_type: weapon
-  data:
-    hp:
-    mp:
-    wp: '11'
-    add:
-    ev_m:
-    ev_p:
-    jump:
-    move:
-    proc: Dark Holy
-    w_ev: '15'
-    flags: Exactly 3 Range
-    magic:
-    speed:
-    start:
-    always:
-    attack:
-    halves:
-    absorbs:
     cancels:
     element:
-    formula: "(PA+MA)/2 * WP"
-    weakness:
-    female_only: false
-    strengthens:
-
-- id: 220
-  name: Ivory Rod
-  item_type: weapon
-  data:
-    hp:
-    mp:
-    wp: '5'
-    add:
-    ev_m:
-    ev_p:
-    jump:
-    move: '1'
-    proc:
-    w_ev: '30'
-    flags: 2 Range / 2-hands / Absorb MP
-    magic:
-    speed:
-    start:
-    always:
-    attack:
-    halves:
-    absorbs:
-    cancels:
-    element:
-    formula: PA*WP
-    weakness:
-    female_only: false
-    strengthens:
-
-- id: 221
-  name: Octagon Rod
-  item_type: weapon
-  data:
-    hp:
-    mp:
-    wp: '9'
-    add:
-    ev_m:
-    ev_p:
-    jump:
-    move: '1'
-    proc:
-    w_ev: '30'
-    flags: 2 Range / 2-hands
-    magic:
-    speed:
-    start: Innocent
-    always:
-    attack:
-    halves:
-    absorbs:
-    cancels:
-    element:
-    formula: MA*WP
-    weakness:
-    female_only: false
-    strengthens:
-
-- id: 218
-  name: Dragon Whisker
-  item_type: weapon
-  data:
-    hp:
-    mp:
-    wp: '10'
-    add:
-    ev_m:
-    ev_p:
-    jump: '2'
-    move:
-    proc: Fire Breath
-    w_ev: '20'
-    flags: 2 Range / 2-hands / 2-swords
-    magic:
-    speed:
-    start:
-    always:
-    attack:
-    halves:
-    absorbs:
-    cancels:
-    element:
-    formula: PA*WP
-    weakness:
-    female_only: false
-    strengthens:
-
-- id: 219
-  name: Javelin II
-  item_type: weapon
-  data:
-    hp:
-    mp:
-    wp: '11'
-    add:
-    ev_m:
-    ev_p:
-    jump: '2'
-    move:
-    proc:
-    w_ev: '20'
-    flags: 2 Range / 2-hands
-    magic:
-    speed:
-    start:
-    always:
-    attack:
-    halves:
-    absorbs:
-    cancels:
-    element:
-    formula: PA*WP
-    weakness:
-    female_only: false
-    strengthens:
-
-- id: 208
-  name: Stone Gun
-  item_type: weapon
-  data:
-    hp:
-    mp:
-    wp: '14'
-    add:
-    ev_m:
-    ev_p:
-    jump:
-    move:
-    proc:
-    w_ev: '5'
-    flags: 5 Range / No Evade
-    magic:
-    speed:
-    start: Slow
-    always:
-    attack:
-    halves:
-    absorbs:
-    cancels:
-    element:
-    formula: WP*WP
-    weakness:
-    female_only: false
-    strengthens:
-
-- id: 217
-  name: Holy Lance
-  item_type: weapon
-  data:
-    hp:
-    mp:
-    wp: '8'
-    add:
-    ev_m:
-    ev_p:
-    jump: '2'
-    move:
-    proc:
-    w_ev: '20'
-    flags: 2 Range / 2-hands
-    magic:
-    speed:
-    start:
-    always:
-    attack:
-    halves:
-    absorbs:
-    cancels:
-    element: Holy
-    formula: PA*WP
-    weakness:
-    female_only: false
-    strengthens:
-
-- id: 209
-  name: Engineer Rifle
-  item_type: weapon
-  data:
-    hp:
-    mp:
-    wp: '8'
-    add:
-    ev_m:
-    ev_p:
-    jump:
-    move:
-    proc:
-    w_ev: '5'
-    flags: 8 Range / No Evade
-    magic:
-    speed:
-    start:
-    always:
-    attack:
-    halves:
-    absorbs:
-    cancels:
-    element:
-    formula: WP*WP
-    weakness:
-    female_only: false
-    strengthens:
-
-- id: 222
-  name: Whale Whisker
-  item_type: weapon
-  data:
-    hp:
-    mp:
-    wp: '14'
-    add:
-    ev_m:
-    ev_p:
-    jump:
-    move: '1'
-    proc:
-    w_ev: '30'
-    flags: 2 Range
-    magic:
-    speed:
-    start:
-    always:
-    attack:
-    halves:
-    absorbs:
-    cancels:
-    element:
-    formula: MA*WP
-    weakness:
-    female_only: false
-    strengthens:
-
-- id: 223
-  name: G Bag
-  item_type: weapon
-  data:
-    hp:
-    mp:
-    wp: '10'
-    add:
-    ev_m:
-    ev_p:
-    jump:
-    move:
-    proc:
-    w_ev: '5'
-    flags:
-    magic: '2'
-    speed:
-    start:
-    always:
-    attack: '1'
-    halves:
-    absorbs:
-    cancels:
-    element:
-    formula: "(1..PA) * WP"
-    weakness:
-    female_only: true
-    strengthens:
-
-- id: 211
-  name: Ultimus Bow
-  item_type: weapon
-  data:
-    hp:
-    mp:
-    wp: '9'
-    add:
-    ev_m:
-    ev_p:
-    jump:
-    move:
-    proc:
-    w_ev: '20'
-    flags: 6 Range / 2-hands only
-    magic:
-    speed: '1'
-    start:
-    always:
-    attack:
-    halves:
-    absorbs:
-    cancels:
-    element:
-    formula: "(PA+SP)/2*WP"
-    weakness:
-    female_only: false
-    strengthens:
-
-- id: 4
-  name: Rubber Shoes
-  item_type: accessory
-  data:
-    hp:
-    mp:
-    wp:
-    add:
-    ev_m:
-    ev_p:
-    jump:
-    move:
-    proc:
-    w_ev:
-    flags:
-    magic:
-    speed:
-    start:
-    always:
-    attack:
-    halves:
-    absorbs:
-    cancels: Don't Move / Lightning
-    element:
-    formula:
-    weakness:
-    female_only: false
-    strengthens:
-
-- id: 33
-  name: Leather Outfit
-  item_type: armor
-  data:
-    hp: '70'
-    mp: '0'
-    wp:
-    add:
-    ev_m:
-    ev_p:
-    jump:
-    move:
-    proc:
-    w_ev:
-    flags:
-    magic:
-    speed:
-    start:
-    always:
-    attack:
-    halves: Fire/Dark/Water
-    absorbs:
-    cancels:
-    element:
-    formula:
-    weakness:
-    female_only: false
-    strengthens:
-
-- id: 164
-  name: Secret Clothes
-  item_type: armor
-  data:
-    hp: '50'
-    mp: '0'
-    wp:
-    add:
-    ev_m:
-    ev_p:
-    jump:
-    move:
-    proc:
-    w_ev:
-    flags:
-    magic:
-    speed: '1'
-    start:
-    always:
-    attack:
-    halves:
-    absorbs:
-    cancels:
-    element:
     formula:
     weakness:
+    memgen_id: D0
     female_only: false
-    strengthens:
-
-- id: 53
-  name: Gold Helmet
-  item_type: helmet
-  data:
-    hp: '50'
-    mp: '10'
-    wp:
-    add:
-    ev_m:
-    ev_p:
-    jump:
-    move:
-    proc:
-    w_ev:
-    flags:
-    magic:
-    speed:
-    start:
-    always:
-    attack:
-    halves:
-    absorbs:
-    cancels:
-    element:
-    formula:
-    weakness:
-    female_only: false
-    strengthens:
-
-- id: 169
-  name: Crystal Helmet
-  item_type: helmet
-  data:
-    hp: '110'
-    mp: '0'
-    wp:
-    add:
-    ev_m:
-    ev_p:
-    jump:
-    move:
-    proc:
-    w_ev:
-    flags:
-    magic:
-    speed:
-    start:
-    always:
-    attack:
-    halves:
-    absorbs: Ice
-    cancels:
-    element:
-    formula:
-    weakness:
-    female_only: false
-    strengthens: Ice
-
-- id: 67
-  name: Golden Hairpin
-  item_type: helmet
-  data:
-    hp: '80'
-    mp: '50'
-    wp:
-    add:
-    ev_m:
-    ev_p:
-    jump:
-    move:
-    proc:
-    w_ev:
-    flags:
-    magic:
-    speed:
-    start:
-    always:
-    attack:
-    halves:
-    absorbs:
-    cancels: Silence
-    element:
-    formula:
-    weakness:
-    female_only: false
-    strengthens:
-
-- id: 173
-  name: Thief Hat
-  item_type: helmet
-  data:
-    hp: '50'
-    mp: '0'
-    wp:
-    add:
-    ev_m:
-    ev_p:
-    jump:
-    move:
-    proc:
-    w_ev:
-    flags:
-    magic:
-    speed: '1'
-    start:
-    always:
-    attack:
-    halves:
-    absorbs:
-    cancels:
-    element:
-    formula:
-    weakness:
-    female_only: false
-    strengthens:
-
-- id: 88
-  name: Short Edge
-  item_type: weapon
-  data:
-    hp:
-    mp:
-    wp: '10'
-    add:
-    ev_m:
-    ev_p:
-    jump:
-    move:
-    proc:
-    w_ev: '30'
-    flags: 2-swords 2-hands
-    magic:
-    speed:
-    start:
-    always:
-    attack:
-    halves:
-    absorbs:
-    cancels:
-    element:
-    formula: "(PA+SP)/2*WP"
-    weakness:
-    female_only: false
-    strengthens:
-
-- id: 190
-  name: Materia Blade
-  item_type: weapon
-  data:
-    hp:
-    mp:
-    wp: '14'
-    add:
-    ev_m:
-    ev_p:
-    jump:
-    move:
-    proc:
-    w_ev: '30'
-    flags: 2-hands only
-    magic: '3'
-    speed:
-    start:
-    always:
-    attack:
-    halves:
-    absorbs:
-    cancels:
-    element:
-    formula: "(PA * BR)/100 * WP"
-    weakness:
-    female_only: false
-    strengthens:
-
-- id: 191
-  name: Defender
-  item_type: weapon
-  data:
-    hp:
-    mp:
-    wp: '13'
-    add:
-    ev_m:
-    ev_p:
-    jump:
-    move:
-    proc:
-    w_ev: '30'
-    flags: 2-hands only
-    magic:
-    speed:
-    start:
-    always: Defending
-    attack:
-    halves:
-    absorbs:
-    cancels:
-    element:
-    formula: "(PA * BR)/100 * WP"
-    weakness:
-    female_only: false
-    strengthens:
-
-- id: 101
-  name: Bizen Boat
-  item_type: weapon
-  data:
-    hp:
-    mp:
-    wp: '15'
-    add:
-    ev_m:
-    ev_p:
-    jump:
-    move:
-    proc: Silence
-    w_ev: '35'
-    flags: 2-swords 2-hands
-    magic:
-    speed:
-    start:
-    always:
-    attack:
-    halves:
-    absorbs:
-    cancels:
-    element:
-    formula: "(PA * BR)/100 * WP"
-    weakness:
-    female_only: false
-    strengthens:
-
-- id: 138
-  name: Papyrus Plate
-  item_type: weapon
-  data:
-    hp:
-    mp:
-    wp: '11'
-    add:
-    ev_m:
-    ev_p:
-    jump:
-    move:
-    proc: Melt
-    w_ev: '15'
-    flags: Exactly 3 Range
-    magic:
-    speed:
-    start:
-    always:
-    attack:
-    halves:
-    absorbs:
-    cancels:
-    element:
-    formula: "(PA+MA)/2 * WP"
-    weakness:
-    female_only: false
-    strengthens:
-
-- id: 225
-  name: FS Bag
-  item_type: weapon
-  data:
-    hp:
-    mp:
-    wp: '13'
-    add:
-    ev_m:
-    ev_p:
-    jump:
-    move:
-    proc:
-    w_ev: '5'
-    flags:
-    magic:
-    speed:
-    start:
-    always: Regen
-    attack:
-    halves:
-    absorbs:
-    cancels:
-    element:
-    formula: "(1..PA) * WP"
-    weakness:
-    female_only: true
-    strengthens:
-
-- id: 151
-  name: Cashmere
-  item_type: weapon
-  data:
-    hp:
-    mp:
-    wp: '5'
-    add:
-    ev_m:
-    ev_p:
-    jump:
-    move:
-    proc: Cancel Charging
-    w_ev: '50'
-    flags: 2 Range / 2-hands
-    magic:
-    speed:
-    start:
-    always: Don't Move
-    attack:
-    halves:
-    absorbs:
-    cancels:
-    element:
-    formula: "(PA+MA)/2 * WP"
-    weakness:
-    female_only: false
-    strengthens:
-
-- id: 226
-  name: Ryozan Silk
-  item_type: weapon
-  data:
-    hp:
-    mp:
-    wp: '10'
-    add:
-    ev_m:
-    ev_p:
-    jump:
-    move:
-    proc: Cancel Charging
-    w_ev: '50'
-    flags: 2 Range / 2-hands
-    magic:
-    speed:
-    start:
-    always:
-    attack:
-    halves:
-    absorbs:
-    cancels:
-    element:
-    formula: "(PA+MA)/2 * WP"
-    weakness:
-    female_only: false
-    strengthens:
-
-- id: 224
-  name: H Bag
-  item_type: weapon
-  data:
-    hp:
-    mp:
-    wp: '12'
-    add:
-    ev_m:
-    ev_p:
-    jump:
-    move:
-    proc:
-    w_ev: '5'
-    flags:
-    magic:
-    speed: '1'
-    start:
-    always:
-    attack:
-    halves:
-    absorbs:
-    cancels:
-    element:
-    formula: "(1..PA) * WP"
-    weakness:
-    female_only: true
     strengthens:
-
+    proc_formula:
 - id: 2
   name: Spike Shoes
   item_type: accessory
@@ -6260,20 +55,21 @@
     element:
     formula:
     weakness:
+    memgen_id: D1
     female_only: false
     strengthens:
-
-- id: 32
-  name: Clothes
-  item_type: armor
+    proc_formula:
+- id: 3
+  name: Germinas Boots
+  item_type: accessory
   data:
-    hp: '70'
-    mp: '0'
+    hp:
+    mp:
     wp:
     add:
     ev_m:
     ev_p:
-    jump: '3'
+    jump: '1'
     move: '1'
     proc:
     w_ev:
@@ -6289,10 +85,3971 @@
     element:
     formula:
     weakness:
+    memgen_id: D2
     female_only: false
     strengthens:
-
-- id: 189
+    proc_formula:
+- id: 4
+  name: Rubber Shoes
+  item_type: accessory
+  data:
+    hp:
+    mp:
+    wp:
+    add:
+    ev_m:
+    ev_p:
+    jump:
+    move:
+    proc:
+    w_ev:
+    flags:
+    magic:
+    speed:
+    start:
+    always:
+    attack:
+    halves:
+    absorbs:
+    cancels: Don't Move / Lightning
+    element:
+    formula:
+    weakness:
+    memgen_id: D3
+    female_only: false
+    strengthens:
+    proc_formula:
+- id: 5
+  name: Feather Boots
+  item_type: accessory
+  data:
+    hp:
+    mp:
+    wp:
+    add:
+    ev_m:
+    ev_p:
+    jump:
+    move: '1'
+    proc:
+    w_ev:
+    flags:
+    magic:
+    speed:
+    start:
+    always: Float
+    attack:
+    halves: Wind
+    absorbs:
+    cancels:
+    element:
+    formula:
+    weakness:
+    memgen_id: D4
+    female_only: false
+    strengthens:
+    proc_formula:
+- id: 6
+  name: Sprint Shoes
+  item_type: accessory
+  data:
+    hp:
+    mp:
+    wp:
+    add:
+    ev_m:
+    ev_p:
+    jump:
+    move: '1'
+    proc:
+    w_ev:
+    flags:
+    magic:
+    speed: '1'
+    start:
+    always:
+    attack:
+    halves:
+    absorbs:
+    cancels:
+    element:
+    formula:
+    weakness:
+    memgen_id: D5
+    female_only: false
+    strengthens:
+    proc_formula:
+- id: 7
+  name: Power Wrist
+  item_type: accessory
+  data:
+    hp:
+    mp:
+    wp:
+    add:
+    ev_m:
+    ev_p:
+    jump:
+    move:
+    proc:
+    w_ev:
+    flags:
+    magic:
+    speed:
+    start: Shell
+    always:
+    attack: '1'
+    halves:
+    absorbs:
+    cancels:
+    element:
+    formula:
+    weakness:
+    memgen_id: D7
+    female_only: false
+    strengthens:
+    proc_formula:
+- id: 8
+  name: Magic Gauntlet
+  item_type: accessory
+  data:
+    hp:
+    mp:
+    wp:
+    add:
+    ev_m:
+    ev_p:
+    jump:
+    move:
+    proc:
+    w_ev:
+    flags:
+    magic: '2'
+    speed:
+    start:
+    always:
+    attack:
+    halves:
+    absorbs:
+    cancels:
+    element:
+    formula:
+    weakness:
+    memgen_id: D9
+    female_only: false
+    strengthens:
+    proc_formula:
+- id: 9
+  name: Heroic Gloves
+  item_type: accessory
+  data:
+    hp:
+    mp:
+    wp:
+    add:
+    ev_m:
+    ev_p:
+    jump:
+    move:
+    proc:
+    w_ev:
+    flags:
+    magic:
+    speed:
+    start:
+    always:
+    attack: '1'
+    halves:
+    absorbs:
+    cancels: Dead / Death Sentence / Crystal / Treasure
+    element:
+    formula:
+    weakness:
+    memgen_id: DA
+    female_only: false
+    strengthens:
+    proc_formula:
+- id: 10
+  name: Reflect Ring
+  item_type: accessory
+  data:
+    hp:
+    mp:
+    wp:
+    add:
+    ev_m:
+    ev_p:
+    jump:
+    move:
+    proc:
+    w_ev:
+    flags:
+    magic:
+    speed:
+    start:
+    always: Reflect
+    attack:
+    halves:
+    absorbs:
+    cancels:
+    element:
+    formula:
+    weakness:
+    memgen_id: DB
+    female_only: false
+    strengthens:
+    proc_formula:
+- id: 11
+  name: Defense Ring
+  item_type: accessory
+  data:
+    hp:
+    mp:
+    wp:
+    add:
+    ev_m:
+    ev_p:
+    jump:
+    move:
+    proc:
+    w_ev:
+    flags:
+    magic:
+    speed:
+    start:
+    always:
+    attack:
+    halves:
+    absorbs:
+    cancels: Sleep / Death Sentence
+    element:
+    formula:
+    weakness:
+    memgen_id: DC
+    female_only: false
+    strengthens:
+    proc_formula:
+- id: 12
+  name: Magic Ring
+  item_type: accessory
+  data:
+    hp:
+    mp:
+    wp:
+    add:
+    ev_m:
+    ev_p:
+    jump:
+    move:
+    proc:
+    w_ev:
+    flags:
+    magic: '1'
+    speed:
+    start:
+    always:
+    attack:
+    halves:
+    absorbs: Wind / Earth / Water
+    cancels: Silence
+    element:
+    formula:
+    weakness:
+    memgen_id: DD
+    female_only: false
+    strengthens:
+    proc_formula:
+- id: 13
+  name: Diamond Armlet
+  item_type: accessory
+  data:
+    hp:
+    mp:
+    wp:
+    add:
+    ev_m:
+    ev_p:
+    jump:
+    move:
+    proc:
+    w_ev:
+    flags:
+    magic: '1'
+    speed:
+    start:
+    always:
+    attack: '1'
+    halves:
+    absorbs:
+    cancels: Slow
+    element:
+    formula:
+    weakness:
+    memgen_id: E0
+    female_only: false
+    strengthens:
+    proc_formula:
+- id: 14
+  name: Jade Armlet
+  item_type: accessory
+  data:
+    hp:
+    mp:
+    wp:
+    add:
+    ev_m:
+    ev_p:
+    jump:
+    move:
+    proc:
+    w_ev:
+    flags:
+    magic:
+    speed:
+    start:
+    always:
+    attack:
+    halves:
+    absorbs:
+    cancels: Petrify / Stop
+    element:
+    formula:
+    weakness:
+    memgen_id: E1
+    female_only: false
+    strengthens:
+    proc_formula:
+- id: 15
+  name: 108 Gems
+  item_type: accessory
+  data:
+    hp:
+    mp:
+    wp:
+    add:
+    ev_m:
+    ev_p:
+    jump:
+    move:
+    proc:
+    w_ev:
+    flags:
+    magic:
+    speed:
+    start:
+    always:
+    attack:
+    halves:
+    absorbs:
+    cancels: Undead / Blood Suck / Poison
+    element:
+    formula:
+    weakness:
+    memgen_id: E2
+    female_only: false
+    strengthens: Lit/Ice/Wind/Earth/Holy
+    proc_formula:
+- id: 16
+  name: N-Kai Armlet
+  item_type: accessory
+  data:
+    hp:
+    mp:
+    wp:
+    add:
+    ev_m:
+    ev_p:
+    jump:
+    move:
+    proc:
+    w_ev:
+    flags:
+    magic:
+    speed:
+    start:
+    always:
+    attack:
+    halves: Dark
+    absorbs:
+    cancels: Confusion / Charm
+    element:
+    formula:
+    weakness:
+    memgen_id: E3
+    female_only: false
+    strengthens:
+    proc_formula:
+- id: 17
+  name: Defense Armlet
+  item_type: accessory
+  data:
+    hp:
+    mp:
+    wp:
+    add:
+    ev_m:
+    ev_p:
+    jump:
+    move:
+    proc:
+    w_ev:
+    flags:
+    magic:
+    speed:
+    start:
+    always:
+    attack:
+    halves:
+    absorbs:
+    cancels: Don't Move / Don't Act
+    element:
+    formula:
+    weakness:
+    memgen_id: E4
+    female_only: false
+    strengthens:
+    proc_formula:
+- id: 18
+  name: Red Shoes
+  item_type: accessory
+  data:
+    hp:
+    mp:
+    wp:
+    add:
+    ev_m:
+    ev_p:
+    jump:
+    move: '1'
+    proc:
+    w_ev:
+    flags:
+    magic:
+    speed:
+    start:
+    always: Berserk
+    attack: '1'
+    halves:
+    absorbs:
+    cancels:
+    element:
+    formula:
+    weakness:
+    memgen_id: D6
+    female_only: false
+    strengthens:
+    proc_formula:
+- id: 19
+  name: Genji Gauntlet
+  item_type: accessory
+  data:
+    hp:
+    mp:
+    wp:
+    add:
+    ev_m:
+    ev_p:
+    jump:
+    move:
+    proc:
+    w_ev:
+    flags:
+    magic:
+    speed:
+    start:
+    always:
+    attack:
+    halves:
+    absorbs:
+    cancels: Chicken / Frog / Petrify
+    element:
+    formula:
+    weakness:
+    memgen_id: D8
+    female_only: false
+    strengthens:
+    proc_formula:
+- id: 20
+  name: Cursed Ring
+  item_type: accessory
+  data:
+    hp:
+    mp:
+    wp:
+    add:
+    ev_m:
+    ev_p:
+    jump:
+    move:
+    proc:
+    w_ev:
+    flags:
+    magic: '1'
+    speed: '1'
+    start:
+    always: Undead
+    attack: '1'
+    halves:
+    absorbs:
+    cancels: Crystal / Treasure / Invitation
+    element:
+    formula:
+    weakness:
+    memgen_id: DE
+    female_only: false
+    strengthens:
+    proc_formula:
+- id: 21
+  name: Angel Ring
+  item_type: accessory
+  data:
+    hp:
+    mp:
+    wp:
+    add:
+    ev_m:
+    ev_p:
+    jump:
+    move:
+    proc:
+    w_ev:
+    flags:
+    magic: "-1"
+    speed:
+    start: Reraise
+    always:
+    attack: "-1"
+    halves:
+    absorbs:
+    cancels:
+    element:
+    formula:
+    weakness:
+    memgen_id: DF
+    female_only: false
+    strengthens:
+    proc_formula:
+- id: 22
+  name: Small Mantle
+  item_type: accessory
+  data:
+    hp:
+    mp:
+    wp:
+    add:
+    ev_m: '15'
+    ev_p: '0'
+    jump:
+    move:
+    proc:
+    w_ev:
+    flags:
+    magic:
+    speed:
+    start:
+    always:
+    attack:
+    halves:
+    absorbs:
+    cancels:
+    element:
+    formula:
+    weakness:
+    memgen_id: E5
+    female_only: false
+    strengthens: Fire
+    proc_formula:
+- id: 23
+  name: Leather Mantle
+  item_type: accessory
+  data:
+    hp:
+    mp:
+    wp:
+    add:
+    ev_m: '20'
+    ev_p: '5'
+    jump:
+    move:
+    proc:
+    w_ev:
+    flags:
+    magic:
+    speed:
+    start:
+    always:
+    attack: '1'
+    halves:
+    absorbs:
+    cancels:
+    element:
+    formula:
+    weakness:
+    memgen_id: E6
+    female_only: false
+    strengthens:
+    proc_formula:
+- id: 24
+  name: Wizard Mantle
+  item_type: accessory
+  data:
+    hp:
+    mp:
+    wp:
+    add:
+    ev_m: '20'
+    ev_p: '0'
+    jump:
+    move:
+    proc:
+    w_ev:
+    flags:
+    magic: '1'
+    speed:
+    start:
+    always:
+    attack:
+    halves:
+    absorbs:
+    cancels:
+    element:
+    formula:
+    weakness:
+    memgen_id: E7
+    female_only: false
+    strengthens:
+    proc_formula:
+- id: 25
+  name: Elf Mantle
+  item_type: accessory
+  data:
+    hp:
+    mp:
+    wp:
+    add:
+    ev_m: '15'
+    ev_p: '0'
+    jump:
+    move:
+    proc:
+    w_ev:
+    flags:
+    magic:
+    speed: '1'
+    start:
+    always:
+    attack:
+    halves:
+    absorbs:
+    cancels:
+    element:
+    formula:
+    weakness:
+    memgen_id: E8
+    female_only: false
+    strengthens:
+    proc_formula:
+- id: 26
+  name: Dracula Mantle
+  item_type: accessory
+  data:
+    hp:
+    mp:
+    wp:
+    add:
+    ev_m: '10'
+    ev_p: '0'
+    jump:
+    move:
+    proc:
+    w_ev:
+    flags:
+    magic:
+    speed:
+    start:
+    always:
+    attack:
+    halves:
+    absorbs: Dark
+    cancels:
+    element:
+    formula:
+    weakness:
+    memgen_id: E9
+    female_only: false
+    strengthens:
+    proc_formula:
+- id: 27
+  name: Feather Mantle
+  item_type: accessory
+  data:
+    hp:
+    mp:
+    wp:
+    add:
+    ev_m: '15'
+    ev_p: '10'
+    jump:
+    move:
+    proc:
+    w_ev:
+    flags:
+    magic:
+    speed:
+    start:
+    always:
+    attack:
+    halves:
+    absorbs:
+    cancels:
+    element:
+    formula:
+    weakness:
+    memgen_id: EA
+    female_only: false
+    strengthens:
+    proc_formula:
+- id: 28
+  name: Vanish Mantle
+  item_type: accessory
+  data:
+    hp:
+    mp:
+    wp:
+    add:
+    ev_m: '25'
+    ev_p: '0'
+    jump:
+    move:
+    proc:
+    w_ev:
+    flags:
+    magic:
+    speed:
+    start: Transparent
+    always:
+    attack:
+    halves:
+    absorbs:
+    cancels:
+    element:
+    formula:
+    weakness:
+    memgen_id: EB
+    female_only: false
+    strengthens:
+    proc_formula:
+- id: 29
+  name: Leather Armor
+  item_type: armor
+  data:
+    hp: '140'
+    mp: '0'
+    wp:
+    add:
+    ev_m:
+    ev_p:
+    jump:
+    move: '1'
+    proc:
+    w_ev:
+    flags:
+    magic:
+    speed:
+    start:
+    always:
+    attack:
+    halves:
+    absorbs:
+    cancels:
+    element:
+    formula:
+    weakness:
+    memgen_id: AC
+    female_only: false
+    strengthens:
+    proc_formula:
+- id: 30
+  name: Linen Cuirass
+  item_type: armor
+  data:
+    hp: '120'
+    mp: '40'
+    wp:
+    add:
+    ev_m:
+    ev_p:
+    jump:
+    move:
+    proc:
+    w_ev:
+    flags:
+    magic:
+    speed:
+    start:
+    always:
+    attack: "-2"
+    halves:
+    absorbs:
+    cancels:
+    element:
+    formula:
+    weakness:
+    memgen_id: AD
+    female_only: false
+    strengthens:
+    proc_formula:
+- id: 31
+  name: Bronze Armor
+  item_type: armor
+  data:
+    hp: '120'
+    mp: '0'
+    wp:
+    add:
+    ev_m:
+    ev_p:
+    jump:
+    move:
+    proc:
+    w_ev:
+    flags:
+    magic:
+    speed:
+    start:
+    always:
+    attack:
+    halves:
+    absorbs:
+    cancels: Petrify Stop
+    element:
+    formula:
+    weakness:
+    memgen_id: AE
+    female_only: false
+    strengthens:
+    proc_formula:
+- id: 32
+  name: Chain Mail
+  item_type: armor
+  data:
+    hp: '70'
+    mp: '0'
+    wp:
+    add:
+    ev_m:
+    ev_p:
+    jump:
+    move:
+    proc:
+    w_ev:
+    flags:
+    magic:
+    speed:
+    start:
+    always: Regen
+    attack:
+    halves:
+    absorbs:
+    cancels:
+    element:
+    formula:
+    weakness:
+    memgen_id: AF
+    female_only: false
+    strengthens:
+    proc_formula:
+- id: 33
+  name: Mythril Armor
+  item_type: armor
+  data:
+    hp: '65'
+    mp: '0'
+    wp:
+    add:
+    ev_m:
+    ev_p:
+    jump:
+    move:
+    proc:
+    w_ev:
+    flags:
+    magic: '2'
+    speed:
+    start:
+    always:
+    attack:
+    halves:
+    absorbs:
+    cancels:
+    element:
+    formula:
+    weakness:
+    memgen_id: B0
+    female_only: false
+    strengthens:
+    proc_formula:
+- id: 34
+  name: Plate Mail
+  item_type: armor
+  data:
+    hp: '195'
+    mp: '0'
+    wp:
+    add:
+    ev_m:
+    ev_p:
+    jump:
+    move:
+    proc:
+    w_ev:
+    flags:
+    magic:
+    speed: "-1"
+    start:
+    always:
+    attack:
+    halves:
+    absorbs:
+    cancels:
+    element:
+    formula:
+    weakness:
+    memgen_id: B1
+    female_only: false
+    strengthens:
+    proc_formula:
+- id: 35
+  name: Gold Armor
+  item_type: armor
+  data:
+    hp: '100'
+    mp: '10'
+    wp:
+    add:
+    ev_m:
+    ev_p:
+    jump:
+    move:
+    proc:
+    w_ev:
+    flags:
+    magic:
+    speed:
+    start:
+    always:
+    attack:
+    halves:
+    absorbs:
+    cancels:
+    element:
+    formula:
+    weakness:
+    memgen_id: B2
+    female_only: false
+    strengthens:
+    proc_formula:
+- id: 36
+  name: Diamond Armor
+  item_type: armor
+  data:
+    hp: '135'
+    mp: '0'
+    wp:
+    add:
+    ev_m:
+    ev_p:
+    jump:
+    move:
+    proc:
+    w_ev:
+    flags:
+    magic: '1'
+    speed:
+    start:
+    always:
+    attack: '1'
+    halves:
+    absorbs:
+    cancels:
+    element:
+    formula:
+    weakness:
+    memgen_id: B3
+    female_only: false
+    strengthens:
+    proc_formula:
+- id: 37
+  name: Platina Armor
+  item_type: armor
+  data:
+    hp: '135'
+    mp: '0'
+    wp:
+    add:
+    ev_m:
+    ev_p:
+    jump:
+    move:
+    proc:
+    w_ev:
+    flags:
+    magic:
+    speed:
+    start: Haste
+    always:
+    attack:
+    halves:
+    absorbs:
+    cancels:
+    element:
+    formula:
+    weakness: Fire Lightning
+    memgen_id: B4
+    female_only: false
+    strengthens:
+    proc_formula:
+- id: 38
+  name: Carabini Mail
+  item_type: armor
+  data:
+    hp: '70'
+    mp: '0'
+    wp:
+    add:
+    ev_m:
+    ev_p:
+    jump:
+    move:
+    proc:
+    w_ev:
+    flags:
+    magic:
+    speed: '1'
+    start:
+    always:
+    attack:
+    halves:
+    absorbs:
+    cancels:
+    element:
+    formula:
+    weakness:
+    memgen_id: B5
+    female_only: false
+    strengthens:
+    proc_formula:
+- id: 39
+  name: Crystal Mail
+  item_type: armor
+  data:
+    hp: '120'
+    mp: '0'
+    wp:
+    add:
+    ev_m:
+    ev_p:
+    jump:
+    move:
+    proc:
+    w_ev:
+    flags:
+    magic:
+    speed:
+    start:
+    always:
+    attack:
+    halves:
+    absorbs: Ice
+    cancels:
+    element:
+    formula:
+    weakness:
+    memgen_id: B6
+    female_only: false
+    strengthens: Ice
+    proc_formula:
+- id: 40
+  name: Genji Armor
+  item_type: armor
+  data:
+    hp: '120'
+    mp: '0'
+    wp:
+    add:
+    ev_m:
+    ev_p:
+    jump:
+    move:
+    proc:
+    w_ev:
+    flags:
+    magic:
+    speed:
+    start:
+    always:
+    attack:
+    halves:
+    absorbs:
+    cancels: Chicken Frog
+    element:
+    formula:
+    weakness:
+    memgen_id: B7
+    female_only: false
+    strengthens:
+    proc_formula:
+- id: 41
+  name: Reflect Mail
+  item_type: armor
+  data:
+    hp: '120'
+    mp: '0'
+    wp:
+    add:
+    ev_m:
+    ev_p:
+    jump:
+    move:
+    proc:
+    w_ev:
+    flags:
+    magic:
+    speed:
+    start:
+    always: Reflect
+    attack:
+    halves:
+    absorbs:
+    cancels:
+    element:
+    formula:
+    weakness:
+    memgen_id: B8
+    female_only: false
+    strengthens:
+    proc_formula:
+- id: 42
+  name: Maximillian
+  item_type: armor
+  data:
+    hp: '155'
+    mp: '0'
+    wp:
+    add:
+    ev_m:
+    ev_p:
+    jump:
+    move:
+    proc:
+    w_ev:
+    flags:
+    magic:
+    speed:
+    start:
+    always:
+    attack:
+    halves:
+    absorbs:
+    cancels:
+    element:
+    formula:
+    weakness:
+    memgen_id: B9
+    female_only: false
+    strengthens:
+    proc_formula:
+- id: 43
+  name: Clothes
+  item_type: armor
+  data:
+    hp: '70'
+    mp: '0'
+    wp:
+    add:
+    ev_m:
+    ev_p:
+    jump: '2'
+    move: '1'
+    proc:
+    w_ev:
+    flags:
+    magic:
+    speed:
+    start:
+    always:
+    attack:
+    halves:
+    absorbs:
+    cancels:
+    element:
+    formula:
+    weakness:
+    memgen_id: BA
+    female_only: false
+    strengthens:
+    proc_formula:
+- id: 44
+  name: Leather Outfit
+  item_type: armor
+  data:
+    hp: '70'
+    mp: '0'
+    wp:
+    add:
+    ev_m:
+    ev_p:
+    jump:
+    move:
+    proc:
+    w_ev:
+    flags:
+    magic:
+    speed:
+    start:
+    always:
+    attack:
+    halves: Water
+    absorbs:
+    cancels:
+    element:
+    formula:
+    weakness:
+    memgen_id: BB
+    female_only: false
+    strengthens:
+    proc_formula:
+- id: 45
+  name: Leather Vest
+  item_type: armor
+  data:
+    hp: '85'
+    mp: '0'
+    wp:
+    add:
+    ev_m:
+    ev_p:
+    jump:
+    move: '1'
+    proc:
+    w_ev:
+    flags:
+    magic:
+    speed:
+    start:
+    always:
+    attack:
+    halves:
+    absorbs:
+    cancels:
+    element:
+    formula:
+    weakness:
+    memgen_id: BC
+    female_only: false
+    strengthens:
+    proc_formula:
+- id: 46
+  name: Chain Vest
+  item_type: armor
+  data:
+    hp: '30'
+    mp: '0'
+    wp:
+    add:
+    ev_m:
+    ev_p:
+    jump:
+    move:
+    proc:
+    w_ev:
+    flags:
+    magic:
+    speed:
+    start:
+    always: Regen
+    attack:
+    halves:
+    absorbs:
+    cancels:
+    element:
+    formula:
+    weakness:
+    memgen_id: BD
+    female_only: false
+    strengthens:
+    proc_formula:
+- id: 47
+  name: Mythril Vest
+  item_type: armor
+  data:
+    hp: '70'
+    mp: '10'
+    wp:
+    add:
+    ev_m:
+    ev_p:
+    jump:
+    move:
+    proc:
+    w_ev:
+    flags:
+    magic: '1'
+    speed:
+    start:
+    always:
+    attack:
+    halves:
+    absorbs:
+    cancels:
+    element:
+    formula:
+    weakness:
+    memgen_id: BE
+    female_only: false
+    strengthens:
+    proc_formula:
+- id: 48
+  name: Adaman Vest
+  item_type: armor
+  data:
+    hp: '70'
+    mp: '0'
+    wp:
+    add:
+    ev_m:
+    ev_p:
+    jump:
+    move:
+    proc:
+    w_ev:
+    flags:
+    magic: '1'
+    speed:
+    start:
+    always:
+    attack: '1'
+    halves:
+    absorbs:
+    cancels:
+    element:
+    formula:
+    weakness:
+    memgen_id: BF
+    female_only: false
+    strengthens:
+    proc_formula:
+- id: 49
+  name: Wizard Outfit
+  item_type: armor
+  data:
+    hp: '60'
+    mp: '30'
+    wp:
+    add:
+    ev_m:
+    ev_p:
+    jump:
+    move:
+    proc:
+    w_ev:
+    flags:
+    magic:
+    speed:
+    start:
+    always:
+    attack:
+    halves:
+    absorbs:
+    cancels:
+    element:
+    formula:
+    weakness:
+    memgen_id: C0
+    female_only: false
+    strengthens:
+    proc_formula:
+- id: 50
+  name: Brigandine
+  item_type: armor
+  data:
+    hp: '100'
+    mp: '0'
+    wp:
+    add:
+    ev_m:
+    ev_p:
+    jump:
+    move:
+    proc:
+    w_ev:
+    flags:
+    magic:
+    speed:
+    start:
+    always:
+    attack:
+    halves:
+    absorbs:
+    cancels:
+    element:
+    formula:
+    weakness:
+    memgen_id: C1
+    female_only: false
+    strengthens:
+    proc_formula:
+- id: 51
+  name: Judo Outfit
+  item_type: armor
+  data:
+    hp: '70'
+    mp: '0'
+    wp:
+    add:
+    ev_m:
+    ev_p:
+    jump:
+    move:
+    proc:
+    w_ev:
+    flags:
+    magic:
+    speed:
+    start:
+    always:
+    attack: '1'
+    halves:
+    absorbs:
+    cancels: Dead
+    element:
+    formula:
+    weakness:
+    memgen_id: C2
+    female_only: false
+    strengthens:
+    proc_formula:
+- id: 52
+  name: Power Sleeve
+  item_type: armor
+  data:
+    hp: '70'
+    mp: '0'
+    wp:
+    add:
+    ev_m:
+    ev_p:
+    jump:
+    move:
+    proc:
+    w_ev:
+    flags:
+    magic:
+    speed:
+    start:
+    always:
+    attack: '2'
+    halves:
+    absorbs:
+    cancels:
+    element:
+    formula:
+    weakness:
+    memgen_id: C3
+    female_only: false
+    strengthens:
+    proc_formula:
+- id: 53
+  name: Earth Clothes
+  item_type: armor
+  data:
+    hp: '85'
+    mp: '10'
+    wp:
+    add:
+    ev_m:
+    ev_p:
+    jump:
+    move:
+    proc:
+    w_ev:
+    flags:
+    magic:
+    speed:
+    start:
+    always:
+    attack:
+    halves:
+    absorbs: Earth
+    cancels:
+    element:
+    formula:
+    weakness:
+    memgen_id: C4
+    female_only: false
+    strengthens: Earth
+    proc_formula:
+- id: 54
+  name: Secret Clothes
+  item_type: armor
+  data:
+    hp: '50'
+    mp: '0'
+    wp:
+    add:
+    ev_m:
+    ev_p:
+    jump:
+    move:
+    proc:
+    w_ev:
+    flags:
+    magic:
+    speed: '1'
+    start:
+    always:
+    attack:
+    halves:
+    absorbs:
+    cancels:
+    element:
+    formula:
+    weakness:
+    memgen_id: C5
+    female_only: false
+    strengthens:
+    proc_formula:
+- id: 55
+  name: Black Costume
+  item_type: armor
+  data:
+    hp: '85'
+    mp: '0'
+    wp:
+    add:
+    ev_m:
+    ev_p:
+    jump:
+    move:
+    proc:
+    w_ev:
+    flags:
+    magic:
+    speed:
+    start:
+    always:
+    attack:
+    halves:
+    absorbs:
+    cancels: Stop Fire
+    element:
+    formula:
+    weakness:
+    memgen_id: C6
+    female_only: false
+    strengthens:
+    proc_formula:
+- id: 56
+  name: Rubber Costume
+  item_type: armor
+  data:
+    hp: '40'
+    mp: '0'
+    wp:
+    add:
+    ev_m:
+    ev_p:
+    jump:
+    move:
+    proc:
+    w_ev:
+    flags:
+    magic:
+    speed:
+    start:
+    always:
+    attack:
+    halves:
+    absorbs:
+    cancels: Charm Lightning
+    element:
+    formula:
+    weakness:
+    memgen_id: C7
+    female_only: false
+    strengthens:
+    proc_formula:
+- id: 57
+  name: Linen Robe
+  item_type: armor
+  data:
+    hp: '20'
+    mp: '50'
+    wp:
+    add:
+    ev_m:
+    ev_p:
+    jump:
+    move:
+    proc:
+    w_ev:
+    flags:
+    magic:
+    speed:
+    start:
+    always:
+    attack:
+    halves:
+    absorbs:
+    cancels:
+    element:
+    formula:
+    weakness:
+    memgen_id: C8
+    female_only: false
+    strengthens:
+    proc_formula:
+- id: 58
+  name: Silk Robe
+  item_type: armor
+  data:
+    hp: '60'
+    mp: '30'
+    wp:
+    add:
+    ev_m:
+    ev_p:
+    jump:
+    move:
+    proc:
+    w_ev:
+    flags:
+    magic:
+    speed: "-1"
+    start:
+    always:
+    attack:
+    halves:
+    absorbs:
+    cancels:
+    element:
+    formula:
+    weakness:
+    memgen_id: C9
+    female_only: false
+    strengthens:
+    proc_formula:
+- id: 59
+  name: Wizard Robe
+  item_type: armor
+  data:
+    hp: '30'
+    mp: '22'
+    wp:
+    add:
+    ev_m:
+    ev_p:
+    jump:
+    move:
+    proc:
+    w_ev:
+    flags:
+    magic: '2'
+    speed:
+    start:
+    always:
+    attack:
+    halves:
+    absorbs:
+    cancels:
+    element:
+    formula:
+    weakness:
+    memgen_id: CA
+    female_only: false
+    strengthens:
+    proc_formula:
+- id: 60
+  name: Chameleon Robe
+  item_type: armor
+  data:
+    hp: '50'
+    mp: '34'
+    wp:
+    add:
+    ev_m:
+    ev_p:
+    jump:
+    move:
+    proc:
+    w_ev:
+    flags:
+    magic:
+    speed:
+    start:
+    always:
+    attack:
+    halves: Dark
+    absorbs:
+    cancels:
+    element:
+    formula:
+    weakness:
+    memgen_id: CB
+    female_only: false
+    strengthens:
+    proc_formula:
+- id: 61
+  name: White Robe
+  item_type: armor
+  data:
+    hp: '50'
+    mp: '34'
+    wp:
+    add:
+    ev_m:
+    ev_p:
+    jump:
+    move:
+    proc:
+    w_ev:
+    flags:
+    magic:
+    speed:
+    start:
+    always:
+    attack:
+    halves:
+    absorbs: Holy
+    cancels: Dead
+    element:
+    formula:
+    weakness:
+    memgen_id: CC
+    female_only: false
+    strengthens: Holy
+    proc_formula:
+- id: 62
+  name: Black Robe
+  item_type: armor
+  data:
+    hp: '60'
+    mp: '30'
+    wp:
+    add:
+    ev_m:
+    ev_p:
+    jump:
+    move:
+    proc:
+    w_ev:
+    flags:
+    magic:
+    speed:
+    start:
+    always:
+    attack:
+    halves:
+    absorbs:
+    cancels:
+    element:
+    formula:
+    weakness:
+    memgen_id: CD
+    female_only: false
+    strengthens: Ice/Lightning/Wind
+    proc_formula:
+- id: 63
+  name: Light Robe
+  item_type: armor
+  data:
+    hp: '0'
+    mp: '25'
+    wp:
+    add:
+    ev_m:
+    ev_p:
+    jump:
+    move:
+    proc:
+    w_ev:
+    flags:
+    magic:
+    speed:
+    start:
+    always: Regen
+    attack:
+    halves:
+    absorbs:
+    cancels:
+    element:
+    formula:
+    weakness:
+    memgen_id: CE
+    female_only: false
+    strengthens:
+    proc_formula:
+- id: 64
+  name: Robe of Lords
+  item_type: armor
+  data:
+    hp: '40'
+    mp: '20'
+    wp:
+    add:
+    ev_m:
+    ev_p:
+    jump:
+    move:
+    proc:
+    w_ev:
+    flags:
+    magic:
+    speed:
+    start:
+    always: Faith
+    attack:
+    halves:
+    absorbs:
+    cancels:
+    element:
+    formula:
+    weakness: Fire
+    memgen_id: CF
+    female_only: false
+    strengthens:
+    proc_formula:
+- id: 65
+  name: Bronze Helmet
+  item_type: helmet
+  data:
+    hp: '180'
+    mp: '0'
+    wp:
+    add:
+    ev_m:
+    ev_p:
+    jump:
+    move:
+    proc:
+    w_ev:
+    flags:
+    magic:
+    speed: "-1"
+    start:
+    always:
+    attack:
+    halves:
+    absorbs:
+    cancels:
+    element:
+    formula:
+    weakness:
+    memgen_id: '91'
+    female_only: false
+    strengthens:
+    proc_formula:
+- id: 66
+  name: Iron Helmet
+  item_type: helmet
+  data:
+    hp: '120'
+    mp: '0'
+    wp:
+    add:
+    ev_m:
+    ev_p:
+    jump:
+    move:
+    proc:
+    w_ev:
+    flags:
+    magic:
+    speed:
+    start: Don't Move
+    always:
+    attack:
+    halves:
+    absorbs:
+    cancels:
+    element:
+    formula:
+    weakness:
+    memgen_id: '92'
+    female_only: false
+    strengthens:
+    proc_formula:
+- id: 67
+  name: Barbuta
+  item_type: helmet
+  data:
+    hp: '180'
+    mp: '0'
+    wp:
+    add:
+    ev_m:
+    ev_p:
+    jump:
+    move:
+    proc:
+    w_ev:
+    flags:
+    magic:
+    speed:
+    start: Slow
+    always:
+    attack:
+    halves:
+    absorbs:
+    cancels:
+    element:
+    formula:
+    weakness:
+    memgen_id: '93'
+    female_only: false
+    strengthens:
+    proc_formula:
+- id: 68
+  name: Mythril Helmet
+  item_type: helmet
+  data:
+    hp: '130'
+    mp: '0'
+    wp:
+    add:
+    ev_m:
+    ev_p:
+    jump:
+    move:
+    proc:
+    w_ev:
+    flags:
+    magic: '1'
+    speed:
+    start:
+    always:
+    attack:
+    halves:
+    absorbs:
+    cancels:
+    element:
+    formula:
+    weakness:
+    memgen_id: '94'
+    female_only: false
+    strengthens:
+    proc_formula:
+- id: 69
+  name: Gold Helmet
+  item_type: helmet
+  data:
+    hp: '50'
+    mp: '10'
+    wp:
+    add:
+    ev_m:
+    ev_p:
+    jump:
+    move:
+    proc:
+    w_ev:
+    flags:
+    magic:
+    speed:
+    start:
+    always:
+    attack:
+    halves:
+    absorbs:
+    cancels:
+    element:
+    formula:
+    weakness:
+    memgen_id: '95'
+    female_only: false
+    strengthens:
+    proc_formula:
+- id: 70
+  name: Cross Helmet
+  item_type: helmet
+  data:
+    hp: '130'
+    mp: '0'
+    wp:
+    add:
+    ev_m:
+    ev_p:
+    jump:
+    move:
+    proc:
+    w_ev:
+    flags:
+    magic:
+    speed:
+    start:
+    always:
+    attack:
+    halves:
+    absorbs: Holy
+    cancels: Dead
+    element:
+    formula:
+    weakness:
+    memgen_id: '96'
+    female_only: false
+    strengthens: Holy
+    proc_formula:
+- id: 71
+  name: Diamond Helmet
+  item_type: helmet
+  data:
+    hp: '100'
+    mp: '0'
+    wp:
+    add:
+    ev_m:
+    ev_p:
+    jump:
+    move:
+    proc:
+    w_ev:
+    flags:
+    magic: '1'
+    speed:
+    start:
+    always:
+    attack: '1'
+    halves:
+    absorbs:
+    cancels:
+    element:
+    formula:
+    weakness:
+    memgen_id: '97'
+    female_only: false
+    strengthens:
+    proc_formula:
+- id: 72
+  name: Platina Helmet
+  item_type: helmet
+  data:
+    hp: '150'
+    mp: '0'
+    wp:
+    add:
+    ev_m:
+    ev_p:
+    jump:
+    move:
+    proc:
+    w_ev:
+    flags:
+    magic:
+    speed:
+    start:
+    always:
+    attack:
+    halves: Fire
+    absorbs:
+    cancels:
+    element:
+    formula:
+    weakness:
+    memgen_id: '98'
+    female_only: false
+    strengthens:
+    proc_formula:
+- id: 73
+  name: Crystal Helmet
+  item_type: helmet
+  data:
+    hp: '110'
+    mp: '0'
+    wp:
+    add:
+    ev_m:
+    ev_p:
+    jump:
+    move:
+    proc:
+    w_ev:
+    flags:
+    magic:
+    speed:
+    start:
+    always:
+    attack:
+    halves:
+    absorbs: Ice
+    cancels:
+    element:
+    formula:
+    weakness:
+    memgen_id: 9A
+    female_only: false
+    strengthens: Ice
+    proc_formula:
+- id: 74
+  name: Genji Helmet
+  item_type: helmet
+  data:
+    hp: '110'
+    mp: '0'
+    wp:
+    add:
+    ev_m:
+    ev_p:
+    jump:
+    move:
+    proc:
+    w_ev:
+    flags:
+    magic:
+    speed:
+    start:
+    always:
+    attack:
+    halves:
+    absorbs:
+    cancels: Stop Frog
+    element:
+    formula:
+    weakness:
+    memgen_id: 9B
+    female_only: false
+    strengthens:
+    proc_formula:
+- id: 75
+  name: Grand Helmet
+  item_type: helmet
+  data:
+    hp: '130'
+    mp: '0'
+    wp:
+    add:
+    ev_m:
+    ev_p:
+    jump:
+    move:
+    proc:
+    w_ev:
+    flags:
+    magic:
+    speed:
+    start:
+    always:
+    attack:
+    halves:
+    absorbs:
+    cancels: Sleep Faith
+    element:
+    formula:
+    weakness:
+    memgen_id: 9C
+    female_only: false
+    strengthens:
+    proc_formula:
+- id: 76
+  name: Leather Hat
+  item_type: helmet
+  data:
+    hp: '20'
+    mp: '20'
+    wp:
+    add:
+    ev_m:
+    ev_p:
+    jump:
+    move:
+    proc:
+    w_ev:
+    flags:
+    magic: '1'
+    speed:
+    start:
+    always:
+    attack: '1'
+    halves:
+    absorbs:
+    cancels:
+    element:
+    formula:
+    weakness:
+    memgen_id: 9D
+    female_only: false
+    strengthens:
+    proc_formula:
+- id: 77
+  name: Leather Helmet
+  item_type: helmet
+  data:
+    hp: '90'
+    mp: '0'
+    wp:
+    add:
+    ev_m:
+    ev_p:
+    jump:
+    move:
+    proc:
+    w_ev:
+    flags:
+    magic:
+    speed:
+    start:
+    always:
+    attack:
+    halves:
+    absorbs: Water
+    cancels:
+    element:
+    formula:
+    weakness:
+    memgen_id: '90'
+    female_only: false
+    strengthens:
+    proc_formula:
+- id: 78
+  name: Feather Hat
+  item_type: helmet
+  data:
+    hp: '30'
+    mp: '20'
+    wp:
+    add:
+    ev_m:
+    ev_p:
+    jump:
+    move:
+    proc:
+    w_ev:
+    flags:
+    magic:
+    speed:
+    start:
+    always:
+    attack:
+    halves:
+    absorbs: Wind
+    cancels:
+    element:
+    formula:
+    weakness:
+    memgen_id: 9E
+    female_only: false
+    strengthens: Wind
+    proc_formula:
+- id: 79
+  name: Red Hood
+  item_type: helmet
+  data:
+    hp: '30'
+    mp: '70'
+    wp:
+    add:
+    ev_m:
+    ev_p:
+    jump:
+    move:
+    proc:
+    w_ev:
+    flags:
+    magic:
+    speed:
+    start:
+    always:
+    attack:
+    halves:
+    absorbs:
+    cancels:
+    element:
+    formula:
+    weakness:
+    memgen_id: 9F
+    female_only: false
+    strengthens:
+    proc_formula:
+- id: 80
+  name: Headgear
+  item_type: helmet
+  data:
+    hp: '85'
+    mp: '0'
+    wp:
+    add:
+    ev_m:
+    ev_p:
+    jump:
+    move:
+    proc:
+    w_ev:
+    flags:
+    magic:
+    speed:
+    start:
+    always:
+    attack: '1'
+    halves:
+    absorbs:
+    cancels:
+    element:
+    formula:
+    weakness:
+    memgen_id: A0
+    female_only: false
+    strengthens:
+    proc_formula:
+- id: 81
+  name: Triangle Hat
+  item_type: helmet
+  data:
+    hp: '50'
+    mp: '30'
+    wp:
+    add:
+    ev_m:
+    ev_p:
+    jump:
+    move:
+    proc:
+    w_ev:
+    flags:
+    magic: '1'
+    speed:
+    start:
+    always:
+    attack:
+    halves:
+    absorbs:
+    cancels:
+    element:
+    formula:
+    weakness:
+    memgen_id: A1
+    female_only: false
+    strengthens:
+    proc_formula:
+- id: 82
+  name: Green Beret
+  item_type: helmet
+  data:
+    hp: '70'
+    mp: '0'
+    wp:
+    add:
+    ev_m:
+    ev_p:
+    jump:
+    move:
+    proc:
+    w_ev:
+    flags:
+    magic:
+    speed:
+    start:
+    always:
+    attack:
+    halves:
+    absorbs: Earth
+    cancels:
+    element:
+    formula:
+    weakness:
+    memgen_id: A2
+    female_only: false
+    strengthens: Earth
+    proc_formula:
+- id: 83
+  name: Twist Headband
+  item_type: helmet
+  data:
+    hp: '55'
+    mp: '0'
+    wp:
+    add:
+    ev_m:
+    ev_p:
+    jump:
+    move:
+    proc:
+    w_ev:
+    flags:
+    magic:
+    speed:
+    start:
+    always:
+    attack: '2'
+    halves:
+    absorbs:
+    cancels:
+    element:
+    formula:
+    weakness:
+    memgen_id: A3
+    female_only: false
+    strengthens:
+    proc_formula:
+- id: 84
+  name: Holy Miter
+  item_type: helmet
+  data:
+    hp: '64'
+    mp: '20'
+    wp:
+    add:
+    ev_m:
+    ev_p:
+    jump:
+    move:
+    proc:
+    w_ev:
+    flags:
+    magic:
+    speed:
+    start: Faith
+    always:
+    attack:
+    halves:
+    absorbs:
+    cancels:
+    element:
+    formula:
+    weakness:
+    memgen_id: A4
+    female_only: false
+    strengthens:
+    proc_formula:
+- id: 85
+  name: Circlet
+  item_type: helmet
+  data:
+    hp: '90'
+    mp: '0'
+    wp:
+    add:
+    ev_m:
+    ev_p:
+    jump:
+    move:
+    proc:
+    w_ev:
+    flags:
+    magic: '1'
+    speed:
+    start:
+    always:
+    attack:
+    halves:
+    absorbs:
+    cancels:
+    element:
+    formula:
+    weakness:
+    memgen_id: '99'
+    female_only: false
+    strengthens:
+    proc_formula:
+- id: 86
+  name: Black Hood
+  item_type: helmet
+  data:
+    hp: '115'
+    mp: '0'
+    wp:
+    add:
+    ev_m:
+    ev_p:
+    jump:
+    move:
+    proc:
+    w_ev:
+    flags:
+    magic:
+    speed:
+    start:
+    always:
+    attack:
+    halves:
+    absorbs:
+    cancels:
+    element:
+    formula:
+    weakness:
+    memgen_id: A5
+    female_only: false
+    strengthens:
+    proc_formula:
+- id: 87
+  name: Golden Hairpin
+  item_type: helmet
+  data:
+    hp: '80'
+    mp: '50'
+    wp:
+    add:
+    ev_m:
+    ev_p:
+    jump:
+    move:
+    proc:
+    w_ev:
+    flags:
+    magic:
+    speed:
+    start:
+    always:
+    attack:
+    halves:
+    absorbs:
+    cancels: Silence
+    element:
+    formula:
+    weakness:
+    memgen_id: A6
+    female_only: false
+    strengthens:
+    proc_formula:
+- id: 88
+  name: Flash Hat
+  item_type: helmet
+  data:
+    hp: '0'
+    mp: '20'
+    wp:
+    add:
+    ev_m:
+    ev_p:
+    jump:
+    move:
+    proc:
+    w_ev:
+    flags:
+    magic: '1'
+    speed: '1'
+    start:
+    always:
+    attack:
+    halves:
+    absorbs:
+    cancels:
+    element:
+    formula:
+    weakness:
+    memgen_id: A7
+    female_only: false
+    strengthens:
+    proc_formula:
+- id: 89
+  name: Thief Hat
+  item_type: helmet
+  data:
+    hp: '50'
+    mp: '0'
+    wp:
+    add:
+    ev_m:
+    ev_p:
+    jump:
+    move:
+    proc:
+    w_ev:
+    flags:
+    magic:
+    speed: '1'
+    start:
+    always:
+    attack:
+    halves:
+    absorbs:
+    cancels:
+    element:
+    formula:
+    weakness:
+    memgen_id: A8
+    female_only: false
+    strengthens:
+    proc_formula:
+- id: 90
+  name: Escutcheon
+  item_type: shield
+  data:
+    hp:
+    mp:
+    wp:
+    add:
+    ev_m: '0'
+    ev_p: '25'
+    jump:
+    move:
+    proc:
+    w_ev:
+    flags:
+    magic:
+    speed:
+    start: Haste
+    always:
+    attack:
+    halves:
+    absorbs:
+    cancels:
+    element:
+    formula:
+    weakness: Fire/Lightning
+    memgen_id: '80'
+    female_only: false
+    strengthens:
+    proc_formula:
+- id: 91
+  name: Buckler
+  item_type: shield
+  data:
+    hp:
+    mp:
+    wp:
+    add:
+    ev_m: '45'
+    ev_p: '20'
+    jump:
+    move:
+    proc:
+    w_ev:
+    flags:
+    magic:
+    speed:
+    start:
+    always: Silence
+    attack:
+    halves:
+    absorbs:
+    cancels:
+    element:
+    formula:
+    weakness:
+    memgen_id: '81'
+    female_only: false
+    strengthens:
+    proc_formula:
+- id: 92
+  name: Bronze Shield
+  item_type: shield
+  data:
+    hp:
+    mp:
+    wp:
+    add:
+    ev_m: '0'
+    ev_p: '30'
+    jump:
+    move:
+    proc:
+    w_ev:
+    flags:
+    magic:
+    speed:
+    start:
+    always: Reflect
+    attack:
+    halves:
+    absorbs:
+    cancels:
+    element:
+    formula:
+    weakness:
+    memgen_id: '82'
+    female_only: false
+    strengthens:
+    proc_formula:
+- id: 93
+  name: Round Shield
+  item_type: shield
+  data:
+    hp:
+    mp:
+    wp:
+    add:
+    ev_m: '0'
+    ev_p: '0'
+    jump:
+    move:
+    proc:
+    w_ev:
+    flags:
+    magic:
+    speed: "-1"
+    start:
+    always: Shell
+    attack:
+    halves:
+    absorbs:
+    cancels:
+    element:
+    formula:
+    weakness:
+    memgen_id: '83'
+    female_only: false
+    strengthens:
+    proc_formula:
+- id: 94
+  name: Mythril Shield
+  item_type: shield
+  data:
+    hp:
+    mp:
+    wp:
+    add:
+    ev_m: '0'
+    ev_p: '40'
+    jump:
+    move:
+    proc:
+    w_ev:
+    flags:
+    magic: '1'
+    speed:
+    start:
+    always:
+    attack:
+    halves:
+    absorbs:
+    cancels:
+    element:
+    formula:
+    weakness:
+    memgen_id: '84'
+    female_only: false
+    strengthens:
+    proc_formula:
+- id: 95
+  name: Gold Shield
+  item_type: shield
+  data:
+    hp:
+    mp:
+    wp:
+    add:
+    ev_m: '25'
+    ev_p: '35'
+    jump:
+    move:
+    proc:
+    w_ev:
+    flags:
+    magic:
+    speed:
+    start:
+    always:
+    attack:
+    halves:
+    absorbs:
+    cancels:
+    element:
+    formula:
+    weakness:
+    memgen_id: '85'
+    female_only: false
+    strengthens:
+    proc_formula:
+- id: 96
+  name: Ice Shield
+  item_type: shield
+  data:
+    hp:
+    mp:
+    wp:
+    add:
+    ev_m: '15'
+    ev_p: '34'
+    jump:
+    move:
+    proc:
+    w_ev:
+    flags:
+    magic:
+    speed:
+    start:
+    always:
+    attack:
+    halves: Fire
+    absorbs: Ice
+    cancels:
+    element:
+    formula:
+    weakness: Lightning
+    memgen_id: '86'
+    female_only: false
+    strengthens:
+    proc_formula:
+- id: 97
+  name: Flame Shield
+  item_type: shield
+  data:
+    hp:
+    mp:
+    wp:
+    add:
+    ev_m: '15'
+    ev_p: '34'
+    jump:
+    move:
+    proc:
+    w_ev:
+    flags:
+    magic:
+    speed:
+    start:
+    always:
+    attack:
+    halves: Ice
+    absorbs: Fire
+    cancels:
+    element:
+    formula:
+    weakness: Water
+    memgen_id: '87'
+    female_only: false
+    strengthens:
+    proc_formula:
+- id: 98
+  name: Aegis Shield
+  item_type: shield
+  data:
+    hp:
+    mp:
+    wp:
+    add:
+    ev_m: '45'
+    ev_p: '10'
+    jump:
+    move:
+    proc:
+    w_ev:
+    flags:
+    magic: '1'
+    speed:
+    start:
+    always:
+    attack:
+    halves:
+    absorbs:
+    cancels:
+    element:
+    formula:
+    weakness:
+    memgen_id: '88'
+    female_only: false
+    strengthens:
+    proc_formula:
+- id: 99
+  name: Diamond Shield
+  item_type: shield
+  data:
+    hp:
+    mp:
+    wp:
+    add:
+    ev_m: '15'
+    ev_p: '15'
+    jump:
+    move:
+    proc:
+    w_ev:
+    flags:
+    magic: '1'
+    speed:
+    start:
+    always:
+    attack: '1'
+    halves:
+    absorbs:
+    cancels:
+    element:
+    formula:
+    weakness:
+    memgen_id: '89'
+    female_only: false
+    strengthens:
+    proc_formula:
+- id: 100
+  name: Platina Shield
+  item_type: shield
+  data:
+    hp:
+    mp:
+    wp:
+    add:
+    ev_m: '35'
+    ev_p: '25'
+    jump:
+    move:
+    proc:
+    w_ev:
+    flags:
+    magic:
+    speed:
+    start:
+    always:
+    attack:
+    halves:
+    absorbs:
+    cancels:
+    element:
+    formula:
+    weakness:
+    memgen_id: 8A
+    female_only: false
+    strengthens:
+    proc_formula:
+- id: 101
+  name: Crystal Shield
+  item_type: shield
+  data:
+    hp:
+    mp:
+    wp:
+    add:
+    ev_m: '20'
+    ev_p: '20'
+    jump:
+    move:
+    proc:
+    w_ev:
+    flags:
+    magic:
+    speed:
+    start:
+    always:
+    attack:
+    halves:
+    absorbs: Ice
+    cancels:
+    element:
+    formula:
+    weakness:
+    memgen_id: 8B
+    female_only: false
+    strengthens: Ice
+    proc_formula:
+- id: 102
+  name: Genji Shield
+  item_type: shield
+  data:
+    hp:
+    mp:
+    wp:
+    add:
+    ev_m: '20'
+    ev_p: '30'
+    jump:
+    move:
+    proc:
+    w_ev:
+    flags:
+    magic:
+    speed:
+    start:
+    always:
+    attack:
+    halves:
+    absorbs:
+    cancels: Chicken Petrify
+    element:
+    formula:
+    weakness:
+    memgen_id: 8C
+    female_only: false
+    strengthens:
+    proc_formula:
+- id: 103
+  name: Kaiser Plate
+  item_type: shield
+  data:
+    hp:
+    mp:
+    wp:
+    add:
+    ev_m: '0'
+    ev_p: '0'
+    jump:
+    move:
+    proc:
+    w_ev:
+    flags:
+    magic: '2'
+    speed:
+    start:
+    always:
+    attack:
+    halves:
+    absorbs:
+    cancels:
+    element:
+    formula:
+    weakness:
+    memgen_id: 8D
+    female_only: false
+    strengthens: Ice/Lightning/Wind
+    proc_formula:
+- id: 104
+  name: Venetian Shield
+  item_type: shield
+  data:
+    hp:
+    mp:
+    wp:
+    add:
+    ev_m: '0'
+    ev_p: '0'
+    jump:
+    move:
+    proc:
+    w_ev:
+    flags:
+    magic:
+    speed:
+    start:
+    always:
+    attack:
+    halves: All Elements
+    absorbs:
+    cancels:
+    element:
+    formula:
+    weakness:
+    memgen_id: 8E
+    female_only: false
+    strengthens:
+    proc_formula:
+- id: 105
+  name: Escutcheon II
+  item_type: shield
+  data:
+    hp:
+    mp:
+    wp:
+    add:
+    ev_m: '5'
+    ev_p: '5'
+    jump:
+    move:
+    proc:
+    w_ev:
+    flags:
+    magic:
+    speed:
+    start:
+    always: Defend
+    attack:
+    halves:
+    absorbs:
+    cancels:
+    element:
+    formula:
+    weakness:
+    memgen_id: 8F
+    female_only: false
+    strengthens:
+    proc_formula:
+- id: 106
+  name: Dagger
+  item_type: weapon
+  data:
+    hp:
+    mp:
+    wp: '10'
+    add:
+    ev_m:
+    ev_p:
+    jump:
+    move:
+    proc:
+    w_ev: '10'
+    flags: 2-swords
+    magic:
+    speed:
+    start:
+    always:
+    attack:
+    halves:
+    absorbs:
+    cancels:
+    element:
+    formula: SP*WP
+    weakness:
+    memgen_id: '01'
+    female_only: false
+    strengthens:
+    proc_formula:
+- id: 107
+  name: Mythril Knife
+  item_type: weapon
+  data:
+    hp:
+    mp:
+    wp: '8'
+    add:
+    ev_m:
+    ev_p:
+    jump:
+    move:
+    proc:
+    w_ev: '10'
+    flags: 2-swords
+    magic:
+    speed:
+    start:
+    always:
+    attack:
+    halves:
+    absorbs:
+    cancels: Charging
+    element:
+    formula: "(PA+SP)/2*WP"
+    weakness:
+    memgen_id: '02'
+    female_only: false
+    strengthens:
+    proc_formula:
+- id: 108
+  name: Stat Knife
+  item_type: weapon
+  data:
+    hp:
+    mp:
+    wp: '5'
+    add:
+    ev_m:
+    ev_p:
+    jump: '1'
+    move: '1'
+    proc:
+    w_ev: '10'
+    flags: 2-swords
+    magic: '1'
+    speed: '1'
+    start:
+    always:
+    attack: '1'
+    halves:
+    absorbs:
+    cancels:
+    element:
+    formula: "(PA+SP)/2*WP"
+    weakness:
+    memgen_id: '03'
+    female_only: false
+    strengthens:
+    proc_formula:
+- id: 109
+  name: Mage Masher
+  item_type: weapon
+  data:
+    hp:
+    mp:
+    wp: '12'
+    add:
+    ev_m:
+    ev_p:
+    jump:
+    move:
+    proc:
+    w_ev: '10'
+    flags: 2-swords / leeches MP
+    magic:
+    speed:
+    start:
+    always:
+    attack:
+    halves:
+    absorbs:
+    cancels:
+    element:
+    formula: PA*WP
+    weakness:
+    memgen_id: '04'
+    female_only: false
+    strengthens:
+    proc_formula:
+- id: 110
+  name: Platina Dagger
+  item_type: weapon
+  data:
+    hp:
+    mp:
+    wp: '9'
+    add:
+    ev_m:
+    ev_p:
+    jump:
+    move:
+    proc:
+    w_ev: '10'
+    flags: 2-swords
+    magic:
+    speed:
+    start:
+    always:
+    attack:
+    halves:
+    absorbs:
+    cancels:
+    element:
+    formula: WP*WP No Evade
+    weakness:
+    memgen_id: '05'
+    female_only: false
+    strengthens:
+    proc_formula:
+- id: 111
+  name: Main Gauche
+  item_type: weapon
+  data:
+    hp:
+    mp:
+    wp: '9'
+    add:
+    ev_m:
+    ev_p:
+    jump:
+    move:
+    proc:
+    w_ev: '40'
+    flags: 2-swords
+    magic:
+    speed:
+    start:
+    always:
+    attack:
+    halves:
+    absorbs:
+    cancels:
+    element:
+    formula: "(PA+SP)/2*WP"
+    weakness:
+    memgen_id: '06'
+    female_only: false
+    strengthens:
+    proc_formula:
+- id: 112
+  name: Orichalcum
+  item_type: weapon
+  data:
+    hp:
+    mp:
+    wp: '8'
+    add:
+    ev_m:
+    ev_p:
+    jump:
+    move:
+    proc:
+    w_ev: '10'
+    flags: 2-swords
+    magic: '3'
+    speed:
+    start:
+    always:
+    attack:
+    halves:
+    absorbs:
+    cancels:
+    element:
+    formula: "(PA+SP)/2*WP"
+    weakness:
+    memgen_id: '07'
+    female_only: false
+    strengthens:
+    proc_formula:
+- id: 113
+  name: Assassin Dagger
+  item_type: weapon
+  data:
+    hp:
+    mp:
+    wp: '9'
+    add:
+    ev_m:
+    ev_p:
+    jump:
+    move:
+    proc:
+    w_ev: '10'
+    flags: 2-swords
+    magic:
+    speed: '1'
+    start:
+    always:
+    attack:
+    halves:
+    absorbs:
+    cancels:
+    element:
+    formula: "(PA+SP)/2*WP"
+    weakness:
+    memgen_id: '08'
+    female_only: false
+    strengthens:
+    proc_formula:
+- id: 114
+  name: Air Knife
+  item_type: weapon
+  data:
+    hp:
+    mp:
+    wp: '9'
+    add:
+    ev_m:
+    ev_p:
+    jump:
+    move:
+    proc: Zephyr
+    w_ev: '10'
+    flags: 2-swords
+    magic:
+    speed:
+    start:
+    always:
+    attack:
+    halves:
+    absorbs:
+    cancels:
+    element: Wind
+    formula: "(PA+SP)/2*WP"
+    weakness:
+    memgen_id: '09'
+    female_only: false
+    strengthens:
+    proc_formula: Dmg_(SP * WP)
+- id: 115
+  name: Tonberry Knife
+  item_type: weapon
+  data:
+    hp:
+    mp:
+    wp: '1'
+    add: Death Sentence
+    ev_m:
+    ev_p:
+    jump:
+    move:
+    proc:
+    w_ev: '10'
+    flags: 2-swords
+    magic:
+    speed:
+    start:
+    always:
+    attack:
+    halves:
+    absorbs:
+    cancels:
+    element:
+    formula: "(PA+SP)/2*WP"
+    weakness:
+    memgen_id: 0A
+    female_only: false
+    strengthens:
+    proc_formula:
+- id: 116
+  name: Hidden Knife
+  item_type: weapon
+  data:
+    hp:
+    mp:
+    wp: '11'
+    add:
+    ev_m:
+    ev_p:
+    jump:
+    move:
+    proc:
+    w_ev: '20'
+    flags: 2-swords 2-hands
+    magic:
+    speed: '1'
+    start:
+    always:
+    attack:
+    halves:
+    absorbs:
+    cancels:
+    element:
+    formula: "(PA+SP)/2*WP"
+    weakness:
+    memgen_id: 0B
+    female_only: false
+    strengthens:
+    proc_formula:
+- id: 117
+  name: Ninja Knife
+  item_type: weapon
+  data:
+    hp:
+    mp:
+    wp: '9'
+    add:
+    ev_m:
+    ev_p:
+    jump:
+    move:
+    proc:
+    w_ev: '20'
+    flags: 2-swords 2-hands
+    magic:
+    speed: '1'
+    start:
+    always:
+    attack:
+    halves:
+    absorbs:
+    cancels:
+    element:
+    formula: WP*WP No Evade
+    weakness:
+    memgen_id: 0C
+    female_only: false
+    strengthens:
+    proc_formula:
+- id: 118
+  name: Short Edge
+  item_type: weapon
+  data:
+    hp:
+    mp:
+    wp: '10'
+    add:
+    ev_m:
+    ev_p:
+    jump:
+    move:
+    proc:
+    w_ev: '40'
+    flags: 2-swords 2-hands
+    magic:
+    speed: '1'
+    start:
+    always:
+    attack:
+    halves:
+    absorbs:
+    cancels:
+    element:
+    formula: "(PA+SP)/2*WP"
+    weakness:
+    memgen_id: 0D
+    female_only: false
+    strengthens:
+    proc_formula:
+- id: 119
+  name: Ninja Edge
+  item_type: weapon
+  data:
+    hp:
+    mp:
+    wp: '8'
+    add:
+    ev_m:
+    ev_p:
+    jump:
+    move:
+    proc:
+    w_ev: '20'
+    flags: 2-swords 2-hands
+    magic:
+    speed: '1'
+    start:
+    always:
+    attack:
+    halves:
+    absorbs:
+    cancels:
+    element:
+    formula: SP*WP
+    weakness:
+    memgen_id: 0E
+    female_only: false
+    strengthens:
+    proc_formula:
+- id: 120
+  name: Spell Edge
+  item_type: weapon
+  data:
+    hp:
+    mp:
+    wp: '9'
+    add:
+    ev_m:
+    ev_p:
+    jump:
+    move:
+    proc:
+    w_ev: '20'
+    flags: 2-swords 2-hands
+    magic: '2'
+    speed: '1'
+    start:
+    always:
+    attack:
+    halves:
+    absorbs:
+    cancels:
+    element:
+    formula: "(PA+SP)/2*WP"
+    weakness:
+    memgen_id: 0F
+    female_only: false
+    strengthens:
+    proc_formula:
+- id: 121
+  name: Sasuke Knife
+  item_type: weapon
+  data:
+    hp:
+    mp:
+    wp: '10'
+    add:
+    ev_m:
+    ev_p:
+    jump:
+    move:
+    proc:
+    w_ev: '20'
+    flags: 2-swords 2-hands
+    magic:
+    speed: '1'
+    start:
+    always:
+    attack: '1'
+    halves:
+    absorbs:
+    cancels:
+    element:
+    formula: "(PA+SP)/2*WP"
+    weakness:
+    memgen_id: '10'
+    female_only: false
+    strengthens:
+    proc_formula:
+- id: 122
+  name: Iga Knife
+  item_type: weapon
+  data:
+    hp:
+    mp:
+    wp: '9'
+    add:
+    ev_m:
+    ev_p:
+    jump:
+    move:
+    proc: Tornado
+    w_ev: '20'
+    flags: 2-swords 2-hands
+    magic:
+    speed: '1'
+    start:
+    always:
+    attack:
+    halves:
+    absorbs:
+    cancels:
+    element: Wind
+    formula: "(PA+SP)/2*WP"
+    weakness:
+    memgen_id: '11'
+    female_only: false
+    strengthens:
+    proc_formula: Dmg_F(MA*50)
+- id: 123
+  name: Koga Knife
+  item_type: weapon
+  data:
+    hp:
+    mp:
+    wp: '9'
+    add:
+    ev_m:
+    ev_p:
+    jump:
+    move:
+    proc: Quake
+    w_ev: '20'
+    flags: 2-swords 2-hands
+    magic:
+    speed: '1'
+    start:
+    always:
+    attack:
+    halves:
+    absorbs:
+    cancels:
+    element: Earth
+    formula: "(PA+SP)/2*WP"
+    weakness:
+    memgen_id: '12'
+    female_only: false
+    strengthens:
+    proc_formula: Dmg_F(MA*50)
+- id: 124
+  name: Broad Sword
+  item_type: weapon
+  data:
+    hp:
+    mp:
+    wp: '11'
+    add:
+    ev_m:
+    ev_p:
+    jump:
+    move:
+    proc:
+    w_ev: '25'
+    flags: 2-swords 2-hands
+    magic:
+    speed:
+    start: Defending
+    always:
+    attack:
+    halves:
+    absorbs:
+    cancels:
+    element:
+    formula: PA*WP
+    weakness:
+    memgen_id: '13'
+    female_only: false
+    strengthens:
+    proc_formula:
+- id: 125
+  name: Long Sword
+  item_type: weapon
+  data:
+    hp:
+    mp:
+    wp: '11'
+    add:
+    ev_m:
+    ev_p:
+    jump:
+    move: '1'
+    proc:
+    w_ev: '25'
+    flags: 2-swords 2-hands
+    magic:
+    speed:
+    start:
+    always:
+    attack:
+    halves:
+    absorbs:
+    cancels:
+    element:
+    formula: PA*WP
+    weakness:
+    memgen_id: '14'
+    female_only: false
+    strengthens:
+    proc_formula:
+- id: 126
+  name: Parrying Sword
+  item_type: weapon
+  data:
+    hp:
+    mp:
+    wp: '10'
+    add:
+    ev_m:
+    ev_p:
+    jump:
+    move:
+    proc:
+    w_ev: '50'
+    flags: 2-swords 2-hands
+    magic:
+    speed:
+    start:
+    always:
+    attack:
+    halves:
+    absorbs:
+    cancels:
+    element:
+    formula: PA*WP
+    weakness:
+    memgen_id: '15'
+    female_only: false
+    strengthens:
+    proc_formula:
+- id: 127
+  name: Mythril Sword
+  item_type: weapon
+  data:
+    hp:
+    mp:
+    wp: '7'
+    add:
+    ev_m:
+    ev_p:
+    jump:
+    move:
+    proc:
+    w_ev: '25'
+    flags: 2-swords 2-hands
+    magic: '2'
+    speed:
+    start:
+    always:
+    attack:
+    halves:
+    absorbs:
+    cancels:
+    element:
+    formula: PA*WP
+    weakness:
+    memgen_id: '16'
+    female_only: false
+    strengthens:
+    proc_formula:
+- id: 128
+  name: Blood Sword
+  item_type: weapon
+  data:
+    hp:
+    mp:
+    wp: '10'
+    add:
+    ev_m:
+    ev_p:
+    jump:
+    move:
+    proc:
+    w_ev: '25'
+    flags: 2-swords 2-hands / leeches HP
+    magic:
+    speed:
+    start:
+    always:
+    attack:
+    halves:
+    absorbs:
+    cancels:
+    element: Dark
+    formula: PA*WP
+    weakness:
+    memgen_id: '17'
+    female_only: false
+    strengthens:
+    proc_formula:
+- id: 129
+  name: Coral Sword
+  item_type: weapon
+  data:
+    hp:
+    mp:
+    wp: '9'
+    add:
+    ev_m:
+    ev_p:
+    jump:
+    move:
+    proc: Mjollnir
+    w_ev: '25'
+    flags: 2-swords 2-hands
+    magic:
+    speed:
+    start:
+    always:
+    attack:
+    halves:
+    absorbs:
+    cancels:
+    element: Lightning
+    formula: PA*WP
+    weakness:
+    memgen_id: '18'
+    female_only: false
+    strengthens:
+    proc_formula: Dmg_F(MA*28)
+- id: 130
+  name: Ancient Sword
+  item_type: weapon
+  data:
+    hp:
+    mp:
+    wp: '10'
+    add: Don't Act
+    ev_m:
+    ev_p:
+    jump:
+    move:
+    proc:
+    w_ev: '25'
+    flags: 2-swords 2-hands
+    magic:
+    speed:
+    start:
+    always:
+    attack:
+    halves:
+    absorbs:
+    cancels:
+    element:
+    formula: PA*WP
+    weakness:
+    memgen_id: '19'
+    female_only: false
+    strengthens:
+    proc_formula:
+- id: 131
+  name: Scramasax
+  item_type: weapon
+  data:
+    hp:
+    mp:
+    wp: '10'
+    add:
+    ev_m:
+    ev_p:
+    jump:
+    move:
+    proc: Double Blow
+    w_ev: '25'
+    flags: 2-swords 2-hands
+    magic:
+    speed:
+    start:
+    always:
+    attack:
+    halves:
+    absorbs:
+    cancels:
+    element:
+    formula: PA*WP
+    weakness:
+    memgen_id: 1A
+    female_only: false
+    strengthens:
+    proc_formula: PA*WP
+- id: 132
+  name: Paladin Sword
+  item_type: weapon
+  data:
+    hp:
+    mp:
+    wp: '10'
+    add:
+    ev_m:
+    ev_p:
+    jump:
+    move:
+    proc: Holy Strike
+    w_ev: '25'
+    flags: 2-swords 2-hands
+    magic:
+    speed:
+    start:
+    always:
+    attack:
+    halves:
+    absorbs:
+    cancels:
+    element: Holy
+    formula: PA*WP
+    weakness:
+    memgen_id: 1B
+    female_only: false
+    strengthens:
+    proc_formula: "(PA+6)/2*MA"
+- id: 133
+  name: Demon Hilt
+  item_type: weapon
+  data:
+    hp:
+    mp:
+    wp: '10'
+    add:
+    ev_m:
+    ev_p:
+    jump:
+    move:
+    proc: Demon Fire
+    w_ev: '25'
+    flags: 2-swords 2-hands
+    magic:
+    speed:
+    start:
+    always:
+    attack:
+    halves:
+    absorbs:
+    cancels:
+    element: Fire
+    formula: PA*WP
+    weakness:
+    memgen_id: 1C
+    female_only: false
+    strengthens:
+    proc_formula: "(PA+4)/2*MA"
+- id: 134
+  name: Ice Brand
+  item_type: weapon
+  data:
+    hp:
+    mp:
+    wp: '10'
+    add:
+    ev_m:
+    ev_p:
+    jump:
+    move:
+    proc: Ice Breath
+    w_ev: '25'
+    flags: 2-swords 2-hands
+    magic:
+    speed:
+    start:
+    always:
+    attack:
+    halves:
+    absorbs:
+    cancels:
+    element: Ice
+    formula: PA*WP
+    weakness:
+    memgen_id: 1D
+    female_only: false
+    strengthens:
+    proc_formula: MA*12
+- id: 135
+  name: Slasher
+  item_type: weapon
+  data:
+    hp:
+    mp:
+    wp: '11'
+    add:
+    ev_m:
+    ev_p:
+    jump:
+    move:
+    proc: Demi
+    w_ev: '25'
+    flags: 2-swords 2-hands
+    magic:
+    speed:
+    start:
+    always:
+    attack:
+    halves:
+    absorbs:
+    cancels:
+    element:
+    formula: PA*WP
+    weakness:
+    memgen_id: 1E
+    female_only: false
+    strengthens:
+    proc_formula: "(25% target max HP, magic evade)"
+- id: 136
   name: Nagrarock
   item_type: weapon
   data:
@@ -6318,10 +4075,1961 @@
     element:
     formula: PA*WP
     weakness:
+    memgen_id: 1F
     female_only: false
     strengthens:
-
+    proc_formula:
+- id: 137
+  name: Materia Blade
+  item_type: weapon
+  data:
+    hp:
+    mp:
+    wp: '14'
+    add:
+    ev_m:
+    ev_p:
+    jump:
+    move:
+    proc:
+    w_ev: '30'
+    flags: 2-hands only
+    magic: '3'
+    speed:
+    start:
+    always:
+    attack:
+    halves:
+    absorbs:
+    cancels:
+    element:
+    formula: MA*WP
+    weakness:
+    memgen_id: '20'
+    female_only: false
+    strengthens:
+    proc_formula:
+- id: 138
+  name: Defender
+  item_type: weapon
+  data:
+    hp:
+    mp:
+    wp: '13'
+    add:
+    ev_m:
+    ev_p:
+    jump:
+    move:
+    proc:
+    w_ev: '30'
+    flags: 2-hands only
+    magic:
+    speed:
+    start:
+    always: Defending
+    attack:
+    halves:
+    absorbs:
+    cancels:
+    element:
+    formula: "(PA * BR)/100 * WP"
+    weakness:
+    memgen_id: '21'
+    female_only: false
+    strengthens:
+    proc_formula:
 - id: 139
+  name: Save the Queen
+  item_type: weapon
+  data:
+    hp:
+    mp:
+    wp: '13'
+    add:
+    ev_m:
+    ev_p:
+    jump:
+    move:
+    proc:
+    w_ev: '30'
+    flags: 2-hands only
+    magic:
+    speed:
+    start:
+    always:
+    attack:
+    halves:
+    absorbs:
+    cancels:
+    element: Holy
+    formula: "(PA * BR)/100 * WP"
+    weakness:
+    memgen_id: '22'
+    female_only: false
+    strengthens:
+    proc_formula:
+- id: 140
+  name: Excalibur
+  item_type: weapon
+  data:
+    hp:
+    mp:
+    wp: '15'
+    add:
+    ev_m:
+    ev_p:
+    jump:
+    move:
+    proc:
+    w_ev: '30'
+    flags: 2-hands only
+    magic:
+    speed:
+    start:
+    always:
+    attack:
+    halves:
+    absorbs:
+    cancels:
+    element:
+    formula: "(PA * BR)/100 * WP"
+    weakness:
+    memgen_id: '23'
+    female_only: false
+    strengthens:
+    proc_formula:
+- id: 141
+  name: Ragnarok
+  item_type: weapon
+  data:
+    hp:
+    mp:
+    wp: '14'
+    add: Dead
+    ev_m:
+    ev_p:
+    jump:
+    move:
+    proc:
+    w_ev: '30'
+    flags: 2-hands only
+    magic:
+    speed:
+    start:
+    always:
+    attack:
+    halves:
+    absorbs:
+    cancels:
+    element:
+    formula: "(PA * BR)/100 * WP"
+    weakness:
+    memgen_id: '24'
+    female_only: false
+    strengthens:
+    proc_formula:
+- id: 142
+  name: Chaos Blade
+  item_type: weapon
+  data:
+    hp:
+    mp:
+    wp: '1'
+    add: Crystal
+    ev_m:
+    ev_p:
+    jump:
+    move:
+    proc:
+    w_ev: '30'
+    flags: 2-hands only
+    magic:
+    speed:
+    start:
+    always:
+    attack:
+    halves:
+    absorbs:
+    cancels:
+    element:
+    formula: "(PA * BR)/100 * WP"
+    weakness:
+    memgen_id: '25'
+    female_only: false
+    strengthens:
+    proc_formula:
+- id: 143
+  name: Asura Knife
+  item_type: weapon
+  data:
+    hp:
+    mp:
+    wp: '13'
+    add:
+    ev_m:
+    ev_p:
+    jump:
+    move:
+    proc: Double Blow
+    w_ev: '35'
+    flags: 2-swords 2-hands
+    magic:
+    speed:
+    start:
+    always:
+    attack:
+    halves:
+    absorbs:
+    cancels:
+    element: Fire
+    formula: "(PA * BR)/100 * WP"
+    weakness:
+    memgen_id: '26'
+    female_only: false
+    strengthens:
+    proc_formula: "(PA * BR)/100 * WP"
+- id: 144
+  name: Koutetsu Knife
+  item_type: weapon
+  data:
+    hp:
+    mp:
+    wp: '13'
+    add:
+    ev_m:
+    ev_p:
+    jump:
+    move:
+    proc: Double Blow
+    w_ev: '35'
+    flags: 2-swords 2-hands
+    magic:
+    speed:
+    start:
+    always:
+    attack:
+    halves:
+    absorbs:
+    cancels:
+    element: Dark
+    formula: "(PA * BR)/100 * WP"
+    weakness:
+    memgen_id: '27'
+    female_only: false
+    strengthens:
+    proc_formula: "(PA * BR)/100 * WP"
+- id: 145
+  name: Bizen Boat
+  item_type: weapon
+  data:
+    hp:
+    mp:
+    wp: '16'
+    add:
+    ev_m:
+    ev_p:
+    jump:
+    move:
+    proc: Silence
+    w_ev: '35'
+    flags: 2-swords 2-hands
+    magic:
+    speed:
+    start:
+    always:
+    attack:
+    halves:
+    absorbs:
+    cancels:
+    element:
+    formula: "(PA * BR)/100 * WP"
+    weakness:
+    memgen_id: '28'
+    female_only: false
+    strengthens:
+    proc_formula:
+- id: 146
+  name: Murasame
+  item_type: weapon
+  data:
+    hp:
+    mp:
+    wp: '14'
+    add:
+    ev_m:
+    ev_p:
+    jump:
+    move:
+    proc: Double Blow
+    w_ev: '35'
+    flags: 2-swords 2-hands
+    magic:
+    speed:
+    start:
+    always:
+    attack: '1'
+    halves:
+    absorbs:
+    cancels:
+    element:
+    formula: "(PA * BR)/100 * WP"
+    weakness:
+    memgen_id: '29'
+    female_only: false
+    strengthens:
+    proc_formula: "(PA * BR)/100 * WP"
+- id: 147
+  name: Heaven's Cloud
+  item_type: weapon
+  data:
+    hp:
+    mp:
+    wp: '13'
+    add:
+    ev_m:
+    ev_p:
+    jump:
+    move:
+    proc: Double Blow
+    w_ev: '35'
+    flags: 2-swords 2-hands
+    magic:
+    speed:
+    start:
+    always:
+    attack:
+    halves:
+    absorbs:
+    cancels:
+    element: Water
+    formula: "(PA * BR)/100 * WP"
+    weakness:
+    memgen_id: 2A
+    female_only: false
+    strengthens:
+    proc_formula: "(PA * BR)/100 * WP"
+- id: 148
+  name: Kiyomori
+  item_type: weapon
+  data:
+    hp:
+    mp:
+    wp: '10'
+    add:
+    ev_m:
+    ev_p:
+    jump:
+    move:
+    proc: Double Blow
+    w_ev: '35'
+    flags: 2-swords 2-hands
+    magic:
+    speed:
+    start: Protect Shell
+    always:
+    attack:
+    halves:
+    absorbs:
+    cancels:
+    element:
+    formula: "(PA * BR)/100 * WP"
+    weakness:
+    memgen_id: 2B
+    female_only: false
+    strengthens:
+    proc_formula: "(PA * BR)/100 * WP"
+- id: 149
+  name: Muramasa
+  item_type: weapon
+  data:
+    hp:
+    mp:
+    wp: '15'
+    add:
+    ev_m:
+    ev_p:
+    jump:
+    move:
+    proc: Double Blow
+    w_ev: '35'
+    flags: 2-swords 2-hands
+    magic:
+    speed:
+    start:
+    always:
+    attack:
+    halves:
+    absorbs:
+    cancels:
+    element:
+    formula: "(PA * BR)/100 * WP"
+    weakness:
+    memgen_id: 2C
+    female_only: false
+    strengthens:
+    proc_formula: "(PA * BR)/100 * WP"
+- id: 150
+  name: Kikuichimonji
+  item_type: weapon
+  data:
+    hp:
+    mp:
+    wp: '14'
+    add:
+    ev_m:
+    ev_p:
+    jump:
+    move:
+    proc: Double Blow
+    w_ev: '35'
+    flags: 2-swords 2-hands
+    magic:
+    speed: '1'
+    start:
+    always:
+    attack:
+    halves:
+    absorbs:
+    cancels:
+    element:
+    formula: "(PA * BR)/100 * WP"
+    weakness:
+    memgen_id: 2D
+    female_only: false
+    strengthens:
+    proc_formula: "(PA * BR)/100 * WP"
+- id: 151
+  name: Masamune
+  item_type: weapon
+  data:
+    hp:
+    mp:
+    wp: '12'
+    add:
+    ev_m:
+    ev_p:
+    jump:
+    move:
+    proc: Double Blow
+    w_ev: '35'
+    flags: 2-swords 2-hands
+    magic:
+    speed:
+    start: Haste
+    always:
+    attack:
+    halves:
+    absorbs:
+    cancels:
+    element:
+    formula: "(PA * BR)/100 * WP"
+    weakness: Fire Lightning
+    memgen_id: 2E
+    female_only: false
+    strengthens:
+    proc_formula: "(PA * BR)/100 * WP"
+- id: 152
+  name: Chirijiraden
+  item_type: weapon
+  data:
+    hp:
+    mp:
+    wp: '14'
+    add:
+    ev_m:
+    ev_p:
+    jump:
+    move:
+    proc: Double Blow
+    w_ev: '35'
+    flags: 2-swords 2-hands
+    magic: '2'
+    speed:
+    start:
+    always:
+    attack:
+    halves:
+    absorbs:
+    cancels:
+    element:
+    formula: "(PA * BR)/100 * WP"
+    weakness:
+    memgen_id: 2F
+    female_only: false
+    strengthens:
+    proc_formula: "(PA * BR)/100 * WP"
+- id: 153
+  name: Battle Axe
+  item_type: weapon
+  data:
+    hp:
+    mp:
+    wp: '15'
+    add:
+    ev_m:
+    ev_p:
+    jump:
+    move:
+    proc: Decapitate
+    w_ev: '40'
+    flags: 2-hands only
+    magic:
+    speed:
+    start:
+    always:
+    attack: '1'
+    halves:
+    absorbs:
+    cancels:
+    element:
+    formula: "(1..PA) * WP"
+    weakness:
+    memgen_id: '30'
+    female_only: false
+    strengthens:
+    proc_formula: "(85% target max HP, magic evade)"
+- id: 154
+  name: Golem Axe
+  item_type: weapon
+  data:
+    hp:
+    mp:
+    wp: '13'
+    add:
+    ev_m:
+    ev_p:
+    jump:
+    move:
+    proc: Decapitate
+    w_ev: '40'
+    flags: 2-hands only
+    magic:
+    speed:
+    start:
+    always:
+    attack: '3'
+    halves:
+    absorbs:
+    cancels:
+    element: Earth
+    formula: "(1..PA) * WP"
+    weakness:
+    memgen_id: '31'
+    female_only: false
+    strengthens:
+    proc_formula: "(85% target max HP, magic evade)"
+- id: 155
+  name: Tidal Axe
+  item_type: weapon
+  data:
+    hp:
+    mp:
+    wp: '20'
+    add:
+    ev_m:
+    ev_p:
+    jump:
+    move:
+    proc: Decapitate
+    w_ev: '40'
+    flags: 2-hands only
+    magic: '3'
+    speed:
+    start:
+    always:
+    attack:
+    halves:
+    absorbs:
+    cancels:
+    element: Water
+    formula: "(1..PA) * WP"
+    weakness:
+    memgen_id: '32'
+    female_only: false
+    strengthens:
+    proc_formula: "(85% target max HP, magic evade)"
+- id: 156
+  name: Rod
+  item_type: weapon
+  data:
+    hp:
+    mp:
+    wp: '3'
+    add:
+    ev_m:
+    ev_p:
+    jump:
+    move:
+    proc:
+    w_ev: '20'
+    flags: 2-swords 2-hands
+    magic:
+    speed: "-1"
+    start:
+    always:
+    attack:
+    halves:
+    absorbs:
+    cancels:
+    element:
+    formula: PA*WP
+    weakness:
+    memgen_id: '33'
+    female_only: false
+    strengthens:
+    proc_formula:
+- id: 157
+  name: Thunder Rod
+  item_type: weapon
+  data:
+    hp:
+    mp:
+    wp: '5'
+    add:
+    ev_m:
+    ev_p:
+    jump:
+    move:
+    proc: Chain Lightning
+    w_ev: '20'
+    flags: 2-swords 2-hands
+    magic:
+    speed:
+    start:
+    always:
+    attack:
+    halves:
+    absorbs:
+    cancels:
+    element: Lightning
+    formula: PA*WP
+    weakness:
+    memgen_id: '34'
+    female_only: false
+    strengthens: Lightning
+    proc_formula: Dmg_F(MA*12)
+- id: 158
+  name: Flame Rod
+  item_type: weapon
+  data:
+    hp:
+    mp:
+    wp: '5'
+    add:
+    ev_m:
+    ev_p:
+    jump:
+    move:
+    proc: Explosion
+    w_ev: '20'
+    flags: 2-swords 2-hands
+    magic:
+    speed:
+    start:
+    always:
+    attack:
+    halves:
+    absorbs:
+    cancels:
+    element: Fire
+    formula: PA*WP
+    weakness:
+    memgen_id: '35'
+    female_only: false
+    strengthens: Fire
+    proc_formula: Dmg_F(MA*18)
+- id: 159
+  name: Water Rod
+  item_type: weapon
+  data:
+    hp:
+    mp:
+    wp: '5'
+    add:
+    ev_m:
+    ev_p:
+    jump:
+    move:
+    proc: Hydragon Pit
+    w_ev: '20'
+    flags: 2-swords 2-hands
+    magic:
+    speed:
+    start:
+    always:
+    attack:
+    halves:
+    absorbs:
+    cancels:
+    element: Water
+    formula: PA*WP
+    weakness:
+    memgen_id: '36'
+    female_only: false
+    strengthens: Water
+    proc_formula: Dmg_F(MA*18)
+- id: 160
+  name: Poison Rod
+  item_type: weapon
+  data:
+    hp:
+    mp:
+    wp: '8'
+    add: Poison
+    ev_m:
+    ev_p:
+    jump:
+    move:
+    proc:
+    w_ev: '20'
+    flags: 2-swords 2-hands
+    magic:
+    speed: '1'
+    start:
+    always:
+    attack:
+    halves:
+    absorbs:
+    cancels:
+    element:
+    formula: PA*WP
+    weakness:
+    memgen_id: '37'
+    female_only: false
+    strengthens:
+    proc_formula:
+- id: 161
+  name: Wizard Rod
+  item_type: weapon
+  data:
+    hp:
+    mp:
+    wp: '4'
+    add:
+    ev_m:
+    ev_p:
+    jump:
+    move:
+    proc:
+    w_ev: '20'
+    flags: 2-swords 2-hands
+    magic: '2'
+    speed:
+    start:
+    always:
+    attack:
+    halves:
+    absorbs:
+    cancels:
+    element:
+    formula: PA*WP
+    weakness:
+    memgen_id: '38'
+    female_only: false
+    strengthens:
+    proc_formula:
+- id: 162
+  name: Dragon Rod
+  item_type: weapon
+  data:
+    hp:
+    mp:
+    wp: '12'
+    add:
+    ev_m:
+    ev_p:
+    jump:
+    move:
+    proc: Bahamut
+    w_ev: '20'
+    flags: 2-swords 2-hands
+    magic:
+    speed:
+    start:
+    always:
+    attack:
+    halves:
+    absorbs:
+    cancels:
+    element:
+    formula: PA*WP
+    weakness:
+    memgen_id: '39'
+    female_only: false
+    strengthens:
+    proc_formula: Dmg_F(MA*20)
+- id: 163
+  name: Faith Rod
+  item_type: weapon
+  data:
+    hp:
+    mp:
+    wp: '5'
+    add: Faith
+    ev_m:
+    ev_p:
+    jump:
+    move:
+    proc:
+    w_ev: '20'
+    flags: 2-swords 2-hands
+    magic:
+    speed:
+    start:
+    always: Faith
+    attack:
+    halves:
+    absorbs:
+    cancels:
+    element:
+    formula: PA*WP
+    weakness:
+    memgen_id: 3A
+    female_only: false
+    strengthens:
+    proc_formula:
+- id: 164
+  name: Oak Staff
+  item_type: weapon
+  data:
+    hp:
+    mp:
+    wp: '10'
+    add:
+    ev_m:
+    ev_p:
+    jump:
+    move:
+    proc:
+    w_ev: '20'
+    flags: 2-swords 2-hands
+    magic:
+    speed:
+    start:
+    always:
+    attack:
+    halves:
+    absorbs:
+    cancels:
+    element:
+    formula: MA*WP
+    weakness:
+    memgen_id: 3B
+    female_only: false
+    strengthens:
+    proc_formula:
+- id: 165
+  name: White Staff
+  item_type: weapon
+  data:
+    hp:
+    mp:
+    wp: '3'
+    add:
+    ev_m:
+    ev_p:
+    jump:
+    move:
+    proc:
+    w_ev: '20'
+    flags: 2-swords 2-hands
+    magic:
+    speed:
+    start:
+    always:
+    attack:
+    halves:
+    absorbs:
+    cancels: Negative Status
+    element:
+    formula: PA*WP
+    weakness:
+    memgen_id: 3C
+    female_only: false
+    strengthens:
+    proc_formula:
+- id: 166
+  name: Healing Staff
+  item_type: weapon
+  data:
+    hp:
+    mp:
+    wp: '14'
+    add:
+    ev_m:
+    ev_p:
+    jump:
+    move:
+    proc:
+    w_ev: '20'
+    flags: 2-swords 2-hands / Heals target
+    magic:
+    speed:
+    start:
+    always:
+    attack:
+    halves:
+    absorbs:
+    cancels:
+    element:
+    formula: MA*WP
+    weakness:
+    memgen_id: 3D
+    female_only: false
+    strengthens:
+    proc_formula:
+- id: 167
+  name: Rainbow Staff
+  item_type: weapon
+  data:
+    hp:
+    mp:
+    wp: '10'
+    add: Discord
+    ev_m:
+    ev_p:
+    jump:
+    move:
+    proc:
+    w_ev: '20'
+    flags: 2-swords 2-hands
+    magic:
+    speed:
+    start:
+    always:
+    attack:
+    halves:
+    absorbs:
+    cancels:
+    element:
+    formula: PA*WP
+    weakness:
+    memgen_id: 3E
+    female_only: false
+    strengthens:
+    proc_formula:
+- id: 168
+  name: Wizard Staff
+  item_type: weapon
+  data:
+    hp:
+    mp:
+    wp: '4'
+    add: Frog
+    ev_m:
+    ev_p:
+    jump:
+    move:
+    proc:
+    w_ev: '20'
+    flags: 2-swords 2-hands
+    magic: '1'
+    speed:
+    start:
+    always:
+    attack:
+    halves:
+    absorbs:
+    cancels:
+    element:
+    formula: MA*WP
+    weakness:
+    memgen_id: 3F
+    female_only: false
+    strengthens:
+    proc_formula:
+- id: 169
+  name: Gold Staff
+  item_type: weapon
+  data:
+    hp:
+    mp:
+    wp: '8'
+    add:
+    ev_m:
+    ev_p:
+    jump:
+    move:
+    proc:
+    w_ev: '20'
+    flags: 2-swords 2-hands
+    magic:
+    speed:
+    start:
+    always:
+    attack:
+    halves:
+    absorbs:
+    cancels: Positive Status
+    element:
+    formula: MA*WP
+    weakness:
+    memgen_id: '40'
+    female_only: false
+    strengthens:
+    proc_formula:
+- id: 170
+  name: Mace of Zeus
+  item_type: weapon
+  data:
+    hp:
+    mp:
+    wp: '8'
+    add:
+    ev_m:
+    ev_p:
+    jump:
+    move:
+    proc:
+    w_ev: '20'
+    flags: 2-swords 2-hands
+    magic:
+    speed: '1'
+    start:
+    always:
+    attack:
+    halves:
+    absorbs:
+    cancels:
+    element:
+    formula: MA*WP
+    weakness:
+    memgen_id: '41'
+    female_only: false
+    strengthens: Lightning
+    proc_formula:
+- id: 171
+  name: Sage Staff
+  item_type: weapon
+  data:
+    hp:
+    mp:
+    wp: '8'
+    add:
+    ev_m:
+    ev_p:
+    jump:
+    move:
+    proc:
+    w_ev: '20'
+    flags: 2-swords 2-hands
+    magic: '2'
+    speed:
+    start:
+    always:
+    attack:
+    halves:
+    absorbs:
+    cancels:
+    element:
+    formula: MA*WP
+    weakness:
+    memgen_id: '42'
+    female_only: false
+    strengthens:
+    proc_formula:
+- id: 172
+  name: Flail
+  item_type: weapon
+  data:
+    hp:
+    mp:
+    wp: '10'
+    add: Don't Act
+    ev_m:
+    ev_p:
+    jump:
+    move:
+    proc:
+    w_ev: '10'
+    flags: 2-swords 2-hands / Concentrate
+    magic:
+    speed:
+    start:
+    always:
+    attack:
+    halves:
+    absorbs:
+    cancels:
+    element:
+    formula: WP*WP No Evade
+    weakness:
+    memgen_id: '43'
+    female_only: false
+    strengthens:
+    proc_formula:
+- id: 173
+  name: Flame Whip
+  item_type: weapon
+  data:
+    hp:
+    mp:
+    wp: '10'
+    add:
+    ev_m:
+    ev_p:
+    jump:
+    move:
+    proc: Explosion
+    w_ev: '10'
+    flags: 2-swords 2-hands / Concentrate
+    magic:
+    speed:
+    start:
+    always:
+    attack:
+    halves:
+    absorbs:
+    cancels:
+    element: Fire
+    formula: WP*WP No Evade
+    weakness:
+    memgen_id: '44'
+    female_only: false
+    strengthens:
+    proc_formula:
+- id: 174
+  name: Morning Star
+  item_type: weapon
+  data:
+    hp:
+    mp:
+    wp: '12'
+    add:
+    ev_m:
+    ev_p:
+    jump:
+    move:
+    proc:
+    w_ev: '10'
+    flags: 2-swords 2-hands / Concentrate
+    magic:
+    speed: "-1"
+    start:
+    always:
+    attack:
+    halves:
+    absorbs:
+    cancels:
+    element:
+    formula: WP*WP No Evade
+    weakness:
+    memgen_id: '45'
+    female_only: false
+    strengthens:
+    proc_formula:
+- id: 175
+  name: Scorpion Tail
+  item_type: weapon
+  data:
+    hp:
+    mp:
+    wp: '11'
+    add: Poison
+    ev_m:
+    ev_p:
+    jump:
+    move:
+    proc:
+    w_ev: '10'
+    flags: 2-swords 2-hands / Concentrate
+    magic:
+    speed:
+    start:
+    always:
+    attack:
+    halves:
+    absorbs:
+    cancels:
+    element:
+    formula: WP*WP No Evade
+    weakness:
+    memgen_id: '46'
+    female_only: false
+    strengthens:
+    proc_formula:
+- id: 176
+  name: Romanda Gun
+  item_type: weapon
+  data:
+    hp:
+    mp:
+    wp: '10'
+    add:
+    ev_m:
+    ev_p:
+    jump:
+    move:
+    proc:
+    w_ev: '5'
+    flags: 5 Range
+    magic:
+    speed:
+    start:
+    always:
+    attack:
+    halves:
+    absorbs:
+    cancels:
+    element:
+    formula: WP*WP No Evade
+    weakness:
+    memgen_id: '47'
+    female_only: false
+    strengthens:
+    proc_formula:
+- id: 177
+  name: Chocobo Gun
+  item_type: weapon
+  data:
+    hp:
+    mp:
+    wp: '12'
+    add:
+    ev_m:
+    ev_p:
+    jump:
+    move:
+    proc:
+    w_ev: '5'
+    flags: Exactly 3 Range
+    magic:
+    speed:
+    start:
+    always:
+    attack:
+    halves:
+    absorbs:
+    cancels:
+    element:
+    formula: WP*WP No Evade
+    weakness:
+    memgen_id: '48'
+    female_only: false
+    strengthens:
+    proc_formula:
+- id: 178
+  name: Stone Gun
+  item_type: weapon
+  data:
+    hp:
+    mp:
+    wp: '14'
+    add:
+    ev_m:
+    ev_p:
+    jump:
+    move:
+    proc:
+    w_ev: '5'
+    flags: 5 Range
+    magic:
+    speed:
+    start: Slow
+    always:
+    attack:
+    halves:
+    absorbs:
+    cancels:
+    element:
+    formula: WP*WP No Evade
+    weakness:
+    memgen_id: '49'
+    female_only: false
+    strengthens:
+    proc_formula:
+- id: 179
+  name: Engineer Rifle
+  item_type: weapon
+  data:
+    hp:
+    mp:
+    wp: '8'
+    add:
+    ev_m:
+    ev_p:
+    jump:
+    move:
+    proc:
+    w_ev: '5'
+    flags: 8 Range
+    magic:
+    speed:
+    start:
+    always:
+    attack:
+    halves:
+    absorbs:
+    cancels:
+    element:
+    formula: WP*WP No Evade
+    weakness:
+    memgen_id: 4C
+    female_only: false
+    strengthens:
+    proc_formula:
+- id: 180
+  name: Bow Gun
+  item_type: weapon
+  data:
+    hp:
+    mp:
+    wp: '10'
+    add:
+    ev_m:
+    ev_p:
+    jump:
+    move:
+    proc: Doubleshot
+    w_ev: '5'
+    flags: 6 Range
+    magic:
+    speed:
+    start:
+    always:
+    attack:
+    halves:
+    absorbs:
+    cancels:
+    element:
+    formula: PA*WP
+    weakness:
+    memgen_id: 4D
+    female_only: false
+    strengthens:
+    proc_formula:
+- id: 181
+  name: Night Killer
+  item_type: weapon
+  data:
+    hp:
+    mp:
+    wp: '10'
+    add:
+    ev_m:
+    ev_p:
+    jump:
+    move:
+    proc: Doubleshot
+    w_ev: '5'
+    flags: 4 Range
+    magic:
+    speed: '1'
+    start:
+    always:
+    attack:
+    halves:
+    absorbs:
+    cancels:
+    element:
+    formula: PA*WP
+    weakness:
+    memgen_id: 4E
+    female_only: false
+    strengthens:
+    proc_formula:
+- id: 182
+  name: Lava Bolt
+  item_type: weapon
+  data:
+    hp:
+    mp:
+    wp: '12'
+    add:
+    ev_m:
+    ev_p:
+    jump:
+    move:
+    proc:
+    w_ev: '5'
+    flags: 4 Range
+    magic:
+    speed:
+    start:
+    always:
+    attack:
+    halves:
+    absorbs:
+    cancels:
+    element: Fire
+    formula: WP*WP No Evade
+    weakness:
+    memgen_id: 4F
+    female_only: false
+    strengthens:
+    proc_formula:
+- id: 183
+  name: Arbalest
+  item_type: weapon
+  data:
+    hp:
+    mp:
+    wp: '7'
+    add:
+    ev_m:
+    ev_p:
+    jump:
+    move:
+    proc: Doubleshot
+    w_ev: '5'
+    flags: 4 Range 2-swords
+    magic:
+    speed:
+    start:
+    always:
+    attack:
+    halves:
+    absorbs:
+    cancels:
+    element:
+    formula: PA*WP
+    weakness:
+    memgen_id: '50'
+    female_only: false
+    strengthens:
+    proc_formula:
+- id: 184
+  name: Hunting Bow
+  item_type: weapon
+  data:
+    hp:
+    mp:
+    wp: '10'
+    add:
+    ev_m:
+    ev_p:
+    jump:
+    move:
+    proc: Doubleshot
+    w_ev: '5'
+    flags: 4 Range
+    magic:
+    speed:
+    start:
+    always: Transparent
+    attack:
+    halves:
+    absorbs:
+    cancels:
+    element:
+    formula: PA*WP
+    weakness:
+    memgen_id: '51'
+    female_only: false
+    strengthens:
+    proc_formula:
+- id: 185
+  name: Gastrafitis
+  item_type: weapon
+  data:
+    hp:
+    mp:
+    wp: '12'
+    add:
+    ev_m:
+    ev_p:
+    jump:
+    move:
+    proc: Doubleshot
+    w_ev: '5'
+    flags: 4 Range
+    magic:
+    speed:
+    start:
+    always:
+    attack:
+    halves:
+    absorbs:
+    cancels:
+    element:
+    formula: PA*WP
+    weakness:
+    memgen_id: '52'
+    female_only: false
+    strengthens:
+    proc_formula:
+- id: 186
+  name: Long Bow
+  item_type: weapon
+  data:
+    hp:
+    mp:
+    wp: '12'
+    add:
+    ev_m:
+    ev_p:
+    jump:
+    move:
+    proc:
+    w_ev: '20'
+    flags: 8 Range / 2-hands only
+    magic:
+    speed:
+    start:
+    always:
+    attack:
+    halves:
+    absorbs:
+    cancels:
+    element:
+    formula: "(PA+SP)/2*WP"
+    weakness:
+    memgen_id: '53'
+    female_only: false
+    strengthens:
+    proc_formula:
+- id: 187
+  name: Silver Bow
+  item_type: weapon
+  data:
+    hp:
+    mp:
+    wp: '13'
+    add:
+    ev_m:
+    ev_p:
+    jump:
+    move:
+    proc:
+    w_ev: '20'
+    flags: 6 Range / 2-hands only
+    magic:
+    speed:
+    start:
+    always:
+    attack:
+    halves:
+    absorbs:
+    cancels:
+    element:
+    formula: "(PA+SP)/2*WP"
+    weakness:
+    memgen_id: '54'
+    female_only: false
+    strengthens:
+    proc_formula:
+- id: 188
+  name: Ice Bow
+  item_type: weapon
+  data:
+    hp:
+    mp:
+    wp: '10'
+    add:
+    ev_m:
+    ev_p:
+    jump:
+    move:
+    proc: Hailstorm
+    w_ev: '20'
+    flags: 6 Range / 2-hands only
+    magic:
+    speed:
+    start:
+    always:
+    attack:
+    halves:
+    absorbs:
+    cancels:
+    element: Ice
+    formula: "(PA+SP)/2*WP"
+    weakness:
+    memgen_id: '55'
+    female_only: false
+    strengthens:
+    proc_formula: PA*12
+- id: 189
+  name: Lightning Bow
+  item_type: weapon
+  data:
+    hp:
+    mp:
+    wp: '10'
+    add:
+    ev_m:
+    ev_p:
+    jump:
+    move:
+    proc: Zap
+    w_ev: '20'
+    flags: 6 Range / 2-hands only
+    magic:
+    speed:
+    start:
+    always:
+    attack:
+    halves:
+    absorbs:
+    cancels:
+    element: Lightning
+    formula: "(PA+SP)/2*WP"
+    weakness:
+    memgen_id: '56'
+    female_only: false
+    strengthens:
+    proc_formula: PA*12
+- id: 190
+  name: Windslash Bow
+  item_type: weapon
+  data:
+    hp:
+    mp:
+    wp: '10'
+    add:
+    ev_m:
+    ev_p:
+    jump:
+    move:
+    proc: Gust
+    w_ev: '20'
+    flags: 6 Range / 2-hands only
+    magic:
+    speed:
+    start:
+    always:
+    attack:
+    halves:
+    absorbs:
+    cancels:
+    element: Wind
+    formula: "(PA+SP)/2*WP"
+    weakness:
+    memgen_id: '57'
+    female_only: false
+    strengthens:
+    proc_formula: PA*12
+- id: 191
+  name: Mythril Bow
+  item_type: weapon
+  data:
+    hp:
+    mp:
+    wp: '10'
+    add:
+    ev_m:
+    ev_p:
+    jump:
+    move:
+    proc:
+    w_ev: '20'
+    flags: 6 Range / 2-hands only
+    magic: '3'
+    speed:
+    start:
+    always:
+    attack:
+    halves:
+    absorbs:
+    cancels:
+    element:
+    formula: "(PA+SP)/2*WP"
+    weakness:
+    memgen_id: '58'
+    female_only: false
+    strengthens:
+    proc_formula:
+- id: 192
+  name: Ultimus Bow
+  item_type: weapon
+  data:
+    hp:
+    mp:
+    wp: '9'
+    add:
+    ev_m:
+    ev_p:
+    jump:
+    move:
+    proc:
+    w_ev: '20'
+    flags: 6 Range / 2-hands only
+    magic:
+    speed: '1'
+    start:
+    always:
+    attack:
+    halves:
+    absorbs:
+    cancels:
+    element:
+    formula: "(PA+SP)/2*WP"
+    weakness:
+    memgen_id: '59'
+    female_only: false
+    strengthens:
+    proc_formula:
+- id: 193
+  name: Cupid Bow
+  item_type: weapon
+  data:
+    hp:
+    mp:
+    wp: '8'
+    add: Charm
+    ev_m:
+    ev_p:
+    jump:
+    move:
+    proc:
+    w_ev: '20'
+    flags: 6 Range / 2-hands only
+    magic:
+    speed:
+    start:
+    always:
+    attack:
+    halves:
+    absorbs:
+    cancels:
+    element:
+    formula: "(PA+SP)/2*WP"
+    weakness:
+    memgen_id: 5A
+    female_only: false
+    strengthens:
+    proc_formula:
+- id: 194
+  name: Perseus Bow
+  item_type: weapon
+  data:
+    hp:
+    mp:
+    wp: '11'
+    add:
+    ev_m:
+    ev_p:
+    jump:
+    move:
+    proc: Critical Hit
+    w_ev: '20'
+    flags: 6 Range / 2-hands only
+    magic:
+    speed:
+    start:
+    always:
+    attack:
+    halves:
+    absorbs:
+    cancels:
+    element:
+    formula: "(PA+SP)/2*WP"
+    weakness:
+    memgen_id: 5B
+    female_only: false
+    strengthens:
+    proc_formula: "(85% target max HP, magic evade)"
+- id: 195
+  name: Ramia Harp
+  item_type: weapon
+  data:
+    hp:
+    mp:
+    wp: '10'
+    add: Confusion
+    ev_m:
+    ev_p:
+    jump:
+    move:
+    proc:
+    w_ev: '10'
+    flags: Exactly 3 Range
+    magic:
+    speed:
+    start:
+    always:
+    attack:
+    halves:
+    absorbs:
+    cancels:
+    element:
+    formula: "(PA+MA)/2 * WP"
+    weakness:
+    memgen_id: 5C
+    female_only: false
+    strengthens:
+    proc_formula:
+- id: 196
+  name: Bloody Strings
+  item_type: weapon
+  data:
+    hp:
+    mp:
+    wp: '13'
+    add:
+    ev_m:
+    ev_p:
+    jump:
+    move:
+    proc:
+    w_ev: '10'
+    flags: Exactly 3 Range / leeches HP
+    magic:
+    speed:
+    start:
+    always:
+    attack:
+    halves:
+    absorbs:
+    cancels:
+    element: Dark
+    formula: "(PA+MA)/2 * WP"
+    weakness:
+    memgen_id: 5D
+    female_only: false
+    strengthens:
+    proc_formula:
+- id: 197
+  name: Fairy Harp
+  item_type: weapon
+  data:
+    hp:
+    mp:
+    wp: '8'
+    add: Charm
+    ev_m:
+    ev_p:
+    jump:
+    move:
+    proc:
+    w_ev: '10'
+    flags: Exactly 3 Range
+    magic:
+    speed:
+    start:
+    always:
+    attack:
+    halves:
+    absorbs:
+    cancels:
+    element:
+    formula: "(PA+MA)/2 * WP"
+    weakness:
+    memgen_id: 5E
+    female_only: false
+    strengthens:
+    proc_formula:
+- id: 198
+  name: Battle Dict
+  item_type: weapon
+  data:
+    hp:
+    mp:
+    wp: '12'
+    add:
+    ev_m:
+    ev_p:
+    jump:
+    move:
+    proc: Diminish
+    w_ev: '15'
+    flags: Exactly 3 Range
+    magic:
+    speed:
+    start:
+    always:
+    attack:
+    halves:
+    absorbs:
+    cancels:
+    element:
+    formula: "(PA+MA)/2 * WP"
+    weakness:
+    memgen_id: 5F
+    female_only: false
+    strengthens:
+    proc_formula: I have no idea
+- id: 199
+  name: Monster Dict
+  item_type: weapon
+  data:
+    hp:
+    mp:
+    wp: '13'
+    add:
+    ev_m:
+    ev_p:
+    jump:
+    move:
+    proc: Bio 3
+    w_ev: '15'
+    flags: Exactly 3 Range
+    magic:
+    speed:
+    start:
+    always:
+    attack:
+    halves:
+    absorbs:
+    cancels:
+    element:
+    formula: "(PA+MA)/2 * WP"
+    weakness:
+    memgen_id: '60'
+    female_only: false
+    strengthens:
+    proc_formula: "(8*MA) chance to add multiple status"
+- id: 200
+  name: Papyrus Plate
+  item_type: weapon
+  data:
+    hp:
+    mp:
+    wp: '9'
+    add:
+    ev_m:
+    ev_p:
+    jump:
+    move:
+    proc: Melt
+    w_ev: '15'
+    flags: Exactly 3 Range
+    magic:
+    speed:
+    start:
+    always:
+    attack:
+    halves:
+    absorbs:
+    cancels:
+    element:
+    formula: "(PA+MA)/2 * WP"
+    weakness:
+    memgen_id: '61'
+    female_only: false
+    strengthens:
+    proc_formula: Dmg_F(MA*60)
+- id: 201
+  name: Madlemgen
+  item_type: weapon
+  data:
+    hp:
+    mp:
+    wp: '11'
+    add:
+    ev_m:
+    ev_p:
+    jump:
+    move:
+    proc: Dark Holy
+    w_ev: '15'
+    flags: Exactly 3 Range
+    magic:
+    speed:
+    start:
+    always:
+    attack:
+    halves:
+    absorbs:
+    cancels:
+    element:
+    formula: "(PA+MA)/2 * WP"
+    weakness:
+    memgen_id: '62'
+    female_only: false
+    strengthens:
+    proc_formula: Dmg_F(MA*45)
+- id: 202
   name: Javelin
   item_type: weapon
   data:
@@ -6331,7 +6039,7 @@
     add:
     ev_m:
     ev_p:
-    jump: '2'
+    jump:
     move:
     proc:
     w_ev: '20'
@@ -6347,10 +6055,71 @@
     element:
     formula: PA*WP
     weakness:
+    memgen_id: '63'
     female_only: false
     strengthens:
-
-- id: 142
+    proc_formula:
+- id: 203
+  name: Spear
+  item_type: weapon
+  data:
+    hp:
+    mp:
+    wp: '10'
+    add:
+    ev_m:
+    ev_p:
+    jump:
+    move:
+    proc:
+    w_ev: '20'
+    flags: 2 Range / 2-hands
+    magic:
+    speed:
+    start:
+    always:
+    attack: '1'
+    halves:
+    absorbs:
+    cancels:
+    element:
+    formula: PA*WP
+    weakness:
+    memgen_id: '64'
+    female_only: false
+    strengthens:
+    proc_formula:
+- id: 204
+  name: Mythril Spear
+  item_type: weapon
+  data:
+    hp:
+    mp:
+    wp: '10'
+    add:
+    ev_m:
+    ev_p:
+    jump:
+    move:
+    proc:
+    w_ev: '20'
+    flags: 2 Range / 2-hands
+    magic: '2'
+    speed:
+    start:
+    always:
+    attack:
+    halves:
+    absorbs:
+    cancels:
+    element:
+    formula: PA*WP
+    weakness:
+    memgen_id: '65'
+    female_only: false
+    strengthens:
+    proc_formula:
+- id: 205
   name: Partisan
   item_type: weapon
   data:
@@ -6360,7 +6129,7 @@
     add:
     ev_m:
     ev_p:
-    jump: '2'
+    jump:
     move:
     proc: Double Blow
     w_ev: '20'
@@ -6376,10 +6145,11 @@
     element:
     formula: PA*WP
     weakness:
+    memgen_id: '66'
     female_only: false
     strengthens:
-
-- id: 216
+    proc_formula: PA*WP
+- id: 206
   name: Oberisk
   item_type: weapon
   data:
@@ -6389,7 +6159,7 @@
     add:
     ev_m:
     ev_p:
-    jump: '2'
+    jump:
     move:
     proc:
     w_ev: '20'
@@ -6405,11 +6175,282 @@
     element:
     formula: PA*WP
     weakness:
+    memgen_id: '67'
     female_only: false
     strengthens:
-
-- id: 87
-  name: Ninja Knife
+    proc_formula:
+- id: 207
+  name: Holy Lance
+  item_type: weapon
+  data:
+    hp:
+    mp:
+    wp: '8'
+    add:
+    ev_m:
+    ev_p:
+    jump:
+    move:
+    proc:
+    w_ev: '20'
+    flags: 2 Range / 2-hands
+    magic:
+    speed:
+    start:
+    always:
+    attack:
+    halves:
+    absorbs:
+    cancels:
+    element: Holy
+    formula: PA*WP
+    weakness:
+    memgen_id: '68'
+    female_only: false
+    strengthens:
+    proc_formula:
+- id: 208
+  name: Dragon Whisker
+  item_type: weapon
+  data:
+    hp:
+    mp:
+    wp: '10'
+    add:
+    ev_m:
+    ev_p:
+    jump:
+    move:
+    proc: Fire Breath
+    w_ev: '20'
+    flags: 2 Range / 2-hands / 2-swords
+    magic:
+    speed:
+    start:
+    always:
+    attack:
+    halves:
+    absorbs:
+    cancels:
+    element:
+    formula: PA*WP
+    weakness:
+    memgen_id: '69'
+    female_only: false
+    strengthens:
+    proc_formula: PA*10
+- id: 209
+  name: Javelin II
+  item_type: weapon
+  data:
+    hp:
+    mp:
+    wp: '11'
+    add:
+    ev_m:
+    ev_p:
+    jump:
+    move:
+    proc:
+    w_ev: '20'
+    flags: 2 Range / 2-hands
+    magic:
+    speed:
+    start:
+    always:
+    attack:
+    halves:
+    absorbs:
+    cancels:
+    element:
+    formula: PA*WP
+    weakness:
+    memgen_id: 6A
+    female_only: false
+    strengthens:
+    proc_formula:
+- id: 210
+  name: Cypress Rod
+  item_type: weapon
+  data:
+    hp:
+    mp:
+    wp: '7'
+    add:
+    ev_m:
+    ev_p:
+    jump:
+    move: '1'
+    proc:
+    w_ev: '30'
+    flags: 2 Range / 2-hands
+    magic:
+    speed:
+    start:
+    always:
+    attack:
+    halves:
+    absorbs:
+    cancels:
+    element: Earth
+    formula: MA*WP
+    weakness:
+    memgen_id: 6B
+    female_only: false
+    strengthens:
+    proc_formula:
+- id: 211
+  name: Battle Bamboo
+  item_type: weapon
+  data:
+    hp:
+    mp:
+    wp: '10'
+    add:
+    ev_m:
+    ev_p:
+    jump:
+    move: '1'
+    proc:
+    w_ev: '30'
+    flags: 2 Range / 2-hands
+    magic:
+    speed:
+    start:
+    always:
+    attack: '2'
+    halves:
+    absorbs:
+    cancels:
+    element:
+    formula: PA*WP
+    weakness:
+    memgen_id: 6C
+    female_only: false
+    strengthens:
+    proc_formula:
+- id: 212
+  name: Musk Rod
+  item_type: weapon
+  data:
+    hp:
+    mp:
+    wp: '5'
+    add: Charm
+    ev_m:
+    ev_p:
+    jump:
+    move: '1'
+    proc:
+    w_ev: '30'
+    flags: 2 Range / 2-hands
+    magic:
+    speed:
+    start:
+    always:
+    attack:
+    halves:
+    absorbs:
+    cancels:
+    element:
+    formula: MA*WP
+    weakness:
+    memgen_id: 6D
+    female_only: false
+    strengthens:
+    proc_formula:
+- id: 213
+  name: Iron Fan
+  item_type: weapon
+  data:
+    hp:
+    mp:
+    wp: '8'
+    add: Confusion
+    ev_m:
+    ev_p:
+    jump:
+    move: '1'
+    proc:
+    w_ev: '30'
+    flags: 2 Range / 2-hands
+    magic:
+    speed:
+    start:
+    always:
+    attack:
+    halves:
+    absorbs:
+    cancels:
+    element:
+    formula: MA*WP
+    weakness:
+    memgen_id: 6E
+    female_only: false
+    strengthens:
+    proc_formula:
+- id: 214
+  name: Gokuu Rod
+  item_type: weapon
+  data:
+    hp:
+    mp:
+    wp: '9'
+    add: Innocent
+    ev_m:
+    ev_p:
+    jump:
+    move: '1'
+    proc:
+    w_ev: '30'
+    flags: 2 Range / 2-hands
+    magic:
+    speed:
+    start:
+    always:
+    attack:
+    halves:
+    absorbs:
+    cancels:
+    element:
+    formula: MA*WP
+    weakness:
+    memgen_id: 6F
+    female_only: false
+    strengthens:
+    proc_formula:
+- id: 215
+  name: Ivory Rod
+  item_type: weapon
+  data:
+    hp:
+    mp:
+    wp: '5'
+    add:
+    ev_m:
+    ev_p:
+    jump:
+    move: '1'
+    proc:
+    w_ev: '30'
+    flags: 2 Range / 2-hands / Absorb MP
+    magic:
+    speed:
+    start:
+    always:
+    attack:
+    halves:
+    absorbs:
+    cancels:
+    element:
+    formula: PA*WP
+    weakness:
+    memgen_id: '70'
+    female_only: false
+    strengthens:
+    proc_formula:
+- id: 216
+  name: Octagon Rod
   item_type: weapon
   data:
     hp:
@@ -6419,10 +6460,40 @@
     ev_m:
     ev_p:
     jump:
-    move:
+    move: '1'
     proc:
-    w_ev: '20'
-    flags: 2-swords 2-hands / No Evade
+    w_ev: '30'
+    flags: 2 Range / 2-hands
+    magic:
+    speed:
+    start: Innocent
+    always:
+    attack:
+    halves:
+    absorbs:
+    cancels:
+    element:
+    formula: MA*WP
+    weakness:
+    memgen_id: '71'
+    female_only: false
+    strengthens:
+    proc_formula:
+- id: 217
+  name: Whale Whisker
+  item_type: weapon
+  data:
+    hp:
+    mp:
+    wp: '14'
+    add:
+    ev_m:
+    ev_p:
+    jump:
+    move: '1'
+    proc:
+    w_ev: '30'
+    flags: 2 Range
     magic:
     speed:
     start:
@@ -6432,55 +6503,177 @@
     absorbs:
     cancels:
     element:
-    formula: WP*WP
+    formula: MA*WP
     weakness:
+    memgen_id: '72'
     female_only: false
     strengthens:
-
-- id: 118
-  name: Flail
+    proc_formula:
+- id: 218
+  name: G Bag
   item_type: weapon
   data:
     hp:
     mp:
-    wp: '9'
-    add: Don't Act
+    wp: '10'
+    add:
     ev_m:
     ev_p:
     jump:
     move:
     proc:
-    w_ev: '10'
-    flags: 2-swords 2-hands / No Evade
-    magic:
+    w_ev: '5'
+    flags:
+    magic: '2'
     speed:
     start:
     always:
-    attack:
+    attack: '1'
     halves:
     absorbs:
     cancels:
     element:
-    formula: WP*WP
+    formula: "(1..PA) * WP"
     weakness:
-    female_only: false
+    memgen_id: '73'
+    female_only: true
     strengthens:
-
-- id: 207
-  name: Scorpion Tail
+    proc_formula:
+- id: 219
+  name: H Bag
   item_type: weapon
   data:
     hp:
     mp:
-    wp: '11'
-    add: Poison
+    wp: '12'
+    add:
     ev_m:
     ev_p:
     jump:
     move:
     proc:
-    w_ev: '10'
-    flags: 2-swords 2-hands / No Evade
+    w_ev: '5'
+    flags:
+    magic:
+    speed: '1'
+    start:
+    always:
+    attack:
+    halves:
+    absorbs:
+    cancels:
+    element:
+    formula: "(1..PA) * WP"
+    weakness:
+    memgen_id: '76'
+    female_only: true
+    strengthens:
+    proc_formula:
+- id: 220
+  name: FS Bag
+  item_type: weapon
+  data:
+    hp:
+    mp:
+    wp: '13'
+    add:
+    ev_m:
+    ev_p:
+    jump:
+    move:
+    proc:
+    w_ev: '5'
+    flags:
+    magic:
+    speed:
+    start:
+    always: Regen
+    attack:
+    halves:
+    absorbs:
+    cancels:
+    element:
+    formula: "(1..PA) * WP"
+    weakness:
+    memgen_id: '74'
+    female_only: true
+    strengthens:
+    proc_formula:
+- id: 221
+  name: Persia
+  item_type: weapon
+  data:
+    hp:
+    mp:
+    wp: '13'
+    add:
+    ev_m:
+    ev_p:
+    jump:
+    move:
+    proc: Cancel Charging
+    w_ev: '45'
+    flags: 2 Range / 2-hands
+    magic:
+    speed: '1'
+    start:
+    always:
+    attack:
+    halves:
+    absorbs:
+    cancels:
+    element:
+    formula: "(PA+MA)/2 * WP"
+    weakness:
+    memgen_id: '77'
+    female_only: false
+    strengthens:
+    proc_formula:
+- id: 222
+  name: Cashmere
+  item_type: weapon
+  data:
+    hp:
+    mp:
+    wp: '14'
+    add:
+    ev_m:
+    ev_p:
+    jump:
+    move:
+    proc: Cancel Charging
+    w_ev: '45'
+    flags: 2 Range / 2-hands
+    magic:
+    speed:
+    start: Don't Move
+    always:
+    attack:
+    halves:
+    absorbs:
+    cancels:
+    element:
+    formula: "(PA+MA)/2 * WP"
+    weakness:
+    memgen_id: '78'
+    female_only: false
+    strengthens:
+    proc_formula:
+- id: 223
+  name: Ryozan Silk
+  item_type: weapon
+  data:
+    hp:
+    mp:
+    wp: '15'
+    add:
+    ev_m:
+    ev_p:
+    jump:
+    move:
+    proc: Cancel Charging
+    w_ev: '45'
+    flags: 2 Range / 2-hands
     magic:
     speed:
     start:
@@ -6490,7 +6683,9 @@
     absorbs:
     cancels:
     element:
-    formula: WP*WP
+    formula: "(PA+MA)/2 * WP"
     weakness:
+    memgen_id: '79'
     female_only: false
     strengthens:
+    proc_formula:

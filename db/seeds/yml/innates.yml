@@ -1,40 +1,31 @@
----
-- id: 2
-  job_id: 2
-  skill_id: 25
-
-- id: 3
-  job_id: 5
-  skill_id: 107
-
-- id: 4
-  job_id: 10
-  skill_id: 84
-
-- id: 5
-  job_id: 11
-  skill_id: 96
-
-- id: 6
+---                                     
+- id: 81                                
+  job_id: 2                             
+  skill_id: 27                          
+- id: 82                                
+  job_id: 5                             
+  skill_id: 66                          
+- id: 83                                
+  job_id: 10                            
+  skill_id: 52                          
+- id: 84                                
+  job_id: 11                            
+  skill_id: 151                         
+- id: 85                                
   job_id: 13
-  skill_id: 51
-
-- id: 8
+  skill_id: 184
+- id: 86
   job_id: 15
-  skill_id: 170
-
-- id: 9
+  skill_id: 207
+- id: 87
   job_id: 16
-  skill_id: 119
-
-- id: 10
+  skill_id: 219
+- id: 88
   job_id: 20
-  skill_id: 84
-
-- id: 11
+  skill_id: 52
+- id: 89
   job_id: 20
-  skill_id: 61
-
-- id: 12
+  skill_id: 39
+- id: 90
   job_id: 20
-  skill_id: 107
+  skill_id: 66
