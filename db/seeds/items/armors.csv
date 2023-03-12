@@ -10,7 +10,7 @@ Diamond Armor,B3,Kn Ln Sm,135,0,1,1,,,,,,,,,,,Equip Armor
 Platina Armor,B4,Kn Ln Sm,135,0,,,,,,,,Fire Lightning,,,Haste,,Equip Armor
 Carabini Mail,B5,Kn Ln Sm,70,0,,,1,,,,,,,,,,Equip Armor
 Crystal Mail,B6,Kn Ln Sm,120,0,,,,,,,Ice,,,Ice,,,Equip Armor
-Genji Armor,B7,Kn Ln Sm,120,0,,,,,,Chicken Frog,,,,,,,Equip Armor
+Genji Armor,B7,Kn Ln Sm,120,0,,,,,,Stop Frog,,,,,,,Equip Armor
 Reflect Mail,B8,Kn Ln Sm,120,0,,,,,,,,,,,,Reflect,Equip Armor
 Maximillian,B9,Kn Ln Sm,155,0,,,,,,,,,,,,,Equip Armor
 Clothes,BA,NOT Kn Ln Sm,70,0,,,,1,2,,,,,,,,
@@ -27,11 +27,11 @@ Earth Clothes,C4,NOT Kn Ln Sm,85,10,,,,,,,Earth,,,Earth,,,
 Secret Clothes,C5,NOT Kn Ln Sm,50,0,,,1,,,,,,,,,,
 Black Costume,C6,NOT Kn Ln Sm,85,0,,,,,,Stop Fire,,,,,,,
 Rubber Costume,C7,NOT Kn Ln Sm,40,0,,,,,,Charm Lightning,,,,,,,
-Linen Robe,C8,Pr Wi TM Su Me Or Ge Sg,20,50,,,,,,,,,,,,,
-Silk Robe,C9,Pr Wi TM Su Me Or Ge Sg,60,30,,,-1,,,,,,,,,,
-Wizard Robe,CA,Pr Wi TM Su Me Or Ge Sg,30,22,,2,,,,,,,,,,,
-Chameleon Robe,CB,Pr Wi TM Su Me Or Ge Sg,50,34,,,,,,,,,Dark,,,,
-White Robe,CC,Pr Wi TM Su Me Or Ge Sg,50,34,,,,,,Dead,Holy,,,Holy,,,
-Black Robe,CD,Pr Wi TM Su Me Or Ge Sg,60,30,,,,,,,,,,Ice/Lightning/Wind,,,
-Light Robe,CE,Pr Wi TM Su Me Or Ge Sg,0,25,,,,,,,,,,,,Regen,
-Robe of Lords,CF,Pr Wi TM Su Me Or Ge Sg,40,20,,,,,,,,Fire,,,,Faith,
+Linen Robe,C8,Pr Wi TM Su Me Or Ge Sb,20,50,,,,,,,,,,,,,
+Silk Robe,C9,Pr Wi TM Su Me Or Ge Sb,60,30,,,-1,,,,,,,,,,
+Wizard Robe,CA,Pr Wi TM Su Me Or Ge Sb,30,22,,2,,,,,,,,,,,
+Chameleon Robe,CB,Pr Wi TM Su Me Or Ge Sb,50,34,,,,,,,,,Dark,,,,
+White Robe,CC,Pr Wi TM Su Me Or Ge Sb,50,34,,,,,,Dead,Holy,,,Holy,,,
+Black Robe,CD,Pr Wi TM Su Me Or Ge Sb,60,30,,,,,,,,,,"Ice Lightning Wind",,,
+Light Robe,CE,Pr Wi TM Su Me Or Ge Sb,0,25,,,,,,,,,,,,Regen,
+Robe of Lords,CF,Pr Wi TM Su Me Or Ge Sb,40,20,,,,,,,,Lightning,,,,Faith,
