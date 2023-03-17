@@ -41,9 +41,9 @@ Great Morbol,84,6000,491,126,8,4,3,17,17,Tentacle,Bad Breath,Decay,,Regenerator,
 Behemoth,85,2000,384,17,8,4,3,15,17,Stab Up,Lifebreak,Gigaflare,,MP Switch,None,None,Cannot Enter Water,Immune: Float,13,180,100,115,150,160
 King Behemoth,86,4000,406,17,8,4,3,15,13,Stab Up,Lifebreak,Ulmaguest,,MP Switch,None,None,Cannot Enter Water,Immune: Float,13,190,100,115,180,160
 Dark Behemoth,87,6000,427,17,8,4,3,15,13,Stab Up,Lifebreak,Sudden Cry,,MP Switch,None,None,Cannot Enter Water,Immune: Float,18,200,100,115,200,160
-Red Dragon,8A,2000,462,20,8,5,3,16,13,Dash,Tail Swing,Fire Breath,,Dragon Spirit,None,Move-HP UP,Cannot Enter Water,"Immune: Float, Absorbs: Fire",20,190,75,115,150,130
+Red Dragon,8A,2000,462,20,8,5,3,16,13,Dash,Tail Swing,Fire Breath,,Dragon Spirit,None,Move-HP UP,Cannot Enter Water,"Immune: Float, Absorbs: Fire",20,220,115,115,170,130
 Blue Dragon,89,4000,486,19,8,5,3,17,13,Dash,Tail Swing,Ice Breath,,Dragon Spirit,None,Move-HP UP,Cannot Enter Water,"Immune: Float, Absorbs: Ice",20,200,110,115,160,130
-Dragon,88,6000,535,13,8,5,3,18,15,Dash,Tail Swing,Thunder Breath,,Dragon Spirit,None,Move-HP UP,Cannot Enter Water,"Immune: Float, Absorbs: Thunder",20,220,115,115,170,130
+Dragon,88,6000,535,13,8,5,3,18,15,Dash,Tail Swing,Thunder Breath,,Dragon Spirit,None,Move-HP UP,Cannot Enter Water,"Immune: Float, Absorbs: Thunder",20,190,75,115,150,130
 Hyudra,8B,2000,342,8,8,4,4,17,18,Triple Breath,Dark Whisper,Triple Venom,,Counter,Overflow,Fly,Cannot Enter Water,"Immune: Float, Absorbs: Wind, Dark",0,160,50,115,170,110
 Hydra,8C,4000,320,28,8,4,4,17,17,Triple Breath,Dark Whisper,Vicious Flame,,Counter,Overflow,Fly,Cannot Enter Water,"Immune: Float, Absorbs: Fire, Dark",0,150,160,115,165,110
 Tiamat,8D,6000,320,16,9,4,4,17,19,Triple Breath,Dark Whisper,Vicious Thunder,,Counter,Overflow,Fly,Cannot Enter Water,"Immune: Float, Absorbs: Lightning, Dark",0,150,90,115,160,110
