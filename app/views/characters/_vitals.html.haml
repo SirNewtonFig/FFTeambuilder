@@ -2,7 +2,7 @@
 
 #vitals.flex-1.px-2.flex.flex-col.justify-between.h-30.py-2
   = form_with(url: character_meta_path(character_id: i), method: :patch, data: { controller: 'form' }, class: 'w-48') do |f|
-    %input.w-48.text-xl.text-white.bg-right.py-0.px-0.bg-transparent.border-0.border-b-2.border-transparent.hover:border-menu-dark.appearance-none.focus:outline-none.focus:ring-0.focus:border-menu-dark.peer{ type: 'text', name: 'character[name]', value: char.name, data: { action: 'change->form#submit' } }
+    %input.w-48.text-xl.text-white.bg-right.py-0.px-0.bg-transparent.border-0.border-b-2.border-transparent.hover:border-menu-dark.appearance-none.focus:outline-none.focus:ring-0.focus:border-menu-dark.peer{ type: 'text', name: 'character[name]', value: char.name, maxlength: 16, data: { action: 'change->form#submit' } }
 
   .space-y-2
     .flex.space-x-3.items-center

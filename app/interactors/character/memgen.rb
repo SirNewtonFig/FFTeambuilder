@@ -343,8 +343,9 @@ class Character::Memgen < ActiveInteractor::Base
         .chars
         .map{|c| TEXT_ENCODINGS[c] }
         .join
+        .first(32)
 
-      block << chars.first(32)
+      block << chars
 
       pad!('FE', 17 - chars.length/2)
     end
