@@ -73,7 +73,8 @@ skills.each do |row|
       counter_flood: row['Counter Flood?'],
       move: row['Move'],
       jump: row['Jump'],
-      memgen_id: row['Skill ID'].rjust(4, '0')
+      memgen_id: row['Skill ID'].rjust(4, '0'),
+      mimic: ('Yes' unless row['Mimic?'] == 'No')
     }
   )
 
