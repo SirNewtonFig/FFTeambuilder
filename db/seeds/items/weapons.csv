@@ -10,7 +10,7 @@ Assassin Dagger,8,9,10,2-swords,Sq Ch Th Me Nj Dc,,,1,,,,,,,,,,,,(PA+SP)/2*WP,,2
 Air Knife,9,9,10,2-swords,Sq Ch Th Me Nj Dc,,,,,,,,Wind,Zephyr,,,,,,(PA+SP)/2*WP,Dmg_(SP * WP),2,,
 Tonberry Knife,A,1,10,2-swords,Sq Ch Th Me Nj Dc,,,,,,Death Sentence,,,,,,,,,(PA+SP)/2*WP,,2,,
 Hidden Knife,B,11,20,2-swords 2-hands,Th Nj,,,1,,,,,,,,,,,,(PA+SP)/2*WP,,2,,
-Ninja Knife,C,10,20,2-swords 2-hands,Th Nj,,,1,,,,,,,,,,,,WP*WP No Evade,,7,,
+Ninja Knife,C,10,20,2-swords 2-hands,Th Nj,,,1,,,,,,,,,,,,WP*WP,,7,,
 Short Edge,D,10,40,2-swords 2-hands,Th Nj,,,1,,,,,,,,,,,,(PA+SP)/2*WP,,2,,
 Ninja Edge,E,8,20,2-swords 2-hands,Th Nj,,,1,,,,,,,,,,,,SP*WP,,8,,
 Spell Edge,F,9,20,2-swords 2-hands,Th Nj,,2,1,,,,,,,,,,,,(PA+SP)/2*WP,,2,,
@@ -22,7 +22,7 @@ Long Sword,14,11,25,2-swords 2-hands,Sq Kn Ge Sb,,,,1,,,,,,,,,,,PA*WP,,1,,Equip 
 Parrying Sword,15,10,50,2-swords 2-hands,Sq Kn Ge Sb,,,,,,,,,,,,,,,PA*WP,,1,,Equip Sword
 Mythril Sword,16,7,25,2-swords 2-hands,Sq Kn Ge Sb,,2,,,,,,,,,,,,,PA*WP,,1,,Equip Sword
 Blood Sword,17,10,25,2-swords 2-hands / leeches HP,Sq Kn Ge Sb,,,,,,,,Dark,,,,,,,PA*WP,,1,,Equip Sword
-Coral Sword,18,9,25,2-swords 2-hands,Sq Kn Ge Sb,,,,,,,,Lightning,Mjollnir,,,,,,PA*WP,Dmg_F(MA*28),1,,Equip Sword
+Coral Sword,18,10,25,2-swords 2-hands,Sq Kn Ge Sb,,,,,,,,Lightning,Mjollnir,,,,,,PA*WP,Dmg_F(MA*20),1,,Equip Sword
 Ancient Sword,19,10,25,2-swords 2-hands,Sq Kn Ge Sb,,,,,,Don't Act,,,,,,,,,PA*WP,,1,,Equip Sword
 Scramasax,1A,10,25,2-swords 2-hands,Sq Kn Ge Sb,,,,,,,,,Double Blow,,,,,,PA*WP,PA*WP,1,,Equip Sword
 Paladin Sword,1B,10,25,2-swords 2-hands,Sq Kn Ge Sb,,,,,,,,Holy,Holy Strike,,,,,,PA*WP,(PA+6)/2*MA,1,,Equip Sword
@@ -46,7 +46,7 @@ Muramasa,2C,14,35,2-swords 2-hands,Sm,,,,,,,,,Double Blow,,,,,,(PA * BR)/100 * W
 Kikuichimonji,2D,13,35,2-swords 2-hands,Sm,,,1,,,,,,Double Blow,,,,,,(PA * BR)/100 * WP,(PA * BR)/100 * WP,3,,Equip Katana
 Masamune,2E,11,35,2-swords 2-hands,Sm,,,,,,,,,Double Blow,Fire Lightning,,,Haste,,(PA * BR)/100 * WP,(PA * BR)/100 * WP,3,,Equip Katana
 Chirijiraden,2F,13,35,2-swords 2-hands,Sm,,2,,,,,,,Double Blow,,,,,,(PA * BR)/100 * WP,(PA * BR)/100 * WP,3,,Equip Katana
-Battle Axe,30,15,40,2-hands only,Sq Ge,1,,,,,,,,Decapitate,,,,,,(1..PA) * WP,"(85% target max HP, magic evade)",4,,Equip Axe
+Battle Axe,30,15,40,2-hands only,Sq Ge,1,,1,,,,,,Decapitate,,,,,,(1..PA) * WP,"(85% target max HP, magic evade)",4,,Equip Axe
 Golem Axe,31,13,40,2-hands only,Sq Ge,3,,,,,,,Earth,Decapitate,,,,,,(1..PA) * WP,"(85% target max HP, magic evade)",4,,Equip Axe
 Tidal Axe,32,20,40,2-hands only,Sq Ge,,3,,,,,,Water,Decapitate,,,,,,(1..PA) * WP,"(85% target max HP, magic evade)",4,,Equip Axe
 Rod,33,3,20,2-swords 2-hands,Wi Su Or Sb,,,-1,,,,,,,,,,,,PA*WP,,1,,
@@ -65,10 +65,10 @@ Wizard Staff,3F,4,20,2-swords 2-hands,Pr TM Su Or Sb,,1,,,,Frog,,,,,,,,,MA*WP,,5
 Gold Staff,40,8,20,2-swords 2-hands,Pr TM Su Or Sb,,,,,,,Positive Status,,,,,,,,MA*WP,,5,,
 Mace of Zeus,41,8,20,2-swords 2-hands,Pr TM Su Or Sb,,,1,,,,,,,,,Lightning,,,MA*WP,,5,,
 Sage Staff,42,8,20,2-swords 2-hands,Pr TM Su Or Sb,,2,,,,,,,,,,,,,MA*WP,,5,,
-Flail,43,10,10,2-swords 2-hands / Concentrate,Sq Pr Nj,,,,,,Don't Act,,,,,,,,,WP*WP No Evade,,7,,
-Flame Whip,44,10,10,2-swords 2-hands / Concentrate,Sq Pr Nj,,,,,,,,Fire,Explosion,,,,,,WP*WP No Evade,,4,,
+Flail,43,10,10,2-swords 2-hands ,Sq Pr Nj,,,,,,Don't Act,,,,,,,,,WP*WP,,7,,
+Flame Whip,44,10,10,2-swords 2-hands,Sq Pr Nj,,,,,,,,Fire,Explosion,,,,,,WP*WP,,4,,
 Morning Star,45,12,10,2-swords 2-hands / Concentrate,Sq Pr Nj,,,-1,,,,,,,,,,,,WP*WP No Evade,,7,,
-Scorpion Tail,46,11,10,2-swords 2-hands / Concentrate,Sq Pr Nj,,,,,,Poison,,,,,,,,,WP*WP No Evade,,7,,
+Scorpion Tail,46,11,10,2-swords 2-hands,Sq Pr Nj,,,,,,Poison,,,,,,,,,WP*WP,,7,,
 Romanda Gun,47,11,5,5 Range,Me,,,,,,,,,,,,,,,WP*WP No Evade,,7,,Equip Gun
 Chocobo Gun,48,13,5,Exactly 3 Range,Me,,,,,,,,,,,,,,,WP*WP No Evade,,7,,Equip Gun
 Stone Gun,49,14,5,5 Range,Me,,,,,,,,,,,,,Slow,,WP*WP No Evade,,7,,Equip Gun

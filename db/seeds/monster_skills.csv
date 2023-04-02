@@ -25,7 +25,7 @@ Energy Blast,3,2,Any,3,,,,CT_00 Hit_F(MA+140)%,,,,
 Psionic Wave,0,2,Any,1,,,Mag,Dmg_((PA+4)/2*MA) 20% Dispel,,Yes,Yes,
 Mind Control,3,1,Any,1,,,Mag,Add: Charm Hit_(MA+60)%,,Yes,Yes,
 Knife Hand,1,,Any,,,,Phys,Dmg_(PA*(PA*Brave/100)),Yes,,Yes,
-Death,4,,Any,,5,Dark,Mag,Dmg(100% max) Hit_F(MA+100)%,,Yes,Yes,Yes
+Death,4,,Any non-self,,5,Dark,Mag,Dmg(100% max) Hit_F(MA+100)%,,Yes,Yes,Yes
 Demi,4,1,Any,1,,Dark,Mag,Dmg(25% max) Hit_F(MA+200)%,,Yes,Yes,Yes
 Demi 2,4,1,Any,1,,Dark,Mag,Dmg(50% max) Hit_F(MA+180)%,,Yes,Yes,Yes
 Koutetsu,,2,Any,2,,Dark,,Dmg_(MA*6),,Yes,Yes,Yes
@@ -43,7 +43,7 @@ Tailwind,0,1,Any,3,,,,Add: Haste Hit_(100%),,,,
 Wind Strike,1,,Any,3,,Wind,Mag,Dmg_(MA*7),,Yes,Yes,
 Zephyr,3,,Any,,,,Phys,"Dmg_(SP*(PA*BR/100)) (SP is XA, +50% if hasted)",Yes,,Yes,
 Peck,1,,Any,1,,,Phys,Dmg_((PA*Brave/100)*PA),,,,
-Gaze,3,,Any,,,,Mag,Add: Petrify Hit_(MA+37)%,,Yes,Yes,
+Gaze,3,,Any,,,,Mag,Add: Petrify Hit_(MA+32)%,,Yes,Yes,
 Straight Dash,1,,Any,2,,,Phys,Dmg_(PA*(PA*Brave/100)),Yes,,Yes,
 Nose Breath,1,,Any,2,,,,Charm Hit_(MA+50)%,Yes,,Yes,
 Please Eat,1,,Any,1,,,,Add: Reraise+Haste+Shell+Protect+Regen Hit_(MA+50)%,,,,
