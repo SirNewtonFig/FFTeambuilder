@@ -26,8 +26,8 @@ Plague,75,6000,342,126,9,5,5,16,35,Eye Beam,Mana Burn,Gaze,,Counter Magic,Halves
 Juravis,76,2000,320,7,12,6,6,15,22,Tailwind,Wind Strike,Zephyr,,CT Save,Absorbs Wind,Fly,Cannot Enter Water,,30,150,40,150,120,85
 Steel Hawk,77,4000,342,10,12,6,6,15,26,Tailwind,Wind Strike,Peck,,CT Save,Absorbs Wind,Fly,Cannot Enter Water,,28,160,60,150,140,90
 Cocatoris,78,6000,363,1,11,6,6,15,28,Tailwind,Wind Strike,Gaze,,CT Save,Absorbs Wind,Fly,Cannot Enter Water,,33,170,10,150,160,100
-Porky,79,2000,333,126,11,4,3,19,13,Straight Dash,Nose Breath,Oink,,HP Restore,DefenseUP,None,Cannot Enter Water,,42,150,255,160,120,160
-Uribo,7A,4000,304,126,11,4,3,19,13,Straight Dash,Nose Breath,Please Eat,,HP Restore,DefenseUP,None,Cannot Enter Water,,36,160,255,160,130,160
+Porky,7A,2000,333,126,11,4,3,19,13,Straight Dash,Nose Breath,Oink,,HP Restore,DefenseUP,None,Cannot Enter Water,,42,150,255,160,120,160
+Uribo,79,4000,304,126,11,4,3,19,13,Straight Dash,Nose Breath,Please Eat,,HP Restore,DefenseUP,None,Cannot Enter Water,,36,160,255,160,130,160
 Wildbow,7B,6000,368,126,11,4,3,19,13,Straight Dash,Nose Breath,Pooh-,,HP Restore,DefenseUP,None,Cannot Enter Water,,39,170,255,160,180,160
 Woodman,7C,2000,406,28,8,4,3,13,28,Leaf Dance,Magic Spirit,Protect Spirit,,Damage Split,Mdef UP,None,Cannot Enter Water,"Absorbs Earth, Immune: Float",0,190,160,115,130,100
 Trent,7D,4000,427,32,8,4,3,13,28,Leaf Dance,Magic Spirit,Blessing of Nature,,Damage Split,Mdef UP,None,Cannot Enter Water,"Absorbs Earth, Immune: Float",0,200,180,115,130,95
