@@ -162,7 +162,7 @@ class Character::Memgen < ActiveInteractor::Base
     end
 
     def serialize_primary!
-      block << character.job.data.dig(character.sex, 'memgen_id')
+      block << str_to_hex(character.job.data.dig(character.sex, 'memgen_id'))
     end
 
     def serialize_palette!
@@ -178,7 +178,7 @@ class Character::Memgen < ActiveInteractor::Base
     end
 
     def serialize_secondary!
-      block << (character.secondary&.data&.dig(character.sex, 'secondary_id') || backup_secondary)
+      block << str_to_hex(character.secondary&.data&.dig(character.sex, 'secondary_id'), default: backup_secondary)
     end
 
     def backup_secondary
@@ -190,40 +190,40 @@ class Character::Memgen < ActiveInteractor::Base
     end
 
     def serialize_reaction!
-      reaction = (character.reaction&.data&.dig('memgen_id') || '0000')
+      reaction = str_to_hex(character.reaction&.data&.dig('memgen_id'), bytes: 2)
 
       block << little_endian(reaction, 2)
     end
 
     def serialize_support!
-      support = (character.support&.data&.dig('memgen_id') || '0000')
+      support = str_to_hex(character.support&.data&.dig('memgen_id'), bytes: 2)
       
       block << little_endian(support, 2)
     end
 
     def serialize_movement!
-      movement = (character.movement&.data&.dig('memgen_id') || '0000')
+      movement = str_to_hex(character.movement&.data&.dig('memgen_id'), bytes: 2)
       
       block << little_endian(movement, 2)
     end
 
     def serialize_helmet!
-      block << (character.helmet&.data&.dig('memgen_id') || 'ff')
+      block << str_to_hex(character.helmet&.data&.dig('memgen_id'), default: 'ff')
     end
 
     def serialize_armor!
-      block << (character.armor&.data&.dig('memgen_id') || 'ff')
+      block << str_to_hex(character.armor&.data&.dig('memgen_id'), default: 'ff')
     end
 
     def serialize_accessory!
-      block << (character.accessory&.data&.dig('memgen_id') || 'ff')
+      block << str_to_hex(character.accessory&.data&.dig('memgen_id'), default: 'ff')
     end
 
     def serialize_rhand_weapon!
       if character.two_hands_engaged?
-        block << character.weapon.data.dig('memgen_id') || 'ff'
+        block << str_to_hex(character.weapon.data.dig('memgen_id'), default: 'ff')
       elsif character.rhand&.weapon?
-        block << character.rhand.data.dig('memgen_id') || 'ff'
+        block << str_to_hex(character.rhand.data.dig('memgen_id'), default: 'ff')
       else
         pad!('ff', 1)
       end
@@ -231,7 +231,7 @@ class Character::Memgen < ActiveInteractor::Base
 
     def serialize_rhand_shield!
       if character.rhand&.shield?
-        block << character.rhand.data.dig('memgen_id') || 'ff'
+        block << str_to_hex(character.rhand.data.dig('memgen_id'), default: 'ff')
       else
         pad!('ff', 1)
       end
@@ -241,13 +241,13 @@ class Character::Memgen < ActiveInteractor::Base
       if character.two_hands_engaged? || !character.lhand&.weapon?
         pad!('ff', 1)
       else
-        block << character.lhand.data.dig('memgen_id') || 'ff'
+        block << str_to_hex(character.lhand.data.dig('memgen_id'), default: 'ff')
       end
     end
 
     def serialize_lhand_shield!
       if character.lhand&.shield?
-        block << character.lhand.data.dig('memgen_id') || 'ff'
+        block << str_to_hex(character.lhand.data.dig('memgen_id'), default: 'ff')
       else
         pad!('ff', 1)
       end
@@ -354,5 +354,11 @@ class Character::Memgen < ActiveInteractor::Base
       padded_str = "%0#{bytes * 2}x" % str.to_i(16)
 
       padded_str.scan(/(..)/).reverse.join
+    end
+
+    def str_to_hex(str, bytes: 1, default: '00')
+      return default * bytes if str.blank?
+
+      "%0#{bytes * 2}x" % str.to_i(16)
     end
 end
