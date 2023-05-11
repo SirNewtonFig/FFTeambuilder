@@ -9,7 +9,7 @@ require 'csv'
 
 jobs = CSV.parse(File.read(Rails.root.join('db/seeds/jobs.csv')), headers: true)
 jobs.each do |row|
-  job = Job.find_or_initialize_by(name: row['Class'])
+  job = Job.find_or_initialize_by(name: row['Class'].strip)
   job.data ||= {}
 
   sex = row['Sex'].downcase
@@ -45,15 +45,17 @@ Prerequisite.upsert_all(YAML.safe_load_file(Rails.root.join('db/seeds/prerequisi
 
 skills = CSV.parse(File.read(Rails.root.join('db/seeds/skills.csv')), headers: true)
 skills.each do |row|
-  job = Job.find_by(name: row['Class'])
-  skill = Skill.find_or_initialize_by(job_id: job.id, name: row['Skill Name'].gsub(/^R:|^S:|^M:/, ''))
-
+  job = Job.find_by(name: row['Class'].strip)
+  
   skill_type = 'action'
   skill_type = 'reaction' if row['Skill Name'].match?(/^R:/)
   skill_type = 'support' if row['Skill Name'].match?(/^S:/)
   skill_type = 'movement' if row['Skill Name'].match?(/^M:/)
 
+  skill = Skill.find_or_initialize_by(skill_type: skill_type, name: row['Skill Name'].gsub(/^R:|^S:|^M:/, '').strip)
+
   skill.update(
+    job: job,
     jp_cost: row['JP Cost'],
     skill_type: skill_type,
     data: {

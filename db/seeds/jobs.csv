@@ -1,12 +1,12 @@
 Abbreviation,Job ID,Secondary ID,Sex,Class,Secondary Name,Innate,HP,MP,Speed,Move,Jump,PA,MA,Evade,HPmult,MPmult,SPmult,PAmult,MAmult
-Sq,4a,5,M,Squire,Basic Skill,,137,20,9,4,3,8,5,10,100,75,100,100,80
-Sq,4a,5,F,Squire,Basic Skill,,123,22,9,4,3,7,6,10,100,75,100,100,80
-Ch,4b,6,M,Chemist,Item,Throw Item,137,20,8,3,3,7,11,15,90,100,105,80,100
-Ch,4b,6,F,Chemist,Item,Throw Item,123,22,8,3,3,6,12,15,90,100,105,80,100
+Sq,4a,5,M,Squire,Basic Skill,,177,20,9,4,3,8,5,10,100,75,100,100,80
+Sq,4a,5,F,Squire,Basic Skill,,163,22,9,4,3,7,6,10,100,75,100,100,80
+Ch,4b,6,M,Chemist,Item,Throw Item,107,20,8,3,3,7,11,15,90,100,105,80,100
+Ch,4b,6,F,Chemist,Item,Throw Item,93,22,8,3,3,6,12,15,90,100,105,80,100
 Kn,4c,7,M,Knight,Battle Skill,,187,25,8,3,3,10,5,10,140,100,100,140,80
 Kn,4c,7,F,Knight,Battle Skill,,173,28,8,3,3,9,6,10,140,100,100,140,80
-Ar,4d,8,M,Marksman,Precision,,126,28,9,3,4,10,4,10,100,65,110,115,80
-Ar,4d,8,F,Marksman,Precision,,118,30,9,3,4,8,6,10,100,65,110,115,80
+Ar,4d,8,M,Archer,Precision,,126,28,9,3,4,10,4,10,100,65,110,115,80
+Ar,4d,8,F,Archer,Precision,,118,30,9,3,4,8,6,10,100,65,110,115,80
 Mk,4e,9,M,Monk,Punch Art,Martial Arts,201,39,9,3,4,12,5,20,135,80,110,130,80
 Mk,4e,9,F,Monk,Punch Art,Martial Arts,190,42,9,3,4,11,6,20,135,80,110,130,80
 Pr,4f,0a,M,Priest,White Magic,,120,58,8,3,3,8,9,5,85,120,110,100,125
@@ -19,20 +19,22 @@ Su,52,0d,M,Summoner,Summon Magic,,95,80,8,3,3,3,10,5,90,135,100,50,135
 Su,52,0d,F,Summoner,Summon Magic,,87,85,8,3,3,2,12,5,90,135,100,50,135
 Th,53,0e,M,Thief,Steal,Concentrate,114,21,10,4,4,9,3,25,90,50,120,110,60
 Th,53,0e,F,Thief,Steal,Concentrate,106,23,10,4,4,8,4,25,90,50,120,110,60
+En,,,M,Engineer,Snipe,,115,15,9,3,3,5,5,18,100,75,110,115,100
+En,,,F,Engineer,Snipe,,105,15,9,3,3,5,5,18,100,75,110,115,100
 Me,54,0f,M,Mediator,Talk Skill,Monster Talk,118,59,8,3,3,8,7,5,100,100,100,100,115
 Me,54,0f,F,Mediator,Talk Skill,Monster Talk,111,63,8,3,3,6,9,5,100,100,100,100,115
 Or,55,10,M,Oracle,Yin Yang Magic,,160,70,8,3,3,5,7,24,120,110,100,100,130
 Or,55,10,F,Oracle,Yin Yang Magic,,150,75,8,3,3,4,8,24,120,110,100,100,130
 Ge,56,11,M,Geomancer,Elemental,Any Ground,162,52,8,4,3,11,9,10,110,95,100,110,110
-Ge,56,11,F,Geomancer,Elemental,Any Ground,151,56,8,4,3,9,11,10,110,95,100,110,110
+Ge,56,11,F,Geomancer,Elemental,Any Ground,151,58,8,4,3,9,11,10,110,95,100,110,110
 Ln,57,12,M,Lancer,Jump,,163,31,9,3,5,12,4,15,120,70,110,120,70
 Ln,57,12,F,Lancer,Jump,,153,33,9,3,6,11,5,15,120,70,110,120,70
-Sm,58,13,M,Samurai,Draw Out,Two Hands,110,38,8,3,3,12,10,20,85,100,100,128,140
-Sm,58,13,F,Samurai,Draw Out,Two Hands,100,41,8,3,3,10,12,20,85,100,100,128,140
+Sm,58,13,M,Samurai,Draw Out,Two Hands,110,25,8,3,3,12,9,20,85,100,100,128,140
+Sm,58,13,F,Samurai,Draw Out,Two Hands,100,41,8,3,3,10,11,20,85,100,100,128,140
 Nj,59,14,M,Ninja,Throw,Two Swords,101,24,10,4,4,10,4,30,80,50,120,115,75
 Nj,59,14,F,Ninja,Throw,Two Swords,94,26,10,4,4,8,6,30,80,50,120,115,75
-Sb,5a,15,M,Spellblade,Sword Magic,,177,46,8,3,3,12,11,5,100,120,100,110,125
-Sb,5a,15,F,Spellblade,Sword Magic,,166,58,8,3,3,11,12,5,100,120,100,110,125
+Sg,5a,15,M,Sage,Planar Magic,,131,71,8,3,3,9,9,5,100,120,100,110,125
+Sg,5a,15,F,Sage,Planar Magic,,125,76,8,3,3,7,11,5,100,120,100,110,125
 Bd,5b,16,M,Bard,Sing,,131,29,8,4,3,8,10,30,100,50,115,100,140
 Dc,5c,17,F,Dancer,Dance,,123,31,7,4,3,10,8,30,100,50,115,140,100
 Mi,5d,,M,Mime,Mimic,See Notes,296,34,9,6,7,12,10,33,180,50,120,140,140

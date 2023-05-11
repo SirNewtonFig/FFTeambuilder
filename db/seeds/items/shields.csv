@@ -1,17 +1,17 @@
 Name,Item ID,Classes,Phys Evade,Magic Evade,PA,MA,Speed,Move,Jump,Cancels:,Absorbs:,Weak:,Halves:,Strengthens:,Start:,Always:,Skill
-Escutcheon,80,Sq Kn Ar Ge Ln Sb,25,0,,,,,,,,Fire Lightning,,,Haste,,Equip Shield
-Buckler,81,Sq Kn Ar Ge Ln Sb,20,45,,,,,,,,,,,,Silence,Equip Shield
-Bronze Shield,82,Sq Kn Ar Ge Ln Sb,30,0,,,,,,,,,,,,Reflect,Equip Shield
-Round Shield,83,Sq Kn Ar Ge Ln Sb,0,0,,,-1,,,,,,,,,Shell,Equip Shield
-Mythril Shield,84,Sq Kn Ar Ge Ln Sb,0,10,,2,,,,,,,,,,,Equip Shield
-Gold Shield,85,Sq Kn Ar Ge Ln Sb,35,35,,,,,,,,,,,,,Equip Shield
-Ice Shield,86,Sq Kn Ar Ge Ln Sb,34,15,,,,,,,Ice,Lightning,Fire,,,,Equip Shield
-Flame Shield,87,Sq Kn Ar Ge Ln Sb,34,15,,,,,,,Fire,Water,Ice,,,,Equip Shield
-Aegis Shield,88,Sq Kn Ar Ge Ln Sb,10,45,,1,,,,,,,,,,,Equip Shield
-Diamond Shield,89,Sq Kn Ar Ge Ln Sb,15,15,1,1,,,,,,,,,,,Equip Shield
-Platina Shield,8A,Sq Kn Ar Ge Ln Sb,45,10,,1,,,,,,,,,,,Equip Shield
-Crystal Shield,8B,Sq Kn Ar Ge Ln Sb,20,20,,,,,,,Ice,,,Ice,,,Equip Shield
-Genji Shield,8C,Sq Kn Ar Ge Ln Sb,30,20,,,,,,Frog Petrify,,,,,,,Equip Shield
-Kaiser Plate,8D,Sq Kn Ar Ge Ln Sb,0,0,,,,,,,,,,Ice/Lightning/Wind,,,Equip Shield
-Venetian Shield,8E,Sq Kn Ar Ge Ln Sb,0,0,,,,,,,,,All Elements,,,,Equip Shield
-Escutcheon II,8F,Sq Kn Ar Ge Ln Sb,5,5,,,,,,,,,,,,Defend,Equip Shield
+Escutcheon,80,Sq Kn Ar Ge Ln,25,0,,,,,,,,Fire Lightning,,,Haste,,Equip Shield
+Buckler,81,Sq Kn Ar Ge Ln,20,45,,,,,,,,,,,,Silence,Equip Shield
+Bronze Shield,82,Sq Kn Ar Ge Ln,30,0,,,,,,,,,,,,Reflect,Equip Shield
+Round Shield,83,Sq Kn Ar Ge Ln,0,0,,,-1,,,,,,,,,Shell,Equip Shield
+Mythril Shield,84,Sq Kn Ar Ge Ln,0,10,,2,,,,,,,,,,,Equip Shield
+Gold Shield,85,Sq Kn Ar Ge Ln,35,35,,,,,,,,,,,,,Equip Shield
+Ice Shield,86,Sq Kn Ar Ge Ln,34,15,,,,,,,Ice,Lightning,Fire,,,,Equip Shield
+Flame Shield,87,Sq Kn Ar Ge Ln,34,15,,,,,,,Fire,Water,Ice,,,,Equip Shield
+Aegis Shield,88,Sq Kn Ar Ge Ln,10,45,,1,,,,,,,,,,,Equip Shield
+Diamond Shield,89,Sq Kn Ar Ge Ln,15,15,1,1,,,,,,,,,,,Equip Shield
+Platina Shield,8A,Sq Kn Ar Ge Ln,45,10,,1,,,,,,,,,,,Equip Shield
+Crystal Shield,8B,Sq Kn Ar Ge Ln,20,20,,,,,,,Ice,,,Ice,,,Equip Shield
+Genji Shield,8C,Sq Kn Ar Ge Ln,30,20,,,,,,Frog Petrify,,,,,,,Equip Shield
+Kaiser Plate,8D,Sq Kn Ar Ge Ln,0,0,,,,,,,,,,Ice/Lightning/Wind,,,Equip Shield
+Venetian Shield,8E,Sq Kn Ar Ge Ln,0,0,,,,,,,,,All Elements,,,,Equip Shield
+Escutcheon II,8F,Sq Kn Ar Ge Ln,5,5,,,,,,,,,,,,Defend,Equip Shield
