@@ -13,11 +13,12 @@ class Job < ApplicationRecord
 
   # serialize :data, HashWithIndifferentAccess
 
-  has_many :skills
-  has_many :innates
+  has_many :skills, dependent: :destroy
+  has_many :innates, dependent: :destroy
   has_many :innate_skills, through: :innates, source: :skill
-  has_many :prerequisites
+  has_many :prerequisites, dependent: :destroy
   has_many :prerequisite_jobs, through: :prerequisites, source: :prerequisite, class_name: 'Job'
+  has_many :proficiencies, as: :record, dependent: :destroy
 
   scope :valid, ->(char) { where("(jobs.data -> '#{char.sex}') is not null") }
   
