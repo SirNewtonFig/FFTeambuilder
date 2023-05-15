@@ -19,8 +19,8 @@ Su,52,0d,M,Summoner,Summon Magic,,95,80,8,3,3,3,10,5,90,135,100,50,135
 Su,52,0d,F,Summoner,Summon Magic,,87,85,8,3,3,2,12,5,90,135,100,50,135
 Th,53,0e,M,Thief,Steal,Concentrate,114,21,10,4,4,9,3,25,90,50,120,110,60
 Th,53,0e,F,Thief,Steal,Concentrate,106,23,10,4,4,8,4,25,90,50,120,110,60
-En,,,M,Engineer,Snipe,,115,15,9,3,3,5,5,18,100,75,110,115,100
-En,,,F,Engineer,Snipe,,105,15,9,3,3,5,5,18,100,75,110,115,100
+En,16,26,M,Engineer,Snipe,,115,15,9,3,3,5,5,18,100,75,110,115,100
+En,16,26,F,Engineer,Snipe,,105,15,9,3,3,5,5,18,100,75,110,115,100
 Me,54,0f,M,Mediator,Talk Skill,Monster Talk,118,59,8,3,3,8,7,5,100,100,100,100,115
 Me,54,0f,F,Mediator,Talk Skill,Monster Talk,111,63,8,3,3,6,9,5,100,100,100,100,115
 Or,55,10,M,Oracle,Yin Yang Magic,,160,70,8,3,3,5,7,24,120,110,100,100,130
@@ -29,8 +29,8 @@ Ge,56,11,M,Geomancer,Elemental,Any Ground,162,52,8,4,3,11,9,10,110,95,100,110,11
 Ge,56,11,F,Geomancer,Elemental,Any Ground,151,58,8,4,3,9,11,10,110,95,100,110,110
 Ln,57,12,M,Lancer,Jump,,163,31,9,3,5,12,4,15,120,70,110,120,70
 Ln,57,12,F,Lancer,Jump,,153,33,9,3,6,11,5,15,120,70,110,120,70
-Sm,58,13,M,Samurai,Draw Out,Two Hands,110,25,8,3,3,12,9,20,85,100,100,128,140
-Sm,58,13,F,Samurai,Draw Out,Two Hands,100,41,8,3,3,10,11,20,85,100,100,128,140
+Sm,58,20,M,Samurai,Draw Out,Two Hands,110,25,8,3,3,12,9,20,85,100,100,128,140
+Sm,58,20,F,Samurai,Draw Out,Two Hands,100,41,8,3,3,10,11,20,85,100,100,128,140
 Nj,59,14,M,Ninja,Throw,Two Swords,101,24,10,4,4,10,4,30,80,50,120,115,75
 Nj,59,14,F,Ninja,Throw,Two Swords,94,26,10,4,4,8,6,30,80,50,120,115,75
 Sg,5a,15,M,Sage,Planar Magic,,131,71,8,3,3,9,9,5,100,120,100,110,125

@@ -197,3 +197,23 @@ monsters.each do |row|
     }
   )
 end
+
+Job.all.each do |job|
+  data = job.data
+
+  if job.generic? && job.name != 'Engineer'
+    data.deep_merge!({'m' => { 'character_set' => '80' }}) if data.key?('m')
+    data.deep_merge!({'f' => { 'character_set' => '81' }}) if data.key?('f')
+  elsif job.generic?
+    data.deep_merge!({
+      'm' => { 'character_set' => '16' },
+      'f' => { 'character_set' => '21' }
+    })
+  else
+    data.deep_merge!({
+      'x' => { 'character_set' => '82' }
+    })
+  end
+
+  job.update(data: data)
+end

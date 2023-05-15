@@ -8,12 +8,6 @@ end
 class Character::Memgen < ActiveInteractor::Base
   RAW_CONST = 1638400
 
-  CHARACTER_SETS = {
-    'm' => '80',
-    'f' => '81',
-    'x' => '82'
-  }
-
   SEXES = {
     'm' => '80',
     'f' => '40',
@@ -34,8 +28,6 @@ class Character::Memgen < ActiveInteractor::Base
     'aquarius' => 'A0',
     'pisces' => 'B0'
   }
-
-  SKILLFLAGS_JOBS = ['4a','4b','4c','4d','4e','4f','50','51','52','53','54','55','56','57','58','59','5a','5b','5c']
 
   TEXT_ENCODINGS = {
     "0" => '00',
@@ -154,7 +146,7 @@ class Character::Memgen < ActiveInteractor::Base
     end
 
     def serialize_character_set!
-      block << CHARACTER_SETS[character.sex]
+      block << str_to_hex(character.job.data.dig(character.sex, 'character_set'), default: '80')
     end
 
     def serialize_roster_slot!      
@@ -306,18 +298,17 @@ class Character::Memgen < ActiveInteractor::Base
     def serialize_skills!
       pad!('00', 3)
 
-      SKILLFLAGS_JOBS.each do |job|
-        if job == character.job.data.dig(character.sex, 'memgen_id')
-          encode_skills!(job, character.primary_skills)
-        elsif job == character.secondary&.data&.dig(character.sex, 'memgen_id')
-          encode_skills!(job, character.secondary_skills)
-        else
-          pad!('00', 3)
-        end
+      if character.job.monster?
+        pad!('ff', 4)
+      else
+        encode_skills!(character.primary_skills)
+        encode_skills!(character.secondary_skills)
       end
+
+      pad!('00', 53)
     end
 
-    def encode_skills!(job, skills)
+    def encode_skills!(skills)
       value = skills
         .map{|s| s.data.dig('memgen_id').to_i(16) }
         .sum
@@ -326,7 +317,6 @@ class Character::Memgen < ActiveInteractor::Base
 
       block << value.first(2)
       block << value.last(2)
-      block << '00'
     end
 
     def serialize_jp!
