@@ -9,8 +9,8 @@ Bomb,64,2000,250,3,9,4,4,12,22,Flame Attack,Self Destruct,Douse,,Critical Quick,
 Grenade,65,4000,330,5,9,4,4,13,22,Flame Attack,Self Destruct,Triple Flame,,Critical Quick,Guts Float Undead,None,Cannot Enter Water,Absorbs: Fire,11,170,30,130,130,94
 Explosive,66,6000,330,7,9,4,4,14,22,Flame Attack,Self Destruct,Flame Spin,,Critical Quick,Guts Float Undead,None,Cannot Enter Water,"Defend UP+, Absorbs: Fire",12,180,40,130,140,96
 Tonberry,67,2000,344,17,9,3,3,14,12,Chef's Knife,Everyone's Grudge,Voodoo,,Meatbone Slash,Guts,None,Cannot Enter Water,,15,180,100,80,140,150
-Blood Stalker,69,4000,387,17,9,3,3,16,12,Chef's Knife,Everyone's Grudge,Blood Ritual,,Meatbone Slash,Guts,None,Cannot Enter Water,,13,190,100,130,150,150
-Master Tonberry,68,6000,362,17,8,3,3,17,12,Chef's Knife,Everyone's Grudge,Shadow Stitch,,Meatbone Slash,Guts,None,Cannot Enter Water,,20,170,100,130,160,150
+Blood Stalker,69,4000,387,17,9,3,3,16,12,Chef's Knife,Everyone's Grudge,Blood Ritual,,Meatbone Slash,Guts,None,Cannot Enter Water,,13,170,100,130,160,150
+Master Tonberry,68,6000,362,17,8,3,3,17,12,Chef's Knife,Everyone's Grudge,Shadow Stitch,,Meatbone Slash,Guts,None,Cannot Enter Water,,20,190,100,130,150,150
 Pisco Demon,6A,2000,361,126,9,4,3,13,14,Aqualung,Time Blast,Energy Blast,,Counter Flood,Absorbs Water,None,Move Under Water,MagAtkUP,8,180,255,130,110,150
 Squidlarkin,6B,4000,384,126,9,4,3,14,14,Aqualung,Time Blast,Psionic Wave,,Counter Flood,Absorbs Water,None,Move Under Water,MagAtkUP,9,180,255,130,120,150
 Mindflare,6C,6000,427,126,9,4,3,15,14,Aqualung,Time Blast,Mind Control,,Counter Flood,Absorbs Water,None,Move Under Water,MagAtkUP,10,200,255,130,130,150
@@ -26,8 +26,8 @@ Plague,75,6000,342,126,9,5,5,16,35,Eye Beam,Mana Burn,Gaze,,Counter Magic,Halves
 Juravis,76,2000,320,7,12,6,6,15,22,Tailwind,Wind Strike,Zephyr,,CT Save,Absorbs Wind,Fly,Cannot Enter Water,,30,150,40,150,120,85
 Steel Hawk,77,4000,342,10,12,6,6,15,26,Tailwind,Wind Strike,Peck,,CT Save,Absorbs Wind,Fly,Cannot Enter Water,,28,160,60,150,140,90
 Cocatoris,78,6000,363,1,11,6,6,15,28,Tailwind,Wind Strike,Gaze,,CT Save,Absorbs Wind,Fly,Cannot Enter Water,,33,170,10,150,160,100
-Porky,7A,2000,291,126,11,4,3,19,13,Straight Dash,Nose Breath,Oink,,HP Restore,DefenseUP,None,Cannot Enter Water,,42,150,255,160,120,160
-Uribo,79,4000,304,126,11,4,3,19,13,Straight Dash,Nose Breath,Please Eat,,HP Restore,DefenseUP,None,Cannot Enter Water,,36,160,255,160,130,160
+Porky,7A,2000,291,126,11,4,3,19,13,Straight Dash,Nose Breath,Oink,,HP Restore,DefenseUP,None,Cannot Enter Water,,42,160,255,160,130,160
+Uribo,79,4000,304,126,11,4,3,19,13,Straight Dash,Nose Breath,Please Eat,,HP Restore,DefenseUP,None,Cannot Enter Water,,36,150,255,160,120,160
 Wildbow,7B,6000,368,126,11,4,3,19,13,Straight Dash,Nose Breath,Pooh-,,HP Restore,DefenseUP,None,Cannot Enter Water,,39,170,255,160,180,160
 Woodman,7C,2000,406,28,8,4,3,13,28,Leaf Dance,Magic Spirit,Protect Spirit,,Damage Split,Mdef UP,None,Cannot Enter Water,"Absorbs Earth, Immune: Float",0,190,160,115,130,100
 Trent,7D,4000,427,32,8,4,3,13,28,Leaf Dance,Magic Spirit,Blessing of Nature,,Damage Split,Mdef UP,None,Cannot Enter Water,"Absorbs Earth, Immune: Float",0,200,180,115,130,95
