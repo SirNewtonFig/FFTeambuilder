@@ -43,6 +43,18 @@ end
 Prerequisite.destroy_all
 Prerequisite.upsert_all(YAML.safe_load_file(Rails.root.join('db/seeds/prerequisites.yml')))
 
+sage = Job.find_by(name: 'Sage')
+
+sage.prerequisites.create!(prerequisite: Job.find_by(name: 'Wizard'), level: 5)
+sage.prerequisites.create!(prerequisite: Job.find_by(name: 'Priest'), level: 5)
+sage.prerequisites.create!(prerequisite: Job.find_by(name: 'Time Mage'), level: 4)
+sage.prerequisites.create!(prerequisite: Job.find_by(name: 'Oracle'), level: 4)
+
+engineer = Job.find_by(name: 'Engineer')
+
+engineer.prerequisites.create!(prerequisite: Job.find_by(name: 'Archer'), level: 3)
+engineer.prerequisites.create!(prerequisite: Job.find_by(name: 'Chemist'), level: 3)
+
 skills = CSV.parse(File.read(Rails.root.join('db/seeds/skills.csv')), headers: true)
 skills.each do |row|
   job = Job.find_by(name: row['Class'].strip)
@@ -52,7 +64,10 @@ skills.each do |row|
   skill_type = 'support' if row['Skill Name'].match?(/^S:/)
   skill_type = 'movement' if row['Skill Name'].match?(/^M:/)
 
-  skill = Skill.find_or_initialize_by(skill_type: skill_type, name: row['Skill Name'].gsub(/^R:|^S:|^M:/, '').strip)
+  lookup_attrs = { skill_type: skill_type, name: row['Skill Name'].gsub(/^R:|^S:|^M:/, '').strip }
+  lookup_attrs[:job_id] = job.id if skill_type == 'movement'
+
+  skill = Skill.find_or_initialize_by(lookup_attrs)
 
   skill.update(
     job: job,
