@@ -33,6 +33,11 @@ Rails.application.routes.draw do
 
     resource :job, only: %i{ edit update }, controller: 'characters/job'
     resource :skills, only: %i{ edit update }, controller: 'characters/skills'
+    
+    resource :ai_values, only: %i{ update }, controller: 'characters/ai_values' do
+      patch :clear
+      patch :default
+    end
   end
 
   resource :memgen, controller: 'memgen', only: %i{ new create } do

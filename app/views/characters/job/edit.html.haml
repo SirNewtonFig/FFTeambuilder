@@ -31,9 +31,14 @@
                       .ml-2= job.data[@char.sex][prop]
 
                   .flex
-                    .text-red-900.capitalize C-EV:
+                    .text-red-900.capitalize P-EV:
                     .ml-2
                       #{job.data[@char.sex]['evade']}%
+
+                  .flex
+                    .text-red-900.capitalize M-EV:
+                    .ml-2
+                      #{job.data[@char.sex]['m_evade']}%
 
 
                 .flex.flex-wrap
@@ -42,11 +47,11 @@
                       .text-red-900.capitalize #{stat_label(prop)}:
                       .ml-2= job.data[@char.sex][prop]
 
-                - if job.innates.present?
+                - if job.data[@char.sex]['innate'].present?
                   .flex.flex-wrap
                     .flex.mr-6
                       .text-red-900.capitalize Innate:
-                      .ml-2= job.innates.map(&:skill).map(&:name).join(', ')
+                      .ml-2= job.data[@char.sex]['innate']
 
                 - if job.data[@char.sex]['notes'].present?
                   .flex.flex-wrap

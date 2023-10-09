@@ -1,6 +1,42 @@
 class Character
   extend Memoist
 
+  AI_VALUES = {
+    "Berserk" => -39,
+    "Charm" => -64,
+    "Chicken" => -26,
+    "Confusion" => -64,
+    "Crystal" => -192,
+    "Dead" => -192,
+    "Death Sentence" => -103,
+    "Discord" => -64,
+    "Don't Act" => -64,
+    "Don't Move" => -39,
+    "Faith" => 6,
+    "Fatigue" => -32,
+    "Float" => 12,
+    "Frog" => -52,
+    "Haste" => 19,
+    "Innocent" => -7,
+    "Near Fatal" => -32,
+    "Overload" => -7,
+    "Petrify" => -116,
+    "Poison" => -26,
+    "Protect" => 25,
+    "Reflect" => 25,
+    "Regen" => 25,
+    "Reraise" => 51,
+    "Shell" => 25,
+    "Slow" => -39,
+    "Stealth" => 25,
+    "Sturdy" => 25,
+    "Sundown" => -25,
+    "Transparent" => 38,
+    "Treasure" => -192,
+    "Undead" => -39,
+    "Weaken" => -39
+  }
+
   DEFAULT_DATA = {
     job: 1,
     brave: 55,
@@ -17,7 +53,8 @@ class Character
     lhand: nil,
     helmet: nil,
     armor: nil,
-    accessory: nil
+    accessory: nil,
+    ai_values: AI_VALUES.transform_keys(&:parameterize)
   }
 
   ZODIACS = {
@@ -116,6 +153,10 @@ class Character
 
   def class_evade
     job_data['evade'].to_i
+  end
+
+  def class_m_evade
+    job_data['m_evade'].to_i
   end
 
   def shield_evade_physical
@@ -322,7 +363,9 @@ class Character
   end
 
   memoize def jp_total
-    return job.data[sex]['jp_cost'].to_i unless generic?
+    raw_cost = job.data[sex]['jp_cost']
+
+    return raw_cost.to_i unless raw_cost.blank?
 
     jp_spread.values.sum
   end

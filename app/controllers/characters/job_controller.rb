@@ -2,7 +2,7 @@ class Characters::JobController < ApplicationController
   before_action :load_character
 
   def edit
-    @jobs = Job.valid(@char).includes(innates: :skill).order(:id)
+    @jobs = Job.valid(@char).order(:id)
 
     render layout: 'modal'
   end

@@ -131,8 +131,10 @@ class Character::Memgen < ActiveInteractor::Base
     serialize_sp!
     serialize_pa!
     serialize_ma!
+    serialize_inventory!
     serialize_skills!
-    serialize_jp!
+    pad!('88', 10)
+    serialize_ai!
     serialize_name!
     pad!('00', 17)
   end
@@ -295,8 +297,16 @@ class Character::Memgen < ActiveInteractor::Base
       (val.to_f * RAW_CONST / character.job_data["#{stat}_mult"].to_i).ceil
     end
 
+    def serialize_inventory!
+      if character.job.name == 'Chemist'
+        block << '10'
+      else
+        block << '08'
+      end
+    end
+
     def serialize_skills!
-      pad!('00', 3)
+      pad!('00', 2)
 
       if character.job.monster?
         pad!('ff', 4)
@@ -319,13 +329,47 @@ class Character::Memgen < ActiveInteractor::Base
       block << value.last(2)
     end
 
-    def serialize_jp!
-      pad!('88', 10)
-
-      40.times do
-        pad!('0F')
-        pad!('27')
-      end
+    def serialize_ai!
+      block << 'b80b' # 0000 + 3000 JP buffer
+      block << little_endian(jp_ai_value(character.data.dig('ai_values', 'crystal').to_i || 0))
+      block << little_endian(jp_ai_value(character.data.dig('ai_values', 'dead').to_i || 0))
+      block << little_endian(jp_ai_value(character.data.dig('ai_values', 'weaken').to_i || 0))
+      block << 'b80b'
+      block << 'b80b'
+      block << 'b80b'
+      block << 'b80b'
+      block << little_endian(jp_ai_value(character.data.dig('ai_values', 'petrify').to_i || 0))
+      block << 'b80b'
+      block << little_endian(jp_ai_value(character.data.dig('ai_values', 'sundown').to_i || 0))
+      block << little_endian(jp_ai_value(character.data.dig('ai_values', 'confusion').to_i || 0))
+      block << little_endian(jp_ai_value(character.data.dig('ai_values', 'stealth').to_i || 0))
+      block << little_endian(jp_ai_value(character.data.dig('ai_values', 'discord').to_i || 0))
+      block << 'b80b'
+      block << little_endian(jp_ai_value(character.data.dig('ai_values', 'treasure').to_i || 0))
+      block << little_endian(jp_ai_value(character.data.dig('ai_values', 'undead').to_i || 0))
+      block << little_endian(jp_ai_value(character.data.dig('ai_values', 'float').to_i || 0))
+      block << little_endian(jp_ai_value(character.data.dig('ai_values', 'reraise').to_i || 0))
+      block << little_endian(jp_ai_value(character.data.dig('ai_values', 'transparent').to_i || 0))
+      block << little_endian(jp_ai_value(character.data.dig('ai_values', 'berserk').to_i || 0))
+      block << little_endian(jp_ai_value(character.data.dig('ai_values', 'chicken').to_i || 0))
+      block << little_endian(jp_ai_value(character.data.dig('ai_values', 'frog').to_i || 0))
+      block << little_endian(jp_ai_value(character.data.dig('ai_values', 'near-fatal').to_i || 0))
+      block << little_endian(jp_ai_value(character.data.dig('ai_values', 'poison').to_i || 0))
+      block << little_endian(jp_ai_value(character.data.dig('ai_values', 'regen').to_i || 0))
+      block << little_endian(jp_ai_value(character.data.dig('ai_values', 'protect').to_i || 0))
+      block << little_endian(jp_ai_value(character.data.dig('ai_values', 'shell').to_i || 0))
+      block << little_endian(jp_ai_value(character.data.dig('ai_values', 'haste').to_i || 0))
+      block << little_endian(jp_ai_value(character.data.dig('ai_values', 'slow').to_i || 0))
+      block << little_endian(jp_ai_value(character.data.dig('ai_values', 'fatigue').to_i || 0))
+      block << little_endian(jp_ai_value(character.data.dig('ai_values', 'sturdy').to_i || 0))
+      block << little_endian(jp_ai_value(character.data.dig('ai_values', 'faith').to_i || 0))
+      block << little_endian(jp_ai_value(character.data.dig('ai_values', 'innocent').to_i || 0))
+      block << little_endian(jp_ai_value(character.data.dig('ai_values', 'charm').to_i || 0))
+      block << little_endian(jp_ai_value(character.data.dig('ai_values', 'overload').to_i || 0))
+      block << little_endian(jp_ai_value(character.data.dig('ai_values', 'don-t-move').to_i || 0))
+      block << little_endian(jp_ai_value(character.data.dig('ai_values', 'don-t-act').to_i || 0))
+      block << little_endian(jp_ai_value(character.data.dig('ai_values', 'reflect').to_i || 0))
+      block << little_endian(jp_ai_value(character.data.dig('ai_values', 'death-sentence').to_i || 0))
     end
 
     def serialize_name!
@@ -340,7 +384,11 @@ class Character::Memgen < ActiveInteractor::Base
       pad!('FE', 17 - chars.length/2)
     end
 
-    def little_endian(str, bytes)
+    def jp_ai_value(value)
+      "%04x" % (value + 3000)
+    end
+
+    def little_endian(str, bytes = 2)
       padded_str = "%0#{bytes * 2}x" % str.to_i(16)
 
       padded_str.scan(/(..)/).reverse.join

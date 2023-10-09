@@ -1,0 +1,19 @@
+- i = params[:character_id] || params[:id]
+
+#ai-values.bg-menu-texture.border-2.border-menu-dark.px-4.py-2.flex-1
+  .flex.justify-between.items-center
+    .text-xl.mb-1.text-menu-dark AI Priorities
+    .flex.space-x-2
+      .text-xs.text-blue-700
+        = link_to('[Defaults]', default_character_ai_values_path(character_id: i), data: { turbo_method: 'patch' })
+      .text-xs.text-blue-700
+        = link_to('[Clear]', clear_character_ai_values_path(character_id: i), data: { turbo_method: 'patch' })
+
+  = form_with(url: character_ai_values_path(character_id: i), method: :patch, data: { controller: 'form' }) do |f|
+    .flex.flex-col.sm:flex-row.sm:space-x-11.sm:space-y-0
+      - Character::AI_VALUES.keys.each_slice((Character::AI_VALUES.keys.length + 1) / 2).each do |statuses|
+        .flex.flex-col.w-full
+          - statuses.each do |status|
+            .flex.items-center.justify-between.flex-1
+              %label.text-lg.flex-1{ for: "ai_#{status.parameterize}" }= status
+              %input.bg-right.text-right.w-16.py-0.px-0.bg-transparent.border-0.border-b-2.border-menu-dark.appearance-none.focus:outline-none.focus:ring-0.focus:border-menu-dark.peer{ id: "ai_#{status.parameterize}", type: 'number', max: 255, min: -256, name: "character[ai_values][#{status.parameterize}]", value: char.data.dig('ai_values', status.parameterize), data: { action: 'change->form#submit' } }

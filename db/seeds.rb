@@ -1,10 +1,3 @@
-# Job.upsert_all(YAML.safe_load_file(Rails.root.join('db/seeds/yml/jobs.yml')))
-# Skill.upsert_all(YAML.safe_load_file(Rails.root.join('db/seeds/yml/skills.yml')))
-# Item.upsert_all(YAML.safe_load_file(Rails.root.join('db/seeds/yml/items.yml')))
-# Innate.upsert_all(YAML.safe_load_file(Rails.root.join('db/seeds/yml/innates.yml')))
-# Prerequisite.upsert_all(YAML.safe_load_file(Rails.root.join('db/seeds/yml/prerequisites.yml')))
-# Proficiency.upsert_all(YAML.safe_load_file(Rails.root.join('db/seeds/yml/proficiencies.yml')))
-
 require 'csv'
 
 jobs = CSV.parse(File.read(Rails.root.join('db/seeds/jobs.csv')), headers: true)
@@ -28,43 +21,46 @@ jobs.each do |row|
         attack: row['PA'],
         magic: row['MA'],
         evade: row['Evade'],
+        m_evade: row['MEvade'],
         hp_mult: row['HPmult'],
         mp_mult: row['MPmult'],
         sp_mult: row['SPmult'],
         pa_mult: row['PAmult'],
         ma_mult: row['MAmult'],
         memgen_id: row['Job ID'],
-        secondary_id: row['Secondary ID']
+        secondary_id: row['Secondary ID'],
+        character_set: row['Charset'],
+        jp_cost: row['JP Cost'],
+        innate: row['Innate']
       }
     })
   )
 end
 
-Prerequisite.destroy_all
-Prerequisite.upsert_all(YAML.safe_load_file(Rails.root.join('db/seeds/prerequisites.yml')))
+prerequisites = CSV.parse(File.read(Rails.root.join('db/seeds/prerequisites.csv')), headers: true)
+prerequisites.each do |row|
+  job = Job.find_by(name: row['Job'])
+  row['Prereqs'].split(',').each do |prereq|
+    level, name = prereq.match(/(\d) ([\w\s]+)/)[1..2]
 
-sage = Job.find_by(name: 'Sage')
+    record = Prerequisite.find_or_initialize_by(job: job, prerequisite_id: Job.find_by(name: name).id)
 
-sage.prerequisites.create!(prerequisite: Job.find_by(name: 'Wizard'), level: 5)
-sage.prerequisites.create!(prerequisite: Job.find_by(name: 'Priest'), level: 5)
-sage.prerequisites.create!(prerequisite: Job.find_by(name: 'Time Mage'), level: 4)
-sage.prerequisites.create!(prerequisite: Job.find_by(name: 'Oracle'), level: 4)
-
-engineer = Job.find_by(name: 'Engineer')
-
-engineer.prerequisites.create!(prerequisite: Job.find_by(name: 'Archer'), level: 3)
-engineer.prerequisites.create!(prerequisite: Job.find_by(name: 'Chemist'), level: 3)
+    record.update(level: level)
+  end
+end
 
 skills = CSV.parse(File.read(Rails.root.join('db/seeds/skills.csv')), headers: true)
 skills.each do |row|
+  next if row['Skill ID'].blank?
+
   job = Job.find_by(name: row['Class'].strip)
   
   skill_type = 'action'
   skill_type = 'reaction' if row['Skill Name'].match?(/^R:/)
-  skill_type = 'support' if row['Skill Name'].match?(/^S:/)
-  skill_type = 'movement' if row['Skill Name'].match?(/^M:/)
+  skill_type = 'support' if row['Skill Name'].match?(/^E:/)
+  skill_type = 'movement' if row['Skill Name'].match?(/^S:/)
 
-  lookup_attrs = { skill_type: skill_type, name: row['Skill Name'].gsub(/^R:|^S:|^M:/, '').strip }
+  lookup_attrs = { skill_type: skill_type, name: row['Skill Name'].gsub(/^R:|^E:|^S:/, '').strip }
   lookup_attrs[:job_id] = job.id if skill_type == 'movement'
 
   skill = Skill.find_or_initialize_by(lookup_attrs)
@@ -97,9 +93,6 @@ skills.each do |row|
 
   skill.save
 end
-
-Innate.destroy_all
-Innate.upsert_all(YAML.safe_load_file(Rails.root.join('db/seeds/innates.yml')))
 
 Dir.glob('db/seeds/items/*.csv').each do |f|
   items = CSV.parse(File.read(f), headers: true)
@@ -201,6 +194,7 @@ monsters.each do |row|
           row['Family Notes:']
         ].reject{|x| x.blank? || x == 'None' },
         evade: row['Evade'],
+        m_evade: row['MEvade'],
         hp_mult: row['HPmult'],
         mp_mult: row['MPmult'],
         sp_mult: row['SPmult'],
@@ -213,22 +207,15 @@ monsters.each do |row|
   )
 end
 
-Job.all.each do |job|
+Job.monster.each do |job|
   data = job.data
 
-  if job.generic? && job.name != 'Engineer'
-    data.deep_merge!({'m' => { 'character_set' => '80' }}) if data.key?('m')
-    data.deep_merge!({'f' => { 'character_set' => '81' }}) if data.key?('f')
-  elsif job.generic?
-    data.deep_merge!({
-      'm' => { 'character_set' => '16' },
-      'f' => { 'character_set' => '21' }
-    })
-  else
-    data.deep_merge!({
-      'x' => { 'character_set' => '82' }
-    })
-  end
+  data.deep_merge!({
+    'x' => { 'character_set' => '82' }
+  })
 
   job.update(data: data)
 end
+
+Job.find_by(name: 'Samurai').innates.find_or_create_by(skill: Skill.find_by(name: 'Two Hands'))
+Job.find_by(name: 'Ninja').innates.find_or_create_by(skill: Skill.find_by(name: 'Two Swords'))
