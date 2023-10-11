@@ -31,9 +31,14 @@
                       .ml-2= job.data[@char.sex][prop]
 
                   .flex
-                    .text-red-900.capitalize C-EV:
+                    .text-red-900.capitalize P-EV:
                     .ml-2
                       #{job.data[@char.sex]['evade']}%
+
+                  .flex
+                    .text-red-900.capitalize M-EV:
+                    .ml-2
+                      #{job.data[@char.sex]['m_evade']}%
 
 
                 .flex.flex-wrap

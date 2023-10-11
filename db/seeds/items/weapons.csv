@@ -1,119 +1,120 @@
-Name,Item ID,WP,W-EV,Flags,Classes,PA,MA,Speed,Move,Jump,Adds:,Cancels:,Element:,Proc:,Weak:,Absorbs:,Strengthens:,Start:,Always:,Formula:,Proc Formula:,Formula Table,Proc Table:,Skill
-Dagger,1,10,10,2-swords,Sq Ch Th Me Nj Dc,,,,,,,,,,,,,,,SP*WP,,2,,
-Mythril Knife,2,8,10,2-swords,Sq Ch Th Me Nj Dc,,,,,,,Charging,,,,,,,,(PA+SP)/2*WP,,2,,
-Running Knife,3,5,10,2-swords,Sq Ch Th Me Nj Dc,,,,1,,,,,,,,,,,(PA+SP)/2*WP,,2,,
-Mage Masher,4,12,10,2-swords / leeches MP,Sq Ch Th Me Nj Dc,,,,,,,,,,,,,,,PA*WP,,7,,
-Platina Dagger,5,9,10,2-swords,Sq Ch Th Me Nj Dc,,,,,,,,,,,,,,,WP*WP No Evade,,2,,
-Main Gauche,6,9,40,2-swords,Sq Ch Th Me Nj Dc,,,,,,,,,,,,,,,(PA+SP)/2*WP,,2,,
-Orichalcum,7,8,10,2-swords,Sq Ch Th Me Nj Dc,,2,,,,,,,,,,,,,(PA+SP)/2*WP,,2,,
-Assassin Dagger,8,9,10,2-swords,Sq Ch Th Me Nj Dc,,,1,,,,,,,,,,,,(PA+SP)/2*WP,,2,,
-Air Knife,9,9,10,2-swords,Sq Ch Th Me Nj Dc,,,,,,,,Wind,Zephyr,,,,,,(PA+SP)/2*WP,Dmg_(SP * WP),2,,
-Tonberry Knife,A,1,10,2-swords,Sq Ch Th Me Nj Dc,,,,,,Death Sentence,,,,,,,,,(PA+SP)/2*WP,,2,,
-Hidden Knife,B,11,20,2-swords 2-hands,Th Nj,,,1,,,,,,,,,,,,(PA+SP)/2*WP,,2,,
-Ninja Knife,C,10,20,2-swords 2-hands,Th Nj,,,1,,,,,,,,,,,,WP*WP,,7,,
-Short Edge,D,10,40,2-swords 2-hands,Th Nj,,,1,,,,,,,,,,,,(PA+SP)/2*WP,,2,,
-Ninja Edge,E,8,20,2-swords 2-hands,Th Nj,,,1,,,,,,,,,,,,SP*WP,,8,,
-Spell Edge,F,9,20,2-swords 2-hands,Th Nj,,2,1,,,,,,,,,,,,(PA+SP)/2*WP,,2,,
-Sasuke Knife,10,10,20,2-swords 2-hands,Th Nj,1,,1,,,,,,,,,,,,(PA+SP)/2*WP,,2,,
-Iga Knife,11,9,20,2-swords 2-hands,Th Nj,,,1,,,,,Wind,Tornado,,,Wind,,,(PA+SP)/2*WP,Dmg_F(MA*50),2,,
-Koga Knife,12,9,20,2-swords 2-hands,Th Nj,,,1,,,,,Earth,Quake,,,Earth,,,(PA+SP)/2*WP,Dmg_F(MA*50),2,,
-Broad Sword,13,11,25,2-swords 2-hands,Sq Kn Ge Sg,,,,,,,,,,,,,Defending,,PA*WP,,1,,Equip Sword
-Long Sword,14,11,25,2-swords 2-hands,Sq Kn Ge Sg,,,,1,,,,,,,,,,,PA*WP,,1,,Equip Sword
-Parrying Sword,15,10,50,2-swords 2-hands,Sq Kn Ge Sg,,,,,,,,,,,,,,,PA*WP,,1,,Equip Sword
-Mythril Sword,16,9,25,2-swords 2-hands,Sq Kn Ge Sg,,3,,,,,,,,,,,,,PA*WP,,1,,Equip Sword
-Blood Sword,17,10,25,2-swords 2-hands / leeches HP,Sq Kn Ge Sg,,,,,,,,Dark,,,,,,,PA*WP,,1,,Equip Sword
-Coral Sword,18,10,25,2-swords 2-hands,Sq Kn Ge Sg,,,,,,,,Lightning,Mjollnir,,,,,,PA*WP,Dmg_F(MA*20),1,,Equip Sword
-Ancient Sword,19,10,25,2-swords 2-hands,Sq Kn Ge Sg,,,,,,Don't Act,,,,,,,,,PA*WP,,1,,Equip Sword
-Scramasax,1A,10,25,2-swords 2-hands,Sq Kn Ge Sg,,,,,,,,,Double Blow,,,,,,PA*WP,PA*WP,1,,Equip Sword
-Paladin Sword,1B,10,25,2-swords 2-hands,Sq Kn Ge Sg,,,,,,,,Holy,Holy Strike,,,,,,PA*WP,(PA+6)/2*MA,1,,Equip Sword
-Demon Hilt,1C,10,25,2-swords 2-hands,Sq Kn Ge Sg,,,,,,,,Fire,Demon Fire,,,,,,PA*WP,(PA+4)/2*MA,1,,Equip Sword
-Ice Brand,1D,10,25,2-swords 2-hands,Sq Kn Ge Sg,,,,,,,,Ice,Ice Breath,,,,,,PA*WP,MA*12,1,,Equip Sword
-Slasher,1E,11,25,2-swords 2-hands,Sq Kn Ge Sg,,,,,,,,,Demi,,,,,,PA*WP,"(25% target max HP, magic evade)",1,,Equip Sword
-Nagrarock,1F,5,25,2-swords 2-hands,Sq Kn Ge Sg,1,1,1,1,1,,,,,,,,,,PA*WP,,1,,Equip Sword
-Materia Blade,20,13,30,2-hands only,Sq Kn,,3,,,,,,,,,,,,,MA*WP,,3,,Equip Sword
-Defender,21,13,30,2-hands only,Sq Kn,,,,,,,,,,,,,,Defending,(PA * BR)/100 * WP,,3,,Equip Sword
-Save the Queen,22,14,30,2-hands only,Sq Kn,,,,,,,,Holy,,,,,,,(PA * BR)/100 * WP,,3,,Equip Sword
-Excalibur,23,15,30,2-hands only,Sq Kn,,,,,,,,,,,,,,,(PA * BR)/100 * WP,,3,,Equip Sword
-Ragnarok,24,14,30,2-hands only,Sq Kn,,,,,,Dead,,,,,,,,,(PA * BR)/100 * WP,,3,,Equip Sword
-Chaos Blade,25,1,30,2-hands only,Sq Kn,,,,,,Crystal,,,,,,,,,(PA * BR)/100 * WP,,3,,Equip Sword
-Asura Knife,26,12,35,2-swords 2-hands,Sm,,,,,,,,Fire,Double Blow,,,,,,(PA * BR)/100 * WP,(PA * BR)/100 * WP,3,,Equip Katana
-Koutetsu Knife,27,12,35,2-swords 2-hands,Sm,,,,,,,,Dark,Double Blow,,,,,,(PA * BR)/100 * WP,(PA * BR)/100 * WP,3,,Equip Katana
-Bizen Boat,28,14,35,2-swords 2-hands,Sm,,,,,,,,,Silence,,,,,,(PA * BR)/100 * WP,,3,,Equip Katana
-Murasame,29,13,35,2-swords 2-hands,Sm,1,,,,,,,,Double Blow,,,,,,(PA * BR)/100 * WP,(PA * BR)/100 * WP,3,,Equip Katana
-Heaven's Cloud,2A,12,35,2-swords 2-hands,Sm,,,,,,,,Water,Double Blow,,,,,,(PA * BR)/100 * WP,(PA * BR)/100 * WP,3,,Equip Katana
-Kiyomori,2B,9,35,2-swords 2-hands,Sm,,,,,,,,,Double Blow,,,,Protect Shell,,(PA * BR)/100 * WP,(PA * BR)/100 * WP,3,,Equip Katana
-Muramasa,2C,14,35,2-swords 2-hands,Sm,,,,,,,,,Double Blow,,,,,,(PA * BR)/100 * WP,(PA * BR)/100 * WP,3,,Equip Katana
-Kikuichimonji,2D,13,35,2-swords 2-hands,Sm,,,1,,,,,,Double Blow,,,,,,(PA * BR)/100 * WP,(PA * BR)/100 * WP,3,,Equip Katana
-Masamune,2E,11,35,2-swords 2-hands,Sm,,,,,,,,,Double Blow,Fire Lightning,,,Haste,,(PA * BR)/100 * WP,(PA * BR)/100 * WP,3,,Equip Katana
-Chirijiraden,2F,13,35,2-swords 2-hands,Sm,,2,,,,,,,Double Blow,,,,,,(PA * BR)/100 * WP,(PA * BR)/100 * WP,3,,Equip Katana
-Battle Axe,30,15,40,2-hands only,Sq Ge,1,,1,,,,,,Decapitate,,,,,,(1..PA) * WP,"(85% target max HP, magic evade)",4,,Equip Axe
-Golem Axe,31,13,40,2-hands only,Sq Ge,3,,,,,,,Earth,Decapitate,,,,,,(1..PA) * WP,"(85% target max HP, magic evade)",4,,Equip Axe
-Tidal Axe,32,20,40,2-hands only,Sq Ge,,3,,,,,,Water,Decapitate,,,,,,(1..PA) * WP,"(85% target max HP, magic evade)",4,,Equip Axe
-Rod,33,12,20,2-swords 2-hands,Wi Su Or Sg,,1,-1,,,,,,,,,,,,PA*WP,,1,,
-Thunder Rod,34,5,20,2-swords 2-hands,Wi Su Or Sg,,,,,,,,Lightning,Chain Lightning,,,Lightning,,,PA*WP,Dmg_F(MA*12),1,,
-Flame Rod,35,5,20,2-swords 2-hands,Wi Su Or Sg,,,,,,,,Fire,Explosion,,,Fire,,,PA*WP,Dmg_F(MA*18),1,,
-Water Rod,36,5,20,2-swords 2-hands,Wi Su Or Sg,,,,,,,,Water,Hydragon Pit,,,Water,,,PA*WP,Dmg_F(MA*18),1,,
-Poison Rod,37,8,20,2-swords 2-hands,Wi Su Or Sg,,,1,,,Poison,,,,,,,,,PA*WP,,1,,
-Wizard Rod,38,4,20,2-swords 2-hands,Wi Su Or Sg,,2,,,,,,,,,,,,,PA*WP,,1,,
-Dragon Rod,39,12,20,2-swords 2-hands,Wi Su Or Sg,,,,,,,,,Bahamut,,,,,,PA*WP,Dmg_F(MA*20),1,,
-Faith Rod,3A,5,20,2-swords 2-hands,Wi Su Or Sg,,,,,,Faith,,,,Lightning,,,,Faith,PA*WP,,1,,
-Oak Staff,3B,10,20,2-swords 2-hands,Pr TM Su Or Sg,,,,,,,,,,,,,,,MA*WP,,5,,
-White Staff,3C,3,20,2-swords 2-hands,Pr TM Su Or Sg,,,,,,,Negative Status,,,,,,,,PA*WP,,1,,
-Healing Staff,3D,14,20,2-swords 2-hands / Heals target,Pr TM Su Or Sg,,,,,,,,,,,,,,,MA*WP,,5,,
-Rainbow Staff,3E,10,20,2-swords 2-hands,Pr TM Su Or Sg,,,,,,Discord,,,,,,,,,PA*WP,,1,,
-Wizard Staff,3F,4,20,2-swords 2-hands,Pr TM Su Or Sg,,1,,,,Frog,,,,,,,,,MA*WP,,5,,
-Gold Staff,40,8,20,2-swords 2-hands,Pr TM Su Or Sg,,,,,,,Positive Status,,,,,,,,MA*WP,,5,,
-Mace of Zeus,41,8,20,2-swords 2-hands,Pr TM Su Or Sg,,,1,,,,,,,,,Lightning,,,MA*WP,,5,,
-Sage Staff,42,8,20,2-swords 2-hands,Pr TM Su Or Sg,,2,,,,,,,,,,,,,MA*WP,,5,,
-Flail,43,10,10,2-swords 2-hands,Sq Pr Nj,,,,,,Don't Act,,,,,,,,,WP*WP,,7,,
-Flame Whip,44,10,10,2-swords 2-hands,Sq Pr Nj,,,,,,,,Fire,Explosion,,,,,,WP*WP,,4,,
-Morning Star,45,12,10,2-swords 2-hands / Concentrate,Sq Pr Nj,,,-1,,,,,,,,,,,,WP*WP No Evade,,7,,
-Scorpion Tail,46,11,10,2-swords 2-hands,Sq Pr Nj,,,,,,Poison,,,,,,,,,WP*WP,,7,,
-Romanda Gun,47,12,5,5 Range,Me En,,,,,,,,,,,,,,,WP*WP No Evade,,7,,Equip Gun
-Chocobo Gun,48,13,5,Exactly 3 Range,Me En,,,,,,,,,,,,,,,WP*WP No Evade,,7,,Equip Gun
-Stone Gun,49,14,5,5 Range,Me En,,,,,,,,,,,,,Slow,,WP*WP No Evade,,7,,Equip Gun
-Engineer Rifle,4C,11,5,8 Range,Me En,,,,,,,,,,,,,,,WP*WP No Evade,,7,,Equip Gun
-Bow Gun,4D,10,5,6 Range,Sq Ar En,,,,,,,,,Doubleshot,,,,,,PA*WP,,1,,Equip Bows
-Night Killer,4E,10,5,4 Range,Sq Ar En,,,1,,,,,,Doubleshot,,,,,,PA*WP,,1,,Equip Bows
-Lava Bolt,4F,12,5,4 Range,Sq Ar En,,,,,,,,Fire,,,,,,,WP*WP No Evade,,7,,Equip Bows
-Arbalest,50,7,5,4 Range 2-swords,Sq Ar En,,,,,,,,,Doubleshot,,,,,,PA*WP,,1,,Equip Bows
-Hunting Bow,51,10,5,4 Range,Sq Ar En,,,,,,,,,Doubleshot,,,,,Transparent,PA*WP,,1,,Equip Bows
-Gastrafitis,52,12,5,4 Range,Sq Ar En,,,,,,,,,Doubleshot,,,,,,PA*WP,,1,,Equip Bows
-Long Bow,53,13,20,8 Range / 2-hands only,Ar,,,,,,,,,,,,,,,(PA+SP)/2*WP,,2,,Equip Bows
-Silver Bow,54,14,20,6 Range / 2-hands only,Ar,,,,,,,,,,,,,,,(PA+SP)/2*WP,,2,,Equip Bows
-Ice Bow,55,11,20,6 Range / 2-hands only,Ar,,,,,,,,Ice,Hailstorm,,,,,,(PA+SP)/2*WP,PA*12,2,,Equip Bows
-Lightning Bow,56,11,20,6 Range / 2-hands only,Ar,,,,,,,,Lightning,Zap,,,,,,(PA+SP)/2*WP,PA*12,2,,Equip Bows
-Windslash Bow,57,11,20,6 Range / 2-hands only,Ar,,,,,,,,Wind,Gust,,,,,,(PA+SP)/2*WP,PA*12,2,,Equip Bows
-Mythril Bow,58,11,20,6 Range / 2-hands only,Ar,,3,,,,,,,,,,,,,(PA+SP)/2*WP,,2,,Equip Bows
-Ultimus Bow,59,10,20,6 Range / 2-hands only,Ar,,,1,,,,,,,,,,,,(PA+SP)/2*WP,,2,,Equip Bows
-Cupid Bow,5A,9,20,6 Range / 2-hands only,Ar,,,,,,Charm,,,,,,,,,(PA+SP)/2*WP,,2,,Equip Bows
-Perseus Bow,5B,12,20,6 Range / 2-hands only,Ar,,,,,,,,,Critical Hit,,,,,,(PA+SP)/2*WP,"(85% target max HP, magic evade)",2,,Equip Bows
-Ramia Harp,5C,10,10,Exactly 3 Range,Bd,,,,,,Confusion,,,,,,,,,(PA+MA)/2 * WP,,6,,
-Bloody Strings,5D,13,10,Exactly 3 Range / leeches HP,Bd,,,,,,,,Dark,,,,,,,(PA+MA)/2 * WP,,6,,
-Fairy Harp,5E,8,10,Exactly 3 Range,Bd,,,,,,Charm,,,,,,,,,(PA+MA)/2 * WP,,6,,
-Battle Dict,5F,14,15,Exactly 3 Range,Ch Sg,,,,,,,Reraise,,,,,,,,(PA+MA)/2 * WP,,6,,
-Monster Dict,60,14,15,Exactly 3 Range,Ch Sg,,,,,,,,,Kamaitachi,,,,,,(PA+MA)/2 * WP,(PA+4)/2*MA,6,,
-Papyrus Plate,61,14,15,Exactly 3 Range,Ch Sg,,,,,,Confusion,,,,,,,,,(PA+MA)/2 * WP,,6,,
-Madlemgen,62,14,15,Exactly 3 Range,Ch Sg,,,1,,,,,,,,,,,,(PA+MA)/2 * WP,,6,,
-Javelin,63,9,20,2 Range / 2-hands,Ln,,,1,,,,,,,,,,,,PA*WP,,1,,Equip Spear
-Spear,64,10,20,2 Range / 2-hands,Ln,1,,,,,,,,,,,,,,PA*WP,,1,,Equip Spear
-Mythril Spear,65,10,20,2 Range / 2-hands,Ln,,2,,,,,,,,,,,,,PA*WP,,1,,Equip Spear
-Partisan,66,10,20,2 Range / 2-hands,Ln,,,,,,,,,Double Blow,,,,,,PA*WP,PA*WP,1,,Equip Spear
-Oberisk,67,9,20,2 Range / 2-hands,Ln,,,,,,,Positive Status,,,,,,,,PA*WP,,1,,Equip Spear
-Holy Lance,68,8,20,2 Range / 2-hands,Ln,,,,,,,,Holy,Holy Explosion,,,,,,PA*WP,,1,,Equip Spear
-Dragon Whisker,69,10,20,2 Range / 2-hands / 2-swords,Ln,,,,,,,,,Fire Breath,,,,,,PA*WP,PA*10,1,,Equip Spear
-Javelin II,6A,11,20,2 Range / 2-hands,Ln,,,,,,,,,,,,,,,PA*WP,,1,,Equip Spear
-Cypress Rod,6B,7,30,2 Range / 2-hands,Or Sg,,,,1,,,,Earth,,,,,,,MA*WP,,5,,
-Battle Bamboo,6C,10,30,2 Range / 2-hands,Or Sg,2,,,1,,,,,,,,,,,PA*WP,,1,,
-Musk Rod,6D,5,30,2 Range / 2-hands,Or Sg,,,,1,,Charm,,,,,,,,,MA*WP,,5,,
-Iron Fan,6E,8,30,2 Range / 2-hands,Or Sg,,,,1,,Confusion,,,,,,,,,MA*WP,,5,,
-Gokuu Rod,6F,9,30,2 Range / 2-hands,Or Sg,,,,1,,Innocent,,,,,,,,,MA*WP,,5,,
-Ivory Rod,70,5,30,2 Range / 2-hands / Absorb MP,Or Sg,,,,1,,,,,,,,,,,PA*WP,,1,,
-Octagon Rod,71,9,30,2 Range / 2-hands,Or Sg,,,,1,,,,,,,,,Innocent,,MA*WP,,5,,
-Whale Whisker,72,14,30,2 Range,Or Sg,,,,1,,,,,,,,,,,MA*WP,,5,,
-G Bag,73,10,5,,Female,1,2,,,,,,,,,,,,,(1..PA) * WP,,4,,
-H Bag,76,12,5,,Female,,,1,,,,,,,,,,,,(1..PA) * WP,,4,,
-FS Bag,74,13,5,,Female,,,,,,,,,,,,,,Regen,(1..PA) * WP,,4,,
-Persia,77,13,45,2 Range / 2-hands,Dc,,,1,,,,,,Cancel Charging,,,,,,(PA+MA)/2 * WP,,6,,
-Cashmere,78,14,45,2 Range / 2-hands,Dc,,,,,,,,,Cancel Charging,,,,Don't Move,,(PA+MA)/2 * WP,,6,,
-Ryozan Silk,79,15,45,2 Range / 2-hands,Dc,,,,,,,,,Cancel Charging,,,,,,(PA+MA)/2 * WP,,6,,
+Weapon,Item ID,WP,W-EV,Flags,Classes,PA,MA,Speed,Move,Jump,Adds:,Cancels:,Element:,Proc:,Weak:,Absorbs:,Strengthens:,Start:,Always:,Formula:,Proc Formula:,Formula Table,Proc Table:,Skill
+Dagger,1,8,10,2-swords,Sq Ch Th Nj,,,,,,,,,,,,,,,SP*WP,,,,
+Mythril Knife,2,8,10,2-swords,Sq Ch Th Nj,,,,,,,Charging,,,,,,,,(PA+SP)/2*WP,,,,
+Running Knife,3,5,10,2-swords,Sq Ch Th Nj,,,,2,,,,,,,,,,,(PA+SP)/2*WP,,,,
+Mage Masher,4,12,10,2-swords / leeches MP,Sq Ch Th Nj,,,,,,,,,,,,,,,PA*WP,,,,
+Platina Dagger,5,11,10,2-swords,Sq Ch Th Nj,,,,,,,,,,,,,,,WP*WP No Evade,,,,
+Main Gauche,6,9,40,2-swords,Sq Ch Th Nj,,,,,,,,,,,,,,,(PA+SP)/2*WP,,,,
+Orichalcum,7,8,10,2-swords,Sq Ch Th Nj,,2,,,,,,,,,,,,,(PA+SP)/2*WP,,,,
+Assassin Dagger,8,9,10,2-swords,Sq Ch Th Nj,,,1,,,,,,,,,,,,(PA+SP)/2*WP,,,,
+Air Knife,9,9,10,2-swords,Sq Ch Th Nj,,,,,,,,Wind,Zephyr,,,,,,(PA+SP)/2*WP,"Dmg_(SP*(PA*BR/100)) (SP is XA, +50% if hasted)",,,
+Tonberry Knife,A,1,10,2-swords,Sq Ch Th Nj,,,,,,Dead,,,,,,,,,(PA+SP)/2*WP,,,,
+Hidden Knife,B,11,20,2-swords 2-hands,Th Nj,,,1,,,,,,,,,,,,(PA+SP)/2*WP,,,,
+Ninja Knife,C,10,20,2-swords 2-hands,Th Nj,,,1,,,,,,,,,,,,WP*WP,,,,
+Short Edge,D,10,40,2-swords 2-hands,Th Nj,,,1,,,,,,,,,,,,(PA+SP)/2*WP,,,,
+Ninja Edge,E,8,20,2-swords 2-hands,Th Nj,,,1,,,,,,,,,,,,SP*WP,,,,
+Spell Edge,F,9,20,2-swords 2-hands,Th Nj,,5,1,,,,,,,,,,,,(PA+SP)/2*WP,,,,
+Sasuke Knife,10,9,20,2-swords 2-hands,Th Nj,1,,1,,,,,,,,,,,,(PA+SP)/2*WP,,,,
+Iga Knife,11,9,20,2-swords 2-hands,Th Nj,,,1,,,,,Wind,Tornado,,,Wind,,,(PA+SP)/2*WP,Dmg_F(MA*50),,,
+Koga Knife,12,9,20,2-swords 2-hands,Th Nj,,,1,,,,,Earth,Quake,,,Earth,,,(PA+SP)/2*WP,Dmg_F(MA*50),,,
+Broad Sword,13,11,25,2-swords 2-hands,Sq Kn Ge Sg Sb Pd,,,,,,,,,,,,,Defending,,PA*WP,,,,Equip Sword
+Long Sword,14,11,25,2-swords 2-hands,Sq Kn Ge Sg Sb Pd,,,,1,,,,,,,,,,,PA*WP,,,,Equip Sword
+Parrying Sword,15,10,50,2-swords 2-hands,Sq Kn Ge Sg Sb Pd,,,,,,,,,,,,,,,PA*WP,,,,Equip Sword
+Mythril Sword,16,9,25,2-swords 2-hands,Sq Kn Ge Sg Sb Pd,,3,,,,,,,,,,,,,PA*WP,,,,Equip Sword
+Blood Sword,17,10,25,2-swords 2-hands / leeches HP,Sq Kn Ge Sg Sb Pd,,,,,,,,Dark,,,,,,,PA*WP,,,,Equip Sword
+Coral Sword,18,10,25,2-swords 2-hands,Sq Kn Ge Sg Sb Pd,,,,,,,,Lightning,Mjollnir,,,,,,PA*WP,Dmg_F(MA*20),,,Equip Sword
+Ancient Sword,19,10,25,2-swords 2-hands,Sq Kn Ge Sg Sb Pd,,,,,,Don't Act,,,,,,,,,PA*WP,,,,Equip Sword
+Scramasax,1A,10,25,2-swords 2-hands,Sq Kn Ge Sg Sb Pd,,,,,,,,,Double Blow,,,,,,PA*WP,PA*WP,,,Equip Sword
+Paladin Sword,1B,10,25,2-swords 2-hands,Sq Kn Ge Sg Sb Pd,,,,,,,,Holy,Holy Strike,,,,,,PA*WP,(PA+6)/2*MA,,,Equip Sword
+Demon Hilt,1C,10,25,2-swords 2-hands,Sq Kn Ge Sg Sb Pd,,,,,,,,Fire,Demon Fire,,,,,,PA*WP,(PA+4)/2*MA,,,Equip Sword
+Ice Brand,1D,10,25,2-swords 2-hands,Sq Kn Ge Sg Sb Pd,,,,,,,,Ice,Ice Breath,,,,,,PA*WP,MA*12,,,Equip Sword
+Slasher,1E,11,25,2-swords 2-hands,Sq Kn Ge Sg Sb Pd,,,,,,,,,Demi,,,,,,PA*WP,"(25% target max HP, magic evade)",,,Equip Sword
+Nagrarock,1F,5,25,2-swords 2-hands,Sq Kn Ge Sg Sb Pd,1,1,1,1,1,,,,,,,,,,PA*WP,,,,Equip Sword
+Materia Blade,20,13,30,2-hands only,Sq Kn Sb Pd,,3,,,,,,,,,,,,,MA*WP,,,,Equip Sword
+Defender,21,13,30,2-hands only,Sq Kn Sb Pd,,,,,,,,,,,,,,Defending,(PA * BR)/100 * WP,,,,Equip Sword
+Save the Queen,22,14,30,2-hands only,Sq Kn Sb Pd,,,,,,,,Holy,,,,,,,(PA * BR)/100 * WP,,,,Equip Sword
+Excalibur,23,15,30,2-hands only,Sq Kn Sb Pd,,,,,,,,,,,,,,,(PA * BR)/100 * WP,,,,Equip Sword
+Ragnarok,24,14,30,2-hands only,Sq Kn Sb Pd,,,,,,Dead,,,,,,,,,(PA * BR)/100 * WP,,,,Equip Sword
+Chaos Blade,25,1,30,2-hands only,Sq Kn Sb Pd,,,,,,Crystal,,,,,,,,,(PA * BR)/100 * WP,,,,Equip Sword
+Asura Knife,26,12,35,2-swords 2-hands,Sm Sb,,,,,,,,Fire,,,,,,,(MA * BR)/100 * WP,,,,Equip Katana
+Koutetsu Knife,27,12,35,2-swords 2-hands,Sm Sb,,,,,,,,Dark,,,,,,,(MA * BR)/100 * WP,,,,Equip Katana
+Bizen Boat,28,13,35,2-swords 2-hands,Sm Sb,,,,,,,,,Don't Act,,,,,,(MA * BR)/100 * WP,,,,Equip Katana
+Murasame,29,13,35,2-swords 2-hands,Sm Sb,2,,,,,,,,,,,,,,(MA * BR)/100 * WP,,,,Equip Katana
+Heaven's Cloud,2A,12,35,2-swords 2-hands,Sm Sb,,,,,,,,Water,,,,,,,(MA * BR)/100 * WP,,,,Equip Katana
+Kiyomori,2B,9,35,2-swords 2-hands,Sm Sb,,,,,,,,,,,,,Protect Shell,,(MA * BR)/100 * WP,,,,Equip Katana
+Muramasa,2C,14,35,2-swords 2-hands,Sm Sb,,,,,,,,,,,,,,,(MA * BR)/100 * WP,,,,Equip Katana
+Kikuichimonji,2D,12,35,2-swords 2-hands,Sm Sb,,,1,,,,,,,,,,,,(MA * BR)/100 * WP,,,,Equip Katana
+Masamune,2E,11,35,2-swords 2-hands,Sm Sb,,,,,,,,,,Fire Lightning,,,Haste,,(MA * BR)/100 * WP,,,,Equip Katana
+Chirijiraden,2F,12,35,2-swords 2-hands,Sm Sb,,2,,,,,,,,,,,,,(MA * BR)/100 * WP,,,,Equip Katana
+Battle Axe,30,13,40,2-hands only,Sq Ch Ge,,,,,,,,,Dauntless,,,,,,(BR / 5) * WP,Brave + 10,,,Equip Axe
+Golem Axe,31,13,40,2-hands only,Sq Ch Ge,3,,,,,,,Earth,,,,,,,(BR / 5) * WP,,,,Equip Axe
+Tidal Axe,32,13,40,2-hands only,Sq Ch Ge,,,,,,,,,Rising Tide,,,,,,(BR / 5) * WP,Team Brave + 5,,,Equip Axe
+Rod,33,12,20,2-swords 2-hands,Wi TM Su Sg,,1,-1,,,,,,,,,,,,MA*WP,,,,
+Thunder Rod,34,5,20,2-swords 2-hands,Wi TM Su Sg,,,,,,,,Lightning,Chain Lightning,,,Lightning,,,PA*WP,Dmg_F(MA*16),,,
+Flame Rod,35,5,20,2-swords 2-hands,Wi TM Su Sg,,,,,,,,Fire,Explosion,,,Fire,,,PA*WP,Dmg_F(MA*19),,,
+Water Rod,36,5,20,2-swords 2-hands,Wi TM Su Sg,,,,,,,,Water,Hydragon Pit,,,Water,,,PA*WP,Dmg_F(MA*18),,,
+Poison Rod,37,8,20,2-swords 2-hands,Wi TM Su Sg,,,,,,Poison,,,,,,,,,PA*WP,,,,
+Wizard Rod,38,4,20,2-swords 2-hands,Wi TM Su Sg,,2,,,,,,,,,,,,,PA*WP,,,,
+Dragon Rod,39,12,20,2-swords 2-hands,Wi TM Su Sg,,-2,-2,,,,,,Bahamut,,,,,,PA*WP,Dmg_F(MA*45),,,
+Mace of Zeus,41,8,20,2-swords 2-hands,Wi TM Su Sg,,,1,,,,,,,,,Lightning,,,PA*WP,,,,
+Oak Staff,3B,10,20,2-swords 2-hands,Pr Or Me Sg,,,,,,,,,,,,,,,MA*WP,,,,
+White Staff,3C,1,20,2-swords 2-hands,Pr Or Me Sg,,,,,,,Negative Status,,,,,,,,PA*WP,,,,
+Healing Staff,3D,14,20,2-swords 2-hands / Heals target,Pr Or Me Sg,,,,,,,,,,,,,,,MA*WP,,,,
+Rainbow Staff,3E,10,20,2-swords 2-hands,Pr Or Me Sg,,,,,,Discord,,,,,,,,,MA*WP,,,,
+Wizard Staff,3F,8,20,2-swords 2-hands,Pr Or Me Sg,,1,,,,Frog,,,,,,,,,MA*WP,,,,
+Gold Staff,40,8,20,2-swords 2-hands,Pr Or Me Sg,,,,,,,Positive Status,,,,,,,,MA*WP,,,,
+Faith Rod,3A,5,20,2-swords 2-hands,Pr Or Me Sg,,,,,,Faith,,,,Lightning,,,,Faith,MA*WP,,,,
+Pope Staff,42,8,20,2-swords 2-hands,Pr Or Me Sg,,,,,,,Don't Act Berserk,,,,,Holy,,,MA*WP,,,,
+Flail,43,11,10,2-swords 2-hands ,Sq Ch Pr,,,,,,Don't Act,,,,,,,,,WP*WP No Evade,,,,
+Flame Whip,44,12,10,2-swords 2-hands,Sq Ch Pr,,,,,,,,Fire,Explosion,,,,,,WP*WP No Evade,,,,
+Morning Star,45,13,10,2-swords 2-hands / Concentrate,Sq Ch Pr,,,-1,,,,,,,,,,,,WP*WP No Evade,,,,
+Scorpion Tail,46,14,10,2-swords 2-hands,Sq Ch Pr,,,,,,Poison,,,,,,,,,WP*WP,,,,
+Romanda Gun,47,13,5,5 Range,Me En,,,,,,,,,,,,,,,WP*WP No Evade,,,,Equip Gun
+Chocobo Gun,48,14,5,Exactly 3 Range,Me En,,,,,,,,,,,,,,,WP*WP No Evade,,,,Equip Gun
+Stone Gun,49,14,5,5 Range,Me En,,,,,,,,,,,,,Slow,,WP*WP No Evade,,,,Equip Gun
+Engineer Rifle,4C,12,5,8 Range,Me En,,,,,,,,,,,,,,,WP*WP No Evade,,,,Equip Gun
+Bow Gun,4D,10,5,6 Range,Sq Ar En,,,,,,,,,Doubleshot,,,,,,PA*WP,,,,Equip Bows
+Night Killer,4E,10,5,4 Range,Sq Ar En,,,1,,,,,,Doubleshot,,,,,,PA*WP,,,,Equip Bows
+Lava Bolt,4F,12,5,4 Range,Sq Ar En,,,,,,,,Fire,,,,,,,WP*WP No Evade,,,,Equip Bows
+Arbalest,50,8,5,4 Range 2-swords,Sq Ar En,,,,,,,,,Doubleshot,,,,,,PA*WP,,,,Equip Bows
+Hunting Bow,51,10,5,4 Range,Sq Ar En,,,,,,,,,Doubleshot,,,,,Transparent,PA*WP,,,,Equip Bows
+Gastrafitis,52,12,5,4 Range,Sq Ar En,,,,,,,,,Doubleshot,,,,,,PA*WP,,,,Equip Bows
+Long Bow,53,13,20,8 Range / 2-hands only,Ar Sm,,,,,,,,,,,,,,,(PA+SP)/2*WP,,,,Equip Bows
+Silver Bow,54,14,20,6 Range / 2-hands only,Ar Sm,,,,,,,,,,,,,,,(PA+SP)/2*WP,,,,Equip Bows
+Ice Bow,55,11,20,6 Range / 2-hands only,Ar Sm,,,,,,,,Ice,Hailstorm,,,,,,(PA+SP)/2*WP,PA*12,,,Equip Bows
+Lightning Bow,56,11,20,6 Range / 2-hands only,Ar Sm,,,,,,,,Lightning,Zap,,,,,,(PA+SP)/2*WP,PA*12,,,Equip Bows
+Windslash Bow,57,11,20,6 Range / 2-hands only,Ar Sm,,,,,,,,Wind,Gust,,,,,,(PA+SP)/2*WP,PA*12,,,Equip Bows
+Mythril Bow,58,11,20,6 Range / 2-hands only,Ar Sm,,3,,,,,,,,,,,,,(PA+SP)/2*WP,,,,Equip Bows
+Ultimus Bow,59,10,20,6 Range / 2-hands only,Ar Sm,,,1,,,,,,,,,,,,(PA+SP)/2*WP,,,,Equip Bows
+Cupid Bow,5A,9,20,6 Range / 2-hands only,Ar Sm,,,,,,Charm,,,,,,,,,(PA+SP)/2*WP,,,,Equip Bows
+Perseus Bow,5B,12,20,6 Range / 2-hands only,Ar Sm,,,,,,,,,Critical Hit,,,,,,(PA+SP)/2*WP,"(85% target max HP, magic evade)",,,Equip Bows
+Ramia Harp,5C,13,35,Exactly 3 Range,Sq Bd,,,,,,Confusion,,,,,,,,,(PA+MA)/2 * WP,,,,
+Bloody Strings,5D,15,35,Exactly 3 Range / leeches HP,Sq Bd,,,,,,,,Dark,,,,,,,(PA+MA)/2 * WP,,,,
+Fairy Harp,5E,12,35,Exactly 3 Range,Sq Bd,,,,,,Charm,,,,,,,,,(PA+MA)/2 * WP,,,,
+Battle Dict,5F,10,15,Exactly 3 Range,Su Sg,,,,,,,,,,,,,,,MA*WP,,,,
+Monster Dict,60,9,15,Exactly 3 Range,Su Sg,,,,,,Frog,,,,,,,,,MA*WP,,,,
+Papyrus Plate,61,8,15,Exactly 3 Range,Su Sg,,,,,,,,,Carve Model,,,,,,MA*WP,((PA+7)/2)*MA 20% Add: Fatigue,,,
+Madlemgen,62,8,15,Exactly 3 Range,Su Sg,,,1,,,,,,,,,,,,MA*WP,,,,
+Javelin,63,9,20,2 Range / 2-hands,Ln Pd,,,1,,,,,,,,,,,,PA*WP,,,,Equip Spear
+Spear,64,10,20,2 Range / 2-hands,Ln Pd,1,,,,,,,,,,,,,,PA*WP,,,,Equip Spear
+Mythril Spear,65,10,20,2 Range / 2-hands,Ln Pd,,2,,,,,,,,,,,,,PA*WP,,,,Equip Spear
+Partisan,66,10,20,2 Range / 2-hands,Ln Pd,,,,,,,,,Double Blow,,,,,,PA*WP,PA*WP,,,Equip Spear
+Oberisk,67,10,20,2 Range / 2-hands,Ln Pd,,,,,,,Positive Status,,,,,,,,PA*WP,,,,Equip Spear
+Holy Lance,68,9,20,2 Range / 2-hands,Ln Pd,,,,,,,,Holy,Holy Explosion,,,,,,PA*WP,(PA-2)*(WP+2),,,Equip Spear
+Dragon Whisker,69,10,20,2 Range / 2-hands / 2-swords,Ln Pd,,,,,,,,,Fire Breath,,,,,,PA*WP,PA*10,,,Equip Spear
+Javelin II,6A,11,20,2 Range / 2-hands,Ln Pd,,,,,,,,,,,,,,,PA*WP,,,,Equip Spear
+Cypress Rod,6B,9,20,2 Range / 2-hands,Ge Or Sg,,,,1,,,,Earth,,,,,,,MA*WP,,,,
+Battle Bamboo,6C,10,20,2 Range / 2-hands,Ge Or Sg,2,,,1,,,,,,,,,,,PA*WP,,,,
+Musk Rod,6D,6,20,2 Range / 2-hands,Ge Or Sg,,,,1,,Charm,,,,,,,,,MA*WP,,,,
+Iron Fan,6E,9,20,2 Range / 2-hands,Ge Or Sg,,,,1,,Confusion,,,,,,,,,MA*WP,,,,
+Gokuu Rod,6F,10,20,2 Range / 2-hands,Ge Or Sg,,,,1,,Innocent,,,,,,,,,MA*WP,,,,
+Ivory Rod,70,5,20,2 Range / 2-hands / Absorb MP,Ge Or Sg,,,,1,,,,,,,,,,,PA*WP,,,,
+Octagon Rod,71,11,20,2 Range / 2-hands,Ge Or Sg,,,,1,,,,,,,,,Innocent,,MA*WP,,,,
+Whale Whisker,72,13,20,2 Range,Ge Or Sg,,,,1,,,,,,,,,,,MA*WP,,,,
+D Bag,73,10,5,,ALL,,,,,,,,,,,,,Protect Shell,,(1..PA) * WP,,,,
+S Bag,75,14,5,,ALL,,,,,,,,,,,,All Elements,,,(1..PA) * WP,,,,
+X Bag,76,12,5,,ALL,,,,,,,,,,,,,,Overload,(1..PA) * WP,,,,
+R  Bag,74,13,5,,ALL,,,,,,,,,,,,,,Regen,(1..PA) * WP,,,,
+Persia,77,13,35,2 Range / 2-hands,Ch Dc,,,1,,,,,,Cancel Charging,,,,,,(PA+MA)/2 * WP,,,,
+Cashmere,78,14,35,2 Range / 2-hands,Ch Dc,,,,,,,,,Cancel Charging,,,,Don't Move,,(PA+MA)/2 * WP,,,,
+Ryozan Silk,79,15,35,2 Range / 2-hands,Ch Dc,,,,,,,,,Cancel Charging,,,,,,(PA+MA)/2 * WP,,,,

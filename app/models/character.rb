@@ -155,6 +155,10 @@ class Character
     job_data['evade'].to_i
   end
 
+  def class_m_evade
+    job_data['m_evade'].to_i
+  end
+
   def shield_evade_physical
     return 0 unless shield.present?
 

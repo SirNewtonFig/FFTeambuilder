@@ -28,13 +28,15 @@ jobs.each do |row|
         attack: row['PA'],
         magic: row['MA'],
         evade: row['Evade'],
+        m_evade: row['MEvade'],
         hp_mult: row['HPmult'],
         mp_mult: row['MPmult'],
         sp_mult: row['SPmult'],
         pa_mult: row['PAmult'],
         ma_mult: row['MAmult'],
         memgen_id: row['Job ID'],
-        secondary_id: row['Secondary ID']
+        secondary_id: row['Secondary ID'],
+        character_set: row['Charset']
       }
     })
   )
@@ -57,14 +59,16 @@ engineer.prerequisites.create!(prerequisite: Job.find_by(name: 'Chemist'), level
 
 skills = CSV.parse(File.read(Rails.root.join('db/seeds/skills.csv')), headers: true)
 skills.each do |row|
+  next if row['Skill ID'].blank?
+
   job = Job.find_by(name: row['Class'].strip)
   
   skill_type = 'action'
   skill_type = 'reaction' if row['Skill Name'].match?(/^R:/)
-  skill_type = 'support' if row['Skill Name'].match?(/^S:/)
-  skill_type = 'movement' if row['Skill Name'].match?(/^M:/)
+  skill_type = 'support' if row['Skill Name'].match?(/^E:/)
+  skill_type = 'movement' if row['Skill Name'].match?(/^S:/)
 
-  lookup_attrs = { skill_type: skill_type, name: row['Skill Name'].gsub(/^R:|^S:|^M:/, '').strip }
+  lookup_attrs = { skill_type: skill_type, name: row['Skill Name'].gsub(/^R:|^E:|^S:/, '').strip }
   lookup_attrs[:job_id] = job.id if skill_type == 'movement'
 
   skill = Skill.find_or_initialize_by(lookup_attrs)
@@ -201,6 +205,7 @@ monsters.each do |row|
           row['Family Notes:']
         ].reject{|x| x.blank? || x == 'None' },
         evade: row['Evade'],
+        m_evade: row['MEvade'],
         hp_mult: row['HPmult'],
         mp_mult: row['MPmult'],
         sp_mult: row['SPmult'],
