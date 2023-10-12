@@ -127,13 +127,13 @@ class Character
   def move
     job_data['move'].to_i +
       items.map{|i| i.data['move'].to_i}.sum +
-      (movement&.data&.dig('move').to_i || 0)
+      rsm.map{|s| s.data.dig('move').to_i || 0 }.sum
   end
 
   def jump
     job_data['jump'].to_i +
       items.map{|i| i.data['jump'].to_i}.sum +
-      (movement&.data&.dig('jump').to_i || 0)
+      rsm.map{|s| s.data.dig('jump').to_i || 0 }.sum
   end
 
   def speed
