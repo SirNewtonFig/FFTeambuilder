@@ -8,7 +8,7 @@ class Item < ApplicationRecord
 
   scope :proficient, ->(char) {
     s = joins(:jobs).where(jobs: { id: char.data['job'].to_i })
-      .union(joins(:skills).where(skills: { id: char.data['movement'].to_i }))
+      .union(joins(:skills).where(skills: { id: char.rsm }))
 
     s = s.union(where("(items.data -> 'female_only')::boolean")) if char.data['sex'] == 'f'
 

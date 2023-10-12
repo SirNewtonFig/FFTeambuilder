@@ -261,6 +261,10 @@ class Character
     Skill.find(data['movement']) if data['movement'].present?
   end
 
+  memoize def rsm
+    Skill.where(id: data.values_at('reaction', 'support', 'movement').compact)
+  end
+
   memoize def primary_skills
     Skill.where(job: job, id: data.dig('skills','primary')&.map(&:to_i))
   end
