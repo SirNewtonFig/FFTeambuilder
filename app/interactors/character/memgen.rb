@@ -131,8 +131,10 @@ class Character::Memgen < ActiveInteractor::Base
     serialize_sp!
     serialize_pa!
     serialize_ma!
-    serialize_inventory!
     serialize_skills!
+    serialize_inventory!
+    serialize_m_ev!
+    pad!('00', 51)
     pad!('88', 10)
     serialize_ai!
     serialize_name!
@@ -305,8 +307,12 @@ class Character::Memgen < ActiveInteractor::Base
       end
     end
 
+    def serialize_m_ev!
+      block << str_to_hex(character.job_data['m_evade'], default: '00')
+    end
+
     def serialize_skills!
-      pad!('00', 2)
+      pad!('00', 3)
 
       if character.job.monster?
         pad!('ff', 4)
@@ -314,8 +320,6 @@ class Character::Memgen < ActiveInteractor::Base
         encode_skills!(character.primary_skills)
         encode_skills!(character.secondary_skills)
       end
-
-      pad!('00', 53)
     end
 
     def encode_skills!(skills)
