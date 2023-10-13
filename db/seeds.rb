@@ -60,8 +60,7 @@ skills.each do |row|
   skill_type = 'support' if row['Skill Name'].match?(/^E:/)
   skill_type = 'movement' if row['Skill Name'].match?(/^S:/)
 
-  lookup_attrs = { skill_type: skill_type, name: row['Skill Name'].gsub(/^R:|^E:|^S:/, '').strip }
-  lookup_attrs[:job_id] = job.id if skill_type == 'movement'
+  lookup_attrs = { skill_type: skill_type, name: row['Skill Name'].gsub(/^R:|^E:|^S:/, '').strip, job_id: job.id }
 
   skill = Skill.find_or_initialize_by(lookup_attrs)
 

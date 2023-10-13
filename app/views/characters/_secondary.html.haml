@@ -10,7 +10,7 @@
       %input{ name: 'character[skills][secondary][]', type: "hidden", value: '' }
 
       - available = char.secondary.skills.action.unique(char, team)
-      - char.secondary.skills.action.order(:id).each_with_index do |skill, i|
+      - char.secondary.skills.action.order(Arel.sql("data ->> 'memgen_id' desc")).each_with_index do |skill, i|
         - disabled = !available.include?(skill)
         .flex{ data: { controller: 'context', action: 'keydown.esc@window->context#close' } }
           %div
