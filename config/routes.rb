@@ -2,6 +2,27 @@ Rails.application.routes.draw do
   # Defines the root path route ("/")
   root "teams#index"
 
+  namespace :data do
+    resources :items, only: %i{ index } do
+      collection do
+        get :simplified
+      end
+    end
+
+    resources :jobs, only: %i{ index } do
+      collection do
+        get :simplified
+      end
+    end
+
+    resources :skills, only: %i{ index } do
+      collection do
+        get :simplified
+      end
+    end
+
+  end
+
   resources :teams do
     collection do
       patch :update
