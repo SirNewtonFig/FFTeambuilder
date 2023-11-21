@@ -308,7 +308,7 @@ class Character::Memgen < ActiveInteractor::Base
     end
 
     def serialize_m_ev!
-      block << str_to_hex(character.job_data['m_evade'], default: '00')
+      block << str_to_hex(character.job_data['m_evade'], default: '00', base: 10)
     end
 
     def serialize_skills!
@@ -398,9 +398,9 @@ class Character::Memgen < ActiveInteractor::Base
       padded_str.scan(/(..)/).reverse.join
     end
 
-    def str_to_hex(str, bytes: 1, default: '00')
+    def str_to_hex(str, bytes: 1, default: '00', base: 16)
       return default * bytes if str.blank?
 
-      "%0#{bytes * 2}x" % str.to_i(16)
+      "%0#{bytes * 2}x" % str.to_i(base)
     end
 end
