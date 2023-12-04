@@ -1,4 +1,6 @@
 class Job < ApplicationRecord
+  extend Memoist
+
   JP_REQUIREMENTS = [
       0,
       0,  # level 1
@@ -40,5 +42,16 @@ class Job < ApplicationRecord
 
   def monster?
     data.key?('x')
+  end
+
+  memoize def prerequisite_jp
+    raw_cost = data[data.keys.first]['jp_cost']
+
+    return raw_cost.to_i unless raw_cost.blank?
+
+    Job::CalculatePrerequisiteJp.perform(job: self)
+      .jp
+      .values
+      .sum
   end
 end
