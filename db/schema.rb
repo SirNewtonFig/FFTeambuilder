@@ -17,10 +17,12 @@ ActiveRecord::Schema[7.0].define(version: 2024_07_06_204712) do
   create_table "events", force: :cascade do |t|
     t.text "title"
     t.datetime "deadline"
-    t.jsonb "data"
-    t.boolean "active"
+    t.jsonb "data", default: {}, null: false
+    t.boolean "active", default: true, null: false
+    t.uuid "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_events_on_user_id"
   end
 
   create_table "exclusions", force: :cascade do |t|
@@ -32,6 +34,7 @@ ActiveRecord::Schema[7.0].define(version: 2024_07_06_204712) do
     t.datetime "updated_at", null: false
     t.index ["ability_a_type", "ability_a_id"], name: "index_exclusions_on_ability_a"
     t.index ["ability_b_type", "ability_b_id"], name: "index_exclusions_on_ability_b"
+  end
 
   create_table "innates", force: :cascade do |t|
     t.bigint "job_id"
@@ -122,11 +125,14 @@ ActiveRecord::Schema[7.0].define(version: 2024_07_06_204712) do
 
   create_table "submissions", force: :cascade do |t|
     t.bigint "event_id"
-    t.jsonb "data"
+    t.bigint "team_id"
+    t.jsonb "data", default: {}, null: false
     t.boolean "active", default: true
+    t.boolean "approved"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["event_id"], name: "index_submissions_on_event_id"
+    t.index ["team_id"], name: "index_submissions_on_team_id"
   end
 
   create_table "teams", force: :cascade do |t|

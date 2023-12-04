@@ -1,0 +1,10 @@
+#events.divide-y.divide-gray-500
+  - events.each do |event|
+    %a.group.block.py-4{ href: event_path(event) }
+      .text-orange-500.group-hover:text-orange-400= event.title
+      .text-gray-400= "Organizer: #{event.user.username}"
+      .text-gray-400= "Deadline: #{event.deadline.to_formatted_s(:deadline)}"
+      .text-gray-400= "Submissions: #{event.submissions.count}"
+
+  - if @events.blank?
+    .py-4.text-gray-600.italic No active events

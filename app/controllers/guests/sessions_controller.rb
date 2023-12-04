@@ -4,6 +4,6 @@ class Guests::SessionsController < ApplicationController
   def create
     session[:guest_id] ||= SecureRandom.uuid
 
-    redirect_to teams_path
+    redirect_to dashboard_path
   end
 end

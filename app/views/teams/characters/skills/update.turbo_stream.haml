@@ -1,0 +1,40 @@
+= turbo_stream.replace('skills') do
+  - if @char.generic?
+    = render 'teams/characters/skills', char: @char, team: @team
+  - else
+    = render 'teams/characters/skills_monster', char: @char, team: @team
+
+= turbo_stream.replace('meta') do
+  = render 'teams/characters/meta', char: @char, team: @team
+
+= turbo_stream.replace("character-#{i}") do
+  = render 'teams/characters/summary', selected: true, char: @char, i: i, team: @team
+
+= turbo_stream.replace("team-summary") do
+  = render 'teams/summary', team: @team
+
+- if @refresh_secondary || @support_changed || @movement_changed
+  = turbo_stream.replace('secondary-skills') do
+    = render 'teams/characters/secondary', char: @char, team: @team, i: i
+
+- if @support_changed || @movement_changed || @char.monster?
+  = turbo_stream.replace('mobility') do
+    = render 'teams/characters/mobility', char: @char
+
+  = turbo_stream.replace('attack-evasion') do
+    = render 'teams/characters/attack_evasion', char: @char
+
+  = turbo_stream.replace('equipment') do
+    - if @char.generic?  
+      = render 'teams/characters/equipment', char: @char, team: @team
+    - else
+      = render 'teams/characters/equipment_monster', char: @char, team: @team
+
+  = turbo_stream.replace('vitals') do
+    = render 'teams/characters/vitals', char: @char, team: @team
+
+  = turbo_stream.replace('primary-skills') do
+    - if @char.generic?  
+      = render 'teams/characters/primary', char: @char, team: @team, i: i
+    - else
+      = render 'teams/characters/primary_monster', char: @char, team: @team, i: i

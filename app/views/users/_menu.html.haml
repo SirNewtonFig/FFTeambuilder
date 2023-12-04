@@ -1,7 +1,15 @@
+.fixed.bottom-2.left-0
+  .bg-gray-800.p-2.ml-2.w-40.rounded-lg.cursor-pointer.hover:bg-gray-700{ data: { controller: 'context', action: 'keydown.esc@window->context#close click->context#open', context: { placement_value: 'top' } } }
+    .flex.items-center.space-x-1
+      = inline_svg_tag('icons/account.svg', class: 'h-4 w-4 text-white')
+      %span.text-white.text-sm.font-sans= Current.user.username
+    = wrap_tooltip_neutral do
+      = form_for(:logout, url: destroy_user_session_path, method: :delete) do
+        %button.block.w-36.p-2.px-4.my-1.text-white.text-sm.hover:bg-gray-600.text-left{ type: 'submit' }
+          Logout
+      - if current_user.present?
+        %a.block.w-36.p-2.px-4.my-1.text-white.text-sm.hover:bg-gray-600{ href: confirm_destroy_user_path, data: { turbo_frame: 'modal' } }
+          Delete Account
 
-= form_for(:logout, url: destroy_user_session_path, method: :delete) do
-  %button.block.w-36.p-2.px-4.my-1.text-white.text-sm.hover:bg-gray-600.text-left{ type: 'submit' }
-    Logout
-- if current_user.present?
-  %a.block.w-36.p-2.px-4.my-1.text-white.text-sm.hover:bg-gray-600{ href: confirm_destroy_user_path, data: { turbo_frame: 'modal' } }
-    Delete Account
+
+

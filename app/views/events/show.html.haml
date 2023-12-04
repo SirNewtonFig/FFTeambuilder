@@ -1,0 +1,36 @@
+.font-sans.w-full.sticky.py-4.top-0{ class: 'bg-black/75' }
+  .mx-auto.max-w-full.md:max-w-screen-md.2xl:max-w-screen-2xl{ class: 'xl:max-w-[72rem]'}
+    .flex.items-center.justify-between
+      %h1.text-white.text-xl.font-semibold= @event.title
+      .flex.space-x-4
+        - if @event.user == Current.user
+          %a{ href: confirm_destroy_event_path(@event), class: destructive_button_classes, data: { turbo_frame: 'modal' } } Delete Event
+
+        %a{ href: new_event_submission_path(event_id: @event), class: primary_button_classes, data: { turbo_frame: 'modal' } } Submit a Team
+
+.font-sans.mx-auto.mb-4.max-w-full.md:max-w-screen-md.2xl:max-w-screen-2xl{ class: 'xl:max-w-[72rem]'}
+  .text-white.mt-8.bg-gray-800.rounded-lg
+    %h2.p-4.text-lg.font-semibold.text-white My Submissions
+    #my-submissions.space-y-2.px-4
+      = render 'events/show/my_submissions', teams: @my_submissions, event: @event
+
+- if @event.user == Current.user
+  .font-sans.mx-auto.mb-4.max-w-full.md:max-w-screen-md.2xl:max-w-screen-2xl{ class: 'xl:max-w-[72rem]'}
+    .text-white.mt-8.bg-gray-800.rounded-lg
+      %h2.p-4.text-lg.font-semibold.text-white Pending Submissions
+      #submissions.space-y-2.px-4
+        = render 'events/show/submissions', teams: @submissions, event: @event
+
+  .font-sans.mx-auto.mb-4.max-w-full.md:max-w-screen-md.2xl:max-w-screen-2xl{ class: 'xl:max-w-[72rem]'}
+    .text-white.mt-8.bg-gray-800.rounded-lg
+      %h2.p-4.text-lg.font-semibold.text-white Confirmed Teams
+      #bracket.space-y-2.px-4
+        = render 'events/show/bracket', teams: @bracket, event: @event
+
+  .font-sans.mx-auto.mb-4.max-w-full.md:max-w-screen-md.2xl:max-w-screen-2xl{ class: 'xl:max-w-[72rem]'}
+    .text-white.mt-8.bg-gray-800.rounded-lg
+      %h2.p-4.text-lg.font-semibold.text-white Cut Submissions
+      #cut-submissions.space-y-2.px-4
+        = render 'events/show/cut_submissions', teams: @cut_submissions, event: @event
+
+= render "users/menu"

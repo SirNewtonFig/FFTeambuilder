@@ -1,0 +1,39 @@
+- i = params[:character_id] || params[:id]
+
+#ai-values.bg-menu-texture.border-2.border-menu-dark.px-4.py-2.flex-1
+  .flex.justify-between.items-center
+    .text-xl.mb-1.text-menu-dark AI Priorities
+    .flex.space-x-2
+      .text-xs.text-blue-700
+        = link_to('[Defaults]', default_team_character_ai_values_path(team_id: team.id, character_id: i), data: { turbo_method: 'patch' })
+      .text-xs.text-blue-700
+        = link_to('[Clear]', clear_team_character_ai_values_path(team_id: team.id, character_id: i), data: { turbo_method: 'patch' })
+
+  = form_with(url: team_character_ai_values_path(team_id: team.id, character_id: i), method: :patch, data: { controller: 'form' }) do |f|
+    .flex.flex-col.sm:flex-row.sm:space-x-11.sm:space-y-0
+      .flex.flex-col.w-full
+        .flex.items-center.justify-between.flex-1{ data: { controller: 'context', action: 'keydown.esc@window->context#close' } }
+          %label.text-lg.flex-1{ for: "ai_rng_confidence", data: { action: 'contextmenu->context#open:prevent' } } RNG Confidence
+          
+          %select.w-16.cursor-pointer.bg-left.py-0.px-0.bg-transparent.border-0.border-b-2.border-menu-dark.appearance-none.focus:outline-none.focus:ring-0.focus:border-menu-dark.peer{ class: '!pr-0', name: 'character[ai_values][rng_confidence]', data: { action: 'change->form#submit' } }
+            %option{ selected: ('selected' if char.data.dig('ai_values', 'rng_confidence').to_i == 1), value: '1' } Min
+            %option{ selected: ('selected' if char.data.dig('ai_values', 'rng_confidence').to_i == 2 || char.data.dig('ai_values', 'rng_confidence').blank?), value: '2' } Avg
+            %option{ selected: ('selected' if char.data.dig('ai_values', 'rng_confidence').to_i == 4), value: '4' } Max
+
+      .flex.flex-col.w-full
+
+    .flex.flex-col.sm:flex-row.sm:space-x-11.sm:space-y-0
+      - @statuses.each_slice((@statuses.count + 1) / 2).each do |slice|
+        .flex.flex-col.w-full
+          - slice.each do |status|
+            .flex.items-center.justify-between.flex-1{ data: { controller: 'context', action: 'keydown.esc@window->context#close' } }
+              %label.text-lg.flex-1{ for: "ai_#{status.name.parameterize}", data: { action: 'contextmenu->context#open:prevent' } }= status.name
+              %input.bg-right.text-right.w-16.py-0.px-0.bg-transparent.border-0.border-b-2.border-menu-dark.appearance-none.focus:outline-none.focus:ring-0.focus:border-menu-dark.peer{ id: "ai_#{status.name.parameterize}",
+                type: 'number',
+                max: 255, min: -256,
+                name: "character[ai_values][#{status.name.parameterize}]",
+                value: char.data.dig('ai_values', status.name.parameterize),
+                data: { action: 'change->form#submit' } }
+
+              = wrap_tooltip do
+                = render "teams/characters/ai_values/status", status: status

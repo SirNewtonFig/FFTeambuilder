@@ -4,7 +4,7 @@ class ApplicationController < ActionController::Base
   before_action :set_current_values, unless: :devise_controller?
 
   def after_sign_in_path_for(...)
-    teams_path
+    dashboard_path
   end
 
   def after_sign_out_path_for(...)
@@ -18,7 +18,7 @@ class ApplicationController < ActionController::Base
       User.guest(session[:guest_id])
     end
 
-    Current.team = Team.find_or_initialize_by(user_id: Current.user.id) if Current.user.present?
+    Current.team = Team.find_by(id: session[:current_team_id]) if session[:current_team_id].present?
   end
 
   private

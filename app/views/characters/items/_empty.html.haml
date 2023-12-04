@@ -1,8 +1,0 @@
-
-= form_with(url: character_items_path(character_id: params[:character_id]), method: :patch, data: { controller: 'form', turbo_frame: 'character_editor', form_modal_outlet: '.modal-controller' }) do |f|
-  = tag.button(class: 'w-full', data: { action: 'form#submit' }) do
-    %input{ type: 'hidden', name: "character[#{scope}]", value: '' }
-    .-mx-2.px-2.py-3.space-y-1.cursor-pointer{ class: 'hover:bg-menu-dark/25' }
-      .flex.justify-between.items-center
-        .flex.items-center.space-x-6
-          .text-lg.text-menu-dark [Remove #{current.name}]

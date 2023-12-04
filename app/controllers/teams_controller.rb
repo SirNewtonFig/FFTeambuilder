@@ -1,50 +1,51 @@
 class TeamsController < ApplicationController
-  def index
+  def edit
     load_team
 
     @char = @team.characters.first
   end
 
-  def destroy
-    Team.find(params[:id])
-      &.destroy
+  def new
+    team = Team.new(user_id: Current.user.id)
+    team.update(Team.blank_team_attributes)
 
-    redirect_to teams_path
+    redirect_to edit_team_path(team)
   end
 
-  def export
+  def confirm_destroy
+    load_team
+  end
+
+  def destroy
+    load_team
+      
+    @team.destroy
+
+    redirect_to dashboard_path
+  end
+
+  def metadata
     load_team
 
     render layout: 'modal'    
   end
 
-  def download
+  def save
     load_team
 
     @team.update(team_attributes)
-
-    begin
-      f = Tempfile.new('team', Rails.root.join('tmp'))
-      f.write(@team.attributes.except('id', 'created_at', 'updated_at', 'user_id').to_yaml)
-      f.open
-
-      File.open(f.path, 'r') do |ff|
-        send_data(ff.read, filename: "#{@team.name}.yml")
-      end
-    ensure
-      f.close
-      f.unlink
-    end
   end
 
   def create
-    Team.where(user_id: Current.user.id).each(&:destroy)
-
     team_attributes = YAML.safe_load_file(params[:team_file])
 
-    @team = Team.create(user_id: Current.user.id, **team_attributes)
+    team = Team.create(user_id: Current.user.id, **team_attributes)
 
-    redirect_to teams_path
+    Current.team = team
+
+    session[:current_team_id] = team.id
+
+    redirect_to edit_team_path(team)
   end
 
   def update
@@ -58,9 +59,9 @@ class TeamsController < ApplicationController
   private
 
     def load_team
-      @team = Current.team
+      @team = Team.find(params[:id])
 
-      @team.update(Team.blank_team_attributes) if @team.new_record?
+      redirect_to dashboard_path if @team.user_id != Current.user.id
     end
 
     def team_attributes

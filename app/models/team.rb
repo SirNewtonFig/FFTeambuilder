@@ -1,6 +1,9 @@
 class Team < ApplicationRecord
   extend Memoist
 
+  has_many :submissions, inverse_of: :team, dependent: :destroy
+  has_many :events, through: :submissions
+
   enum :palette_a, %i{ blue red green white purple yellow brown black }, suffix: true, _scopes: false
   enum :palette_b, %i{ blue red green white purple yellow brown black }, suffix: true, _scopes: false
 
