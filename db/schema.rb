@@ -120,15 +120,6 @@ ActiveRecord::Schema[7.0].define(version: 2024_07_06_204712) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "submissions", force: :cascade do |t|
-    t.bigint "event_id"
-    t.jsonb "data"
-    t.boolean "active", default: true
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["event_id"], name: "index_submissions_on_event_id"
-  end
-
   create_table "teams", force: :cascade do |t|
     t.uuid "user_id"
     t.text "name"
