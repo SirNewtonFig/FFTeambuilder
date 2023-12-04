@@ -29,7 +29,7 @@ class Character
     "Shell" => 25,
     "Slow" => -39,
     "Stealth" => 25,
-    "Sturdy" => 25,
+    "Sturdy" => 0,
     "Sundown" => -25,
     "Transparent" => 38,
     "Treasure" => -192,
