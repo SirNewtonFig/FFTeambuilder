@@ -13,6 +13,8 @@ class Teams::LineupController < ApplicationController
 
     def load_team
       @team = Team.find_or_initialize_by(user_id: session[:user_id])
+
+      redirect_to teams_path if @team.new_record?
     end
 
     def i
