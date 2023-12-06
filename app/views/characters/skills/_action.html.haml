@@ -33,7 +33,7 @@
       .ml-2= (evade = skill.data['evade']).present? ? evade : 'No'
 
   .flex.flex-wrap
-    - ['silence', 'reflectable', 'counter', 'counter_flood', 'counter_magic', 'mimic'].each do |prop|
+    - ['reflectable', 'counter', 'counter_flood', 'counter_magic', 'mimic'].each do |prop|
       .flex.mr-6
         .text-red-900.capitalize #{stat_label(prop)}:
         .ml-2= skill.data[prop].present? ? 'Yes' : 'No'
