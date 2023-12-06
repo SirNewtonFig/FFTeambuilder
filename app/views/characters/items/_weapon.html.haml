@@ -19,11 +19,19 @@
       .flex.mr-4
         .text-red-900.capitalize #{stat_label(prop)}:
         .ml-2= "%+d" % item.data[prop].to_i
-    - ['element', 'strengthens', 'absorbs', 'halves', 'weakness', 'proc', 'add', 'cancels', 'start', 'always'].each do |prop|
+    - ['element', 'strengthens', 'absorbs', 'halves', 'weakness', 'add', 'cancels', 'start', 'always'].each do |prop|
       - next if item.data[prop].blank?
       .flex.mr-4
         .text-red-900.capitalize #{prop}:
         .ml-2= item.data[prop]
+
+  - if item.data['proc'].present?
+    .text-left
+      %span.text-red-900.capitalize Proc Effect:
+      %span.ml-2
+        = item.data['proc']
+        - if item.data['proc_formula'].present?
+          (#{item.data['proc_formula']})
 
   .flex.space-x-4.flex-wrap
     - if item.data['flags'].present?
