@@ -1,17 +1,18 @@
 .-mx-2.px-2.py-3.space-y-1.cursor-pointer{ class: 'hover:bg-menu-dark/25' }
+  
   .flex.justify-between.items-center
-    .flex.items-center.space-x-4
-      .text-lg= item.name
-
-      - ['wp', 'w_ev'].each do |prop|
-        - next if item.data[prop].blank?
-        .flex
-          .text-red-900.capitalize #{prop.dasherize.upcase}:
-          .ml-2= item.data[prop]
+    .text-lg= item.name
 
     .flex
       .ml-2.text-cyan-900
         [#{item.data['formula']}]
+
+  .flex.items-center.space-x-4
+    - ['wp', 'w_ev'].each do |prop|
+      - next if item.data[prop].blank?
+      .flex
+        .text-red-900.capitalize #{prop.dasherize.upcase}:
+        .ml-2= item.data[prop]
 
   .flex.flex-wrap
     - ['attack', 'magic', 'speed', 'move', 'jump'].each do |prop|
