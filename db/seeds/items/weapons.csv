@@ -1,4 +1,4 @@
-Name,Item ID,WP,W-EV,Flags,Classes,PA,MA,Speed,Move,Jump,Adds:,Cancels:,Element:,Proc:,Weak:,Absorbs:,Strengthens:,Start:,Always:,Formula:,Proc Formula:,Formula Table,Proc Table:,Skill
+Name,Item ID,WP,W-EV,Flags,Classes,PA,MA,Speed,Move,Jump,Adds:,Cancels:,Element:,Proc:,Weak:,Absorbs:,Strengthens:,Start:,Always:,Formula:,Proc Formula:,Formula Table,Proc Table,Skill
 Dagger,1,8,10,2-swords,Sq Ch Th Nj,,,,,,,,,,,,,,,SP*WP,,,,
 Mythril Knife,2,8,10,2-swords,Sq Ch Th Nj,,,,,,,Charging,,,,,,,,(PA+SP)/2*WP,,,,
 Running Knife,3,5,10,2-swords,Sq Ch Th Nj,,,,2,,,,,,,,,,,(PA+SP)/2*WP,,,,
@@ -13,7 +13,7 @@ Hidden Knife,B,11,20,2-swords 2-hands,Th Nj,,,1,,,,,,,,,,,,(PA+SP)/2*WP,,,,
 Ninja Knife,C,10,20,2-swords 2-hands,Th Nj,,,1,,,,,,,,,,,,WP*WP,,,,
 Short Edge,D,10,40,2-swords 2-hands,Th Nj,,,1,,,,,,,,,,,,(PA+SP)/2*WP,,,,
 Ninja Edge,E,8,20,2-swords 2-hands,Th Nj,,,1,,,,,,,,,,,,SP*WP,,,,
-Spell Edge,F,9,20,2-swords 2-hands,Th Nj,,5,1,,,,,,,,,,,,(PA+SP)/2*WP,,,,
+Spell Edge,F,9,20,2-swords 2-hands,Th Nj,,4,,,,,,,,,,,,,(PA+SP)/2*WP,,,,
 Sasuke Knife,10,9,20,2-swords 2-hands,Th Nj,1,,1,,,,,,,,,,,,(PA+SP)/2*WP,,,,
 Iga Knife,11,9,20,2-swords 2-hands,Th Nj,,,1,,,,,Wind,Tornado,,,Wind,,,(PA+SP)/2*WP,Dmg_F(MA*50),,,
 Koga Knife,12,9,20,2-swords 2-hands,Th Nj,,,1,,,,,Earth,Quake,,,Earth,,,(PA+SP)/2*WP,Dmg_F(MA*50),,,
@@ -31,7 +31,7 @@ Ice Brand,1D,10,25,2-swords 2-hands,Sq Kn Ge Sg Sb Pd,,,,,,,,Ice,Ice Breath,,,,,
 Slasher,1E,11,25,2-swords 2-hands,Sq Kn Ge Sg Sb Pd,,,,,,,,,Demi,,,,,,PA*WP,"(25% target max HP, magic evade)",,,Equip Sword
 Nagrarock,1F,5,25,2-swords 2-hands,Sq Kn Ge Sg Sb Pd,1,1,1,1,1,,,,,,,,,,PA*WP,,,,Equip Sword
 Materia Blade,20,13,30,2-hands only,Sq Kn Sb Pd,,3,,,,,,,,,,,,,MA*WP,,,,Equip Sword
-Defender,21,13,30,2-hands only,Sq Kn Sb Pd,,,,,,,,,,,,,,Defending,(PA * BR)/100 * WP,,,,Equip Sword
+Defender,21,13,30,2-hands only,Sq Kn Sb Pd,,,-1,,,,,,,,,,,Defending,(PA * BR)/100 * WP,,,,Equip Sword
 Save the Queen,22,14,30,2-hands only,Sq Kn Sb Pd,,,,,,,,Holy,,,,,,,(PA * BR)/100 * WP,,,,Equip Sword
 Excalibur,23,15,30,2-hands only,Sq Kn Sb Pd,,,,,,,,,,,,,,,(PA * BR)/100 * WP,,,,Equip Sword
 Ragnarok,24,14,30,2-hands only,Sq Kn Sb Pd,,,,,,Dead,,,,,,,,,(PA * BR)/100 * WP,,,,Equip Sword
@@ -111,10 +111,10 @@ Gokuu Rod,6F,10,20,2 Range / 2-hands,Ge Or Sg,,,,1,,Innocent,,,,,,,,,MA*WP,,,,
 Ivory Rod,70,5,20,2 Range / 2-hands / Absorb MP,Ge Or Sg,,,,1,,,,,,,,,,,PA*WP,,,,
 Octagon Rod,71,11,20,2 Range / 2-hands,Ge Or Sg,,,,1,,,,,,,,,Innocent,,MA*WP,,,,
 Whale Whisker,72,13,20,2 Range,Ge Or Sg,,,,1,,,,,,,,,,,MA*WP,,,,
-D Bag,73,10,5,,ALL,,,,,,,,,,,,,Protect Shell,,(1..PA) * WP,,,,
-S Bag,75,14,5,,ALL,,,,,,,,,,,,All Elements,,,(1..PA) * WP,,,,
-X Bag,76,12,5,,ALL,,,,,,,,,,,,,,Overload,(1..PA) * WP,,,,
-R  Bag,74,13,5,,ALL,,,,,,,,,,,,,,Regen,(1..PA) * WP,,,,
+D Bag,73,10,5,,Any,,,,,,,,,,,,,Protect Shell,,(1..PA) * WP,,,,
+S Bag,75,14,5,,Any,,,,,,,,,,,,All Elements,,,(1..PA) * WP,,,,
+X Bag,76,12,5,,Any,,,,,,,,,,,,,,Overload,(1..PA) * WP,,,,
+R  Bag,74,13,5,,Any,,,,,,,,,,,,,,Regen,(1..PA) * WP,,,,
 Persia,77,13,35,2 Range / 2-hands,Ch Dc,,,1,,,,,,Cancel Charging,,,,,,(PA+MA)/2 * WP,,,,
 Cashmere,78,14,35,2 Range / 2-hands,Ch Dc,,,,,,,,,Cancel Charging,,,,Don't Move,,(PA+MA)/2 * WP,,,,
 Ryozan Silk,79,15,35,2 Range / 2-hands,Ch Dc,,,,,,,,,Cancel Charging,,,,,,(PA+MA)/2 * WP,,,,

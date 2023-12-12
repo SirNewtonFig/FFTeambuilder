@@ -3,15 +3,15 @@ Escutcheon,80,Sq Kn Ar Ge Ln Sb Pd,25,0,,,,,,,,Fire Lightning,,,Haste,,Equip Shi
 Buckler,81,Sq Kn Ar Ge Ln Sb Pd,25,45,,,,,,,,,,,,,Equip Shield
 Bronze Shield,82,Sq Kn Ar Ge Ln Sb Pd,30,0,,,,,,,,,,,,Reflect,Equip Shield
 Round Shield,83,Sq Kn Ar Ge Ln Sb Pd,0,0,,,-1,,,,,,,,,Shell,Equip Shield
-Mythril Shield,84,Sq Kn Ar Ge Ln Sb Pd,0,10,,2,,,,,,,,,,,Equip Shield
+Mythril Shield,84,Sq Kn Ar Ge Ln Sb Pd,0,15,,2,,,,,,,,,,,Equip Shield
 Gold Shield,85,Sq Kn Ar Ge Ln Sb Pd,35,35,,,,,,,,,,,,,Equip Shield
 Ice Shield,86,Sq Kn Ar Ge Ln Sb Pd,34,15,,,,,,,Ice,Lightning,Fire,,,,Equip Shield
 Flame Shield,87,Sq Kn Ar Ge Ln Sb Pd,34,15,,,,,,,Fire,Water,Ice,,,,Equip Shield
-Aegis Shield,88,Sq Kn Ar Ge Ln Sb Pd,10,45,,1,,,,,,,,,,,Equip Shield
+Aegis Shield,88,Sq Kn Ar Ge Ln Sb Pd,20,35,,1,,,,,,,,,,,Equip Shield
 Diamond Shield,89,Sq Kn Ar Ge Ln Sb Pd,15,15,1,1,,,,,,,,,,,Equip Shield
-Platina Shield,8A,Sq Kn Ar Ge Ln Sb Pd,45,10,,1,,,,,,,,,,,Equip Shield
+Platina Shield,8A,Sq Kn Ar Ge Ln Sb Pd,35,20,,1,,,,,,,,,,,Equip Shield
 Crystal Shield,8B,Sq Kn Ar Ge Ln Sb Pd,20,20,,,,,,,Ice,,,Ice,,,Equip Shield
 Genji Shield,8C,Sq Kn Ar Ge Ln Sb Pd,30,20,,,,,,Frog Petrify,,,,,,,Equip Shield
-Kaiser Plate,8D,Sq Kn Ar Ge Ln Sb Pd,0,0,,,,,,,,,,Ice/Lightning/Wind,,,Equip Shield
+Kaiser Plate,8D,Sq Kn Ar Ge Ln Sb Pd,10,10,,,,,,,,,,All Elements,,,Equip Shield
 Venetian Shield,8E,Sq Kn Ar Ge Ln Sb Pd,0,0,,,,,,,,,All Elements,,,,Equip Shield
-Escutcheon II,8F,Sq Kn Ar Ge Ln Sb Pd,5,5,,,,,,,,,,,,Defend,Equip Shield
+Escutcheon II,8F,Sq Kn Ar Ge Ln Sb Pd,0,0,,,,,,,,,,,,Stealth,Equip Shield

@@ -9,10 +9,10 @@ Spellblade,"5 Knight,5 Thief,4 Lancer,4 Archer"
 Paladin,"4 Squire,5 Knight,4 Lancer"
 Ninja,"4 Squire,5 Thief,4 Archer"
 Dancer,"3 Monk,3 Engineer"
-Priest,"3 Chemist"
-Wizard,"3 Chemist"
-Time Mage,"3 Wizard"
-Oracle,"3 Priest"
+Priest,3 Chemist
+Wizard,3 Chemist
+Time Mage,3 Wizard
+Oracle,3 Priest
 Samurai,"4 Priest,3 Time Mage"
 Geomancer,"4 Wizard,3 Oracle"
 Sage,"5 Wizard,5 Priest,4 Time Mage,4 Oracle"
