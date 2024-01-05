@@ -1,4 +1,4 @@
-Name,Item ID,Classes,HP,MP,PA,MA,Speed,Move,Jump,Cancels:,Absorbs:,Weak:,Halves:,Strengthens:,Start:,Always:,Skill
+Name,Item ID,Classes,HP,MP,PA,MA,Speed,Move,Jump,Immune:,Absorbs:,Weak:,Halves:,Strengthens:,Start:,Always:,Skill
 Bronze Helmet,91,Kn Ln Sm Pd,180,0,,,-1,,,,,,,,,,Equip Armor
 Iron Helmet,92,Kn Ln Sm Pd,120,0,,,,,,,,,,,Don't Move,,Equip Armor
 Barbuta,93,Kn Ln Sm Pd,180,0,,,,,,,,,,,Slow,,Equip Armor

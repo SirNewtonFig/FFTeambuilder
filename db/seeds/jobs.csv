@@ -2,7 +2,7 @@ Job ID,Secondary ID,Sex,Class,Abbreviation,Secondary Name,Innate,Evade,MEvade,HP
 4a,5,M,Squire,Sq,Basic Skill,,10,5,220,40,9,4,3,8,6,,100,75,100,100,80,80
 4c,7,M,Knight,Kn,Battle Skill,,10,5,270,50,8,3,3,10,6,,140,100,100,140,80,80
 53,e,M,Thief,Th,Steal,Concentrate,25,0,200,38,10,4,4,9,4,,90,50,120,110,60,80
-57,12,M,Lancer,Ln,Jump,,10,10,244,44,8,3,5,12,5,,120,70,110,120,70,80
+57,12,M,Lancer,Ln,Jump,,10,10,244,44,8,3,6,12,5,,120,70,110,120,70,80
 4d,8,M,Archer,Ar,Precision,,10,5,207,46,9,3,4,10,6,,100,65,110,115,80,80
 4e,9,M,Monk,Mk,Punch Art,Martial Arts,20,5,241,55,9,3,4,14,6,,135,80,110,130,80,80
 16,26,M,Engineer,En,Snipe,,5,5,212,24,9,3,3,5,5,,100,75,110,115,100,16

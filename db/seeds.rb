@@ -115,6 +115,7 @@ Dir.glob('db/seeds/items/*.csv').each do |f|
         move: row['Move'],
         add: row['Adds:'],
         cancels: row['Cancels:'],
+        immune: row['Immune:'],
         element: row['Element:'],
         proc: row['Proc:'],
         strengthens: row['Strengthens:'],

@@ -196,7 +196,7 @@ Geomancer,Snowstorm,40,50,4,1,Any,,,,Ice,,,Dmg_((PA+2/2*MA) 20% Don't Act,,Yes,Y
 Geomancer,Gusty Wind,20,50,4,1,Any,,,,Wind,,,Dmg_((PA+2/2*MA) 20% Weaken,,Yes,Yes,,,
 Geomancer,Lava Ball,10,50,4,1,Any,,,,Fire,,,Dmg_((PA+7/2*MA) 20% Sundown,,Yes,Yes,,,
 Geomancer,R:Counter Flood,1B5,600,,,,,,,,,,"Counter with Geomancy, regardless of if skill is learned",,,,,,
-Geomancer,E:Overflow,1DF,1500,,,,,,,,,,Doubles all proc rates,,,,,,
+Geomancer,E:Lucky,1DF,1500,,,,,,,,,,Doubles all proc rates,,,,,,
 Geomancer,S:Move on Lava,1F8,150,,,,,,,,,,Able to walk on lava panels (CLASS INNATE),,,,,,
 Lancer,Range 4,8000,50,4,,Any,,RU(50/Speed),,,,,Dmg_(PA*WP). If using Spear: Dmg_((PA*Jmp/3)*WP) instead,Yes,,Yes,,,
 Lancer,Range 5,4000,200,5,,Any,,RU(50/Speed),,,,,Dmg_(PA*WP). If using Spear: Dmg_((PA*Jmp/3)*WP) instead,Yes,,Yes,,,

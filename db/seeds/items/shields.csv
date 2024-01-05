@@ -1,4 +1,4 @@
-Name,Item ID,Classes,Phys Evade,Magic Evade,PA,MA,Speed,Move,Jump,Cancels:,Absorbs:,Weak:,Halves:,Strengthens:,Start:,Always:,Skill
+Name,Item ID,Classes,Phys Evade,Magic Evade,PA,MA,Speed,Move,Jump,Immune:,Absorbs:,Weak:,Halves:,Strengthens:,Start:,Always:,Skill
 Escutcheon,80,Sq Kn Ar Ge Ln Sb Pd,25,0,,,,,,,,Fire Lightning,,,Haste,,Equip Shield
 Buckler,81,Sq Kn Ar Ge Ln Sb Pd,25,45,,,,,,,,,,,,,Equip Shield
 Bronze Shield,82,Sq Kn Ar Ge Ln Sb Pd,30,0,,,,,,,,,,,,Reflect,Equip Shield

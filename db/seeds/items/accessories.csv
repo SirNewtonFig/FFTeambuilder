@@ -1,4 +1,4 @@
-Name,Item ID,Classes,Phys Evade,Magic Evade,PA,MA,Speed,Move,Jump,Cancels:,Absorbs:,Weak:,Halves:,Strengthens:,Start:,Always:
+Name,Item ID,Classes,Phys Evade,Magic Evade,PA,MA,Speed,Move,Jump,Immune:,Absorbs:,Weak:,Halves:,Strengthens:,Start:,Always:
 Battle Boots,D0,ALL,,,1,,,1,,,,,,,,
 Spike Shoes,D1,ALL,,,1,,,,1,,,,,,,
 Germinas Boots,D2,ALL,,,,,,1,1,Don't Act / Slow / Don't Move,,,,,,
@@ -21,7 +21,7 @@ Genji Gauntlet,D8,ALL,,,,,,,,Slow / Frog / Petrify,,,,,,
 Cursed Ring,DE,ALL,,,1,1,1,,,,,,,,,Undead
 Angel Ring,DF,ALL,,,-1,-1,,,,,,,,,Reraise,
 Small Mantle,E5,ALL,10,30,,,,,,,,,,Fire,,
-Leather Mantle,E6,ALL,15,20,1,,,,,,,,Holy,,,
+Leather Mantle,E6,ALL,15,20,,,,1,,,,,,,Innocent,
 Wizard Mantle,E7,ALL,0,40,,1,,,,,,,,,,
 Elf Mantle,E8,ALL,24,24,,,,,,,,,,,,
 Dracula Mantle,E9,ALL,15,20,,,,,,,Dark,,,Dark,,
