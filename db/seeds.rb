@@ -219,4 +219,3 @@ Job.monster.each do |job|
 end
 
 Job.find_by(name: 'Samurai').innates.find_or_create_by(skill: Skill.find_by(name: 'Two Hands'))
-Job.find_by(name: 'Ninja').innates.find_or_create_by(skill: Skill.find_by(name: 'Two Swords'))
