@@ -62,9 +62,10 @@ skills.each do |row|
 
   lookup_attrs = { skill_type: skill_type, name: row['Skill Name'].gsub(/^R:|^E:|^S:/, '').strip, job_id: job.id }
 
-  skill = Skill.find_or_initialize_by(lookup_attrs)
+  skill = Skill.find_by("job_id = ? AND data ->> 'memgen_id' = ?", job.id, row['Skill ID'].rjust(4, '0')) || Skill.new
 
   skill.update(
+    name: row['Skill Name'].gsub(/^R:|^E:|^S:/, '').strip,
     job: job,
     jp_cost: row['JP Cost'],
     skill_type: skill_type,
