@@ -8,7 +8,7 @@ Plate Mail,B1,Kn Ln Sm Pd,195,0,,,-1,,,,,,,,,,Equip Armor
 Gold Armor,B2,Kn Ln Sm Pd,110,30,,,,,,,,,,,,,Equip Armor
 Diamond Armor,B3,Kn Ln Sm Pd,135,0,1,1,,,,,,,,,,,Equip Armor
 Platina Armor,B4,Kn Ln Sm Pd,135,0,,,,,,,,Fire Lightning,,,Haste,,Equip Armor
-Carabini Mail,B5,Kn Ln Sm Pd,100,0,,,1,,,,,,,,,,Equip Armor
+Carabini Mail,B5,Kn Ln Sm Pd,60,0,,,1,,,,,,,,,,Equip Armor
 Crystal Mail,B6,Kn Ln Sm Pd,120,0,,,,,,,Ice,,,Ice,,,Equip Armor
 Genji Armor,B7,Kn Ln Sm Pd,120,0,,,,,,Slow Frog,,,,,,,Equip Armor
 Reflect Mail,B8,Kn Ln Sm Pd,120,0,,,,,,,,,,,,Reflect,Equip Armor
@@ -24,7 +24,7 @@ Brigandine,C1,NOT Kn Ln Sm Pd,100,0,,,,,,,,,,,,,
 Judo Outfit,C2,NOT Kn Ln Sm Pd,70,0,1,,,,,Dead Death Sentence,,,,,,,
 Power Sleeve,C3,NOT Kn Ln Sm Pd,85,0,2,,,,,,,,,,,,
 Earth Clothes,C4,NOT Kn Ln Sm Pd,85,10,,,,,,,Earth,,,Earth,,,
-Secret Clothes,C5,NOT Kn Ln Sm Pd,50,0,,,1,,,,,,,,,,
+Secret Clothes,C5,NOT Kn Ln Sm Pd,10,0,,,1,,,,,,,,,,
 Black Costume,C6,NOT Kn Ln Sm Pd,85,0,,,,,,Slow Fire,,,,,,,
 Rubber Costume,C7,NOT Kn Ln Sm Pd,40,0,,,,,,Charm Lightning,,,,,,,
 Linen Robe,C8,Pr Wi TM Su Me Or Ge Sg,35,50,,,,,,,,,,,,,

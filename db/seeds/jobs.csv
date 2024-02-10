@@ -1,45 +1,45 @@
-Job ID,Secondary ID,Sex,Class,Abbreviation,Secondary Name,Innate,Evade,MEvade,HP,MP,Speed,Move,Jump,PA,MA,JP Cost,HPmult,MPmult,SPmult,PAmult,MAmult,Charset
-4a,5,M,Squire,Sq,Basic Skill,,10,5,220,40,9,4,3,8,6,,100,75,100,100,80,80
-4c,7,M,Knight,Kn,Battle Skill,,10,5,270,50,8,3,3,10,6,,140,100,100,140,80,80
+Job ID,Secondary ID,Sex,Class,Abbreviation,Secondary Name,Innate,Evade,MEvade,HP,MP,Speed,Move,Jump,PA,MA,JP Cost,HPmult,MPmult,SPmult,PAmult,Mamult,Charset
+4a,5,M,Squire,Sq,Basic Skill,,10,5,220,40,10,4,3,8,6,,100,75,100,100,80,80
+4c,7,M,Knight,Kn,Battle Skill,,10,5,270,50,9,3,3,10,6,,140,100,100,140,80,80
 53,e,M,Thief,Th,Steal,Concentrate,25,0,200,38,10,4,4,9,4,,90,50,120,110,60,80
-57,12,M,Lancer,Ln,Jump,,10,10,244,44,8,3,6,12,5,,120,70,110,120,70,80
-4d,8,M,Archer,Ar,Precision,,10,5,207,46,9,3,4,10,6,,100,65,110,115,80,80
-4e,9,M,Monk,Mk,Punch Art,Martial Arts,20,5,241,55,9,3,4,14,6,,135,80,110,130,80,80
-16,26,M,Engineer,En,Snipe,,5,5,212,24,9,3,3,5,5,,100,75,110,115,100,16
-12,1d,M,Spellblade,Sb,Sword Magic,Half of MP,20,15,195,50,8,3,3,10,8,,100,100,100,100,100,28
-11,1e,M,Paladin,Pd,Holy Sword,Piety,10,15,255,60,8,3,3,10,9,,150,120,120,100,90,4
+57,12,M,Lancer,Ln,Jump,,10,10,244,44,9,3,6,12,5,,120,70,110,120,70,80
+4d,8,M,Archer,Ar,Precision,,10,5,207,46,10,3,4,10,6,,100,65,110,115,80,80
+4e,9,M,Monk,Mk,Punch Art,Martial Arts,20,5,241,55,10,3,4,14,6,,135,80,110,130,80,80
+16,26,M,Engineer,En,Snipe,,5,5,212,24,9,3,3,10,5,,100,75,110,115,100,16
+12,1d,M,Spellblade,Sb,Sword Magic,Half of MP,20,15,195,50,9,3,3,12,8,,100,100,100,100,100,28
+11,1e,M,Paladin,Pd,Holy Sword,Piety,10,15,255,60,9,3,3,10,9,,150,120,120,100,90,4
 59,14,M,Ninja,Nj,Throw,Two Swords,30,0,195,32,10,4,4,10,6,,80,50,120,115,75,80
-4b,6,M,Chemist,Ch,Item,"Throw Item, Double Item Capacity",15,10,192,50,8,3,3,7,7,,90,100,105,80,100,80
+4b,6,M,Chemist,Ch,Item,"Throw Item, Double Item Capacity",15,10,192,50,9,3,3,7,7,,90,100,105,80,100,80
 4f,a,M,Priest,Pr,White Magic,Immune to damage while charging spells,5,15,186,65,10,3,3,8,8,,85,120,110,100,125,80
 50,b,M,Wizard,Wi,Black Magic,Has Guts while charging spells,5,15,183,71,10,3,3,4,10,,80,120,100,60,140,80
 51,c,M,Time Mage,TM,Time Magic,Inflicts slow on attackers while charging spells,5,15,173,68,11,3,3,3,10,,75,120,100,50,120,80
 55,10,M,Oracle,Or,Yin Yang Magic,Has DefenseUP while charging spells,24,15,200,59,10,3,3,5,8,,120,110,100,100,130,80
-58,13,M,Samurai,Sm,Draw Out,Two Hands,20,10,210,60,8,3,3,12,9,,85,100,100,128,140,80
-56,11,M,Geomancer,Ge,Elemental,Any Ground,10,10,182,54,8,4,3,11,10,,110,95,100,110,110,80
-5a,15,M,Sage,Sg,Planar Magic,Regenerates CT while charging spells,5,25,177,80,11,3,3,9,11,,100,120,100,110,125,80
+58,13,M,Samurai,Sm,Draw Out,Two Hands,20,10,210,60,9,3,3,12,9,,85,100,100,128,140,80
+56,11,M,Geomancer,Ge,Elemental,Any Ground,10,10,182,54,9,4,3,11,10,,110,95,100,110,110,80
+5a,15,M,Sage,Sg,Planar Magic,Regenerates CT while charging spells,5,25,177,80,10,3,3,9,11,,100,120,100,110,125,80
 52,d,M,Summoner,Su,Summon Magic,Inflicts damage = 9*MA to attackers while charging spells,5,15,168,75,11,3,3,3,11,,90,135,100,50,135,80
 54,f,M,Mediator,Me,Talk Skill,Monster Talk,5,10,189,61,9,3,3,8,9,,100,100,100,100,115,80
-5b,16,M,Bard,Bd,Sing,,30,10,205,60,8,4,3,8,10,,100,50,115,100,140,80
+5b,16,M,Bard,Bd,Sing,,30,10,205,60,9,4,3,8,10,,100,50,115,100,140,80
 5d,,M,Mime,Mi,Mimic,"Counter, Martial Arts, Concentrate, Immune to Negative Status",33,15,360,0,9,6,7,12,10,4000,180,50,120,140,140,80
-4a,5,F,Squire,Sq,Basic Skill,,10,5,195,50,9,4,3,8,6,,100,75,100,100,80,81
-4c,7,F,Knight,Kn,Battle Skill,,10,5,230,65,8,3,3,10,6,,140,100,100,140,80,81
+4a,5,F,Squire,Sq,Basic Skill,,10,5,195,50,10,4,3,8,6,,100,75,100,100,80,81
+4c,7,F,Knight,Kn,Battle Skill,,10,5,230,65,9,3,3,10,6,,140,100,100,140,80,81
 53,e,F,Thief,Th,Steal,Concentrate,25,0,175,47,10,4,4,9,4,,90,50,120,110,60,81
-57,12,F,Lancer,Ln,Jump,,10,10,207,55,8,3,6,12,5,,120,70,110,120,70,81
-4d,8,F,Archer,Ar,Precision,,10,5,180,52,9,3,4,10,6,,100,65,110,115,80,81
-4e,9,F,Monk,Mk,Punch Art,Martial Arts,20,5,205,72,9,3,4,14,6,,135,80,110,130,80,81
-16,26,F,Engineer,En,Snipe,,5,5,183,30,9,3,3,5,5,,100,75,110,115,100,21
-12,1d,F,Spellblade,Sb,Sword Magic,Half of MP,20,15,172,65,8,3,3,10,8,,100,100,100,100,100,1e
-11,1e,F,Paladin,Pd,Holy Sword,Piety,10,15,220,78,8,3,3,10,9,,150,120,120,100,90,7
+57,12,F,Lancer,Ln,Jump,,10,10,207,55,9,3,6,12,5,,120,70,110,120,70,81
+4d,8,F,Archer,Ar,Precision,,10,5,180,52,10,3,4,10,6,,100,65,110,115,80,81
+4e,9,F,Monk,Mk,Punch Art,Martial Arts,20,5,205,72,10,3,4,14,6,,135,80,110,130,80,81
+16,26,F,Engineer,En,Snipe,,5,5,183,30,9,3,3,10,5,,100,75,110,115,100,21
+12,1d,F,Spellblade,Sb,Sword Magic,Half of MP,20,15,172,65,9,3,3,12,8,,100,100,100,100,100,1e
+11,1e,F,Paladin,Pd,Holy Sword,Piety,10,15,220,78,9,3,3,10,9,,150,120,120,100,90,7
 59,14,F,Ninja,Nj,Throw,Two Swords,30,0,172,40,10,4,4,10,6,,80,50,120,115,75,81
-5c,17,F,Dancer,Dc,Dance,,30,10,200,72,8,4,3,10,8,,100,50,115,140,100,81
-4b,6,F,Chemist,Ch,Item,"Throw Item, Double Item Capacity",15,10,178,60,8,3,3,7,7,,90,100,105,80,100,81
+5c,17,F,Dancer,Dc,Dance,,30,10,200,72,9,4,3,10,8,,100,50,115,140,100,81
+4b,6,F,Chemist,Ch,Item,"Throw Item, Double Item Capacity",15,10,178,60,9,3,3,7,7,,90,100,105,80,100,81
 4f,a,F,Priest,Pr,White Magic,Immune to damage while charging spells,5,15,170,80,10,3,3,8,8,,85,120,110,100,125,81
 50,b,F,Wizard,Wi,Black Magic,Has Guts while charging spells,5,15,166,85,10,3,3,4,10,,80,120,100,60,140,81
 51,c,F,Time Mage,TM,Time Magic,Inflicts slow on attackers while charging spells,5,15,155,81,11,3,3,3,10,,75,120,100,50,120,81
 55,10,F,Oracle,Or,Yin Yang Magic,Has DefenseUP while charging spells,24,15,186,70,10,3,3,5,8,,120,110,100,100,130,81
-58,13,F,Samurai,Sm,Draw Out,Two Hands,20,10,193,75,8,3,3,12,9,,85,100,100,128,140,81
-56,11,F,Geomancer,Ge,Elemental,Any Ground,10,10,165,65,8,4,3,11,10,,110,95,100,110,110,81
-5a,15,F,Sage,Sg,Planar Magic,Regenerates CT while charging spells,5,25,160,100,11,3,3,9,11,,100,120,100,110,125,81
+58,13,F,Samurai,Sm,Draw Out,Two Hands,20,10,193,75,9,3,3,12,9,,85,100,100,128,140,81
+56,11,F,Geomancer,Ge,Elemental,Any Ground,10,10,165,65,9,4,3,11,10,,110,95,100,110,110,81
+5a,15,F,Sage,Sg,Planar Magic,Regenerates CT while charging spells,5,25,160,100,10,3,3,9,11,,100,120,100,110,125,81
 52,d,F,Summoner,Su,Summon Magic,Inflicts damage = 9*MA to attackers while charging spells,5,15,150,95,11,3,3,3,11,,90,135,100,50,135,81
 54,f,F,Mediator,Me,Talk Skill,Monster Talk,5,10,172,72,9,3,3,8,9,,100,100,100,100,115,81
 5d,,F,Mime,Mi,Mimic,"Counter, Martial Arts, Concentrate, Immune to Negative Status",33,15,360,0,9,6,7,10,12,4000,180,50,120,140,140,81

@@ -2,7 +2,7 @@ Name,Item ID,Classes,Phys Evade,Magic Evade,PA,MA,Speed,Move,Jump,Immune:,Absorb
 Battle Boots,D0,ALL,,,1,,,1,,,,,,,,
 Spike Shoes,D1,ALL,,,1,,,,1,,,,,,,
 Germinas Boots,D2,ALL,,,,,,1,1,Don't Act / Slow / Don't Move,,,,,,
-Rubber Shoes,D3,ALL,,,,,,,,Don't Move / Berserk,,,Lightning,,,
+Rubber Shoes,D3,ALL,,,,,,,,Don't Move / Berserk / Weaken,,,,,,
 Feather Boots,D4,ALL,,,,,,1,,Wind,,,,,,Float
 Sprint Shoes,D5,ALL,,,,,1,,,,,,,,,
 Power Wrist,D7,ALL,,,1,,,,,Dead / Death Sentence,,,,,,
