@@ -1,4 +1,4 @@
-Job ID,Secondary ID,Sex,Class,Abbreviation,Secondary Name,Innate,Evade,MEvade,HP,MP,Speed,Move,Jump,PA,MA,JP Cost,HPmult,MPmult,SPmult,PAmult,Mamult,Charset
+Job ID,Secondary ID,Sex,Class,Abbreviation,Secondary Name,Innate,Evade,MEvade,HP,MP,Speed,Move,Jump,PA,MA,JP Cost,HPmult,MPmult,SPmult,PAmult,MAmult,Charset
 4a,5,M,Squire,Sq,Basic Skill,,10,5,220,40,10,4,3,8,6,,100,75,100,100,80,80
 4c,7,M,Knight,Kn,Battle Skill,,10,5,270,50,9,3,3,10,6,,140,100,100,140,80,80
 53,e,M,Thief,Th,Steal,,25,0,200,38,10,4,4,9,4,,90,50,120,110,60,80
