@@ -21,6 +21,11 @@ Rails.application.routes.draw do
       end
     end
 
+    resources :monster_skills, only: %i{ index } do
+      collection do
+        get :simplified
+      end
+    end
   end
 
   resources :teams do
