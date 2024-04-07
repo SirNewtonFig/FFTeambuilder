@@ -87,11 +87,16 @@ skills.each do |row|
       move: row['Move'],
       jump: row['Jump'],
       memgen_id: row['Skill ID'].rjust(4, '0'),
-      mimic: ('Yes' unless row['Mimic?'] == 'No')
+      mimic: ('Yes' unless row['Mimic?'] == 'No'),
+      atk_up: row['Atk Up?'],
+      matk_up: row['MAtk Up?'],
+      martial_arts: row['Martial Arts?'],
+      two_hands: row['Two Hands?'],
+      two_swords: row['Two Swords?'],
+      protect: row['Protect?'],
+      shell: row['Shell?']
     }
   )
-
-  skill.save
 end
 
 Dir.glob('db/seeds/items/*.csv').each do |f|
@@ -128,7 +133,8 @@ Dir.glob('db/seeds/items/*.csv').each do |f|
         halves: row['Halves:'],
         weakness: row['Weak:'],
         female_only: row['Classes'] == 'Female',
-        memgen_id: row['Item ID'].rjust(2, '0')
+        memgen_id: row['Item ID'].rjust(2, '0'),
+        extra_items: row['Extra Items']
       }
     )
 
@@ -163,15 +169,16 @@ mskills.each do |row|
       mimic: row['Mimic?']
     }
   )
-
-  skill.save
 end
 
 monsters = CSV.parse(File.read(Rails.root.join('db/seeds/monsters.csv')), headers: true)
 monsters.each do |row|
-  monster = Job.find_or_initialize_by(name: row['Name'])
+  next if row['Job ID'].blank?
+  
+  monster = Job.monster.find_by("data ->> 'memgen_id' = ?", row['Job ID']) || Job.new
 
   monster.update(
+    name: row['Name'],
     data: {
       'x' => {
         hp: row['HP'],
@@ -202,20 +209,25 @@ monsters.each do |row|
         pa_mult: row['PAmult'],
         ma_mult: row['MAmult'],
         memgen_id: row['Job ID'],
-        jp_cost: row['JP Cost']
+        jp_cost: row['JP Cost'],
+        character_set: '82'
       }
     }
   )
 end
 
-Job.monster.each do |job|
-  data = job.data
-
-  data.deep_merge!({
-    'x' => { 'character_set' => '82' }
-  })
-
-  job.update(data: data)
-end
-
 Job.find_by(name: 'Samurai').innates.find_or_create_by(skill: Skill.find_by(name: 'Two Hands'))
+
+statuses = CSV.parse(File.read(Rails.root.join('db/seeds/statuses.csv')), headers: true)
+
+statuses.each do |row|
+  status = Status.find_or_initialize_by(name: row['Status'])
+
+  status.update(
+    default_priority: row['Default Priority'].to_i,    # could be N/A, coerce it to 0
+    description: row['Description'],
+    duration: row['Duration'],
+    indicator: row['Indicator'],
+    show_priority: row['Default Priority'] != 'N/A'
+  )
+end

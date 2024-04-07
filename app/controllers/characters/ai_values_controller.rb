@@ -6,20 +6,26 @@ class Characters::AiValuesController < ApplicationController
     
     @team.data[i] = @char.data
     @team.save
+
+    load_statuses
   end
 
   def clear
-    @char.data.deep_merge!('ai_values' => Character::AI_VALUES.keys.map{|key| [key.parameterize, 0] }.to_h)
+    @char.data.deep_merge!('ai_values' => Status.clear_priorities)
     
     @team.data[i] = @char.data
     @team.save
+
+    load_statuses
   end
 
   def default
-    @char.data.deep_merge!('ai_values' => Character::AI_VALUES.transform_keys(&:parameterize))
+    @char.data.deep_merge!('ai_values' => Status.default_priorities)
     
     @team.data[i] = @char.data
     @team.save
+
+    load_statuses
   end
 
   private
@@ -27,6 +33,10 @@ class Characters::AiValuesController < ApplicationController
     def load_character
       @team = Team.find_or_initialize_by(user_id: session[:user_id])
       @char = @team.characters[params[:character_id].to_i]
+    end
+
+    def load_statuses
+      @statuses = Status.for_ai_values
     end
 
     def ai_params

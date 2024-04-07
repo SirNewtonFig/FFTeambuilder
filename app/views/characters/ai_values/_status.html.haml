@@ -1,0 +1,19 @@
+.-mx-2.px-2.py-3.space-y-1.cursor-pointer{ class: 'hover:bg-menu-dark/25' }
+  .flex.justify-between.items-center
+    .flex.items-center.space-x-2
+      .text-lg= status.name
+      
+  .flex.flex-wrap
+    .flex.mr-6
+      .text-red-900 Description:
+      .ml-2= status.description
+
+  .flex.flex-wrap
+    .flex.mr-6
+      .text-red-900 Indicator:
+      .ml-2= status.indicator
+
+  .flex.flex-wrap
+    .flex.mr-6
+      .text-red-900 Duration:
+      .ml-2= status.duration.presence || 'Until removed'

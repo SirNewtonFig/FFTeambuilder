@@ -37,5 +37,12 @@
       .flex.mr-6
         .text-red-900.capitalize #{stat_label(prop)}:
         .ml-2= skill.data[prop].present? ? 'Yes' : 'No'
+
+  .flex.flex-wrap
+    - ['atk_up', 'matk_up', 'martial_arts', 'two_hands', 'two_swords', 'protect', 'shell'].each do |prop|
+      - next unless skill.data[prop].present?
+      .flex.mr-6
+        .text-red-900.capitalize #{stat_label(prop)}:
+        .ml-2= skill.data[prop]
     
   

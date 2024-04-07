@@ -9,7 +9,14 @@ module StatHelper
     'counter' => 'Counter?',
     'reflectable' => 'Reflect?',
     'counter_flood' => 'Counter Flood?',
-    'counter_magic' => 'Counter Magic?'
+    'counter_magic' => 'Counter Magic?',
+    'atk_up' => 'Attack UP?',
+    'matk_up' => 'Magic AttackUP?',
+    'martial_arts' => 'Martial Arts?',
+    'two_hands' => 'Two Hands?',
+    'two_swords' => 'Two Swords?',
+    'protect' => 'Protect?',
+    'shell' => 'Shell?'
   }
 
   def stat_label(stat)

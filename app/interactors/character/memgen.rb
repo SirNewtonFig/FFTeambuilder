@@ -134,7 +134,8 @@ class Character::Memgen < ActiveInteractor::Base
     serialize_skills!
     serialize_inventory!
     serialize_m_ev!
-    pad!('00', 51)
+    serialize_rng_confidence!
+    pad!('00', 50)
     pad!('88', 10)
     serialize_ai!
     serialize_name!
@@ -300,15 +301,19 @@ class Character::Memgen < ActiveInteractor::Base
     end
 
     def serialize_inventory!
-      if character.job.name == 'Chemist'
-        block << '10'
-      else
-        block << '08'
-      end
+      inventory = if character.job.name == 'Chemist' ? 16 : 8
+        
+      inventory += character.items.map {|item| item.data['extra_items'].to_i }
+
+      block << str_to_hex(inventory.to_s(16))
     end
 
     def serialize_m_ev!
       block << str_to_hex(character.job_data['m_evade'], default: '00', base: 10)
+    end
+
+    def serialize_m_ev!
+      block << str_to_hex(character.data.dig('ai_values', 'rng_confidence').to_i, default: '02', base: 16)
     end
 
     def serialize_skills!

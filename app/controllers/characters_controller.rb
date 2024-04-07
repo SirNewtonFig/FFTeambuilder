@@ -3,6 +3,8 @@ class CharactersController < ApplicationController
 
   def edit
     @char = @team.characters[i]
+    
+    load_statuses
   end
 
   def update
@@ -12,6 +14,8 @@ class CharactersController < ApplicationController
 
     @team.data[i] = @char.data
     @team.save
+
+    load_statuses
 
     render action: :edit
   end
@@ -28,6 +32,10 @@ class CharactersController < ApplicationController
       @team = Team.find_or_initialize_by(user_id: session[:user_id])
 
       redirect_to teams_path if @team.new_record?
+    end
+
+    def load_statuses
+      @statuses = Status.for_ai_values
     end
 
     def character_params
