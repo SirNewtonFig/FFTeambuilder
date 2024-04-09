@@ -8,7 +8,7 @@ Job ID,Secondary ID,Sex,Class,Abbreviation,Secondary Name,Innate,Evade,MEvade,HP
 16,26,M,Engineer,En,Snipe,,5,5,212,24,9,3,3,10,5,,100,75,110,115,100,16
 12,1d,M,Spellblade,Sb,Sword Magic,Maintenance,20,15,195,50,9,3,3,12,8,,100,100,100,100,100,28
 11,1e,M,Paladin,Pd,Holy Sword,Piety,10,15,255,60,9,3,3,10,9,,150,120,120,100,90,4
-59,14,M,Ninja,Nj,Throw,Abandon,30,0,195,32,10,4,4,10,6,,80,50,120,115,75,80
+59,14,M,Ninja,Nj,Throw,Abandon,30,0,195,32,10,4,4,13,6,,80,50,120,115,75,80
 4b,6,M,Chemist,Ch,Item,"Throw Item, Double Item Capacity",15,10,192,50,9,3,3,7,7,,90,100,105,80,100,80
 4f,a,M,Priest,Pr,White Magic,Immune to damage while charging spells,5,15,186,65,10,3,3,8,8,,85,120,110,100,125,80
 50,b,M,Wizard,Wi,Black Magic,Has Guts while charging spells,5,15,183,71,10,3,3,4,10,,80,120,100,60,140,80
@@ -30,7 +30,7 @@ Job ID,Secondary ID,Sex,Class,Abbreviation,Secondary Name,Innate,Evade,MEvade,HP
 16,26,F,Engineer,En,Snipe,,5,5,183,30,9,3,3,10,5,,100,75,110,115,100,21
 12,1d,F,Spellblade,Sb,Sword Magic,Maintenance,20,15,172,65,9,3,3,12,8,,100,100,100,100,100,1e
 11,1e,F,Paladin,Pd,Holy Sword,Piety,10,15,220,78,9,3,3,10,9,,150,120,120,100,90,7
-59,14,F,Ninja,Nj,Throw,Abandon,30,0,172,40,10,4,4,10,6,,80,50,120,115,75,81
+59,14,F,Ninja,Nj,Throw,Abandon,30,0,172,40,10,4,4,13,6,,80,50,120,115,75,81
 5c,17,F,Dancer,Dc,Dance,,30,10,200,72,9,4,3,10,8,,100,50,115,140,100,81
 4b,6,F,Chemist,Ch,Item,"Throw Item, Double Item Capacity",15,10,178,60,9,3,3,7,7,,90,100,105,80,100,81
 4f,a,F,Priest,Pr,White Magic,Immune to damage while charging spells,5,15,170,80,10,3,3,8,8,,85,120,110,100,125,81

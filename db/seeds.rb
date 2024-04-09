@@ -134,7 +134,8 @@ Dir.glob('db/seeds/items/*.csv').each do |f|
         weakness: row['Weak:'],
         female_only: row['Classes'] == 'Female',
         memgen_id: row['Item ID'].rjust(2, '0'),
-        extra_items: row['Extra Items']
+        extra_items: row['Extra Items'],
+        extra_effects: row['Extra Effects:']
       }
     )
 
