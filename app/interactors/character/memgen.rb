@@ -301,7 +301,7 @@ class Character::Memgen < ActiveInteractor::Base
     end
 
     def serialize_inventory!
-      inventory = if character.job.name == 'Chemist' ? 16 : 8
+      inventory = character.job.name == 'Chemist' ? 16 : 8
         
       inventory += character.items.map {|item| item.data['extra_items'].to_i }
 
@@ -312,7 +312,7 @@ class Character::Memgen < ActiveInteractor::Base
       block << str_to_hex(character.job_data['m_evade'], default: '00', base: 10)
     end
 
-    def serialize_m_ev!
+    def serialize_rng_confidence!
       block << str_to_hex(character.data.dig('ai_values', 'rng_confidence').to_i, default: '02', base: 16)
     end
 
