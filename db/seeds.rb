@@ -176,7 +176,7 @@ monsters = CSV.parse(File.read(Rails.root.join('db/seeds/monsters.csv')), header
 monsters.each do |row|
   next if row['Job ID'].blank?
   
-  monster = Job.monster.find_by("data ->> 'memgen_id' = ?", row['Job ID']) || Job.new
+  monster = Job.monster.find_by("data -> 'x' ->> 'memgen_id' = ?", row['Job ID']) || Job.new
 
   monster.update(
     name: row['Name'],
