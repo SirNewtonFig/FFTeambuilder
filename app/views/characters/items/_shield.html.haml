@@ -15,10 +15,10 @@
       .flex.mr-4
         .text-red-900.capitalize #{stat_label(prop)}:
         .ml-2= "%+d" % item.data[prop].to_i
-    - ['element', 'strengthens', 'absorbs', 'halves', 'weakness', 'proc', 'add', 'immune', 'start', 'always'].each do |prop|
+    - ['element', 'strengthens', 'absorbs', 'halves', 'weakness', 'proc', 'add', 'immune', 'start', 'always', 'extra_effects'].each do |prop|
       - next if item.data[prop].blank?
       .flex.mr-4
-        .text-red-900.capitalize #{prop}:
+        .text-red-900.capitalize #{prop.titleize}:
         .ml-2= item.data[prop]
 
   .flex.space-x-4.flex-wrap
