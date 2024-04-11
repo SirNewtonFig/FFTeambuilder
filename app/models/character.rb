@@ -17,8 +17,7 @@ class Character
     lhand: nil,
     helmet: nil,
     armor: nil,
-    accessory: nil,
-    ai_values: Status.default_priorities
+    accessory: nil
   }
 
   ZODIACS = {
@@ -42,7 +41,8 @@ class Character
     new(DEFAULT_DATA.merge(
       name: Faker::Name.first_name_neutral,
       sex: ['m', 'f'].sample,
-      zodiac: ZODIACS.keys.sample
+      zodiac: ZODIACS.keys.sample,
+      ai_values: Status.default_priorities.merge(rng_confidence: '2')
     ).stringify_keys)
   end
 
