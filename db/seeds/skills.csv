@@ -37,7 +37,7 @@ Knight,Magic Ruin,1000,100,3,,Any,,,,,,,DmgMP_(50% max) Hit_(PA+70)%,Yes,Yes,Yes
 Knight,Inspire,800,800,0,2,Any,,,,,,,Add: Haste Hit_(100)%,,,,,,,,,,,,,
 Knight,Hellcry Punch,200,600,3,,Any,,,35,,,,Dmg_(PA*WP/2) Break Weapon ELSE miss (20% break failure rate) Requires Sword,Yes,,Yes,,,,Yes,,If barehanded,Yes,,Yes,
 Knight,Blastar Punch,400,200,3,,Any,,,35,,,,Dmg_(PA*WP/2) Break Helm ELSE miss (20% break failure rate) Requires Sword,Yes,,Yes,,,,Yes,,If barehanded,Yes,,Yes,
-Knight,Shellbust Stab,800,400,3,,Any,,,35,,,,Dmg_(PA*WP/2) Break Armor ELSE miss (20% break failure rate) Requires Sword,Yes,,Yes,,,,Yes,,If barehanded,Yes,,Yes,
+Knight,Shellbust Stab,80,400,3,,Any,,,35,,,,Dmg_(PA*WP/2) Break Armor ELSE miss (20% break failure rate) Requires Sword,Yes,,Yes,,,,Yes,,If barehanded,Yes,,Yes,
 Knight,Icewolf Bite,100,200,3,,Any,,,35,,,,Dmg_(PA*WP/2) Break Accessory ELSE miss (20% break failure rate) Requires Sword,Yes,,Yes,,,,Yes,,If barehanded,Yes,,Yes,
 Knight,R:Counter,1BA,300,,,,,,,,,,Counter with attack command if in range,,,,,,,Yes,,If barehanded,Yes,Yes,Yes,
 Knight,E:Equip Armor,1C6,400,,,,,,,,,,Can equip heavy armor or helmets regardless of class,,,,,,,,,,,,,
