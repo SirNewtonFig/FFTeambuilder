@@ -279,7 +279,7 @@ Spellblade,Night Sword,400,1000,3,,Any,,,26,,Phys,,AbsorbHP_((PA-2)*(WP+2)) Requ
 Spellblade,Dark Sword,200,1500,3,,Any,,,17,,Phys,,AbsorbMP_((PA-2)*(WP+2))/4 Requires Sword,,,Yes,,,,Yes,,If barehanded,Yes,,Yes,
 Spellblade,Disrupt,100,300,Weapon,,Any,,,,,,,Add: Discord Hit_(100)%,,,,,,,,,,,Yes,,
 Spellblade,Imbue,80,100,3,2,Any,3,,25,,,,Adds each positive status you currently have to others (Haste/Protect/Shell/Regen/Reraise),,,,,,,,,,,,,
-Spellblade,E: Lionheart,1B7,200,,,,,,,,,,Your Brave is considered 100 for the purposes of formulas (but not reactions),,,,,,,,,,,,,
+Spellblade,E: Lionheart,1E4,200,,,,,,,,,,Your Brave is considered 100 for the purposes of formulas (but not reactions),,,,,,,,,,,,,
 Paladin,Consecrate,8000,300,0,2,Enemies,3,,,Holy,,,Dmg_P(PA*18),,,Yes,,,,Yes,,,,,Yes,
 Paladin,Holy Explosion,4000,800,5,Linear,Any,2,,20,,Phys,,Dmg_((PA-2)*(WP+2)) Requires Sword,,,Yes,,,,Yes,,If barehanded,Yes,,Yes,
 Paladin,Shine,2000,400,2,2,Any,,,,Holy,Phys,,Dmg_((Faith/2)*5) 20% Add: Sundown,,,Yes,,,,,,,,,Yes,

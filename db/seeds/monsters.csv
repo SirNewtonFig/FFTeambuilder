@@ -8,9 +8,9 @@ Gobbledeguck,63,6000,20,40,170,255,130,160,160,408,30,11,5,4,21,2,Shatter,Battle
 Bomb,64,2000,10,10,160,20,130,120,93,250,3,9,4,4,12,22,Flame Attack,Self Destruct,Douse,Critical Quick,Guts Undead AllDef+,Float,Absorbs: Fire
 Grenade,65,4000,11,10,170,30,130,130,94,330,5,9,4,4,13,22,Flame Attack,Self Destruct,Triple Flame,Critical Quick,Guts Undead,Float,Absorbs: Fire
 Explosive,66,6000,12,10,180,40,130,140,96,330,7,9,4,4,14,22,Flame Attack,Self Destruct,Flame Spin,Critical Quick,Guts Undead DefUp,Float,Absorbs: Fire
-Tonberry,67,2000,15,10,180,100,80,140,150,344,17,10,3,3,14,12,Chef's Knife,Everyone's Grudge,Voodoo,Meatbone Slash,Guts,None,
-Blood Stalker,69,4000,13,10,190,100,130,150,150,387,17,10,3,3,16,12,Chef's Knife,Everyone's Grudge,Blood Ritual,Meatbone Slash,Guts,None,
-Master Tonberry,68,6000,20,10,170,100,130,160,150,362,17,10,3,3,17,12,Chef's Knife,Everyone's Grudge,Shadow Stitch,Meatbone Slash,Guts,None,
+Tonberry,67,2000,15,10,180,100,80,140,150,344,17,10,5,3,14,12,Chef's Knife,Everyone's Grudge,Voodoo,Meatbone Slash,Guts,None,
+Blood Stalker,69,4000,13,10,190,100,130,150,150,387,17,10,5,3,16,12,Chef's Knife,Everyone's Grudge,Blood Ritual,Meatbone Slash,Guts,None,
+Master Tonberry,68,6000,20,10,170,100,130,160,150,362,17,10,5,3,17,12,Chef's Knife,Everyone's Grudge,Shadow Stitch,Meatbone Slash,Guts,None,
 Pisco Demon,6A,2000,8,10,180,255,130,110,150,361,126,9,4,3,13,14,Aqualung,Time Blast,Energy Blast,Counter Flood,Absorbs Water,None,MagAtkUP
 Squidlarkin,6B,4000,9,10,180,255,130,120,150,384,126,9,4,3,14,14,Aqualung,Time Blast,Psionic Wave,Counter Flood,Absorbs Water,None,MagAtkUP
 Mindflare,6C,6000,10,10,200,255,130,130,150,427,126,9,4,3,15,14,Aqualung,Time Blast,Mind Control,Counter Flood,Absorbs Water,None,MagAtkUP
