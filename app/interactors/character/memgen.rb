@@ -313,7 +313,7 @@ class Character::Memgen < ActiveInteractor::Base
     end
 
     def serialize_rng_confidence!
-      block << str_to_hex(character.data.dig('ai_values', 'rng_confidence').to_i, default: '02', base: 16)
+      block << str_to_hex(character.data.dig('ai_values', 'rng_confidence'), default: '02', base: 16)
     end
 
     def serialize_skills!
