@@ -303,7 +303,7 @@ class Character::Memgen < ActiveInteractor::Base
     def serialize_inventory!
       inventory = character.job.name == 'Chemist' ? 16 : 8
         
-      inventory += character.items.map {|item| item.data['extra_items'].to_i }
+      inventory += character.items.sum {|item| item.data['extra_items'].to_i }
 
       block << str_to_hex(inventory.to_s(16))
     end
