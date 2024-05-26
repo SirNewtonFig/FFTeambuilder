@@ -26,6 +26,12 @@
         .text-red-900.capitalize #{prop}:
         .ml-2= item.data[prop]
 
+  - if item.data['extra_effects'].present?
+    .text-left
+      %span.text-red-900.capitalize Extra Effects:
+      %span.ml-2
+        = item.data['extra_effects']
+
   - if item.data['proc'].present?
     .text-left
       %span.text-red-900.capitalize Proc Effect:
