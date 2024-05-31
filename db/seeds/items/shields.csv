@@ -15,7 +15,7 @@ Genji Shield,8C,Sq Kn Ar Ge Ln Sb Pd,30,20,,,,,,Frog Petrify,,,,,,,Equip Shield,
 Kaiser Plate,8D,Sq Kn Ar Ge Ln Sb Pd,10,10,,,,,,,,,,All Elements,,,Equip Shield,
 Venetian Shield,8E,Sq Kn Ar Ge Ln Sb Pd,0,0,,,,,,,,,All Elements,,,,Equip Shield,
 Escutcheon II,8F,Sq Kn Ar Ge Ln Sb Pd,0,0,,,,,,,,,,,,Stealth,Equip Shield,
-Battle Dict,5F,Su Sg,0,0,,,,,,,,,,,,,,Attack UP
-Monster Dict,60,Su Sg,0,0,,2,,,,,,,,,,,,
-Papyrus Plate,61,Su Sg,0,0,,,,,,,,,,,,,,Defense UP
-Madlemgen,62,Su Sg,0,0,,,,,,,,,,,,,,Magic Attack UP
+Battle Dict,5F,Pr Wi TM Su Me Or Ge Sg,0,0,,,,,,,,,,,,,,Attack UP
+Monster Dict,60,Pr Wi TM Su Me Or Ge Sg,0,0,,2,,,,,,,,,,,,
+Papyrus Plate,61,Pr Wi TM Su Me Or Ge Sg,0,0,,,,,,,,,,,,,,Defense UP
+Madlemgen,62,Pr Wi TM Su Me Or Ge Sg,0,0,,,,,,,,,,,,,,Magic Attack UP

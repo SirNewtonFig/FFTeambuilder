@@ -55,7 +55,7 @@ Flame Rod,,35,5,20,2-swords 2-hands,Wi TM Su Sg,,,,,,,,,Fire,Explosion,,,Fire,,,
 Water Rod,,36,5,20,2-swords 2-hands,Wi TM Su Sg,,,,,,,,,Water,Hydragon Pit,,,Water,,,PA*WP,Dmg_F(MA*18),
 Poison Rod,,37,8,20,2-swords 2-hands,Wi TM Su Sg,,,,,,Poison,,,,,,,,,,PA*WP,,
 Wizard Rod,,38,4,20,2-swords 2-hands,Wi TM Su Sg,,2,,,,,,,,,,,,,,PA*WP,,
-Dragon Rod,,39,12,20,2-swords 2-hands,Wi TM Su Sg,,-2,-2,,,,,,,Bahamut,,,,,,PA*WP,Dmg_F(MA*45),
+Dragon Rod,,39,12,20,2-swords 2-hands,Wi TM Su Sg,,-2,,,,,,,,Bahamut,,,,,,PA*WP,Dmg_F(MA*45),
 Mace of Zeus,,41,8,20,2-swords 2-hands,Wi TM Su Sg,,,1,,,,,,,,,,Lightning,,,PA*WP,,
 Oak Staff,,3B,11,20,2-swords 2-hands,Pr Or Me Sg,,,,,,,,,,,,,,,,MA*WP,,
 White Staff,,3C,1,20,2-swords 2-hands,Pr Or Me Sg,,,,,,,,Negative Status,,,,,,,,PA*WP,,
@@ -72,7 +72,7 @@ Scorpion Tail,,46,14,10,2-swords 2-hands,Sq Ch Pr,,,,,,Poison,,,,,,,,,,WP*WP,,
 Romanda Gun,Equip Gun,47,13,5,5 Range,Me En,,,,,,,,,,,,,,,,WP*WP,,
 Chocobo Gun,Equip Gun,48,14,5,Exactly 3 Range,Me En,,,,,,,,,,,,,,,,WP*WP,,
 Stone Gun,Equip Gun,49,14,5,5 Range,Me En,,,,,,,,,,,,,,Slow,,WP*WP,,
-Bolt-Action Rifle,Equip Gun,4A,14,5,8 Range,Me En,,,,,,,,,,,,,,,,MA*WP,,Checks Magic Evade and Matk UP
+Bolt-Action Rifle,Equip Gun,4A,14,5,8 Range / 2-hands only,Me En,,,,,,,,,,,,,,,,MA*WP,,Checks Magic Evade and Matk UP
 Freischutz,Equip Gun,4B,13,5,3 Range,Me En,,,,,,,,,,,,,,,,MA*WP No Evade,,Checks Magic Evade and Matk UP
 Engineer Rifle,Equip Gun,4C,11,5,8 Range,Me En,,,,,,,,,,,,,,,,WP*WP No Evade,,
 Bow Gun,Equip Bows,4D,10,5,6 Range,Sq Ar En,,,,,,,,,,Doubleshot,,,,,,PA*WP,,
