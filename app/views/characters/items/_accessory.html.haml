@@ -3,6 +3,12 @@
     .flex.items-center.space-x-6
       .text-lg= item.name
 
+      - ['hp', 'mp'].each do |prop|
+        - next if item.data[prop].blank?
+        .flex
+          .text-red-900.capitalize #{prop.dasherize.upcase}:
+          .ml-2= item.data[prop]
+
       - ['ev_p', 'ev_m'].each do |prop|
         - next if item.data[prop].blank?
         .flex

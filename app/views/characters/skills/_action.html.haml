@@ -2,7 +2,7 @@
   .flex.justify-between.items-center
     .flex.items-center.space-x-2
       .text-lg= skill.name
-      - if skill.respond_to?(:job)
+      - if character.generic?
         %span.text-gray-700 (#{skill.job.skillset})
 
     - if skill.respond_to?(:jp_cost)

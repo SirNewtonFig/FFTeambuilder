@@ -52,7 +52,7 @@ Archer,Temporal Strike,400,400,Weapon,,,,,,,Mag,,Cancel: Haste Dmg_(66% max HP) 
 Archer,Strixfeather Arrow,200,400,Weapon,,,,,,,Phys,,Cancel: Reraise Dmg_((PA+2)*(WP+2)) Fails if target not reraised,Yes,,Yes,,,,Yes,,If barehanded,Yes,Yes,Yes,
 Archer,R:CT Save,1A8,500,,,,,,,,,,Increase CT by 20 upon taking damage,,,,,,,,,,,,,
 Archer,R:Arrow Guard,1C4,200,,,,,,,,,,Raise evasion vs Arrows and Bullets by Brave%,,,,,,,,,,,,,
-Archer,E:Concentrate,1D5,350,,,,,,,,,,Physical attacks and skills ignore evasion (THIEF INNATE),,,,,,,,,,,,,
+Archer,E:Concentrate,1D5,350,,,,,,,,,,Physical attacks and skills ignore evasion,,,,,,,,,,,,,
 Archer,E:Jump+2,1EA,500,,,,,,,,,,Add 2 to your jump,,,,,,2,,,,,,,
 Archer,S:Equip Bows,1CA,200,,,,,,,,,,Can equip bow or crossbow regardless of job,,,,,,,,,,,,,
 Archer,S:Sniper,1D0,1000,,,,,,,,,,+33% XA when using a bow weapon range attack (not crossbows) and not berserked,,,,,,,,,,,,,

@@ -8,7 +8,7 @@
       .ml-2.text-cyan-900
         #{skill.jp_cost} JP&nbsp;
 
-      - if character.unlock_costs[skill.job].positive?
+      - if character.generic? && character.unlock_costs[skill.job].positive?
         .text-gray-600{ title: 'Additional prerequisite costs to unlock this skill'}
           (+#{character.unlock_costs[skill.job]})
 

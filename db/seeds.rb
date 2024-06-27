@@ -60,8 +60,6 @@ skills.each do |row|
   skill_type = 'support' if row['Skill Name'].match?(/^E:/)
   skill_type = 'movement' if row['Skill Name'].match?(/^S:/)
 
-  lookup_attrs = { skill_type: skill_type, name: row['Skill Name'].gsub(/^R:|^E:|^S:/, '').strip, job_id: job.id }
-
   skill = Skill.find_by("job_id = ? AND data ->> 'memgen_id' = ?", job.id, row['Skill ID'].rjust(4, '0')) || Skill.new
 
   skill.update(
@@ -79,7 +77,6 @@ skills.each do |row|
       element: row['Element'],
       evade: row['Evade Type'],
       reflectable: row['Reflectable?'],
-      silence: row['Silence?'],
       formula: row['Formula'],
       counter: row['Counter?'],
       counter_magic: row['Counter Magic?'],
@@ -149,29 +146,6 @@ Dir.glob('db/seeds/items/*.csv').each do |f|
   end
 end
 
-mskills = CSV.parse(File.read(Rails.root.join('db/seeds/monster_skills.csv')), headers: true)
-mskills.each do |row|
-  skill = MonsterSkill.find_or_initialize_by(name: row['Ability'])
-
-  skill.update(
-    data: {
-      range: row['Range'],
-      area: row['AoE'],
-      target: row['Target'],
-      vert: row['Vertical Tolerance'],
-      ct: row['CT'],
-      element: row['Element'],
-      evade: row['Evade Type'],
-      reflectable: row['Reflectable?'],
-      formula: row['Formula'],
-      counter: row['Counter?'],
-      counter_magic: row['Counter Magic?'],
-      counter_flood: row['Counter Flood?'],
-      mimic: row['Mimic?']
-    }
-  )
-end
-
 monsters = CSV.parse(File.read(Rails.root.join('db/seeds/monsters.csv')), headers: true)
 monsters.each do |row|
   next if row['Job ID'].blank?
@@ -189,12 +163,6 @@ monsters.each do |row|
         jump: row['Jump'],
         attack: row['PA'],
         magic: row['MA'],
-        abilities: [
-          row['Ability 1'],
-          row['Ability 2'],
-          row['Ability 3']
-        ],
-        monster_skill: row['Monster Skill'],
         notes: [
           row['Reaction'],
           row['Support'],
@@ -213,6 +181,81 @@ monsters.each do |row|
         jp_cost: row['JP Cost'],
         character_set: '82'
       }
+    }
+  )
+end
+
+mskills = CSV.parse(File.read(Rails.root.join('db/seeds/monster_skills.csv')), headers: true)
+mskills.each do |row|
+  next if row['Skill ID'].blank?
+
+  job = Job.find_by(name: row['Monster'].strip)
+
+  skill = Skill.find_by("job_id = ? AND data ->> 'memgen_id' = ?", job.id, row['Skill ID'].rjust(4, '0')) || Skill.new
+
+  skill_type = 'action'
+  skill_type = 'reaction' if row['Ability'].match?(/^R:/)
+  skill_type = 'support' if row['Ability'].match?(/^E:/)
+  skill_type = 'movement' if row['Ability'].match?(/^S:/)
+
+  skill.update(
+    name: row['Ability'].gsub(/^R:|^E:|^S:/, '').strip,
+    job: job,
+    jp_cost: row['JP Cost'],
+    skill_type: skill_type,
+    data: {
+      range: row['Range'],
+      area: row['AoE'],
+      target: row['Target'],
+      vert: row['Vertical Tolerance'],
+      ct: row['CT'],
+      element: row['Element'],
+      evade: row['Evade Type'],
+      reflectable: row['Reflectable?'],
+      formula: row['Formula'],
+      counter: row['Counter?'],
+      counter_magic: row['Counter Magic?'],
+      counter_flood: row['Counter Flood?'],
+      memgen_id: row['Skill ID'].rjust(4, '0'),
+      mimic: ('Yes' unless row['Mimic?'] == 'No'),
+      atk_up: row['Atk Up?'],
+      matk_up: row['MAtk Up?'],
+      martial_arts: row['Martial Arts?'],
+      protect: row['Protect?'],
+      shell: row['Shell?']
+    }
+  )
+end
+
+passives = CSV.parse(File.read(Rails.root.join('db/seeds/monster_passives.csv')), headers: true)
+passives.each do |row|
+  job = Job.find_by(name: row['Monster'].strip)
+
+  passive = MonsterPassive.find_by("job_id = ? AND data ->> 'index' = ?", job.id, row['Index']) || MonsterPassive.new
+
+  passive.update(
+    name: row['Name'].strip,
+    job: job,
+    jp_cost: row['JP Cost'],
+    data: {
+      ev_p: row['Phys Evade'],
+      ev_m: row['Magic Evade'],
+      hp: row['HP'],
+      mp: row['MP'],
+      speed: row['Speed'],
+      magic: row['MA'],
+      attack: row['PA'],
+      jump: row['Jump'],
+      move: row['Move'],
+      immune: row['Immune:'],
+      strengthens: row['Strengthens:'],
+      always: row['Always:'],
+      start: row['Start:'],
+      absorbs: row['Absorbs:'],
+      halves: row['Halves:'],
+      weakness: row['Weak:'],
+      memgen_id: row['Skill ID']&.rjust(4, '0'),
+      index: row['Index']
     }
   )
 end

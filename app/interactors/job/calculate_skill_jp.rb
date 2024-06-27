@@ -21,7 +21,8 @@ class Job::CalculateSkillJp < ActiveInteractor::Base
         character.support,
         character.movement,
         *character.primary_skills,
-        *character.secondary_skills
+        *character.secondary_skills,
+        *character.monster_passives
       ].compact
     end
 end

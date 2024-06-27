@@ -2,7 +2,11 @@ class Characters::SkillsController < ApplicationController
   before_action :load_character
 
   def edit
-    @skills = Skill.send(scope).valid(@char).unique(@char, @team).order(:name)
+    @skills = if @char.generic?
+      Skill.send(scope).valid(@char).unique(@char, @team).order(:name)
+    else
+      @char.job.skills.send(scope)
+    end
 
     render layout: 'modal'
   end

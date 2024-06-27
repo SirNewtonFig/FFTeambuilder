@@ -66,6 +66,10 @@ class Character
     ['m', 'f'].include?(sex)
   end
 
+  def monster?
+    sex == 'x'
+  end
+
   def brave
     data['brave']
   end
@@ -80,47 +84,56 @@ class Character
 
   def hp
     job_data['hp'].to_i +
-      items.map{|i| i.data['hp'].to_i}.sum
+      items.map{|i| i.data['hp'].to_i}.sum +
+      sum_passive('hp')
   end
 
   def mp
     job_data['mp'].to_i +
-      items.map{|i| i.data['mp'].to_i}.sum
+      items.map{|i| i.data['mp'].to_i}.sum +
+      sum_passive('mp')
   end
 
   def move
     job_data['move'].to_i +
       items.map{|i| i.data['move'].to_i}.sum +
-      rsm.map{|s| s.data.dig('move').to_i || 0 }.sum
+      rsm.map{|s| s.data.dig('move').to_i || 0 }.sum +
+      sum_passive('move')
   end
 
   def jump
     job_data['jump'].to_i +
       items.map{|i| i.data['jump'].to_i}.sum +
-      rsm.map{|s| s.data.dig('jump').to_i || 0 }.sum
+      rsm.map{|s| s.data.dig('jump').to_i || 0 }.sum +
+      sum_passive('jump')
   end
 
   def speed
     job_data['speed'].to_i +
-      items.map{|i| i.data['speed'].to_i}.sum
+      items.map{|i| i.data['speed'].to_i}.sum +
+      sum_passive('speed')
   end
 
   def magic
     job_data['magic'].to_i +
-      items.map{|i| i.data['magic'].to_i}.sum
+      items.map{|i| i.data['magic'].to_i}.sum +
+      sum_passive('magic')
   end
 
   def attack
     job_data['attack'].to_i +
-      items.map{|i| i.data['attack'].to_i}.sum
+      items.map{|i| i.data['attack'].to_i}.sum +
+      sum_passive('attack')
   end
 
   def class_evade
-    job_data['evade'].to_i
+    job_data['evade'].to_i +
+      sum_passive('ev_p')
   end
 
   def class_m_evade
-    job_data['m_evade'].to_i
+    job_data['m_evade'].to_i +
+      sum_passive('ev_m')
   end
 
   def shield_evade_physical
@@ -239,6 +252,12 @@ class Character
     Skill.where(job: secondary, id: data.dig('skills','secondary')&.map(&:to_i))
   end
 
+  memoize def monster_passives
+    return [] if generic?
+
+    MonsterPassive.where(job: job, id: data.dig('skills','secondary')&.map(&:to_i))
+  end
+
   memoize def primary_skill_ids
     return [] if data.dig('skills', 'primary').blank?
 
@@ -275,6 +294,12 @@ class Character
     support&.name&.match('Two Swords') || job.innate_skills.exists?(name: 'Two Swords')
   end
 
+  def sum_passive(stat)
+    return 0 unless monster?
+
+    monster_passives.map{|i| i.data[stat].to_i}.sum
+  end
+
   def enforce_constraints!
     flush_cache
 
@@ -290,13 +315,14 @@ class Character
 
   def enforce_monster_stuff!
     data['job'] = Job.monster.order(:id).first.id if job.generic?
-    
-    data['skills'] = {}
+
+    data['skills']['primary'] = primary_skills.pluck(:id)
+    data['skills']['secondary'] = monster_passives.pluck(:id)
 
     data['secondary'] = nil
-    data['reaction'] = nil
-    data['support'] = nil
-    data['movement'] = nil
+    data['reaction'] = nil unless Skill.reaction.exists?(job: job, id: data['reaction'].to_i)
+    data['support'] = nil unless Skill.support.exists?(job: job, id: data['support'].to_i)
+    data['movement'] = nil unless Skill.movement.exists?(job: job, id: data['movement'].to_i)
 
     data['rhand'] = nil
     data['lhand'] = nil
@@ -333,13 +359,11 @@ class Character
   memoize def jp_total
     raw_cost = job.data[sex]['jp_cost']
 
-    return raw_cost.to_i unless raw_cost.blank?
-
-    jp_spread.values.sum
+    raw_cost.to_i + jp_spread.values.sum
   end
 
   memoize def jp_spread
-    return {} unless generic?
+    return Job::CalculateSkillJp.perform(character: self).jp unless generic?
 
     job_prereqs = Job::CalculatePrerequisiteJp.perform(job: job).jp
 

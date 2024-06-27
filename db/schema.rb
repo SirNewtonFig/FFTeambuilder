@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2024_04_07_174827) do
+ActiveRecord::Schema[7.0].define(version: 2024_06_23_021134) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -38,6 +38,16 @@ ActiveRecord::Schema[7.0].define(version: 2024_04_07_174827) do
     t.jsonb "data"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "monster_passives", force: :cascade do |t|
+    t.text "name"
+    t.integer "jp_cost"
+    t.jsonb "data"
+    t.bigint "job_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["job_id"], name: "index_monster_passives_on_job_id"
   end
 
   create_table "monster_skills", force: :cascade do |t|

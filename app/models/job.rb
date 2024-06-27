@@ -22,6 +22,8 @@ class Job < ApplicationRecord
   has_many :prerequisite_jobs, through: :prerequisites, source: :prerequisite, class_name: 'Job'
   has_many :proficiencies, as: :record, dependent: :destroy
 
+  has_many :monster_passives, class_name: 'MonsterPassive'
+
   scope :valid, ->(char) { where("(jobs.data -> '#{char.sex}') is not null") }
   
   scope :secondary, ->(char) {
