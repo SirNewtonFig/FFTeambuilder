@@ -8,7 +8,7 @@
       - if char.generic?
         = image_tag("sprites/generics/#{char.job.name}-#{char.sex}.png".downcase, class: 'h-16')
       - else
-        = image_tag("sprites/monsters/placeholder.png".downcase, class: 'h-16')
+        = image_tag("sprites/monsters/#{char.job.name}.png".downcase, class: 'object-cover h-16')
     .ml-1.text-white
       .text-sm Br: #{char.brave}
       .text-sm Fa: #{char.faith}
