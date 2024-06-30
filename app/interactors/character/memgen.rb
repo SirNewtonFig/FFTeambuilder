@@ -267,30 +267,40 @@ class Character::Memgen < ActiveInteractor::Base
     end
 
     def serialize_hp!
-      hp = solve_for_x('hp', character.job_data['hp'].to_i).to_s(16)
+      hp = character.generic? ? character.job_data['hp'].to_i : character.hp
+
+      hp = solve_for_x('hp', hp).to_s(16)
 
       block << little_endian(hp, 3)
     end
 
     def serialize_mp!
-      mp = solve_for_x('mp', character.job_data['mp'].to_i).to_s(16)
+      mp = character.generic? ? character.job_data['mp'].to_i : character.mp
+
+      mp = solve_for_x('mp', mp).to_s(16)
       
       block << little_endian(mp, 3)
     end
 
     def serialize_sp!
+      sp = character.generic? ? character.job_data['sp'].to_i : character.speed
+
       sp = solve_for_x('sp', character.job_data['speed'].to_i).to_s(16)
       
       block << little_endian(sp, 3)
     end
 
     def serialize_pa!
+      pa = character.generic? ? character.job_data['pa'].to_i : character.attack
+
       pa = solve_for_x('pa', character.job_data['attack'].to_i).to_s(16)
       
       block << little_endian(pa, 3)
     end
 
     def serialize_ma!
+      ma = character.generic? ? character.job_data['ma'].to_i : character.magic
+
       ma = solve_for_x('ma', character.job_data['magic'].to_i).to_s(16)
       
       block << little_endian(ma, 3)
@@ -309,7 +319,9 @@ class Character::Memgen < ActiveInteractor::Base
     end
 
     def serialize_m_ev!
-      block << str_to_hex(character.job_data['m_evade'], default: '00', base: 10)
+      m_ev = character.generic? ? character.job_data['m_evade'].to_i : character.class_m_evade
+
+      block << str_to_hex(m_ev, default: '00', base: 10)
     end
 
     def serialize_rng_confidence!
@@ -320,7 +332,8 @@ class Character::Memgen < ActiveInteractor::Base
       pad!('00', 3)
 
       if character.job.monster?
-        pad!('ff', 4)
+        encode_skills!(character.primary_skills)
+        encode_skills!(character.monster_passives)
       else
         encode_skills!(character.primary_skills)
         encode_skills!(character.secondary_skills)
@@ -329,7 +342,8 @@ class Character::Memgen < ActiveInteractor::Base
 
     def encode_skills!(skills)
       value = skills
-        .map{|s| s.data.dig('memgen_id').to_i(16) }
+        .map{|s| s.data.dig('memgen_id')&.to_i(16) }
+        .compact
         .sum
 
       value = "%04x" % value
