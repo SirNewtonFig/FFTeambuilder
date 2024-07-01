@@ -20,6 +20,12 @@ Rails.application.routes.draw do
         get :simplified
       end
     end
+
+    resources :monster_passives, only: %i{ index } do
+      collection do
+        get :simplified
+      end
+    end
   end
 
   resources :teams do
