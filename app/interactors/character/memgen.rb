@@ -321,7 +321,7 @@ class Character::Memgen < ActiveInteractor::Base
     def serialize_m_ev!
       m_ev = character.generic? ? character.job_data['m_evade'].to_i : character.class_m_evade
 
-      block << str_to_hex(m_ev, default: '00', base: 10)
+      block << str_to_hex(m_ev.to_s, default: '00', base: 10)
     end
 
     def serialize_rng_confidence!
