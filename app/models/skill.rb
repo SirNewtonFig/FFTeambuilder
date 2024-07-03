@@ -12,7 +12,7 @@ class Skill < ApplicationRecord
   }
 
   scope :unique, ->(char, team) {
-    other_skill_ids = (team.characters - [char]).map { |c|
+    other_skill_ids = (team.characters.select(&:generic?) - [char]).map { |c|
       [c.data['reaction'], c.data['support'], c.data['movement'], *c.primary_skill_ids, *c.secondary_skill_ids]
     }.compact.flatten.map(&:to_i)
 
