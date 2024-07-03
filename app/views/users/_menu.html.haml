@@ -1,0 +1,7 @@
+
+= form_for(:logout, url: destroy_user_session_path, method: :delete) do
+  %button.block.w-36.p-2.px-4.my-1.text-white.text-sm.hover:bg-gray-600.text-left{ type: 'submit' }
+    Logout
+- if current_user.present?
+  %a.block.w-36.p-2.px-4.my-1.text-white.text-sm.hover:bg-gray-600{ href: confirm_destroy_user_path, data: { turbo_frame: 'modal' } }
+    Delete Account

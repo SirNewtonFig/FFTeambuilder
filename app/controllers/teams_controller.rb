@@ -38,11 +38,11 @@ class TeamsController < ApplicationController
   end
 
   def create
-    Team.where(user_id: session[:user_id]).each(&:destroy)
+    Team.where(user_id: Current.user.id).each(&:destroy)
 
     team_attributes = YAML.safe_load_file(params[:team_file])
 
-    @team = Team.create(user_id: session[:user_id], **team_attributes)
+    @team = Team.create(user_id: Current.user.id, **team_attributes)
 
     redirect_to teams_path
   end
@@ -58,7 +58,7 @@ class TeamsController < ApplicationController
   private
 
     def load_team
-      @team = Team.find_or_initialize_by(user_id: session[:user_id])
+      @team = Current.team
 
       @team.update(Team.blank_team_attributes) if @team.new_record?
     end

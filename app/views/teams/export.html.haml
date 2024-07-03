@@ -3,7 +3,7 @@
     .space-y-6
       %div
         = f.label(:player_name, 'Player Name', class: 'text-xs block')
-        = f.text_field(:player_name, placeholder: 'Ramza Beoulve', data: { action: 'change->form#submit' }, class: text_field_classes)
+        = f.text_field(:player_name, placeholder: 'Ramza Beoulve', data: { action: 'change->form#submit' }, class: text_field_classes, value: Current.user.username)
       %div
         = f.label(:name, 'Team Name', class: 'text-xs  block')
         = f.text_field(:name, placeholder: 'Hokuten', data: { action: 'change->form#submit' }, class: text_field_classes)

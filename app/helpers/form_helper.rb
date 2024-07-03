@@ -54,6 +54,23 @@ module FormHelper
     '.squish
   end
 
+  def destructive_button_classes
+    '
+      cursor-pointer
+      focus:outline-none
+      text-white
+      focus:ring-4
+      font-medium
+      rounded-lg
+      text-sm
+      px-5
+      py-2.5
+      bg-red-600
+      hover:bg-red-700
+      focus:ring-red-800
+    '.squish
+  end
+
   def neutral_button_classes
     '
       text-gray-900
@@ -61,6 +78,7 @@ module FormHelper
       border
       border-gray-300
       focus:outline-none
+      bg-gray-300
       hover:bg-gray-100
       focus:ring-4
       focus:ring-gray-200
@@ -89,5 +107,9 @@ module FormHelper
       '.squish,
       data: { context_target: 'tooltip' }
     )
+  end
+
+  def wrap_tooltip_neutral(&block)
+    tag.div(capture(&block), class: 'z-30 absolute hidden shadow-lg bg-gray-700 left-0 rounded font-sans', data: { context_target: 'tooltip' })
   end
 end

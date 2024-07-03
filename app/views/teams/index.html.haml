@@ -36,12 +36,19 @@
   .relative{ class: 'w-128 sm:w-[48rem]'}
     .flex.mt-1
       .relative
-        .fixed.flex.flex-col.space-y-3.sticky.top-0{ class: 'top-[3.75rem]', data: { lineup_target: 'container' } }
-          = turbo_frame_tag(:lineup) do
-            = form_with(url: lineup_path, method: :patch, data: { controller: 'form lineup', lineup_target: 'form', turbo_frame: :lineup}) do
-              - 4.times do |i|
-                .draggable{ data: { index: i, action: 'click->lineup#select:stop', lineup_target: 'character' }}
-                  = render 'characters/summary', selected: i == params[:id].to_i, char: @team.characters[i], i: i
+        .fixed.flex.flex-col.space-y-3.sticky.top-0{ class: 'top-[3.75rem] h-[calc(100vh-72px)]', data: { lineup_target: 'container' } }
+          .flex-1
+            = turbo_frame_tag(:lineup) do
+              = form_with(url: lineup_path, method: :patch, data: { controller: 'form lineup', lineup_target: 'form', turbo_frame: :lineup}) do
+                - 4.times do |i|
+                  .draggable{ data: { index: i, action: 'click->lineup#select:stop', lineup_target: 'character' }}
+                    = render 'characters/summary', selected: i == params[:id].to_i, char: @team.characters[i], i: i
+          .bg-gray-800.p-2.ml-2.rounded-lg.cursor-pointer.hover:bg-gray-700{ data: { controller: 'context', action: 'keydown.esc@window->context#close click->context#open', context: { placement_value: 'top' } } }
+            .flex.items-center.space-x-1
+              = inline_svg_tag('icons/account.svg', class: 'h-4 w-4 text-white')
+              %span.text-white.text-sm.font-sans= Current.user.username
+            = wrap_tooltip_neutral do
+              = render "users/menu"
       
       .w-full.mx-3
         = turbo_frame_tag(:character_editor, src: edit_character_path(id: 0))

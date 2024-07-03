@@ -15,7 +15,7 @@ class Characters::MetaController < ApplicationController
   private
 
     def load_character
-      @team = Team.find_or_initialize_by(user_id: session[:user_id])
+      @team = Current.team
       @char = @team.characters[params[:character_id].to_i]
     end
 

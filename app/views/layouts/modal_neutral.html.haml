@@ -1,0 +1,16 @@
+= turbo_frame_tag :modal do
+  .modal-content.font-sans
+    .fixed.w-full.h-full.top-0.left-0.right-0.z-10.bg-gray-700.opacity-70
+
+    .fixed.top-20.left-4.right-4.z-20.overflow-x-hidden.flex.justify-center
+      .modal-controller.flex.flex-col.h-modal.relative.bg-gray-900.overflow-y-hidden.rounded-lg{ data: { controller: 'modal', action: 'keydown@window->modal#keydown' } }
+        .sticky.top-0.flex.justify-between.items-center.bg-gray-900
+          .p-4.text-white
+            = yield :heading
+
+          %button.absolute.top-3.text-gray-300.bg-transparent.hover:text-white.text-sm.ml-auto.inline-flex.items-center{class: "right-2.5 p-1.5", type: "button", data: { action: 'modal#close' } }
+            %svg.w-5.h-5{"aria-hidden" => "true", fill: "currentColor", viewbox: "0 0 20 20", xmlns: "http://www.w3.org/2000/svg"}
+              %path{"clip-rule" => "evenodd", d: "M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z", "fill-rule" => "evenodd"}
+            %span.sr-only Close modal
+        .p-4.overflow-y-auto.text-white.max-w-2xl
+          = yield

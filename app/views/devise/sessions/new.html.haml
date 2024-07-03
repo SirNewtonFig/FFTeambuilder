@@ -1,0 +1,17 @@
+.font-sans.h-full.flex.items-center.justify-center
+  .mt-32.rounded-xl.bg-gray-800.p-8
+    %h2.text-white
+      Welcome to FFTeambuilder
+
+    .mt-8.space-y-4
+      = form_for(:foo, url: user_discord_omniauth_authorize_path, method: 'post', data: { turbo: false }) do
+        %button.flex.items-center.space-x-2.bg-blue-600.rounded-lg.px-6.py-2.text-sm.font-medium.text-white.hover:bg-blue-500.focus:outline-none.focus:ring-2.focus:ring-offset-2.focus:ring-blue-500{ type: 'submit' }
+          = inline_svg_tag('icons/discord-logo.svg', class: 'h-6 w-6')
+          %span Login with Discord
+
+      = form_for(:bar, url: guests_sessions_path, method: 'post', data: { turbo: false }) do
+        %button.flex.items-center.space-x-2.bg-gray-600.rounded-lg.px-6.py-2.text-sm.font-medium.text-white.hover:bg-gray-500.focus:outline-none.focus:ring-2.focus:ring-offset-2.focus:ring-gray-500{ type: 'submit' }
+          = inline_svg_tag('icons/login.svg', class: 'h-6 w-6')
+          %span Continue as Guest
+
+
