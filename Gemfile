@@ -35,11 +35,16 @@ gem "redis", "~> 4.0"
 
 gem "activeinteractor", require: 'active_interactor'
 gem "active_record_union"
+gem "devise"
 gem "faker"
 gem "haml"
 gem "hashie"
 gem "inline_svg"
 gem "memoist"
+gem "omniauth"
+gem "omniauth-discord"
+gem "omniauth-rails_csrf_protection"
+
 # gem "challonge-api", git: 'https://github.com/SirNewtonFig/challonge-ruby-gem', tag: 'v0.0.1'
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem

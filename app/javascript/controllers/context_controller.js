@@ -5,6 +5,10 @@ import { useClickOutside } from 'stimulus-use'
 export default class ContextController extends Controller {
   static targets = ['tooltip']
 
+  static values = {
+    placement: { type: String, default: 'top-end' }
+  }
+
   connect() {
     useClickOutside(this)
   }
@@ -12,7 +16,12 @@ export default class ContextController extends Controller {
   open() {
     if (this.hasTooltipTarget) {
       this.popper = createPopper(this.element, this.tooltipTarget, {
-        placement: 'top-end',
+        placement: this.placementValue,
+        modifiers: [
+          {
+            name: 'offset', options: { offset: [0, 4] }
+          }
+        ]
       })
 
       this.tooltipTarget.classList.remove('hidden')

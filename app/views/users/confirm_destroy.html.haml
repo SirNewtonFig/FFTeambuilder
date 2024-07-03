@@ -1,0 +1,12 @@
+- content_for :heading do
+  .flex.items-center
+    %h2.text-xl Account Removal
+    
+%p.mb-4 Are you sure you want to remove your account permanently?
+%p.mb-6 You can always make another one later, if you change your mind.
+
+
+= form_for(current_user, method: :delete) do |f|
+  .flex.justify-center.space-x-8
+    = button_tag('Wait...', class: neutral_button_classes, data: { action: 'modal#close' })
+    = f.submit('So Long', class: destructive_button_classes)

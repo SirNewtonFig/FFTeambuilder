@@ -14,6 +14,15 @@ ActiveRecord::Schema[7.0].define(version: 2024_07_06_204712) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
+  create_table "events", force: :cascade do |t|
+    t.text "title"
+    t.datetime "deadline"
+    t.jsonb "data"
+    t.boolean "active"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "exclusions", force: :cascade do |t|
     t.string "ability_a_type", null: false
     t.bigint "ability_a_id", null: false
@@ -23,7 +32,6 @@ ActiveRecord::Schema[7.0].define(version: 2024_07_06_204712) do
     t.datetime "updated_at", null: false
     t.index ["ability_a_type", "ability_a_id"], name: "index_exclusions_on_ability_a"
     t.index ["ability_b_type", "ability_b_id"], name: "index_exclusions_on_ability_b"
-  end
 
   create_table "innates", force: :cascade do |t|
     t.bigint "job_id"
@@ -112,6 +120,15 @@ ActiveRecord::Schema[7.0].define(version: 2024_07_06_204712) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "submissions", force: :cascade do |t|
+    t.bigint "event_id"
+    t.jsonb "data"
+    t.boolean "active", default: true
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["event_id"], name: "index_submissions_on_event_id"
+  end
+
   create_table "teams", force: :cascade do |t|
     t.uuid "user_id"
     t.text "name"
@@ -119,6 +136,15 @@ ActiveRecord::Schema[7.0].define(version: 2024_07_06_204712) do
     t.integer "palette_a", default: 0
     t.integer "palette_b", default: 0
     t.jsonb "data"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "users", id: :uuid, default: -> { "gen_random_uuid()" }, force: :cascade do |t|
+    t.text "username", null: false
+    t.text "uid"
+    t.string "encrypted_password", default: "", null: false
+    t.jsonb "data", default: {}, null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

@@ -1,6 +1,14 @@
 Rails.application.routes.draw do
+  # get 'users/auth/discord/callback', to: 'users/omniauth_callbacks#discord'
+
+  devise_for :users, controllers: { omniauth_callbacks: 'users/omniauth_callbacks' }
   # Defines the root path route ("/")
+
   root "teams#index"
+
+  namespace :guests do
+    resources :sessions, only: %i{ create }
+  end
 
   namespace :data do
     resources :items, only: %i{ index } do
@@ -69,6 +77,12 @@ Rails.application.routes.draw do
   resource :memgen, controller: 'memgen', only: %i{ new create } do
     member do
       post :add_slot
+    end
+  end
+
+  resource :user, only: %i{ destroy } do
+    member do
+      get :confirm_destroy
     end
   end
 end
