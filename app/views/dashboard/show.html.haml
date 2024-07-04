@@ -1,0 +1,35 @@
+.font-sans.h-full.w-full
+  %h1.mt-48.text-white.text-2xl.text-center.font-semibold
+    What are you looking to do?
+
+  .mt-8.flex.justify-center
+    .grid.grid-cols-2.gap-4.place-content-center.w-full.max-w-3xl
+      .rounded-xl.bg-gray-800.p-4.col-span-1
+        .flex.justify-between.items-center
+          %h2.text-lg.text-white.font-semibold
+            Browse Events
+
+          - if current_user.present?
+            %a.text-sm.text-orange-500.hover:text-orange-400{ href: new_event_path, data: { turbo_frame: 'modal' } }
+              Create Event
+
+        = render 'events', events: @events
+
+
+      .rounded-xl.bg-gray-800.p-4.col-span-1
+        .flex.justify-between.items-center
+          %h2.text-lg.text-white.font-semibold
+            Work on my Teams
+
+          %a.text-sm.text-orange-500.hover:text-orange-400{ href: new_team_path, data: { turbo_frame: '_top' } }
+            Create a Team
+
+        = render 'teams', teams: @teams
+        
+  .absolute.bottom-2.left-0
+    .bg-gray-800.p-2.ml-2.w-40.rounded-lg.cursor-pointer.hover:bg-gray-700{ data: { controller: 'context', action: 'keydown.esc@window->context#close click->context#open', context: { placement_value: 'top' } } }
+      .flex.items-center.space-x-1
+        = inline_svg_tag('icons/account.svg', class: 'h-4 w-4 text-white')
+        %span.text-white.text-sm.font-sans= Current.user.username
+      = wrap_tooltip_neutral do
+        = render "users/menu"

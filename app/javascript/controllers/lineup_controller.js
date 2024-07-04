@@ -20,7 +20,7 @@ export default class LineupController extends Controller {
   }
 
   select(event) {
-    const path = `/characters/${event.currentTarget.dataset.index}/edit`
+    const path = `/teams/${event.currentTarget.dataset.team}/characters/${event.currentTarget.dataset.index}/edit`
 
     document.querySelector('#character_editor').src = path
   }

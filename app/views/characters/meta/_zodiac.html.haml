@@ -1,4 +1,0 @@
-#zodiac.group
-  = link_to(character_zodiacs_path(character_id: i), data: { turbo_frame: 'modal' }, class: 'flex items-center cursor-pointer') do
-    = inline_svg_tag("zodiacs/#{char.zodiac}.svg", class: 'h-7 w-7')
-    .ml-1.border-b-2.border-transparent.group-hover:border-menu-dark.-mb-1= char.zodiac.titleize

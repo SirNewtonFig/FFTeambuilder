@@ -1,0 +1,42 @@
+- content_for :heading do
+  %h2.text-xl Select Zodiac:
+
+.divide-y.divide-menu-dark.w-full{ class: 'sm:w-[34rem]' }
+  - Character::ZODIACS.keys.each do |zodiac|
+    = form_with(url: team_character_meta_path(team_id: @team.id, character_id: params[:character_id]), method: :patch, data: { controller: "form #{'auto-scroll' if zodiac == @char.zodiac}", form_modal_outlet: '.modal-controller' }) do |f|
+      = tag.button(class: 'w-full', data: { action: 'form#submit' }) do
+        %input{ type: 'hidden', name: "character[zodiac]", value: zodiac }
+        .-mx-2.px-2.py-3.space-y-1.cursor-pointer{ class: 'hover:bg-menu-dark/25' }
+          .flex.justify-between.items-center
+            .flex.items-center
+              = inline_svg_tag("zodiacs/#{zodiac}.svg", class: 'h-8 w-8 text-red-900')
+              .text-lg.ml-1
+                = zodiac.titleize
+                - if zodiac == @char.zodiac
+                  %span.text-gray-700 (Current)
+
+          .flex.space-x-6.flex-wrap
+            .flex
+              .text-red-900.capitalize Good:
+              .ml-2= good_compats(zodiac).map(&:titleize).join(', ')
+
+            - unless @char.job.monster?
+              .flex
+                .text-red-900.capitalize Best:
+                .ml-2
+                  = best_worst_compat(zodiac).titleize
+                  (#{best_compat_sex(@char)})
+
+          .flex.space-x-6.flex-wrap
+            .flex
+              .text-red-900.capitalize Bad:
+              .ml-2
+                #{bad_compats(zodiac).map(&:titleize).join(', ')}, #{best_worst_compat(zodiac).titleize} (Monster)
+
+          - unless @char.job.monster?
+            .flex.space-x-6.flex-wrap
+              .flex
+                .text-red-900.capitalize Worst:
+                .ml-2
+                  = best_worst_compat(zodiac).titleize
+                  (#{@char.sex.titlecase})

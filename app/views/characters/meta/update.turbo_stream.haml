@@ -1,8 +1,0 @@
-= turbo_stream.replace('zodiac') do
-  = render 'characters/meta/zodiac', char: @char, i: i
-
-= turbo_stream.replace("character-#{i}") do
-  = render 'characters/summary', selected: true, char: @char, i: i
-
-= turbo_stream.replace("team-summary") do
-  = render 'teams/summary', team: @team

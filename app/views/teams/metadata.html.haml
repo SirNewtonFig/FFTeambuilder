@@ -1,0 +1,22 @@
+.w-72
+  = form_with(model: @team, url: team_path(@team), method: :patch, data: { controller: 'form', form_modal_outlet: '.modal-controller' }) do |f|
+    .space-y-6
+      %div
+        = f.label(:player_name, 'Player Name', class: 'text-xs block')
+        = f.text_field(:player_name, placeholder: 'Ramza Beoulve', class: text_field_classes, value: @team.player_name || Current.user.username)
+      %div
+        = f.label(:name, 'Team Name', class: 'text-xs  block')
+        = f.text_field(:name, placeholder: 'Hokuten', class: text_field_classes)
+
+      .flex.space-x-8
+        %div
+          = f.label(:palette_a, 'Palette', class: 'text-xs  block')
+          = f.select(:palette_a, options_for_select(Team.palette_as.keys, @team.palette_a), {}, { class: "capitalize #{select_classes}" })
+          
+        %div
+          = f.label(:palette_b, 'Palette (Alt)', class: 'text-xs  block')
+          = f.select(:palette_b, options_for_select(Team.palette_bs.keys, @team.palette_b), {}, { class: "capitalize #{select_classes}" })
+
+    .mt-6.text-right.space-x-6
+      = button_tag('Cancel', class: neutral_button_classes, data: { action: 'modal#close' })
+      = f.submit('Save Team', class: primary_button_classes, data: { action: 'form#submit' })

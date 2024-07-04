@@ -4,7 +4,9 @@ Rails.application.routes.draw do
   devise_for :users, controllers: { omniauth_callbacks: 'users/omniauth_callbacks' }
   # Defines the root path route ("/")
 
-  root "teams#index"
+  root "dashboard#show"
+
+  resource :dashboard, only: %i{ show}, controller: 'dashboard'
 
   namespace :guests do
     resources :sessions, only: %i{ create }
@@ -41,41 +43,39 @@ Rails.application.routes.draw do
   end
 
   resources :teams do
-    collection do
-      patch :update
-      get :export
-      post :download
-
-      resource :lineup, only: %i{ update }, controller: 'teams/lineup'
-    end
-  end
-  
-  resources :characters do
     member do
-      get :jp_summary
+      get :metadata
     end
 
-    resource :meta, only: %i{ update }, controller: 'characters/meta'
+    resources :characters, controller: 'teams/characters' do
+      member do
+        get :jp_summary
+      end
 
-    resources :items, only: %i{ index }, controller: 'characters/items' do
-      collection do
-        patch :update
+      resource :meta, only: %i{ update }, controller: 'teams/characters/meta'
+
+      resources :items, only: %i{ index }, controller: 'teams/characters/items' do
+        collection do
+          patch :update
+        end
+      end
+
+      resources :zodiacs, only: %i{ index }, controller: 'teams/characters/zodiacs' do
+        collection do
+          patch :update
+        end
+      end
+
+      resource :job, only: %i{ edit update }, controller: 'teams/characters/job'
+      resource :skills, only: %i{ edit update }, controller: 'teams/characters/skills'
+      
+      resource :ai_values, only: %i{ update }, controller: 'teams/characters/ai_values' do
+        patch :clear
+        patch :default
       end
     end
-
-    resources :zodiacs, only: %i{ index }, controller: 'characters/zodiacs' do
-      collection do
-        patch :update
-      end
-    end
-
-    resource :job, only: %i{ edit update }, controller: 'characters/job'
-    resource :skills, only: %i{ edit update }, controller: 'characters/skills'
     
-    resource :ai_values, only: %i{ update }, controller: 'characters/ai_values' do
-      patch :clear
-      patch :default
-    end
+    resource :lineup, only: %i{ update }, controller: 'teams/lineup'
   end
 
   resource :memgen, controller: 'memgen', only: %i{ new create } do
