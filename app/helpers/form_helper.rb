@@ -55,6 +55,25 @@ module FormHelper
     '.squish
   end
 
+  def select_classes_neutral
+    '
+      bg-right
+      cursor-pointer
+      py-0
+      px-0
+      bg-transparent
+      border-0
+      border-b-2
+      border-transparent
+      hover:border-gray-600
+      appearance-none
+      focus:outline-none
+      focus:ring-0
+      focus:border-gray-600
+      peer
+    '.squish
+  end
+
   def primary_button_classes
     '
       cursor-pointer

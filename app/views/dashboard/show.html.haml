@@ -26,10 +26,4 @@
 
         = render 'teams', teams: @teams
         
-  .absolute.bottom-2.left-0
-    .bg-gray-800.p-2.ml-2.w-40.rounded-lg.cursor-pointer.hover:bg-gray-700{ data: { controller: 'context', action: 'keydown.esc@window->context#close click->context#open', context: { placement_value: 'top' } } }
-      .flex.items-center.space-x-1
-        = inline_svg_tag('icons/account.svg', class: 'h-4 w-4 text-white')
-        %span.text-white.text-sm.font-sans= Current.user.username
-      = wrap_tooltip_neutral do
-        = render "users/menu"
+  = render "users/menu"

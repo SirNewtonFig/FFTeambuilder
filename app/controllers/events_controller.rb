@@ -17,5 +17,24 @@ class EventsController < ApplicationController
 
   def show
     @event = Event.find(params[:id])
+
+    @submissions = Team.joins(:events).where(events: {id: @event.id })
+    
+    @my_submissions = Team.joins(:events)
+      .where(events: { id: @event.id }, teams: { user_id: Current.user.id })
+  end
+
+  def confirm_destroy
+    @event = Event.find(params[:id])
+
+    render layout: 'modal_neutral'
+  end
+
+  def destroy
+    @event = Event.find(params[:id])
+
+    @event.destroy
+
+    redirect_to dashboard_path
   end
 end

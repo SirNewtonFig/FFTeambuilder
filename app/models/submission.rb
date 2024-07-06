@@ -1,9 +1,6 @@
 class Submission < ApplicationRecord
   belongs_to :event
+  belongs_to :team
   
   scope :active, -> { where(active: true) }
-
-  def team
-    Team.new(**data)    
-  end
 end

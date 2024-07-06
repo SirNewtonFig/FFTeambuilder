@@ -43,13 +43,8 @@
                 - 4.times do |i|
                   .draggable{ data: { team: @team.id, index: i, action: 'click->lineup#select:stop', lineup_target: 'character' }}
                     = render 'teams/characters/summary', selected: i == params[:id].to_i, char: @team.characters[i], i: i
-          .bg-gray-800.p-2.ml-2.rounded-lg.cursor-pointer.hover:bg-gray-700{ data: { controller: 'context', action: 'keydown.esc@window->context#close click->context#open', context: { placement_value: 'top' } } }
-            .flex.items-center.space-x-1
-              = inline_svg_tag('icons/account.svg', class: 'h-4 w-4 text-white')
-              %span.text-white.text-sm.font-sans= Current.user.username
-            = wrap_tooltip_neutral do
-              = render "users/menu"
       
       .w-full.mx-3
         = turbo_frame_tag(:character_editor, src: edit_team_character_path(team_id: @team.id, id: 0))
 
+= render "users/menu"

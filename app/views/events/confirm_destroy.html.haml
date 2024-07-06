@@ -1,0 +1,10 @@
+- content_for :heading do
+  .flex.items-center
+    %h2.text-xl Remove Event
+    
+%p.mb-4 Are you sure you want to remove this event?
+
+= form_for(@event, method: :delete) do |f|
+  .flex.justify-center.space-x-8
+    = button_tag('Cancel', class: neutral_button_classes, data: { action: 'modal#close' })
+    = f.submit('Yes, Delete It', class: destructive_button_classes)

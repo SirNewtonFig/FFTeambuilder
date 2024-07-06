@@ -39,7 +39,11 @@ Rails.application.routes.draw do
   end
 
   resources :events do
-    resources :submissions
+    member do
+      get :confirm_destroy
+    end
+    
+    resources :submissions, controller: 'events/submissions'
   end
 
   resources :teams do
