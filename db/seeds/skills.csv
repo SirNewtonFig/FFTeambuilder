@@ -283,18 +283,18 @@ Paladin,Devotion,200,500,1,,Allies,,,10,Holy,,,"Add: Reraise, Regen, and Stealth
 Paladin,Redemption,100,500,1,,Allies,,,20,Holy,,,Cancel: Dead (25% HP) Hit_(Faith)% ignores zodiac,,,,,,,,,,,,,
 Paladin,R:Pray,1AE,800,,,,,,,,,,Faith +5 on HP Damage,,,,,,,,,,,,,
 Paladin,S:Piety,1F7,300,,,,,,,,,,Use Faith instead of Brave for reaction % (ignores Faith and Innocent status) (CLASS INNATE),,,,,,,,,,,,,
-Warlock,Toxic Shock,8000,0,4,,Any,,,25,,Mag,Yes,Hit_F((5*MA)+100)% Add: Toxic,,Yes,Yes,,,,,Yes,,,,,Yes
-Warlock,Curse of Indolence,4000,0,4,,Any,,2,20,,,Yes,Hit_(100)% Add: Sloth,,Yes,Yes,,,,,Yes,,,,,Yes
-Warlock,Curse of Fragility,2000,0,4,,Any,,3,12,,Mag,Yes,Hit_F((5*MA)+100)% Add: Fragile,,Yes,Yes,,,,,Yes,,,,,Yes
-Warlock,Curse of Weakness,1000,0,4,,Any,,2,30,,Mag,Yes,Hit_F((5*MA)+100)% Add: Weaken or upgrade existing Weaken to Cripple and reset duration,,Yes,Yes,,,,,Yes,,,,,Yes
-Warlock,Curse of Exhaustion,800,0,4,,Any,,3,40,,Mag,Yes,Hit_F((5*MA)+100)% Add: Fatigue or upgrade existing Fatigue to Exhaustion and reset duration,,Yes,Yes,,,,,Yes,,,,,Yes
-Warlock,Plague Nova,400,0,4,2,Enemies,,,50,,,,Hit_(100)% reset all negative durations on target and spread them to all enemies in the AoE,,Yes,Yes,,,,,,,,,,
-Warlock,Corruption,200,0,4,,Any,,4,50,Dark,Mag,Yes,Dmg_(MA*5*number of positive effects) and dispel all positive effects,,Yes,Yes,,,,,Yes,,,,,Yes
-Warlock,Steal Weave,100,0,4,,Any,,,50,,Mag,Yes,Dispel all positive status from target and add them to yourself,,,Yes,,,,,,,,,,
-Warlock,Expel,80,0,4,,Any,,3,,,Mag,Yes,"Inflict all negative status you have on target, then cancel them from yourself",,,Yes,No,,,,,,,,,
-Warlock,E: Affliction,1E5,0,,,,,,,,,,Negative status effects you inflict last twice as long,,,,,,,,,,,,,
-Warlock,S: Long Status,1EF,0,,,,,,,,,,Status effects last twice as long on you,,,,,,,,,,,,,
-Warlock,S: Short Status,1F0,0,,,,,,,,,,Status effects last half as long on you,,,,,,,,,,,,,
+Warlock,Toxic Shock,8000,200,4,,Any,,,25,,Mag,Yes,Hit_F((5*MA)+100)% Add: Toxic,,Yes,Yes,,,,,Yes,,,,,Yes
+Warlock,Curse of Indolence,4000,200,4,,Any,,2,20,,,Yes,Hit_(100)% Add: Sloth,,Yes,Yes,,,,,Yes,,,,,Yes
+Warlock,Curse of Fragility,2000,300,4,,Any,,3,12,,Mag,Yes,Hit_F((5*MA)+100)% Add: Fragile,,Yes,Yes,,,,,Yes,,,,,Yes
+Warlock,Curse of Weakness,1000,300,4,,Any,,2,30,,Mag,Yes,Hit_F((5*MA)+100)% Add: Weaken or upgrade existing Weaken to Cripple and reset duration,,Yes,Yes,,,,,Yes,,,,,Yes
+Warlock,Curse of Exhaustion,800,300,4,,Any,,3,40,,Mag,Yes,Hit_F((5*MA)+100)% Add: Fatigue or upgrade existing Fatigue to Exhaustion and reset duration,,Yes,Yes,,,,,Yes,,,,,Yes
+Warlock,Plague Nova,400,500,4,2,Enemies,,,50,,,,Hit_(100)% reset all negative durations on target and spread them to all enemies in the AoE,,Yes,Yes,,,,,,,,,,
+Warlock,Corruption,200,750,4,,Any,,4,50,Dark,Mag,Yes,Dmg_(MA*5*number of positive effects) and dispel all positive effects,,Yes,Yes,,,,,Yes,,,,,Yes
+Warlock,Steal Weave,100,1000,4,,Any,,,50,,Mag,Yes,Dispel all positive status from target and add them to yourself,,,Yes,,,,,,,,,,
+Warlock,Expel,80,300,4,,Any,,3,,,Mag,Yes,"Inflict all negative status you have on target, then cancel them from yourself",,,Yes,No,,,,,,,,,
+Warlock,E: Affliction,1E5,750,,,,,,,,,,Negative status effects you inflict last twice as long,,,,,,,,,,,,,
+Warlock,S: Long Status,1EF,300,,,,,,,,,,Status effects last twice as long on you,,,,,,,,,,,,,
+Warlock,S: Short Status,1F0,300,,,,,,,,,,Status effects last half as long on you,,,,,,,,,,,,,
 Warlock,CLASS INNATE: Warlock,,,,,,,,,,,,Inflicts a random status effect on attackers while charging spells,,,,,,,,,,,,,
 Blood Mage,Bleed Power,8000,100,4,,Any,,2,2,,Mag,Yes,Leech 33% target max MP Hit_F(MA+255)%,,Yes,Yes,,,,,Yes,,,,,Yes
 Blood Mage,Drain Life,4000,100,4,,Any,,2,25,,Mag,Yes,Leech 33% target max HP Hit_F(MA+255)%,,Yes,Yes,,,,,Yes,,,,,Yes
@@ -306,5 +306,5 @@ Blood Mage,Anemia,200,300,4,,Any,,2,20,,Mag,Yes,Hit_(MA+255%) Add: Exhaustion Dm
 Blood Mage,Boil,100,600,Self,2,Any,,,30,,Mag,Yes,Dmg_(MA*17) also hits self,,Yes,Yes,,,,,,,,,,
 Blood Mage,Consume,80,500,Self,2,Enemies,,,,,,,Hit_(100)% Dmg_(TarMaxHP) HealSelf_(MaxHP) Misses if target not Near Fatal,,,,,,,,,,,,,
 Blood Mage,R:Damage Split,1BE,2000,,,,,,,,,,Return 50% of damage received and heal the same amount,,,,,,,,,,,,,
-Blood Mage,E: Ritual,1DE,,,,,,,,,,,Can use HP to replace missing MP to cast spells (CLASS INNATE),,,,,,,,,,,,,
+Blood Mage,E: Ritual,1DE,250,,,,,,,,,,Can use HP to replace missing MP to cast spells (CLASS INNATE),,,,,,,,,,,,,
 Blood Mage,CLASS INNATE: Blood Mage,,,,,,,,,,,,Damage taken while charging spells drains MP before HP,,,,,,,,,,,,,
