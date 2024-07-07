@@ -105,12 +105,16 @@ skillmap.each do |job, skill_ids|
   job.skills.where.not("data ->> 'memgen_id' IN (:ids)", ids: skill_ids).destroy_all
 end
 
+itemlist = []
 Dir.glob('db/seeds/items/*.csv').each do |f|
   items = CSV.parse(File.read(f), headers: true)
   items.each do |row|
-    item = Item.find_or_initialize_by(name: row['Name'])
+    item = Item.find_by("data ->> 'memgen_id' = ?", row['Item ID'].rjust(2, '0')) || Item.new
+
+    itemlist << row['Item ID'].rjust(2, '0')
 
     item.update(
+      name: row['Name'],
       item_type: File.basename(f, '.csv').singularize,
       data: {
         wp: row['WP'],
@@ -154,6 +158,8 @@ Dir.glob('db/seeds/items/*.csv').each do |f|
     item.skill_ids = Skill.where(name: row['Skill']).pluck(:id)
   end
 end
+
+Item.where.not("data ->> 'memgen_id' IN (:ids)", ids: itemlist).destroy_all
 
 monsters = CSV.parse(File.read(Rails.root.join('db/seeds/monsters.csv')), headers: true)
 monsters.each do |row|
