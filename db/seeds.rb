@@ -49,6 +49,9 @@ prerequisites.each do |row|
 end
 
 skills = CSV.parse(File.read(Rails.root.join('db/seeds/skills.csv')), headers: true)
+
+skillmap = {}
+
 skills.each do |row|
   next if row['Skill ID'].blank?
 
@@ -60,6 +63,9 @@ skills.each do |row|
   skill_type = 'movement' if row['Skill Name'].match?(/^S:/)
 
   skill = Skill.find_by("job_id = ? AND data ->> 'memgen_id' = ?", job.id, row['Skill ID'].rjust(4, '0')) || Skill.new
+
+  skillmap[job] ||= []
+  skillmap[job] << row['Skill ID'].rjust(4, '0')
 
   skill.update(
     name: row['Skill Name'].gsub(/^R:|^E:|^S:/, '').strip,
@@ -93,6 +99,10 @@ skills.each do |row|
       shell: row['Shell?']
     }
   )
+end
+
+skillmap.each do |job, skill_ids|
+  job.skills.where.not("data ->> 'memgen_id' IN (:ids)", ids: skill_ids).destroy_all
 end
 
 Dir.glob('db/seeds/items/*.csv').each do |f|
