@@ -146,9 +146,9 @@ Dir.glob('db/seeds/items/*.csv').each do |f|
     )
 
     equippable_jobs = Job.none
-    equippable_jobs = Job.generic.where(abbreviation: row['Classes'].split(' ')) if row['Classes'].present? && row['Classes'] !~ /NOT|ALL/
-    equippable_jobs = Job.generic.where.not(name: 'Mime').where.not(abbreviation: row['Classes'].split(' ')[1..-1]) if row['Classes'].present? && row['Classes'] =~ /NOT/
-    equippable_jobs = Job.generic.where.not(name: 'Mime') if row['Classes'] =~ /ALL/
+    equippable_jobs = Job.generic.where(abbreviation: row['Classes'].split(' ')) if row['Classes'].present? && row['Classes'] !~ /not|all|any/i
+    equippable_jobs = Job.generic.where.not(name: 'Mime').where.not(abbreviation: row['Classes'].split(' ')[1..-1]) if row['Classes'].present? && row['Classes'] =~ /not/i
+    equippable_jobs = Job.generic.where.not(name: 'Mime') if row['Classes'] =~ /all|any/i
 
     item.job_ids = equippable_jobs.pluck(:id)
     item.skill_ids = Skill.where(name: row['Skill']).pluck(:id)
