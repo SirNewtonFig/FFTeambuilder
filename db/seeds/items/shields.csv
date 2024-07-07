@@ -1,21 +1,21 @@
 Name,Item ID,Classes,Phys Evade,Magic Evade,PA,MA,Speed,Move,Jump,Immune:,Absorbs:,Weak:,Halves:,Strengthens:,Start:,Always:,Skill,Extra Effects:
 Escutcheon,80,Sq Kn Ar Ge Ln Sb Pd,25,0,,,,,,,,Fire Lightning,,,Haste,,Equip Shield,
-Buckler,81,Sq Kn Ar Ge Ln Sb Pd,25,45,,,,,,,,,,,,,Equip Shield,
+Buckler,81,Sq Kn Ar Ge Ln Sb Pd,15,15,,,,2,2,,,,,,,,Equip Shield,
 Bronze Shield,82,Sq Kn Ar Ge Ln Sb Pd,30,0,,,,,,,,,,,,Reflect,Equip Shield,
 Round Shield,83,Sq Kn Ar Ge Ln Sb Pd,0,0,,,-1,,,,,,,,,Protect Shell,Equip Shield,
 Mythril Shield,84,Sq Kn Ar Ge Ln Sb Pd,0,15,,2,,,,,,,,,,,Equip Shield,
-Gold Shield,85,Sq Kn Ar Ge Ln Sb Pd,35,35,,,,,,,,,,,,,Equip Shield,
-Ice Shield,86,Sq Kn Ar Ge Ln Sb Pd,34,15,,,,,,,Ice,Lightning,Fire,,,,Equip Shield,
-Flame Shield,87,Sq Kn Ar Ge Ln Sb Pd,34,15,,,,,,,Fire,Water,Ice,,,,Equip Shield,
-Aegis Shield,88,Sq Kn Ar Ge Ln Sb Pd,20,35,,1,,,,,,,,,,,Equip Shield,
+Gold Shield,85,Sq Kn Ar Ge Ln Sb Pd,30,30,,,,,,,,,,,,,Equip Shield,
+Dark Shield,86,Sq Kn Ar Ge Ln Sb Pd,30,15,,,,,,,Dark,,,,,,Equip Shield,
+Flame Shield,87,Sq Kn Ar Ge Ln Sb Pd,30,15,,,,,,,Fire,,,,,,Equip Shield,
+Aegis Shield,88,Sq Kn Ar Ge Ln Sb Pd,20,30,,1,,,,,,,,,,,Equip Shield,
 Diamond Shield,89,Sq Kn Ar Ge Ln Sb Pd,15,15,1,1,,,,,,,,,,,Equip Shield,
 Platina Shield,8A,Sq Kn Ar Ge Ln Sb Pd,35,20,,1,,,,,,,,,,,Equip Shield,
-Crystal Shield,8B,Sq Kn Ar Ge Ln Sb Pd,20,20,,,,,,,Ice,,,Ice,,,Equip Shield,
-Genji Shield,8C,Sq Kn Ar Ge Ln Sb Pd,30,20,,,,,,Frog Petrify,,,,,,,Equip Shield,
+Crystal Shield,8B,Sq Kn Ar Ge Ln Sb Pd,20,20,,,,,,Crystal,Water,,,Water,,,Equip Shield,
+Genji Shield,8C,Sq Kn Ar Ge Ln Sb Pd,30,20,,,,,,Dead / Crystal,,,,,,,Equip Shield,
 Kaiser Plate,8D,Sq Kn Ar Ge Ln Sb Pd,10,10,,,,,,,,,,All Elements,,,Equip Shield,
 Venetian Shield,8E,Sq Kn Ar Ge Ln Sb Pd,0,0,,,,,,,,,All Elements,,,,Equip Shield,
 Escutcheon II,8F,Sq Kn Ar Ge Ln Sb Pd,0,0,,,,,,,,,,,,Stealth,Equip Shield,
-Battle Dict,5F,Pr Wi TM Su Me Or Ge Sg,0,0,,,,,,,,,,,,,,Attack UP
-Monster Dict,60,Pr Wi TM Su Me Or Ge Sg,0,0,,2,,,,,,,,,,,,
-Papyrus Plate,61,Pr Wi TM Su Me Or Ge Sg,0,0,,,,,,,,,,,,,,Defense UP
-Madlemgen,62,Pr Wi TM Su Me Or Ge Sg,0,0,,,,,,,,,,,,,,Magic Attack UP
+Battle Dict,5F,ALL,0,0,,,,,,,,,,,,,,Your attacks ignore both C-EV types
+Monster Dict,60,ALL,0,0,,,,,,,,,,,,,,25% chance for an ability that costs MP to cost 0
+Papyrus Plate,61,ALL,0,0,,,,,,,,,,,,,,"If you are at max hp, you survive lethal damage at 1 hp"
+Madlemgen,62,ALL,0,0,,,,,,,,,,,,,,"Hit_() formulas increase by 8 after evasion, all damage dealt reduced by 1/8"

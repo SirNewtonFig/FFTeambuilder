@@ -1,29 +1,29 @@
 Name,Item ID,Classes,Phys Evade,Magic Evade,PA,MA,Speed,Move,Jump,Immune:,Absorbs:,Weak:,Halves:,Strengthens:,Start:,Always:
-Battle Boots,D0,ALL,,,1,,,1,,,,,,,,
-Spike Shoes,D1,ALL,,,1,,,,1,,,,,,,
-Germinas Boots,D2,ALL,,,,,,1,1,Don't Act / Slow / Don't Move,,,,,,
-Rubber Shoes,D3,ALL,,,,,,,,Don't Move / Berserk / Weaken,,,,,,
-Feather Boots,D4,ALL,,,,,,1,,Wind,,,,,,Float
-Sprint Shoes,D5,ALL,,,,,1,,,,,,,,,
-Power Wrist,D7,ALL,,,1,,,,,Dead / Death Sentence,,,,,,
-Magic Gauntlet,D9,ALL,,,,2,,,,,,,,,,
-Heroic Gloves,DA,ALL,,,1,,,,,,,,Holy,,,
-Reflect Ring,DB,ALL,,,,,,,,,,,,,,Reflect
+Battle Boots,D0,ALL,,,1,,,1,,Weaken,,,,,,
+Spike Shoes,D1,ALL,,,1,,,1,2,,,,,,,
+Germinas Boots,D2,ALL,,,,,,2,1,Don't Act / Slow / Don't Move,,,,,,
+Rubber Shoes,D3,ALL,,,,,,2,,Don't Move / Berserk / Weaken,,,,,,
+Feather Boots,D4,ALL,,,,,,3,,,,,,,,Float
+Sprint Shoes,D5,ALL,,,,,1,1,,,,,,,,
+Power Wrist,D7,ALL,,,1,,,,,,,,,,,Overload
+Magic Gauntlet,D9,ALL,,,,2,,,,Innocent / Don't Act,,,,,,
+Heroic Gloves,DA,ALL,,,1,,,,,,,,,,Overload,
+Reflect Ring,DB,ALL,,,,,1,,,,,,,,,Reflect
 Defense Ring,DC,ALL,,,,,,,,Sundown / Death Sentence,,,,,Protect Shell,
-Magic Ring,DD,ALL,,,,1,,,,Don't Act,Wind / Earth / Water,,,,,
+Magic Ring,DD,ALL,,,,1,,,,Don't Act,Water / Dark / Holy,,,,,
 Diamond Armlet,E0,ALL,,,1,1,,,,Slow,,,,,,
-Jade Armlet,E1,ALL,,,,1,,,,,,,,Fire/Water/Dark,,
-108 Gems,E2,ALL,,,,,,,,Undead / Poison / Discord,,,,Lit/Ice/Wind/Earth/Holy,,
+Jade Armlet,E1,ALL,,,,1,,,,,,,,Fire/Water/Lightning,,
+108 Gems,E2,ALL,,,,,,,,Undead / Poison / Discord / Fatigue,,,,Holy/Dark,,
 N-Kai Armlet,E3,ALL,,,,,,,,Confusion / Charm / Berserk,,,Dark,,,
 Defense Armlet,E4,ALL,,,,,,,,Don't Move / Don't Act / Dead / Death Sentence,,,,,,
 Red Shoes,D6,ALL,,,1,,,1,,,,,,,,Berserk
-Genji Gauntlet,D8,ALL,,,,,,,,Slow / Frog / Petrify,,,,,,
+Genji Gauntlet,D8,ALL,,,1,1,,,,Don't Act / Weaken,,,,,,
 Cursed Ring,DE,ALL,,,1,1,1,,,,,,,,,Undead
 Angel Ring,DF,ALL,,,-1,-1,,,,,,,,,Reraise,
-Small Mantle,E5,ALL,10,30,,,,,,,,,,Fire,,
-Leather Mantle,E6,ALL,15,20,,,,1,,,,,Holy,,Innocent,
-Wizard Mantle,E7,ALL,0,40,,1,,,,,,,,,,
-Elf Mantle,E8,ALL,24,24,,,,,,,,,,,,
-Dracula Mantle,E9,ALL,15,20,,,,,,,Dark,,,Dark,,
-Feather Mantle,EA,ALL,15,30,,,,,,,,,,,,Float
-Vanish Mantle,EB,ALL,0,45,,,,,,,,,,,Transparent,
+Small Mantle,E5,ALL,0,10,,1,,,,Don't Act / Berserk,,,,,,
+Leather Mantle,E6,ALL,10,0,1,,,,,Weaken / Don't Move,,,,,,
+Wizard Mantle,E7,ALL,0,20,,1,,,,,,,,,,
+Elf Mantle,E8,ALL,20,20,,,,,,,,,,,,
+Dracula Mantle,E9,ALL,15,15,,,,,,,Dark,,,Dark,,
+Feather Mantle,EA,ALL,20,0,1,,,,,Discord / Slow,,,,,,
+Vanish Mantle,EB,ALL,0,20,,,,,,,,,,,Innocent,

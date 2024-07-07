@@ -6,6 +6,7 @@ Archer,3 Thief
 Monk,"4 Knight,3 Lancer"
 Engineer,"4 Thief,3 Archer"
 Spellblade,"5 Knight,5 Thief,4 Lancer,4 Archer"
+Samurai,"3 Lancer,3 Archer"
 Paladin,"4 Squire,5 Knight,4 Lancer"
 Ninja,"4 Squire,5 Thief,4 Archer"
 Dancer,"3 Monk,3 Engineer"
@@ -13,9 +14,10 @@ Priest,3 Chemist
 Wizard,3 Chemist
 Time Mage,3 Wizard
 Oracle,3 Priest
-Samurai,"4 Priest,3 Time Mage"
-Geomancer,"4 Wizard,3 Oracle"
+Geomancer,"4 Wizard,3 Time Mage"
 Sage,"5 Wizard,5 Priest,4 Time Mage,4 Oracle"
-Summoner,"4 Chemist,5 Wizard,4 Oracle"
-Mediator,"4 Chemist,5 Priest,4 Time Mage"
-Bard,"3 Samurai,3 Geomancer"
+Summoner,"4 Chemist,5 Wizard,4 Time Mage"
+Mediator,"4 Priest,3 Oracle"
+Bard,"3 Geomancer,3 Mediator"
+Blood Mage,"3 Time Mage,3 Oracle"
+Warlock,"4 Chemist,5 Priest,4 Oracle"

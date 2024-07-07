@@ -37,15 +37,14 @@ jobs.each do |row|
   )
 end
 
+Prerequisite.destroy_all
 prerequisites = CSV.parse(File.read(Rails.root.join('db/seeds/prerequisites.csv')), headers: true)
 prerequisites.each do |row|
   job = Job.find_by(name: row['Job'])
   row['Prereqs'].split(',').each do |prereq|
     level, name = prereq.match(/(\d) ([\w\s]+)/)[1..2]
 
-    record = Prerequisite.find_or_initialize_by(job: job, prerequisite_id: Job.find_by(name: name).id)
-
-    record.update(level: level)
+    record = Prerequisite.create!(job: job, prerequisite_id: Job.find_by(name: name).id, level: level)
   end
 end
 
@@ -275,3 +274,8 @@ statuses.each do |row|
     show_priority: row['Default Priority'] != 'N/A'
   )
 end
+
+Exclusion.create!(
+  ability_a: MonsterPassive.find_by(job: Job.find_by(name: 'Bomb'), name: 'AllDef+ Weak:Ice'),
+  ability_b: Skill.find_by(job: Job.find_by(name: 'Bomb'), name: 'Defense UP')
+)

@@ -1,35 +1,40 @@
 Status,Description,Duration,Indicator,Default Priority
-Berserk,"+50% damage(XA), always approach an enemy and attack","","Red tint",-39
-Charm,"You attack your teammates and assist your enemies","20 ticks","Heart in bubble over head",-64
-Chicken,"Run away and regain 1 brave on turn. Ends at 10 brave","","You're a chicken",-26
-Confusion,"Forget which team you're on and do random things","","'?' bubble over head",-64
-Crystal,"Restores HP/MP of unit that picks it up","Permanent","Crystal",-192
-Dead,"Countdown until they become a crystal","4 turns (3->0)","Facedown",-192
-Death Sentence,"Die at the end of the countdown. Undead remove the status instead.","3 turns","Countdown bubble over head",-103
-Defending,"Reduces incoming damage by 25% (after damage calculation)","","Guard stance",N/A
-Discord,"Halves evasion","24 ticks","VERY purple (blood suck)",-64
-Don't Act,"You cannot use abilities, only basic attack.","20 ticks","DA bubble over head",-64
-Don't Move,"You cannot move. You do not gain the 20 CT bonus for not moving","20 ticks","DM bubble over head",-39
-Faith,"Your faith counts as 100 in calculations","24 ticks","Up arrow in bubble over head",6
-Fatigue,"Abilities cost double MP","24 ticks","Idle move stopped",-32
-Float,"Immune Earth, take extra wind damage. At +1 height","","Floating",12
-Frog,"All you can do is a weak attack or cast frog. Ends on death.","","You're a frog",-52
-Haste,"Gain 50% extra CT per clocktick","20 ticks","Idle move is faster",19
-Innocent,"Your faith counts as 0 in calculations","24 ticks","Down arrow in bubble over head",-7
-Near Fatal,"Run away and try to heal if you can. Buff if you cannot","","Crouching",-32
-Overload,"Your next action does 50% more damage, but harms you for 25% max hp","60 ticks","No visible indication",-7
-Petrify,"No CT gain, takes no damage, considered dead","","Stone color, stationary",-116
-Poison,"Deals damage to the unit at the end of its turn","","Green tint",-26
-Protect,"Take 33% less physical damage(XA reduction)","32 ticks","Triangle in bubble over head",25
-Reflect,"Certain spells bounce off of you. It's complicated. Read the BMG.","32 ticks","No visible indication",25
-Regen,"Heals HP at the end of its turn","36 ticks","Blue tint",25
-Reraise,"When your turn comes up and you are dead, revive","","Angel bubble over head",51
-Shell,"Take 33% less magical damage(XA reduction)","32 ticks","Square in bubble over head",25
-Slow,"Gain 50% less CT per clocktick","24 ticks","Idle move is slower",-39
-Stealth,"Your actions do not trigger reactions","36 ticks","'...' bubble over head",25
-Sturdy,"Immune to all negative effects (except red shoes always berserk)","12 ticks","No visible indication",0
-Sundown,"The next damaging attack you suffer hits 1.5x as hard","","Shades in bubble over head",-25
-Transparent,"Next attack has concentrate, wears off on hit or action","","Kinda transparent",38
-Treasure,"(Unused, but this is in the priority matrix for some reason so here ya go)","Permanent","You're a treasure chest",-192
-Undead,"Heal reverses, 50% to revive at 100 hp instead of crystal","","Black tint",-39
-Weaken,"All damage you deal is reduced to 67%","28 ticks","Light purple tint",-39
+Berserk,"+50% damage(XA), always approach an enemy and attack",,Red tint,-39
+Charm,You attack your teammates and assist your enemies,20 ticks,Heart in bubble over head,-64
+Chicken,Run away and regain 1 brave on turn. Ends at 10 brave,,You're a chicken,-26
+Confusion,Forget which team you're on and do random things,,?' bubble over head,-64
+Crystal,Restores HP/MP of unit that picks it up,Permanent,Crystal,-192
+Dead,Countdown until they become a crystal,4 turns (3->0),Facedown,-192
+Death Sentence,Die at the end of the countdown. Undead remove the status instead.,3 turns,Countdown bubble over head,-103
+Defending,Reduces incoming damage by 25% (after damage calculation),,Guard stance,N/A
+Discord,Halves evasion,24 ticks,VERY purple (blood suck),-64
+Don't Act,"You cannot use abilities, only basic attack.",20 ticks,DA bubble over head,-64
+Don't Move,You cannot move. You do not gain the 20 CT bonus for not moving,20 ticks,DM bubble over head,-39
+Faith,Your faith counts as 100 in calculations,24 ticks,Up arrow in bubble over head,6
+Fatigue,Abilities cost double MP,24 ticks,Idle move stopped,-32
+Float,"Immune Earth, take extra wind damage. At +1 height",,Floating,12
+Frog,All you can do is a weak attack or cast frog. Ends on death.,,You're a frog,-52
+Haste,Gain 50% extra CT per clocktick,20 ticks,Idle move is faster,19
+Innocent,Your faith counts as 0 in calculations,24 ticks,Down arrow in bubble over head,-7
+Near Fatal,Run away and try to heal if you can. Buff if you cannot,,Crouching,-32
+Overload,"Your next action does 50% more damage, but harms you for 25% max hp",60 ticks,No visible indication,-7
+Petrify,"No CT gain, takes no damage, considered dead",,"Stone color, stationary",-116
+Poison,Deals damage to the unit at the end of its turn,,Green tint,-26
+Protect,Take 33% less physical damage(XA reduction),32 ticks,Triangle in bubble over head,25
+Reflect,Certain spells bounce off of you. It's complicated. Read the BMG.,32 ticks,No visible indication,25
+Regen,Heals HP at the end of its turn,36 ticks,Blue tint,25
+Reraise,"When your turn comes up and you are dead, revive",,Angel bubble over head,51
+Shell,Take 33% less magical damage(XA reduction),32 ticks,Square in bubble over head,25
+Slow,Gain 50% less CT per clocktick,24 ticks,Idle move is slower,-39
+Stealth,Your actions do not trigger reactions,36 ticks,...' bubble over head,25
+Sturdy,Immune to all negative effects (except red shoes always berserk),12 ticks,No visible indication,0
+Sundown,The next damaging attack you suffer hits 1.5x as hard,,Shades in bubble over head,-25
+Transparent,"Next attack has concentrate, wears off on hit or action",,Kinda transparent,38
+Treasure,"(Unused, but this is in the priority matrix for some reason so here ya go)",Permanent,You're a treasure chest,-192
+Undead,"Heal reverses, 50% to revive at 100 hp instead of crystal",,Black tint,-39
+Weaken,All damage you deal is reduced to 67%,28 ticks,Light purple tint,-39
+Sloth,Upgraded Discord. Cannot evade attacks,24 ticks,VERY purple (blood suck),N/A
+Toxic,Upgraded Poison. Deals double the damage.,,Green tint,N/A
+Exhaustion,Upgraded Fatigue. Abilities cost double MP and your HP cannot be healed,24 ticks,Idle move stopped,N/A
+Cripple,Upgraded Weaken. All damage you deal is reduced to 50%,28 ticks,Light purple tint,N/A
+Fragile,Upgraded Sundown. The next damaging attack you suffer hits 2x as hard,,Shades in bubble over head,N/A
