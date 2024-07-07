@@ -300,6 +300,19 @@ class Character
     monster_passives.map{|i| i.data[stat].to_i}.sum
   end
 
+  def enforce_exclusions!(support_changed = false)
+    return if generic?
+    return unless monster_passives.joins(:exclusions).pluck(Arel.sql('distinct exclusions.ability_b_id')).include?(data['support'].to_i)
+
+    if support_changed
+      passives = monster_passives.joins(:exclusions).where(exclusions: { ability_b_id: data['support'].to_i}).pluck(:id)
+
+      data['skills']['secondary'] = data['skills']['secondary'].map(&:to_i) - passives
+    else
+      data['support'] = nil
+    end
+  end
+
   def enforce_constraints!
     flush_cache
 

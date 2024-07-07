@@ -10,9 +10,20 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2024_06_23_021134) do
+ActiveRecord::Schema[7.0].define(version: 2024_07_06_204712) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "exclusions", force: :cascade do |t|
+    t.string "ability_a_type", null: false
+    t.bigint "ability_a_id", null: false
+    t.string "ability_b_type", null: false
+    t.bigint "ability_b_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["ability_a_type", "ability_a_id"], name: "index_exclusions_on_ability_a"
+    t.index ["ability_b_type", "ability_b_id"], name: "index_exclusions_on_ability_b"
+  end
 
   create_table "innates", force: :cascade do |t|
     t.bigint "job_id"

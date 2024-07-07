@@ -18,6 +18,7 @@ class Characters::SkillsController < ApplicationController
 
     @char.data.deep_merge!(skill_params)
 
+    @char.enforce_exclusions!(@support_changed)
     @char.enforce_constraints! if @support_changed || @movement_changed
     
     @team.data[i] = @char.data
