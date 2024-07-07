@@ -1,5 +1,5 @@
 class EventsController < ApplicationController
-  before_action :authenticate_user!
+  before_action :authenticate_user!, except: [:show]
 
   def new
     @event = Event.new(deadline: Time.current.end_of_day)
@@ -18,7 +18,9 @@ class EventsController < ApplicationController
   def show
     @event = Event.find(params[:id])
 
-    @submissions = Team.joins(:events).where(events: {id: @event.id })
+    @submissions = Team.joins(:events).where(events: {id: @event.id }).where(submissions: { approved: nil })
+    @bracket = Team.joins(:events).where(events: {id: @event.id }).where(submissions: { approved: true })
+    @cut_submissions = Team.joins(:events).where(events: {id: @event.id }).where(submissions: { approved: false })
     
     @my_submissions = Team.joins(:events)
       .where(events: { id: @event.id }, teams: { user_id: Current.user.id })

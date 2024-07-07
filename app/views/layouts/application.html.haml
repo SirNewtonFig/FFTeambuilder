@@ -11,9 +11,7 @@
     = stylesheet_link_tag "tailwind", "inter-font", "data-turbo-track": "reload"
     = stylesheet_link_tag "application", "data-turbo-track": "reload"
     = javascript_importmap_tags
-  %body.bg-gray-900.font-mono
+  %body.bg-gray-900.font-mono.mb-16
     = yield
 
     = turbo_frame_tag :modal
-
-    #overlay.hidden.fixed.w-full.h-full.top-0.left-0.right-0.z-10.bg-gray-700.opacity-70

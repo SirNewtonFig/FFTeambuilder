@@ -43,7 +43,12 @@ Rails.application.routes.draw do
       get :confirm_destroy
     end
     
-    resources :submissions, controller: 'events/submissions'
+    resources :submissions, controller: 'events/submissions' do
+      member do
+        patch :approve
+        patch :cut
+      end
+    end
   end
 
   resources :teams do

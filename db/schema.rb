@@ -34,6 +34,7 @@ ActiveRecord::Schema[7.0].define(version: 2024_07_06_204712) do
     t.datetime "updated_at", null: false
     t.index ["ability_a_type", "ability_a_id"], name: "index_exclusions_on_ability_a"
     t.index ["ability_b_type", "ability_b_id"], name: "index_exclusions_on_ability_b"
+  end
 
   create_table "innates", force: :cascade do |t|
     t.bigint "job_id"
@@ -127,6 +128,7 @@ ActiveRecord::Schema[7.0].define(version: 2024_07_06_204712) do
     t.bigint "team_id"
     t.jsonb "data", default: {}, null: false
     t.boolean "active", default: true
+    t.boolean "approved"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["event_id"], name: "index_submissions_on_event_id"
