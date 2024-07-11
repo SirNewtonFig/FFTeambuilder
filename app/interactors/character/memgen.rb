@@ -283,7 +283,7 @@ class Character::Memgen < ActiveInteractor::Base
     end
 
     def serialize_sp!
-      sp = character.generic? ? character.job_data['sp'].to_i : character.speed
+      sp = character.generic? ? character.job_data['speed'].to_i : character.speed
 
       sp = solve_for_x('sp', sp).to_s(16)
       
@@ -291,7 +291,7 @@ class Character::Memgen < ActiveInteractor::Base
     end
 
     def serialize_pa!
-      pa = character.generic? ? character.job_data['pa'].to_i : character.attack
+      pa = character.generic? ? character.job_data['attack'].to_i : character.attack
 
       pa = solve_for_x('pa', pa).to_s(16)
       
@@ -299,7 +299,7 @@ class Character::Memgen < ActiveInteractor::Base
     end
 
     def serialize_ma!
-      ma = character.generic? ? character.job_data['ma'].to_i : character.magic
+      ma = character.generic? ? character.job_data['magic'].to_i : character.magic
 
       ma = solve_for_x('ma', ma).to_s(16)
       
