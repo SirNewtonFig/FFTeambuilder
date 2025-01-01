@@ -1,19 +1,5 @@
 #team-summary.text-gray-300.space-x-6.flex
-  .text-md
-    .text-xs Team Brave:
-    %div
-      %span{ class: ('text-red-400' if team.brave_total > 240) }
-        #{team.brave_total}
-      %span.text-gray-500 ≤ 240
-  
-  .text-md
-    .text-xs Team Faith:
-    %div
-      %span{ class: ('text-red-400' if team.faith_total < 220) }
-        #{team.faith_total}
-      %span.text-gray-500 ≥ 220
-  
-  .text-md
+  .text-md.pl-2
     .text-xs Team JP:
     %div
       %span{ class: ('text-red-400' if team.jp_total > 18000) }
