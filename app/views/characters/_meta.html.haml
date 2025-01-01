@@ -15,10 +15,10 @@
       .flex
         %div
           %label.mr-1{ for: 'brave' } Brave
-          %input#brave.bg-right.w-10.py-0.px-0.bg-transparent.border-0.border-b-2.border-transparent.hover:border-menu-dark.appearance-none.focus:outline-none.focus:ring-0.focus:border-menu-dark.peer{ type: 'number', max: 70, min: 40, name: 'character[brave]', value: char.brave.to_i, data: { action: 'change->form#submit' } }
+          %input#brave.bg-right.w-10.py-0.px-0.bg-transparent.border-0.border-b-2.border-transparent.hover:border-menu-dark.appearance-none.focus:outline-none.focus:ring-0.focus:border-menu-dark.peer{ type: 'number', max: 70, min: 30, name: 'character[brave]', value: char.brave.to_i, data: { action: 'change->form#submit' } }
         .ml-1
           %label.mr-1{ for: 'faith' } Faith
-          %input#faith.bg-right.w-10.py-0.px-0.bg-transparent.border-0.border-b-2.border-transparent.hover:border-menu-dark.appearance-none.focus:outline-none.focus:ring-0.focus:border-menu-dark.peer{ type: 'number', max: 70, min: 40, name: 'character[faith]', value: char.faith.to_i, data: { action: 'change->form#submit' } }
+          %input#faith.bg-right.w-10.py-0.px-0.bg-transparent.border-0.border-b-2.border-transparent.hover:border-menu-dark.appearance-none.focus:outline-none.focus:ring-0.focus:border-menu-dark.peer{ type: 'number', max: 70, min: 30, name: 'character[faith]', value: char.faith.to_i, data: { action: 'change->form#submit' } }
 
     .flex.items-center.justify-between
       = render 'characters/meta/zodiac', char: @char, i: i
