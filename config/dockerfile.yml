@@ -12,7 +12,7 @@ options:
   parallel: false
   platform:
   postgresql: true
-  prepare: true
+  prepare: false
   redis: false
   swap:
   yjit: false

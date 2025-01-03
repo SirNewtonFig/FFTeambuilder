@@ -1,22 +1,27 @@
-# fly.toml app configuration file generated for ffteambuilder on 2023-10-11T17:12:54-03:00
+# fly.toml app configuration file generated for ffteambuilder on 2025-01-03T09:17:45-04:00
 #
 # See https://fly.io/docs/reference/configuration/ for information about how to use this file.
 #
 
-app = "ffteambuilder"
-primary_region = "yyz"
-console_command = "/rails/bin/rails console"
+app = 'ffteambuilder'
+primary_region = 'yyz'
+console_command = '/rails/bin/rails console'
 
 [build]
 
 [http_service]
   internal_port = 3000
   force_https = true
-  auto_stop_machines = true
+  auto_stop_machines = 'stop'
   auto_start_machines = true
   min_machines_running = 1
-  processes = ["app"]
+  processes = ['app']
+
+[[vm]]
+  memory = '1gb'
+  cpu_kind = 'shared'
+  cpus = 1
 
 [[statics]]
-  guest_path = "/rails/public"
-  url_prefix = "/"
+  guest_path = '/rails/public'
+  url_prefix = '/'
