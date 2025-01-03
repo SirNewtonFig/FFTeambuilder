@@ -50,7 +50,7 @@ Battle Axe,Equip Axe,30,13,40,2-hands only,Sq Ch Ge,,,,,,,,,,Dauntless,,,,,,(BR 
 Golem Axe,Equip Axe,31,11,40,2-hands only,Sq Ch Ge,3,,,,,,,,,,,,,,,(BR / 5) * WP,,
 Tidal Axe,Equip Axe,32,13,40,2-hands only,Sq Ch Ge,,,,,,,,,,Rising Tide,,,,,,(BR / 5) * WP,Team Brave + 5,
 Rod,,33,12,20,2-swords 2-hands,Wi TM BM Su Sg,,1,-1,,,,,,,,,,,,,MA*WP,,
-Thunder Rod,,34,5,20,2-swords 2-hands,Wi TM BM Su Sg,,,,,,,,,Lightning,Chain Lightning,,,Lightning,,,PA*WP,Dmg_F(MA*16),
+Kaiser Rod,,34,5,20,2-swords 2-hands,Wi TM BM Su Sg,,,,,,,,,Lightning,Chain Lightning,,,Lightning,,,PA*WP,Dmg_F(MA*16),
 Flame Rod,,35,5,20,2-swords 2-hands,Wi TM BM Su Sg,,,,,,,,,Fire,Explosion,,,Fire,,,PA*WP,Dmg_F(MA*19),
 Water Rod,,36,5,20,2-swords 2-hands,Wi TM BM Su Sg,,,,,,,,,Water,Hydragon Pit,,,Water,,,PA*WP,Dmg_F(MA*18),
 Poison Rod,,37,8,20,2-swords 2-hands,Wi TM BM Su Sg,,,,,,Poison,,,,,,,,,,PA*WP,,
