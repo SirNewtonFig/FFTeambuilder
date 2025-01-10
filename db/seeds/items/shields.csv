@@ -17,5 +17,5 @@ Venetian Shield,8E,Sq Kn Ar Ge Ln Sb Pd,0,0,,,,,,,,,All Elements,,,,Equip Shield
 Escutcheon II,8F,Sq Kn Ar Ge Ln Sb Pd,0,0,,,,,,,,,,,,Stealth,Equip Shield,
 Battle Dict,5F,ALL,0,0,,,,,,,,,,,,,,Your attacks ignore both C-EV types
 Monster Dict,60,ALL,0,0,,,,,,,,,,,,,,25% chance for an ability that costs MP to cost 0
-Papyrus Plate,61,ALL,0,0,,,,,,,,,,,,,,"If you are at max hp, you survive lethal damage at 1 hp"
+Papyrus Plate,61,ALL,0,0,,,,,,,,,,,,,,"If you are at max hp, you survive lethal damage at 1 hp and this breaks"
 Madlemgen,62,ALL,0,0,,,,,,,,,,,,,,"Hit_() formulas increase by 8 after evasion, all damage dealt reduced by 1/8"

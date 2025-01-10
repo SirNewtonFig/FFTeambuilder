@@ -8,7 +8,7 @@ Squire,Wild Swing,200,100,0,1,Any,1,,,,Phys,,Dmg_((PA+2)/2*PA),Yes,,Yes,,,,Yes,,
 Squire,Target,400,200,Weapon,,Any,,,,,,,Dmg_(Weapon with -2 WP),Yes,,Yes,,,,Yes,,If barehanded,,Yes,Yes,
 Squire,Warn,100,100,0,2,Self,3,,,,,,Add: Protect/Shell with 4 clocktick duration(will not overwrite longer) and Defend Hit_(100)%,,,,,,,,,,,,,
 Squire,Yell,80,400,0,1,Self,0,,,,,,Add: Haste + Overload Hit_(100)%,,,,,,,,,,,,,
-Squire,R:Weapon Guard,01BF,0,,,,,,,,,,Activate weapon evasion %,,,,,,,,,,,,,
+Squire,E:Weapon Guard,01BF,0,,,,,,,,,,Activate weapon evasion % and 50% of W-EV vs back,,,,,,,,,,,,,
 Squire,R:Counter Throw,01B4,180,,,,,,,,,,Counter PA-based skills and knock back,,,,,,,Yes,,Yes,,,Yes,
 Squire,S:Equip Axe,01CC,150,,,,,,,,,,Can equip axe regardless of job,,,,,,,,,,,,,
 Squire,S:Move+1,01E6,200,,,,,,,,,,Add 1 to your move,,,,,1,,,,,,,,
@@ -34,7 +34,7 @@ Knight,Power Ruin,8000,200,3,,Any,,,,,,,-3 PA Hit_(PA+70)%,Yes,Yes,Yes,,,,Yes,,I
 Knight,Mind Ruin,4000,200,3,,Any,,,,,,,-3 MA Hit_(PA+70)%,Yes,Yes,Yes,,,,Yes,,If barehanded,Yes,,Yes,
 Knight,Speed Ruin,2000,200,3,,Any,,,,,,,Add: Slow Hit_(PA+70)%,Yes,Yes,Yes,,,,Yes,,,,,,
 Knight,Magic Ruin,1000,100,3,,Any,,,,,,,DmgMP_(50% max) Hit_(PA+70)%,Yes,Yes,Yes,,,,Yes,,If barehanded,Yes,,Yes,
-Knight,Inspire,800,800,0,2,Any,,,,,,,Add: Haste Hit_(100)%,,,,,,,,,,,,,
+Knight,Inspire,800,800,0,2,Any,,,,,,,Add: Haste Hit_(100)% useable once,,,,,,,,,,,,,
 Knight,Hellcry Punch,200,600,3,,Any,,,35,,,,Dmg_(PA*WP/2) Break Weapon ELSE miss (20% break failure rate) Requires Sword,Yes,,Yes,,,,Yes,,If barehanded,Yes,,Yes,
 Knight,Blastar Punch,400,200,3,,Any,,,35,,,,Dmg_(PA*WP/2) Break Helm ELSE miss (20% break failure rate) Requires Sword,Yes,,Yes,,,,Yes,,If barehanded,Yes,,Yes,
 Knight,Shellbust Stab,80,400,3,,Any,,,35,,,,Dmg_(PA*WP/2) Break Armor ELSE miss (20% break failure rate) Requires Sword,Yes,,Yes,,,,Yes,,If barehanded,Yes,,Yes,
@@ -46,20 +46,20 @@ Knight,S:Equip Sword,1C8,350,,,,,,,,,,Can equip sword and knight sword regardles
 Archer,Timed Strike,8000,100,Weapon,,,,3,,,Phys,,Dmg_(PA*(WP+4)),Yes,,Yes,,,,Yes,,If barehanded,Yes,Yes,Yes,
 Archer,Stunning Strike,4000,100,Weapon,,,,,,,,,"Cancel: Charging, Performing Hit_(Speed+75)% on hit: +25 CT(self)",Yes,,Yes,,,,Yes,,If barehanded,Yes,Yes,Yes,
 Archer,Cursed Strike,2000,200,Weapon,,,,,,,,,"Add: Poison, Discord, Sundown Hit_(Speed+80)%",Yes,,Yes,,,,Yes,,If barehanded,Yes,Yes,Yes,
-Archer,Mocking Strike,1000,250,Weapon,,,,,,,Mag,,Brave -20 Hit_(MA+75)%,Yes,,Yes,,,,,Yes,If barehanded,,Yes,,Yes
+Archer,Moderating Strike,1000,250,Weapon,,,,,,,Mag,,Brave becomes 50 Hit_(MA+75)%,Yes,,Yes,,,,,Yes,If barehanded,,Yes,,Yes
 Archer,Piercing Strike,800,400,Weapon,,,,2,,,Phys,,Cancel: Protect/Shell THEN Dmg_(Weapon),Yes,,Yes,,,,Yes,,If barehanded,Yes,Yes,Yes,
-Archer,Temporal Strike,400,400,Weapon,,,,,,,Mag,,Cancel: Haste Dmg_(66% max HP) Hit_F(MA+250)% Fails if target not hasted,Yes,,Yes,,,,,Yes,If barehanded,,Yes,,Yes
+Archer,Temporal Strike,400,400,Weapon,,,,,,,Mag,,Cancel: Haste Dmg_(66% max HP) Hit_U(MA+120)% Fails if target not hasted,Yes,,Yes,,,,,Yes,If barehanded,,Yes,,Yes
 Archer,Strixfeather Arrow,200,400,Weapon,,,,,,,Phys,,Cancel: Reraise Dmg_((PA+2)*(WP+2)) Fails if target not reraised,Yes,,Yes,,,,Yes,,If barehanded,Yes,Yes,Yes,
 Archer,R:CT Save,1A8,500,,,,,,,,,,Increase CT by 20 upon taking damage,,,,,,,,,,,,,
-Archer,R:Arrow Guard,1C4,200,,,,,,,,,,Raise evasion vs Arrows and Bullets by Brave%,,,,,,,,,,,,,
+Archer,R:Arrow Guard,1C4,200,,,,,,,,,,Raise evasion vs Arrows and Bullets by 100-Brave%,,,,,,,,,,,,,
 Archer,E:Concentrate,1D5,350,,,,,,,,,,Physical attacks and skills ignore evasion,,,,,,,,,,,,,
 Archer,E:Jump+2,1EA,500,,,,,,,,,,Add 2 to your jump,,,,,,2,,,,,,,
 Archer,S:Equip Bows,1CA,200,,,,,,,,,,Can equip bow or crossbow regardless of job,,,,,,,,,,,,,
 Archer,S:Sniper,1D0,1000,,,,,,,,,,+33% XA when using a bow weapon range attack (not crossbows) and not berserked,,,,,,,,,,,,,
 Monk,Spin Fist,8000,150,0,2,Any,,,,,Phys,,Dmg_((PA)/2*PA),Yes,,Yes,,,,Yes,,Yes,,,Yes,
-Monk,Repeating Fist,4000,250,1,,Any,0,,,,,,Dmg_((PA-2)/2*PA) 20% Add: Weaken,Yes,,Yes,,,,Yes,,Yes,,,Yes,
-Monk,Wave Fist,2000,250,3,,Any,3,,,,Phys,,Dmg_((PA-2)/2*PA) 20% Add: Sundown,Yes,,Yes,,,,Yes,,Yes,,,Yes,
-Monk,Earth Slash,1000,500,5,Linear,Any,2,,,,Phys,,Dmg_((PA+1)/2*PA) 20% Add: Fatigue,Yes,,Yes,,,,Yes,,Yes,,,Yes,
+Monk,Repeating Fist,4000,250,1,,Any,0,,,,,,Dmg_((PA-1)/2*PA) 30% Add: Weaken,Yes,,Yes,,,,Yes,,Yes,,,Yes,
+Monk,Wave Fist,2000,250,3,,Any,3,,,,Phys,,Dmg_((PA-1)/2*PA) 30% Add: Sundown,Yes,,Yes,,,,Yes,,Yes,,,Yes,
+Monk,Earth Slash,1000,500,5,Linear,Any,2,,,,Phys,,Dmg_((PA)/2*PA) 40% Add: Fatigue,Yes,,Yes,,,,Yes,,Yes,,,Yes,
 Monk,Secret Fist,800,300,1,,Any,0,,,,Phys,,Add: Death Sentence Hit_(MA+70)%,Yes,,Yes,,,,Yes,,Yes,,,Yes,
 Monk,Disharmony,400,400,1,,Any,,,,,,,Add: Discord Hit_(100)%,Yes,,Yes,,,,,,,,,,
 Monk,Stigma Magic,200,100,0,1,Any,,,,,,,Cancel: All negative status except Death Sentence Hit_(100)%,,,,,,,Yes,,Yes,,,,
@@ -70,65 +70,65 @@ Monk,R:Hamedo,1C5,250,,,,,,,,,,Cancel incoming weapon range attack with your own
 Monk,E:Martial Arts,1D8,600,,,,,,,,,,33% bonus PA to PA-based nonweapon skills and fist attacks (CLASS INNATE),,,,,,,,,,,,,
 Monk,S:Move-HP Up,1ED,270,,,,,,,,,,Recover HP as you move,,,,,,,,,,,,,
 Monk,S:Guts,1D6,400,,,,,,,,,,30% chance to survive lethal damage at 1 hp (reduces incoming damage),,,,,,,,,,,,,
-Priest,Cure,8000,50,4,1,Any,1,2,,Holy,,Yes,Heal_F(MA*20),,,,,,,,Yes,,,,,
+Priest,Cure,8000,50,4,1,Any,1,2,,Holy,,Yes,Heal_F(MA*8),,,,,,,,Yes,,,,,
 Priest,Holy Strike,4000,100,Weapon,,Any,,,12,Holy,Mag,,Dmg_(MA*WP) 20% Add: Confuse,Yes,Yes,Yes,,,,,Yes,,,Yes,,Yes
-Priest,Rejuvenate,2000,220,4,2,Any,2,4,24,Holy,,Yes,Heal_F(MA*35),,,,,,,,Yes,,,,,
-Priest,Flash Heal,1000,300,4,,Any,,,60,Holy,,Yes,Heal_F(MA*50),,,,,,,,Yes,,,,,
-Priest,Life,800,150,4,,Any,,,50,,,Yes,Revive 50% Hit_F(MA+255)%,,,,,,,,Yes,,,,,
-Priest,Full Life,400,400,4,,Any,,4,50,,,Yes,Revive 100% Hit_F(MA+190)%,,,,,,,,Yes,,,,,
-Priest,Reraise,200,400,3,,Any,,2,32,,,Yes,Add: Reraise Hit_F(MA+140)%,,,,,,,,Yes,,,,,
+Priest,Rejuvenate,2000,220,4,2,Any,2,4,24,Holy,,Yes,Heal_F(MA*12),,,,,,,,Yes,,,,,
+Priest,Flash Heal,1000,300,4,,Any,,,60,Holy,,Yes,Heal_F(MA*20),,,,,,,,Yes,,,,,
+Priest,Life,800,150,4,,Any,,,50,,,Yes,Revive 50% Hit_F(MA+95)%,,,,,,,,Yes,,,,,
+Priest,Full Life,400,400,4,,Any,,4,50,,,Yes,Revive 100% Hit_F(MA+80)%,,,,,,,,Yes,,,,,
+Priest,Reraise,200,400,3,,Any,,2,32,,,Yes,Add: Reraise Hit_F(MA+55)%,,,,,,,,Yes,,,,,
 Priest,Regen,100,250,3,1,Any,2,1,16,,,Yes,Heal_F(MA*10) 100% Add: Regen,,,,,,,,Yes,,,,,
-Priest,Protect,80,70,3,3,Any,1,,15,,,Yes,Add: Protect Hit_F(MA+240)%,,,,,,,,Yes,,,,,
-Priest,Shell,40,70,3,3,Any,1,,15,,,Yes,Add: Shell Hit_F(MA+240)%,,,,,,,,Yes,,,,,
-Priest,Wall,20,200,3,2,Any,,,50,,,Yes,Add: Protect+Shell Hit_F(MA+240)%,,,,,,,,Yes,,,,,
-Priest,Esuna,10,280,3,1,Any,2,3,28,,,Yes,Cancel: All negative status except Death Sentence and add: Sturdy Hit_F(MA+250)%,,,,,,,,Yes,,,,,
-Priest,Holy,8,200,5,,Any,,3,20,Holy,Mag,Yes,Dmg_F(MA*23),,Yes,Yes,,,,,Yes,,,,,Yes
+Priest,Protect,80,70,3,3,Any,1,,15,,,Yes,Add: Protect Hit_F(MA+85)%,,,,,,,,Yes,,,,,
+Priest,Shell,40,70,3,3,Any,1,,15,,,Yes,Add: Shell Hit_F(MA+85)%,,,,,,,,Yes,,,,,
+Priest,Wall,20,200,3,2,Any,,,50,,,Yes,Add: Protect+Shell Hit_F(MA+85)%,,,,,,,,Yes,,,,,
+Priest,Esuna,10,280,3,1,Any,2,3,28,,,Yes,Cancel: All negative status except Death Sentence and add: Sturdy Hit_F(MA+50)%,,,,,,,,Yes,,,,,
+Priest,Holy,8,200,5,,Any,,3,20,Holy,Mag,Yes,Dmg_U(MA*17),,Yes,Yes,,,,,Yes,,,,,Yes
 Priest,R:Regenerator,1AC,350,,,,,,,,,,Add: Regen on HP damage,,,,,,,,,,,,,
 Priest,S:Magic DefendUP,1D4,350,,,,,,,,,,Reduce magic damage received by 33%,,,,,,,,,,,,,
 Priest,CLASS INNATE: Priest,,,,,,,,,,,,Is immune to damage while charging spells,,,,,,,,,,,,,
-Wizard,Explosion,8000,50,5,,Any,,2,,Fire,Mag,Yes,Dmg_F(MA*19),,Yes,Yes,,,,,Yes,,,,,Yes
-Wizard,Chain Lightning,4000,150,7,Linear,Any,,,16,Lightning,Mag,Yes,Dmg_F(MA*20),,Yes,Yes,,,,,Yes,,,,,Yes
-Wizard,Cyclone,2000,200,5,4,Any,2,2,12,,Mag,Yes,Dmg_F(MA*24) 20% Add: Float,,Yes,Yes,,,,,Yes,,,,,Yes
-Wizard,Mjollnir,1000,280,5,,Any,,2,20,Lightning,Mag,Yes,Dmg_F(MA*28) 20% Add: Weaken,,Yes,Yes,,,,,Yes,,,,,Yes
-Wizard,Blizzard,800,400,4,2,Any,3,3,28,Water,Mag,Yes,Dmg_F(MA*32) 20% Add: Slow,,Yes,Yes,,,,,Yes,,,,,Yes
-Wizard,Comet,400,200,4,3,Any,2,4,38,Fire,Mag,Yes,Dmg_F(MA*36),,Yes,Yes,,,,,Yes,,,,,Yes
+Wizard,Explosion,8000,50,5,,Any,,2,,Fire,Mag,Yes,Dmg_U(MA*14),,Yes,Yes,,,,,Yes,,,,,Yes
+Wizard,Chain Lightning,4000,150,7,Linear,Any,,,16,Lightning,Mag,Yes,Dmg_U(MA*12),,Yes,Yes,,,,,Yes,,,,,Yes
+Wizard,Cyclone,2000,200,5,4,Any,2,2,12,,Mag,Yes,Dmg_U(MA*17) 20% Add: Float,,Yes,Yes,,,,,Yes,,,,,Yes
+Wizard,Mjollnir,1000,280,5,,Any,,2,20,Lightning,Mag,Yes,Dmg_U(MA*17) 20% Add: Weaken,,Yes,Yes,,,,,Yes,,,,,Yes
+Wizard,Blizzard,800,400,4,2,Any,3,3,28,Water,Mag,Yes,Dmg_U(MA*17) 20% Add: Slow,,Yes,Yes,,,,,Yes,,,,,Yes
+Wizard,Comet,400,200,4,3,Any,2,4,38,Fire,Mag,Yes,Dmg_U(MA*17),,Yes,Yes,,,,,Yes,,,,,Yes
 Wizard,Meltdown,200,280,0,2,Any,2,,32,,,Yes,Dmg_(Missing HP) Add: Dead to self,,Yes,Yes,No,,,,,,,,,
-Wizard,Dark Holy,80,600,5,,Any,,4,46,,Mag,Yes,Dmg_F(MA*40),,Yes,Yes,,,,,Yes,,,,,Yes
-Wizard,Flame Lance,40,400,5,,Any,,,60,Fire,Mag,Yes,Dmg_F(MA*35),,Yes,Yes,,,,,Yes,,,,,Yes
+Wizard,Dark Holy,80,600,5,,Any,,4,46,,Mag,Yes,Dmg_U(MA*21),,Yes,Yes,,,,,Yes,,,,,Yes
+Wizard,Flame Lance,40,400,5,,Any,,,60,Fire,Mag,Yes,Dmg_U(MA*21),,Yes,Yes,,,,,Yes,,,,,Yes
 Wizard,R:Counter Magic,1B3,400,,,,,,,,,,Cast the same spell just used on yourself,,,,,,,,,,,,,
 Wizard,E:Magic AttackUP,1D3,600,,,,,,,,,,Increases magic damage by 25%,,,,,,,,,,,,,
 Wizard,CLASS INNATE: Wizard,,,,,,,,,,,,Has Guts while charging spells,,,,,,,,,,,,,
-Time Mage,Haste,8000,80,3,1,Any,,1,,,,Yes,Add: Haste Hit_F(MA+180)%,,,,,,,,Yes,,,,,
-Time Mage,Haste 2,4000,500,3,2,Any,2,,40,,,Yes,Add: Haste Hit_F(MA+240)%,,,,,,,,Yes,,,,,
-Time Mage,Slow,2000,80,3,1,Any,,1,,,Mag,Yes,Add: Slow Hit_F(MA+180)%,,Yes,Yes,,,,,Yes,,,,,Yes
-Time Mage,Slow 2,1000,500,3,2,Any,2,2,25,,Mag,Yes,Add: Slow Hit_F(MA+240)%,,Yes,Yes,,,,,Yes,,,,,Yes
-Time Mage,Overload,800,300,3,1,Any,1,,30,,Mag,Yes,Add: Overload Hit_F(MA+150)%,,Yes,Yes,,,,,Yes,,,,,Yes
-Time Mage,Don't Move,400,80,3,1,Any,1,2,20,,Mag,Yes,Add: Don't Move Hit_F(MA+190)%,,Yes,Yes,,,,,Yes,,,,,Yes
-Time Mage,Reflect,100,250,4,,Any,,1,24,,,Yes,Add: Reflect Hit_F(MA+180)%,,,,,,,,Yes,,,,,
-Time Mage,Quick,80,800,4,,Any non-self,,,24,,,Yes,Set CT to 100 Hit_F(MA+110)%,,,,,,,,Yes,,,,,
-Time Mage,Demi,40,200,4,1,Any,1,2,8,,Mag,Yes,Dmg_(25% Max HP) Hit_F(MA+225)%,,Yes,Yes,,,,,Yes,,,,,Yes
-Time Mage,Demi 2,20,450,4,1,Any,1,3,12,,Mag,Yes,Dmg_(50% Max HP) Hit_F(MA+200)%,,Yes,Yes,,,,,Yes,,,,,Yes
-Time Mage,Gravity,10,300,4,2,Any,,,20,,Mag,Yes,Dmg_(33% Max HP) Hit_F(MA+200)%,,Yes,Yes,,,,,Yes,,,,,Yes
+Time Mage,Haste,8000,80,3,1,Any,,1,,,,Yes,Add: Haste Hit_F(MA+95)%,,,,,,,,Yes,,,,,
+Time Mage,Haste 2,4000,500,3,2,Any,2,,40,,,Yes,Add: Haste Hit_F(MA+80)%,,,,,,,,Yes,,,,,
+Time Mage,Slow,2000,80,3,1,Any,,1,,,Mag,Yes,Add: Slow Hit_U(MA+104)%,,Yes,Yes,,,,,Yes,,,,,Yes
+Time Mage,Slow 2,1000,500,3,2,Any,2,2,25,,Mag,Yes,Add: Slow Hit_U(MA+89)%,,Yes,Yes,,,,,Yes,,,,,Yes
+Time Mage,Overload,800,300,3,1,Any,1,,30,,Mag,Yes,Add: Overload Hit_U(MA+94)%,,Yes,Yes,,,,,Yes,,,,,Yes
+Time Mage,Don't Move,400,80,3,1,Any,1,2,20,,Mag,Yes,Add: Don't Move Hit_U(MA+89)%,,Yes,Yes,,,,,Yes,,,,,Yes
+Time Mage,Reflect,100,250,4,,Any,,1,24,,,Yes,Add: Reflect Hit_F(MA+85)%,,,,,,,,Yes,,,,,
+Time Mage,Quick,80,800,4,,Any non-self,,,24,,,Yes,Set CT to 100 Hit_F(MA+40)%,,,,,,,,Yes,,,,,
+Time Mage,Demi,40,200,4,1,Any,1,2,8,,Mag,Yes,Dmg_(25% Max HP) Hit_U(MA+109)%,,Yes,Yes,,,,,Yes,,,,,Yes
+Time Mage,Demi 2,20,450,4,1,Any,1,3,12,,Mag,Yes,Dmg_(50% Max HP) Hit_U(MA+94)%,,Yes,Yes,,,,,Yes,,,,,Yes
+Time Mage,Gravity,10,300,4,2,Any,,,20,,Mag,Yes,Dmg_(33% Max HP) Hit_U(MA+94)%,,Yes,Yes,,,,,Yes,,,,,Yes
 Time Mage,R:Critical Quick,1B1,700,,,,,,,,,,Set CT to 100 on becoming critical,,,,,,,,,,,,,
 Time Mage,E:Short Charge,1E2,1000,,,,,,,,,,Spell Charge Time cut by 50%,,,,,,,,,,,,,
 Time Mage,S:Teleport,1F2,500,,,,,,,,,,"Move Anywhere, ignoring height and obstacles. 10% chance to fail per space beyond your move",,,,,,,,,,,,,
 Time Mage,S:Float,1FA,0,,,,,,,,,,"Float 1H above ground, ignoring effects of terrain (float makes you immune to earth element)",,,,,,,,,,,,,
 Time Mage,CLASS INNATE: Time Mage,,,,,,,,,,,,Inflicts slow on attackers while charging spells,,,,,,,,,,,,,
-Summoner,Ifrit,1000,180,4,2,Enemies,2,2,,Fire,Mag,,Dmg_F(MA*24),,Yes,Yes,No,,,,Yes,,,,,Yes
-Summoner,Shiva,4000,180,4,2,Enemies,2,2,24,Water,Mag,,Dmg_F(MA*28) 20% Add: Slow,,Yes,Yes,No,,,,Yes,,,,,Yes
-Summoner,Ramuh,2000,180,4,2,Enemies,2,,24,Lightning,Mag,,Dmg_F(MA*33),,Yes,Yes,No,,,,Yes,,,,,Yes
-Summoner,Moogle,8000,80,4,2,Allies,2,2,20,,Mag,,Heal_F(MA*30),,,,No,,,,Yes,,,,,
-Summoner,Fairy,800,200,4,1,Allies,2,2,30,,,,Revive 33% Hit_F(MA+180)%,,,,No,,,,Yes,,,,,
-Summoner,Silf,400,200,4,2,Enemies,2,2,24,,Mag,,Dmg_F(MA*33) 20% Add: Float,,Yes,Yes,No,,,,Yes,,,,,Yes
-Summoner,Carbunkle,200,350,4,2,Allies,2,2,20,,,,Add: Reflect+Defend Hit_F(MA+255)%,,,,No,,,,Yes,,,,,
-Summoner,Titan,100,200,4,2,Enemies,2,3,30,,Mag,,Dmg_F(MA*37),,Yes,Yes,No,,,,Yes,,,,,Yes
-Summoner,Odin,80,200,4,3,Enemies,2,3,40,,Mag,,Dmg_F(MA*37),,Yes,Yes,No,,,,Yes,,,,,Yes
-Summoner,Salamander,40,200,4,2,Enemies,2,3,30,Fire,Mag,,Dmg_F(MA*42),,Yes,Yes,No,,,,Yes,,,,,Yes
-Summoner,Lich,20,200,4,2,Enemies,2,3,30,,Mag,,Dmg_F(MA*32) 20% Add: Dead,,Yes,Yes,No,,,,Yes,,,,,Yes
-Summoner,Leviathan,10,500,4,3,Enemies,3,3,40,Water,Mag,,Dmg_F(MA*40) 20% Add: Weaken,,Yes,Yes,No,,,,Yes,,,,,Yes
-Summoner,Bahamut,8,500,4,3,Enemies,3,3,40,,Mag,,Dmg_F(MA*45),,Yes,Yes,No,,,,Yes,,,,,Yes
-Summoner,Cyclops,4,600,4,2,Enemies,2,3,50,,Mag,,Dmg_F(MA*52),,Yes,Yes,No,,,,Yes,,,,,Yes
-Summoner,Zodiac,2,1000,4,3,Enemies,3,4,60,,Mag,,"Dmg_F(MA*45), always good compat",,Yes,Yes,No,,,,Yes,,,,,Yes
+Summoner,Ifrit,1000,180,4,2,Enemies,2,2,,Fire,Mag,,Dmg_U(MA*12),,Yes,Yes,No,,,,Yes,,,,,Yes
+Summoner,Shiva,4000,180,4,2,Enemies,2,2,24,Water,Mag,,Dmg_U(MA*15) 20% Add: Slow,,Yes,Yes,No,,,,Yes,,,,,Yes
+Summoner,Ramuh,2000,180,4,2,Enemies,2,,24,Lightning,Mag,,Dmg_U(MA*16),,Yes,Yes,No,,,,Yes,,,,,Yes
+Summoner,Moogle,8000,80,4,2,Allies,2,2,20,,Mag,,Heal_F(MA*11),,,,No,,,,Yes,,,,,
+Summoner,Fairy,800,200,4,1,Allies,2,2,30,,,,Revive 33% Hit_F(MA+75)%,,,,No,,,,Yes,,,,,
+Summoner,Silf,400,200,4,2,Enemies,2,2,24,,Mag,,Dmg_U(MA*17) 20% Add: Float,,Yes,Yes,No,,,,Yes,,,,,Yes
+Summoner,Carbunkle,200,350,4,2,Allies,2,2,20,,,,Add: Reflect+Defend Hit_F(MA+100)%,,,,No,,,,Yes,,,,,
+Summoner,Titan,100,200,4,2,Enemies,2,3,30,,Mag,,Dmg_U(MA*18),,Yes,Yes,No,,,,Yes,,,,,Yes
+Summoner,Odin,80,200,4,3,Enemies,2,3,40,,Mag,,Dmg_U(MA*18),,Yes,Yes,No,,,,Yes,,,,,Yes
+Summoner,Salamander,40,200,4,2,Enemies,2,3,30,Fire,Mag,,Dmg_U(MA*19),,Yes,Yes,No,,,,Yes,,,,,Yes
+Summoner,Lich,20,200,4,2,Enemies,2,3,30,,Mag,,Dmg_U(MA*18) 20% Add: Dead,,Yes,Yes,No,,,,Yes,,,,,Yes
+Summoner,Leviathan,10,500,4,3,Enemies,3,3,40,Water,Mag,,Dmg_U(MA*19) 20% Add: Weaken,,Yes,Yes,No,,,,Yes,,,,,Yes
+Summoner,Bahamut,8,500,4,3,Enemies,3,3,40,,Mag,,Dmg_U(MA*21),,Yes,Yes,No,,,,Yes,,,,,Yes
+Summoner,Cyclops,4,600,4,2,Enemies,2,3,50,,Mag,,Dmg_U(MA*21),,Yes,Yes,No,,,,Yes,,,,,Yes
+Summoner,Zodiac,2,1000,4,3,Enemies,3,4,60,,Mag,,"Dmg_U(MA*17), always good compat",,Yes,Yes,No,,,,Yes,,,,,Yes
 Summoner,R:MP Restore,1B0,400,,,,,,,,,,Restore all MP on becoming critical,,,,,,,,,,,,,
 Summoner,E:Half of MP,1CE,750,,,,,,,,,,MP Costs reduced by 50%,,,,,,,,,,,,,
 Summoner,CLASS INNATE: Summoner,,,,,,,,,,,,Inflicts damage = 9*MA to attackers while charging spells,,,,,,,,,,,,,
@@ -172,17 +172,17 @@ Mediator,Death Sentence,20,200,3,,Any,3,,,,,,Add: Death Sentence Hit_(3*MA+0)% +
 Mediator,Invitation,10,300,3,,Any,3,,,,,,Add: Confusion or Charm Hit_(3*MA+0)% +5% for each prior talk skill attempt on that unit,,,,,,,,,,,,,
 Mediator,R:Finger Guard,1C0,250,,,,,,,,,,Evade Talk Skills Brave%,,,,,,,,,,,,,
 Mediator,S:Monster Talk,1D9,100,,,,,,,,,,Talk Skills can affect monsters (CLASS INNATE),,,,,,,,,,,,,
-Oracle,Pray Faith,8000,150,4,,Any,,,16,,Mag,Yes,Add: Faith Hit_F(3*MA+122)%,,Yes,Yes,,,,,Yes,,,,,Yes
-Oracle,Doubt Faith,4000,150,4,,Any,,,16,,Mag,Yes,Add: Innocent Hit_F(3*MA+122)%,,Yes,Yes,,,,,Yes,,,,,Yes
-Oracle,Dispel Magic,2000,250,4,,Any,,2,40,,,,Cancel: All positive status Hit_F(MA+200)%,,Yes,Yes,,,,,Yes,,,,,Yes
-Oracle,Petrify,1000,300,4,,Any,,5,30,,Mag,Yes,Add: Petrify Hit_F(3*MA+102)%,,Yes,Yes,,,,,Yes,,,,,Yes
-Oracle,Necromorph,800,200,4,,Any,,4,20,,Mag,Yes,Add: Zombie+Frog Hit_F(3*MA+106)%,,Yes,Yes,,,,,Yes,,,,,Yes
-Oracle,Blind Rage,400,200,4,,Any,,3,24,,Mag,Yes,Add: Berserk+Confuse Hit_F(3*MA+122)%,,Yes,Yes,,,,,Yes,,,,,Yes
-Oracle,Feeblemind,200,200,4,,Any,,3,30,,Mag,Yes,Add: Don't Act+Overload Hit_F(3*MA+167)%,,Yes,Yes,,,,,Yes,,,,,Yes
-Oracle,Entropy,100,300,4,,Any,,3,24,,Mag,Yes,Add: Sundown+Weaken Hit_F(3*MA+150)%,,Yes,Yes,,,,,Yes,,,,,Yes
-Oracle,Quagmire,80,400,4,,Any,,3,24,,Mag,Yes,Add: Don't Move+Poison Hit_F(3*MA+160)%,,Yes,Yes,,,,,Yes,,,,,Yes
-Oracle,Enervate,40,80,4,,Any,,,12,,,Yes,Add: Fatigue+Discord Hit_F(3*MA+250)%,,Yes,Yes,,,,,Yes,,,,,Yes
-Oracle,Delirium,20,800,4,,Any,,4,30,,Mag,Yes,Add: Confuse+Death Sentence Hit_F(3*MA+112),,,,,,,,,,,,,
+Oracle,Pray Faith,8000,150,4,,Any,,,16,,Mag,Yes,Add: Faith Hit_U(3*MA+95)%,,Yes,Yes,,,,,Yes,,,,,Yes
+Oracle,Doubt Faith,4000,150,4,,Any,,,16,,Mag,Yes,Add: Innocent Hit_U(3*MA+95)%,,Yes,Yes,,,,,Yes,,,,,Yes
+Oracle,Dispel Magic,2000,250,4,,Any,,2,40,,,,Cancel: All positive status Hit_U(MA+100)%,,Yes,Yes,,,,,Yes,,,,,Yes
+Oracle,Petrify,1000,300,4,,Any,,5,30,,Mag,Yes,Add: Petrify Hit_U(3*MA+35)%,,Yes,Yes,,,,,Yes,,,,,Yes
+Oracle,Necromorph,800,200,4,,Any,,4,20,,Mag,Yes,Add: Zombie+Frog Hit_U(3*MA+40)%,,Yes,Yes,,,,,Yes,,,,,Yes
+Oracle,Blind Rage,400,200,4,,Any,,3,24,,Mag,Yes,Add: Berserk+Confuse Hit_U(3*MA+25)%,,Yes,Yes,,,,,Yes,,,,,Yes
+Oracle,Feeblemind,200,200,4,,Any,,3,30,,Mag,Yes,Add: Don't Act+Overload Hit_U(3*MA+40)%,,Yes,Yes,,,,,Yes,,,,,Yes
+Oracle,Entropy,100,300,4,,Any,,3,24,,Mag,Yes,Add: Sundown+Weaken Hit_U(3*MA+60)%,,Yes,Yes,,,,,Yes,,,,,Yes
+Oracle,Quagmire,80,400,4,,Any,,3,24,,Mag,Yes,Add: Don't Move+Poison Hit_U(3*MA+65)%,,Yes,Yes,,,,,Yes,,,,,Yes
+Oracle,Enervate,40,80,4,,Any,,,12,,,Yes,Add: Fatigue+Discord Hit_U(3*MA+145)%,,Yes,Yes,,,,,Yes,,,,,Yes
+Oracle,Delirium,20,800,4,,Any,,4,30,,Mag,Yes,Add: Confuse+Death Sentence Hit_U(3*MA+40),,,,,,,,,,,,,
 Oracle,R:Barrier,1AD,700,,,,,,,,,,Add Protect and Shell on Physical attack or skill,,,,,,,,,,,,,
 Oracle,R:Absorb Used MP,1B6,200,,,,,,,,,,Gain MP equal to the cost of a spell or skill used on you,,,,,,,,,,,,,
 Oracle,E:Defense UP,1D2,350,,,,,,,,,,Reduce physical damage by 33%,,,,,,,,,,,,,
@@ -200,7 +200,7 @@ Geomancer,Snowstorm,40,50,4,1,Any,,,,Water,,,Dmg_(((PA+2)/2)*MA) 20% Don't Act,,
 Geomancer,Gusty Wind,20,50,4,1,Any,,,,Lightning,,,Dmg_(((PA+2)/2)*MA) 20% Weaken,,Yes,Yes,,,,,Yes,,,,,Yes
 Geomancer,Lava Ball,10,50,4,1,Any,,,,Fire,,,Dmg_(((PA+7)/2)*MA) 20% Sundown,,Yes,Yes,,,,,Yes,,,,,Yes
 Geomancer,R:Counter Flood,1B5,600,,,,,,,,,,"Counter with Geomancy, regardless of if skill is learned",,,,,,,,,,,,,
-Geomancer,E:Lucky,1DF,1500,,,,,,,,,,Doubles all proc rates,,,,,,,,,,,,,
+Geomancer,E:Lucky,1DF,1500,,,,,,,,,,Your Brave is considered 70 for the purposes of procs/crits,,,,,,,,,,,,,
 Geomancer,S:Move on Lava,1F8,150,,,,,,,,,,Able to walk on lava panels (CLASS INNATE),,,,,,,,,,,,,
 Lancer,Range 4,8000,50,4,,Any,,RU(50/Speed),,,,,Dmg_(PA*WP). If using Spear: Dmg_((PA*Jmp/3)*WP) instead,Yes,,Yes,,,,,,,,,Yes,
 Lancer,Range 5,4000,200,5,,Any,,RU(50/Speed),,,,,Dmg_(PA*WP). If using Spear: Dmg_((PA*Jmp/3)*WP) instead,Yes,,Yes,,,,,,,,,Yes,
@@ -214,12 +214,12 @@ Lancer,E:Attack UP,1D1,600,,,,,,,,,,Increase physical damage by 33%,,,,,,,,,,,,,
 Lancer,S:Equip Spear,1CB,350,,,,,,,,,,Can equip spear regardless of job,,,,,,,,,,,,,
 Lancer,S:Ignore Height,1EC,500,,,,,,,,,,"Jump to any panel, regardless of height value",,,,,,,,,,,,,
 Samurai,Asura,8000,250,0,2,Any,2,,,Fire,,,Dmg_(PA*11) 75% chance to break,,,Yes,,,,Yes,,,,,Yes,
-Samurai,Koutetsu,4000,250,0,2,Any,2,,,Dark,,,Dmg_(PA*8) 25% chance to break,,,Yes,,,,Yes,,,,,Yes,
+Samurai,Koutetsu,4000,250,0,2,Any,2,,,Dark,,,Dmg_(PA*9) 25% chance to break,,,Yes,,,,Yes,,,,,Yes,
 Samurai,Bizen Boat,2000,200,0,2,Any,2,,,,,,Dmg_MP(PA*12) 25% chance to break,,,Yes,,,,Yes,,,,,Yes,
 Samurai,Murasame,1000,300,0,2,Any,2,,,,,,HealMP_(PA*2) 50% chance to break,,,,,,,,,,,,,
 Samurai,Heaven's Cloud,800,250,0,2,Any,2,,,Water,,,Dmg_(PA*6) cancel: reraise 33% chance to break,,,Yes,,,,Yes,,,,,Yes,
 Samurai,Kiyomori,400,100,0,2,Any,2,,,,,,"Add: Protect and Shell Hit_(100)% always breaks, one per battle",,,,,,,,,,,,,
-Samurai,Muramasa,200,500,0,2,Any,2,,,,,,Dmg_(PA*9) 20% Add: Death Sentence or Confuse 67% chance to break,,,Yes,,,,Yes,,,,,Yes,
+Samurai,Muramasa,200,500,0,2,Any,2,,,,,,Dmg_(PA*8) 25% Add: Death Sentence or Confuse 67% chance to break,,,Yes,,,,Yes,,,,,Yes,
 Samurai,Kikuichimonji,100,200,5,2,Any,2,,,,,,Dmg_(PA*9) Linear 50% chance to break,,,Yes,,,,Yes,,,,,Yes,
 Samurai,Masamune,80,300,0,1,Any,2,,,,,,Hit_(100)% Add: Haste 25% chance to break,,,,,,,Yes,,,,,Yes,
 Samurai,Chirijiraden,40,600,0,2,Any,3,,,,,,Dmg_(PA*17) also hits self; always breaks,,,Yes,,,,Yes,,,,,Yes,
@@ -232,16 +232,16 @@ Ninja,R:Sunken State,1A9,200,,,,,,,,,,Add: Transparent on damage,,,,,,,,,,,,,
 Ninja,E:Abandon,1C1,800,,,,,,,,,,Doubles all evasion attributes,,,,,,,,,,,,,
 Ninja,E:Two Swords,1DD,900,,,,,,,,,,Can equip one weapon in each hand,,,,,,,,,,,,,
 Ninja,S:Move+3,1E8,900,,,,,,,,,,Add 3 to your move,,,,,3,,,,,,,,
-Sage,Zombie 2,8000,300,4,2,Any,2,4,30,,Mag,,Add: Zombie Hit_F(MA+200)%,,Yes,Yes,No,,,,Yes,,,,,Yes
-Sage,Sleep 2,4000,300,4,2,Any,2,,20,,Mag,,Add: Fatigue Hit_F(MA+160)%,,Yes,Yes,No,,,,Yes,,,,,Yes
-Sage,Confuse 2,2000,300,4,2,Any,2,5,30,,Mag,,Add: Confusion Hit_F(MA+125)%,,Yes,Yes,No,,,,Yes,,,,,Yes
-Sage,Frog 2,1000,400,4,2,Any,2,6,30,,Mag,,Add: Frog Hit_F(MA+110)%,,Yes,Yes,No,,,,Yes,,,,,Yes
-Sage,Gravi 2,800,600,4,2,Any,2,4,30,,Mag,,Dmg_(66% Max HP) Hit_F(MA+175)%,,Yes,Yes,No,,,,Yes,,,,,Yes
-Sage,Flare 2,400,600,4,2,Any,3,4,70,,,,Dmg_F(MA*44),,Yes,Yes,No,,,,Yes,,,,,Yes
-Sage,Dispel 2,200,100,4,2,Any,3,4,,,,,Cancel: All positive status Hit_F(MA+200)%,,Yes,Yes,,,,,Yes,,,,,Yes
-Sage,Esuna 2,100,200,4,2,Any,2,3,,,,,Cancel: All negative status and add: Sturdy Hit_F(MA+200)%,,,,,,,,Yes,,,,,
-Sage,Supercharge 2,80,300,4,2,Any,3,3,20,,,,Add: Overload Hit_F(MA+255)%,,,,,,,,Yes,,,,,
-Sage,Mbarrier,40,500,4,,Any,3,4,40,,,,Add: Reraise+Haste+Shell+Protect+Regen Hit_F(MA+125)%,,,,,,,,Yes,,,,,
+Sage,Zombie 2,8000,300,4,2,Any,2,4,30,,Mag,,Add: Zombie Hit_U(MA+94)%,,Yes,Yes,No,,,,Yes,,,,,Yes
+Sage,Sleep 2,4000,300,4,2,Any,2,,20,,Mag,,Add: Fatigue Hit_U(MA+74)%,,Yes,Yes,No,,,,Yes,,,,,Yes
+Sage,Confuse 2,2000,300,4,2,Any,2,5,30,,Mag,,Add: Confusion Hit_U(MA+59)%,,Yes,Yes,No,,,,Yes,,,,,Yes
+Sage,Frog 2,1000,400,4,2,Any,2,6,30,,Mag,,Add: Frog Hit_U(MA+49)%,,Yes,Yes,No,,,,Yes,,,,,Yes
+Sage,Gravi 2,800,600,4,2,Any,2,4,30,,Mag,,Dmg_(66% Max HP) Hit_U(MA+84)%,,Yes,Yes,No,,,,Yes,,,,,Yes
+Sage,Flare 2,400,600,4,2,Any,3,4,70,,,,Dmg_U(MA*21),,Yes,Yes,No,,,,Yes,,,,,Yes
+Sage,Dispel 2,200,100,4,2,Any,3,4,,,,,Cancel: All positive status Hit_U(MA+109)%,,Yes,Yes,,,,,Yes,,,,,Yes
+Sage,Esuna 2,100,200,4,2,Any,2,3,,,,,Cancel: All negative status and add: Sturdy Hit_F(MA+60)%,,,,,,,,Yes,,,,,
+Sage,Supercharge 2,80,300,4,2,Any,3,3,20,,,,Add: Overload Hit_U(MA+109)%,,,,,,,,Yes,,,,,
+Sage,Mbarrier,40,500,4,,Any,3,4,40,,,,Add: Reraise+Haste+Shell+Protect+Regen Hit_F(MA+45)%,,,,,,,,Yes,,,,,
 Sage,R:Distribute,1BC,150,,,,,,,,,,Excess healing from others to this split among non-full team members,,,,,,,,,,,,,
 Sage,CLASS INNATE: Sage,,,,,,,,,,,,Regenerates CT while charging spells,,,,,,,,,,,,,
 Bard,Angel Song,8000,100,ALL,ALL,Allies,ALL,4,,,,,Heal_(MA+30) MP,,,,,,,,,,,,,
@@ -251,7 +251,7 @@ Bard,Magic Song,800,100,ALL,ALL,Allies,ALL,5,,,,,Add: 1 MA Hit_(60)%,,,,,,,,,,,,
 Bard,Encouraging Song,400,100,ALL,ALL,Allies,ALL,7,,,,,Add: Stealth or Regen or Haste with no duration Hit_(80)% Selects from unapplied status,,,,,,,,,,,,,
 Bard,Vigilant Song,200,100,ALL,ALL,Allies,ALL,7,,,,,Add: Protect or Shell or Reraise with no duration Hit_(80)% Selects from unapplied status,,,,,,,,,,,,,
 Bard,Last Song,100,100,ALL,ALL,Allies,ALL,8,,,,,Set CT to 100 Hit_(45)%,,,,,,,,,,,,,
-Bard,R:MA Save,1A7,550,,,,,,,,,,Gain 1 MA on HP Damage,,,,,,,,,,,,,
+Bard,R:MA Save,1A7,550,,,,,,,,,,Gain 2 MA on HP Damage,,,,,,,,,,,,,
 Bard,E:Move-MP Up,1EE,350,,,,,,,,,,Recover MP as you move,,,,,,,,,,,,,
 Bard,S:Fly,1FB,600,,,,,,,,,,"Fly over units, obstacles, and ignore height when moving",,,,,,,,,,,,,
 Dancer,Witch Hunt,8000,100,ALL,ALL,Enemies,ALL,4,,,,,DmgMP_(PA+10),,,,,,,,,,,,,
@@ -260,8 +260,8 @@ Dancer,Polka Polka,1000,100,ALL,ALL,Enemies,ALL,5,,,,,-1 PA Hit_(60)%,,,,,,,,,,,
 Dancer,Disillusion,800,100,ALL,ALL,Enemies,ALL,5,,,,,-1 MA Hit_(60)%,,,,,,,,,,,,,
 Dancer,Nameless Dance,400,100,ALL,ALL,Enemies,ALL,7,,,,,Add: Don't Move or Confusion or Poison or Discord Hit_(60)%,,,,,,,,,,,,,
 Dancer,Enervating Dance,200,100,ALL,ALL,Enemies,ALL,7,,,,,Add: Weaken or Fatigue or Sundown or Slow Hit_(60)%,,,,,,,,,,,,,
-Dancer,Terrifying Dance,100,100,ALL,ALL,Enemies,ALL,6,,,,,-7 Brave Hit_(40)%,,,,,,,,,,,,,
-Dancer,R:PA Save,1A6,550,,,,,,,,,,Gain 1 PA on HP Damage,,,,,,,,,,,,,
+Dancer,Terrifying Dance,100,100,ALL,ALL,Enemies,ALL,6,,,,,Brave moves 7 towards 50 Hit_(40)%,,,,,,,,,,,,,
+Dancer,R:PA Save,1A6,550,,,,,,,,,,Gain 2 PA on HP Damage,,,,,,,,,,,,,
 Dancer,R:MP Switch,1BD,350,,,,,,,,,,Take all damage from an attack to your MP instead of HP if you have more than 0 MP,,,,,,,,,,,,,
 Dancer,S:Fly,1FB,600,,,,,,,,,,"Fly over units, obstacles, and ignore height when moving",,,,,,,,,,,,,
 Spellblade,Stasis Sword,8000,400,3,1,Any,,,12,Weapon,Phys,,Dmg_((PA-2)*(WP+2)) 20% Add: Don't Act Requires Sword,,,Yes,,,,Yes,,If barehanded,Yes,,Yes,
@@ -272,7 +272,7 @@ Spellblade,Ignition Slash,800,500,3,,Any,3,,20,Weapon,Phys,,Dmg_((PA+2)*(WP+2)) 
 Spellblade,Night Sword,400,800,3,,Any,,,26,Weapon,Phys,,AbsorbHP_((PA-2)*(WP+2)) Requires Sword,,,Yes,,,,Yes,,If barehanded,Yes,,Yes,
 Spellblade,Dark Sword,200,800,3,,Any,,,17,Weapon,Phys,,AbsorbMP_((PA-2)*(WP+2))/4 Requires Sword,,,Yes,,,,Yes,,If barehanded,Yes,,Yes,
 Spellblade,Disrupt,100,300,Weapon,,Any,,,,,,,Add: Discord Hit_(100)%,,,,,,,,,,,Yes,,
-Spellblade,E: Lionheart,1E4,200,,,,,,,,,,Your Brave is considered 110 for the purposes of formulas (but not reactions),,,,,,,,,,,,,
+Spellblade,E: Lionheart,1E4,200,,,,,,,,,,Your Brave is considered 70 for the purposes of everything but reactions,,,,,,,,,,,,,
 Paladin,Consecrate,8000,300,0,2,Enemies,3,,,Holy,,,Dmg_P(PA*16),,,Yes,,,,Yes,,,,,Yes,
 Paladin,Holy Explosion,4000,800,5,Linear,Any,2,,20,Weapon,Phys,,Dmg_((PA-2)*(WP+2)) Requires Sword,,,Yes,,,,Yes,,If barehanded,Yes,,Yes,
 Paladin,Shine,2000,400,2,2,Any,,,,Holy,Phys,,Dmg_((Faith/2)*5) 20% Add: Sundown (No XA modifiers),,,Yes,,,,,,,,,Yes,
@@ -282,29 +282,29 @@ Paladin,Sanctuary,400,200,1,2,Allies,,,,Holy,,,Add: Protect and Shell Hit_(100)%
 Paladin,Devotion,200,500,1,,Allies,,,10,Holy,,,"Add: Reraise, Regen, and Stealth Hit_F(PA+100)",,,,,,,,,,,,,
 Paladin,Redemption,100,500,1,,Allies,,,20,Holy,,,Cancel: Dead (25% HP) Hit_(Faith)% ignores zodiac,,,,,,,,,,,,,
 Paladin,R:Pray,1AE,800,,,,,,,,,,Faith +5 on HP Damage,,,,,,,,,,,,,
-Paladin,S:Piety,1F7,300,,,,,,,,,,Use Faith instead of Brave for reaction % (ignores Faith and Innocent status) (CLASS INNATE),,,,,,,,,,,,,
-Warlock,Toxic Shock,8000,200,4,,Any,,,25,,Mag,Yes,Hit_F((5*MA)+100)% Add: Toxic,,Yes,Yes,,,,,Yes,,,,,Yes
+Paladin,S:Piety,1F7,300,,,,,,,,,,Use Faith instead of 100-Brave for reaction % (ignores Faith and Innocent status) (CLASS INNATE),,,,,,,,,,,,,
+Warlock,Toxic Shock,8000,200,4,,Any,,,25,,Mag,Yes,Hit_U((4*MA)+35)% Add: Toxic,,Yes,Yes,,,,,Yes,,,,,Yes
 Warlock,Curse of Indolence,4000,200,4,,Any,,2,20,,,Yes,Hit_(100)% Add: Sloth,,Yes,Yes,,,,,Yes,,,,,Yes
-Warlock,Curse of Fragility,2000,300,4,,Any,,3,12,,Mag,Yes,Hit_F((5*MA)+100)% Add: Fragile,,Yes,Yes,,,,,Yes,,,,,Yes
-Warlock,Curse of Weakness,1000,300,4,,Any,,2,30,,Mag,Yes,Hit_F((5*MA)+100)% Add: Weaken or upgrade existing Weaken to Cripple and reset duration,,Yes,Yes,,,,,Yes,,,,,Yes
-Warlock,Curse of Exhaustion,800,300,4,,Any,,3,40,,Mag,Yes,Hit_F((5*MA)+100)% Add: Fatigue or upgrade existing Fatigue to Exhaustion and reset duration,,Yes,Yes,,,,,Yes,,,,,Yes
+Warlock,Curse of Fragility,2000,300,4,,Any,,3,12,,Mag,Yes,Hit_U((4*MA)+34)% Add: Fragile,,Yes,Yes,,,,,Yes,,,,,Yes
+Warlock,Curse of Weakness,1000,300,4,,Any,,2,30,,Mag,Yes,Hit_U((4*MA)+34)% Add: Weaken or upgrade existing Weaken to Cripple and reset duration,,Yes,Yes,,,,,Yes,,,,,Yes
+Warlock,Curse of Exhaustion,800,300,4,,Any,,3,40,,Mag,Yes,Hit_U((4*MA)+34)% Add: Fatigue or upgrade existing Fatigue to Exhaustion and reset duration,,Yes,Yes,,,,,Yes,,,,,Yes
 Warlock,Plague Nova,400,500,4,2,Enemies,,,50,,,,Hit_(100)% reset all negative durations on target and spread them to all enemies in the AoE,,Yes,Yes,,,,,,,,,,
-Warlock,Corruption,200,750,4,,Any,,4,50,Dark,Mag,Yes,Dmg_(MA*5*number of positive effects) and dispel all positive effects,,Yes,Yes,,,,,Yes,,,,,Yes
+Warlock,Corruption,200,750,4,,Any,,4,50,Dark,Mag,Yes,Dmg_(MA*4*number of positive effects) and dispel all positive effects,,Yes,Yes,,,,,Yes,,,,,Yes
 Warlock,Steal Weave,100,1000,4,,Any,,,50,,Mag,Yes,Dispel all positive status from target and add them to yourself,,,Yes,,,,,,,,,,
 Warlock,Expel,80,300,4,,Any,,3,,,Mag,Yes,"Inflict all negative status you have on target, then cancel them from yourself",,,Yes,No,,,,,,,,,
 Warlock,E: Affliction,1E5,750,,,,,,,,,,Negative status effects you inflict last twice as long,,,,,,,,,,,,,
 Warlock,S: Long Status,1EF,300,,,,,,,,,,Status effects last twice as long on you,,,,,,,,,,,,,
 Warlock,S: Short Status,1F0,300,,,,,,,,,,Status effects last half as long on you,,,,,,,,,,,,,
 Warlock,CLASS INNATE: Warlock,,,,,,,,,,,,Inflicts a random status effect on attackers while charging spells,,,,,,,,,,,,,
-Blood Mage,Bleed Power,8000,100,4,,Any,,2,2,,Mag,Yes,Leech 33% target max MP Hit_F(MA+255)%,,Yes,Yes,,,,,Yes,,,,,Yes
-Blood Mage,Drain Life,4000,100,4,,Any,,2,25,,Mag,Yes,Leech 33% target max HP Hit_F(MA+255)%,,Yes,Yes,,,,,Yes,,,,,Yes
-Blood Mage,Sanguine Aura,2000,400,Self,2,Enemies,,,,,,,Dmg_(MA*10) Dmg_Self(MA*5),,Yes,Yes,,,,,Yes,,,,,Yes
-Blood Mage,Blood Ritual,1000,500,4,,Any,,,30,Dark,Mag,,Dmg_(MA*14) if hit: DmgSelf_(MA*7),,Yes,Yes,,,,,Yes,,,,,Yes
+Blood Mage,Bleed Power,8000,100,4,,Any,,2,2,,Mag,Yes,Leech 33% target max MP Hit_U(MA+100)%,,Yes,Yes,,,,,Yes,,,,,Yes
+Blood Mage,Drain Life,4000,100,4,,Any,,2,25,,Mag,Yes,Leech 33% target max HP Hit_U(MA+100)%,,Yes,Yes,,,,,Yes,,,,,Yes
+Blood Mage,Sanguine Aura,2000,400,Self,2,Enemies,,,,,,,Dmg_(MA*14) Dmg_Self(MA*7),,Yes,Yes,,,,,Yes,,,,,Yes
+Blood Mage,Blood Ritual,1000,500,4,,Any,,,30,Dark,Mag,,Dmg_(MA*18) if hit: DmgSelf_(MA*9),,Yes,Yes,,,,,Yes,,,,,Yes
 Blood Mage,Imbue,800,100,Self,2,Any,1,,25,,,,Adds each status you currently have to others (Haste/Protect/Shell/Regen) DmgSelf_(25% MaxHP),,,,,,,,,,,,,
-Blood Mage,Resuscitate ,400,300,4,1,Allies,,,75,,,,Revive 50% Hit_F(MA+255)% DmgSelf(MA*4),,,,,,,,Yes,,,,,Yes
-Blood Mage,Anemia,200,300,4,,Any,,2,20,,Mag,Yes,Hit_(MA+255%) Add: Exhaustion DmgSelf(MA*10),,Yes,Yes,,,,,Yes,,,,,Yes
-Blood Mage,Boil,100,600,Self,2,Any,,,30,,Mag,Yes,Dmg_(MA*17) also hits self,,Yes,Yes,,,,,,,,,,
+Blood Mage,Resuscitate ,400,300,4,1,Allies,,,75,,,,Revive 50% Hit_F(MA+80)% DmgSelf(MA*4),,,,,,,,Yes,,,,,Yes
+Blood Mage,Anemia,200,300,4,,Any,,2,20,,Mag,Yes,Hit_(MA+100%) Add: Exhaustion DmgSelf(MA*10),,Yes,Yes,,,,,Yes,,,,,Yes
+Blood Mage,Boil,100,600,Self,2,Any,,,30,,Mag,Yes,Dmg_(MA*22) also hits self,,Yes,Yes,,,,,,,,,,
 Blood Mage,Consume,80,500,Self,2,Enemies,,,,,,,Hit_(100)% Dmg_(TarMaxHP) HealSelf_(MaxHP) Misses if target not Near Fatal,,,,,,,,,,,,,
 Blood Mage,R:Damage Split,1BE,2000,,,,,,,,,,Return 50% of damage received and heal the same amount,,,,,,,,,,,,,
-Blood Mage,E: Ritual,1DE,250,,,,,,,,,,Can use HP to replace missing MP to cast spells (CLASS INNATE),,,,,,,,,,,,,
+Blood Mage,E: Ritual,1DE,250,,,,,,,,,,Can use HP to replace missing MP to cast damaging and debuffing spells (CLASS INNATE),,,,,,,,,,,,,
 Blood Mage,CLASS INNATE: Blood Mage,,,,,,,,,,,,Damage taken while charging spells drains MP before HP,,,,,,,,,,,,,

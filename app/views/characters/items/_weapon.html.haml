@@ -35,10 +35,16 @@
   - if item.data['proc'].present?
     .text-left
       %span.text-red-900.capitalize Proc Effect:
-      %span.ml-2
+      %span.ml-1
         = item.data['proc']
         - if item.data['proc_formula'].present?
           (#{item.data['proc_formula']})
+
+  - if item.data['proc_rate'].present?
+    .text-left
+      %span.text-red-900.capitalize Proc Rate:
+      %span.ml-1
+        = item.data['proc_rate']
 
   .flex.space-x-4.flex-wrap
     - if item.data['flags'].present?

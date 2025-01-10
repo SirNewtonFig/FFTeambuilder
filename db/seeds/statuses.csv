@@ -1,7 +1,6 @@
 Status,Description,Duration,Indicator,Default Priority
 Berserk,"+50% damage(XA), always approach an enemy and attack",,Red tint,-39
 Charm,You attack your teammates and assist your enemies,20 ticks,Heart in bubble over head,-64
-Chicken,Run away and regain 1 brave on turn. Ends at 10 brave,,You're a chicken,-26
 Confusion,Forget which team you're on and do random things,,?' bubble over head,-64
 Crystal,Restores HP/MP of unit that picks it up,Permanent,Crystal,-192
 Dead,Countdown until they become a crystal,4 turns (3->0),Facedown,-192
@@ -17,7 +16,7 @@ Frog,All you can do is a weak attack or cast frog. Ends on death.,,You're a frog
 Haste,Gain 50% extra CT per clocktick,20 ticks,Idle move is faster,19
 Innocent,Your faith counts as 0 in calculations,24 ticks,Down arrow in bubble over head,-7
 Near Fatal,Run away and try to heal if you can. Buff if you cannot,,Crouching,-32
-Overload,"Your next action does 50% more damage, but harms you for 25% max hp",60 ticks,No visible indication,-7
+Overload,"Your next action does 25% more damage, but harms you for 25% max hp",60 ticks,No visible indication,-7
 Petrify,"No CT gain, takes no damage, considered dead",,"Stone color, stationary",-116
 Poison,Deals damage to the unit at the end of its turn,,Green tint,-26
 Protect,Take 33% less physical damage(XA reduction),32 ticks,Triangle in bubble over head,25

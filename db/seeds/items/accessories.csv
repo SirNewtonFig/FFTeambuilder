@@ -1,9 +1,9 @@
 Name,Item ID,Classes,Phys Evade,Magic Evade,PA,MA,Speed,Move,Jump,Immune:,Absorbs:,Weak:,Halves:,Strengthens:,Start:,Always:
 Battle Boots,D0,ALL,,,1,,,1,,Weaken,,,,,,
 Spike Shoes,D1,ALL,,,1,,,1,2,,,,,,,
-Germinas Boots,D2,ALL,,,,,,2,1,Don't Act / Slow / Don't Move,,,,,,
-Rubber Shoes,D3,ALL,,,,,,2,,Don't Move / Berserk / Weaken,,,,,,
-Feather Boots,D4,ALL,,,,,,3,,,,,,,,Float
+Germinas Boots,D2,ALL,,,,,,1,1,Don't Act / Slow / Don't Move,,,,,,
+Rubber Shoes,D3,ALL,,,,,,1,,Don't Move / Sundown / Weaken,,,,,,
+Feather Boots,D4,ALL,,,,,,2,,,,,,,,Float
 Sprint Shoes,D5,ALL,,,,,1,1,,,,,,,,
 Power Wrist,D7,ALL,,,1,,,,,,,,,,,Overload
 Magic Gauntlet,D9,ALL,,,,2,,,,Innocent / Don't Act,,,,,,
@@ -26,4 +26,4 @@ Wizard Mantle,E7,ALL,0,20,,1,,,,,,,,,,
 Elf Mantle,E8,ALL,20,20,,,,,,,,,,,,
 Dracula Mantle,E9,ALL,15,15,,,,,,,Dark,,,Dark,,
 Feather Mantle,EA,ALL,20,0,1,,,,,Discord / Slow,,,,,,
-Vanish Mantle,EB,ALL,0,20,,,,,,,,,,,Innocent,
+Vanish Mantle,EB,ALL,0,20,,,,,,,,Lightning,,,,Innocent
