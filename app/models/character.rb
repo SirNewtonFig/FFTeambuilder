@@ -3,8 +3,8 @@ class Character
 
   DEFAULT_DATA = {
     job: 1,
-    brave: 55,
-    faith: 55,
+    brave: 50,
+    faith: 50,
     secondary: 2,
     reaction: nil,
     support: nil,
@@ -316,8 +316,8 @@ class Character
   def enforce_constraints!
     flush_cache
 
-    data['brave'] = [[brave.to_i, 40].max, 70].min
-    data['faith'] = [[faith.to_i, 40].max, 70].min
+    data['brave'] = [[brave.to_i, 30].max, 70].min
+    data['faith'] = [[faith.to_i, 30].max, 70].min
 
     if data['sex'] == 'x'
       enforce_monster_stuff! 
