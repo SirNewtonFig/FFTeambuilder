@@ -34,4 +34,28 @@ class Team < ApplicationRecord
   def jp_total
     characters.map(&:jp_total).sum
   end
+
+  # TODO: move this into a serializer
+  def data
+    super.map! { |char| intcast_values(char) }
+  end
+
+  private
+
+    def intcast_values(enum)
+      if enum.respond_to?(:keys)
+        enum.each do |k, v|
+          enum[k] = intcast_values(v)
+        end
+      elsif enum.is_a?(Enumerable)
+        enum.map! do |v|
+          v.to_i == 0 ? v : v.to_i
+        end
+      else
+        enum.to_i == 0 ? enum : enum.to_i
+      end
+    rescue => e
+      puts enum.inspect
+      raise e
+    end
 end
