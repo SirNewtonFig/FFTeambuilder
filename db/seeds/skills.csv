@@ -126,8 +126,8 @@ Summoner,Odin,80,200,4,3,Enemies,2,3,40,,Mag,,MA,Dmg_U(MA*18),,Yes,Yes,No,,,,Yes
 Summoner,Salamander,40,200,4,2,Enemies,2,3,30,Fire,Mag,,MA,Dmg_U(MA*19),,Yes,Yes,No,,,,Yes,,,,,Yes
 Summoner,Lich,20,200,4,2,Enemies,2,3,30,,Mag,,MA,Dmg_U(MA*18) 20% Add: Dead,,Yes,Yes,No,,,,Yes,,,,,Yes
 Summoner,Leviathan,10,500,4,3,Enemies,3,3,40,Water,Mag,,MA,Dmg_U(MA*19) 20% Add: Weaken,,Yes,Yes,No,,,,Yes,,,,,Yes
-Summoner,Bahamut,8,500,4,3,Enemies,3,3,40,,Mag,,MA,Dmg_U(MA*21),,Yes,Yes,No,,,,Yes,,,,,Yes
-Summoner,Cyclops,4,600,4,2,Enemies,2,3,50,,Mag,,MA,Dmg_U(MA*21),,Yes,Yes,No,,,,Yes,,,,,Yes
+Summoner,Bahamut,8,500,4,3,Enemies,3,3,50,,Mag,,MA,Dmg_U(MA*21),,Yes,Yes,No,,,,Yes,,,,,Yes
+Summoner,Cyclops,4,600,4,2,Enemies,2,3,40,,Mag,,MA,Dmg_U(MA*21),,Yes,Yes,No,,,,Yes,,,,,Yes
 Summoner,Zodiac,2,1000,4,3,Enemies,3,4,60,,Mag,,MA,"Dmg_U(MA*17), always good compat",,Yes,Yes,No,,,,Yes,,,,,Yes
 Summoner,R:MP Restore,1B0,400,,,,,,,,,,,Restore all MP on becoming critical,,,,,,,,,,,,,
 Summoner,E:Half of MP,1CE,750,,,,,,,,,,,MP Costs reduced by 50%,,,,,,,,,,,,,
@@ -264,22 +264,22 @@ Dancer,Terrifying Dance,100,100,ALL,ALL,Enemies,ALL,6,,,,,,Brave moves 7 towards
 Dancer,R:PA Save,1A6,550,,,,,,,,,,,Gain 2 PA on HP Damage,,,,,,,,,,,,,
 Dancer,R:MP Switch,1BD,350,,,,,,,,,,,Take all damage from an attack to your MP instead of HP if you have more than 0 MP,,,,,,,,,,,,,
 Dancer,S:Fly,1FB,600,,,,,,,,,,,"Fly over units, obstacles, and ignore height when moving",,,,,,,,,,,,,
-Spellblade,Stasis Sword,8000,400,3,1,Any,,,12,Weapon,Phys,,(PA-2),Dmg_((PA-2)*(WP+2)) 20% Add: Don't Act Requires Sword,,,Yes,,,,Yes,,If barehanded,Yes,,Yes,
-Spellblade,Split Punch,4000,500,3,,Any,2,,,Weapon,Phys,,(PA-2),Dmg_((PA-2)*(WP+2)) 20% Add: Death Sentence Requires Sword,,,Yes,,,,Yes,,If barehanded,Yes,,Yes,
+Spellblade,Stasis Sword,8000,400,3,1,Any,,,12,Weapon,Phys,,(PA-2),Dmg_((PA-2)*(WP+2)) 35% Add: Don't Act Requires Sword,,,Yes,,,,Yes,,If barehanded,Yes,,Yes,
+Spellblade,Split Punch,4000,500,3,,Any,2,,,Weapon,Phys,,(PA-2),Dmg_((PA-2)*(WP+2)) 40% Add: Death Sentence Requires Sword,,,Yes,,,,Yes,,If barehanded,Yes,,Yes,
 Spellblade,Crush Punch,2000,600,3,,Any,1,,20,Weapon,,,(PA-2),Dmg_((PA-2)*(WP+2)) 20% Add: Dead Requires Sword,,,Yes,,,,Yes,,If barehanded,Yes,,Yes,
-Spellblade,Lightning Stab,1000,400,2,1,Any,3,,12,Weapon,Phys,,(PA-2),Dmg_((PA-2)*(WP+2)) 20% Add:Weaken Requires Sword,,,Yes,,,,Yes,,If barehanded,Yes,,Yes,
-Spellblade,Ignition Slash,800,500,3,,Any,3,,20,Weapon,Phys,,(PA+2),Dmg_((PA+2)*(WP+2)) 20% Add: Sundown Requires Sword,,,Yes,,,,Yes,,If barehanded,Yes,,Yes,
+Spellblade,Lightning Stab,1000,400,2,1,Any,3,,12,Weapon,Phys,,(PA-2),Dmg_((PA-2)*(WP+2)) 25% Add:Weaken Requires Sword,,,Yes,,,,Yes,,If barehanded,Yes,,Yes,
+Spellblade,Ignition Slash,800,500,3,,Any,3,,20,Weapon,Phys,,(PA+2),Dmg_((PA+2)*(WP+2)) 50% Add: Sundown Requires Sword,,,Yes,,,,Yes,,If barehanded,Yes,,Yes,
 Spellblade,Night Sword,400,800,3,,Any,,,26,Weapon,Phys,,(PA-2),AbsorbHP_((PA-2)*(WP+2)) Requires Sword,,,Yes,,,,Yes,,If barehanded,Yes,,Yes,
 Spellblade,Dark Sword,200,800,3,,Any,,,17,Weapon,Phys,,(PA-2),AbsorbMP_((PA-2)*(WP+2)/4) Requires Sword,,,Yes,,,,Yes,,If barehanded,Yes,,Yes,
 Spellblade,Disrupt,100,300,Weapon,,Any,,,,,,,,Add: Discord Hit_(100)%,,,,,,,,,,,Yes,,
 Spellblade,E: Lionheart,1E4,200,,,,,,,,,,,Your Brave is considered 70 for the purposes of everything but reactions,,,,,,,,,,,,,
-Paladin,Consecrate,8000,300,0,2,Enemies,3,,,Holy,,,PA,Dmg_P(PA*16),,,Yes,,,,Yes,,,,,Yes,
+Paladin,Consecrate,8000,300,0,2,Enemies,3,,,Holy,,,PA,Dmg_P(PA*10),,,Yes,,,,Yes,,,,,Yes,
 Paladin,Holy Explosion,4000,800,5,Linear,Any,2,,20,Weapon,Phys,,(PA-2),Dmg_((PA-2)*(WP+2)) Requires Sword,,,Yes,,,,Yes,,If barehanded,Yes,,Yes,
 Paladin,Shine,2000,400,2,2,Any,,,,Holy,Phys,,,Dmg_((Faith/2)*5) 20% Add: Sundown (No XA modifiers),,,Yes,,,,,,,,,Yes,
-Paladin,Judgment,1000,300,3,,Any,,,,Holy,Phys,,PA,Dmg_P(PA*33),,,Yes,,,,,,,,,Yes,
+Paladin,Judgment,1000,300,3,,Any,,,,Holy,Phys,,PA,Dmg_P(PA*13),,,Yes,,,,,,,,,Yes,
 Paladin,Purify,800,100,3,,Allies,,,,Holy,,,,Cancel: Negative Effects Hit_(100)%,,,,,,,,,,,,,
 Paladin,Sanctuary,400,200,1,2,Allies,,,,Holy,,,,Add: Protect and Shell Hit_(100)%,,,,,,,,,,,,,
-Paladin,Devotion,200,500,1,,Allies,,,10,Holy,,,PA,"Add: Reraise, Regen, and Stealth Hit_F(PA+100)",,,,,,,,,,,,,
+Paladin,Devotion,200,500,1,,Allies,,,10,Holy,,,PA,"Add: Reraise, Regen, and Stealth Hit_F(PA+40)",,,,,,,,,,,,,
 Paladin,Redemption,100,500,1,,Allies,,,20,Holy,,,,Cancel: Dead (25% HP) Hit_(Faith)% ignores zodiac,,,,,,,,,,,,,
 Paladin,R:Pray,1AE,800,,,,,,,,,,,Faith +5 on HP Damage,,,,,,,,,,,,,
 Paladin,S:Piety,1F7,300,,,,,,,,,,,Use Faith instead of 100-Brave for reaction % (ignores Faith and Innocent status) (CLASS INNATE),,,,,,,,,,,,,

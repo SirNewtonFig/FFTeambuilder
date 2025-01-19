@@ -5,7 +5,7 @@ Germinas Boots,D2,ALL,,,,,,1,1,Don't Act / Slow / Don't Move,,,,,,
 Rubber Shoes,D3,ALL,,,,,,1,,Don't Move / Sundown / Weaken,,,,,,
 Feather Boots,D4,ALL,,,,,,2,,,,,,,,Float
 Sprint Shoes,D5,ALL,,,,,1,1,,,,,,,,
-Power Wrist,D7,ALL,,,1,,,,,,,,,,,Overload
+Power Wrist,D7,ALL,,,1,,,,,Protect / Shell / Haste,,,,,,Overload
 Magic Gauntlet,D9,ALL,,,,2,,,,Innocent / Don't Act,,,,,,
 Heroic Gloves,DA,ALL,,,1,,,,,,,,,,Overload,
 Reflect Ring,DB,ALL,,,,,1,,,,,,,,,Reflect
