@@ -70,4 +70,12 @@ class Characters::SkillsController < ApplicationController
     helper_method def scope
       params[:scope] if %w{ reaction support movement }.include?(params[:scope])
     end
+
+    helper_method def scope_label
+      {
+        reaction: 'Reaction',
+        support: 'Empower',
+        movement: 'Support'
+      }.with_indifferent_access[scope]
+    end
 end
