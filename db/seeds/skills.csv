@@ -276,7 +276,7 @@ Spellblade,E: Lionheart,1E4,200,,,,,,,,,,,Your Brave is considered 70 for the pu
 Paladin,Consecrate,8000,300,0,2,Enemies,3,,,Holy,,,PA,Dmg_P(PA*10),,,Yes,,,,Yes,,,,,Yes,
 Paladin,Holy Explosion,4000,800,5,Linear,Any,2,,20,Weapon,Phys,,(PA-2),Dmg_((PA-2)*(WP+2)) Requires Sword,,,Yes,,,,Yes,,If barehanded,Yes,,Yes,
 Paladin,Shine,2000,400,2,2,Any,,,,Holy,Phys,,,Dmg_((Faith/2)*5) 20% Add: Sundown (No XA modifiers),,,Yes,,,,,,,,,Yes,
-Paladin,Judgment,1000,300,3,,Any,,,,Holy,Phys,,PA,Dmg_P(PA*13),,,Yes,,,,,,,,,Yes,
+Paladin,Judgment,1000,300,3,,Any,,,,Holy,Phys,,PA,Dmg_P(PA*13),,,Yes,,,,Yes,,,,,Yes,
 Paladin,Purify,800,100,3,,Allies,,,,Holy,,,,Cancel: Negative Effects Hit_(100)%,,,,,,,,,,,,,
 Paladin,Sanctuary,400,200,1,2,Allies,,,,Holy,,,,Add: Protect and Shell Hit_(100)%,,,,,,,,,,,,,
 Paladin,Devotion,200,500,1,,Allies,,,10,Holy,,,PA,"Add: Reraise, Regen, and Stealth Hit_F(PA+40)",,,,,,,,,,,,,
