@@ -82,6 +82,7 @@ skills.each do |row|
       element: row['Element'],
       evade: row['Evade Type'],
       reflectable: row['Reflectable?'],
+      xa: row['XA:'],
       formula: row['Formula'],
       counter: row['Counter?'],
       counter_magic: row['Counter Magic?'],
@@ -137,6 +138,7 @@ Dir.glob('db/seeds/items/*.csv').each do |f|
         strengthens: row['Strengthens:'],
         always: row['Always:'],
         start: row['Start:'],
+        xa: row['XA:'],
         formula: row['Formula:'],
         proc_rate: row['Proc Rate:'],
         proc_formula: row['Proc Formula:'],
@@ -228,6 +230,7 @@ mskills.each do |row|
       element: row['Element'],
       evade: row['Evade Type'],
       reflectable: row['Reflectable?'],
+      xa: row['XA:'],
       formula: row['Formula'],
       counter: row['Counter?'],
       counter_magic: row['Counter Magic?'],
@@ -277,6 +280,7 @@ passives.each do |row|
 end
 
 Job.find_by(name: 'Samurai').innates.find_or_create_by(skill: Skill.find_by(name: 'Two Hands'))
+Job.find_by(name: 'Monk').innates.find_or_create_by(skill: Skill.find_by(name: 'Martial Arts'))
 
 statuses = CSV.parse(File.read(Rails.root.join('db/seeds/statuses.csv')), headers: true)
 

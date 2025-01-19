@@ -3,6 +3,7 @@ class Skill < ApplicationRecord
   # serialize :data, HashWithIndifferentAccess
 
   belongs_to :job, optional: true
+  has_many :proficiencies, as: :record, dependent: :destroy
 
   scope :valid, ->(char) {
     s = joins(:job).merge(Job.valid(char))
@@ -22,4 +23,8 @@ class Skill < ApplicationRecord
     where.not(id: other_skill_ids)
       .where.not(name: possible_dupes)
   }
+
+  def formula
+    data['formula']
+  end
 end

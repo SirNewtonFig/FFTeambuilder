@@ -35,6 +35,14 @@ class Character
     'pisces' => 0xB0
   }
 
+  ELEMENTS = [
+    'Fire',
+    'Water',
+    'Lightning',
+    'Dark',
+    'Holy'
+  ]
+
   attr_accessor :data
 
   def self.blank_character
@@ -73,10 +81,12 @@ class Character
   def brave
     data['brave']
   end
+  alias_method :br, :brave
 
   def faith
     data['faith']
   end
+  alias_method :fa, :faith
 
   def zodiac
     data['zodiac']
@@ -113,18 +123,21 @@ class Character
       items.map{|i| i.data['speed'].to_i}.sum +
       sum_passive('speed')
   end
+  alias_method :sp, :speed
 
   def magic
     job_data['magic'].to_i +
       items.map{|i| i.data['magic'].to_i}.sum +
       sum_passive('magic')
   end
+  alias_method :ma, :magic
 
   def attack
     job_data['attack'].to_i +
       items.map{|i| i.data['attack'].to_i}.sum +
       sum_passive('attack')
   end
+  alias_method :pa, :attack
 
   def class_evade
     job_data['evade'].to_i +
@@ -158,6 +171,12 @@ class Character
     return 0 unless accessory.present?
 
     accessory.data['ev_m'] || 0
+  end
+
+  def wp
+    return pa * br / 100 if weapon.blank?
+
+    weapon.data['wp'].to_i
   end
 
   def wp_right
@@ -199,7 +218,13 @@ class Character
   end
 
   memoize def weapon
-    [rhand, lhand].compact.first
+    return rhand if rhand&.weapon?
+
+    lhand if lhand&.weapon?
+  end
+
+  memoize def weapons
+    [rhand, lhand].compact.select(&:weapon?)
   end
 
   memoize def rhand
@@ -252,6 +277,10 @@ class Character
     Skill.where(job: secondary, id: data.dig('skills','secondary')&.map(&:to_i))
   end
 
+  memoize def actions
+    primary_skills | secondary_skills
+  end
+
   memoize def monster_passives
     return [] if generic?
 
@@ -270,6 +299,16 @@ class Character
     data.dig('skills', 'secondary').map(&:to_i)
   end
 
+  memoize def strengthens
+    return ELEMENTS if items.any? { |item| item.data['strengthens']&.match?(/all/i) }
+
+    items.flat_map { |item| item.data['strengthens']&.split(/[\s\/]+/) }.compact.uniq
+  end
+
+  memoize def always
+    items.flat_map { |item| item.data['always']&.split(/[\s\/]+/) }.compact.uniq
+  end
+
   def can_equip_skills?
     job.name != 'Mime'
   end
@@ -286,8 +325,20 @@ class Character
       weapon.data['flags']&.match('2-hands')
   end
 
+  def attack_up?
+    support&.name&.match?('Attack UP') || job.innate_skills.exists?(name: 'Attack UP')
+  end
+  
+  def m_attack_up?
+    support&.name&.match?('Magic AttackUP') || job.innate_skills.exists?(name: 'Magic AttackUP')
+  end
+  
   def two_hands?
     support&.name&.match('Two Hands') || job.innate_skills.exists?(name: 'Two Hands')
+  end
+
+  def martial_arts?
+    support&.name&.match('Martial Arts') || job.innate_skills.exists?(name: 'Martial Arts')
   end
 
   def two_swords?

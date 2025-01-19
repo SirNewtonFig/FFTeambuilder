@@ -95,6 +95,8 @@ GEM
       reline (>= 0.3.1)
     dockerfile-rails (1.0.7)
       rails
+    eqn (1.6.5)
+      treetop (>= 1.2.0)
     erubi (1.11.0)
     faker (3.1.0)
       i18n (>= 1.8.11, < 2)
@@ -151,6 +153,7 @@ GEM
     nokogiri (1.13.10-x86_64-linux)
       racc (~> 1.4)
     pg (1.4.5)
+    polyglot (0.3.5)
     pry (0.14.1)
       coderay (~> 1.1)
       method_source (~> 1.0)
@@ -188,6 +191,7 @@ GEM
       thor (~> 1.0)
       zeitwerk (~> 2.5)
     rake (13.0.6)
+    rb-readline (0.5.5)
     redis (4.8.0)
     regexp_parser (2.6.1)
     reline (0.3.2)
@@ -217,6 +221,8 @@ GEM
     thor (1.2.1)
     tilt (2.0.11)
     timeout (0.3.1)
+    treetop (1.6.12)
+      polyglot (~> 0.3)
     turbo-rails (1.3.2)
       actionpack (>= 6.0.0)
       activejob (>= 6.0.0)
@@ -253,6 +259,7 @@ DEPENDENCIES
   capybara
   debug
   dockerfile-rails (>= 1.0.0)
+  eqn
   faker
   haml
   hashie
@@ -264,6 +271,7 @@ DEPENDENCIES
   pry
   puma (~> 5.0)
   rails (~> 7.0.4)
+  rb-readline
   redis (~> 4.0)
   selenium-webdriver
   sprockets-rails

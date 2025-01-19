@@ -62,4 +62,32 @@ class Item < ApplicationRecord
       none
     end
   }
+
+  def formula
+    data['formula']
+  end
+
+  def proc_formula
+    data['proc_formula']
+  end
+
+  def gun?
+    proficiencies.map(&:record).include?(Skill.find_by(name: 'Equip Gun'))
+  end
+
+  def spear?
+    proficiencies.map(&:record).include?(Skill.find_by(name: 'Equip Spear'))
+  end
+
+  def sword?
+    proficiencies.map(&:record).include?(Skill.find_by(name: 'Equip Sword'))
+  end
+
+  def katana?
+    proficiencies.map(&:record).include?(Skill.find_by(name: 'Equip Katana'))
+  end
+
+  def sword_or_katana?
+    sword? || katana?
+  end
 end

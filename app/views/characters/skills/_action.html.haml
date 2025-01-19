@@ -13,7 +13,12 @@
   .flex.flex-wrap
     .flex.mr-6
       .text-red-900 Effect:
-      .ml-2= skill.data['formula']
+      - result = eval_formula(character:, skill:)
+      - if result != skill.formula
+        .ml-2{ class: 'group-[.eval-formula]:hidden' }= skill.formula
+        .ml-2.hidden.text-cyan-900{ class: 'group-[.eval-formula]:block' }= result
+      - else
+        .ml-2= skill.formula
 
   - if skill.data['element'].present?
     .flex.flex-wrap

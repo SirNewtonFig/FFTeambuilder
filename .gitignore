@@ -39,3 +39,6 @@
 **/.DS_Store
 *.fly.txt
 node_modules
+
+# Ignore fly github deploy hook
+.github/workflows/fly-deploy.yml
