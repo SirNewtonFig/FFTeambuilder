@@ -12,10 +12,7 @@
   = render 'characters/equipment', char: @char
 
 = turbo_stream.replace('primary-skills') do
-  - if @char.generic?  
-    = render 'characters/primary', char: @char, team: @team
-  - else
-    = render 'characters/primary_monster', char: @char, team: @team
+  = render 'characters/primary', char: @char, team: @team
 
 = turbo_stream.replace('secondary-skills') do
   = render 'characters/secondary', char: @char, team: @team
