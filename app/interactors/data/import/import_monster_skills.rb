@@ -1,0 +1,47 @@
+class Data::Import::ImportMonsterSkills < ActiveInteractor::Base
+  delegate :mskills, to: :context
+  
+  def perform
+    mskills.each do |row|
+      next if row['Skill ID'].blank?
+    
+      job = Job.find_by(name: row['Monster'].strip)
+    
+      skill = Skill.find_by("job_id = ? AND data ->> 'memgen_id' = ?", job.id, row['Skill ID'].rjust(4, '0')) || Skill.new
+    
+      skill_type = 'action'
+      skill_type = 'reaction' if row['Ability'].match?(/^R:/)
+      skill_type = 'support' if row['Ability'].match?(/^E:/)
+      skill_type = 'movement' if row['Ability'].match?(/^S:/)
+    
+      skill.update(
+        name: row['Ability'].gsub(/^R:|^E:|^S:/, '').strip,
+        job: job,
+        jp_cost: row['JP Cost'],
+        skill_type: skill_type,
+        data: {
+          range: row['Range'],
+          area: row['AoE'],
+          target: row['Target'],
+          vert: row['Vertical Tolerance'],
+          ct: row['CT'],
+          element: row['Element'],
+          evade: row['Evade Type'],
+          reflectable: row['Reflectable?'],
+          xa: row['XA:'],
+          formula: row['Formula'],
+          counter: row['Counter?'],
+          counter_magic: row['Counter Magic?'],
+          counter_flood: row['Counter Flood?'],
+          memgen_id: row['Skill ID'].rjust(4, '0'),
+          mimic: ('Yes' unless row['Mimic?'] == 'No'),
+          atk_up: row['Atk Up?'],
+          matk_up: row['MAtk Up?'],
+          martial_arts: row['Martial Arts?'],
+          protect: row['Protect?'],
+          shell: row['Shell?']
+        }
+      )
+    end
+  end
+end
