@@ -45,7 +45,11 @@ class Team < ApplicationRecord
     def intcast_values(enum)
       if enum.respond_to?(:keys)
         enum.each do |k, v|
-          enum[k] = intcast_values(v)
+          if k.match?(/name/)
+            enum[k] = v
+          else
+            enum[k] = intcast_values(v)
+          end
         end
       elsif enum.is_a?(Enumerable)
         enum.map! do |v|
