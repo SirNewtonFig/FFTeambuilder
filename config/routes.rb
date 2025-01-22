@@ -1,7 +1,21 @@
 Rails.application.routes.draw do
-  # get 'users/auth/discord/callback', to: 'users/omniauth_callbacks#discord'
-
   devise_for :users, controllers: { omniauth_callbacks: 'users/omniauth_callbacks' }
+
+  namespace :admin do
+    resources :jobs
+    resources :skills
+    resources :items
+
+    resources :monster_passives
+    resources :exclusions
+    resources :statuses
+    resources :prerequisites
+    resources :proficiencies
+    resources :innates
+
+    root to: "exclusions#index"
+  end
+
   # Defines the root path route ("/")
 
   root "dashboard#show"
