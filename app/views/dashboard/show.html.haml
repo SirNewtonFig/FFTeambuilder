@@ -10,7 +10,7 @@
             Browse Events
 
           - if current_user.present?
-            %a.text-sm.text-orange-500.hover:text-orange-400{ href: new_event_path, data: { turbo_frame: 'modal' } }
+            %a.text-sm.text-orange-400.hover:text-orange-300{ href: new_event_path, data: { turbo_frame: 'modal' } }
               Create Event
 
         = render 'events', events: @events
@@ -21,7 +21,7 @@
           %h2.text-lg.text-white.font-semibold
             Work on my Teams
 
-          %a.text-sm.text-orange-500.hover:text-orange-400{ href: new_team_path, data: { turbo_frame: '_top' } }
+          %a.text-sm.text-orange-400.hover:text-orange-300{ href: new_team_path, data: { turbo_frame: '_top' } }
             Create a Team
 
         = render 'teams', teams: @teams

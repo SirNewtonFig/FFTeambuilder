@@ -1,7 +1,7 @@
 #events.divide-y.divide-gray-500
   - teams.each do |team|
     %a.group.block.py-4{ href: edit_team_path(team) }
-      .text-orange-500.group-hover:text-orange-400= team.name || 'Unnamed Team'
+      .text-orange-400.group-hover:text-orange-300= team.name || 'Unnamed Team'
       .text-gray-400= "Last updated: #{team.updated_at.to_formatted_s(:deadline)}"
 
   - if teams.blank?
