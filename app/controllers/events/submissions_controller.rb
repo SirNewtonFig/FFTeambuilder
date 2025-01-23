@@ -4,6 +4,8 @@ class Events::SubmissionsController < ApplicationController
   before_action :load_event
 
   def new
+    raise 'unauthorized' and return unless @event.deadline.future?
+
     @submission = Submission.new
 
     @teams = Team.where(user_id: Current.user.id).where.not(id: @event.teams.pluck(:id))
@@ -12,6 +14,8 @@ class Events::SubmissionsController < ApplicationController
   end
 
   def create
+    raise 'unauthorized' and return unless @event.deadline.future?
+
     @submission = Submission.new(params.require(:submission).permit(:team_id))
     @submission.event = @event
 

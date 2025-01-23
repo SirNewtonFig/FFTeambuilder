@@ -7,7 +7,7 @@
       .rounded-xl.bg-gray-800.p-4.flex-1.m-3
         .flex.justify-between.items-center
           %h2.text-lg.text-white.font-semibold
-            Work on my Teams
+            My Teams
 
           %a.text-sm.text-orange-400.hover:text-orange-300{ href: new_team_path, data: { turbo_frame: '_top' } }
             Create a Team
@@ -17,7 +17,7 @@
       .rounded-xl.bg-gray-800.p-4.flex-1.m-3
         .flex.justify-between.items-center
           %h2.text-lg.text-white.font-semibold
-            Browse Events
+            Active Events
 
           - if current_user.present?
             %a.text-sm.text-orange-400.hover:text-orange-300{ href: new_event_path, data: { turbo_frame: 'modal' } }

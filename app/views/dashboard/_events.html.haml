@@ -1,10 +1,16 @@
 #events.divide-y.divide-gray-500
   - events.each do |event|
     %a.group.block.py-4{ href: event_path(event) }
-      .text-orange-400.group-hover:text-orange-300= event.title
-      .text-gray-400= "Organizer: #{event.user.username}"
-      .text-gray-400= "Deadline: #{event.deadline.to_formatted_s(:deadline)}"
-      .text-gray-400= "Submissions: #{event.submissions.count}"
+      %div.text-orange-400.group-hover:text-orange-300.text-lg.font-semibold= event.title
+      %div.text-sm
+        %span.text-gray-300 Organized by
+        %span.text-white.font-semibold= event.user.username
+      %div.text-sm
+        %span.text-gray-300= event.deadline.past? ? 'Submissions closed' : 'Submissions close'
+        %span.text-white.font-semibold= event.deadline.to_formatted_s(:deadline)
+      %div.text-sm
+        %span.text-gray-300 Submissions:
+        %span.text-white.font-semibold= event.submissions.count
 
   - if @events.blank?
     .py-4.text-gray-600.italic No active events
