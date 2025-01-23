@@ -1,0 +1,18 @@
+- content_for :heading do
+  .flex.items-center
+    %h2.text-xl Rename Submission
+    
+%div{ class: 'w-[24rem]' }
+  = form_for(@submission, url: event_submission_path(event_id: @event.id, team_id: @team.id), data: { controller: 'form', form_modal_outlet: '.modal-controller' }) do |f|
+    .space-y-6
+      %div
+        = f.label(:team_name_override, 'Team Name', class: 'text-xs block')
+        = f.text_field(:team_name_override, class: text_field_classes_neutral, value: @submission.team_name_override || @team.name)
+
+      %div
+        = f.label(:player_name_override, 'Player Name', class: 'text-xs block')
+        = f.text_field(:player_name_override, class: text_field_classes_neutral, value: @submission.player_name_override || @team.player_name)
+
+    .mt-4.flex.justify-end.space-x-4
+      = button_tag('Cancel', class: neutral_button_classes, data: { action: 'modal#close' })
+      = f.submit('Update', class: primary_button_classes, data: { action: 'form#submit' })

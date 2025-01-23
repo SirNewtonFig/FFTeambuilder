@@ -4,7 +4,7 @@ class Events::SubmissionsController < ApplicationController
   before_action :load_event
 
   def new
-    raise 'unauthorized' and return unless @event.deadline.future?
+    redirect_to event_path(@event) and return unless @event.deadline.future?
 
     @submission = Submission.new
 
@@ -14,7 +14,7 @@ class Events::SubmissionsController < ApplicationController
   end
 
   def create
-    raise 'unauthorized' and return unless @event.deadline.future?
+    redirect_to event_path(@event) and return unless @event.deadline.future?
 
     @submission = Submission.new(params.require(:submission).permit(:team_id))
     @submission.event = @event
@@ -24,18 +24,37 @@ class Events::SubmissionsController < ApplicationController
     load_submissions
   end
 
-  def destroy
+  def edit
+    redirect_to event_path(@event) and return unless @event.mine?
+
     load_submission
 
-    redirect_to event_path(@event) and return unless can_manage_submission?(@team)
+    render layout: 'modal_neutral'
+  end
 
+  def update
+    redirect_to event_path(@event) and return unless @event.mine?
+
+    load_submission
+
+    @submission.update(params.require(:submission).permit(:team_name_override, :player_name_override))
+
+    load_submissions
+  end
+
+  def destroy
+    load_submission
+    
+    redirect_to event_path(@event) and return if @event.deadline.past?
+    redirect_to event_path(@event) and return unless @event.mine? || @team.mine?
+    
     @submission.destroy
   end
 
   def approve
+    redirect_to event_path(@event) and return unless @event.mine?
+    
     load_submission
-
-    redirect_to event_path(@event) and return unless can_manage_submission?(@team)
 
     @submission.update(approved: true)
 
@@ -43,9 +62,9 @@ class Events::SubmissionsController < ApplicationController
   end
 
   def cut
-    load_submission
+    redirect_to event_path(@event) and return unless @event.mine?
 
-    redirect_to event_path(@event) and return unless can_manage_submission?(@team)
+    load_submission
 
     @submission.update(approved: false)
 
@@ -71,9 +90,5 @@ class Events::SubmissionsController < ApplicationController
     def load_submission
       @team = Team.find(params[:id])
       @submission = Submission.find_by(event_id: @event.id, team_id: @team.id)
-    end
-
-    def can_manage_submission?(team)
-      [@event.user_id, team.user_id].include?(Current.user.id)
     end
 end

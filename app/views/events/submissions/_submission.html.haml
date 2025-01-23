@@ -1,12 +1,15 @@
 - hide_player_name ||= false
 
 %a.group.block.py-4.font-semibold{ href: edit_team_path(team) }
-  .text-orange-400.group-hover:text-orange-300= team.name || 'Unnamed Team'
+  - if hide_player_name
+    .text-orange-400.group-hover:text-orange-300= team.name || 'Unnamed Team'
   
-  - unless hide_player_name
+  - else
+    .text-orange-400.group-hover:text-orange-300= team.team_name_override.presence || team.name || 'Unnamed Team'
+
     %div
       %span.text-gray-300.font-light Player:
-      %span.text-white= team.player_name
+      %span.text-white= team.player_name_override.presence || team.player_name
       - if team.guest?
         %span.text-orange-200= '(guest)'
 

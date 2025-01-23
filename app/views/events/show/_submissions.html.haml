@@ -3,10 +3,17 @@
     .flex.justify-between{ id: dom_id(team, 'submission') }
       = render 'events/submissions/submission', team:
       
-      .flex.space-x-2
+      .flex.space-x-2.items-center
+        %a.group.block.py-4.text-orange-400.hover:text-orange-300{ href: edit_event_submission_path(event_id: event.id, id: team.id), data: { turbo_frame: :modal } }
+          Rename
+
+        %span.text-gray-500= '|'
+
         %a.group.block.py-4.text-orange-400.hover:text-orange-300{ href: cut_event_submission_path(event_id: event.id, id: team.id), data: { turbo_method: :patch } }
           Cut
-        %span.py-4.text-gray-600= '|'
+
+        %span.text-gray-500= '|'
+
         %a.group.block.py-4.text-orange-400.hover:text-orange-300{ href: approve_event_submission_path(event_id: event.id, id: team.id), data: { turbo_method: :patch } }
           Approve
 

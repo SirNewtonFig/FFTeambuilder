@@ -15,6 +15,7 @@ class Team < ApplicationRecord
     joins(:events)
       .where(events: {id: event.id })
       .order('teams.player_name, submissions.priority')
+      .select('teams.*, submissions.team_name_override, submissions.player_name_override')
   }
 
   def self.blank_team_attributes
@@ -48,6 +49,10 @@ class Team < ApplicationRecord
 
   def guest?
     user.blank?
+  end
+
+  def mine?
+    user == Current.user
   end
 
   # TODO: move this into a serializer
