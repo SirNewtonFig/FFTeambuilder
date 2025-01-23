@@ -27,7 +27,7 @@ export default class ContextController extends Controller {
       this.tooltipTarget.classList.remove('hidden')
 
       document.body.classList.add('overflow-hidden')
-      this.overlay.classList.remove('hidden')
+      this.overlay?.classList.remove('hidden')
     }
   }
 
@@ -39,7 +39,7 @@ export default class ContextController extends Controller {
     }
 
     document.body.classList.remove('overflow-hidden')
-    this.overlay.classList.add('hidden')
+    this.overlay?.classList.add('hidden')
   }
 
   clickOutside() {
