@@ -47,6 +47,7 @@ gem 'memoist'
 gem 'omniauth'
 gem 'omniauth-discord'
 gem 'omniauth-rails_csrf_protection'
+gem 'rolify'
 # gem 'challonge-api', git: 'https://github.com/SirNewtonFig/challonge-ruby-gem', tag: 'v0.0.1'
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem

@@ -270,6 +270,7 @@ GEM
       actionpack (>= 5.2)
       railties (>= 5.2)
     rexml (3.2.5)
+    rolify (6.0.1)
     rubyzip (2.3.2)
     sassc (2.4.0)
       ffi (~> 1.9)
@@ -368,6 +369,7 @@ DEPENDENCIES
   rails (~> 7.0.4)
   rb-readline
   redis (~> 4.0)
+  rolify
   selenium-webdriver
   sprockets-rails
   stimulus-rails

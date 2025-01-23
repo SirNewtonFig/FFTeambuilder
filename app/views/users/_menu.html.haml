@@ -10,6 +10,9 @@
       - if current_user.present?
         %a.block.w-36.p-2.px-4.my-1.text-white.text-sm.hover:bg-gray-600{ href: confirm_destroy_user_path, data: { turbo_frame: 'modal' } }
           Delete Account
+        - if current_user.is_admin?
+          %a.block.w-36.p-2.px-4.my-1.text-white.text-sm.hover:bg-gray-600{ href: admin_jobs_path }
+            Admin Panel
 
 
 

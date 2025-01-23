@@ -3,8 +3,8 @@
     %h2.text-xl Account Removal
     
 %p.mb-4 Are you sure you want to remove your account permanently?
-%p.mb-6 You can always make another one later, if you change your mind.
-
+%p You can always make another one later, if you change your mind.
+%p.mb-6 (Your teams will be toast, though...)
 
 = form_for(current_user, method: :delete) do |f|
   .flex.justify-center.space-x-8
