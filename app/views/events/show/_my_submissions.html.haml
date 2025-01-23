@@ -1,11 +1,16 @@
-#events.divide-y.divide-gray-500{ data: { draggable_form_target: 'list'} }
-  - teams.each do |team|
-    .flex.justify-between.draggable{ id: dom_id(team, 'my-submission') }
-      %input{ type: :hidden, name: 'team_ids[]', value: team.id }
-      .flex.items-center.space-x-2.cursor-pointer
-        = inline_svg_tag('icons/drag.svg', class: 'h-6 w-6 text-gray-400')
-        = render 'events/submissions/submission', team:, hide_player_name: true
-      %a.group.block.py-4.text-orange-400.hover:text-orange-300{ href: event_submission_path(event_id: event.id, id: team.id), data: { turbo_method: :delete } }
-        Withdraw Team
-  - if teams.blank?
-    .py-4.text-gray-400.italic You have not submitted any teams yet
+- if teams.count > 1
+  .text-sm.my-2.text-gray-300
+    Drag to order your teams by most-to-least favorite. If cuts occur, teams will be cut from the bottom-up.
+
+= form_for(:foo, url: reorder_event_submissions_path(event_id: @event), method: :patch, data: { controller: 'draggable-form', draggable_form_target: 'form' }) do
+  .divide-y.divide-gray-500{ data: { draggable_form_target: 'list'} }
+    - teams.each do |team|
+      .flex.justify-between.draggable{ id: dom_id(team, 'my-submission') }
+        %input{ type: :hidden, name: 'team_ids[]', value: team.id }
+        .flex.items-center.space-x-2.cursor-pointer
+          = inline_svg_tag('icons/drag.svg', class: 'h-6 w-6 text-gray-400')
+          = render 'events/submissions/submission', team:, hide_player_name: true
+        %a.group.block.py-4.text-orange-400.hover:text-orange-300{ href: event_submission_path(event_id: event.id, id: team.id), data: { turbo_method: :delete } }
+          Withdraw Team
+    - if teams.blank?
+      .py-4.text-gray-400.italic You have not submitted any teams yet

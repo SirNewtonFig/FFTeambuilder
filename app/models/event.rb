@@ -5,4 +5,8 @@ class Event < ApplicationRecord
   
   scope :active, -> { where(active: true) }
   scope :open, -> { where(deadline: Time.current..) }
+
+  def mine?
+    user == Current.user
+  end
 end

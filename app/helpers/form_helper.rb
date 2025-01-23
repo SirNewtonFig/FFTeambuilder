@@ -17,7 +17,7 @@ module FormHelper
     '.squish
   end
 
-    def text_field_classes_neutral
+  def text_field_classes_neutral
     '
       bg-right
       py-0
@@ -28,6 +28,24 @@ module FormHelper
       border-gray-400
       appearance-none
       focus:outline-none
+      focus:ring-0
+      peer
+      w-full
+      placeholder-gray-500
+    '.squish
+  end
+
+  def text_area_classes_neutral
+    '
+      appearance-none
+      py-0
+      px-0
+      bg-transparent
+      border-0
+      border-b-2
+      border-gray-400
+      appearance-none
+      outline-none
       focus:ring-0
       peer
       w-full

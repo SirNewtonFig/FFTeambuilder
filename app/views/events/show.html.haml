@@ -1,50 +1,52 @@
-.font-sans.w-full.sticky.py-4.top-0{ class: 'bg-black/75' }
-  .mx-auto.max-w-full.md:max-w-screen-md.2xl:max-w-screen-2xl{ class: 'xl:max-w-[72rem]'}
-    .flex.items-center.justify-between
-      %div
-        .flex.items-center
-          %h1.text-white.text-xl.font-semibold= @event.title
-          - if @event.user == current_user
-            %a.ml-1.text-sm.text-orange-400.hover:text-orange-300{ href: edit_event_path(@event), data: { turbo_frame: 'modal' } }
-              (Edit)
-        %div.text-sm
-          %span.text-gray-300 Organized by
-          %span.text-white.font-semibold= @event.user.username
-        %div.text-sm
-          %span.text-gray-300 Submissions close
-          %span.text-white.font-semibold= @event.deadline.to_formatted_s(:deadline)
-      .flex.space-x-4
-        - if @event.user == Current.user
-          %a{ href: confirm_destroy_event_path(@event), class: destructive_button_classes, data: { turbo_frame: 'modal' } } Delete Event
+.mx-3
+  .font-sans.sticky.-mx-3.px-3.py-4.top-0.mb-6{ class: 'bg-black/75' }
+    .mx-auto.max-w-full.md:max-w-screen-md.2xl:max-w-screen-2xl{ class: 'xl:max-w-[72rem]'}
+      .flex.items-center.justify-between
+        %div
+          .flex.items-center
+            %h1.text-white.text-xl.font-semibold= @event.title
+            - if @event.user == current_user
+              %a.ml-1.text-sm.text-orange-400.hover:text-orange-300{ href: edit_event_path(@event), data: { turbo_frame: 'modal' } }
+                (Edit)
+          %div.text-sm
+            %span.text-gray-300 Organized by
+            %span.text-white.font-semibold= @event.user.username
+          %div.text-sm
+            %span.text-gray-300 Submissions close
+            %span.text-white.font-semibold= @event.deadline.to_formatted_s(:deadline)
+        .flex.space-x-4
+          - if @event.user == Current.user
+            %a{ href: confirm_destroy_event_path(@event), class: destructive_button_classes, data: { turbo_frame: 'modal' } } Delete Event
 
-        %a{ href: new_event_submission_path(event_id: @event), class: primary_button_classes, data: { turbo_frame: 'modal' } } Submit a Team
+          %a{ href: new_event_submission_path(event_id: @event), class: primary_button_classes, data: { turbo_frame: 'modal' } } Submit a Team
 
-.font-sans.mx-auto.mb-4.max-w-full.md:max-w-screen-md.2xl:max-w-screen-2xl{ class: 'xl:max-w-[72rem]'}
-  .text-white.mt-8.pt-2.bg-gray-800.rounded-lg
-    %h2.px-4.my-2.text-lg.font-semibold.text-white My Submissions
-    .text-sm.px-4.my-2.text-gray-300
-      Drag to order your teams by most-to-least favorite. If cuts occur, teams will be cut from the bottom-up.
-    #my-submissions.space-y-2.px-4
-      = form_for(:foo, url: reorder_event_submissions_path(event_id: @event), method: :patch, data: { controller: 'draggable-form', draggable_form_target: 'form' }) do
+  - if @event.description.present? || @event.mine?
+    .font-sans.mx-auto.mb-6.max-w-full.md:max-w-screen-md.2xl:max-w-screen-2xl{ class: 'xl:max-w-[72rem]'}
+      = simple_format(@event.description || 'No description provided', class: 'text-gray-300 prose bg-gray-800 p-2 border-l-2 border-orange-500')
+
+  .font-sans.mx-auto.mb-6.max-w-full.md:max-w-screen-md.2xl:max-w-screen-2xl{ class: 'xl:max-w-[72rem]'}
+    .text-white.pt-2.bg-gray-800.rounded-lg
+      %h2.px-4.my-2.text-lg.font-semibold.text-white My Submissions
+      #my-submissions.space-y-2.px-4
         = render 'events/show/my_submissions', teams: @my_submissions, event: @event
 
-- if @event.user == Current.user
-  .font-sans.mx-auto.mb-4.max-w-full.md:max-w-screen-md.2xl:max-w-screen-2xl{ class: 'xl:max-w-[72rem]'}
-    .text-white.mt-8.bg-gray-800.rounded-lg
-      %h2.p-4.text-lg.font-semibold.text-white Pending Submissions
-      #submissions.space-y-2.px-4
-        = render 'events/show/submissions', teams: @submissions, event: @event
+  - if @event.mine?
+    .font-sans.mx-auto.mb-6.max-w-full.md:max-w-screen-md.2xl:max-w-screen-2xl{ class: 'xl:max-w-[72rem]'}
+      .text-white.bg-gray-800.rounded-lg
+        %h2.p-4.text-lg.font-semibold.text-white Pending Submissions
+        #submissions.space-y-2.px-4
+          = render 'events/show/submissions', teams: @submissions, event: @event
 
-  .font-sans.mx-auto.mb-4.max-w-full.md:max-w-screen-md.2xl:max-w-screen-2xl{ class: 'xl:max-w-[72rem]'}
-    .text-white.mt-8.bg-gray-800.rounded-lg
-      %h2.p-4.text-lg.font-semibold.text-white Confirmed Teams
-      #bracket.space-y-2.px-4
-        = render 'events/show/bracket', teams: @bracket, event: @event
+    .font-sans.mx-auto.mb-6.max-w-full.md:max-w-screen-md.2xl:max-w-screen-2xl{ class: 'xl:max-w-[72rem]'}
+      .text-white.bg-gray-800.rounded-lg
+        %h2.p-4.text-lg.font-semibold.text-white Confirmed Teams
+        #bracket.space-y-2.px-4
+          = render 'events/show/bracket', teams: @bracket, event: @event
 
-  .font-sans.mx-auto.mb-4.max-w-full.md:max-w-screen-md.2xl:max-w-screen-2xl{ class: 'xl:max-w-[72rem]'}
-    .text-white.mt-8.bg-gray-800.rounded-lg
-      %h2.p-4.text-lg.font-semibold.text-white Cut Submissions
-      #cut-submissions.space-y-2.px-4
-        = render 'events/show/cut_submissions', teams: @cut_submissions, event: @event
+    .font-sans.mx-auto.mb-6.max-w-full.md:max-w-screen-md.2xl:max-w-screen-2xl{ class: 'xl:max-w-[72rem]'}
+      .text-white.bg-gray-800.rounded-lg
+        %h2.p-4.text-lg.font-semibold.text-white Cut Submissions
+        #cut-submissions.space-y-2.px-4
+          = render 'events/show/cut_submissions', teams: @cut_submissions, event: @event
 
-= render "users/menu"
+  = render "users/menu"

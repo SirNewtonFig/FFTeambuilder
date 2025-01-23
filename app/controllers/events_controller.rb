@@ -17,7 +17,7 @@ class EventsController < ApplicationController
   end
 
   def create
-    @event = Event.new(params.require(:event).permit(:title, :deadline, :active))
+    @event = Event.new(event_params)
 
     @event.update(user: current_user)
 
@@ -27,7 +27,7 @@ class EventsController < ApplicationController
   def update
     @event = Event.find(params[:id])
 
-    @event.update(params.require(:event).permit(:title, :deadline, :active))
+    @event.update(event_params)
 
     redirect_to event_path(@event)
   end
@@ -51,4 +51,10 @@ class EventsController < ApplicationController
 
     redirect_to dashboard_path
   end
+
+  private
+
+    def event_params
+      params.require(:event).permit(:title, :deadline, :active, :description)
+    end
 end
