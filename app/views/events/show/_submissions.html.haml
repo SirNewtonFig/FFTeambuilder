@@ -1,15 +1,13 @@
 #events.divide-y.divide-gray-500
   - teams.each do |team|
     .flex.justify-between{ id: dom_id(team, 'submission') }
-      %a.group.block.py-4{ href: edit_team_path(team) }
-        .text-orange-500.group-hover:text-orange-400= team.name || 'Unnamed Team'
-        .text-gray-400= "Submitted by: #{team.player_name}"
-        .text-gray-400= "Last updated: #{team.updated_at.to_formatted_s(:deadline)}"
+      = render 'events/submissions/submission', team:
+      
       .flex.space-x-2
-        %a.group.block.py-4.text-orange-500.hover:text-orange-400{ href: cut_event_submission_path(event_id: event.id, id: team.id), data: { turbo_method: :patch } }
+        %a.group.block.py-4.text-orange-400.hover:text-orange-300{ href: cut_event_submission_path(event_id: event.id, id: team.id), data: { turbo_method: :patch } }
           Cut
         %span.py-4.text-gray-600= '|'
-        %a.group.block.py-4.text-orange-500.hover:text-orange-400{ href: approve_event_submission_path(event_id: event.id, id: team.id), data: { turbo_method: :patch } }
+        %a.group.block.py-4.text-orange-400.hover:text-orange-300{ href: approve_event_submission_path(event_id: event.id, id: team.id), data: { turbo_method: :patch } }
           Approve
 
   - if teams.blank?

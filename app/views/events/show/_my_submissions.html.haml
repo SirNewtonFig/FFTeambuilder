@@ -4,10 +4,8 @@
       %input{ type: :hidden, name: 'team_ids[]', value: team.id }
       .flex.items-center.space-x-2.cursor-pointer
         = inline_svg_tag('icons/drag.svg', class: 'h-6 w-6 text-gray-400')
-        %a.flex-1.group.block.py-4{ href: edit_team_path(team) }
-          .text-orange-500.group-hover:text-orange-400= team.name || 'Unnamed Team'
-          .text-gray-400= "Last updated: #{team.updated_at.to_formatted_s(:deadline)}"
-      %a.group.block.py-4.text-orange-500.hover:text-orange-400{ href: event_submission_path(event_id: event.id, id: team.id), data: { turbo_method: :delete } }
+        = render 'events/submissions/submission', team:, hide_player_name: true
+      %a.group.block.py-4.text-orange-400.hover:text-orange-300{ href: event_submission_path(event_id: event.id, id: team.id), data: { turbo_method: :delete } }
         Withdraw Team
   - if teams.blank?
     .py-4.text-gray-600.italic You have not submitted any teams yet

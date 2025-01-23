@@ -4,6 +4,8 @@ class Team < ApplicationRecord
   has_many :submissions, inverse_of: :team, dependent: :destroy
   has_many :events, through: :submissions
 
+  belongs_to :user, optional: true
+
   enum :palette_a, %i{ blue red green white purple yellow brown black }, suffix: true, _scopes: false
   enum :palette_b, %i{ blue red green white purple yellow brown black }, suffix: true, _scopes: false
 
@@ -42,6 +44,10 @@ class Team < ApplicationRecord
 
   def jp_total
     characters.map(&:jp_total).sum
+  end
+
+  def guest?
+    user.blank?
   end
 
   # TODO: move this into a serializer
