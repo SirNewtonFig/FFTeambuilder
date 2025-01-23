@@ -1,15 +1,15 @@
 - hide_player_name ||= false
 
-%a.group.block.py-4{ href: edit_team_path(team) }
+%a.group.block.py-4.font-semibold{ href: edit_team_path(team) }
   .text-orange-400.group-hover:text-orange-300= team.name || 'Unnamed Team'
   
   - unless hide_player_name
     %div
-      %span.text-gray-400 Player:
+      %span.text-gray-300.font-light Player:
       %span.text-white= team.player_name
       - if team.guest?
         %span.text-orange-200= '(guest)'
 
   %div
-    %span.text-gray-400 Updated:
+    %span.text-gray-300.font-light Updated:
     %span.text-white= team.updated_at.to_formatted_s(:deadline)

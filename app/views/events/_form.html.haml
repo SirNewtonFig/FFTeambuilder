@@ -1,0 +1,19 @@
+= form_for(event, data: { controller: 'form', form_modal_outlet: '.modal-controller' }) do |f|
+  .space-y-6
+    %div
+      = f.label(:title, 'Event Title', class: 'text-xs block')
+      = f.text_field(:title, placeholder: 'Super Funtimes Extravaganza', class: text_field_classes_neutral)
+
+    %div
+      = f.label(:deadline, 'Submission Deadline', class: 'text-xs  block')
+      = f.datetime_field(:deadline, class: text_field_classes_neutral)
+
+    %div
+      = f.label(:active) do
+        = f.check_box(:active)
+        %span Active?
+
+  .mt-4.flex.justify-end.space-x-8
+    = button_tag('Cancel', class: neutral_button_classes, data: { action: 'modal#close' })
+    - button_label = event.persisted? ? 'Update Event' : 'Create Event'
+    = f.submit(button_label, class: destructive_button_classes, data: { action: 'form#submit' })

@@ -1,7 +1,18 @@
 .font-sans.w-full.sticky.py-4.top-0{ class: 'bg-black/75' }
   .mx-auto.max-w-full.md:max-w-screen-md.2xl:max-w-screen-2xl{ class: 'xl:max-w-[72rem]'}
     .flex.items-center.justify-between
-      %h1.text-white.text-xl.font-semibold= @event.title
+      %div
+        .flex.items-center
+          %h1.text-white.text-xl.font-semibold= @event.title
+          - if @event.user == current_user
+            %a.ml-1.text-sm.text-orange-400.hover:text-orange-300{ href: edit_event_path(@event), data: { turbo_frame: 'modal' } }
+              (Edit)
+        %div.text-sm
+          %span.text-gray-300 Organized by
+          %span.text-white.font-semibold= @event.user.username
+        %div.text-sm
+          %span.text-gray-300 Submissions close
+          %span.text-white.font-semibold= @event.deadline.to_formatted_s(:deadline)
       .flex.space-x-4
         - if @event.user == Current.user
           %a{ href: confirm_destroy_event_path(@event), class: destructive_button_classes, data: { turbo_frame: 'modal' } } Delete Event
