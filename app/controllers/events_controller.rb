@@ -1,4 +1,5 @@
 class EventsController < ApplicationController
+  include HasSubmissions
   before_action :authenticate_user!, except: [:show]
 
   def new
@@ -18,12 +19,7 @@ class EventsController < ApplicationController
   def show
     @event = Event.find(params[:id])
 
-    @submissions = Team.joins(:events).where(events: {id: @event.id }).where(submissions: { approved: nil })
-    @bracket = Team.joins(:events).where(events: {id: @event.id }).where(submissions: { approved: true })
-    @cut_submissions = Team.joins(:events).where(events: {id: @event.id }).where(submissions: { approved: false })
-    
-    @my_submissions = Team.joins(:events)
-      .where(events: { id: @event.id }, teams: { user_id: Current.user.id })
+    load_submissions
   end
 
   def confirm_destroy

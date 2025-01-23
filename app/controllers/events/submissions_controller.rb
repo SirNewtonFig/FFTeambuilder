@@ -1,4 +1,6 @@
 class Events::SubmissionsController < ApplicationController
+  include HasSubmissions
+
   before_action :load_event
 
   def new
@@ -46,6 +48,16 @@ class Events::SubmissionsController < ApplicationController
     load_submissions
   end
 
+  def reorder
+    submissions = Submission.joins(:team).where(submissions: { event_id: @event.id }, teams: { user_id: Current.user.id })
+
+    submissions.each do |submission|
+      submission.update(priority: params[:team_ids].find_index { |id| submission.team_id == id.to_i })
+    end
+
+    load_submissions
+  end
+
   private
 
     def load_event
@@ -55,15 +67,6 @@ class Events::SubmissionsController < ApplicationController
     def load_submission
       @team = Team.find(params[:id])
       @submission = Submission.find_by(event_id: @event.id, team_id: @team.id)
-    end
-
-    def load_submissions
-      @submissions = Team.joins(:events).where(events: {id: @event.id }).where(submissions: { approved: nil })
-      @bracket = Team.joins(:events).where(events: {id: @event.id }).where(submissions: { approved: true })
-      @cut_submissions = Team.joins(:events).where(events: {id: @event.id }).where(submissions: { approved: false })
-    
-      @my_submissions = Team.joins(:events)
-        .where(events: { id: @event.id }, teams: { user_id: Current.user.id })
     end
 
     def can_manage_submission?(team)

@@ -9,10 +9,13 @@
         %a{ href: new_event_submission_path(event_id: @event), class: primary_button_classes, data: { turbo_frame: 'modal' } } Submit a Team
 
 .font-sans.mx-auto.mb-4.max-w-full.md:max-w-screen-md.2xl:max-w-screen-2xl{ class: 'xl:max-w-[72rem]'}
-  .text-white.mt-8.bg-gray-800.rounded-lg
-    %h2.p-4.text-lg.font-semibold.text-white My Submissions
+  .text-white.mt-8.pt-2.bg-gray-800.rounded-lg
+    %h2.px-4.my-2.text-lg.font-semibold.text-white My Submissions
+    .text-sm.px-4.my-2.text-gray-300
+      Drag to order your teams by most-to-least favorite. If cuts occur, teams will be cut from the bottom-up.
     #my-submissions.space-y-2.px-4
-      = render 'events/show/my_submissions', teams: @my_submissions, event: @event
+      = form_for(:foo, url: reorder_event_submissions_path(event_id: @event), method: :patch, data: { controller: 'draggable-form', draggable_form_target: 'form' }) do
+        = render 'events/show/my_submissions', teams: @my_submissions, event: @event
 
 - if @event.user == Current.user
   .font-sans.mx-auto.mb-4.max-w-full.md:max-w-screen-md.2xl:max-w-screen-2xl{ class: 'xl:max-w-[72rem]'}

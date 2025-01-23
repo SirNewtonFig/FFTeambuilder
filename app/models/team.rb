@@ -9,6 +9,12 @@ class Team < ApplicationRecord
 
   validates :user_id, presence: true
 
+  scope :for_event, ->(event) {
+    joins(:events)
+      .where(events: {id: event.id })
+      .order('teams.player_name, submissions.priority')
+  }
+
   def self.blank_team_attributes
     {
       palette_a: 'blue',

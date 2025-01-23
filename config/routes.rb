@@ -62,6 +62,10 @@ Rails.application.routes.draw do
         patch :approve
         patch :cut
       end
+
+      collection do
+        patch :reorder
+      end
     end
   end
 
