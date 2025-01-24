@@ -52,8 +52,6 @@ class TeamsController < ApplicationController
     load_team
 
     @team.update(team_attributes)
-
-    head :ok
   end
 
   private
