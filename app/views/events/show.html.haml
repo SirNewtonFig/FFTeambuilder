@@ -1,7 +1,7 @@
-.mx-3
-  .font-sans.sticky.-mx-3.px-3.py-4.top-0.mb-6{ class: 'bg-black/75' }
-    .ml-44.max-w-full.md:max-w-screen-md{ class: 'xl:max-w-[72rem]'}
-      .flex.items-center.justify-between
+.mx-3.md:mx-8
+  .font-sans.sticky.-mx-3.px-3.md:-mx-8.md:px-8.py-4.top-0.mb-6{ class: 'bg-black/75' }
+    .max-w-full.md:max-w-screen-md{ class: 'xl:max-w-[72rem]'}
+      .flex.flex-col.md:flex-row.justify-center.md:items-center.md:justify-between
         %div
           .flex.items-center
             %h1.text-white.text-xl.font-semibold= @event.title
@@ -17,7 +17,7 @@
           %div.text-sm
             %span.text-gray-300 Submissions:
             %span.text-white.font-semibold= @event.submissions.count
-        .flex.space-x-4
+        .flex.justify-end.space-x-4
           - if @event.user == Current.user
             %a{ href: confirm_destroy_event_path(@event), class: destructive_button_classes, data: { turbo_frame: 'modal' } } Delete Event
 
@@ -25,29 +25,29 @@
             %a{ href: new_event_submission_path(event_id: @event), class: primary_button_classes, data: { turbo_frame: 'modal' } } Submit a Team
 
   - if @event.description.present? || @event.mine?
-    .font-sans.ml-44.mb-6.max-w-full.md:max-w-screen-md{ class: 'xl:max-w-[72rem]'}
+    .font-sans.mb-6.max-w-full.md:max-w-screen-md{ class: 'xl:max-w-[72rem]'}
       = simple_format(@event.description || 'No description provided', class: 'text-gray-300 prose bg-gray-800 p-2 border-l-2 border-orange-500')
 
-  .font-sans.ml-44.mb-6.max-w-full.md:max-w-screen-md{ class: 'xl:max-w-[72rem]'}
+  .font-sans.mb-6.max-w-full.md:max-w-screen-md{ class: 'xl:max-w-[72rem]'}
     .text-white.pt-2.bg-gray-800.rounded-lg
       %h2.px-4.my-2.text-lg.font-semibold.text-white My Submissions
       #my-submissions.space-y-2.px-4
         = render 'events/show/my_submissions', teams: @my_submissions, event: @event
 
   - if @event.mine?
-    .font-sans.ml-44.mb-6.max-w-full.md:max-w-screen-md{ class: 'xl:max-w-[72rem]'}
+    .font-sans.mb-6.max-w-full.md:max-w-screen-md{ class: 'xl:max-w-[72rem]'}
       .text-white.bg-gray-800.rounded-lg
         %h2.p-4.text-lg.font-semibold.text-white Pending Submissions
         #submissions.space-y-2.px-4
           = render 'events/show/submissions', teams: @submissions, event: @event
 
-    .font-sans.ml-44.mb-6.max-w-full.md:max-w-screen-md{ class: 'xl:max-w-[72rem]'}
+    .font-sans.mb-6.max-w-full.md:max-w-screen-md{ class: 'xl:max-w-[72rem]'}
       .text-white.bg-gray-800.rounded-lg
         %h2.p-4.text-lg.font-semibold.text-white Confirmed Submissions
         #bracket.space-y-2.px-4
           = render 'events/show/bracket', teams: @bracket, event: @event
 
-    .font-sans.ml-44.mb-6.max-w-full.md:max-w-screen-md{ class: 'xl:max-w-[72rem]'}
+    .font-sans.mb-6.max-w-full.md:max-w-screen-md{ class: 'xl:max-w-[72rem]'}
       .text-white.bg-gray-800.rounded-lg
         %h2.p-4.text-lg.font-semibold.text-white Cut Submissions
         #cut-submissions.space-y-2.px-4

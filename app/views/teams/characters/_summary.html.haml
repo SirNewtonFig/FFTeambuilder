@@ -1,7 +1,7 @@
 :ruby
   selected ||= false
 
-.container.w-48.p-2.cursor-pointer.hover:bg-gray-700.text-gray-300.hover:text-white.rounded-sm.border-r-4.border-transparent{ id: "character-#{i}", class: ('bg-gray-700 border-r-blue-600' if selected) }
+.container.p-2.cursor-pointer.hover:bg-gray-700.text-gray-300.hover:text-white.rounded-sm.border-r-4.border-transparent{ id: "character-#{i}", class: ('bg-gray-700 border-r-blue-600' if selected) }
   %input{ type: 'hidden', name: 'chars[]', value: i }
   .flex
     .w-12
@@ -9,7 +9,7 @@
         = image_tag("sprites/generics/#{char.job.name}-#{char.sex}.png".downcase, class: 'h-16')
       - else
         = image_tag("sprites/monsters/#{char.job.name}.png".downcase, class: 'object-cover h-16')
-    .w-32.ml-1.text-white
+    .w-32.ml-1.text-white.hidden.md:block
       .text-sm.truncate #{char.name}
       .text-sm JP: #{char.jp_total}
       .flex.mt-1

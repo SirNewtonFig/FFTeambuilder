@@ -1,5 +1,11 @@
-.fixed.bottom-2.left-0
-  .bg-gray-800.p-2.ml-3.w-40.rounded-lg.cursor-pointer.hover:bg-gray-700{ data: { controller: 'context', action: 'keydown.esc@window->context#close click->context#open', context: { placement_value: 'top' } } }
+.fixed.bottom-0.inset-x-0.p-3.flex.justify-between{ class: 'bg-black/75' }
+  %div
+    - unless controller_name == 'dashboard'
+      %a.bg-gray-800.py-1.px-4.rounded-lg.cursor-pointer.hover:bg-gray-700.flex.items-center.space-x-1{ href: dashboard_path }        
+        = inline_svg_tag('icons/back.svg', class: 'h-4 w-4 text-white')
+        %span.text-white.text-sm.font-sans Back
+  
+  .bg-gray-800.py-1.px-4.w-40.rounded-lg.cursor-pointer.hover:bg-gray-700{ data: { controller: 'context', action: 'keydown.esc@window->context#close click->context#open', context: { placement_value: 'top' } } }
     .flex.items-center.space-x-1
       = inline_svg_tag('icons/account.svg', class: 'h-4 w-4 text-white')
       %span.text-white.text-sm.font-sans= Current.user.username

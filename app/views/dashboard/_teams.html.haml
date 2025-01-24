@@ -4,7 +4,7 @@
       .text-orange-400.group-hover:text-orange-300.font-semibold= team.name || 'Unnamed Team'
       %div.text-sm
         %span.text-gray-300 Updated
-        %span.text-white.font-semibold= team.updated_at.to_formatted_s(:deadline)
+        %span.text-white.font-semibold= relative_time(team.updated_at)
 
   - if teams.blank?
     .py-4.text-gray-600.italic You have no teams yet

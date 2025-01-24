@@ -15,14 +15,13 @@
 
   %div
     %span.text-gray-300.font-light Updated:
-    %span.text-white= team.updated_at.to_formatted_s(:deadline)
+    %span.text-white= relative_time(team.updated_at)
 
   .flex
     %span.text-gray-300.font-light JP Spent:
     .ml-1.flex.items-center
       %span{ class: (team.jp_total > 18000 ? 'text-red-400' : 'text-white') }
         #{team.jp_total}
-      %span.text-white= '/ 18000'
       .ml-1
         - if team.jp_total > 18000
           = inline_svg('icons/cancel.svg', class: 'h-4 w-4 text-red-500')
