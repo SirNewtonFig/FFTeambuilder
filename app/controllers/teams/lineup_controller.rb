@@ -1,6 +1,4 @@
 class Teams::LineupController < ApplicationController
-  before_action :load_team
-
   def update
     team = Team.find(params[:team_id])
     
