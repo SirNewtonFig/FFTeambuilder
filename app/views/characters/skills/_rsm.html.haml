@@ -1,11 +1,11 @@
-.-mx-2.px-2.py-3.space-y-1.cursor-pointer{ class: 'hover:bg-menu-dark/25' }
+.-mx-2.px-2.py-3.space-y-2.cursor-pointer{ class: 'hover:bg-menu-dark/25' }
   .flex.justify-between.items-center
     .flex.items-center.space-x-2
-      .text-lg= skill.name
+      %div= skill.name
       %span.text-gray-700 (#{skill.job.name})
 
     .flex
-      .ml-2.text-cyan-900
+      .ml-1.text-cyan-900
         #{skill.jp_cost} JP&nbsp;
 
       - if character.generic? && character.unlock_costs[skill.job].positive?
@@ -20,11 +20,10 @@
     .flex.flex-wrap
       - ['move', 'jump'].each do |prop|
         - next if skill.data[prop].blank?
-        .flex.mr-6
+        .flex.mr-6.text-sm
           .text-red-900.capitalize #{stat_label(prop)}:
-          .ml-2= "%+d" % skill.data[prop].to_i
+          .ml-1= "%+d" % skill.data[prop].to_i
     
-  %p.text-left
+  %p.text-left.text-sm
     %span.text-red-900.capitalize Description:
-    %br
     %span= skill.data['formula']

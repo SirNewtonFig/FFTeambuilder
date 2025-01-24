@@ -2,21 +2,12 @@ module StatHelper
   LABELS = {
     'attack' => 'PA',
     'magic' => 'MA',
-    'speed' => 'Sp',
+    'speed' => 'SP',
     'mp' => 'MP',
     'ct' => 'CT',
-    'silence' => 'Silence?',
-    'counter' => 'Counter?',
-    'reflectable' => 'Reflect?',
-    'counter_flood' => 'Counter Flood?',
-    'counter_magic' => 'Counter Magic?',
-    'atk_up' => 'Attack UP?',
-    'matk_up' => 'Magic AttackUP?',
-    'martial_arts' => 'Martial Arts?',
-    'two_hands' => 'Two Hands?',
-    'two_swords' => 'Two Swords?',
-    'protect' => 'Protect?',
-    'shell' => 'Shell?'
+    'reflectable' => 'Reflect',
+    'atk_up' => 'Attack UP',
+    'matk_up' => 'Magic AttackUP'
   }
 
   def stat_label(stat)

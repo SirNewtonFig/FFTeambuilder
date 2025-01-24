@@ -1,53 +1,51 @@
-.-mx-2.px-2.py-3.space-y-1.cursor-pointer{ class: 'hover:bg-menu-dark/25' }
+.-mx-2.px-2.py-3.space-y-2.cursor-pointer{ class: 'hover:bg-menu-dark/25' }
   
   .flex.justify-between.items-center
-    .text-lg= item.name
+    %div= item.name
 
     .flex
-      .ml-2.text-cyan-900
+      .text-cyan-900
         [#{item.data['formula']}]
 
   .flex.items-center.space-x-4
     - ['wp', 'w_ev'].each do |prop|
       - next if item.data[prop].blank?
-      .flex
+      .flex.text-sm
         .text-red-900.capitalize #{prop.dasherize.upcase}:
-        .ml-2= item.data[prop]
+        .ml-1= item.data[prop]
 
-  .flex.flex-wrap
-    - ['attack', 'magic', 'speed', 'move', 'jump'].each do |prop|
-      - next if item.data[prop].blank?
-      .flex.mr-4
-        .text-red-900.capitalize #{stat_label(prop)}:
-        .ml-2= "%+d" % item.data[prop].to_i
-    - ['element', 'strengthens', 'absorbs', 'halves', 'weakness', 'add', 'cancels', 'immune', 'start', 'always'].each do |prop|
-      - next if item.data[prop].blank?
-      .flex.mr-4
-        .text-red-900.capitalize #{prop}:
-        .ml-2= item.data[prop]
+  - if ['attack', 'magic', 'speed', 'move', 'jump'].any? { |prop| item.data[prop].present? }
+    .flex.flex-wrap
+      - ['attack', 'magic', 'speed', 'move', 'jump'].each do |prop|
+        - next if item.data[prop].blank?
+        .flex.mr-4.text-sm
+          .text-red-900.capitalize #{stat_label(prop)}:
+          .ml-1= "%+d" % item.data[prop].to_i
+  - if ['element', 'strengthens', 'absorbs', 'halves', 'weakness', 'immune', 'start', 'always'].any? { |prop| item.data[prop].present? }
+    .flex.flex-wrap
+      - ['element', 'strengthens', 'absorbs', 'halves', 'weakness', 'immune', 'start', 'always'].each do |prop|
+        - next if item.data[prop].blank?
+        .flex.mr-4.text-sm
+          .text-red-900.capitalize #{prop}:
+          .ml-1= item.data[prop]
 
   - if item.data['extra_effects'].present?
-    .text-left
-      %span.text-red-900.capitalize Extra Effects:
-      %span.ml-2
+    .text-left.text-sm
+      %span.text-red-900.capitalize Special:
+      %span.ml-1
         = item.data['extra_effects']
 
-  - if item.data['proc'].present?
-    .text-left
-      %span.text-red-900.capitalize Proc Effect:
+  - ['proc', 'add', 'cancels'].each do |prop|
+    - next if item.data[prop].blank?
+    .text-left.text-sm
+      %span.text-red-900.capitalize #{prop}:
       %span.ml-1
-        = item.data['proc']
+        - if item.data['proc_rate'].present?
+          = item.data['proc_rate']
+        = item.data[prop]
         - if item.data['proc_formula'].present?
           (#{item.data['proc_formula']})
-
-  - if item.data['proc_rate'].present?
-    .text-left
-      %span.text-red-900.capitalize Proc Rate:
-      %span.ml-1
-        = item.data['proc_rate']
-
-  .flex.space-x-4.flex-wrap
+  
+  .flex.space-x-4.flex-wrap.text-sm
     - if item.data['flags'].present?
       %div= item.data['flags']
-    - if item.data['female_only']
-      %div Female Only

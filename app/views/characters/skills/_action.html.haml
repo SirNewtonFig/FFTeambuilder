@@ -1,53 +1,57 @@
-.-mx-2.px-2.py-3.space-y-1.cursor-pointer{ class: 'hover:bg-menu-dark/25' }
+.-mx-2.px-2.py-3.space-y-2.cursor-pointer{ class: 'hover:bg-menu-dark/25' }
   .flex.justify-between.items-center
     .flex.items-center.space-x-2
-      .text-lg= skill.name
+      %div= skill.name
       - if character.generic?
         %span.text-gray-700 (#{skill.job.skillset})
 
     - if skill.respond_to?(:jp_cost)
       .flex
-        .ml-2.text-cyan-900
+        .ml-1.text-cyan-900
           #{skill.jp_cost} JP
 
-  .flex.flex-wrap
-    .flex.mr-6
-      .text-red-900 Effect:
-      - result = eval_formula(character:, skill:)
-      - if result != skill.formula
-        .ml-2{ class: 'group-[.eval-formula]:hidden' }= skill.formula
-        .ml-2.hidden.text-cyan-900{ class: 'group-[.eval-formula]:block' }= result
-      - else
-        .ml-2= skill.formula
+  .text-left.text-sm
+    %span.text-red-900 Effect:
+    - result = eval_formula(character:, skill:)
+    - if result != skill.formula
+      %span.ml-1{ class: 'group-[.eval-formula]:hidden' }= skill.formula
+      %span.ml-1.hidden.text-cyan-900{ class: 'group-[.eval-formula]:block' }= result
+    - else
+      %span.ml-1= skill.formula
 
   - if skill.data['element'].present?
     .flex.flex-wrap
-      .flex.mr-6
+      .flex.mr-6.text-sm
         .text-red-900 Element:
-        .ml-2= skill.data['element']
+        .ml-1= skill.data['element']
 
   .flex.flex-wrap
     - ['mp', 'ct', 'range', 'area', 'vert', 'target'].each do |prop|
       - next if skill.data[prop].blank?
-      .flex.mr-6
+      .flex.mr-6.text-sm
         .text-red-900.capitalize #{stat_label(prop)}:
-        .ml-2= skill.data[prop]
+        .ml-1= skill.data[prop]
 
-    .flex.mr-6
-      .text-red-900.capitalize Evade:
-      .ml-2= (evade = skill.data['evade']).present? ? evade : 'No'
+  - if ['atk_up', 'matk_up', 'martial_arts', 'two_hands', 'two_swords'].any? { |prop| skill.data[prop].present? }
+    .text-left.text-sm
+      %span.text-red-900.capitalize Empowered By:
+      %span.ml-1
+        = ['atk_up', 'matk_up', 'two_hands', 'two_swords'].filter_map { |prop| stat_label(prop) if skill.data[prop].present? }.join(' / ')
+        = " / Martial Arts" if skill.data['martial_arts'].present?
+        = " (if barehanded)" if skill.data['martial_arts']&.match?(/if barehanded/i)
 
-  .flex.flex-wrap
-    - ['reflectable', 'counter', 'counter_flood', 'counter_magic', 'mimic'].each do |prop|
-      .flex.mr-6
-        .text-red-900.capitalize #{stat_label(prop)}:
-        .ml-2= skill.data[prop].present? ? 'Yes' : 'No'
+  - if ['evade', 'protect', 'shell', 'reflectable'].any? { |prop| skill.data[prop].present? }
+    .text-left.text-sm
+      %span.text-red-900.capitalize Mitigated By:
+      %span.ml-1
+        - collection = []
+        - collection << "#{skill.data['evade']} Evade" if skill.data['evade'].present?
+        - collection += ['protect', 'shell', 'reflectable'].filter_map { |prop| stat_label(prop) if skill.data[prop].present? }
+        = collection.join(' / ')
 
-  .flex.flex-wrap
-    - ['atk_up', 'matk_up', 'martial_arts', 'two_hands', 'two_swords', 'protect', 'shell'].each do |prop|
-      - next unless skill.data[prop].present?
-      .flex.mr-6
-        .text-red-900.capitalize #{stat_label(prop)}:
-        .ml-2= skill.data[prop]
+  - if ['reflectable', 'counter', 'counter_flood', 'counter_magic', 'mimic'].any? { |prop| skill.data[prop].present? }
+    .text-left.text-sm
+      %span.text-red-900.capitalize Interactions:
+      %span.ml-1= ['counter', 'counter_magic', 'counter_flood', 'mimic'].filter_map { |prop| stat_label(prop) if skill.data[prop].present? }.join(' / ')
     
   

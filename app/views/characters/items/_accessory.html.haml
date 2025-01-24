@@ -1,34 +1,22 @@
 .-mx-2.px-2.py-3.space-y-1.cursor-pointer{ class: 'hover:bg-menu-dark/25' }
   .flex.justify-between.items-center
     .flex.items-center.space-x-6
-      .text-lg= item.name
-
-      - ['hp', 'mp'].each do |prop|
-        - next if item.data[prop].blank?
-        .flex
-          .text-red-900.capitalize #{prop.dasherize.upcase}:
-          .ml-2= item.data[prop]
+      %div= item.name
 
       - ['ev_p', 'ev_m'].each do |prop|
         - next if item.data[prop].blank?
-        .flex
+        .flex.text-sm
           .text-red-900.capitalize #{prop.dasherize.upcase}:
-          .ml-2 #{item.data[prop]}%
+          .ml-1 #{item.data[prop]}%
 
   .flex.flex-wrap
     - ['attack', 'magic', 'speed', 'move', 'jump'].each do |prop|
       - next if item.data[prop].blank?
-      .flex.mr-6
+      .flex.mr-6.text-sm
         .text-red-900.capitalize #{stat_label(prop)}:
-        .ml-2= "%+d" % item.data[prop].to_i
-    - ['element', 'strengthens', 'absorbs', 'halves', 'weakness', 'proc', 'add', 'immune', 'start', 'always'].each do |prop|
+        .ml-1= "%+d" % item.data[prop].to_i
+    - ['strengthens', 'absorbs', 'halves', 'weakness', 'immune', 'start', 'always'].each do |prop|
       - next if item.data[prop].blank?
-      .flex.mr-6
+      .flex.mr-6.text-sm
         .text-red-900.capitalize #{prop}:
-        .ml-2= item.data[prop]
-
-  .flex.space-x-6.flex-wrap
-    - if item.data['flags'].present?
-      %div= item.data['flags']
-    - if item.data['female_only']
-      %div Female Only
+        .ml-1= item.data[prop]

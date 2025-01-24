@@ -58,7 +58,7 @@ Wizard Rod,,38,4,20,2-swords 2-hands,Wi TM BM Su Sg,,2,,,,,,,,,,,,,,PA,PA*WP,,,
 Dragon Rod,,39,12,20,2-swords 2-hands,Wi TM BM Su Sg,,-2,,,,,,,,Bahamut,,,,,,PA,PA*WP,Dmg_U(MA*21),25.00%,
 Mace of Zeus,,41,8,20,2-swords 2-hands,Wi TM BM Su Sg,,,1,,,,,,,,,,Lightning,,,PA,PA*WP,,,
 Oak Staff,,3B,14,20,2-swords 2-hands,Pr Or BM Wk Me Sg,,,,,,,,,,,,,,,,MA,MA*WP,,,
-White Staff,,3C,1,20,2-swords 2-hands,Pr Or BM Wk Me Sg,,,,,,,,Negative Status,,,,,,,,PA,PA*WP,,,
+White Staff,,3C,1,20,2-swords 2-hands,Pr Or BM Wk Me Sg,,,,,,,,,,,,,,,,PA,PA*WP,,,Cancels negative status on target
 Healing Staff,,3D,14,20,2-swords 2-hands / Heals target,Pr Or BM Wk Me Sg,,,,,,,,,,,,,,,,MA,MA*WP,,,
 Rainbow Staff,,3E,10,20,2-swords 2-hands,Pr Or BM Wk Me Sg,,,,,,Discord,,,,,,,,,,MA,MA*WP,,100.00%,
 Wizard Staff,,3F,8,20,2-swords 2-hands,Pr Or BM Wk Me Sg,,1,,,,Frog,,,,,,,,,,MA,MA*WP,,15.00%,
