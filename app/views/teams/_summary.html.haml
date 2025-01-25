@@ -1,8 +1,8 @@
-#team-summary.text-gray-300.space-x-6.flex
+#team-summary.text-gray-300.space-x-6.my-2.flex
   .text-md.pl-2
-    .text-xs Team JP:
+    .text-xs Team JP
     %div
       %span{ class: ('text-red-400' if team.jp_total > 18000) }
         #{team.jp_total}
-      %span.text-gray-500 ≤ 18000
+      %span.text-gray-500.hidden.sm:inline ≤ 18000
 

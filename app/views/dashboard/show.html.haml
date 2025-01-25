@@ -1,20 +1,30 @@
 .font-sans.h-full.w-full.p-4
-  .md:mt-4.flex.justify-center
+  .sm:mt-4.flex.justify-center
     = image_tag('FFTb-logo.png', title: 'Thanks, Chad Jeeps')
 
   .mt-4.flex.justify-center
-    .flex.flex-wrap.flex-col.md:flex-row-reverse
-      .rounded-xl.bg-gray-800.p-4.my-3.md:w-96.md:mx-3
+    .flex.flex-wrap.flex-col.sm:flex-row-reverse
+      .rounded-xl.bg-gray-800.p-4.my-3.sm:w-96.sm:mx-3
         .flex.justify-between.items-center
           %h2.text-lg.text-white.font-semibold
             My Teams
 
-          %a.text-sm.text-orange-400.hover:text-orange-300{ href: new_team_path, data: { turbo_frame: '_top' } }
-            Create a Team
+          .flex.space-x-2.items-center
+            = form_with(url: teams_path, multipart: true, data: { controller: 'form' }) do
+              %label.cursor-pointer{ for: 'upload-team' }
+                .text-sm.text-orange-400.hover:text-orange-300 Import a Team
+                %input#upload-team.hidden{ type: 'file', name: 'team_file', accept: '.yml', data: { action: 'form#submit' } }
+            
+            %span.text-gray-500= '|'
+            
+            %a.text-sm.text-orange-400.hover:text-orange-300{ href: new_team_path, data: { turbo_frame: '_top' } }
+              Create a Team
+
+
 
         = render 'teams', teams: @teams
       
-      .rounded-xl.bg-gray-800.p-4.my-3.md:w-96.md:mx-3
+      .rounded-xl.bg-gray-800.p-4.my-3.sm:w-96.sm:mx-3
         .flex.justify-between.items-center
           %h2.text-lg.text-white.font-semibold
             Active Events

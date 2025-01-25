@@ -71,7 +71,7 @@ Rails.application.routes.draw do
 
   resources :teams do
     member do
-      get :metadata
+      get :export
     end
 
     resources :characters, controller: 'teams/characters' do

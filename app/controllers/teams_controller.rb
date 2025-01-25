@@ -7,6 +7,7 @@ class TeamsController < ApplicationController
 
   def new
     team = Team.new(user_id: Current.user.id)
+    team.player_name = Current.user.username if Current.user.persisted?
     team.update(Team.blank_team_attributes)
 
     redirect_to edit_team_path(team)
@@ -30,10 +31,21 @@ class TeamsController < ApplicationController
     render layout: 'modal'    
   end
 
-  def save
+  def export
     load_team
 
-    @team.update(team_attributes)
+    begin
+      f = Tempfile.new('team', Rails.root.join('tmp'))
+      f.write(@team.attributes.except('id', 'created_at', 'updated_at', 'user_id').to_yaml)
+      f.open
+
+      File.open(f.path, 'r') do |ff|
+        send_data(ff.read, filename: "#{@team.name}.yml")
+      end
+    ensure
+      f.close
+      f.unlink
+    end
   end
 
   def create
