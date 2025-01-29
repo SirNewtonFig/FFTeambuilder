@@ -52,16 +52,16 @@
             #submissions.space-y-2.px-4
               = render 'events/show/submissions', teams: @submissions, event: @event
 
-      .font-sans.mb-6.max-w-full.md:max-w-screen-md{ class: 'xl:max-w-[72rem]'}
-        .text-white.bg-gray-800.rounded-lg
-          %h2.p-4.text-lg.font-semibold.text-white Confirmed Submissions
-          #bracket.space-y-2.px-4
-            = render 'events/show/bracket', teams: @bracket, event: @event
+        .font-sans.mb-6.max-w-full.md:max-w-screen-md{ class: 'xl:max-w-[72rem]'}
+          .text-white.bg-gray-800.rounded-lg
+            %h2.p-4.text-lg.font-semibold.text-white Confirmed Submissions
+            #bracket.space-y-2.px-4
+              = render 'events/show/bracket', teams: @bracket, event: @event
 
-      .font-sans.mb-6.max-w-full.md:max-w-screen-md{ class: 'xl:max-w-[72rem]'}
-        .text-white.bg-gray-800.rounded-lg
-          %h2.p-4.text-lg.font-semibold.text-white Cut Submissions
-          #cut-submissions.space-y-2.px-4
-            = render 'events/show/cut_submissions', teams: @cut_submissions, event: @event
+        .font-sans.mb-6.max-w-full.md:max-w-screen-md{ class: 'xl:max-w-[72rem]'}
+          .text-white.bg-gray-800.rounded-lg
+            %h2.p-4.text-lg.font-semibold.text-white Cut Submissions
+            #cut-submissions.space-y-2.px-4
+              = render 'events/show/cut_submissions', teams: @cut_submissions, event: @event
 
   = render 'users/menu', back_path: dashboard_path
