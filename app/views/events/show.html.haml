@@ -1,6 +1,6 @@
 .mx-3.md:mx-8
   .font-sans.fixed.-mx-3.px-3.md:-mx-8.md:px-8.py-4.top-0.mb-6.w-screen{ class: 'bg-black/75' }
-    .max-w-full.md:max-w-screen-md{ class: 'xl:max-w-[72rem]'}
+    .max-w-full
       .flex.flex-col.md:flex-row.justify-center.md:items-center.md:justify-between
         %div
           .flex.items-center
@@ -25,17 +25,17 @@
       .font-sans.mb-6.max-w-full.md:max-w-screen-md{ class: 'xl:max-w-[72rem]'}
         = simple_format(@event.description || 'No description provided', class: 'text-gray-300 prose bg-gray-800 p-2 border-l-2 border-orange-500')
 
-    - if @event.published?
+    - if @event.show_bracket?
       .font-sans.flex.items-center.mb-2
         .text-xs.text-white View bracket and submit predictions at 
-        %a.ml-2.flex.items-center.text-xs.text-orange-400.hover:text-orange-300{ href: @event.data['live_bracket'].sub('.svg', ''), target: '_blank', rel: 'noopener noreferer' }
+        %a.ml-2.flex.items-center.text-xs.text-orange-400.hover:text-orange-300{ href: @event.bracket_url.sub('.svg', ''), target: '_blank', rel: 'noopener noreferer' }
           = inline_svg_tag('icons/challonge.svg', class: 'h-4 mr-1')
           Challonge
           = inline_svg_tag('icons/open_new.svg', class: 'h-4 w-4 ml-1')
 
-      = turbo_frame_tag(:bracket, src: (event_path(@event) unless turbo_frame?)) do
+      = turbo_frame_tag(:bracket_frame, src: (event_path(@event) unless turbo_frame?)) do
         - if turbo_frame?
-          #bracket{ data: { controller: 'drag-to-scroll', action: 'click->drag-to-scroll#drag drag@window->drag-to-scroll#drag' } }
+          #bracket{ class: 'group/bracket' }
             = parse_bracket(@event).to_html.html_safe
       
     - else

@@ -8,7 +8,7 @@
 }
 
 #bracket .bracket-line {
-  @apply fill-none stroke-2 stroke-gray-400;
+  @apply fill-none stroke-2 stroke-gray-600;
 }
 
 #bracket .match--base-background {
@@ -37,10 +37,6 @@
 
 #bracket .match--player-score-background.-winner {
   @apply fill-orange-500;
-}
-
-#bracket .match--player-name {
-  @apply fill-gray-100 text-xs;
 }
 
 #bracket .match--player-name.-placeholder {

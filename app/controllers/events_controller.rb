@@ -79,6 +79,16 @@ class EventsController < ApplicationController
     redirect_to event_path(@event)
   end
 
+  def start
+    @event = Event.find(params[:id])
+
+    raise 'unauthorized' unless @event.mine?
+
+    @event.update(state: 'started')
+
+    redirect_to event_path(@event)
+  end
+
   private
 
     def event_params

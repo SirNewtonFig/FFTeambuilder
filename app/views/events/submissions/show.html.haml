@@ -32,7 +32,7 @@
           = turbo_frame_tag(:lineup) do
             = form_with(url: team_lineup_path(team_id: @team), method: :patch, data: { controller: 'form lineup', lineup_target: 'form', turbo_frame: :lineup, readonly: true }) do
               - 4.times do |i|
-                %div{ data: { team: @team.id, index: i, action: 'click->lineup#select:stop', lineup_target: 'character' }}
+                %div{ data: { team: @submission.id, index: i, action: 'click->lineup#select:stop', lineup_target: 'character' }}
                   = render 'teams/characters/summary', selected: i == params[:id].to_i, char: @team.characters[i], i: i, readonly: true
           
           .mt-4.px-3.text-gray-400.hidden.sm:block.text-sm Team Colors
@@ -46,7 +46,7 @@
               .hidden.md:block.text-white.text-sm Calculate Formulas?
       
       .w-full.mr-3{ class: 'ml-[4.25rem] sm:ml-[12.75rem]' }
-        = turbo_frame_tag(:character_editor, src: team_character_path(team_id: @team.id, id: 0))
+        = turbo_frame_tag(:character_editor, src: submission_character_path(submission_id: @submission.id, id: 0))
 
 #overlay.hidden.fixed.w-full.h-full.top-0.left-0.right-0.z-10.bg-gray-700.opacity-70
 

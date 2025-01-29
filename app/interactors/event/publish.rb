@@ -2,7 +2,7 @@ class Event::Publish < Event::ChallongeBaseInteractor
   contextualize_with :'event/context'
 
   def perform
-    return if event.data['challonge_tournament_id'].present?
+    return if event.external_id.present?
 
     create_tournament
     submit_participants
@@ -21,7 +21,7 @@ class Event::Publish < Event::ChallongeBaseInteractor
 
       raise t.errors.messages.values.flatten.join("\n") unless t.valid?
 
-      event.update(data: { challonge_tournament_id: t.id, live_bracket: t.live_image_url })
+      event.update(external_id: t.id, bracket_url: t.live_image_url, state: 'published')
       context.tournament = t
     end
 
@@ -29,7 +29,7 @@ class Event::Publish < Event::ChallongeBaseInteractor
       event.submissions.where(approved: true).each do |submission|
         p = Challonge::Participant.create(name: submission.display_name, tournament:, misc: submission.id)
 
-        submission.update(data: { 'challonge_player_id' => p.id })
+        submission.update(external_id: p.id)
       end
     end
 

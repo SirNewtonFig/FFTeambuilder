@@ -5,8 +5,13 @@
   - if event.open?
     %a{ href: new_event_submission_path(event_id: event), class: primary_button_classes, data: { turbo_frame: 'modal' } } Submit a Team
 
-  - elsif event.mine? && !event.published? && Current.user.challonge_credential.present?
-    %a{ href: publish_event_path(event), class: confirm_button_classes, data: { turbo_method: :post } } Publish Event
-
-  - elsif event.mine? && event.published? && Current.user.challonge_credential.present?
-    %a{ href: shuffle_event_path(event), class: primary_button_classes, data: { turbo_method: :post } } Shuffle Bracket
+  - elsif event.mine? && Current.user.challonge_connected?
+    - if event.state == 'open'
+      %a{ href: publish_event_path(event), class: confirm_button_classes, data: { turbo_method: :post } } Publish Event
+    - elsif event.state == 'published'
+      %a{ href: shuffle_event_path(event), class: primary_button_classes, data: { turbo_method: :post } } Shuffle Bracket
+      %a{ href: start_event_path(event), class: confirm_button_classes, data: { turbo_method: :post } } Confirm Bracket
+    - elsif event.state == 'started'
+      %a{ href: memgen_event_path(event), class: primary_button_classes, data: { turbo_frame: :memgen } } Run Matches
+  - elsif event.mine? && event.published? && Current.user.challonge_connected?
+    

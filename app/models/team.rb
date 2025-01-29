@@ -1,6 +1,8 @@
 class Team < ApplicationRecord
   extend Memoist
 
+  has_paper_trail
+
   has_many :submissions, inverse_of: :team, dependent: :destroy
   has_many :events, through: :submissions
 
@@ -10,6 +12,8 @@ class Team < ApplicationRecord
   enum :palette_b, %i{ blue red green white purple yellow brown black }, suffix: true, _scopes: false
 
   validates :user_id, presence: true
+
+  before_update :cache_jp
 
   scope :for_event, ->(event) {
     joins(:events)
@@ -41,10 +45,6 @@ class Team < ApplicationRecord
 
   def faith_total
     characters.map(&:faith).map(&:to_i).sum
-  end
-
-  def jp_total
-    characters.map(&:jp_total).sum
   end
 
   def guest?
@@ -81,5 +81,9 @@ class Team < ApplicationRecord
     rescue => e
       puts enum.inspect
       raise e
+    end
+
+    def cache_jp
+      self.jp_total = characters.map(&:jp_total).sum
     end
 end

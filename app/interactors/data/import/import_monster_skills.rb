@@ -34,7 +34,7 @@ class Data::Import::ImportMonsterSkills < ActiveInteractor::Base
           counter_magic: row['Counter Magic?'],
           counter_flood: row['Counter Flood?'],
           memgen_id: row['Skill ID'].rjust(4, '0'),
-          mimic: ('Yes' unless row['Mimic?'] == 'No'),
+          mimic: ('Yes' if row['Mimic?'] == 'Yes'),
           atk_up: row['Atk Up?'],
           matk_up: row['MAtk Up?'],
           martial_arts: row['Martial Arts?'],

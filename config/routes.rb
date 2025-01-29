@@ -57,6 +57,8 @@ Rails.application.routes.draw do
       get :confirm_destroy
       post :publish
       post :shuffle
+      post :start
+      get :memgen
     end
     
     resources :submissions, controller: 'events/submissions' do
@@ -123,6 +125,14 @@ Rails.application.routes.draw do
   resource :challonge_credentials do
     member do
       get :confirm_destroy
+    end
+  end
+
+  resources :submissions do
+    resources :characters, controller: 'submissions/characters' do
+      member do
+        get :jp_summary
+      end
     end
   end
 end

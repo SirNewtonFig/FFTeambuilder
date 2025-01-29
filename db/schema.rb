@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2025_01_27_194759) do
+ActiveRecord::Schema[7.0].define(version: 2025_01_29_151459) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -31,6 +31,9 @@ ActiveRecord::Schema[7.0].define(version: 2025_01_27_194759) do
     t.datetime "updated_at", null: false
     t.text "description"
     t.text "slug"
+    t.text "state", default: "open"
+    t.integer "external_id"
+    t.text "bracket_url"
     t.index ["user_id"], name: "index_events_on_user_id"
   end
 
@@ -153,6 +156,7 @@ ActiveRecord::Schema[7.0].define(version: 2025_01_27_194759) do
     t.integer "priority"
     t.text "player_name_override"
     t.text "team_name_override"
+    t.integer "external_id"
     t.index ["event_id"], name: "index_submissions_on_event_id"
     t.index ["team_id"], name: "index_submissions_on_team_id"
   end
@@ -166,6 +170,7 @@ ActiveRecord::Schema[7.0].define(version: 2025_01_27_194759) do
     t.jsonb "data"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "jp_total", default: 0
   end
 
   create_table "users", id: :uuid, default: -> { "gen_random_uuid()" }, force: :cascade do |t|
@@ -182,6 +187,16 @@ ActiveRecord::Schema[7.0].define(version: 2025_01_27_194759) do
     t.index ["role_id"], name: "index_users_roles_on_role_id"
     t.index ["user_id", "role_id"], name: "index_users_roles_on_user_id_and_role_id"
     t.index ["user_id"], name: "index_users_roles_on_user_id"
+  end
+
+  create_table "versions", force: :cascade do |t|
+    t.bigint "whodunnit"
+    t.datetime "created_at"
+    t.bigint "item_id", null: false
+    t.string "item_type", null: false
+    t.string "event", null: false
+    t.text "object"
+    t.index ["item_type", "item_id"], name: "index_versions_on_item_type_and_item_id"
   end
 
 end

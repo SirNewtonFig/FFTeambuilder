@@ -5,7 +5,7 @@ class Event < ApplicationRecord
   has_many :teams, through: :submissions
   belongs_to :user
   
-  scope :active, -> { where(active: true) }
+  scope :active, -> { where.not(state: 'closed') }
   scope :open, -> { where(deadline: Time.current..) }
 
   def mine?
@@ -16,7 +16,7 @@ class Event < ApplicationRecord
     deadline.future?
   end
 
-  def published?
-    data['challonge_tournament_id'].present?
+  def show_bracket?
+    external_id.present? && (state == 'started' || mine?)
   end
 end

@@ -1,6 +1,4 @@
 class Event::ChallongeBaseInteractor < ActiveInteractor::Base
-  after_context_validation :set_credentials
-
   delegate :event, :tournament, to: :context
 
   private

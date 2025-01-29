@@ -4,9 +4,9 @@ class Event::Context < ActiveInteractor::Context::Base
   validates :event, presence: true
 
   def load_tournament
-    fail! if event.data['challonge_tournament_id'].blank?
+    fail! if event.external_id.blank?
 
-    self.tournament = Challonge::Tournament.find(event.data['challonge_tournament_id'])
+    self.tournament = Challonge::Tournament.find(event.external_id)
   rescue ActiveResource::ResourceNotFound
     fail!
   end

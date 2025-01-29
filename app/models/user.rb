@@ -17,4 +17,8 @@ class User < ApplicationRecord
   def self.guest(session_id)
     new(id: session_id, username: 'guest user')
   end
+
+  def challonge_connected?
+    challonge_credential.present?
+  end
 end

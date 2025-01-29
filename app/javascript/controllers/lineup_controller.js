@@ -23,7 +23,7 @@ export default class LineupController extends Controller {
     let path
     
     if (this.element.dataset.readonly) {
-      path = `/teams/${event.currentTarget.dataset.team}/characters/${event.currentTarget.dataset.index}`
+      path = `/submissions/${event.currentTarget.dataset.team}/characters/${event.currentTarget.dataset.index}`
     } else {
       path = `/teams/${event.currentTarget.dataset.team}/characters/${event.currentTarget.dataset.index}/edit`
     }

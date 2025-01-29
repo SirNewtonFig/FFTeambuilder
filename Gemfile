@@ -47,6 +47,7 @@ gem 'memoist'
 gem 'omniauth'
 gem 'omniauth-discord'
 gem 'omniauth-rails_csrf_protection'
+gem 'paper_trail'
 gem 'rolify'
 gem 'challonge-api', git: 'https://github.com/SirNewtonFig/challonge-ruby-gem', tag: 'v0.0.1'
 

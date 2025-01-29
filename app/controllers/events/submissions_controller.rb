@@ -93,6 +93,8 @@ class Events::SubmissionsController < ApplicationController
 
     def load_submission
       @team = Team.find(params[:id])
+      @team = @team.paper_trail.version_at(@event.deadline) if @event.deadline.past?
+
       @submission = Submission.find_by(event_id: @event.id, team_id: @team.id)
     end
 end
