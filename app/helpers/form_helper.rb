@@ -126,6 +126,23 @@ module FormHelper
     '.squish
   end
 
+  def confirm_button_classes
+    '
+      cursor-pointer
+      focus:outline-none
+      text-white
+      focus:ring-4
+      font-medium
+      rounded-lg
+      text-sm
+      px-5
+      py-2.5
+      bg-green-500
+      hover:bg-green-600
+      focus:ring-green-700
+    '.squish
+  end
+
   def neutral_button_classes
     '
       text-gray-900
@@ -166,5 +183,11 @@ module FormHelper
 
   def wrap_tooltip_neutral(&block)
     tag.div(capture(&block), class: 'z-30 absolute hidden shadow-lg bg-gray-700 left-0 rounded font-sans', data: { context_target: 'tooltip' })
+  end
+
+  def readonly_link_to(name, href, readonly: false, **options)
+    return tag.span(name, **options) if readonly
+
+    link_to(name, href, **options)
   end
 end

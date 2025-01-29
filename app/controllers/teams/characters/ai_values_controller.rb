@@ -2,6 +2,8 @@ class Teams::Characters::AiValuesController < ApplicationController
   before_action :load_character
 
   def update
+    raise 'unauthorized' unless @team.mine?
+    
     @char.data.deep_merge!(ai_params)
     
     @team.data[i] = @char.data

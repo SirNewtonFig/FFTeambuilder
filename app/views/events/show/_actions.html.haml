@@ -1,0 +1,12 @@
+.flex.justify-end.space-x-4.mr-2
+  - if event.mine?
+    %a{ href: confirm_destroy_event_path(event), class: destructive_button_classes, data: { turbo_frame: 'modal' } } Delete Event
+
+  - if event.open?
+    %a{ href: new_event_submission_path(event_id: event), class: primary_button_classes, data: { turbo_frame: 'modal' } } Submit a Team
+
+  - elsif event.mine? && !event.published? && Current.user.challonge_credential.present?
+    %a{ href: publish_event_path(event), class: confirm_button_classes, data: { turbo_method: :post } } Publish Event
+
+  - elsif event.mine? && event.published? && Current.user.challonge_credential.present?
+    %a{ href: shuffle_event_path(event), class: primary_button_classes, data: { turbo_method: :post } } Shuffle Bracket

@@ -55,6 +55,8 @@ Rails.application.routes.draw do
   resources :events do
     member do
       get :confirm_destroy
+      post :publish
+      post :shuffle
     end
     
     resources :submissions, controller: 'events/submissions' do
@@ -72,6 +74,7 @@ Rails.application.routes.draw do
   resources :teams do
     member do
       get :export
+      post :clone
     end
 
     resources :characters, controller: 'teams/characters' do
@@ -112,6 +115,12 @@ Rails.application.routes.draw do
   end
 
   resource :user, only: %i{ destroy } do
+    member do
+      get :confirm_destroy
+    end
+  end
+
+  resource :challonge_credentials do
     member do
       get :confirm_destroy
     end

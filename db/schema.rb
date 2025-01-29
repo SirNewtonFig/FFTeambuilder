@@ -10,9 +10,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2025_01_23_200227) do
+ActiveRecord::Schema[7.0].define(version: 2025_01_27_194759) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "challonge_credentials", force: :cascade do |t|
+    t.uuid "user_id"
+    t.text "username"
+    t.text "key"
+    t.index ["user_id"], name: "index_challonge_credentials_on_user_id"
+  end
 
   create_table "events", force: :cascade do |t|
     t.text "title"
@@ -23,6 +30,7 @@ ActiveRecord::Schema[7.0].define(version: 2025_01_23_200227) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.text "description"
+    t.text "slug"
     t.index ["user_id"], name: "index_events_on_user_id"
   end
 

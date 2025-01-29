@@ -1,7 +1,6 @@
 class EventsController < ApplicationController
   include HasSubmissions
-  before_action :authenticate_user!, except: [:show]
-
+  
   def new
     @event = Event.new(deadline: Time.current.end_of_day)
 
@@ -11,7 +10,7 @@ class EventsController < ApplicationController
   def edit
     @event = Event.find(params[:id])
 
-    raise 'unauthorized' unless @event.user == Current.user
+    raise 'unauthorized' unless @event.mine?
 
     render layout: 'modal_neutral'
   end
@@ -27,6 +26,8 @@ class EventsController < ApplicationController
   def update
     @event = Event.find(params[:id])
 
+    raise 'unauthorized' unless @event.mine?
+
     @event.update(event_params)
 
     redirect_to event_path(@event)
@@ -36,10 +37,14 @@ class EventsController < ApplicationController
     @event = Event.find(params[:id])
 
     load_submissions
+
+    return unless turbo_frame?
   end
 
   def confirm_destroy
     @event = Event.find(params[:id])
+
+    raise 'unauthorized' unless @event.mine?
 
     render layout: 'modal_neutral'
   end
@@ -47,14 +52,36 @@ class EventsController < ApplicationController
   def destroy
     @event = Event.find(params[:id])
 
+    raise 'unauthorized' unless @event.mine?
+
     @event.destroy
 
     redirect_to dashboard_path
   end
 
+  def publish
+    @event = Event.find(params[:id])
+
+    raise 'unauthorized' unless @event.mine?
+
+    Event::Publish.perform(event: @event)
+
+    redirect_to event_path(@event)
+  end
+
+  def shuffle
+    @event = Event.find(params[:id])
+
+    raise 'unauthorized' unless @event.mine?
+
+    Event::ShuffleBracket.perform(event: @event)
+
+    redirect_to event_path(@event)
+  end
+
   private
 
     def event_params
-      params.require(:event).permit(:title, :deadline, :active, :description)
+      params.require(:event).permit(:title, :deadline, :active, :description, :slug)
     end
 end

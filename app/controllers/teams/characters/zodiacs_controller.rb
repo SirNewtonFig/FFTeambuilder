@@ -6,6 +6,8 @@ class Teams::Characters::ZodiacsController < ApplicationController
   end
 
   def update
+    raise 'unauthorized' unless @team.mine?
+    
     @char.data.merge!(zodiac_params)
     
     @team.data[i] = @char.data

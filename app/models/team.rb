@@ -14,7 +14,7 @@ class Team < ApplicationRecord
   scope :for_event, ->(event) {
     joins(:events)
       .where(events: {id: event.id })
-      .order('teams.player_name, submissions.priority')
+      .order('submissions.team_name_override, teams.player_name, submissions.priority')
       .select('teams.*, submissions.team_name_override, submissions.player_name_override')
   }
 
@@ -52,7 +52,7 @@ class Team < ApplicationRecord
   end
 
   def mine?
-    user == Current.user
+    user_id == Current.user.id
   end
 
   # TODO: move this into a serializer

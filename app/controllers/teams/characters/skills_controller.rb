@@ -12,6 +12,8 @@ class Teams::Characters::SkillsController < ApplicationController
   end
 
   def update
+    raise 'unauthorized' unless @team.mine?
+    
     @refresh_secondary = secondary_changed?
     @support_changed = support_changed?
     @movement_changed = movement_changed? 

@@ -1,4 +1,5 @@
 - i = params[:character_id] || params[:id]
+- readonly ||= false
 
 #primary-skills.bg-menu-texture.border-2.border-menu-dark.px-4.py-2.flex-1
   .flex.text-lg.mb-1.text-menu-dark
@@ -14,7 +15,7 @@
         - disabled = !available.include?(skill)
         .flex.items-center{ data: { controller: 'context', action: 'keydown.esc@window->context#close' } }
           %div
-            %input.w-4.h-4.text-menu-dark.bg-gray-100.rounded.border-gray-300.focus:ring-menu-dark.focus:ring-2{ name: 'character[skills][primary][]', id: "primary_#{i}", type: "checkbox", value: skill.id, checked: char.primary_skill_ids.include?(skill.id), disabled: disabled, data: { action: 'change->form#submit' } }
+            %input.w-4.h-4.text-menu-dark.bg-gray-100.rounded.border-gray-300.focus:ring-menu-dark.focus:ring-2{ name: 'character[skills][primary][]', id: "primary_#{i}", type: "checkbox", value: skill.id, checked: char.primary_skill_ids.include?(skill.id), disabled: readonly || disabled, data: { action: 'change->form#submit' } }
           .flex-1.ml-3
             %label{ class: ('text-menu-dark' if disabled), for: "primary_#{i}", data: { action: 'contextmenu->context#open:prevent' } }= skill.name
           %div= skill.jp_cost

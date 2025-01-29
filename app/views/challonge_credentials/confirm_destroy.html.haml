@@ -1,0 +1,10 @@
+- content_for :heading do
+  .flex.items-center
+    %h2.text-xl Delete Challonge Credentials
+    
+%p.mb-4 Are you sure you want to delete your Challonge Credentials?
+
+= form_for(current_user.challonge_credential, url: challonge_credentials_path, method: :delete) do |f|
+  .flex.justify-center.space-x-8
+    = button_tag('Nope', class: neutral_button_classes, data: { action: 'modal#close' })
+    = f.submit('Yep', class: destructive_button_classes)

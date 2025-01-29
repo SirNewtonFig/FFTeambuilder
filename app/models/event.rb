@@ -1,4 +1,6 @@
 class Event < ApplicationRecord
+  extend Memoist
+
   has_many :submissions, dependent: :destroy
   has_many :teams, through: :submissions
   belongs_to :user
@@ -8,5 +10,13 @@ class Event < ApplicationRecord
 
   def mine?
     user == Current.user
+  end
+
+  def open?
+    deadline.future?
+  end
+
+  def published?
+    data['challonge_tournament_id'].present?
   end
 end

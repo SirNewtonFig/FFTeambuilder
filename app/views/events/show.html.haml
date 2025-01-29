@@ -1,5 +1,5 @@
 .mx-3.md:mx-8
-  .font-sans.sticky.-mx-3.px-3.md:-mx-8.md:px-8.py-4.top-0.mb-6{ class: 'bg-black/75' }
+  .font-sans.fixed.-mx-3.px-3.md:-mx-8.md:px-8.py-4.top-0.mb-6.w-screen{ class: 'bg-black/75' }
     .max-w-full.md:max-w-screen-md{ class: 'xl:max-w-[72rem]'}
       .flex.flex-col.md:flex-row.justify-center.md:items-center.md:justify-between
         %div
@@ -17,40 +17,51 @@
           %div.text-sm
             %span.text-gray-300 Submissions:
             %span.text-white.font-semibold= @event.submissions.count
-        .flex.justify-end.space-x-4
-          - if @event.user == Current.user
-            %a{ href: confirm_destroy_event_path(@event), class: destructive_button_classes, data: { turbo_frame: 'modal' } } Delete Event
+        
+        = render 'events/show/actions', event: @event
 
-          - if @event.deadline.future?
-            %a{ href: new_event_submission_path(event_id: @event), class: primary_button_classes, data: { turbo_frame: 'modal' } } Submit a Team
+  %div{ class: 'mt-[11rem] md:mt-[8.5rem]' }
+    - if @event.description.present? || @event.mine?
+      .font-sans.mb-6.max-w-full.md:max-w-screen-md{ class: 'xl:max-w-[72rem]'}
+        = simple_format(@event.description || 'No description provided', class: 'text-gray-300 prose bg-gray-800 p-2 border-l-2 border-orange-500')
 
-  - if @event.description.present? || @event.mine?
-    .font-sans.mb-6.max-w-full.md:max-w-screen-md{ class: 'xl:max-w-[72rem]'}
-      = simple_format(@event.description || 'No description provided', class: 'text-gray-300 prose bg-gray-800 p-2 border-l-2 border-orange-500')
+    - if @event.published?
+      .font-sans.flex.items-center.mb-2
+        .text-xs.text-white View bracket and submit predictions at 
+        %a.ml-2.flex.items-center.text-xs.text-orange-400.hover:text-orange-300{ href: @event.data['live_bracket'].sub('.svg', ''), target: '_blank', rel: 'noopener noreferer' }
+          = inline_svg_tag('icons/challonge.svg', class: 'h-4 mr-1')
+          Challonge
+          = inline_svg_tag('icons/open_new.svg', class: 'h-4 w-4 ml-1')
 
-  .font-sans.mb-6.max-w-full.md:max-w-screen-md{ class: 'xl:max-w-[72rem]'}
-    .text-white.pt-2.bg-gray-800.rounded-lg
-      %h2.px-4.my-2.text-lg.font-semibold.text-white My Submissions
-      #my-submissions.space-y-2.px-4
-        = render 'events/show/my_submissions', teams: @my_submissions, event: @event
+      = turbo_frame_tag(:bracket, src: (event_path(@event) unless turbo_frame?)) do
+        - if turbo_frame?
+          #bracket{ data: { controller: 'drag-to-scroll', action: 'click->drag-to-scroll#drag drag@window->drag-to-scroll#drag' } }
+            = parse_bracket(@event).to_html.html_safe
+      
+    - else
+      .font-sans.mb-6.max-w-full.md:max-w-screen-md{ class: 'xl:max-w-[72rem]'}
+        .text-white.pt-2.bg-gray-800.rounded-lg
+          %h2.px-4.my-2.text-lg.font-semibold.text-white My Submissions
+          #my-submissions.space-y-2.px-4
+            = render 'events/show/my_submissions', teams: @my_submissions, event: @event
 
-  - if @event.mine?
-    .font-sans.mb-6.max-w-full.md:max-w-screen-md{ class: 'xl:max-w-[72rem]'}
-      .text-white.bg-gray-800.rounded-lg
-        %h2.p-4.text-lg.font-semibold.text-white Pending Submissions
-        #submissions.space-y-2.px-4
-          = render 'events/show/submissions', teams: @submissions, event: @event
+      - if @event.mine?
+        .font-sans.mb-6.max-w-full.md:max-w-screen-md{ class: 'xl:max-w-[72rem]'}
+          .text-white.bg-gray-800.rounded-lg
+            %h2.p-4.text-lg.font-semibold.text-white Pending Submissions
+            #submissions.space-y-2.px-4
+              = render 'events/show/submissions', teams: @submissions, event: @event
 
-    .font-sans.mb-6.max-w-full.md:max-w-screen-md{ class: 'xl:max-w-[72rem]'}
-      .text-white.bg-gray-800.rounded-lg
-        %h2.p-4.text-lg.font-semibold.text-white Confirmed Submissions
-        #bracket.space-y-2.px-4
-          = render 'events/show/bracket', teams: @bracket, event: @event
+      .font-sans.mb-6.max-w-full.md:max-w-screen-md{ class: 'xl:max-w-[72rem]'}
+        .text-white.bg-gray-800.rounded-lg
+          %h2.p-4.text-lg.font-semibold.text-white Confirmed Submissions
+          #bracket.space-y-2.px-4
+            = render 'events/show/bracket', teams: @bracket, event: @event
 
-    .font-sans.mb-6.max-w-full.md:max-w-screen-md{ class: 'xl:max-w-[72rem]'}
-      .text-white.bg-gray-800.rounded-lg
-        %h2.p-4.text-lg.font-semibold.text-white Cut Submissions
-        #cut-submissions.space-y-2.px-4
-          = render 'events/show/cut_submissions', teams: @cut_submissions, event: @event
+      .font-sans.mb-6.max-w-full.md:max-w-screen-md{ class: 'xl:max-w-[72rem]'}
+        .text-white.bg-gray-800.rounded-lg
+          %h2.p-4.text-lg.font-semibold.text-white Cut Submissions
+          #cut-submissions.space-y-2.px-4
+            = render 'events/show/cut_submissions', teams: @cut_submissions, event: @event
 
-  = render "users/menu"
+  = render 'users/menu', back_path: dashboard_path

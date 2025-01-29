@@ -1,0 +1,27 @@
+%div{ class: 'w-[40rem]' }
+  = form_for(@credential, url: challonge_credentials_path(@credential), data: { controller: 'form', form_modal_outlet: '.modal-controller' }) do |f|
+    .space-y-6
+      %p.text-white
+        FFTeambuilder uses your Challonge API credentials to act on your behalf in setting up tournament brackets for the events you manage. Your credentials are encrypted at the database and application level and are not transmitted anywhere except for their use in authenticating Challonge API requests.
+
+      %p
+        %span.text-white To view, create, or revoke your Challonge API key, see
+        %a.text-orange-400.hover:text-orange:300.flex.items-center{ href: 'https://challonge.com/settings/developer', target: '_blank', rel: 'noopener noreferer' }
+          https://challonge.com/settings/developer
+          = inline_svg('icons/open_new.svg', class: 'ml-1 h-4 w-4 inline')
+      
+      %div
+        = f.label(:username, 'Username', class: 'text-xs block')
+        = f.text_field(:username, placeholder: 'ramzabeoulve', class: text_field_classes_neutral)
+      
+      %div
+        = f.label(:key, 'API Key', class: 'text-xs block')
+        = f.text_field(:key, placeholder: 'supersecret123', class: text_field_classes_neutral)
+
+    .mt-4.flex.justify-end.space-x-8
+      = button_tag('Cancel', class: neutral_button_classes, data: { action: 'modal#close' })
+      
+      %a{ href: confirm_destroy_challonge_credentials_path, class: destructive_button_classes, data: { turbo_frame: 'modal' } }
+        Delete Credentials
+      
+      = f.submit('Save Credentials', class: confirm_button_classes, data: { action: 'form#submit' })

@@ -1,6 +1,8 @@
 class Teams::LineupController < ApplicationController
   def update
     team = Team.find(params[:team_id])
+
+    raise 'unauthorized' unless team.mine?
     
     new_lineup = params[:chars].map{|i| team.data[i.to_i] }
 

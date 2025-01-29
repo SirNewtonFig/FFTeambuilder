@@ -8,6 +8,8 @@ class Teams::Characters::JobController < ApplicationController
   end
 
   def update
+    raise 'unauthorized' unless @team.mine?
+    
     @char.data.merge!(job_params)
     puts job_params.inspect
     @char.enforce_constraints!

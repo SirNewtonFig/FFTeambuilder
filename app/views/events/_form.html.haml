@@ -4,6 +4,10 @@
       %div
         = f.label(:title, 'Event Title', class: 'text-xs block')
         = f.text_field(:title, placeholder: 'Super Funtimes Extravaganza', class: text_field_classes_neutral)
+
+      %div
+        = f.label(:slug, 'Event Slug', class: 'text-xs block')
+        = f.text_field(:slug, placeholder: 'PizzafestJan2025', class: text_field_classes_neutral)
       
       %div
         = f.label(:description, 'Event Description', class: 'text-xs block')

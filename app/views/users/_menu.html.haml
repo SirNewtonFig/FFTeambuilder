@@ -1,7 +1,9 @@
+- back_path ||= nil
+
 .fixed.bottom-0.inset-x-0.p-3.flex.justify-between{ class: 'bg-black/75' }
   %div
-    - unless controller_name == 'dashboard'
-      %a.bg-gray-800.py-1.px-4.rounded-lg.cursor-pointer.hover:bg-gray-700.flex.items-center.space-x-1{ href: dashboard_path }        
+    - if back_path.present?
+      %a.bg-gray-800.py-1.px-4.rounded-lg.cursor-pointer.hover:bg-gray-700.flex.items-center.space-x-1{ href: back_path }        
         = inline_svg_tag('icons/back.svg', class: 'h-4 w-4 text-white')
         %span.text-white.text-sm.font-sans Back
   
@@ -19,6 +21,8 @@
         - if current_user.is_admin?
           %a.block.w-36.p-2.px-4.my-1.text-white.text-sm.hover:bg-gray-600{ href: admin_jobs_path }
             Admin Panel
+        %a.block.w-36.p-2.px-4.my-1.text-white.text-sm.hover:bg-gray-600{ href: edit_challonge_credentials_path, data: { turbo_frame: 'modal' } }
+          Challonge API
 
 
 

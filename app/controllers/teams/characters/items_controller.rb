@@ -10,6 +10,8 @@ class Teams::Characters::ItemsController < ApplicationController
   end
 
   def update
+    raise 'unauthorized' unless @team.mine?
+    
     @char.data.merge!(equip_params)
     @char.enforce_constraints!
     

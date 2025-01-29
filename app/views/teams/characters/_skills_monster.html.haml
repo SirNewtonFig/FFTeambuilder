@@ -1,4 +1,5 @@
 - i = params[:character_id] || params[:id]
+- readonly ||= false
 
 #skills.w-full.px-2.py-2.bg-menu-texture.border-2.border-menu-dark.sm:bg-transparent.sm:border-0
   .text-xl.mb-1.text-menu-dark.pl-2 Abilities
@@ -12,7 +13,7 @@
               .flex.items-center.justify-center
                 = image_tag("icons/skill-#{slot}.png", class: 'h-6')
             %td.pl-1
-              = link_to(char.send(slot)&.name || label, edit_team_character_skills_path(team_id: team.id, character_id: i, scope: slot), data: { action: 'contextmenu->context#open:prevent', turbo_frame: 'modal' }, class: "block w-full text-lg border-0 border-b-2 border-transparent hover:border-menu-dark #{'text-menu-dark' if char.send(slot).blank?}")
+              = readonly_link_to(char.send(slot)&.name || label, edit_team_character_skills_path(team_id: team.id, character_id: i, scope: slot), data: { action: 'contextmenu->context#open:prevent', turbo_frame: 'modal' }, class: "block w-full text-lg border-0 border-b-2 border-transparent hover:border-menu-dark #{'text-menu-dark' if char.send(slot).blank?}", readonly:)
               - if char.send(slot).present?
                 = wrap_tooltip do
                   = render "teams/characters/skills/rsm", skill: char.send(slot), character: char, team: team

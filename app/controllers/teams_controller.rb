@@ -31,6 +31,17 @@ class TeamsController < ApplicationController
     render layout: 'modal'    
   end
 
+  def clone
+    load_team
+
+    new_team = @team.dup
+    new_team.user = Current.user
+
+    new_team.save
+
+    head :ok
+  end
+
   def export
     load_team
 
@@ -53,15 +64,13 @@ class TeamsController < ApplicationController
 
     team = Team.create(user_id: Current.user.id, **team_attributes)
 
-    Current.team = team
-
-    session[:current_team_id] = team.id
-
     redirect_to edit_team_path(team)
   end
 
   def update
     load_team
+
+    raise 'unauthorized' unless @team.mine?
 
     @team.update(team_attributes)
   end

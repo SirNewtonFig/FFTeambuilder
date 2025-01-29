@@ -1,10 +1,10 @@
 .font-sans.h-full.w-full.p-4
-  .sm:mt-4.flex.justify-center
+  .md:mt-4.flex.justify-center
     = image_tag('FFTb-logo.png', title: 'Thanks, Chad Jeeps')
 
   .mt-4.flex.justify-center
-    .flex.flex-wrap.flex-col.sm:flex-row-reverse
-      .rounded-xl.bg-gray-800.p-4.my-3.sm:w-96.sm:mx-3
+    .flex.flex-wrap.flex-col.md:flex-row-reverse.py-3.w-full.md:max-w-3xl
+      .rounded-xl.bg-gray-800.p-4.my-3.md:min-w-96.md:flex-1.md:mx-3
         .flex.justify-between.items-center
           %h2.text-lg.text-white.font-semibold
             My Teams
@@ -24,7 +24,7 @@
 
         = render 'teams', teams: @teams
       
-      .rounded-xl.bg-gray-800.p-4.my-3.sm:w-96.sm:mx-3
+      .rounded-xl.bg-gray-800.p-4.my-3.md:min-w-96.md:flex-1.md:mx-3
         .flex.justify-between.items-center
           %h2.text-lg.text-white.font-semibold
             Active Events

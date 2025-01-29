@@ -1,4 +1,5 @@
 - i = params[:id] || params[:character_id]
+- readonly ||= false
 
 #equipment.w-full.px-2.py-2.bg-menu-texture.border-2.border-menu-dark.sm:bg-transparent.sm:border-0
   .text-lg.mb-1.text-menu-dark.pl-2 Equipment
@@ -10,7 +11,7 @@
           = image_tag("icons/rhand.png", class: 'h-6') unless char.two_hands_engaged?
           = image_tag("icons/2hand.png", class: 'h-6') if char.two_hands_engaged? && char.rhand.present?
       %td.pl-1{ class: ('text-menu-dark' if char.rhand.blank?) }
-        = link_to(char.rhand&.name || 'Empty', team_character_items_path(team_id: team.id, character_id: i, scope: 'rhand'), data: { action: 'contextmenu->context#open:prevent', turbo_frame: 'modal' }, class: 'block w-full border-0 border-b-2 border-transparent hover:border-menu-dark')
+        = readonly_link_to(char.rhand&.name || 'Empty', team_character_items_path(team_id: team.id, character_id: i, scope: 'rhand'), data: { action: 'contextmenu->context#open:prevent', turbo_frame: 'modal' }, class: 'block w-full border-0 border-b-2 border-transparent hover:border-menu-dark', readonly:)
         - if char.rhand.present?
           = wrap_tooltip do
             = render "teams/characters/items/#{char.rhand.item_type}", item: char.rhand
@@ -21,7 +22,7 @@
           = image_tag("icons/lhand.png", class: 'h-6') unless char.two_hands_engaged?
           = image_tag("icons/2hand.png", class: 'h-6') if char.two_hands_engaged? && char.lhand.present?
       %td.pl-1{ class: ('text-menu-dark' if char.lhand.blank?) }
-        = link_to(char.lhand&.name || 'Empty', team_character_items_path(team_id: team.id, character_id: i, scope: 'lhand'), data: { action: 'contextmenu->context#open:prevent', turbo_frame: 'modal' }, class: 'block w-full border-0 border-b-2 border-transparent hover:border-menu-dark')
+        = readonly_link_to(char.lhand&.name || 'Empty', team_character_items_path(team_id: team.id, character_id: i, scope: 'lhand'), data: { action: 'contextmenu->context#open:prevent', turbo_frame: 'modal' }, class: 'block w-full border-0 border-b-2 border-transparent hover:border-menu-dark', readonly:)
         - if char.lhand.present?
           = wrap_tooltip do
             = render "teams/characters/items/#{char.lhand.item_type}", item: char.lhand
@@ -32,7 +33,7 @@
           .flex.items-center.justify-center
             = image_tag("icons/#{slot}.png", class: 'h-6')
         %td.pl-1{ class: ('text-menu-dark' if char.send(slot).blank?) }
-          = link_to(char.send(slot)&.name || 'Empty', team_character_items_path(team_id: team.id, character_id: i, scope: slot), data: { action: 'contextmenu->context#open:prevent', turbo_frame: 'modal' }, class: 'block w-full border-0 border-b-2 border-transparent hover:border-menu-dark')
+          = readonly_link_to(char.send(slot)&.name || 'Empty', team_character_items_path(team_id: team.id, character_id: i, scope: slot), data: { action: 'contextmenu->context#open:prevent', turbo_frame: 'modal' }, class: 'block w-full border-0 border-b-2 border-transparent hover:border-menu-dark', readonly:)
           - if char.send(slot).present?
             = wrap_tooltip do
               = render "teams/characters/items/#{slot}", item: char.send(slot)

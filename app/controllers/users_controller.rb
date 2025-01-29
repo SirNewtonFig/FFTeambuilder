@@ -10,4 +10,8 @@ class UsersController < ApplicationController
   def confirm_destroy
     render layout: 'modal_neutral'
   end
+
+  def challonge_connect
+    render layout: 'modal_neutral'
+  end
 end

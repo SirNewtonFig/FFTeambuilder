@@ -3,6 +3,10 @@ class Events::SubmissionsController < ApplicationController
 
   before_action :load_event
 
+  def show
+    load_submission
+  end
+
   def new
     redirect_to event_path(@event) and return unless @event.deadline.future?
 

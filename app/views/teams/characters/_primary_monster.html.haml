@@ -1,4 +1,5 @@
 - i = params[:character_id] || params[:id]
+- readonly ||= false
 
 #primary-skills.bg-menu-texture.border-2.border-menu-dark.px-4.py-2.flex-1
   .flex.text-xl.mb-1.text-menu-dark
@@ -11,7 +12,7 @@
     - char.job.skills.action.order(Arel.sql("data ->> 'memgen_id' desc")).each_with_index do |skill, i|
       .flex{ data: { controller: 'context', action: 'keydown.esc@window->context#close' } }
         %div
-          %input.w-4.h-4.text-menu-dark.bg-gray-100.rounded.border-gray-300.focus:ring-menu-dark.focus:ring-2{ name: 'character[skills][primary][]', id: "primary_#{i}", type: "checkbox", value: skill.id, checked: char.primary_skill_ids.include?(skill.id), data: { action: 'change->form#submit' } }
+          %input.w-4.h-4.text-menu-dark.bg-gray-100.rounded.border-gray-300.focus:ring-menu-dark.focus:ring-2{ name: 'character[skills][primary][]', id: "primary_#{i}", type: "checkbox", value: skill.id, checked: char.primary_skill_ids.include?(skill.id), disabled: readonly, data: { action: 'change->form#submit' } }
         .text-lg.flex-1.ml-3
           %label{ for: "primary_#{i}", data: { action: 'contextmenu->context#open:prevent' } }= skill.name
         .text-lg= skill.jp_cost

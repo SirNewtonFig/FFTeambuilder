@@ -6,6 +6,8 @@ class Teams::Characters::MetaController < ApplicationController
   end
 
   def update
+    raise 'unauthorized' unless @team.mine?
+    
     @char.data.merge!(meta_params)
     
     @team.data[i] = @char.data

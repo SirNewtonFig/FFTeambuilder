@@ -1,6 +1,12 @@
 class Teams::CharactersController < ApplicationController
   before_action :load_team
 
+  def show
+    @char = @team.characters[i]
+
+    load_statuses
+  end
+  
   def edit
     @char = @team.characters[i]
     

@@ -1,0 +1,72 @@
+#bracket svg {
+  font-family: Arial, sans-serif;
+  overflow: visible;
+}
+
+#bracket rect {
+  shape-rendering: crispEdges;
+}
+
+#bracket .bracket-line {
+  @apply fill-none stroke-2 stroke-gray-400;
+}
+
+#bracket .match--base-background {
+  @apply fill-gray-800;
+}
+
+#bracket .match--wrapper-background {
+  @apply fill-none;
+}
+
+#bracket .match--identifier {
+  @apply fill-gray-400 text-xs;
+}
+
+#bracket .match--seed {
+  @apply fill-gray-400 text-[0.625rem] tracking-tighter;
+}
+
+#bracket .match--seed-background {
+  @apply fill-gray-600;
+}
+
+#bracket .match--player-score-background {
+  @apply fill-gray-600;
+}
+
+#bracket .match--player-score-background.-winner {
+  @apply fill-orange-500;
+}
+
+#bracket .match--player-name {
+  @apply fill-gray-100 text-xs;
+}
+
+#bracket .match--player-name.-placeholder {
+  @apply italic text-xs fill-gray-600;
+}
+
+#bracket .match--player-score {
+  @apply fill-white text-xs;
+}
+
+#bracket .match--player-background {
+  @apply fill-gray-800;
+}
+
+#bracket .match--player-divider {
+  @apply stroke-gray-900 stroke-1;
+}
+
+#bracket .round-label {
+  @apply cursor-pointer;
+}
+
+#bracket .round-label rect {
+  @apply fill-gray-800;
+}
+
+#bracket .round-label text {
+  @apply fill-white text-xs;
+}

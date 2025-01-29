@@ -1,6 +1,7 @@
 - hide_player_name ||= false
+- href = team.mine? ? edit_team_path(team) : event_submission_path(event_id: @event.id, id: team.id)
 
-%a.group.block.py-4.font-semibold{ href: edit_team_path(team) }
+%a.group.block.py-4.font-semibold{ href: }
   - if hide_player_name
     .text-orange-400.group-hover:text-orange-300= team.name || 'Unnamed Team'
   
