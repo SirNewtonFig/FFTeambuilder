@@ -68,13 +68,13 @@
 }
 
 .slot-list {
-  counter-reset: line;
+  counter-reset: slot;
 }
 
 .slot-number:before {
   @apply text-xs text-gray-400 ml-1 -mr-2 relative bottom-0.5;
   
-  counter-increment: line;
-  content: counter(line);
+  counter-increment: slot;
+  content: counter(slot);
   display: inline-block;
 }

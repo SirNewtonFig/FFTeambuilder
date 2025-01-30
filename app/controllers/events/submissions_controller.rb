@@ -3,6 +3,10 @@ class Events::SubmissionsController < ApplicationController
 
   before_action :load_event
 
+  def index
+    load_submissions
+  end
+  
   def show
     params[:external] ? load_bracket_submission : load_submission
   end

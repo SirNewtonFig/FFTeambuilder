@@ -1,10 +1,21 @@
 .divide-y.divide-gray-500
   - submissions.each do |submission|
-    .flex.justify-between{ id: dom_id(submission, 'cut_submission') }
+    .flex.justify-between{ id: dom_id(submission, 'cut_submission'), data: { counter_target: 'item', scope: 'cut' } }
       = render 'events/submissions/submission', submission:
 
-      %a.group.block.py-4.text-orange-400.hover:text-orange-300{ href: approve_event_submission_path(event_id: event.id, id: submission.id), data: { turbo_method: :patch } }
-        Approve
+      .flex.space-x-2.items-center
+        %a.group.block.py-4.text-orange-400.hover:text-orange-300{ href: event_submission_path(event_id: event.id, id: submission.id), data: { turbo_method: :delete } }
+          Delete
+
+        %span.text-gray-500= '|'
+        
+        %a.group.block.py-4.text-orange-400.hover:text-orange-300{ href: edit_event_submission_path(event_id: event.id, id: submission.id), data: { turbo_frame: :modal } }
+          Rename
+
+        %span.text-gray-500= '|'
+
+        %a.group.block.py-4.text-orange-400.hover:text-orange-300{ href: approve_event_submission_path(event_id: event.id, id: submission.id), data: { turbo_method: :patch } }
+          Approve
 
   - if submissions.blank?
     .py-4.text-gray-400.italic There are no cut submissions for this event yet

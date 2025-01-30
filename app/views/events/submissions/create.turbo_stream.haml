@@ -1,5 +1,5 @@
 = turbo_stream.update('my-submissions') do
   = render 'events/show/my_submissions', submissions: @my_submissions, event: @event
 
-= turbo_stream.update('submissions') do
+= turbo_stream.update('pending-submissions') do
   = render 'events/show/submissions', submissions: @submissions, event: @event

@@ -1,7 +1,7 @@
 - hide_player_name ||= false
 - href = submission.team.mine? && submission.team.persisted? ? edit_team_path(submission.team) : event_submission_path(event_id: @event.id, id: submission.id)
 
-%a.group.block.py-4.font-semibold{ href: }
+%a.group.block.py-4.font-semibold.count-submission{ href: }
   - if hide_player_name
     .text-orange-400.group-hover:text-orange-300= submission.team.name || 'Unnamed Team'
   

@@ -1,4 +1,4 @@
-.mx-3.md:mx-8
+.mx-3.md:mx-8{ data: { controller: 'counter' } }
   .font-sans.fixed.-mx-3.px-3.md:-mx-8.md:px-8.py-4.top-0.mb-6.w-screen{ class: 'bg-black/75' }
     .max-w-full
       .flex.flex-col.md:flex-row.justify-center.md:items-center.md:justify-between
@@ -44,31 +44,34 @@
           #bracket{ class: 'group/bracket', data: { controller: 'bracket', bracket_memgen_menu_outlet: '#memgen-menu'} }
             = parse_bracket(@event).to_html.html_safe
       
-    - else
-      .font-sans.mb-6.max-w-full.md:max-w-screen-md{ class: 'xl:max-w-[72rem]'}
-        .text-white.pt-2.bg-gray-800.rounded-lg
-          %h2.px-4.my-2.text-lg.font-semibold.text-white My Submissions
-          #my-submissions.space-y-2.px-4
-            = render 'events/show/my_submissions', submissions: @my_submissions, event: @event
-
+    .font-sans.mb-6.max-w-full.md:max-w-screen-md{ class: 'xl:max-w-[72rem]', data: { controller: 'tab', tab_pane_toggle_class_value: 'hidden', tab_active_classes_value: json_escape(['text-white', 'bg-gray-800']), tab_inactive_classes_value: json_escape(['text-gray-600', 'hover:text-gray-200', 'bg-gray-900', 'hover:bg-gray-700']) } }
+      %h2.flex.items-stretch{ class: 'space-x-0.5' }
+        - if @event.mine?
+          #pending-tab.text-sm.font-semibold.px-4.rounded-t-lg.py-1.cursor-pointer{ data: { tab_target: 'tab', action: 'click->tab#click' } }
+            Pending Submissions
+            %span.ml-1.opacity-85.text-xs{ data: { counter_target: 'counter', scope: 'pending' } }
+          #confirmed-tab.text-sm.font-semibold.px-4.rounded-t-lg.py-1.cursor-pointer{ data: { tab_target: 'tab', action: 'click->tab#click' } }
+            Confirmed Submissions
+            %span.ml-1.opacity-85.text-xs{ data: { counter_target: 'counter', scope: 'confirmed' } }
+          #cut-tab.text-sm.font-semibold.px-4.rounded-t-lg.py-1.cursor-pointer{ data: { tab_target: 'tab', action: 'click->tab#click' } }
+            Cut Submissions
+            %span.ml-1.opacity-85.text-xs{ data: { counter_target: 'counter', scope: 'cut' } }
+        #my-tab.text-sm.font-semibold.px-4.rounded-t-lg.py-1.cursor-pointer{ data: { tab_target: 'tab', action: 'click->tab#click' } }
+          My Submissions
+          %span.ml-1.opacity-85.text-xs{ data: { counter_target: 'counter', scope: 'mine' } }
+      
       - if @event.mine?
-        .font-sans.mb-6.max-w-full.md:max-w-screen-md{ class: 'xl:max-w-[72rem]'}
-          .text-white.bg-gray-800.rounded-lg
-            %h2.p-4.text-lg.font-semibold.text-white Pending Submissions
-            #submissions.space-y-2.px-4
-              = render 'events/show/submissions', submissions: @submissions, event: @event
+        #pending-submissions.space-y-2.px-4.bg-gray-800.rounded.rounded-tl-none.hidden{ data: { tab_target: 'pane' } }
+          = render 'events/show/submissions', submissions: @submissions, event: @event
 
-        .font-sans.mb-6.max-w-full.md:max-w-screen-md{ class: 'xl:max-w-[72rem]'}
-          .text-white.bg-gray-800.rounded-lg
-            %h2.p-4.text-lg.font-semibold.text-white Confirmed Submissions
-            #bracket.space-y-2.px-4
-              = render 'events/show/bracket', submissions: @bracket, event: @event
+        #confirmed-submissions.space-y-2.px-4.bg-gray-800.rounded.rounded-tl-none.hidden{ data: { tab_target: 'pane' } }
+          = render 'events/show/bracket', submissions: @bracket, event: @event
 
-        .font-sans.mb-6.max-w-full.md:max-w-screen-md{ class: 'xl:max-w-[72rem]'}
-          .text-white.bg-gray-800.rounded-lg
-            %h2.p-4.text-lg.font-semibold.text-white Cut Submissions
-            #cut-submissions.space-y-2.px-4
-              = render 'events/show/cut_submissions', submissions: @cut_submissions, event: @event
+        #cut-submissions.space-y-2.px-4.bg-gray-800.rounded.rounded-tl-none.hidden{ data: { tab_target: 'pane' } }
+          = render 'events/show/cut_submissions', submissions: @cut_submissions, event: @event
+
+      #my-submissions.space-y-2.px-4.bg-gray-800.rounded.rounded-tl-none.hidden{ data: { tab_target: 'pane' } }
+        = render 'events/show/my_submissions', submissions: @my_submissions, event: @event
 
   = render 'users/menu', back_path: dashboard_path
 

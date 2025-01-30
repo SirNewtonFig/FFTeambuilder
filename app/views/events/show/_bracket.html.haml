@@ -1,14 +1,19 @@
-#events.divide-y.divide-gray-500
+.divide-y.divide-gray-500
   - submissions.each do |submission|
-    .flex.justify-between{ id: dom_id(submission, 'bracket') }
+    .flex.justify-between{ id: dom_id(submission, 'bracket'), data: { counter_target: 'item', scope: 'confirmed' } }
       = render 'events/submissions/submission', submission:
 
       .flex.space-x-2.items-center
+        %a.group.block.py-4.text-orange-400.hover:text-orange-300{ href: event_submission_path(event_id: event.id, id: submission.id), data: { turbo_method: :delete } }
+          Delete
+
+        %span.text-gray-500= '|'
+        
         %a.group.block.py-4.text-orange-400.hover:text-orange-300{ href: edit_event_submission_path(event_id: event.id, id: submission.id), data: { turbo_frame: :modal } }
           Rename
 
         %span.text-gray-500= '|'
-      
+
         %a.group.block.py-4.text-orange-400.hover:text-orange-300{ href: cut_event_submission_path(event_id: event.id, id: submission.id), data: { turbo_method: :patch } }
           Cut
 
