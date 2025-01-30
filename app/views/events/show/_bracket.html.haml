@@ -1,16 +1,16 @@
 #events.divide-y.divide-gray-500
-  - teams.each do |team|
-    .flex.justify-between{ id: dom_id(team, 'bracket') }
-      = render 'events/submissions/submission', team:
+  - submissions.each do |submission|
+    .flex.justify-between{ id: dom_id(submission, 'bracket') }
+      = render 'events/submissions/submission', submission:
 
       .flex.space-x-2.items-center
-        %a.group.block.py-4.text-orange-400.hover:text-orange-300{ href: edit_event_submission_path(event_id: event.id, id: team.id), data: { turbo_frame: :modal } }
+        %a.group.block.py-4.text-orange-400.hover:text-orange-300{ href: edit_event_submission_path(event_id: event.id, id: submission.id), data: { turbo_frame: :modal } }
           Rename
 
         %span.text-gray-500= '|'
       
-        %a.group.block.py-4.text-orange-400.hover:text-orange-300{ href: cut_event_submission_path(event_id: event.id, id: team.id), data: { turbo_method: :patch } }
+        %a.group.block.py-4.text-orange-400.hover:text-orange-300{ href: cut_event_submission_path(event_id: event.id, id: submission.id), data: { turbo_method: :patch } }
           Cut
 
-  - if teams.blank?
+  - if submissions.blank?
     .py-4.text-gray-400.italic There are no confirmed teams for this event yet

@@ -1,11 +1,11 @@
 = turbo_stream.update('my-submissions') do
-  = render 'events/show/my_submissions', teams: @my_submissions, event: @event
+  = render 'events/show/my_submissions', submissions: @my_submissions, event: @event
 
 = turbo_stream.update('submissions') do
-  = render 'events/show/submissions', teams: @submissions, event: @event
+  = render 'events/show/submissions', submissions: @submissions, event: @event
 
 = turbo_stream.update('bracket') do
-  = render 'events/show/bracket', teams: @bracket, event: @event
+  = render 'events/show/bracket', submissions: @bracket, event: @event
 
 = turbo_stream.update('cut-submissions') do
-  = render 'events/show/cut_submissions', teams: @cut_submissions, event: @event
+  = render 'events/show/cut_submissions', submissions: @cut_submissions, event: @event

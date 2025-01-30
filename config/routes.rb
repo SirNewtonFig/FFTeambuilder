@@ -69,6 +69,7 @@ Rails.application.routes.draw do
 
       collection do
         patch :reorder
+        post :import
       end
     end
 

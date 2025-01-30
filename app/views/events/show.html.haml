@@ -49,26 +49,26 @@
         .text-white.pt-2.bg-gray-800.rounded-lg
           %h2.px-4.my-2.text-lg.font-semibold.text-white My Submissions
           #my-submissions.space-y-2.px-4
-            = render 'events/show/my_submissions', teams: @my_submissions, event: @event
+            = render 'events/show/my_submissions', submissions: @my_submissions, event: @event
 
       - if @event.mine?
         .font-sans.mb-6.max-w-full.md:max-w-screen-md{ class: 'xl:max-w-[72rem]'}
           .text-white.bg-gray-800.rounded-lg
             %h2.p-4.text-lg.font-semibold.text-white Pending Submissions
             #submissions.space-y-2.px-4
-              = render 'events/show/submissions', teams: @submissions, event: @event
+              = render 'events/show/submissions', submissions: @submissions, event: @event
 
         .font-sans.mb-6.max-w-full.md:max-w-screen-md{ class: 'xl:max-w-[72rem]'}
           .text-white.bg-gray-800.rounded-lg
             %h2.p-4.text-lg.font-semibold.text-white Confirmed Submissions
             #bracket.space-y-2.px-4
-              = render 'events/show/bracket', teams: @bracket, event: @event
+              = render 'events/show/bracket', submissions: @bracket, event: @event
 
         .font-sans.mb-6.max-w-full.md:max-w-screen-md{ class: 'xl:max-w-[72rem]'}
           .text-white.bg-gray-800.rounded-lg
             %h2.p-4.text-lg.font-semibold.text-white Cut Submissions
             #cut-submissions.space-y-2.px-4
-              = render 'events/show/cut_submissions', teams: @cut_submissions, event: @event
+              = render 'events/show/cut_submissions', submissions: @cut_submissions, event: @event
 
   = render 'users/menu', back_path: dashboard_path
 

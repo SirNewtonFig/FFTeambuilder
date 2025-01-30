@@ -1,30 +1,30 @@
 - hide_player_name ||= false
-- href = team.mine? ? edit_team_path(team) : event_submission_path(event_id: @event.id, id: team.id)
+- href = submission.team.mine? && submission.team.persisted? ? edit_team_path(submission.team) : event_submission_path(event_id: @event.id, id: submission.id)
 
 %a.group.block.py-4.font-semibold{ href: }
   - if hide_player_name
-    .text-orange-400.group-hover:text-orange-300= team.name || 'Unnamed Team'
+    .text-orange-400.group-hover:text-orange-300= submission.team.name || 'Unnamed Team'
   
   - else
-    .text-orange-400.group-hover:text-orange-300= team.team_name_override.presence || team.name || 'Unnamed Team'
+    .text-orange-400.group-hover:text-orange-300= submission.team_name_override.presence || submission.team.name || 'Unnamed Team'
 
     %div
       %span.text-gray-300.font-light Player:
-      %span.text-white= team.player_name_override.presence || team.player_name
-      - if team.guest?
+      %span.text-white= submission.player_name_override.presence || submission.team.player_name
+      - if submission.team.guest?
         %span.text-orange-200= '(guest)'
 
   %div
     %span.text-gray-300.font-light Updated:
-    %span.text-white= relative_time(team.updated_at)
+    %span.text-white= relative_time(submission.team.updated_at)
 
   .flex
     %span.text-gray-300.font-light JP Spent:
     .ml-1.flex.items-center
-      %span{ class: (team.jp_total > 18000 ? 'text-red-400' : 'text-white') }
-        #{team.jp_total}
+      %span{ class: (submission.team.jp_total > 18000 ? 'text-red-400' : 'text-white') }
+        #{submission.team.jp_total}
       .ml-1
-        - if team.jp_total > 18000
+        - if submission.team.jp_total > 18000
           = inline_svg('icons/cancel.svg', class: 'h-4 w-4 text-red-500')
         - else
           = inline_svg('icons/check-circle.svg', class: 'h-4 w-4 text-green-500')

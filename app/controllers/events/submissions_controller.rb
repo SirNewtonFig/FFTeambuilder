@@ -85,6 +85,20 @@ class Events::SubmissionsController < ApplicationController
     load_submissions
   end
 
+  def import
+    redirect_to event_path(@event) and return unless @event.mine?
+
+    params[:team_files].each do |file|
+      team_attributes = YAML.safe_load_file(file)
+
+      team = Team.create(**team_attributes)
+      
+      Submission.create(event: @event, team:)
+    end
+
+    redirect_to event_path(@event)
+  end
+
   private
 
     def load_event
@@ -98,9 +112,8 @@ class Events::SubmissionsController < ApplicationController
     end
 
     def load_submission
-      @team = Team.find(params[:id])
-      @submission = Submission.find_by(event_id: @event.id, team_id: @team.id)
-      
+      @submission = Submission.find(params[:id])
+      @team = @submission.team
       @team = @team.paper_trail.version_at(@event.deadline) if @event.deadline.past?
     end
 end

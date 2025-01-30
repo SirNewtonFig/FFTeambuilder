@@ -3,7 +3,7 @@ class Team < ApplicationRecord
 
   has_paper_trail
 
-  has_many :submissions, inverse_of: :team, dependent: :destroy
+  has_many :submissions, inverse_of: :team
   has_many :events, through: :submissions
 
   belongs_to :user, optional: true
@@ -11,9 +11,9 @@ class Team < ApplicationRecord
   enum :palette_a, %i{ blue red green white purple yellow brown black }, suffix: true, _scopes: false
   enum :palette_b, %i{ blue red green white purple yellow brown black }, suffix: true, _scopes: false
 
-  validates :user_id, presence: true
-
+  before_create :cache_jp
   before_update :cache_jp
+  before_destroy :wipe_submissions
 
   scope :for_event, ->(event) {
     joins(:events)
@@ -85,5 +85,9 @@ class Team < ApplicationRecord
 
     def cache_jp
       self.jp_total = characters.map(&:jp_total).sum
+    end
+
+    def wipe_submissions
+      submissions.joins(:event).where(events: { deadline: Time.current..} ).destroy_all
     end
 end

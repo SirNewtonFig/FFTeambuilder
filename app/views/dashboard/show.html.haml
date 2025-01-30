@@ -7,7 +7,7 @@
       .rounded-xl.bg-gray-800.p-4.my-3.md:min-w-96.md:flex-1.md:mx-3
         .flex.justify-between.items-center
           %h2.text-lg.text-white.font-semibold
-            My Teams
+            My Recent Teams
 
           .flex.space-x-2.items-center
             = form_with(url: teams_path, multipart: true, data: { controller: 'form' }) do
@@ -20,9 +20,7 @@
             %a.text-sm.text-orange-400.hover:text-orange-300{ href: new_team_path, data: { turbo_frame: '_top' } }
               Create a Team
 
-
-
-        = render 'teams', teams: @teams
+        = render 'teams', teams: @teams.limit(6)
       
       .rounded-xl.bg-gray-800.p-4.my-3.md:min-w-96.md:flex-1.md:mx-3
         .flex.justify-between.items-center
@@ -33,6 +31,6 @@
             %a.text-sm.text-orange-400.hover:text-orange-300{ href: new_event_path, data: { turbo_frame: 'modal' } }
               Create Event
 
-        = render 'events', events: @events
+        = render 'events', events: @events.limit(4)
         
   = render "users/menu"

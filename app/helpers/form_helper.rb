@@ -145,13 +145,11 @@ module FormHelper
 
   def neutral_button_classes
     '
-      text-gray-900
+      text-white
       bg-white
-      border
-      border-gray-300
       focus:outline-none
-      bg-gray-300
-      hover:bg-gray-100
+      bg-gray-500
+      hover:bg-gray-400
       focus:ring-4
       focus:ring-gray-200
       font-medium
