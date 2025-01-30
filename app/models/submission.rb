@@ -3,12 +3,15 @@ class Submission < ApplicationRecord
   belongs_to :team
 
   validates :team, :event, presence: true
+
+  before_validation :set_names, on: :create
   
   scope :active, -> { where(active: true) }
 
-  def display_name
-    player_name_override || team.player_name
-  end
+  scope :queue_ordered, -> {
+    left_joins(:team)
+      .order(Arel.sql('coalesce(teams.player_name, submissions.player_name_override), submissions.priority, submissions.created_at'))
+  }
 
   def team
     t = super
@@ -17,4 +20,11 @@ class Submission < ApplicationRecord
 
     PaperTrail::Version.where(item_id: team_id, item_type: 'Team').last.reify.paper_trail.version_at(event.deadline)
   end
+
+  private
+
+    def set_names
+      self.player_name_override = team.player_name
+      self.team_name_override = team.name
+    end
 end

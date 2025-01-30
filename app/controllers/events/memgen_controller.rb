@@ -10,7 +10,7 @@ class Events::MemgenController < ApplicationController
       {
         team_a: sub_a.team.paper_trail.version_at(@event.deadline),
         team_b: sub_b.team.paper_trail.version_at(@event.deadline),
-        title: [sub_a.display_name, sub_b.display_name].join(' v ')
+        title: [sub_a.player_name_override, sub_b.player_name_override].join(' v ')
       }
     end
 

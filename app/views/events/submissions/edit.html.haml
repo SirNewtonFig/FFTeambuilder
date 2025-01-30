@@ -11,8 +11,8 @@
 
       %div
         = f.label(:player_name_override, 'Player Name', class: 'text-xs block')
-        = f.text_field(:player_name_override, class: text_field_classes_neutral, value: @submission.player_name_override || @team.player_name)
+        = f.text_field(:player_name_override, autofocus: true, class: text_field_classes_neutral, value: @submission.player_name_override || @team.player_name)
 
-    .mt-4.flex.justify-end.space-x-4
-      = button_tag('Cancel', class: neutral_button_classes, data: { action: 'modal#close' })
-      = f.submit('Update', class: primary_button_classes, data: { action: 'form#submit' })
+    .mt-4.flex.justify-start.space-x-4.flex-row-reverse
+      = f.submit('Update', class: "ml-4 #{primary_button_classes}", data: { action: 'form#submit' })
+      = button_tag('Cancel', class: "ml-4 #{neutral_button_classes}", data: { action: 'modal#close' })

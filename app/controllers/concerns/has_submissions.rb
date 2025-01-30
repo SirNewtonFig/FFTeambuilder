@@ -3,10 +3,10 @@ module HasSubmissions
 
   included do
     def load_submissions
-      @submissions = @event.submissions.where(approved: nil).includes(:team)
-      @bracket = @event.submissions.where(approved: true).includes(:team)
-      @cut_submissions = @event.submissions.where(approved: false).includes(:team)
-      @my_submissions = @event.submissions.joins(:team).where(teams: { user_id: Current.user.id }).includes(:team)
+      @submissions = @event.submissions.queue_ordered.where(approved: nil).includes(:team)
+      @bracket = @event.submissions.queue_ordered.where(approved: true).includes(:team)
+      @cut_submissions = @event.submissions.queue_ordered.where(approved: false).includes(:team)
+      @my_submissions = @event.submissions.joins(:team).where(teams: { user_id: Current.user.id }).includes(:team).order(:priority)
     end
   end
 end

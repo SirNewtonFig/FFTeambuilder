@@ -29,7 +29,7 @@ class Event::Publish < Event::ChallongeBaseInteractor
 
     def submit_participants
       event.submissions.where(approved: true).each do |submission|
-        p = Challonge::Participant.create(name: submission.display_name, tournament:, misc: submission.id)
+        p = Challonge::Participant.create(name: submission.player_name_override, tournament:, misc: submission.id)
 
         submission.update(external_id: p.id)
       end

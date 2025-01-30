@@ -6,7 +6,7 @@
   .divide-y.divide-gray-500{ data: { draggable_form_target: 'list'} }
     - submissions.each do |submission|
       .flex.justify-between.draggable{ id: dom_id(submission, 'my-submission') }
-        %input{ type: :hidden, name: 'team_ids[]', value: submission.id }
+        %input{ type: :hidden, name: 'submission_ids[]', value: submission.id }
         .flex.items-center.space-x-2.cursor-pointer
           = inline_svg_tag('icons/drag.svg', class: 'h-6 w-6 text-gray-400')
           = render 'events/submissions/submission', submission:, hide_player_name: true

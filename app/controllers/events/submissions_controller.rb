@@ -79,7 +79,7 @@ class Events::SubmissionsController < ApplicationController
     submissions = Submission.joins(:team).where(submissions: { event_id: @event.id }, teams: { user_id: Current.user.id })
 
     submissions.each do |submission|
-      submission.update(priority: params[:team_ids].find_index { |id| submission.team_id == id.to_i })
+      submission.update(priority: params[:submission_ids].find_index { |id| submission.id == id.to_i })
     end
 
     load_submissions
