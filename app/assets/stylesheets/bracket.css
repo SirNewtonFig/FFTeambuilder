@@ -66,3 +66,15 @@
 #bracket .round-label text {
   @apply fill-white text-xs;
 }
+
+.slot-list {
+  counter-reset: line;
+}
+
+.slot-number:before {
+  @apply text-xs text-gray-400 ml-1 -mr-2 relative bottom-0.5;
+  
+  counter-increment: line;
+  content: counter(line);
+  display: inline-block;
+}

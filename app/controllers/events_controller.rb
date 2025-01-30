@@ -20,7 +20,7 @@ class EventsController < ApplicationController
 
     @event.update(user: current_user)
 
-    @events = Event.active.open.order(:deadline)
+    @events = Event.active.order(:deadline)
   end
 
   def update
@@ -87,6 +87,20 @@ class EventsController < ApplicationController
     @event.update(state: 'started')
 
     redirect_to event_path(@event)
+  end
+
+  def close
+    @event = Event.find(params[:id])
+
+    raise 'unauthorized' unless @event.mine?
+
+    @event.update(state: 'closed')
+
+    redirect_to dashboard_path
+  end
+
+  def memgen
+    @event = Event.find(params[:id])
   end
 
   private

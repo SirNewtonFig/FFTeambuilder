@@ -1,0 +1,26 @@
+= turbo_frame_with_id_tag do
+  #memgen-menu.w-96.fixed{ style: 'top: 200px; left: 580px', data: { controller: 'memgen-menu draggable-position', memgen_menu_bracket_outlet: '#bracket' } }
+    = form_with(url: event_memgen_path(@event), method: :post, multipart: true, data: { turbo: false }) do |f|
+      .p-1.bg-black.rounded-md.divide-black.divide-y-2
+        .p-1.bg-gray-900.cursor-pointer.flex.justify-between.items-center{ data: { action: 'mousedown->draggable-position#dragStart mouseup@window->draggable-position#dragEnd mousemove@window->draggable-position#move' } }
+          .flex.items-center
+            = inline_svg_tag('icons/drag.svg', class: 'h-5 w-5 text-gray-200')
+            .ml-2.text-gray-200.font-sans.text-sm Click participants to add to card
+          %a.cursor-pointer{ data: { action: 'memgen-menu#close' } }
+            = inline_svg_tag('icons/close.svg', class: 'w-5 h-5 text-gray-400 hover:text-gray-300')
+        .divide-black.divide-y-2.slot-list{ data: { memgen_menu_target: 'list' } }
+        .flex.justify-end
+          = f.submit('Generate Card', class: 'm-2 px-2 py-1 bg-blue-600 hover:bg-blue-500 text-white text-xs rounded font-sans cursor-pointer')
+        
+    %template{ data: { memgen_menu_target: 'template' } }
+      .flex.divide-black.divide-x-2.font-sans
+        .slot-number.bg-gray-600.w-4.relative
+        .p-1.bg-gray-800.flex-1.text-xs.text-gray-600.italic.player-a{ data: { memgen_menu_target: 'slot' } }
+          %input{ type: 'hidden', name: 'slot[][team_a]' }
+          %span Select Team A
+        .p-1.text-xs.text-white.bg-gray-600
+          vs
+        .p-1.bg-gray-800.flex-1.text-xs.text-gray-600.italic.player-b{ data: { memgen_menu_target: 'slot' } }
+          %input{ type: 'hidden', name: 'slot[][team_b]' }
+          %span Select Team B
+        

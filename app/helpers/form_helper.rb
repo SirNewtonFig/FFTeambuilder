@@ -104,7 +104,7 @@ module FormHelper
       px-5
       py-2.5
       bg-blue-600
-      hover:bg-blue-700
+      hover:bg-blue-500
       focus:ring-blue-800
     '.squish
   end
@@ -121,7 +121,7 @@ module FormHelper
       px-5
       py-2.5
       bg-red-600
-      hover:bg-red-700
+      hover:bg-red-500
       focus:ring-red-800
     '.squish
   end
@@ -138,7 +138,7 @@ module FormHelper
       px-5
       py-2.5
       bg-green-500
-      hover:bg-green-600
+      hover:bg-green-400
       focus:ring-green-700
     '.squish
   end

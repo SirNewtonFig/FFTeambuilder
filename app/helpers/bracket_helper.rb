@@ -13,7 +13,7 @@ module BracketHelper
       
       xml.css('[data-participant-id]').each do |n|
         n.attributes['class'] << ' group/player cursor-pointer'
-        n.wrap("<a xlink:href='#{event_submission_path(event_id: event.id, id: Submission.find_by(external_id: n.attribute('data-participant-id').to_s).team_id)}'>")
+        n.wrap("<a data-action='click->bracket#pick' data-player-id='#{n.attribute('data-participant-id')}' xlink:href='#{event_submission_path(event_id: event.id, id: n.attribute('data-participant-id').value.to_i, external: true)}'>")
       end
 
       xml.css('.match--player-name').each {|n| n.attributes['class'] << ' fill-gray-100 text-xs group-hover/player:fill-orange-400' }

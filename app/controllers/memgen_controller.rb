@@ -1,4 +1,6 @@
 class MemgenController < ApplicationController
+  include HasMemgen
+
   def create
     data = params[:slot].map do |x|
       {
@@ -8,18 +10,6 @@ class MemgenController < ApplicationController
       }
     end
 
-    hexstr = Card::Memgen.perform(matchups: data).block.join
-
-    begin
-      cardfile = Tempfile.new('card', Rails.root.join('tmp'), binmode: true)
-      cardfile.write([hexstr].pack('H*'))
-
-      File.open(cardfile.path, 'rb') do |f|
-        send_data(f.read, filename: 'Final Fantasy Tactics (USA)_1.mcd')
-      end
-    ensure
-      cardfile.close
-      cardfile.unlink
-    end
+    generate_card(data)
   end
 end

@@ -4,7 +4,7 @@ class Events::SubmissionsController < ApplicationController
   before_action :load_event
 
   def show
-    load_submission
+    params[:external] ? load_bracket_submission : load_submission
   end
 
   def new
@@ -91,10 +91,16 @@ class Events::SubmissionsController < ApplicationController
       @event = Event.find(params[:event_id])
     end
 
+    def load_bracket_submission
+      @submission = Submission.find_by(external_id: params[:id])
+      @team = @submission.team
+      @team = @team.paper_trail.version_at(@event.deadline) if @event.deadline.past?
+    end
+
     def load_submission
       @team = Team.find(params[:id])
-      @team = @team.paper_trail.version_at(@event.deadline) if @event.deadline.past?
-
       @submission = Submission.find_by(event_id: @event.id, team_id: @team.id)
+      
+      @team = @team.paper_trail.version_at(@event.deadline) if @event.deadline.past?
     end
 end

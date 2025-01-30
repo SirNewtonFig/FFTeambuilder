@@ -1,6 +1,8 @@
 class Event::Publish < Event::ChallongeBaseInteractor
   contextualize_with :'event/context'
 
+  before_perform :set_credentials
+
   def perform
     return if event.external_id.present?
 

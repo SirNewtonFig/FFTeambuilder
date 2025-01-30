@@ -21,21 +21,27 @@
         = render 'events/show/actions', event: @event
 
   %div{ class: 'mt-[11rem] md:mt-[8.5rem]' }
-    - if @event.description.present? || @event.mine?
+    - if @event.description.present?
       .font-sans.mb-6.max-w-full.md:max-w-screen-md{ class: 'xl:max-w-[72rem]'}
         = simple_format(@event.description || 'No description provided', class: 'text-gray-300 prose bg-gray-800 p-2 border-l-2 border-orange-500')
 
     - if @event.show_bracket?
-      .font-sans.flex.items-center.mb-2
-        .text-xs.text-white View bracket and submit predictions at 
-        %a.ml-2.flex.items-center.text-xs.text-orange-400.hover:text-orange-300{ href: @event.bracket_url.sub('.svg', ''), target: '_blank', rel: 'noopener noreferer' }
-          = inline_svg_tag('icons/challonge.svg', class: 'h-4 mr-1')
-          Challonge
-          = inline_svg_tag('icons/open_new.svg', class: 'h-4 w-4 ml-1')
+      .flex.items-center.justify-between.max-w-screen-md.mb-2
+        .font-sans.flex.items-center
+          .text-xs.text-white View bracket and submit predictions at 
+          %a.ml-2.flex.items-center.text-xs.text-orange-400.hover:text-orange-300{ href: @event.bracket_url.sub('.svg', ''), target: '_blank', rel: 'noopener noreferer' }
+            = inline_svg_tag('icons/challonge.svg', class: 'h-4 mr-1')
+            Challonge
+            = inline_svg_tag('icons/open_new.svg', class: 'h-4 w-4 ml-1')
+
+        .font-sans.flex.items-center
+          %a#memgen-link.flex.items-center.text-xs.text-orange-400.hover:text-orange-300{ href: new_event_memgen_path(@event), data: { turbo_frame: 'memgen' } }
+            = inline_svg_tag('icons/memory-card.svg', class: 'h-4 mr-1')
+            Build Card
 
       = turbo_frame_tag(:bracket_frame, src: (event_path(@event) unless turbo_frame?)) do
         - if turbo_frame?
-          #bracket{ class: 'group/bracket' }
+          #bracket{ class: 'group/bracket', data: { controller: 'bracket', bracket_memgen_menu_outlet: '#memgen-menu'} }
             = parse_bracket(@event).to_html.html_safe
       
     - else
@@ -65,3 +71,5 @@
               = render 'events/show/cut_submissions', teams: @cut_submissions, event: @event
 
   = render 'users/menu', back_path: dashboard_path
+
+= turbo_frame_tag :memgen

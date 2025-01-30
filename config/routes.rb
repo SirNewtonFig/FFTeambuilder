@@ -58,7 +58,7 @@ Rails.application.routes.draw do
       post :publish
       post :shuffle
       post :start
-      get :memgen
+      post :close
     end
     
     resources :submissions, controller: 'events/submissions' do
@@ -71,6 +71,8 @@ Rails.application.routes.draw do
         patch :reorder
       end
     end
+
+    resource :memgen, controller: 'events/memgen'
   end
 
   resources :teams do

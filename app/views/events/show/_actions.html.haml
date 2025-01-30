@@ -1,7 +1,4 @@
 .flex.justify-end.space-x-4.mr-2
-  - if event.mine?
-    %a{ href: confirm_destroy_event_path(event), class: destructive_button_classes, data: { turbo_frame: 'modal' } } Delete Event
-
   - if event.open?
     %a{ href: new_event_submission_path(event_id: event), class: primary_button_classes, data: { turbo_frame: 'modal' } } Submit a Team
 
@@ -11,7 +8,8 @@
     - elsif event.state == 'published'
       %a{ href: shuffle_event_path(event), class: primary_button_classes, data: { turbo_method: :post } } Shuffle Bracket
       %a{ href: start_event_path(event), class: confirm_button_classes, data: { turbo_method: :post } } Confirm Bracket
-    - elsif event.state == 'started'
-      %a{ href: memgen_event_path(event), class: primary_button_classes, data: { turbo_frame: :memgen } } Run Matches
-  - elsif event.mine? && event.published? && Current.user.challonge_connected?
     
+  - if event.mine?
+    - if event.state == 'started'
+      %a{ href: close_event_path(event), class: primary_button_classes, data: { turbo_method: :post, turbo_confirm: 'Are you sure you want to archive this event?' } } Archive Event
+    %a{ href: event_path(event), class: destructive_button_classes, data: { turbo_method: :delete, turbo_confirm: 'Are you sure you want to delete this event? This will also delete any associated data published to Challonge.' } } Delete Event
