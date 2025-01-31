@@ -3,23 +3,19 @@
 @tailwind components;
 @tailwind utilities;
 
-/* width */
-::-webkit-scrollbar {
-  height: 10px;
-
+* {
+  scrollbar-width: thin;
+  scrollbar-color: rgb(0, 0, 0) rgb(31, 41, 55);
 }
 
-/* Track */
-::-webkit-scrollbar-track {
-  @apply bg-black rounded;
+.modal-content .overflow-y-auto {
+  scrollbar-gutter: stable;
 }
 
-/* Handle */
-::-webkit-scrollbar-thumb {
-  @apply bg-gray-800 rounded;
+.bg-menu-texture * {
+  scrollbar-color: #726C5E #A49D83;
 }
 
-/* Handle on hover */
-::-webkit-scrollbar-thumb:hover {
-  @apply bg-gray-700;
+input[type=number] {
+  -moz-appearance:textfield;
 }

@@ -18,7 +18,8 @@ module.exports = {
       colors: {
         'menu': {
           DEFAULT: '#A49D83',
-          'dark': '#726C5E'
+          'dark': '#726C5E',
+          'light': '#A9A38C'
         },
 
         'mp': {
