@@ -20,7 +20,7 @@
         
         = render 'events/show/actions', event: @event
 
-  %div{ class: 'mt-[11rem] md:mt-[8.5rem]' }
+  .space-y-4{ class: 'mt-[11rem] md:mt-[8.5rem]' }
     - if @event.description.present?
       .font-sans.mb-6.max-w-full.md:max-w-screen-md{ class: 'xl:max-w-[72rem]'}
         = simple_format(@event.description || 'No description provided', class: 'text-gray-300 prose bg-gray-800 p-2 border-l-2 border-orange-500')
@@ -28,7 +28,9 @@
     - if @event.show_bracket?
       .flex.items-center.justify-between.max-w-screen-md.mb-2
         .font-sans.flex.items-center
-          .text-xs.text-white View bracket and submit predictions at 
+          .text-xs.text-white
+            %span.hidden.md:inline View bracket and submit predictions at 
+            %span.md:hidden See more at  
           %a.ml-2.flex.items-center.text-xs.text-orange-400.hover:text-orange-300{ href: @event.bracket_url.sub('.svg', ''), target: '_blank', rel: 'noopener noreferer' }
             = inline_svg_tag('icons/challonge.svg', class: 'h-4 mr-1')
             Challonge
@@ -41,23 +43,23 @@
 
       = turbo_frame_tag(:bracket_frame, src: (event_path(@event) unless turbo_frame?)) do
         - if turbo_frame?
-          #bracket{ class: 'group/bracket', data: { controller: 'bracket', bracket_memgen_menu_outlet: '#memgen-menu'} }
+          #bracket.overflow-x-auto.max-w-screen{ class: 'group/bracket', data: { controller: 'bracket', bracket_memgen_menu_outlet: '#memgen-menu'} }
             = parse_bracket(@event).to_html.html_safe
       
     .font-sans.mb-6.max-w-full.md:max-w-screen-md{ class: 'xl:max-w-[72rem]', data: { controller: 'tab', tab_pane_toggle_class_value: 'hidden', tab_active_classes_value: json_escape(['text-white', 'bg-gray-800']), tab_inactive_classes_value: json_escape(['text-gray-600', 'hover:text-gray-200', 'bg-gray-900', 'hover:bg-gray-700']) } }
       %h2.flex.items-stretch{ class: 'space-x-0.5' }
         - if @event.mine?
           #pending-tab.text-sm.font-semibold.px-4.rounded-t-lg.py-1.cursor-pointer{ data: { tab_target: 'tab', action: 'click->tab#click' } }
-            Pending Submissions
+            Queue
             %span.ml-1.opacity-85.text-xs{ data: { counter_target: 'counter', scope: 'pending' } }
           #confirmed-tab.text-sm.font-semibold.px-4.rounded-t-lg.py-1.cursor-pointer{ data: { tab_target: 'tab', action: 'click->tab#click' } }
-            Confirmed Submissions
+            Confirmed
             %span.ml-1.opacity-85.text-xs{ data: { counter_target: 'counter', scope: 'confirmed' } }
           #cut-tab.text-sm.font-semibold.px-4.rounded-t-lg.py-1.cursor-pointer{ data: { tab_target: 'tab', action: 'click->tab#click' } }
-            Cut Submissions
+            Cuts
             %span.ml-1.opacity-85.text-xs{ data: { counter_target: 'counter', scope: 'cut' } }
         #my-tab.text-sm.font-semibold.px-4.rounded-t-lg.py-1.cursor-pointer{ data: { tab_target: 'tab', action: 'click->tab#click' } }
-          My Submissions
+          My Teams
           %span.ml-1.opacity-85.text-xs{ data: { counter_target: 'counter', scope: 'mine' } }
       
       - if @event.mine?
