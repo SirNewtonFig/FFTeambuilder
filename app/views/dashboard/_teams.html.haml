@@ -5,7 +5,7 @@
         .text-orange-400.group-hover:text-orange-300.font-semibold= team.name || 'Unnamed Team'
         %div.text-sm
           %span.text-gray-300 Updated
-          %span.text-white.font-semibold= relative_time(team.updated_at)
+          %span.text-white.font-semibold= relative_time2(team.updated_at)
       
       .ml-4.flex.space-x-2
         %a.p-1.rounded-md.bg-gray-700.hover:bg-gray-600.h-8.w-8.flex{ href: edit_team_path(team) }

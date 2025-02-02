@@ -20,7 +20,7 @@
         
         = render 'events/show/actions', event: @event
 
-  .space-y-4{ class: 'mt-[11rem] md:mt-[8.5rem]' }
+  #draggable-container.space-y-4{ class: 'mt-[11rem] md:mt-[8.5rem]' }
     - if @event.description.present?
       .font-sans.mb-6.max-w-full.md:max-w-screen-md{ class: 'xl:max-w-[72rem]'}
         = simple_format(@event.description || 'No description provided', class: 'text-gray-300 prose bg-gray-800 p-2 border-l-2 border-orange-500')
