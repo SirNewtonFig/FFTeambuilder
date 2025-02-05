@@ -292,6 +292,7 @@ GEM
       railties (>= 5.2)
     rexml (3.2.5)
     rolify (6.0.1)
+    rollbar (3.6.0)
     rubyzip (2.3.2)
     sassc (2.4.0)
       ffi (~> 1.9)
@@ -393,6 +394,7 @@ DEPENDENCIES
   rb-readline
   redis (~> 4.0)
   rolify
+  rollbar
   selenium-webdriver
   sprockets-rails
   stimulus-rails
