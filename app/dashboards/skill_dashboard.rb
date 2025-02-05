@@ -16,37 +16,7 @@ class SkillDashboard < Administrate::BaseDashboard
     skill_type: Field::Select.with_options(searchable: false, collection: ->(field) { field.resource.class.send(field.attribute.to_s.pluralize).keys }),
     created_at: Field::DateTime,
     updated_at: Field::DateTime,
-    data: Field::JSONB.with_options(transform: %w[to_h with_indifferent_access], advanced_view: {
-      formula: Field::String,
-      ct: Field::Number,
-      mp: Field::Number,
-      range: Field::Number,
-      area: Field::Number,
-      vert: Field::Number,
-      target: Field::String,
-      
-      element: Field::String,
-      atk_up: Field::Boolean,
-      matk_up: Field::Boolean,
-      two_hands: Field::Boolean,
-      two_swords: Field::Boolean,
-      martial_arts: Field::String,
-
-      evade: Field::String,
-      protect: Field::Boolean,
-      shell: Field::Boolean,
-
-      counter: Field::Boolean,
-      counter_flood: Field::Boolean,
-      counter_magic: Field::Boolean,
-      reflectable: Field::Boolean,
-      mimic: Field::Boolean,
-
-      move: Field::Number,
-      jump: Field::Number,
-      memgen_id: Field::String,
-      xa: Field::String
-    }),
+    data: Field::JSONB.with_options(transform: %w[to_h with_indifferent_access])
   }.freeze
 
   # COLLECTION_ATTRIBUTES
