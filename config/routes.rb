@@ -109,6 +109,8 @@ Rails.application.routes.draw do
         patch :default
       end
     end
+
+    resource :memgen, controller: 'teams/memgen'
     
     resource :lineup, only: %i{ update }, controller: 'teams/lineup'
   end
