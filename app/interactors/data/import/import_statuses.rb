@@ -10,6 +10,8 @@ class Data::Import::ImportStatuses < ActiveInteractor::Base
         description: row['Description'],
         duration: row['Duration'],
         indicator: row['Indicator'],
+        upgrades_to: row['Upgrades To'],
+        upgrade_effect: row['Upgrade Effect'],
         show_priority: row['Default Priority'] != 'N/A'
       )
     end

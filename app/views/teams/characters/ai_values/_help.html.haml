@@ -1,0 +1,32 @@
+.-mx-2.px-2.py-3.space-y-2.cursor-pointer{ class: 'hover:bg-menu-dark/25' }
+  .flex.justify-between.items-center
+    .flex.items-center.space-x-2.text-red-900
+      What are AI priorities?
+      
+  .text-left.text-sm.prose.text-gray-900
+    These values provide a way to compel the AI to take certain actions
+    on the basis of the status outcomes of the action. For instance, an
+    attack that kills its target will consider the "Dead" priority, as
+    will a skill that revives a dead target.
+
+  .text-left.text-sm.prose.text-gray-900
+    %span.text-red-900.font-semibold Negative
+    values represent statuses that you want to
+    %span.text-red-900.font-semibold inflict on enemies
+    or
+    %span.text-red-900.font-semibold remove from your allies.
+    Conversely,
+    %span.text-cyan-900.font-semibold positive values
+    are for things
+    you want to
+    %span.text-cyan-900.font-semibold set on your allies
+    and
+    %span.text-cyan-900.font-semibold remove from enemies.
+    The larger the magnitude, the greater the priority.
+
+  .text-left.text-sm.prose.text-gray-900
+    There are some hardcoded exceptions in the AI engine that take priority
+    over this mechanism. For example, you can't compel a unit to set
+    Berserk on its allies on the basis of the priority value alone. These
+    exceptions are too varied and complicated to list here, just know that
+    it won't work the way you expect 100% of the time.
