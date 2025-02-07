@@ -1,19 +1,19 @@
 - i = params[:character_id] || params[:id]
 - readonly ||= false
 
-#skills.w-full.px-2.py-2.bg-menu-texture.border-2.border-menu-dark.sm:bg-transparent.sm:border-0
-  .text-xl.mb-1.text-menu-dark.pl-2 Abilities
+#skills.w-full.px-4.py-2.flex-1.bg-menu-texture.border-2.border-menu-dark.sm:bg-transparent.sm:border-0
+  .text-lg.mb-1.text-menu-dark Abilities
 
   = form_with(url: team_character_skills_path(team_id: team.id, character_id: i), method: :patch, data: { controller: 'form' }) do |f|
-    %table.table-auto.border-spacing-0.border-collapse.w-full
+    .w-full{ class: 'space-y-0.5' }
       - { reaction: 'Reaction', support: 'Empower', movement: 'Support' }.each do |slot, label|
         - if char.job.skills.send(slot).any?
-          %tr{ data: { controller: 'context', action: 'keydown.esc@window->context#close' } }
-            %td.w-8.h-8
+          .flex{ data: { controller: 'context', action: 'keydown.esc@window->context#close click->context#help' } }
+            .w-6.h-6
               .flex.items-center.justify-center
                 = image_tag("icons/skill-#{slot}.png", class: 'h-6')
-            %td.pl-1
-              = readonly_link_to(char.send(slot)&.name || label, edit_team_character_skills_path(team_id: team.id, character_id: i, scope: slot), data: { action: 'contextmenu->context#open:prevent', turbo_frame: 'modal' }, class: "block w-full text-lg border-0 border-b-2 border-transparent hover:border-menu-dark #{'text-menu-dark' if char.send(slot).blank?}", readonly:)
+            .pl-1.flex-1
+              = readonly_link_to(char.send(slot)&.name || label, edit_team_character_skills_path(team_id: team.id, character_id: i, scope: slot), data: { action: 'contextmenu->context#open:prevent', turbo_frame: 'modal' }, class: "block w-full border-0 border-b-2 border-transparent hover:border-menu-dark #{'text-menu-dark' if char.send(slot).blank?}", readonly:)
               - if char.send(slot).present?
                 = wrap_tooltip do
                   = render "teams/characters/skills/rsm", skill: char.send(slot), character: char, team: team

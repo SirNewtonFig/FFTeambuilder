@@ -13,6 +13,17 @@ export default class ContextController extends Controller {
     useClickOutside(this)
   }
 
+  help(event) {
+    if (this.element.closest('.tooltip-highlight')) {
+      const helpEvent = new CustomEvent("context:help", { bubbles: true })
+      this.element.dispatchEvent(helpEvent)
+      
+      event.preventDefault()
+      event.stopPropagation()
+      this.open()
+    }
+  }
+
   open() {
     if (this.hasTooltipTarget) {
       this.popper = createPopper(this.element, this.tooltipTarget, {

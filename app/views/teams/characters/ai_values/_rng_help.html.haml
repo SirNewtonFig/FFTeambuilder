@@ -1,0 +1,31 @@
+.-mx-2.px-2.py-3.space-y-2.cursor-pointer
+  .flex.justify-between.items-center
+    .flex.items-center.space-x-2.text-red-900
+      RNG Confidence
+      
+  .text-left.text-sm.prose.text-gray-900
+    This dictates how the AI will evaluate the potential damage from an
+    attack that has variable damage, such as a weapon with [A..B] in its
+    damage formula (e.g. bags, daggers).
+
+  .text-left.text-sm.prose.text-gray-900
+    %span.text-red-900.font-semibold Min
+    means the AI will assume it does the
+    %span.text-red-900.font-semibold minimal possible
+    damage,
+    %span.text-black.font-semibold Avg
+    means the AI will assume the
+    %span.text-black.font-semibold average,
+    while
+    %span.text-cyan-900.font-semibold Max
+    means the AI will assume that it will deal the
+    %span.text-cyan-900.font-semibold maximum possible
+    damage.
+
+  .text-left.text-sm.prose.text-gray-900
+    This can be useful if you want to try to encourage or discourage
+    attacks of this nature. For instance, if you equipped a bag for the
+    equip effect but don't especially want to swing it, selecting
+    %span.text-red-900.font-semibold Min
+    will make the AI assume the value for an attack will be as low as
+    possible.

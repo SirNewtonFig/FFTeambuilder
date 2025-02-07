@@ -1,4 +1,4 @@
-.group.w-full.relative.mb-3{ data: { controller: 'toggle-class', toggle_class_class_value: 'eval-formula' } }
+#edit-character.group.w-full.relative.mb-3
   .z-10.sticky.top-0{ class: 'bg-black/75' }
     .relative.px-3.flex.py-2.items-center.justify-between
       .flex.space-x-4
@@ -55,9 +55,15 @@
 
           #formula-toggle.mt-4.ml-1
             %label.cursor-pointer.flex.items-center
-              %input.hidden.peer{ type: 'checkbox', data: { action: 'toggle-class#toggle' } }
+              %input.hidden.peer{ type: 'checkbox', data: { controller: 'toggle-class', action: 'toggle-class#toggle', toggle_class_class_value: 'eval-formula', toggle_class_target_value: '#edit-character' } }
               = inline_svg_tag('icons/calculate.svg', class: 'h-12 w-12 md:h-6 md:w-6 text-gray-400 peer-checked:text-blue-500 font-light')
-              .hidden.md:block.text-white.text-sm Calculate Formulas?
+              .hidden.md:block.text-white.text-sm.ml-1 Calculate Formulas?
+
+          #help-toggle.mt-4.ml-1
+            %label.cursor-pointer.flex.items-center
+              %input.hidden.peer{ type: 'checkbox', data: { controller: 'toggle-class', action: 'toggle-class#toggle context:help@window->toggle-class#off', toggle_class_class_value: 'tooltip-highlight', toggle_class_target_value: '#edit-character' } }
+              = inline_svg_tag('icons/info.svg', class: 'h-12 w-12 md:h-6 md:w-6 text-gray-400 peer-checked:text-blue-500 font-light')
+              .hidden.md:block.text-white.text-sm.ml-1 Need More Info?
       
       .w-full.mr-3{ class: 'ml-[4.25rem] sm:ml-[12.75rem]' }
         = turbo_frame_tag(:character_editor, src: edit_team_character_path(team_id: @team.id, id: 0))
