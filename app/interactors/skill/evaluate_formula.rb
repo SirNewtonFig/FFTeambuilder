@@ -15,12 +15,9 @@ class Skill::EvaluateFormula < ActiveInteractor::Base
     parsed_formula = skill.formula.dup
 
     parts.each do |expression|
-      Rails.logger.debug(expression.inspect)
       c = Skill::ComputeFormula.perform(character:, skill:, expression:)
 
       next unless c.success?
-
-      Rails.logger.debug(c.result)
 
       parsed_formula.sub!(c.formula_expression, c.result)
     end

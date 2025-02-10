@@ -3,10 +3,15 @@
   .flex.justify-between.items-center
     %div= item.name
 
-    .flex
-      .text-cyan-900
-        [#{item.data['formula']}]
-
+  .text-left.text-sm
+    %span.text-red-900 Damage:
+    - result = eval_weapon_formula(character:, weapon: item)
+    - if result != item.formula
+      %span.ml-1{ class: 'group-[.eval-formula]:hidden' }= item.formula
+      %span.ml-1.hidden.text-cyan-900{ class: 'group-[.eval-formula]:inline' }= result
+    - else
+      %span.ml-1= item.formula
+  
   .flex.items-center.space-x-4
     - ['wp', 'w_ev'].each do |prop|
       - next if item.data[prop].blank?

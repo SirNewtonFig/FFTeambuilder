@@ -17,4 +17,4 @@
       = form_with(url: team_character_items_path(team_id: @team.id, character_id: params[:character_id]), method: :patch, data: { controller: "form #{'auto-scroll' if item == @char.send(scope)}", turbo_frame: 'character_editor', form_modal_outlet: '.modal-controller' }) do |f|
         = tag.button(class: 'w-full', data: { action: 'form#submit' }) do
           %input{ type: 'hidden', name: "character[#{scope}]", value: item.id }
-          = render "teams/characters/items/#{item.item_type}", item: item
+          = render "teams/characters/items/#{item.item_type}", item: item, character: @char

@@ -71,8 +71,16 @@ class Item < ApplicationRecord
     data['proc_formula']
   end
 
+  def bow?
+    proficiencies.map(&:record).include?(Skill.find_by(name: 'Equip Bows')) && data['flags'].match?(/2-hands only/i)
+  end
+  
   def gun?
     proficiencies.map(&:record).include?(Skill.find_by(name: 'Equip Gun'))
+  end
+
+  def magic_gun?
+    gun? && formula.match?(/MA/)
   end
 
   def spear?

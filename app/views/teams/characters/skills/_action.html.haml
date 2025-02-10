@@ -12,7 +12,7 @@
 
   .text-left.text-sm
     %span.text-red-900 Effect:
-    - result = eval_formula(character:, skill:)
+    - result = eval_skill_formula(character:, skill:)
     - if result != skill.formula
       %span.ml-1{ class: 'group-[.eval-formula]:hidden' }= skill.formula
       %span.ml-1.hidden.text-cyan-900{ class: 'group-[.eval-formula]:inline' }= result

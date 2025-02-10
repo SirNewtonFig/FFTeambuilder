@@ -325,6 +325,10 @@ class Character
       weapon.data['flags']&.match('2-hands')
   end
 
+  def sniper?
+    movement&.name&.match?('Sniper') || job.innate_skills.exists?(name: 'Sniper')
+  end
+  
   def attack_up?
     support&.name&.match?('Attack UP') || job.innate_skills.exists?(name: 'Attack UP')
   end

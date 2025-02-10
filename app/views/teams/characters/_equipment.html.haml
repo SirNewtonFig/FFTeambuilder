@@ -1,7 +1,6 @@
 - i = params[:id] || params[:character_id]
 - readonly ||= false
 
--# #equipment.w-full.px-2.py-2.bg-menu-texture.border-2.border-menu-dark.sm:bg-transparent.sm:border-0
 #equipment.w-full.px-4.py-2.flex-1.bg-menu-texture.border-2.border-menu-dark.sm:bg-transparent.sm:border-0
   .text-lg.mb-1.text-menu-dark Equipment
 
@@ -15,7 +14,7 @@
         = readonly_link_to(char.rhand&.name || 'Empty', team_character_items_path(team_id: team.id, character_id: i, scope: 'rhand'), data: { action: 'contextmenu->context#open:prevent', turbo_frame: 'modal' }, class: 'block w-full border-0 border-b-2 border-transparent hover:border-menu-dark', readonly:)
         - if char.rhand.present?
           = wrap_tooltip do
-            = render "teams/characters/items/#{char.rhand.item_type}", item: char.rhand
+            = render "teams/characters/items/#{char.rhand.item_type}", item: char.rhand, character: char
 
     .flex{ data: { controller: 'context', action: 'keydown.esc@window->context#close click->context#help' } }
       .w-6.h-6
@@ -26,7 +25,7 @@
         = readonly_link_to(char.lhand&.name || 'Empty', team_character_items_path(team_id: team.id, character_id: i, scope: 'lhand'), data: { action: 'contextmenu->context#open:prevent', turbo_frame: 'modal' }, class: 'block w-full border-0 border-b-2 border-transparent hover:border-menu-dark', readonly:)
         - if char.lhand.present?
           = wrap_tooltip do
-            = render "teams/characters/items/#{char.lhand.item_type}", item: char.lhand
+            = render "teams/characters/items/#{char.lhand.item_type}", item: char.lhand, character: char
 
     - %w{ helmet armor accessory}.each do |slot|
       .flex{ data: { controller: 'context', action: 'keydown.esc@window->context#close click->context#help' } }
