@@ -34,7 +34,7 @@ class Teams::Characters::JobController < ApplicationController
     def job_params
       x = params.require(:character).permit(:job).to_h
 
-      if x.key?('job') && x['job'] == @char.data['secondary']
+      if x.key?('job') && x['job'].to_i == @char.data['secondary']
         primary = @char.data.dig('skills', 'primary')
         secondary = @char.data.dig('skills', 'secondary')
 
