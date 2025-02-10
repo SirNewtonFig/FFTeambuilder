@@ -1,9 +1,13 @@
 class Skill::ComputeFormulaContext < ActiveInteractor::Context::Base
   extend Memoist
 
-  UNFAITH = '(100 - (faith-30) - 20)/100'
-  FAITH = '(100 - (70-faith) - 20)/100'
-  PALADIN = '(100 - (70-faith) - 20)/100'
+  UNFAITH_MIN = '(100 - (faith-30) - 40)/100'
+  FAITH_MIN = '(100 - (70-faith) - 40)/100'
+  PALADIN_MIN = '(100 - (70-faith) - 40)/100'
+
+  UNFAITH_MAX = '(100 - (faith-30))/100'
+  FAITH_MAX = '(100 - (70-faith))/100'
+  PALADIN_MAX = '(100 - (70-faith))/100'
 
   attribute :character
   attribute :skill
@@ -27,14 +31,27 @@ class Skill::ComputeFormulaContext < ActiveInteractor::Context::Base
     expression[:expression]
   end
 
-  memoize def scalar
+  memoize def scalar_min
     case formula_function.downcase
     when 'dmg_f', 'heal_f', 'hit_f'
-      Eqn::Calculator.calc(FAITH, **bindings)
+      Eqn::Calculator.calc(FAITH_MIN, **bindings)
     when 'dmg_p', 'heal_p', 'hit_p'
-      Eqn::Calculator.calc(PALADIN, **bindings)
+      Eqn::Calculator.calc(PALADIN_MIN, **bindings)
     when 'dmg_u', 'heal_u', 'hit_u'
-      Eqn::Calculator.calc(UNFAITH, **bindings)
+      Eqn::Calculator.calc(UNFAITH_MIN, **bindings)
+    else
+      1
+    end
+  end
+
+  memoize def scalar_max
+    case formula_function.downcase
+    when 'dmg_f', 'heal_f', 'hit_f'
+      Eqn::Calculator.calc(FAITH_MAX, **bindings)
+    when 'dmg_p', 'heal_p', 'hit_p'
+      Eqn::Calculator.calc(PALADIN_MAX, **bindings)
+    when 'dmg_u', 'heal_u', 'hit_u'
+      Eqn::Calculator.calc(UNFAITH_MAX, **bindings)
     else
       1
     end
@@ -42,10 +59,9 @@ class Skill::ComputeFormulaContext < ActiveInteractor::Context::Base
 end
   
 class Skill::ComputeFormula < ActiveInteractor::Base
-  RANGE_PATTERN = /\[?([\w\d]+)\.\.([\w\d]+)\]?/
   WEAPON_PATTERN = /Weapon(?: with )?([+-]\d WP)?/i
 
-  delegate :character, :skill, :bindings, :result, :scalar, :formula_expression, :recognized_formula?, to: :context
+  delegate :character, :skill, :bindings, :result, :scalar_min, :scalar_max, :formula_expression, :recognized_formula?, to: :context
 
   def perform
     xa = skill.data['xa']
@@ -65,20 +81,19 @@ class Skill::ComputeFormula < ActiveInteractor::Base
 
       min == max ? min : min..max
     elsif xa.blank?
-      calc("#{formula_expression.downcase} * scalar", scalar:, **bindings)
-    elsif (matches = xa.match?(RANGE_PATTERN))
-      min = matches[1]
-      max = matches[2]
-
-      xa_min = xa.gsub(RANGE_PATTERN, min)
-      xa_max = xa.gsub(RANGE_PATTERN, max)
-
-      compute_range(xa, xa_min, xa_max)
+      calc(formula_expression.downcase, **bindings)
     else
       compute(xa)
     end
 
     context.result = formula_expression and return if computed.blank?
+
+    min = computed * scalar_min
+    max = computed * scalar_max
+
+    min = 0 if min.negative?
+
+    computed = min == max ? min.to_i : min.to_i..max.to_i
 
     context.result = "(#{computed.to_s})"
   end
@@ -86,15 +101,15 @@ class Skill::ComputeFormula < ActiveInteractor::Base
   def compute(xa)
     x0 = eval_xa(xa)
 
-    calc("#{formula_expression.sub(xa, x0.to_s)} * scalar", scalar:, **bindings)
+    calc(formula_expression.sub(xa, x0.to_s), **bindings)
   end
 
   def compute_range(xa, min, max)
     x0_min = eval_xa(min)
     x0_max = eval_xa(max)
 
-    min_result = calc("#{formula_expression.sub(xa, x0_min.to_s)} * scalar", scalar:, **bindings)
-    max_result = calc("#{formula_expression.sub(xa, x0_max.to_s)} * scalar ", scalar:, **bindings)
+    min_result = calc(formula_expression.sub(xa, x0_min.to_s), **bindings)
+    max_result = calc(formula_expression.sub(xa, x0_max.to_s), **bindings)
 
     min_result..max_result
   end
