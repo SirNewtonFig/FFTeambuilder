@@ -41,7 +41,7 @@
                 = [status.name, status.upgrades_to].compact.join('/')
               %input.bg-right.text-right.w-16.py-0.px-0.bg-transparent.border-0.border-b-2.border-menu-dark.appearance-none.focus:outline-none.focus:ring-0.focus:border-menu-dark.peer{ id: "ai_#{status.name.parameterize}",
                 type: 'number',
-                max: 255, min: -256,
+                max: 255, min: -255,
                 name: "character[ai_values][#{status.name.parameterize}]",
                 value: char.data.dig('ai_values', status.name.parameterize),
                 data: { action: 'change->form#submit' },
