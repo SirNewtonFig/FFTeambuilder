@@ -145,8 +145,9 @@ module FormHelper
 
   def neutral_button_classes
     '
+      cursor-pointer
       text-white
-      bg-white
+      bg-gray-600
       focus:outline-none
       bg-gray-500
       hover:bg-gray-400
@@ -183,6 +184,20 @@ module FormHelper
       bg-gray-700
       border-gray-600
       placeholder-gray-400
+    '.squish
+  end
+  
+  def checkbox_classes
+    '
+      w-4
+      h-4
+      text-menu-dark
+      bg-gray-100
+      checked:bg-menu-dark
+      border-0
+      rounded
+      focus:ring-menu-dark
+      focus:ring-2
     '.squish
   end
 
