@@ -1,0 +1,76 @@
+@plugin '@tailwindcss/forms';
+@plugin '@tailwindcss/aspect-ratio';
+@plugin '@tailwindcss/typography';
+@plugin '@tailwindcss/aspect-ratio';
+@plugin 'flowbite/plugin';
+
+@import '../stylesheets/bracket.css' layer(base);
+@import 'tailwindcss';
+
+@source '../../../node_modules/flowbite/**/*.js';
+
+@theme {
+  --background-image-menu-texture: url(bg.gif);
+
+  --color-menu: #a49d83;
+  --color-menu-dark: #726c5e;
+  --color-menu-light: #a9a38c;
+
+  --color-mp-light: #a2ad7d;
+  --color-mp-dark: #556872;
+
+  --color-hp-light: #c9985d;
+  --color-hp-dark: #78483f;
+
+  --color-ct-light: #a6a658;
+  --color-ct-dark: #59694a;
+
+  --skew-45: -45deg;
+}
+
+/*
+  The default border color has changed to `currentColor` in Tailwind CSS v4,
+  so we've added these compatibility styles to make sure everything still
+  looks the same as it did with Tailwind CSS v3.
+
+  If we ever want to remove these styles, we need to add an explicit border
+  color utility to any element that depends on these defaults.
+*/
+@layer base {
+  *,
+  ::after,
+  ::before,
+  ::backdrop,
+  ::file-selector-button {
+    border-color: var(--color-gray-200, currentColor);
+  }
+}
+
+* {
+  scrollbar-width: thin;
+  scrollbar-color: rgb(0, 0, 0) rgb(31, 41, 55);
+}
+
+.modal-content .overflow-y-auto {
+  scrollbar-gutter: stable;
+}
+
+.bg-menu-texture * {
+  scrollbar-color: #726C5E #A49D83;
+}
+
+input[type=number] {
+  -moz-appearance:textfield;
+}
+
+.tooltip-highlight [data-controller='context']:has([data-context-target='tooltip']) { 
+  @apply -mx-2 px-2 rounded-md bg-blue-400/25 hover:bg-blue-500/25;
+}
+
+.tooltip-highlight [data-controller='context']:has([data-context-target='tooltip']), .tooltip-highlight [data-controller='context']:has([data-context-target='tooltip']) * { 
+  @apply cursor-help!;
+}
+
+.bg-menu-texture {
+  background-image: url('bg.gif');
+}

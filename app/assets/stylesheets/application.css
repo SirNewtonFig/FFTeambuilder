@@ -13,7 +13,3 @@
  *= require_tree .
  *= require_self
  */
-
-.bg-menu-texture {
-  background-image: url('bg.gif');
-}

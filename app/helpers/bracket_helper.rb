@@ -16,7 +16,7 @@ module BracketHelper
         n.wrap("<a data-action='click->bracket#pick' data-player-id='#{n.attribute('data-participant-id')}' xlink:href='#{event_submission_path(event_id: event.id, id: n.attribute('data-participant-id').value.to_i, external: true)}'>")
       end
 
-      xml.css('.match--player-name').each {|n| n.attributes['class'] << ' fill-gray-100 text-xs group-hover/player:fill-orange-400' }
+      xml.css('.match--player-name:not(.-placeholder)').each {|n| n.attributes['class'] << ' fill-gray-100 text-xs group-hover/player:fill-orange-400' }
     end
   end
 end
