@@ -160,6 +160,32 @@ module FormHelper
     '.squish
   end
 
+  def file_input_classes
+    '
+      file:mr-3
+      file:px-4
+      file:py-2.5
+      file:rounded-l-lg
+      file:text-sm
+      file:font-semibold
+      file:bg-gray-800
+      file:text-white
+      hover:file:cursor-pointer
+      hover:file:bg-gray-700
+      block
+      w-full
+      text-sm
+      border
+      rounded-lg
+      cursor-pointer
+      text-gray-400
+      focus:outline-none
+      bg-gray-700
+      border-gray-600
+      placeholder-gray-400
+    '.squish
+  end
+
   def wrap_tooltip(&block)
     tag.div(
       capture(&block),

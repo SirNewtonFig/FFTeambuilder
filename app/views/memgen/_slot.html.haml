@@ -7,10 +7,10 @@
 
     %div
       %label.block.mb-1.text-sm.font-medium.text-white{ for: "file-#{i}-a" } Team A
-      %input.block.w-full.text-sm.border.rounded-lg.cursor-pointer.text-gray-400.focus:outline-none.bg-gray-700.border-gray-600.placeholder-gray-400{ name: 'slot[][team_a]', id: "file-#{i}-a", "aria-describedby" => "file_input_help", type: "file", accept: '.yml' }
-      %p.mt-1.text-sm.text-gray-500.dark:text-gray-300 YML builder saves only!
+      %input{ class: file_input_classes, name: 'slot[][team_a]', id: "file-#{i}-a", type: "file", accept: '.yml' }
+      %p.mt-1.text-sm.text-gray-500 YML builder saves only!
 
     %div
       %label.block.mb-1.text-sm.font-medium.text-white{ for: "file-#{i}-b" } Team B
-      %input.block.w-full.text-sm.border.rounded-lg.cursor-pointer.text-gray-400.focus:outline-none.bg-gray-700.border-gray-600.placeholder-gray-400{ name: 'slot[][team_b]', id: "file-#{i}-b", "aria-describedby" => "file_input_help", type: "file", accept: '.yml' }
-      %p#file_input_help.mt-1.text-sm.text-gray-500.dark:text-gray-300 YML builder saves only!
+      %input{ class: file_input_classes, name: 'slot[][team_b]', id: "file-#{i}-b", type: "file", accept: '.yml' }
+      %p.mt-1.text-sm.text-gray-500 YML builder saves only!

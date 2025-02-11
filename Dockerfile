@@ -19,26 +19,17 @@ ARG BUNDLER_VERSION=2.2.32
 RUN gem update --system --no-document && \
     gem install -N bundler -v ${BUNDLER_VERSION}
 
-
 # Throw-away build stage to reduce size of final image
 FROM base as build
 
 # Install packages needed to build gems and node modules
 RUN apt-get update -qq && \
-    apt-get install --no-install-recommends -y build-essential curl libpq-dev Node.js npm node-gyp pkg-config python-is-python3 unzip git
-
-# Install yarn
-ARG YARN_VERSION=1.22.19
-RUN npm install -g yarn@$YARN_VERSION
+    apt-get install --no-install-recommends -y build-essential curl libpq-dev pkg-config python-is-python3 unzip git
 
 # Install application gems
 COPY Gemfile Gemfile.lock ./
 RUN bundle _${BUNDLER_VERSION}_ install && \
     bundle exec bootsnap precompile --gemfile
-
-# Install node modules
-COPY package.json package-lock.json yarn.lock .
-RUN yarn install
 
 # Copy application code
 COPY . .

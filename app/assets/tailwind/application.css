@@ -2,12 +2,9 @@
 @plugin '@tailwindcss/aspect-ratio';
 @plugin '@tailwindcss/typography';
 @plugin '@tailwindcss/aspect-ratio';
-@plugin 'flowbite/plugin';
 
 @import '../stylesheets/bracket.css' layer(base);
 @import 'tailwindcss';
-
-@source '../../../node_modules/flowbite/**/*.js';
 
 @theme {
   --background-image-menu-texture: url(bg.gif);
