@@ -14,7 +14,8 @@
         %input{ type: :hidden, name: 'submission_ids[]', value: submission.id }
         .flex.items-center.space-x-2.cursor-pointer
           = inline_svg_tag('icons/drag.svg', class: 'h-6 w-6 text-gray-400')
-          = render 'events/submissions/submission', submission:, hide_player_name: true, actions:
+          .flex-1
+            = render 'events/submissions/submission', submission:, hide_player_name: true, actions:
 
     - if submissions.blank?
       .py-4.text-gray-400.italic You have not submitted any teams yet
