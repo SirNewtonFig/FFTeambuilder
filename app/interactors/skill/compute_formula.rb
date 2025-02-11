@@ -88,8 +88,8 @@ class Skill::ComputeFormula < ActiveInteractor::Base
 
     context.result = formula_expression and return if computed.blank?
 
-    min = computed * scalar_min
-    max = computed * scalar_max
+    min = (computed.try(:min) || computed) * scalar_min
+    max = (computed.try(:max) || computed) * scalar_max
 
     min = 0 if min.negative?
 
@@ -120,7 +120,7 @@ class Skill::ComputeFormula < ActiveInteractor::Base
     x0 = calc('x * 3/2', x: x0) if skill.data['two_hands'].present? && character.two_hands_engaged? && !character.weapon.data['flags']&.match('2-hands only')
     x0 = calc('x * 4/3', x: x0) if skill.data['atk_up'].present? && character.attack_up?
     x0 = calc('x * 5/4', x: x0) if skill.data['matk_up'].present? && character.m_attack_up?
-    x0 = calc('x * 4/3', x: x0) if skill.data['martial_arts']&.match?(/yes/i) || skill.data['martial_arts']&.match?(/barehanded/i) && character.weapon.blank?
+    x0 = calc('x * 4/3', x: x0) if character.martial_arts? && (skill.data['martial_arts']&.match?(/yes/i) || skill.data['martial_arts']&.match?(/barehanded/i) && character.weapon.blank?)
     x0 = calc('x * 4/3', x: x0) if skill.data['atk_up'].present? && character.sniper? && character.weapon.bow?
 
     x0
