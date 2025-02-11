@@ -309,15 +309,15 @@ class Character
     items.flat_map { |item| item.data['always']&.split(/[\s\/]+/) }.compact.uniq
   end
 
-  def can_equip_skills?
+  memoize def can_equip_skills?
     job.name != 'Mime'
   end
 
-  def can_equip_items?
+  memoize def can_equip_items?
     job.name != 'Mime'
   end
 
-  def two_hands_engaged?
+  memoize def two_hands_engaged?
     return false if weapon.blank?
 
     (two_hands? || weapon.data['flags']&.match('2-hands only')) &&
@@ -325,27 +325,27 @@ class Character
       weapon.data['flags']&.match('2-hands')
   end
 
-  def sniper?
+  memoize def sniper?
     movement&.name&.match?('Sniper') || job.innate_skills.exists?(name: 'Sniper')
   end
   
-  def attack_up?
+  memoize def attack_up?
     support&.name&.match?('Attack UP') || job.innate_skills.exists?(name: 'Attack UP')
   end
   
-  def m_attack_up?
+  memoize def m_attack_up?
     support&.name&.match?('Magic AttackUP') || job.innate_skills.exists?(name: 'Magic AttackUP')
   end
   
-  def two_hands?
+  memoize def two_hands?
     support&.name&.match('Two Hands') || job.innate_skills.exists?(name: 'Two Hands')
   end
 
-  def martial_arts?
+  memoize def martial_arts?
     support&.name&.match('Martial Arts') || job.innate_skills.exists?(name: 'Martial Arts')
   end
 
-  def two_swords?
+  memoize def two_swords?
     support&.name&.match('Two Swords') || job.innate_skills.exists?(name: 'Two Swords')
   end
 
