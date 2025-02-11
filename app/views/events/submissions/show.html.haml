@@ -12,13 +12,13 @@
             = tag.span('Player Name', class: 'text-[0.625rem] block text-white')
             = tag.span(@team.player_name, class: "text-white text-sm #{text_field_classes_neutral}")
 
-      .relative.flex.flex-col.items-end.group{"data-dial-init" => ""}
-        %button.flex.items-center.justify-center.text-white.group-hover:bg-gray-700.rounded-lg.w-10.h-10.focus:ring-4.focus:ring-blue-300.focus:outline-none{"aria-controls" => "file-actions", "aria-expanded" => "false", "data-dial-toggle" => "file-actions", type: "button"}
+      .relative.flex.flex-col.items-end.group{ data: { controller: 'context', action: 'keydown.esc@window->context#close', context: { placement_value: 'bottom' } } }
+        %button.flex.items-center.justify-center.text-white.hover:bg-gray-700.focus:bg-gray-700.rounded-lg.w-10.h-10.focus:ring-4.focus:ring-blue-300.focus:outline-none.cursor-pointer{"aria-controls" => "file-actions", "aria-expanded" => "false", type: "button", data: { action: 'click->context#open' } }
           %svg.w-6.h-6{fill: "none", stroke: "currentColor", "stroke-width" => "1.5", viewbox: "0 0 24 24", xmlns: "http://www.w3.org/2000/svg"}
             %path{d: "M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5", "stroke-linecap" => "round", "stroke-linejoin" => "round"}
 
-        #file-actions.absolute.top-12.flex.flex-col.items-end.hidden.mt-2.space-y-2
-          = link_to(clone_team_path(@team), class: 'flex items-center group cursor-pointer w-52', data: { turbo_method: :post } ) do
+        #file-actions.pt-2.flex.flex-col.items-end.hidden.space-y-2{ data: { context_target: 'tooltip' } }
+          = link_to(clone_team_path(@team), class: 'flex items-center group cursor-pointer w-52', data: { action: 'context#close', turbo_method: :post } ) do
             .px-4.h-10.flex.justify-center.items-center.text-white.bg-gray-700.rounded-full.shadow-sm.hover:bg-gray-600.focus:ring-4.focus:ring-gray-300.focus:outline-none
               .mr-2.text-sm Copy to My Teams
               = inline_svg_tag('icons/copy.svg', class: 'h-5 w-5 text-white')
