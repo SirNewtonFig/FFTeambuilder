@@ -221,7 +221,7 @@ module FormHelper
   end
 
   def wrap_tooltip_neutral(&block)
-    tag.div(capture(&block), class: 'z-30 absolute hidden shadow-lg bg-gray-700 left-0 rounded font-sans', data: { context_target: 'tooltip' })
+    tag.div(capture(&block), class: 'z-30 absolute hidden shadow-lg bg-gray-700 left-0 rounded', data: { context_target: 'tooltip' })
   end
 
   def readonly_link_to(name, href, readonly: false, **options)

@@ -4,4 +4,8 @@ module ApplicationHelper
   include FormulaHelper
   include StatHelper
   include ZodiacHelper
+
+  def modal_classes
+    content_for(:modal_classes) || ''
+  end
 end

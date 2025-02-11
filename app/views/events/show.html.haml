@@ -1,5 +1,5 @@
 .relative.mx-3.md:mx-8{ data: { controller: 'counter' } }
-  .z-10.font-sans.fixed.-mx-3.px-3.md:-mx-8.md:px-8.py-4.top-0.mb-6.w-screen{ class: 'bg-black' }
+  .z-10.fixed.-mx-3.px-3.md:-mx-8.md:px-8.py-4.top-0.mb-6.w-screen{ class: 'bg-black' }
     .max-w-full
       .flex.flex-col.md:flex-row.justify-center.md:items-center.md:justify-between
         %div
@@ -22,13 +22,13 @@
 
   #draggable-container.space-y-4{ class: 'mt-[11rem] md:mt-[8.5rem]' }
     - if @event.description.present?
-      .font-sans.mb-6.max-w-full.md:max-w-screen-md{ class: 'xl:max-w-[72rem]'}
+      .mb-6.max-w-full.md:max-w-screen-md{ class: 'xl:max-w-[72rem]'}
         = simple_format(@event.description || 'No description provided', class: 'text-gray-300 prose bg-gray-800 p-2 border-l-2 border-orange-500')
 
     - if @event.show_bracket?
       .relative
         .flex.items-center.justify-between.max-w-screen-md.bg-gray-900.py-2.px-4.mb-2.sticky{ class: 'top-[10.5rem] md:top-[7.5rem]' }
-          .font-sans.flex.items-center
+          .flex.items-center
             .text-xs.text-white
               %span.hidden.md:inline View bracket and submit predictions at 
               %span.md:hidden See more at  
@@ -38,12 +38,12 @@
               = inline_svg_tag('icons/open_new.svg', class: 'h-4 w-4 ml-1')
 
           - if @event.state == 'started'
-            .font-sans.flex.items-center
+            .flex.items-center
               %a#memgen-link.flex.items-center.text-xs.text-orange-400.hover:text-orange-300{ href: new_event_memgen_path(@event), data: { turbo_frame: 'memgen' } }
                 = inline_svg_tag('icons/memory-card.svg', class: 'h-4 mr-1')
                 Build Card
           - else
-            .font-sans.flex.items-center
+            .flex.items-center
               %a#memgen-link.flex.items-center.text-xs.text-orange-400.hover:text-orange-300{ href: shuffle_event_path(@event), data: { turbo_method: :post } }
                 = inline_svg_tag('icons/sync.svg', class: 'h-4 mr-1')
                 Shuffle Bracket
@@ -53,7 +53,7 @@
             #bracket.overflow-x-auto.max-w-screen{ class: 'group/bracket', data: { controller: 'bracket', bracket_memgen_menu_outlet: '#memgen-menu'} }
               = parse_bracket(@event).to_html.html_safe
       
-    .font-sans.mb-6.max-w-full.md:max-w-screen-md{ class: 'xl:max-w-[72rem]', data: { controller: 'tab', tab_pane_toggle_class_value: 'hidden', tab_active_classes_value: json_escape(['text-white', 'bg-gray-800']), tab_inactive_classes_value: json_escape(['text-gray-600', 'hover:text-gray-200', 'bg-gray-900', 'hover:bg-gray-700']) } }
+    .mb-6.max-w-full.md:max-w-screen-md{ class: 'xl:max-w-[72rem]', data: { controller: 'tab', tab_pane_toggle_class_value: 'hidden', tab_active_classes_value: json_escape(['text-white', 'bg-gray-800']), tab_inactive_classes_value: json_escape(['text-gray-600', 'hover:text-gray-200', 'bg-gray-900', 'hover:bg-gray-700']) } }
       %h2.flex.items-stretch{ class: 'space-x-0.5' }
         - if @event.mine?
           #pending-tab.text-sm.font-semibold.px-4.rounded-t-lg.py-1.cursor-pointer{ data: { tab_target: 'tab', action: 'click->tab#click' } }

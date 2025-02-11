@@ -5,12 +5,12 @@
     - if back_path.present?
       %a.bg-gray-800.py-1.px-4.rounded-lg.cursor-pointer.hover:bg-gray-700.flex.items-center.space-x-1{ href: back_path }        
         = inline_svg_tag('icons/back.svg', class: 'h-4 w-4 text-white')
-        %span.text-white.text-sm.font-sans Back
+        %span.text-white.text-sm Back
   
   .bg-gray-800.py-1.px-4.w-40.rounded-lg.cursor-pointer.hover:bg-gray-700{ data: { controller: 'context', action: 'keydown.esc@window->context#close click->context#open', context: { placement_value: 'top' } } }
     .flex.items-center.space-x-1
       = inline_svg_tag('icons/account.svg', class: 'h-4 w-4 text-white')
-      %span.text-white.text-sm.font-sans= Current.user.username
+      %span.text-white.text-sm= Current.user.username
     = wrap_tooltip_neutral do
       - if current_user.present?
         - if current_user.is_admin?
