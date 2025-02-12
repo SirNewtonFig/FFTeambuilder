@@ -1,0 +1,18 @@
+.-mx-2.px-2.py-3.space-y-2.cursor-pointer.text-black{ class: 'hover:bg-menu-dark/25' }
+  
+  .flex.justify-between.items-center
+    %div Unarmed Strike
+
+  .text-left.text-sm
+    %span.text-red-900 Damage:
+    - result = eval_weapon_formula(character:, weapon: Item.fist).to_i
+    - result *= 2 if character.two_fists?
+    %span.ml-1{ class: 'group-[.eval-formula]:hidden' }= "PA * (PA*BR)/100"
+    %span.ml-1.hidden.text-cyan-900{ class: 'group-[.eval-formula]:inline' }= result
+    - if character.two_fists?
+      %span.hidden.text-menu-dark{ class: 'group-[.eval-formula]:inline' } (After Two-Swords)
+  
+  .text-left.text-sm
+    %span.text-red-900 WP:
+    %span.ml-1{ class: 'group-[.eval-formula]:hidden' }= "(PA*BR)/100"
+    %span.ml-1.hidden.text-cyan-900{ class: 'group-[.eval-formula]:inline' }= Eqn::Calculator.calc("rounddown((PA*BR)/100)".downcase, pa: character.pa, br: character.brave)

@@ -224,6 +224,10 @@ class Character
   end
 
   memoize def weapons
+    return [Item.fist, Item.fist] if two_fists?
+
+    return [Item.fist] if unarmed?
+
     [rhand, lhand].compact.select(&:weapon?)
   end
 
@@ -347,6 +351,14 @@ class Character
 
   memoize def two_swords?
     support&.name&.match('Two Swords') || job.innate_skills.exists?(name: 'Two Swords')
+  end
+
+  memoize def unarmed?
+    [rhand, lhand].compact.none?(&:weapon?)  
+  end
+
+  memoize def two_fists?
+    two_swords? && unarmed? && shield.blank?
   end
 
   def sum_passive(stat)

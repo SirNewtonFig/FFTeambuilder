@@ -6,7 +6,7 @@ class Skill::ParseFormulaContext < ActiveInteractor::Context::Base
 end
   
 class Skill::ParseFormula < ActiveInteractor::Base
-  FORMULA_PATTERN = /((?:Hit|Dmg|Heal|Absorb)(?:HP|MP)?_(?:U|F|P|MP)?)(\((?>[^)(]+|\g<2>)*\))/i
+  FORMULA_PATTERN = /((?:Hit|Dmg|Heal|Absorb)(?:HP|MP)?_(?:U|F|P|MP|Self)?)(\((?>[^)(]+|\g<2>)*\))/i
 
   delegate :skill, to: :context
   delegate :formula, to: :skill

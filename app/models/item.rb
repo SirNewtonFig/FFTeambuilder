@@ -1,4 +1,6 @@
 class Item < ApplicationRecord
+  extend Memoist
+
   enum :item_type, %i{ weapon shield helmet armor accessory }
   # serialize :data, HashWithIndifferentAccess
 
@@ -63,39 +65,43 @@ class Item < ApplicationRecord
     end
   }
 
-  def formula
+  def self.fist
+    Item.new(name: 'Unarmed Strike', data: { 'formula' => 'PA*WP', 'xa' => 'PA' })
+  end
+
+  memoize def formula
     data['formula']
   end
 
-  def proc_formula
+  memoize def proc_formula
     data['proc_formula']
   end
 
-  def bow?
+  memoize def bow?
     proficiencies.map(&:record).include?(Skill.find_by(name: 'Equip Bows')) && data['flags'].match?(/2-hands only/i)
   end
   
-  def gun?
+  memoize def gun?
     proficiencies.map(&:record).include?(Skill.find_by(name: 'Equip Gun'))
   end
 
-  def magic_gun?
+  memoize def magic_gun?
     gun? && formula.match?(/MA/)
   end
 
-  def spear?
+  memoize def spear?
     proficiencies.map(&:record).include?(Skill.find_by(name: 'Equip Spear'))
   end
 
-  def sword?
+  memoize def sword?
     proficiencies.map(&:record).include?(Skill.find_by(name: 'Equip Sword'))
   end
 
-  def katana?
+  memoize def katana?
     proficiencies.map(&:record).include?(Skill.find_by(name: 'Equip Katana'))
   end
 
-  def sword_or_katana?
+  memoize def sword_or_katana?
     sword? || katana?
   end
 
