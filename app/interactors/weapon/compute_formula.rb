@@ -12,7 +12,7 @@ class Weapon::ComputeFormulaContext < ActiveInteractor::Context::Base
   memoize def bindings
     stats = [:pa, :ma, :sp, :br, :faith].index_with { |key| character.send(key) }
     stats[:wp] = (weapon.data['wp'] || character.wp).to_i
-    stats[:wp] += wp_modifier
+    stats[:wp] += wp_modifier.to_i
     
     stats
   end
