@@ -9,7 +9,7 @@ class Event::Publish < Event::ChallongeBaseInteractor
     create_tournament
     submit_participants
     randomize_seeds
-    tournament.start!  
+    tournament.post(:open_for_predictions)
   end
 
   private
@@ -19,6 +19,7 @@ class Event::Publish < Event::ChallongeBaseInteractor
       t.name = event.title
       t.url = event.slug
       t.tournament_type = 'double elimination'
+      t.prediction_method = 1
       t.save
 
       raise t.errors.messages.values.flatten.join("\n") unless t.valid?

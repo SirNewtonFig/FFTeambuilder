@@ -8,10 +8,6 @@ class Event::ShuffleBracket < Event::ChallongeBaseInteractor
   
 
   def perform
-    tournament.reset!
-    
     Challonge::Participant.post(:randomize, tournament_id: tournament.id)
-
-    tournament.start!
   end
 end

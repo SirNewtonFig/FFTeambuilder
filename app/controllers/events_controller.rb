@@ -84,7 +84,7 @@ class EventsController < ApplicationController
 
     raise 'unauthorized' unless @event.mine?
 
-    @event.update(state: 'started')
+    Event::Open.perform(event: @event)
 
     redirect_to event_path(@event)
   end
