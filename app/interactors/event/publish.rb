@@ -9,7 +9,7 @@ class Event::Publish < Event::ChallongeBaseInteractor
     create_tournament
     submit_participants
     randomize_seeds
-    tournament.post(:open_for_predictions)
+    prepare_preseason
   end
 
   private
@@ -38,5 +38,9 @@ class Event::Publish < Event::ChallongeBaseInteractor
 
     def randomize_seeds
       Challonge::Participant.post(:randomize, tournament_id: context.tournament.id)
+    end
+
+    def prepare_preseason
+      event.submissions.where(external_id: nil).update_all("external_id = id")
     end
 end

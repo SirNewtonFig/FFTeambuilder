@@ -22,6 +22,10 @@ class Event < ApplicationRecord
     external_id.present? && (state == 'started' || mine?)
   end
 
+  def show_memgen?
+    ['started', 'closed'].include?(state)
+  end
+
   def delete_challonge
     Event::Destroy.perform(event: self)
 

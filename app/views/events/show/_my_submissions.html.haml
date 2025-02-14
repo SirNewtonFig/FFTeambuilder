@@ -7,7 +7,7 @@
     - submissions.each do |submission|
       - actions = capture do
         - unless @event.deadline.past?
-          %a.group.block.py-4.text-orange-400.hover:text-orange-300{ href: event_submission_path(event_id: event.id, id: submission.id), data: { turbo_method: :delete } }
+          %a.group.block.text-orange-400.hover:text-orange-300{ href: event_submission_path(event_id: event.id, id: submission.id), data: { turbo_method: :delete } }
             Withdraw
       
       .draggable{ id: dom_id(submission, 'my-submission'), data: { counter_target: 'item', scope: 'mine' } }

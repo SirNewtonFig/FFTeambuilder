@@ -5,6 +5,7 @@ export default class MemgenMenuController extends Controller {
   
   connect() {
     document.querySelector('#bracket').classList.add('memgen')
+    document.querySelector('#tabs').classList.add('memgen')
     document.querySelector('#memgen-link').classList.add('hidden')
 
     this.addBlock()
@@ -12,6 +13,7 @@ export default class MemgenMenuController extends Controller {
 
   disconnect() {
     document.querySelector('#bracket').classList.remove('memgen')
+    document.querySelector('#tabs').classList.remove('memgen')
     document.querySelector('#memgen-link').classList.remove('hidden')
   }
 

@@ -37,7 +37,7 @@
               Challonge
               = inline_svg_tag('icons/open_new.svg', class: 'h-4 w-4 ml-1')
 
-          - if @event.state == 'started'
+          - if @event.show_memgen?
             .flex.items-center
               %a#memgen-link.flex.items-center.text-xs.text-orange-400.hover:text-orange-300{ href: new_event_memgen_path(@event), data: { turbo_frame: 'memgen' } }
                 = inline_svg_tag('icons/memory-card.svg', class: 'h-4 mr-1')
@@ -50,10 +50,10 @@
 
         = turbo_frame_tag(:bracket_frame, src: (event_path(@event) unless turbo_frame?)) do
           - if turbo_frame?
-            #bracket.overflow-x-auto.max-w-screen{ class: 'group/bracket', data: { controller: 'bracket', bracket_memgen_menu_outlet: '#memgen-menu'} }
+            #bracket.overflow-x-auto.max-w-screen{ class: 'group/bracket', data: { controller: 'bracket', bracket_memgen_menu_outlet: '#memgen-menu' } }
               = parse_bracket(@event).to_html.html_safe
       
-    .mb-6.max-w-full.md:max-w-screen-md{ class: 'xl:max-w-[72rem]', data: { controller: 'tab', tab_pane_toggle_class_value: 'hidden', tab_active_classes_value: json_escape(['text-white', 'bg-gray-800']), tab_inactive_classes_value: json_escape(['text-gray-600', 'hover:text-gray-200', 'bg-gray-900', 'hover:bg-gray-700']) } }
+    #tabs.mb-6.max-w-full.md:max-w-screen-md{ class: 'xl:max-w-[72rem] group/tabs', data: { controller: 'tab bracket', bracket_memgen_menu_outlet: '#memgen-menu', tab_pane_toggle_class_value: 'hidden', tab_active_classes_value: json_escape(['text-white', 'bg-gray-800']), tab_inactive_classes_value: json_escape(['text-gray-600', 'hover:text-gray-200', 'bg-gray-900', 'hover:bg-gray-700']) } }
       %h2.flex.items-stretch{ class: 'space-x-0.5' }
         - if @event.mine?
           #pending-tab.text-sm.font-semibold.px-4.rounded-t-lg.py-1.cursor-pointer{ data: { tab_target: 'tab', action: 'click->tab#click' } }

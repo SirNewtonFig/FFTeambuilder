@@ -2,24 +2,25 @@
   - submissions.each do |submission|
     %div{ id: dom_id(submission, 'submission'), data: { counter_target: 'item', scope: 'pending' } }
       - actions = capture do
-        .flex.space-x-2.items-center
-          %a.group.block.py-4.text-orange-400.hover:text-orange-300{ href: event_submission_path(event_id: event.id, id: submission.id), data: { turbo_method: :delete } }
-            Delete
+        - if event.state == 'open'
+          .flex.space-x-2.items-center
+            %a.group.block.text-orange-400.hover:text-orange-300{ href: event_submission_path(event_id: event.id, id: submission.id), data: { turbo_method: :delete } }
+              Delete
 
-          %span.text-gray-500= '|'
-          
-          %a.group.block.py-4.text-orange-400.hover:text-orange-300{ href: edit_event_submission_path(event_id: event.id, id: submission.id), data: { turbo_frame: :modal } }
-            Rename
+            %span.text-gray-500= '|'
+            
+            %a.group.block.text-orange-400.hover:text-orange-300{ href: edit_event_submission_path(event_id: event.id, id: submission.id), data: { turbo_frame: :modal } }
+              Rename
 
-          %span.text-gray-500= '|'
+            %span.text-gray-500= '|'
 
-          %a.group.block.py-4.text-orange-400.hover:text-orange-300{ href: cut_event_submission_path(event_id: event.id, id: submission.id), data: { turbo_method: :patch } }
-            Cut
+            %a.group.block.text-orange-400.hover:text-orange-300{ href: cut_event_submission_path(event_id: event.id, id: submission.id), data: { turbo_method: :patch } }
+              Cut
 
-          %span.text-gray-500= '|'
+            %span.text-gray-500= '|'
 
-          %a.group.block.py-4.text-orange-400.hover:text-orange-300{ href: approve_event_submission_path(event_id: event.id, id: submission.id), data: { turbo_method: :patch } }
-            Approve
+            %a.group.block.text-orange-400.hover:text-orange-300{ href: approve_event_submission_path(event_id: event.id, id: submission.id), data: { turbo_method: :patch } }
+              Approve
       
       = render 'events/submissions/submission', submission:, actions:
 

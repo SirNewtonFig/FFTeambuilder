@@ -1,7 +1,7 @@
 - hide_player_name ||= false
 - href = submission.team.mine? && submission.team.persisted? ? edit_team_path(submission.team) : event_submission_path(event_id: @event.id, id: submission.id)
 
-.pt-3
+.py-3
   %a.block.font-semibold.text-orange-400.hover:text-orange-300.count-submission{ href: }
     - if hide_player_name
       = submission.team.name || 'Unnamed Team'
@@ -13,7 +13,7 @@
     - if submission.team.guest?
       %span.text-orange-200= '(guest)'
 
-  .flex.items-start.justify-between
+  .flex.items-end.justify-between
     %div
       .text-gray-300.font-light Updated: #{relative_time2(submission.team.updated_at)}
 
@@ -29,4 +29,11 @@
               = inline_svg('icons/check-circle.svg', class: 'h-4 w-4 text-green-500')
 
     %div
-      = actions
+      - if submission.event.show_memgen?
+        %a.hidden.items-center.text-xs.text-orange-400.hover:text-orange-300.cursor-pointer{ class: 'group-[.memgen]/tabs:flex', data: { action: 'click->bracket#pick', player_id: submission.external_id } }
+          = inline_svg_tag('icons/memory-card.svg', class: 'h-4 mr-1')
+          Add to Card
+          %title.hidden
+            = submission.player_name_override.presence || submission.team.player_name
+      - else
+        = actions
