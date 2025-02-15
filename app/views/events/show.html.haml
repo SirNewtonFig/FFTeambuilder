@@ -59,6 +59,8 @@
           #pending-tab.text-sm.font-semibold.px-4.rounded-t-lg.py-1.cursor-pointer{ data: { tab_target: 'tab', action: 'click->tab#click' } }
             Pending
             %span.ml-1.opacity-85.text-xs{ data: { counter_target: 'counter', scope: 'pending' } }
+
+        - if @event.mine? || @event.show_bracket?
           #confirmed-tab.text-sm.font-semibold.px-4.rounded-t-lg.py-1.cursor-pointer{ data: { tab_target: 'tab', action: 'click->tab#click' } }
             Confirmed
             %span.ml-1.opacity-85.text-xs{ data: { counter_target: 'counter', scope: 'confirmed' } }
@@ -73,6 +75,7 @@
         #pending-submissions.space-y-2.px-4.bg-gray-800.rounded.rounded-tl-none.hidden{ data: { tab_target: 'pane' } }
           = render 'events/show/submissions', submissions: @submissions, event: @event
 
+      - if @event.mine? || @event.show_bracket?
         #confirmed-submissions.space-y-2.px-4.bg-gray-800.rounded.rounded-tl-none.hidden{ data: { tab_target: 'pane' } }
           = render 'events/show/bracket', submissions: @bracket, event: @event
 
