@@ -1,5 +1,5 @@
 #events.divide-y.divide-gray-500
-  - events.each do |event|
+  - events.first(4).each do |event|
     %a.group.block.py-4{ href: event_path(event) }
       %div.text-orange-400.group-hover:text-orange-300.text-lg.font-semibold= event.title
       %div.text-sm

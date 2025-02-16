@@ -1,0 +1,10 @@
+%div.text-sm
+  - caption = team.events.count > 1 ? 'Submitted to events' : 'Submitted to event'
+  %span.text-gray-300= caption
+  - output = []
+  
+  - team.events.each do |event|
+    - output << capture do
+      %a.text-orange-400.hover:text-orange-300.font-semibold{ href: event_path(event) }
+        = event.title
+  = output.join('<span class="text-gray-500">|</span>').html_safe

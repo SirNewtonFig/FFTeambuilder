@@ -10,17 +10,10 @@
             My Recent Teams
 
           .flex.space-x-2.items-center
-            = form_with(url: teams_path, multipart: true, data: { controller: 'form' }) do
-              %label.cursor-pointer{ for: 'upload-team' }
-                .text-sm.text-orange-400.hover:text-orange-300 Import a Team
-                %input#upload-team.hidden{ type: 'file', name: 'team_file', accept: '.yml', data: { action: 'form#submit' } }
-            
-            %span.text-gray-500= '|'
-            
-            %a.text-sm.text-orange-400.hover:text-orange-300{ href: new_team_path, data: { turbo_frame: '_top' } }
-              Create a Team
+            %a.text-sm.text-orange-400.hover:text-orange-300{ href: teams_path }
+              Manage Teams
 
-        = render 'teams', teams: @teams.limit(6)
+        = render 'teams', teams: @teams
       
       .rounded-xl.bg-gray-800.p-4.my-3.md:min-w-96.md:flex-1.md:mx-3
         .flex.justify-between.items-center
@@ -31,6 +24,6 @@
             %a.text-sm.text-orange-400.hover:text-orange-300{ href: new_event_path, data: { turbo_frame: 'modal' } }
               Create Event
 
-        = render 'events', events: @events.limit(4)
+        = render 'events', events: @events
         
   = render "users/menu"

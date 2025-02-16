@@ -82,6 +82,10 @@ Rails.application.routes.draw do
       post :clone
     end
 
+    collection do
+      post :import
+    end
+
     resources :characters, controller: 'teams/characters' do
       member do
         get :jp_summary

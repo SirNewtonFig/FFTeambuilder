@@ -70,4 +70,4 @@
 
 #overlay.hidden.fixed.w-full.h-full.top-0.left-0.right-0.z-10.bg-gray-700.opacity-70
 
-= render 'users/menu', back_path: dashboard_path
+= render 'users/menu', back_path: request.referer || dashboard_path

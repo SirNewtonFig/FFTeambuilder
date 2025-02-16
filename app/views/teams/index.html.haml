@@ -1,0 +1,22 @@
+.relative.mx-3.md:mx-8{ data: { controller: 'counter' } }
+  .z-10.fixed.-mx-3.px-3.md:-mx-8.md:px-8.py-4.top-0.mb-6.w-screen{ class: 'bg-black' }
+    .max-w-full
+      .flex.flex-row.items-center.justify-between
+        %div
+          .flex.items-center
+            %h1.text-white.text-xl.font-semibold My Teams
+        
+        = render 'teams/index/actions'
+
+  #teams.divide-y.divide-gray-500{ class: 'md:mt-[5rem]' }
+    - @teams.each do |team|
+      = render 'teams/index/team', team:
+
+    - if @teams.blank?
+      .py-4.text-gray-600.italic You have no teams yet
+
+
+  .z-10
+    = render 'users/menu', back_path: dashboard_path
+
+= turbo_frame_tag :memgen

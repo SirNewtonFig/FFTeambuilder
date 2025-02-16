@@ -1,11 +1,20 @@
+- limit = 6
+
 #teams.divide-y.divide-gray-500
-  - teams.each do |team|
-    .flex.items-center
-      %a.flex-1.group.block.py-4{ href: edit_team_path(team) }
-        .text-orange-400.group-hover:text-orange-300.font-semibold= team.name || 'Unnamed Team'
-        %div.text-sm
-          %span.text-gray-300 Updated
-          %span.text-white.font-semibold= relative_time2(team.updated_at)
+  - teams.first(limit).each do |team|
+    .flex.items-center{ id: dom_id(team) }
+      .py-4.flex-1
+        %a.flex-1.group.block{ href: edit_team_path(team) }
+          .text-orange-400.group-hover:text-orange-300.font-semibold= team.name || 'Unnamed Team'
+          %div.text-sm
+            %span.text-gray-300 Updated
+            %span.text-white.font-semibold= relative_time2(team.updated_at)
+        - if team.events.present?
+          %div.text-sm
+            %span.text-gray-300 Submitted to event
+            - team.events.each do |event|
+              %a.text-orange-400.group-hover:text-orange-300.font-semibold{ href: event_path(event) }
+                = event.title
       
       .ml-4.flex.space-x-2
         %a.p-1.rounded-md.bg-gray-700.hover:bg-gray-600.h-8.w-8.flex{ href: edit_team_path(team) }
@@ -14,6 +23,11 @@
         = link_to(team_path(team), data: { turbo_method: :delete, turbo_confirm: 'Are you sure you want to delete this team?' }) do
           .p-1.rounded-md.h-8.w-8.flex{ class: 'bg-red-500/50 hover:bg-red-500/75'}
             = inline_svg_tag('icons/delete.svg', class: 'h-6 w-6 text-white')
+
+  - if teams.count > limit
+    .flex.justify-center.py-2
+      %a.text-sm.text-orange-400.hover:text-orange-300{ href: teams_path, data: { turbo_frame: '_top' } }
+        #{teams.count - limit} More
 
   - if teams.blank?
     .py-4.text-gray-600.italic You have no teams yet

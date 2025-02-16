@@ -1,4 +1,9 @@
 class TeamsController < ApplicationController
+  def index
+    @teams = Team.where(user_id: Current.user.id).order(updated_at: :desc)
+      .includes(:events)
+  end
+  
   def edit
     load_team
 
@@ -22,7 +27,7 @@ class TeamsController < ApplicationController
       
     @team.destroy
 
-    redirect_to dashboard_path
+    @referer_attrs = Rails.application.routes.recognize_path(request.referrer)
   end
 
   def metadata
@@ -59,12 +64,18 @@ class TeamsController < ApplicationController
     end
   end
 
-  def create
-    team_attributes = YAML.safe_load_file(params[:team_file])
+  def import
+    teams = params[:team_files].map do |file|
+      team_attributes = YAML.safe_load_file(file)
 
-    team = Team.create(user_id: Current.user.id, **team_attributes)
+      Team.create(user_id: Current.user.id, **team_attributes)
+    end
 
-    redirect_to edit_team_path(team)
+    if params[:team_files].count == 1
+      redirect_to team_path(teams.first)
+    else
+      redirect_to teams_path
+    end
   end
 
   def update

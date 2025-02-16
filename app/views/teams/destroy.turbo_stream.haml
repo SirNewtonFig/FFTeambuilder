@@ -1,0 +1,4 @@
+- if @referer_attrs[:controller] == 'teams' && @referer_attrs[:action] == 'edit'
+  = turbo_stream.redirect_to(teams_path)
+- else
+  = turbo_stream.remove(dom_id(@team))
