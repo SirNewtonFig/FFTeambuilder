@@ -12,7 +12,7 @@ class Teams::MemgenController < ApplicationController
       {
         team_a:,
         team_b:,
-        title: "v #{opponent.name.first(14)}"
+        title: "v #{opponent.name}"
       }
     end
 

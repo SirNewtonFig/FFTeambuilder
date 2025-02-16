@@ -2,16 +2,27 @@
   - submissions.each do |submission|
     %div{ id: dom_id(submission, 'cut_submission'), data: { counter_target: 'item', scope: 'cut' } }
       - actions = capture do
-        - if event.state == 'open'
-          .flex.space-x-2.items-center
+        .flex.space-x-2.items-center
+          - if event.state == 'open'
             %a.group.block.text-orange-400.hover:text-orange-300{ href: event_submission_path(event_id: event.id, id: submission.id), data: { turbo_method: :delete } }
               Delete
 
             %span.text-gray-500= '|'
             
+          - if submission.event.show_memgen?
+            %a.hidden.items-center.text-xs.text-orange-400.hover:text-orange-300.cursor-pointer{ class: 'group-[.memgen]/tabs:flex', data: { action: 'click->bracket#pick', player_id: submission.external_id } }
+              = inline_svg_tag('icons/memory-card.svg', class: 'h-4 mr-1')
+              Add to Card
+              %title.hidden
+                = submission.player_name_override.presence || submission.team.player_name
+
+            %span.hidden.text-gray-500{ class: 'group-[.memgen]/tabs:inline' }= '|'
+          
+          - if event.state == 'open' || event.mine?
             %a.group.block.text-orange-400.hover:text-orange-300{ href: edit_event_submission_path(event_id: event.id, id: submission.id), data: { turbo_frame: :modal } }
               Rename
 
+          - if event.state == 'open'
             %span.text-gray-500= '|'
 
             %a.group.block.text-orange-400.hover:text-orange-300{ href: approve_event_submission_path(event_id: event.id, id: submission.id), data: { turbo_method: :patch } }
