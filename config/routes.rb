@@ -50,6 +50,10 @@ Rails.application.routes.draw do
         get :simplified
       end
     end
+
+    resources :events do
+      resources :characters, only: %i{ index }, controller: 'events/characters'
+    end
   end
 
   resources :events do

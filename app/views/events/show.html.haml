@@ -14,9 +14,12 @@
           %div.text-sm
             %span.text-gray-300= @event.deadline.past? ? 'Submissions closed' : 'Submissions close'
             %span.text-white.font-semibold= @event.deadline.to_formatted_s(:deadline)
-          %div.text-sm
+          %div.text-sm.flex.items-center{ class: 'space-x-0.5' }
             %span.text-gray-300 Submissions:
             %span.text-white.font-semibold= @event.submissions.count
+            - if @event.show_bracket?
+              %a.text-orange-400.hover:text-orange-300{ href: data_event_characters_path(event_id: @event.id) }
+                = inline_svg_tag('icons/rss.svg', class: 'h-4')
         
         = render 'events/show/actions', event: @event
 
