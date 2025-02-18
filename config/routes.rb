@@ -129,7 +129,7 @@ Rails.application.routes.draw do
     end
   end
 
-  resource :user, only: %i{ destroy } do
+  resource :user, only: %i{ edit update destroy } do
     member do
       get :confirm_destroy
     end

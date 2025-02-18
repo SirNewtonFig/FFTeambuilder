@@ -1,0 +1,11 @@
+%div{ class: 'w-[40rem]' }
+  = form_for(Current.user, data: { controller: 'form', form_modal_outlet: '.modal-controller' }) do |f|
+    .space-y-6
+      %div
+        = f.label(:username, 'Username', class: 'text-xs block')
+        = f.text_field(:username, class: text_field_classes_neutral)
+      
+    .mt-4.flex.justify-end.space-x-8
+      = button_tag('Cancel', class: neutral_button_classes, data: { action: 'modal#close' })
+      
+      = f.submit('Update', class: confirm_button_classes, data: { action: 'form#submit' })

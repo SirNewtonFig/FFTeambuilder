@@ -1,4 +1,12 @@
 class UsersController < ApplicationController
+  def edit
+    render layout: 'modal_neutral'
+  end
+
+  def update
+    Current.user.update(params.require(:user).permit(:username))
+  end
+  
   def destroy
     current_user.destroy
 

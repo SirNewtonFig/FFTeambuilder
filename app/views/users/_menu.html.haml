@@ -10,14 +10,19 @@
   .bg-gray-800.py-1.px-4.w-40.rounded-lg.cursor-pointer.hover:bg-gray-700{ data: { controller: 'context', action: 'keydown.esc@window->context#close click->context#open', context: { placement_value: 'top' } } }
     .flex.items-center.space-x-1
       = inline_svg_tag('icons/account.svg', class: 'h-4 w-4 text-white')
-      %span.text-white.text-sm= Current.user.username
+      %span#user-menu-username.text-white.text-sm= Current.user.username
     = wrap_tooltip_neutral do
       - if current_user.present?
         - if current_user.is_admin?
           %a.block.w-36.p-2.px-4.my-1.text-white.text-sm.hover:bg-gray-600{ href: admin_jobs_path }
             Admin Panel
+
+        %a.block.w-36.p-2.px-4.my-1.text-white.text-sm.hover:bg-gray-600{ href: edit_user_path(Current.user), data: { turbo_frame: 'modal' } }
+          Edit Username
+        
         %a.block.w-36.p-2.px-4.my-1.text-white.text-sm.hover:bg-gray-600{ href: edit_challonge_credentials_path, data: { turbo_frame: 'modal' } }
           Challonge API
+        
         %a.block.w-36.p-2.px-4.my-1.text-white.text-sm.hover:bg-gray-600{ href: confirm_destroy_user_path, data: { turbo_frame: 'modal' } }
           Delete Account
 
