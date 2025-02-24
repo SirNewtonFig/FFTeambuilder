@@ -1,0 +1,11 @@
+.divide-y{ class: 'divide-gray-500/75' }
+  - submissions.each do |submission|
+    .flex.items-stretch{ id: dom_id(submission, 'bracket') }
+      .flex.w-1.items-center.justify-center{ class: rank_class(submission) }
+      .flex.w-8.items-center.justify-center.mr-3.bg-gray-600.text-gray-400
+        = submission.rank
+
+      = render 'events/submissions/submission', submission:, actions: ''
+
+  - if submissions.blank?
+    .py-4.text-gray-400.italic There are no confirmed teams for this event yet

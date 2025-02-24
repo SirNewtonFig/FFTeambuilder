@@ -20,7 +20,7 @@
             - if @event.show_bracket?
               %a.text-orange-400.hover:text-orange-300{ href: data_event_characters_path(event_id: @event.id) }
                 = inline_svg_tag('icons/rss.svg', class: 'h-4')
-        
+
         = render 'events/show/actions', event: @event
 
   #draggable-container.space-y-4{ class: 'mt-[11rem] md:mt-[8.5rem]' }
@@ -33,8 +33,8 @@
         .flex.items-center.justify-between.max-w-screen-md.bg-gray-900.py-2.px-4.mb-2.sticky{ class: 'top-[10.5rem] md:top-[7.5rem]' }
           .flex.items-center
             .text-xs.text-white
-              %span.hidden.md:inline View bracket and submit predictions at 
-              %span.md:hidden See more at  
+              %span.hidden.md:inline View bracket and submit predictions at
+              %span.md:hidden See more at
             %a.ml-2.flex.items-center.text-xs.text-orange-400.hover:text-orange-300{ href: @event.bracket_url.sub('.svg', ''), target: '_blank', rel: 'noopener noreferer' }
               = inline_svg_tag('icons/challonge.svg', class: 'h-4 mr-1')
               Challonge
@@ -55,10 +55,14 @@
           - if turbo_frame?
             #bracket.overflow-x-auto.max-w-screen{ class: 'group/bracket', data: { controller: 'bracket', bracket_memgen_menu_outlet: '#memgen-menu' } }
               = parse_bracket(@event).to_html.html_safe
-      
+
     #tabs.mb-6.max-w-full.md:max-w-screen-md{ class: 'xl:max-w-[72rem] group/tabs', data: { controller: 'tab bracket', bracket_memgen_menu_outlet: '#memgen-menu', tab_pane_toggle_class_value: 'hidden', tab_active_classes_value: json_escape(['text-white', 'bg-gray-800']), tab_inactive_classes_value: json_escape(['text-gray-600', 'hover:text-gray-200', 'bg-gray-900', 'hover:bg-gray-700']) } }
       %h2.flex.items-stretch{ class: 'space-x-0.5' }
-        - if @event.mine?
+        - if @event.show_standings?
+          #pending-tab.text-sm.font-semibold.px-4.rounded-t-lg.py-1.cursor-pointer{ data: { tab_target: 'tab', action: 'click->tab#click' } }
+            Standings
+
+        - if @event.mine? && !@event.show_bracket?
           #pending-tab.text-sm.font-semibold.px-4.rounded-t-lg.py-1.cursor-pointer{ data: { tab_target: 'tab', action: 'click->tab#click' } }
             Pending
             %span.ml-1.opacity-85.text-xs{ data: { counter_target: 'counter', scope: 'pending' } }
@@ -73,8 +77,12 @@
         #my-tab.text-sm.font-semibold.px-4.rounded-t-lg.py-1.cursor-pointer{ data: { tab_target: 'tab', action: 'click->tab#click' } }
           My Teams
           %span.ml-1.opacity-85.text-xs{ data: { counter_target: 'counter', scope: 'mine' } }
-      
-      - if @event.mine?
+
+      - if @event.show_standings?
+        #standings.space-y-2.px-4.bg-gray-800.rounded.rounded-tl-none.hidden{ data: { tab_target: 'pane' } }
+          = render 'events/show/standings', submissions: @standings, event: @event
+
+      - if @event.mine? && !@event.show_bracket?
         #pending-submissions.space-y-2.px-4.bg-gray-800.rounded.rounded-tl-none.hidden{ data: { tab_target: 'pane' } }
           = render 'events/show/submissions', submissions: @submissions, event: @event
 

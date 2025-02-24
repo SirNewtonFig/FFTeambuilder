@@ -44,7 +44,7 @@ Rails.application.routes.draw do
         get :simplified
       end
     end
-  
+
     resources :monster_passives, only: %i{ index } do
       collection do
         get :simplified
@@ -63,8 +63,9 @@ Rails.application.routes.draw do
       post :shuffle
       post :start
       post :close
+      post :archive
     end
-    
+
     resources :submissions, controller: 'events/submissions' do
       member do
         patch :approve
@@ -111,7 +112,7 @@ Rails.application.routes.draw do
 
       resource :job, only: %i{ edit update }, controller: 'teams/characters/job'
       resource :skills, only: %i{ edit update }, controller: 'teams/characters/skills'
-      
+
       resource :ai_values, only: %i{ update }, controller: 'teams/characters/ai_values' do
         patch :clear
         patch :default
@@ -119,7 +120,7 @@ Rails.application.routes.draw do
     end
 
     resource :memgen, controller: 'teams/memgen'
-    
+
     resource :lineup, only: %i{ update }, controller: 'teams/lineup'
   end
 

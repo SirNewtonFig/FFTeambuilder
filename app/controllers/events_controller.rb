@@ -1,6 +1,6 @@
 class EventsController < ApplicationController
   include HasSubmissions
-  
+
   def new
     @event = Event.new(deadline: Time.current.end_of_day)
 
@@ -94,7 +94,17 @@ class EventsController < ApplicationController
 
     raise 'unauthorized' unless @event.mine?
 
-    @event.update(state: 'closed')
+    Event::Finalize.perform(event: @event)
+
+    redirect_to dashboard_path
+  end
+
+  def archive
+    @event = Event.find(params[:id])
+
+    raise 'unauthorized' unless @event.mine?
+
+    @event.update(active: false)
 
     redirect_to dashboard_path
   end

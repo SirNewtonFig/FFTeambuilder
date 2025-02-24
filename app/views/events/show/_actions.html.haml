@@ -5,6 +5,7 @@
         %label.cursor-pointer{ for: 'upload-teams' }
           %div{ class: neutral_button_classes, data: { turbo_frame: 'modal' } } Import Teams
           = file_field_tag(:team_files, name: 'team_files[]', id: 'upload-teams', class: 'hidden', accept: '.yml', multiple: true, data: { action: 'form#submit' } )
+
     %a{ href: new_event_submission_path(event_id: event), class: primary_button_classes, data: { turbo_frame: 'modal' } }
       %span Submit a Team
 
@@ -12,13 +13,19 @@
     - if event.state == 'open'
       %a{ href: publish_event_path(event), class: confirm_button_classes, data: { turbo_method: :post } }
         %span Generate Bracket
+
     - elsif event.state == 'published'
       %a{ href: start_event_path(event), class: confirm_button_classes, data: { turbo_method: :post } }
         %span Start Event
-    
+
   - if event.mine?
     - if event.state == 'started'
-      %a{ href: close_event_path(event), class: primary_button_classes, data: { turbo_method: :post, turbo_confirm: 'Are you sure you want to archive this event?' } }
+      %a{ href: close_event_path(event), class: primary_button_classes, data: { turbo_method: :post, turbo_confirm: 'Are you sure you want to finalize this event?' } }
+        %span Finalize Event
+
+    - if event.state == 'closed'
+      %a{ href: archive_event_path(event), class: primary_button_classes, data: { turbo_method: :post, turbo_confirm: 'Are you sure you want to archive this event?' } }
         %span Archive Event
+
     %a{ href: event_path(event), class: destructive_button_classes, data: { turbo_method: :delete, turbo_confirm: 'Are you sure you want to delete this event? This will also delete any associated data published to Challonge.' } }
       %span Delete Event

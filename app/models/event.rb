@@ -1,13 +1,15 @@
 class Event < ApplicationRecord
   extend Memoist
 
+  STATES = ['open', 'published', 'started', 'closed']
+
   has_many :submissions, dependent: :destroy
   has_many :teams, through: :submissions
   belongs_to :user
 
   before_destroy :delete_challonge
-  
-  scope :active, -> { where.not(state: 'closed') }
+
+  scope :active, -> { where(active: true) }
   scope :open, -> { where(deadline: Time.current..) }
 
   def mine?
@@ -19,7 +21,11 @@ class Event < ApplicationRecord
   end
 
   def show_bracket?
-    external_id.present? && (state == 'started' || mine?)
+    external_id.present? && (['started', 'closed'].include?(state) || mine?)
+  end
+
+  def show_standings?
+    state == 'closed' && submissions.any? { |s| s.rank.present? }
   end
 
   def show_memgen?
