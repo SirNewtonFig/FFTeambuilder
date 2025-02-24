@@ -5,7 +5,7 @@ class Submission < ApplicationRecord
   validates :team, :event, presence: true
 
   before_validation :set_names, on: :create
-  
+
   scope :active, -> { where(active: true) }
 
   scope :queue_ordered, -> {
@@ -16,7 +16,9 @@ class Submission < ApplicationRecord
   def team
     t = super
 
-    return t if t.present?
+    return t if t.present? && event.open?
+
+    return t.paper_trail.version_at(event.deadline) if t.present? && !event.open?
 
     PaperTrail::Version.where(item_id: team_id, item_type: 'Team').last.reify.paper_trail.version_at(event.deadline)
   end
