@@ -7,13 +7,18 @@ Rails.application.routes.draw do
     resources :items
 
     resources :monster_passives
-    resources :exclusions
     resources :statuses
     resources :prerequisites
     resources :proficiencies
     resources :innates
 
-    root to: "exclusions#index"
+    resources :seeds, only: [:index, :create, :new] do
+      collection do
+        get :download
+      end
+    end
+
+    root to: "jobs#index"
   end
 
   # Defines the root path route ("/")

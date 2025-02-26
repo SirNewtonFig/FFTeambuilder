@@ -1,0 +1,22 @@
+= stylesheet_link_tag "tailwind", "data-turbo-track": "reload"
+= javascript_importmap_tags
+
+%header.main-content__header
+  %h1#page-title.main-content__page-title.font-bold Seeds
+
+.p-4
+  .border-2.border-blue-500.rounded-lg.p-4.flex.justify-between.items-center
+    .text-blue-600.font-semibold Current Data Seeds
+    %a{ href: download_admin_seeds_path }
+      %button{ class: '!bg-blue-500 hover:!bg-blue-600' }
+        Download Seeds
+
+  .mt-6.border-2.border-green-500.rounded-lg.p-4.flex.justify-between.items-center
+    .text-green-600.font-semibold Update Seeds
+
+    = form_with(url: admin_seeds_path, method: :post, multipart: true, data: { controller: 'form' }) do
+      %label.cursor-pointer{ for: 'upload-seeds' }
+        %div{ type: 'button', class: '!bg-green-500 hover:!bg-green-600 !py-3 !px-6 !rounded-sm !text-white !leading-[16px]' }
+          Upload Seeds
+        = file_field_tag(:zipfile, name: 'zipfile', id: 'upload-seeds', class: '!hidden', accept: '.zip', multiple: true, data: { action: 'form#submit' } )
+

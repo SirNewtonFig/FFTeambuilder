@@ -4,9 +4,9 @@ class Data::Import::ImportMonsters < ActiveInteractor::Base
   def perform
     monsters.each do |row|
       next if row['Job ID'].blank?
-      
+
       monster = Job.monster.find_by("data -> 'x' ->> 'memgen_id' = ?", row['Job ID']) || Job.new
-    
+
       monster.update(
         name: row['Name'],
         data: {
@@ -18,13 +18,7 @@ class Data::Import::ImportMonsters < ActiveInteractor::Base
             jump: row['Jump'],
             attack: row['PA'],
             magic: row['MA'],
-            notes: [
-              row['Reaction'],
-              row['Support'],
-              row['Movement'],
-              row['Water'],
-              row['Family Notes:']
-            ].reject{|x| x.blank? || x == 'None' },
+            notes: row['Notes'],
             evade: row['Evade'],
             m_evade: row['MEvade'],
             hp_mult: row['HPmult'],

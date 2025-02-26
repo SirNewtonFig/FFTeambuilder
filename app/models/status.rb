@@ -1,5 +1,5 @@
 class Status < ApplicationRecord
-  scope :for_ai_values, -> { 
+  scope :for_ai_values, -> {
     where(show_priority: true)
       .order(:name)
   }

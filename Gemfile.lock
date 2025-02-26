@@ -432,6 +432,7 @@ DEPENDENCIES
   redis (~> 4.0)
   rolify
   rollbar
+  rubyzip
   selenium-webdriver
   sprockets-rails
   stimulus-rails

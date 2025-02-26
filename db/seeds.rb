@@ -29,6 +29,8 @@ statuses = CSV.parse(File.read(Rails.root.join('db/seeds/statuses.csv')), header
 Data::Import::ImportStatuses.perform(statuses:)
 
 Exclusion.find_or_create_by(
-  ability_a: MonsterPassive.find_by(job: Job.find_by(name: 'Bomb'), name: 'AllDef+ Weak:Ice'),
+  ability_a: MonsterPassive.find_by(job: Job.find_by(name: 'Bomb'), name: 'AllDef+ Weak:Water'),
   ability_b: Skill.find_by(job: Job.find_by(name: 'Bomb'), name: 'Defense UP')
 )
+
+Data::Import::ImportInnates.perform

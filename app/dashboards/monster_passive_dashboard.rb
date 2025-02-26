@@ -9,11 +9,10 @@ class MonsterPassiveDashboard < Administrate::BaseDashboard
   # on pages throughout the dashboard.
   ATTRIBUTE_TYPES = {
     id: Field::Number,
-    data: Field::String.with_options(searchable: false),
-    exclusions: Field::HasMany,
-    job: Field::BelongsTo,
-    jp_cost: Field::Number,
     name: Field::Text,
+    job: Field::BelongsTo.with_options(searchable: true, searchable_fields: ['name']),
+    jp_cost: Field::Number,
+    data: Field::JSONB.with_options(transform: %w[to_h with_indifferent_access]),
     created_at: Field::DateTime,
     updated_at: Field::DateTime,
   }.freeze
@@ -25,20 +24,19 @@ class MonsterPassiveDashboard < Administrate::BaseDashboard
   # Feel free to add, remove, or rearrange items.
   COLLECTION_ATTRIBUTES = %i[
     id
-    data
-    exclusions
+    name
     job
+    jp_cost
   ].freeze
 
   # SHOW_PAGE_ATTRIBUTES
   # an array of attributes that will be displayed on the model's show page.
   SHOW_PAGE_ATTRIBUTES = %i[
     id
-    data
-    exclusions
+    name
     job
     jp_cost
-    name
+    data
     created_at
     updated_at
   ].freeze
@@ -47,11 +45,10 @@ class MonsterPassiveDashboard < Administrate::BaseDashboard
   # an array of attributes that will be displayed
   # on the model's form (`new` and `edit`) pages.
   FORM_ATTRIBUTES = %i[
-    data
-    exclusions
+    name
     job
     jp_cost
-    name
+    data
   ].freeze
 
   # COLLECTION_FILTERS

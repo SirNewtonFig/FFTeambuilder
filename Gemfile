@@ -50,6 +50,7 @@ gem 'omniauth-rails_csrf_protection'
 gem 'paper_trail'
 gem 'rolify'
 gem 'rollbar'
+gem 'rubyzip'
 gem 'turbo_power'
 gem 'challonge-api', git: 'https://github.com/SirNewtonFig/challonge-ruby-gem', tag: 'v0.0.1'
 
