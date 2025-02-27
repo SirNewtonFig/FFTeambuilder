@@ -12,7 +12,7 @@ class Event::Finalize < Event::ChallongeBaseInteractor
   def perform
     tournament.finalize!
 
-    event.update(status: 'closed')
+    event.update(state: 'closed')
 
     scrape_results!
   end
