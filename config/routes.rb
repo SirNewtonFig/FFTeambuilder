@@ -58,6 +58,7 @@ Rails.application.routes.draw do
 
     resources :events do
       resources :characters, only: %i{ index }, controller: 'events/characters'
+      resources :standings, only: %i{ index }, controller: 'events/standings'
     end
   end
 

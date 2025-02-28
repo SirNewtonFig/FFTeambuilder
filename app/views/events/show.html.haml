@@ -20,6 +20,9 @@
             - if @event.show_bracket?
               %a.text-orange-400.hover:text-orange-300{ href: data_event_characters_path(event_id: @event.id) }
                 = inline_svg_tag('icons/rss.svg', class: 'h-4')
+            - if @event.show_standings?
+              %a.text-gold-dark.hover:text-gold-light{ href: data_event_standings_path(event_id: @event.id) }
+                = inline_svg_tag('icons/trophy.svg', class: 'h-4')
 
         = render 'events/show/actions', event: @event
 
