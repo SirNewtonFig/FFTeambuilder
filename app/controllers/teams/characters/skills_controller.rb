@@ -5,7 +5,7 @@ class Teams::Characters::SkillsController < ApplicationController
     @skills = if @char.generic?
       Skill.send(scope).valid(@char).unique(@char, @team).order(:name)
     else
-      @char.job.skills.send(scope)
+      @char.job.skills.send(scope).unique(@char, @team)
     end
 
     render layout: 'modal'
@@ -13,16 +13,16 @@ class Teams::Characters::SkillsController < ApplicationController
 
   def update
     raise 'unauthorized' unless @team.mine?
-    
+
     @refresh_secondary = secondary_changed?
     @support_changed = support_changed?
-    @movement_changed = movement_changed? 
+    @movement_changed = movement_changed?
 
     @char.data.deep_merge!(skill_params)
 
     @char.enforce_exclusions!(@support_changed)
     @char.enforce_constraints! if @support_changed || @movement_changed
-    
+
     @team.data[i] = @char.data
     @team.save
   end

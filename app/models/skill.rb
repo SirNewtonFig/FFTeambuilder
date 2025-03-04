@@ -13,15 +13,26 @@ class Skill < ApplicationRecord
   }
 
   scope :unique, ->(char, team) {
-    other_skill_ids = (team.characters.select(&:generic?) - [char]).map { |c|
-      [c.data['reaction'], c.data['support'], c.data['movement'], *c.primary_skill_ids, *c.secondary_skill_ids]
-    }.compact.flatten.map(&:to_i)
+    generic_skills = []
+    reactions = []
 
-    other_skills = Skill.where(id: other_skill_ids)
-    possible_dupes = other_skills.where(name: ['Fly', 'Move+3', 'Jump+3']).pluck(:name)
+    (team.characters - [char]).each { |c|
+      if c.generic?
+        generic_skills  += [c.data['support'], c.data['movement'], *c.primary_skill_ids, *c.secondary_skill_ids].compact
+      end
 
-    where.not(id: other_skill_ids)
-      .where.not(name: possible_dupes)
+      reactions << c.data['reaction'] if c.data['reaction'].present?
+    }
+
+    other_skills = Skill.where(id: generic_skills.map(&:to_i))
+    other_reactions = Skill.where(id: reactions.map(&:to_i))
+
+    base_scope = where.not(id: generic_skills.map(&:to_i))
+    base_scope = base_scope.where.not("skills.data ->> 'memgen_id' IN (?)", other_reactions.map{|r| r.data['memgen_id']}) if other_reactions.present?
+
+    return base_scope if char.monster?
+
+    base_scope.where.not(name: other_skills.where(name: ['Fly']).select(:name))
   }
 
   def formula
