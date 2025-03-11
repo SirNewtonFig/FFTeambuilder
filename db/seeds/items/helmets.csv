@@ -1,26 +1,26 @@
 Name,Item ID,Classes,HP,MP,PA,MA,Speed,Move,Jump,Immune:,Absorbs:,Weak:,Halves:,Strengthens:,Start:,Always:,Skill
-Bronze Helmet,91,Kn Ln Sm Pd,160,0,-2,,,,,Don't Act,,,,,,,Equip Armor
-Iron Helmet,92,Kn Ln Sm Pd,120,0,,,,,,Charm / Berserk,,,,,Don't Move,,Equip Armor
-Barbuta,93,Kn Ln Sm Pd,150,0,,,,,,Confusion / Frog,,,,,Slow,,Equip Armor
-Mythril Helmet,94,Kn Ln Sm Pd,130,0,,1,,,,Berserk / Sundown,,,,,,,Equip Armor
-Gold Helmet,95,Kn Ln Sm Pd,110,50,,,,,,Charm / Frog,,,,,,,Equip Armor
-Cross Helmet,96,Kn Ln Sm Pd,100,0,,,,,,Frog / Overload,,,,Holy,,,Equip Armor
-Diamond Helmet,97,Kn Ln Sm Pd,90,0,1,1,,,,Don't Act,,,,,,,Equip Armor
-Platina Helmet,98,Kn Ln Sm Pd,130,0,,,,,,Charm,,,Fire Holy,,,,Equip Armor
-Crystal Helmet,9A,Kn Ln Sm Pd,130,0,,,,,,Frog / Don't Move,Water,,,Water,,,Equip Armor
-Genji Helmet,9B,Kn Ln Sm Pd,110,0,,,,,,Charm / Confusion,,,,,,,Equip Armor
-Grand Helmet,9C,Kn Ln Sm Pd,130,0,,,,,,Don't Act / Sundown,,,,,,,Equip Armor
-Leather Hat,9D,NOT Kn Mk Ln Sm Pd,80,20,1,1,,,,Don't Act,,,,,,,
-Leather Helmet,90,NOT Kn Mk Ln Sm Pd,110,0,,,,,,Frog / Berserk,Water,,,,,,
-Feather Hat,9E,NOT Kn Mk Ln Sm Pd,80,30,,,,,,Don't Act / Don't Move,,,,,,,
-Red Hood,9F,NOT Kn Mk Ln Sm Pd,70,70,,,,,,Sundown / Berserk,,,,,,,
-Headgear,A0,NOT Kn Mk Ln Sm Pd,120,0,1,,,,,Frog,,,Holy,,,,
-Triangle Hat,A1,NOT Kn Mk Ln Sm Pd,90,30,,1,,,,Sundown,,,,,,,
-Green Beret,A2,NOT Kn Mk Ln Sm Pd,90,0,,,,,,Confusion / Charm,,,,,,,
-Twist Headband,A3,NOT Kn Mk Ln Sm Pd,90,0,2,,,,,,,,,,,,
-Holy Miter,A4,NOT Kn Mk Ln Sm Pd,84,20,-2,,,,,Don't Move / Overload,,,,,,Faith,
-Circlet,99,NOT Kn Mk Ln Sm Pd,110,0,,1,,,,Frog,,,,,,,
-Black Hood,A5,NOT Kn Mk Ln Sm Pd,135,0,,,,,,Don't Act,,,,,,,
-Golden Hairpin,A6,NOT Kn Mk Ln Sm Pd,100,50,,,,,,Don't Act,,,,,,,
-Flash Hat,A7,NOT Kn Mk Ln Sm Pd,20,50,,1,1,,,Berserk / Charm,,,,,,,
-Thief Hat,A8,NOT Kn Mk Ln Sm Pd,35,0,,,1,,,Confusion / Don't Act,,,,,,,
+Bronze Helmet,91,Pd Kn Ln Sm,160,0,-2,,,,,Don't Act,,,,,,,Equip Armor
+Iron Helmet,92,Pd Kn Ln Sm,120,0,,,,,,Charm / Berserk,,,,,Don't Move,,Equip Armor
+Barbuta,93,Pd Kn Ln Sm,110,0,,,,,,Confusion / Frog,,,,,,,Equip Armor
+Mythril Helmet,94,Pd Kn Ln Sm,130,0,,1,,,,,,,,,,,Equip Armor
+Gold Helmet,95,Pd Kn Ln Sm,110,50,,,,,,,,,,,,,Equip Armor
+Cross Helmet,96,Pd Kn Ln Sm,100,0,,,,,,,,,,Holy,,,Equip Armor
+Diamond Helmet,97,Pd Kn Ln Sm,90,0,1,1,,,,,,,,,,,Equip Armor
+Platina Helmet,98,Pd Kn Ln Sm,130,0,,,,,,,,,Fire Holy,,,,Equip Armor
+Crystal Helmet,9A,Pd Kn Ln Sm,130,0,,,,,,Frog / Don't Move,,,,,,,Equip Armor
+Genji Helmet,9B,Pd Kn Ln Sm,110,0,,,,,,Charm / Confusion,,,,,,,Equip Armor
+Grand Helmet,9C,Pd Kn Ln Sm,130,0,,,,,,Sundown,,,,,,,Equip Armor
+Leather Hat,9D,Th Ar En Nj Ch Wi Or Me Bd Sq Dc Sb Pr Sg TM Ge BM Su Wk,80,20,1,1,,,,,,,,,,,
+Leather Helmet,90,Th Ar En Nj Ch Wi Or Me Bd Sq Dc Sb Pr Sg TM Ge BM Su Wk,110,0,,,,,,Frog / Berserk,Water,,,,,,
+Feather Hat,9E,Th Ar En Nj Ch Wi Or Me Bd Sq Dc Sb Pr Sg TM Ge BM Su Wk,80,30,,,,,,Don't Act / Don't Move,,,,,,,
+Red Hood,9F,Th Ar En Nj Ch Wi Or Me Bd Sq Dc Sb Pr Sg TM Ge BM Su Wk,90,70,,,,,,,,,,,,,
+Headgear,A0,Th Ar En Nj Ch Wi Or Me Bd Sq Dc Sb Pr Sg TM Ge BM Su Wk,120,0,1,,,,,,,,Holy,,,,
+Triangle Hat,A1,Th Ar En Nj Ch Wi Or Me Bd Sq Dc Sb Pr Sg TM Ge BM Su Wk,90,30,,1,,,,,,,,,,,
+Green Beret,A2,Th Ar En Nj Ch Wi Or Me Bd Sq Dc Sb Pr Sg TM Ge BM Su Wk,90,0,,,,,,Confusion / Charm,,,,,,,
+Twist Headband,A3,Th Ar En Nj Ch Wi Or Me Bd Sq Dc Sb Pr Sg TM Ge BM Su Wk,90,0,2,,,,,,,,,,,,
+Holy Miter,A4,Th Ar En Nj Ch Wi Or Me Bd Sq Dc Sb Pr Sg TM Ge BM Su Wk,84,20,-2,,,,,Fatigue / Don't Act,,,,,,Faith,
+Circlet,99,Th Ar En Nj Ch Wi Or Me Bd Sq Dc Sb Pr Sg TM Ge BM Su Wk,110,0,,1,,,,,,,,,,,
+Black Hood,A5,Th Ar En Nj Ch Wi Or Me Bd Sq Dc Sb Pr Sg TM Ge BM Su Wk,135,0,,,,,,Don't Act,,,,,,,
+Golden Hairpin,A6,Th Ar En Nj Ch Wi Or Me Bd Sq Dc Sb Pr Sg TM Ge BM Su Wk,100,50,,,,,,Don't Act,,,,,,,
+Flash Hat,A7,Th Ar En Nj Ch Wi Or Me Bd Sq Dc Sb Pr Sg TM Ge BM Su Wk,40,50,,1,1,,,,,,,,,,
+Thief Hat,A8,Th Ar En Nj Ch Wi Or Me Bd Sq Dc Sb Pr Sg TM Ge BM Su Wk,55,0,,,1,,,,,,,,,,

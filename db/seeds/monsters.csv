@@ -1,17 +1,17 @@
-Name,Job ID,JP Cost,Evade,MEvade,HPmult,MPmult,SPmult,PAmult,MAmult,HP,MP,Speed,Move,Jump,PA,MA,Reaction,Support,Movement,Family Notes:
-Chocobo,5E,0,10,15,150,255,150,130,94,345,90,11,4,5,14,20,None,None,None,
-Goblin,61,0,20,40,150,255,130,120,160,304,30,10,4,4,15,2,None,None,None,
-Bomb,64,0,10,0,160,20,130,120,93,250,160,9,4,4,17,22,None,None,None,Undead; Float
-Tonberry,67,500,15,10,180,100,130,140,150,394,17,10,4,3,17,18,None,None,None,
-Mindflayer,6A,500,10,10,180,255,130,110,150,361,125,9,4,3,16,16,None,None,None,
-Skeleton,6D,500,15,5,140,255,130,130,135,386,55,10,4,4,19,15,None,None,None,Undead
-Ghost,70,500,0,5,130,124,150,127,99,303,90,11,6,4,17,11,None,None,None,Undead; Teleport; Float; Weak: Holy
-Ahriman,73,500,25,25,140,255,130,120,220,323,18,9,5,5,14,25,None,None,None,Fly
-Juravis,76,250,25,10,150,40,150,120,85,310,10,12,6,6,17,22,None,None,None,Fly
-Piggy,79,1000,35,10,150,255,160,120,160,281,70,10,4,3,20,13,None,None,None,
-Treant,7C,1000,0,15,190,160,115,130,100,350,126,9,4,3,13,28,None,None,None,Immune: float
-Minotaur,7F,0,10,10,200,255,130,140,100,356,8,9,4,3,17,28,None,None,None,Immune: float
-Malboro,82,1000,0,20,220,255,115,130,99,375,90,10,5,3,18,17,None,None,None,Immune: float
-Behemoth,85,0,13,10,180,100,115,150,160,384,17,9,4,3,19,26,None,None,None,Immune: float
-Dragon,88,0,20,10,190,75,115,150,130,362,20,10,5,3,18,13,None,None,None,Immune: float
-Hydra,8B,1000,0,10,160,50,115,170,110,350,18,10,4,4,19,20,None,None,None,Fly; Immune: float
+Name,Job ID,JP Cost,Evade,MEvade,HPmult,MPmult,SPmult,PAmult,MAmult,HP,MP,Speed,Move,Jump,PA,MA,Notes
+Chocobo,5E,0,10,15,150,255,150,130,94,345,90,11,4,5,16,20,
+Goblin,61,0,20,40,150,255,130,120,160,304,30,10,4,4,15,2,
+Bomb,64,0,10,0,160,20,130,120,93,250,160,9,4,4,17,22,"Undead; Float"
+Tonberry,67,500,15,10,180,100,130,140,150,394,17,10,4,3,17,18,
+Mindflayer,6A,500,10,10,180,255,130,110,150,361,125,9,4,3,16,16,
+Skeleton,6D,500,15,5,140,255,130,130,135,386,55,10,4,4,19,15,"Undead"
+Ghost,70,500,0,5,130,124,150,127,99,303,90,11,6,4,17,11,"Undead; Teleport; Float; Weak: Holy"
+Ahriman,73,500,25,25,140,255,130,120,220,323,18,9,5,5,14,25,"Fly"
+Juravis,76,250,25,10,150,40,150,120,85,310,10,12,6,6,17,22,"Fly"
+Piggy,79,1000,35,10,150,255,160,120,160,281,70,10,4,3,20,13,
+Treant,7C,1000,0,15,190,160,115,130,100,350,126,9,4,3,13,28,"Immune: float"
+Minotaur,7F,0,10,10,200,255,130,140,100,356,8,9,4,3,17,28,"Immune: float"
+Malboro,82,1000,0,20,220,255,115,130,99,375,90,10,5,3,18,17,"Immune: float"
+Behemoth,85,0,13,10,180,100,115,150,160,384,17,9,4,3,19,26,"Immune: float"
+Dragon,88,0,20,10,190,75,115,150,130,362,20,10,5,3,18,13,"Immune: float"
+Hydra,8B,1000,0,10,160,50,115,170,110,350,18,10,4,4,19,20,"Fly; Immune: float"
