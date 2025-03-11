@@ -24,3 +24,9 @@
         .flex.mr-6.text-sm
           .text-red-900.capitalize #{prop.titleize}:
           .ml-1= item.data[prop]
+
+  - if item.data['extra_effects'].present?
+    .text-left.text-sm
+      %span.text-red-900.capitalize Special:
+      %span.ml-1
+        = item.data['extra_effects']
