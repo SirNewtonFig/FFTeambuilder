@@ -13,7 +13,7 @@ class Weapon::ComputeFormulaContext < ActiveInteractor::Context::Base
     stats = [:pa, :ma, :sp, :br, :faith].index_with { |key| character.send(key) }
     stats[:wp] = (weapon.data['wp'] || character.wp).to_i
     stats[:wp] += wp_modifier.to_i
-    
+
     stats
   end
 
@@ -21,10 +21,10 @@ class Weapon::ComputeFormulaContext < ActiveInteractor::Context::Base
     expression.match(XA_PATTERN)[1]
   end
 end
-  
+
 class Weapon::ComputeFormula < ActiveInteractor::Base
   RANGE_PATTERN = /\[?([\w\d]+)\.\.([\w\d]+)\]?/
-  
+
   delegate :character, :weapon, :bindings, :expression, :result, :xa, to: :context
   delegate :formula, to: :weapon
 
@@ -66,7 +66,7 @@ class Weapon::ComputeFormula < ActiveInteractor::Base
 
   def eval_xa(xa)
     x0 = calc(xa, **bindings)
-    x0 = calc('x * 3/2', x: x0) if character.always.include?('Berserk') && !weapon.gun?
+    x0 = calc('x * 3/2', x: x0) if character.always.include?('Berserk') && !weapon.magic_gun?
     x0 = calc('x * 5/4', x: x0) if character.strengthens.include?(weapon.data['element'])
     x0 = calc('x * 3/2', x: x0) if character.two_hands_engaged? && !weapon.data['flags']&.match('2-hands only')
     x0 = calc('x * 4/3', x: x0) if character.attack_up? && !weapon.magic_gun?
@@ -83,4 +83,3 @@ class Weapon::ComputeFormula < ActiveInteractor::Base
     context.fail!
   end
 end
-  
