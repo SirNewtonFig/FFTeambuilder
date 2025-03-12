@@ -31,7 +31,7 @@ class Data::Export::Items::ExportAccessories < ActiveInteractor::Base
     Item.accessory.order(:id).includes(:jobs).each do |item|
       row = [
         item.name,
-        item.data['item_id'],
+        item.data['memgen_id'],
         item.jobs.pluck(:abbreviation).join(' '),
         item.data['ev_p'],
         item.data['ev_m'],

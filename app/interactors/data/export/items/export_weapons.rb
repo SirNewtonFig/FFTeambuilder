@@ -42,7 +42,7 @@ class Data::Export::Items::ExportWeapons < ActiveInteractor::Base
       row = [
         item.name,
         item.skills.first&.name,
-        item.data['item_id'],
+        item.data['memgen_id'],
         item.data['wp'],
         item.data['w_ev'],
         item.data['flags'],

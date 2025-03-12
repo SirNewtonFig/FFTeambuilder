@@ -33,7 +33,7 @@ class Data::Export::Items::ExportArmor < ActiveInteractor::Base
     Item.armor.order(:id).includes(:jobs, :skills).each do |item|
       row = [
         item.name,
-        item.data['item_id'],
+        item.data['memgen_id'],
         item.jobs.pluck(:abbreviation).join(' '),
         item.data['hp'],
         item.data['mp'],
