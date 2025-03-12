@@ -9,6 +9,7 @@ class Data::Import::ImportInnates < ActiveInteractor::Base
     Job.find_by(name: 'Geomancer').innates.find_or_create_by(skill: Skill.find_by(name: 'Any Ground'))
     Job.find_by(name: 'Mediator').innates.find_or_create_by(skill: Skill.find_by(name: 'Monster Talk'))
     Job.find_by(name: 'Blood Mage').innates.find_or_create_by(skill: Skill.find_by(name: 'Ritual'))
+    Job.find_by(name: 'Engineer').innates.find_or_create_by(skill: Skill.find_by(name: 'Concentrate'))
   end
 end
 
