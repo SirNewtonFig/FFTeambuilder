@@ -15,9 +15,9 @@ class Skill::ComputeFormulaContext < ActiveInteractor::Context::Base
   attribute :result
 
   memoize def bindings
-    stats = [:pa, :ma, :sp, :wp, :br, :faith].index_with { |key| character.send(key) }
+    stats = [:pa, :ma, :sp, :wp, :br, :jmp, :faith].index_with { |key| character.send(key) }
 
-    stats[:faith] = 0 if character.always.include?('Innocent') 
+    stats[:faith] = 0 if character.always.include?('Innocent')
     stats[:faith] = 100 if character.always.include?('Faith')
 
     stats
@@ -57,7 +57,7 @@ class Skill::ComputeFormulaContext < ActiveInteractor::Context::Base
     end
   end
 end
-  
+
 class Skill::ComputeFormula < ActiveInteractor::Base
   WEAPON_PATTERN = /Weapon(?: with )?([+-]\d WP)?/i
 
@@ -68,7 +68,7 @@ class Skill::ComputeFormula < ActiveInteractor::Base
 
     computed = if formula_expression.match(WEAPON_PATTERN)
       wp_modifier = Regexp.last_match.captures&.first || 0
-      
+
       weapon_results = character.weapons.map { |weapon|
         w = weapon.dup
         w.data['wp'] = character.wp if weapon.name == Item.fist.name
@@ -83,7 +83,7 @@ class Skill::ComputeFormula < ActiveInteractor::Base
     elsif formula_function.match?('Dmg') && skill.data['range'] == 'Weapon' && !skill.formula.match?(/fails if target not/i)
       weapon_results = character.weapons.map { |weapon|
         wp = weapon.data['wp'] || character.wp
-        
+
         compute(xa, wp: wp.to_i)
       }
 

@@ -117,6 +117,7 @@ class Character
       rsm.map{|s| s.data.dig('jump').to_i || 0 }.sum +
       sum_passive('jump')
   end
+  alias_method :jmp, :jump
 
   def speed
     job_data['speed'].to_i +
@@ -299,7 +300,7 @@ class Character
 
   memoize def secondary_skill_ids
     return [] if data.dig('skills', 'secondary').blank?
-    
+
     data.dig('skills', 'secondary').map(&:to_i)
   end
 
@@ -332,15 +333,15 @@ class Character
   memoize def sniper?
     movement&.name&.match?('Sniper') || job.innate_skills.exists?(name: 'Sniper')
   end
-  
+
   memoize def attack_up?
     support&.name&.match?('Attack UP') || job.innate_skills.exists?(name: 'Attack UP')
   end
-  
+
   memoize def m_attack_up?
     support&.name&.match?('Magic AttackUP') || job.innate_skills.exists?(name: 'Magic AttackUP')
   end
-  
+
   memoize def two_hands?
     support&.name&.match('Two Hands') || job.innate_skills.exists?(name: 'Two Hands')
   end
@@ -354,7 +355,7 @@ class Character
   end
 
   memoize def unarmed?
-    [rhand, lhand].compact.none?(&:weapon?)  
+    [rhand, lhand].compact.none?(&:weapon?)
   end
 
   memoize def two_fists?
@@ -387,7 +388,7 @@ class Character
     data['faith'] = [[faith.to_i, 30].max, 70].min
 
     if data['sex'] == 'x'
-      enforce_monster_stuff! 
+      enforce_monster_stuff!
     else
       enforce_generic_stuff!
     end
