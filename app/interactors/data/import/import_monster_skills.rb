@@ -30,6 +30,8 @@ class Data::Import::ImportMonsterSkills < ActiveInteractor::Base
           reflectable: row['Reflectable?'],
           xa: row['XA:'],
           formula: row['Formula'],
+          proc: row['Proc'],
+          proc_rate: row['Proc Rate'],
           counter: row['Counter?'],
           counter_magic: row['Counter Magic?'],
           counter_flood: row['Counter Flood?'],

@@ -1,15 +1,15 @@
 class Data::Import::ImportSkills < ActiveInteractor::Base
   delegate :skills, :skillmap, to: :context
-  
+
   before_perform :setup_skillmap
   after_perform :cleanup!
-  
+
   def perform
     skills.each do |row|
       next if row['Skill ID'].blank?
 
       job = Job.find_by(name: row['Class'].strip)
-      
+
       skill_type = 'action'
       skill_type = 'reaction' if row['Skill Name'].match?(/^R:/)
       skill_type = 'support' if row['Skill Name'].match?(/^E:/)
@@ -37,6 +37,8 @@ class Data::Import::ImportSkills < ActiveInteractor::Base
           reflectable: row['Reflectable?'],
           xa: row['XA:'],
           formula: row['Formula'],
+          proc: row['Proc'],
+          proc_rate: row['Proc Rate'],
           counter: row['Counter?'],
           counter_magic: row['Counter Magic?'],
           counter_flood: row['Counter Flood?'],

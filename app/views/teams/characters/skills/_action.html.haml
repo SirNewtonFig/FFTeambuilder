@@ -25,6 +25,19 @@
         .text-red-900 Element:
         .ml-1= skill.data['element']
 
+  - if skill.data['proc'].present?
+    .text-left.text-sm
+      %span.text-red-900.capitalize Proc:
+      %span.ml-1
+        - if skill.data['proc_rate'].present?
+          - result = eval_procrate(character:, procrate: skill.data['proc_rate'])
+          - if result != skill.data['proc_rate']
+            %span{ class: 'group-[.eval-formula]:hidden' }= skill.data['proc_rate']
+            %span.hidden.text-cyan-900{ class: 'group-[.eval-formula]:inline' }= result
+          - else
+            %span= skill.data['proc_rate']
+        = skill.data['proc']
+
   .flex.flex-wrap
     - ['mp', 'ct', 'range', 'area', 'vert', 'target'].each do |prop|
       - next if skill.data[prop].blank?
@@ -53,5 +66,5 @@
     .text-left.text-sm
       %span.text-red-900.capitalize Interactions:
       %span.ml-1= ['counter', 'counter_magic', 'counter_flood', 'mimic'].filter_map { |prop| stat_label(prop) if skill.data[prop].present? }.join(' / ')
-    
-  
+
+

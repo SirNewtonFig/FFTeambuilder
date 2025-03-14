@@ -14,5 +14,12 @@ module FormulaHelper
     Rails.logger.debug(e.backtrace)
     weapon.formula
   end
+
+  def eval_procrate(character:, procrate:)
+    Skill::EvaluateProcrate.perform(character:, expression: procrate).result.to_s
+  rescue => e
+    Rails.logger.debug(e)
+    Rails.logger.debug(e.backtrace)
+    procrate
+  end
 end
-  
