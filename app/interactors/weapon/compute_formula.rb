@@ -71,7 +71,7 @@ class Weapon::ComputeFormula < ActiveInteractor::Base
     x0 = calc('x * 3/2', x: x0) if character.two_hands_engaged? && !weapon.data['flags']&.match('2-hands only')
     x0 = calc('x * 4/3', x: x0) if character.attack_up? && !weapon.magic_gun?
     x0 = calc('x * 5/4', x: x0) if character.m_attack_up? && weapon.magic_gun?
-    x0 = calc('x * 4/3', x: x0) if character.martial_arts? && character.unarmed?
+    x0 = calc('x * 3/2', x: x0) if character.martial_arts? && character.unarmed?
     x0 = calc('x * 4/3', x: x0) if character.sniper? && character.weapon.bow?
 
     x0
