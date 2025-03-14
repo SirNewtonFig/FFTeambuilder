@@ -1,21 +1,21 @@
 Name,Item ID,Classes,Phys Evade,Magic Evade,PA,MA,Speed,Move,Jump,Immune:,Absorbs:,Weak:,Halves:,Strengthens:,Start:,Always:,Skill,Extra Effects:
-Escutcheon,80,Ar En Pd Sq Kn Ln Sb Ge,0,0,,,1,-1,,,,,,,,,Equip Shield,
-Buckler,81,Ar En Pd Sq Kn Ln Sb Ge,15,15,,,,2,2,,,,,,,,Equip Shield,
-Bronze Shield,82,Ar En Pd Sq Kn Ln Sb Ge,30,0,,,,,,,,,,,,Reflect,Equip Shield,
-Round Shield,83,Ar En Pd Sq Kn Ln Sb Ge,0,0,,,-1,,,,,,,,,Protect Shell,Equip Shield,
-Mythril Shield,84,Ar En Pd Sq Kn Ln Sb Ge,0,15,,2,,,,,,,,,,,Equip Shield,
-Gold Shield,85,Ar En Pd Sq Kn Ln Sb Ge,30,30,,,,,,,,,,,,,Equip Shield,
-Dark Shield,86,Ar En Pd Sq Kn Ln Sb Ge,30,15,,,,,,,Dark,,,,,,Equip Shield,
-Flame Shield,87,Ar En Pd Sq Kn Ln Sb Ge,30,15,,,,,,,Fire,,,,,,Equip Shield,
-Aegis Shield,88,Ar En Pd Sq Kn Ln Sb Ge,20,30,,1,,,,,,,,,,,Equip Shield,
-Diamond Shield,89,Ar En Pd Sq Kn Ln Sb Ge,15,15,1,1,,,,,,,,,,,Equip Shield,
-Platina Shield,8A,Ar En Pd Sq Kn Ln Sb Ge,35,20,,1,,,,,,,,,,,Equip Shield,
-Crystal Shield,8B,Ar En Pd Sq Kn Ln Sb Ge,20,20,,,,,,Crystal,,,,,,,Equip Shield,
-Genji Shield,8C,Ar En Pd Sq Kn Ln Sb Ge,30,20,,,,,,Petrify,,,,,,,Equip Shield,
-Kaiser Plate,8D,Ar En Pd Sq Kn Ln Sb Ge,10,10,,,,,,,,,,All Elements,,,Equip Shield,
-Venetian Shield,8E,Ar En Pd Sq Kn Ln Sb Ge,0,0,,,,,,,,,All Elements,,,,Equip Shield,
-Escutcheon II,8F,Ar En Pd Sq Kn Ln Sb Ge,0,0,,,,,,,,,,,,Stealth,Equip Shield,
+Escutcheon,80,Ar Pd Sq Kn Ln Sb Ge,25,0,,,,,,,,Fire Lightning,,,Haste,,Equip Shield,
+Buckler,81,Ar Pd Sq Kn Ln Sb Ge,15,15,,,,2,2,,,,,,,,Equip Shield,
+Bronze Shield,82,Ar Pd Sq Kn Ln Sb Ge,30,0,,,,,,,,,,,,Reflect,Equip Shield,
+Round Shield,83,Ar Pd Sq Kn Ln Sb Ge,0,0,,,-1,,,,,,,,,Protect Shell,Equip Shield,
+Mythril Shield,84,Ar Pd Sq Kn Ln Sb Ge,0,15,,2,,,,,,,,,,,Equip Shield,
+Gold Shield,85,Ar Pd Sq Kn Ln Sb Ge,30,30,,,,,,,,,,,,,Equip Shield,
+Dark Shield,86,Ar Pd Sq Kn Ln Sb Ge,30,15,,,,,,,Dark,,,,,,Equip Shield,
+Flame Shield,87,Ar Pd Sq Kn Ln Sb Ge,30,15,,,,,,,Fire,,,,,,Equip Shield,
+Aegis Shield,88,Ar Pd Sq Kn Ln Sb Ge,20,30,,1,,,,,,,,,,,Equip Shield,
+Diamond Shield,89,Ar Pd Sq Kn Ln Sb Ge,15,15,1,1,,,,,,,,,,,Equip Shield,
+Platina Shield,8A,Ar Pd Sq Kn Ln Sb Ge,35,20,,1,,,,,,,,,,,Equip Shield,
+Crystal Shield,8B,Ar Pd Sq Kn Ln Sb Ge,20,20,,,,,,Crystal,Water,,,Water,,,Equip Shield,
+Genji Shield,8C,Ar Pd Sq Kn Ln Sb Ge,30,20,,,,,,Dead / Crystal,,,,,,,Equip Shield,
+Kaiser Plate,8D,Ar Pd Sq Kn Ln Sb Ge,10,10,,,,,,,,,,All Elements,,,Equip Shield,
+Venetian Shield,8E,Ar Pd Sq Kn Ln Sb Ge,0,0,,,,,,,,,All Elements,,,,Equip Shield,
+Escutcheon II,8F,Ar Pd Sq Kn Ln Sb Ge,0,0,,,,,,,,,,,,Stealth,Equip Shield,
 Battle Dict,5F,Th Ar En Pd Nj Ch Wi Or Me Bd Sq Kn Ln Mk Sm Dc Sb Pr Sg TM Ge BM Su Wk,0,0,,,,,,,,,,,,,,Your attacks ignore both C-EV types
 Monster Dict,60,Th Ar En Pd Nj Ch Wi Or Me Bd Sq Kn Ln Mk Sm Dc Sb Pr Sg TM Ge BM Su Wk,0,0,,,,,,,,,,,,,,25% chance for an ability that costs MP to cost 0
-Papyrus Plate,61,Th Ar En Pd Nj Ch Wi Or Me Bd Sq Kn Ln Mk Sm Dc Sb Pr Sg TM Ge BM Su Wk,0,0,,,,,,,,,,,,,,You survive lethal damage at 1 hp and this breaks
+Papyrus Plate,61,Th Ar En Pd Nj Ch Wi Or Me Bd Sq Kn Ln Mk Sm Dc Sb Pr Sg TM Ge BM Su Wk,0,0,,,,,,,,,,,,,,"If you are at max hp, you survive lethal damage at 1 hp and this breaks"
 Madlemgen,62,Th Ar En Pd Nj Ch Wi Or Me Bd Sq Kn Ln Mk Sm Dc Sb Pr Sg TM Ge BM Su Wk,0,0,,,,,,,,,,,,,,"Hit_() formulas increase by 8 after evasion, all damage dealt reduced by 1/8"

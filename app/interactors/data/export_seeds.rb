@@ -36,14 +36,14 @@ class Data::ExportSeeds < ActiveInteractor::Base
     def prepare_files
       dir = FileUtils.mkdir_p(File.join(tmp_dir, 'seeds')).first
 
-      FileUtils.mkdir_p(File.join(dir, 'items')).first
+      FileUtils.mkdir_p(File.join(dir, 'items'))
 
       {
         Data::Export::ExportJobs => 'jobs.csv',
         Data::Export::ExportPrerequisites => 'prerequisites.csv',
         Data::Export::ExportSkills => 'skills.csv',
         Data::Export::Items::ExportAccessories => 'items/accessories.csv',
-        Data::Export::Items::ExportArmor => 'items/armor.csv',
+        Data::Export::Items::ExportArmor => 'items/armors.csv',
         Data::Export::Items::ExportHelmets => 'items/helmets.csv',
         Data::Export::Items::ExportShields => 'items/shields.csv',
         Data::Export::Items::ExportWeapons => 'items/weapons.csv',

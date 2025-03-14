@@ -44,7 +44,7 @@ Heaven's Cloud,Equip Katana,2A,12,35,2-swords 2-hands,Sm Sb,,,,,,Faith,,,Water,,
 Kiyomori,Equip Katana,2B,9,35,2-swords 2-hands,Sm Sb,,,,,,,,,,,,,,Protect Shell,,(PA * BR)/100,(PA * BR)/100 * WP,,,
 Muramasa,Equip Katana,2C,14,35,2-swords 2-hands,Sm Sb,,,,,,Death Sentence,,,,,,,,,,(PA * BR)/100,(PA * BR)/100 * WP,,35.00%,
 Kikuichimonji,Equip Katana,2D,12,35,2-swords 2-hands,Sm Sb,,,1,,,,,,,,,,,,,(PA * BR)/100,(PA * BR)/100 * WP,,,
-Masamune,Equip Katana,2E,11,35,2-swords 2-hands,Sm Sb,,,,,,,,,,,,,,,,(PA * BR)/100,(PA * BR)/100 * WP,,,Your healing effects are 25% more effective
+Masamune,Equip Katana,2E,11,35,2-swords 2-hands,Sm Sb,,,,,,,,,,,Fire Lightning,,,Haste,,(PA * BR)/100,(PA * BR)/100 * WP,,,
 Chirijiraden,Equip Katana,2F,12,35,2-swords 2-hands,Sm Sb,,3,,,,,,,,,,,,,,(PA * BR)/100,(PA * BR)/100 * WP,,,
 Battle Axe,Equip Axe,30,16,40,2-hands only,Ch Sq Ge,,,,,,,,,,Dauntless,,,,,,(BR / 5),(BR / 5) * WP,Brave + 10,20.00%,
 Golem Axe,Equip Axe,31,14,40,2-hands only,Ch Sq Ge,3,,,,,,,,,,,,,,,(BR / 5),(BR / 5) * WP,,,
@@ -72,7 +72,7 @@ Scorpion Tail,,46,14,10,2-swords 2-hands,Ch Sq Pr BM,,,,,,Poison,,,,,,,,,,WP,WP*
 Romanda Gun,Equip Gun,47,13,5,5 Range,En Me,,,,,,,,,,,,,,,,WP,WP*WP,,,
 Chocobo Gun,Equip Gun,48,14,5,Exactly 3 Range,En Me,,,,,,,,,,,,,,,,WP,WP*WP,,,
 Stone Gun,Equip Gun,49,14,5,5 Range,En Me,,,,,,,,,,,,,,Slow,,WP,WP*WP,,,
-Bolt-Action Rifle,Equip Gun,4A,13,5,8 Range / 2-hands only,En Me Wk,,,,,,,,,Lightning,,,,,,,MA,MA*WP,,,Checks Magic Evade and Matk UP
+Bolt-Action Rifle,Equip Gun,4A,13,5,8 Range,En Me Wk,,,,,,,,,Lightning,,,,,,,MA,MA*WP,,,Checks Magic Evade and Matk UP
 Freischutz,Equip Gun,4B,11,5,3 Range,En Me BM,,,,,,,,,,,,,,,,MA,MA*WP No Evade,,,Checks Magic Evade and Matk UP
 Engineer Rifle,Equip Gun,4C,13,5,8 Range,En Me,,,,,,,,,,,,,,,,WP,WP*WP No Evade,,,
 Bow Gun,Equip Bows,4D,10,5,6 Range,Ar En Sq,,,,,,,,,,Doubleshot,,,,,,PA,PA*WP,,15.00%,

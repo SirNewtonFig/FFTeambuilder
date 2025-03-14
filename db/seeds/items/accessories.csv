@@ -1,29 +1,29 @@
 Name,Item ID,Classes,Phys Evade,Magic Evade,PA,MA,Speed,Move,Jump,Immune:,Absorbs:,Weak:,Halves:,Strengthens:,Start:,Always:
-Battle Boots,"D0",Th Ar En Pd Nj Ch Wi Or Me Bd Sq Kn Ln Mk Sm Dc Sb Pr Sg TM Ge BM Su Wk,,,1,,,1,,,,,,,,
-Spike Shoes,"D1",Th Ar En Pd Nj Ch Wi Or Me Bd Sq Kn Ln Mk Sm Dc Sb Pr Sg TM Ge BM Su Wk,,,1,,,1,3,,,,,,,
-Germinas Boots,"D2",Th Ar En Pd Nj Ch Wi Or Me Bd Sq Kn Ln Mk Sm Dc Sb Pr Sg TM Ge BM Su Wk,,,,,,1,1,Don't Act / Slow / Don't Move,,,,,,
-Rubber Shoes,"D3",Th Ar En Pd Nj Ch Wi Or Me Bd Sq Kn Ln Mk Sm Dc Sb Pr Sg TM Ge BM Su Wk,,,,,,1,1,Don't Move / Sundown / Weaken,,,,,,
-Feather Boots,"D4",Th Ar En Pd Nj Ch Wi Or Me Bd Sq Kn Ln Mk Sm Dc Sb Pr Sg TM Ge BM Su Wk,,,,,,2,,,,,,,,
-Sprint Shoes,"D5",Th Ar En Pd Nj Ch Wi Or Me Bd Sq Kn Ln Mk Sm Dc Sb Pr Sg TM Ge BM Su Wk,,,,,1,1,,,,,,,,
-Power Wrist,"D7",Th Ar En Pd Nj Ch Wi Or Me Bd Sq Kn Ln Mk Sm Dc Sb Pr Sg TM Ge BM Su Wk,,,1,,,,,Protect / Shell / Haste,,,,,,Overload
-Magic Gauntlet,"D9",Th Ar En Pd Nj Ch Wi Or Me Bd Sq Kn Ln Mk Sm Dc Sb Pr Sg TM Ge BM Su Wk,,,,2,,,,,,,,,,
-Heroic Gloves,"DA",Th Ar En Pd Nj Ch Wi Or Me Bd Sq Kn Ln Mk Sm Dc Sb Pr Sg TM Ge BM Su Wk,,,1,,,,,,,,,,Overload,
-Reflect Ring,"DB",Th Ar En Pd Nj Ch Wi Or Me Bd Sq Kn Ln Mk Sm Dc Sb Pr Sg TM Ge BM Su Wk,,,,,1,,,,,,,,,Reflect
-Defense Ring,"DC",Th Ar En Pd Nj Ch Wi Or Me Bd Sq Kn Ln Mk Sm Dc Sb Pr Sg TM Ge BM Su Wk,,,,,,,,Sundown / Death Sentence,,,,,Protect Shell,
-Magic Ring,"DD",Th Ar En Pd Nj Ch Wi Or Me Bd Sq Kn Ln Mk Sm Dc Sb Pr Sg TM Ge BM Su Wk,,,,1,,,,,Water / Dark,,,,,
-Diamond Armlet,"E0",Th Ar En Pd Nj Ch Wi Or Me Bd Sq Kn Ln Mk Sm Dc Sb Pr Sg TM Ge BM Su Wk,,,1,1,,,,,,,,,,
-Jade Armlet,"E1",Th Ar En Pd Nj Ch Wi Or Me Bd Sq Kn Ln Mk Sm Dc Sb Pr Sg TM Ge BM Su Wk,,,,1,,,,,,,,Fire/Water/Lightning,,
-108 Gems,"E2",Th Ar En Pd Nj Ch Wi Or Me Bd Sq Kn Ln Mk Sm Dc Sb Pr Sg TM Ge BM Su Wk,,,,,,,,Undead / Poison / Discord / Fatigue,,,,Holy/Dark,,
-N-Kai Armlet,"E3",Th Ar En Pd Nj Ch Wi Or Me Bd Sq Kn Ln Mk Sm Dc Sb Pr Sg TM Ge BM Su Wk,,,,,,,,Confusion / Charm / Berserk,,,Dark,,,
-Defense Armlet,"E4",Th Ar En Pd Nj Ch Wi Or Me Bd Sq Kn Ln Mk Sm Dc Sb Pr Sg TM Ge BM Su Wk,,,,,,,,Don't Move / Don't Act / Dead / Death Sentence,,,Holy,,,
-Red Shoes,"D6",Th Ar En Pd Nj Ch Wi Or Me Bd Sq Kn Ln Mk Sm Dc Sb Pr Sg TM Ge BM Su Wk,,,1,,,1,,,,,,,,Berserk
-Genji Gauntlet,"D8",Th Ar En Pd Nj Ch Wi Or Me Bd Sq Kn Ln Mk Sm Dc Sb Pr Sg TM Ge BM Su Wk,,,,,,,,Don't Act / Weaken,,,,,,
-Cursed Ring,"DE",Th Ar En Pd Nj Ch Wi Or Me Bd Sq Kn Ln Mk Sm Dc Sb Pr Sg TM Ge BM Su Wk,,,1,1,1,,,,,,,,,Undead
-Angel Ring,"DF",Th Ar En Pd Nj Ch Wi Or Me Bd Sq Kn Ln Mk Sm Dc Sb Pr Sg TM Ge BM Su Wk,,,-1,-1,,,,,,,,,Reraise,
-Small Mantle,"E5",Th Ar En Pd Nj Ch Wi Or Me Bd Sq Kn Ln Mk Sm Dc Sb Pr Sg TM Ge BM Su Wk,0,10,,1,,,,Don't Act / Berserk,,,,,,
-Leather Mantle,"E6",Th Ar En Pd Nj Ch Wi Or Me Bd Sq Kn Ln Mk Sm Dc Sb Pr Sg TM Ge BM Su Wk,10,0,1,,,,,Weaken / Don't Move,,,,,,
-Wizard Mantle,"E7",Th Ar En Pd Nj Ch Wi Or Me Bd Sq Kn Ln Mk Sm Dc Sb Pr Sg TM Ge BM Su Wk,0,20,,1,,,,,,,,,,
-Elf Mantle,"E8",Th Ar En Pd Nj Ch Wi Or Me Bd Sq Kn Ln Mk Sm Dc Sb Pr Sg TM Ge BM Su Wk,20,20,,,,,,,,,,,,
-Dracula Mantle,"E9",Th Ar En Pd Nj Ch Wi Or Me Bd Sq Kn Ln Mk Sm Dc Sb Pr Sg TM Ge BM Su Wk,15,15,,,,,,,Dark,,,Dark,,
-Feather Mantle,"EA",Th Ar En Pd Nj Ch Wi Or Me Bd Sq Kn Ln Mk Sm Dc Sb Pr Sg TM Ge BM Su Wk,20,0,1,,,,,Discord / Slow,,,,,,
-Vanish Mantle,"EB",Th Ar En Pd Nj Ch Wi Or Me Bd Sq Kn Ln Mk Sm Dc Sb Pr Sg TM Ge BM Su Wk,0,20,,,,,,,,Lightning,,,,Innocent
+Battle Boots,D0,Th Ar En Pd Nj Ch Wi Or Me Bd Sq Kn Ln Mk Sm Dc Sb Pr Sg TM Ge BM Su Wk,,,1,,,1,,Weaken,,,,,,
+Spike Shoes,D1,Th Ar En Pd Nj Ch Wi Or Me Bd Sq Kn Ln Mk Sm Dc Sb Pr Sg TM Ge BM Su Wk,,,1,,,1,2,,,,,,,
+Germinas Boots,D2,Th Ar En Pd Nj Ch Wi Or Me Bd Sq Kn Ln Mk Sm Dc Sb Pr Sg TM Ge BM Su Wk,,,,,,1,1,Don't Act / Slow / Don't Move,,,,,,
+Rubber Shoes,D3,Th Ar En Pd Nj Ch Wi Or Me Bd Sq Kn Ln Mk Sm Dc Sb Pr Sg TM Ge BM Su Wk,,,,,,1,,Don't Move / Sundown / Weaken,,,,,,
+Feather Boots,D4,Th Ar En Pd Nj Ch Wi Or Me Bd Sq Kn Ln Mk Sm Dc Sb Pr Sg TM Ge BM Su Wk,,,,,,2,,,,,,,,Float
+Sprint Shoes,D5,Th Ar En Pd Nj Ch Wi Or Me Bd Sq Kn Ln Mk Sm Dc Sb Pr Sg TM Ge BM Su Wk,,,,,1,1,,,,,,,,
+Power Wrist,D7,Th Ar En Pd Nj Ch Wi Or Me Bd Sq Kn Ln Mk Sm Dc Sb Pr Sg TM Ge BM Su Wk,,,1,,,,,Protect / Shell / Haste,,,,,,Overload
+Magic Gauntlet,D9,Th Ar En Pd Nj Ch Wi Or Me Bd Sq Kn Ln Mk Sm Dc Sb Pr Sg TM Ge BM Su Wk,,,,2,,,,Innocent / Don't Act,,,,,,
+Heroic Gloves,DA,Th Ar En Pd Nj Ch Wi Or Me Bd Sq Kn Ln Mk Sm Dc Sb Pr Sg TM Ge BM Su Wk,,,1,,,,,,,,,,Overload,
+Reflect Ring,DB,Th Ar En Pd Nj Ch Wi Or Me Bd Sq Kn Ln Mk Sm Dc Sb Pr Sg TM Ge BM Su Wk,,,,,1,,,,,,,,,Reflect
+Defense Ring,DC,Th Ar En Pd Nj Ch Wi Or Me Bd Sq Kn Ln Mk Sm Dc Sb Pr Sg TM Ge BM Su Wk,,,,,,,,Sundown / Death Sentence,,,,,Protect Shell,
+Magic Ring,DD,Th Ar En Pd Nj Ch Wi Or Me Bd Sq Kn Ln Mk Sm Dc Sb Pr Sg TM Ge BM Su Wk,,,,1,,,,Don't Act,Water / Dark / Holy,,,,,
+Diamond Armlet,E0,Th Ar En Pd Nj Ch Wi Or Me Bd Sq Kn Ln Mk Sm Dc Sb Pr Sg TM Ge BM Su Wk,,,1,1,,,,Slow,,,,,,
+Jade Armlet,E1,Th Ar En Pd Nj Ch Wi Or Me Bd Sq Kn Ln Mk Sm Dc Sb Pr Sg TM Ge BM Su Wk,,,,1,,,,,,,,Fire/Water/Lightning,,
+108 Gems,E2,Th Ar En Pd Nj Ch Wi Or Me Bd Sq Kn Ln Mk Sm Dc Sb Pr Sg TM Ge BM Su Wk,,,,,,,,Undead / Poison / Discord / Fatigue,,,,Holy/Dark,,
+N-Kai Armlet,E3,Th Ar En Pd Nj Ch Wi Or Me Bd Sq Kn Ln Mk Sm Dc Sb Pr Sg TM Ge BM Su Wk,,,,,,,,Confusion / Charm / Berserk,,,Dark,,,
+Defense Armlet,E4,Th Ar En Pd Nj Ch Wi Or Me Bd Sq Kn Ln Mk Sm Dc Sb Pr Sg TM Ge BM Su Wk,,,,,,,,Don't Move / Don't Act / Dead / Death Sentence,,,,,,
+Red Shoes,D6,Th Ar En Pd Nj Ch Wi Or Me Bd Sq Kn Ln Mk Sm Dc Sb Pr Sg TM Ge BM Su Wk,,,1,,,1,,,,,,,,Berserk
+Genji Gauntlet,D8,Th Ar En Pd Nj Ch Wi Or Me Bd Sq Kn Ln Mk Sm Dc Sb Pr Sg TM Ge BM Su Wk,,,1,1,,,,Don't Act / Weaken,,,,,,
+Cursed Ring,DE,Th Ar En Pd Nj Ch Wi Or Me Bd Sq Kn Ln Mk Sm Dc Sb Pr Sg TM Ge BM Su Wk,,,1,1,1,,,,,,,,,Undead
+Angel Ring,DF,Th Ar En Pd Nj Ch Wi Or Me Bd Sq Kn Ln Mk Sm Dc Sb Pr Sg TM Ge BM Su Wk,,,-1,-1,,,,,,,,,Reraise,
+Small Mantle,E5,Th Ar En Pd Nj Ch Wi Or Me Bd Sq Kn Ln Mk Sm Dc Sb Pr Sg TM Ge BM Su Wk,0,10,,1,,,,Don't Act / Berserk,,,,,,
+Leather Mantle,E6,Th Ar En Pd Nj Ch Wi Or Me Bd Sq Kn Ln Mk Sm Dc Sb Pr Sg TM Ge BM Su Wk,10,0,1,,,,,Weaken / Don't Move,,,,,,
+Wizard Mantle,E7,Th Ar En Pd Nj Ch Wi Or Me Bd Sq Kn Ln Mk Sm Dc Sb Pr Sg TM Ge BM Su Wk,0,20,,1,,,,,,,,,,
+Elf Mantle,E8,Th Ar En Pd Nj Ch Wi Or Me Bd Sq Kn Ln Mk Sm Dc Sb Pr Sg TM Ge BM Su Wk,20,20,,,,,,,,,,,,
+Dracula Mantle,E9,Th Ar En Pd Nj Ch Wi Or Me Bd Sq Kn Ln Mk Sm Dc Sb Pr Sg TM Ge BM Su Wk,15,15,,,,,,,Dark,,,Dark,,
+Feather Mantle,EA,Th Ar En Pd Nj Ch Wi Or Me Bd Sq Kn Ln Mk Sm Dc Sb Pr Sg TM Ge BM Su Wk,20,0,1,,,,,Discord / Slow,,,,,,
+Vanish Mantle,EB,Th Ar En Pd Nj Ch Wi Or Me Bd Sq Kn Ln Mk Sm Dc Sb Pr Sg TM Ge BM Su Wk,0,20,,,,,,,,Lightning,,,,Innocent
