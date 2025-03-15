@@ -39,6 +39,10 @@ class Skill < ApplicationRecord
     data['formula']
   end
 
+  def requires_sword?
+    data['formula'].match?(/requires sword/i)
+  end
+
   def data=(value)
     self[:data] = value.is_a?(String) ? JSON.parse(value) : value
   end
