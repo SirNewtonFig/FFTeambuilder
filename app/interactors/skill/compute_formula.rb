@@ -113,7 +113,7 @@ class Skill::ComputeFormula < ActiveInteractor::Base
   end
 
   def eval_xa(xa)
-    return 0 if skill.requires_sword? && !character.weapons.any?(&:sword?)
+    return 0 if skill.requires_sword? && !character.weapons.any?(&:sword_or_katana?)
 
     x0 = calc(xa, **bindings)
     x0 = calc('x * 5/4', x: x0) if character.strengthens.include?(skill.data['element']) || (skill.data['element'] =~ /weapon/i && character.weapon.present? && character.strengthens.include?(character.weapon&.data['element']))
