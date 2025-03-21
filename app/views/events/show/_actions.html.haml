@@ -1,11 +1,12 @@
 .flex.justify-end.space-x-4.mr-2.mt-2
-  - if event.open?
-    - if event.mine?
-      = form_with(url: import_event_submissions_path(event_id: event.id), multipart: true, data: { controller: 'form' }) do
-        %label.cursor-pointer{ for: 'upload-teams' }
-          %div{ class: neutral_button_classes, data: { turbo_frame: 'modal' } } Import Teams
-          = file_field_tag(:team_files, name: 'team_files[]', id: 'upload-teams', class: 'hidden', accept: '.yml', multiple: true, data: { action: 'form#submit' } )
 
+  - if event.mine? && event.state == 'open'
+    = form_with(url: import_event_submissions_path(event_id: event.id), multipart: true, data: { controller: 'form' }) do
+      %label.cursor-pointer{ for: 'upload-teams' }
+        %div{ class: neutral_button_classes, data: { turbo_frame: 'modal' } } Import Teams
+        = file_field_tag(:team_files, name: 'team_files[]', id: 'upload-teams', class: 'hidden', accept: '.yml', multiple: true, data: { action: 'form#submit' } )
+
+  - if event.open?
     %a{ href: new_event_submission_path(event_id: event), class: primary_button_classes, data: { turbo_frame: 'modal' } }
       %span Submit a Team
 
