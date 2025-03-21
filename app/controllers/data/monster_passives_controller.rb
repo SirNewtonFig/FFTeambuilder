@@ -1,4 +1,6 @@
 class Data::MonsterPassivesController < ApplicationController
+  include BypassAuth
+
   def index
     render json: MonsterPassive.all.to_json
   end

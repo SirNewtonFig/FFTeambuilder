@@ -1,4 +1,6 @@
 class Data::ItemsController < ApplicationController
+  include BypassAuth
+
   def index
     render json: Item.joins(:jobs)
       .select('items.*, array_agg(jobs.id) as job_ids')

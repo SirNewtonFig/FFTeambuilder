@@ -1,6 +1,8 @@
 require 'csv'
 
 class Data::Events::CharactersController < ApplicationController
+  include BypassAuth
+
   def index
     load_data
 

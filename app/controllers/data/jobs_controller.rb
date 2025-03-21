@@ -1,4 +1,6 @@
 class Data::JobsController < ApplicationController
+  include BypassAuth
+
   def index
     render json: Job.all.to_json
   end

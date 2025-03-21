@@ -1,4 +1,6 @@
 class Data::SkillsController < ApplicationController
+  include BypassAuth
+
   def index
     render json: Skill.all.to_json
   end
