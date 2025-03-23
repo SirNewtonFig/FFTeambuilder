@@ -3,14 +3,14 @@ class Data::Import::ImportItems < ActiveInteractor::Base
 
   before_perform :setup_itemlist
   after_perform :cleanup!
-  
+
   def perform
     items.each do |type, data|
       data.each do |row|
         item = Item.find_by("data ->> 'memgen_id' = ?", row['Item ID'].rjust(2, '0')) || Item.new
-    
+
         itemlist << row['Item ID'].rjust(2, '0')
-    
+
         item.update(
           name: row['Name'],
           item_type: type,
@@ -48,12 +48,17 @@ class Data::Import::ImportItems < ActiveInteractor::Base
             extra_effects: row['Extra Effects:']
           }
         )
-    
-        equippable_jobs = Job.none
-        equippable_jobs = Job.generic.where(abbreviation: row['Classes'].split(' ')) if row['Classes'].present? && row['Classes'] !~ /not|all|any/i
-        equippable_jobs = Job.generic.where.not(name: 'Mime').where.not(abbreviation: row['Classes'].split(' ')[1..-1]) if row['Classes'].present? && row['Classes'] =~ /not/i
-        equippable_jobs = Job.generic.where.not(name: 'Mime') if row['Classes'] =~ /all|any/i
-    
+
+        equippable_jobs = if row['Classes'].present? && row['Classes'] !~ /not|all|any/i
+          Job.generic.where(abbreviation: row['Classes'].split(' '))
+        elsif row['Classes'].present? && row['Classes'] =~ /not/i
+          Job.generic.where.not(name: 'Mime').where.not(abbreviation: row['Classes'].split(' ')[1..-1])
+        elsif row['Classes'] =~ /all|any/i
+          Job.generic.where.not(name: 'Mime')
+        else
+          Job.none
+        end
+
         item.job_ids = equippable_jobs.pluck(:id)
         item.skill_ids = Skill.where(name: row['Skill']).pluck(:id)
       end

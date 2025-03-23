@@ -15,7 +15,7 @@ class Data::ImportSeeds < ActiveInteractor::Base
     'skills.csv',
     'statuses.csv',
     'accessories.csv',
-    'armor.csv',
+    'armors.csv',
     'helmets.csv',
     'shields.csv',
     'weapons.csv'
@@ -70,7 +70,8 @@ class Data::ImportSeeds < ActiveInteractor::Base
       Data::Import::ImportSkills.perform(skills:)
 
       items = {}
-      Dir.glob(File.join(tmp_dir, 'items/*.csv')).each do |f|
+      ['accessories.csv', 'armors.csv', 'helmets.csv', 'shields.csv', 'weapons.csv'].each do |sheet|
+        f = File.join(tmp_dir, sheet)
         items[File.basename(f, '.csv').singularize] = CSV.parse(File.read(f), headers: true)
       end
       Data::Import::ImportItems.perform(items:)
