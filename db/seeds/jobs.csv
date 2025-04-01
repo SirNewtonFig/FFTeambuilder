@@ -15,12 +15,12 @@ Job ID,Secondary ID,Sex,Class,Abbreviation,Secondary Name,Innate,Evade,MEvade,HP
 16,26,M,Engineer,En,Snipe,Concentrate,5,5,212,24,9,3,3,10,5,,100,75,110,115,100,16
 58,13,F,Samurai,Sm,Draw Out,Two Hands,20,10,173,75,9,3,3,12,9,,85,100,100,128,140,81
 58,13,M,Samurai,Sm,Draw Out,Two Hands,20,10,190,60,9,3,3,12,9,,85,100,100,128,140,80
-12,1d,F,Spellblade,Sb,Sword Magic,Maintenance,20,15,172,65,9,3,3,12,8,,100,100,100,100,100,1e
-12,1d,M,Spellblade,Sb,Sword Magic,Maintenance,20,15,195,50,9,3,3,12,8,,100,100,100,100,100,28
+12,1d,F,Spellblade,Sb,Sword Magic,Maintenance,20,15,172,65,9,3,3,11,8,,100,100,100,100,100,1e
+12,1d,M,Spellblade,Sb,Sword Magic,Maintenance,20,15,195,50,9,3,3,11,8,,100,100,100,100,100,28
 11,1e,F,Paladin,Pd,Holy Sword,Piety,10,15,200,78,9,3,3,12,9,,150,120,120,100,90,7
 11,1e,M,Paladin,Pd,Holy Sword,Piety,10,15,235,60,9,3,3,12,9,,150,120,120,100,90,4
-59,14,F,Ninja,Nj,Throw,Abandon,30,0,172,40,10,4,4,13,6,,80,50,120,115,75,81
-59,14,M,Ninja,Nj,Throw,Abandon,30,0,195,32,10,4,4,13,6,,80,50,120,115,75,80
+59,14,F,Ninja,Nj,Throw,Abandon,30,0,172,40,10,4,4,10,6,,80,50,120,115,75,81
+59,14,M,Ninja,Nj,Throw,Abandon,30,0,195,32,10,4,4,10,6,,80,50,120,115,75,80
 4b,6,F,Chemist,Ch,Item,"Throw Item, Double Item Capacity",15,10,198,60,9,3,3,7,7,,90,100,105,80,100,81
 4b,6,M,Chemist,Ch,Item,"Throw Item, Double Item Capacity",15,10,202,50,9,3,3,7,7,,90,100,105,80,100,80
 4f,a,F,Priest,Pr,White Magic,Immune to damage while charging spells,5,15,190,80,10,3,3,8,8,,85,120,110,100,125,81

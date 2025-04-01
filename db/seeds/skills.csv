@@ -17,7 +17,7 @@ Knight,Power Ruin,8000,200,3,,Any,,,,,,,PA,-3 PA Hit_(PA+70)%,,,Yes,Yes,Yes,Yes,
 Knight,Mind Ruin,4000,200,3,,Any,,,,,,,PA,-3 MA Hit_(PA+70)%,,,Yes,Yes,Yes,Yes,,,Yes,,If barehanded,Yes,,Yes,
 Knight,Speed Ruin,2000,200,3,,Any,,,,,,,PA,Add: Slow Hit_(PA+70)%,,,Yes,Yes,Yes,Yes,,,Yes,,,,,,
 Knight,Magic Ruin,1000,100,3,,Any,,,,,,,PA,DmgMP_(50% max) Hit_(PA+70)%,,,Yes,Yes,Yes,Yes,,,Yes,,If barehanded,Yes,,Yes,
-Knight,Inspire,0800,800,0,2,Any,,,,,,,,Add: Haste Hit_(100)% useable once,,,,,,Yes,,,,,,,,,
+Knight,Inspire,0800,800,3,2,Any,,,,,,,,Add: Haste Hit_(100)% useable once,,,,,,Yes,,,,,,,,,
 Knight,Blastar Punch,0400,200,3,,Any,,,35,Weapon,,,PA,Dmg_(PA*WP/2) Break Helm ELSE miss (20% break failure rate) Requires Sword,,,Yes,,Yes,Yes,,,Yes,,If barehanded,Yes,,Yes,
 Knight,Hellcry Punch,0200,600,3,,Any,,,35,Weapon,,,PA,Dmg_(PA*WP/2) Break Weapon ELSE miss (20% break failure rate) Requires Sword,,,Yes,,Yes,Yes,,,Yes,,If barehanded,Yes,,Yes,
 Knight,Icewolf Bite,0100,200,3,,Any,,,35,Weapon,,,PA,Dmg_(PA*WP/2) Break Accessory ELSE miss (20% break failure rate) Requires Sword,,,Yes,,Yes,Yes,,,Yes,,If barehanded,Yes,,Yes,
@@ -68,7 +68,7 @@ Archer,S:Equip Bows,01CA,200,,,,,,,,,,,Can equip bow or crossbow regardless of j
 Monk,Spin Fist,8000,150,0,2,Any,,,,,Phys,,(PA)/2,Dmg_((PA)/2*PA),,,Yes,,Yes,Yes,,,Yes,,Yes,,,Yes,
 Monk,Repeating Fist,4000,250,1,,Any,0,,,,,,(PA-1)/2,Dmg_((PA-1)/2*PA),Add: Weaken,30%,Yes,,Yes,Yes,,,Yes,,Yes,,,Yes,
 Monk,Wave Fist,2000,250,3,,Any,3,,,,Phys,,(PA-1)/2,Dmg_((PA-1)/2*PA),Add: Sundown,30%,Yes,,Yes,Yes,,,Yes,,Yes,,,Yes,
-Monk,Earth Slash,1000,500,5,Linear,Any,2,,,,Phys,,(PA)/2,Dmg_((PA/2)*PA),Add: Fatigue,40%,Yes,,Yes,Yes,,,Yes,,Yes,,,Yes,
+Monk,Earth Slash,1000,500,5,Linear,Any,2,,,,Phys,,(PA/2),Dmg_((PA/2)*PA),Add: Fatigue,40%,Yes,,Yes,Yes,,,Yes,,Yes,,,Yes,
 Monk,Secret Fist,0800,300,1,,Any,0,,,,Phys,,MA,Add: Death Sentence Hit_(MA+70)%,,,Yes,,Yes,Yes,,,Yes,,Yes,,,Yes,
 Monk,Disharmony,0400,400,1,,Any,,,,,,,,Add: Discord Hit_(100)%,,,Yes,,Yes,Yes,,,,,,,,,
 Monk,Stigma Magic,0200,100,0,1,Any,,,,,,,,Cancel: All negative status except Death Sentence Hit_(100)%,,,,,,Yes,,,Yes,,Yes,,,,
@@ -113,7 +113,7 @@ Spellblade,Dark Sword,0200,800,3,,Any,,,17,Weapon,Phys,,(PA-2),AbsorbMP_((PA-2)*
 Spellblade,Disrupt,0100,300,Weapon,,Any,,,,,,,,Add: Discord Hit_(100)%,,,,,,Yes,,,,,,,Yes,,
 Spellblade,E:Lionheart,01E4,200,,,,,,,,,,,Your Brave is considered 70 for the purposes of everything but reactions,,,,,,Yes,,,,,,,,,
 Paladin,Consecrate,8000,300,0,2,Enemies,3,,,Holy,,,PA,Dmg_P(PA*10),,,,,Yes,Yes,,,Yes,,,,,Yes,
-Paladin,Holy Explosion,4000,800,5,Linear,Any,2,,20,Weapon,Phys,,(PA-2),Dmg_((PA-2)*(WP+2)) Requires Sword,,,,,Yes,Yes,,,Yes,,If barehanded,Yes,,Yes,
+Paladin,Holy Explosion,4000,800,5,Linear,Any,2,,20,Weapon,Phys,,(PA-2),Dmg_((PA-2)*(WP+2)) Requires Sword,,,,,Yes,Yes,,,Yes,,If barehanded,,,Yes,
 Paladin,Shine,2000,400,2,2,Any,,,,Holy,Phys,,,Dmg_((Faith/2)*5)  (No XA modifiers),Add: Sundown,20%,,,Yes,Yes,,,,,,,,Yes,
 Paladin,Judgment,1000,300,3,,Any,,,,Holy,Phys,,PA,Dmg_P(PA*17),,,,,Yes,Yes,,,Yes,,,,,Yes,
 Paladin,Purify,0800,100,3,,Allies,,,,Holy,,,,Cancel: Negative Effects Hit_(100)%,,,,,,Yes,,,,,,,,,
@@ -210,7 +210,7 @@ Geomancer,Quicksand,0100,50,4,1,Any,,,,Dark,,,(PA+2)/2,Dmg_(((PA+2)/2)*MA),Add: 
 Geomancer,Sand Storm,0080,50,4,1,Any,,,,Lightning,,,(PA+2)/2,Dmg_(((PA+2)/2)*MA),Add: Discord,20%,,Yes,Yes,Yes,,,,Yes,,,,,Yes
 Geomancer,Snowstorm,0040,50,4,1,Any,,,,Water,,,(PA+2)/2,Dmg_(((PA+2)/2)*MA),Add: Don't Act,20%,,Yes,Yes,Yes,,,,Yes,,,,,Yes
 Geomancer,Gusty Wind,0020,50,4,1,Any,,,,Lightning,,,(PA+2)/2,Dmg_(((PA+2)/2)*MA),Add: Weaken,20%,,Yes,Yes,Yes,,,,Yes,,,,,Yes
-Geomancer,Lava Ball,0010,50,4,1,Any,,,,Fire,,,(PA+2)/2,Dmg_(((PA+7)/2)*MA),Add: Sundown,20%,,Yes,Yes,Yes,,,,Yes,,,,,Yes
+Geomancer,Lava Ball,0010,50,4,1,Any,,,,Fire,,,(PA+7)/2,Dmg_(((PA+7)/2)*MA),Add: Sundown,20%,,Yes,Yes,Yes,,,,Yes,,,,,Yes
 Geomancer,R:Counter Flood,01B5,600,,,,,,,,,,,"Counter with Geomancy, regardless of if skill is learned",,,,,,Yes,,,,,,,,,
 Geomancer,E:Lucky,01DF,1500,,,,,,,,,,,Your Brave is considered 70 for the purposes of proc% chance,,,,,,Yes,,,,,,,,,
 Geomancer,S:Move on Lava,01F8,150,,,,,,,,,,,Able to walk on lava panels (CLASS INNATE),,,,,,Yes,,,,,,,,,

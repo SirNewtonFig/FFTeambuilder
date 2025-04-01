@@ -32,3 +32,8 @@ Transparent,"Next attack has concentrate, wears off on hit or action",,Kinda tra
 Treasure,"(Unused, but this is in the priority matrix for some reason so here ya go)",Permanent,You're a treasure chest,-192,,
 Undead,"Heal reverses, 50% to revive at 100 hp instead of crystal",,Black tint,-39,,
 Weaken,All damage you deal is reduced to 67%,28 ticks,Light purple tint,-39,Cripple,All damage you deal is reduced to 50%
+Sloth,Upgraded Discord. Cannot evade attacks,24 ticks,VERY purple (blood suck),N/A,,
+Toxic,Upgraded Poison. Deals double the damage.,,Green tint,N/A,,
+Exhaustion,Upgraded Fatigue. Abilities cost double MP and your HP cannot be healed,24 ticks,Idle move stopped,N/A,,
+Cripple,Upgraded Weaken. All damage you deal is reduced to 50%,28 ticks,Light purple tint,N/A,,
+Fragile,Upgraded Sundown. The next damaging attack you suffer hits 2x as hard,,Shades in bubble over head,N/A,,

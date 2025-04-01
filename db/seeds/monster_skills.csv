@@ -40,7 +40,7 @@ Tonberry,S:Guts,01D6,500,,,,,,,,,,,30% chance to survive lethal damage at 1 hp (
 Mindflayer,Aqualung,8000,0,4,,Any,3,,,Water,Mag,,(PA+8)/2,Dmg_((PA+8)/2*MA),,,,Yes,Yes,,,,,Yes,,,,,
 Mindflayer,Time Blast,4000,0,3,1,Any,,,,,,,,Add: Quick Hit_(100%),,,,,,,,,,,,,,,
 Mindflayer,Energy Blast,2000,500,3,2,Any,3,,,,,,MA,CT_00 Hit_U(MA+60)%,,,,,,,,,,Yes,,,,,
-Mindflayer,Psionic Wave,1000,1000,0,2,Any,1,,,,Mag,,(PA+7)/2,Dmg_((PA+7)/2*MA) 20% Dispel,,,,Yes,Yes,,,,,Yes,,,,,
+Mindflayer,Psionic Wave,1000,1000,0,2,Any,1,,,,Mag,,(PA+7)/2,Dmg_((PA+7)/2*MA),Dispel,20%,,Yes,Yes,,,,,Yes,,,,,
 Mindflayer,Mind Control,0800,2500,1,1,Any,1,,,,Mag,,MA,Add: Charm Hit_(MA+34)%,,,,Yes,Yes,,,,,Yes,,,,,
 Mindflayer,R:Counter Flood,01B5,500,,,,,,,,,,,"Counter with Geomancy, regardless of if skill is learned",,,,,,,,,,,,,,,
 Mindflayer,R:CT Save,01A8,300,,,,,,,,,,,Increase CT by 20 upon taking damage,,,,,,,,,,,,,,,
