@@ -36,35 +36,31 @@
             .px-4.h-10.flex.justify-center.items-center.text-white.bg-gray-700.rounded-full.shadow-sm.hover:bg-gray-600.focus:ring-4.focus:ring-gray-300.focus:outline-none{ for: 'upload-team' }
               .mr-2.text-sm Delete
               = inline_svg_tag('icons/delete.svg', class: 'h-5 w-5 text-white')
-  
+
   .relative{ class: 'max-w-[50rem]'}
     .flex.mt-1
       .relative
         .fixed.flex.flex-col.fixed.top-0{ class: 'top-[3.75rem] h-[calc(100vh-72px)]', data: { lineup_target: 'container' } }
           = render 'teams/summary', team: @team
-          
+
           = turbo_frame_tag(:lineup) do
             = form_with(url: team_lineup_path(team_id: @team), method: :patch, data: { controller: 'form lineup', lineup_target: 'form', turbo_frame: :lineup}) do
               - 4.times do |i|
                 .draggable{ data: { team: @team.id, index: i, action: 'click->lineup#select:stop', lineup_target: 'character' }}
                   = render 'teams/characters/summary', selected: i == params[:id].to_i, char: @team.characters[i], i: i
-          
+
           .mt-4.px-3.text-gray-400.hidden.sm:block.text-sm Team Colors
           #colors.flex.sm:flex-col.sm:px-1.mt-3.sm:mt-0
             = render 'teams/colors', team: @team
 
-          #formula-toggle.mt-4.ml-1
-            %label.cursor-pointer.flex.items-center
-              %input.hidden.peer{ type: 'checkbox', data: { controller: 'toggle-class', action: 'toggle-class#toggle', toggle_class_class_value: 'eval-formula', toggle_class_target_value: '#edit-character' } }
-              = inline_svg_tag('icons/calculate.svg', class: 'h-12 w-12 md:h-6 md:w-6 text-gray-400 peer-checked:text-blue-500 font-light')
-              .hidden.md:block.text-white.text-sm.ml-1 Calculate Formulas?
+          = render 'teams/calculate_toggle'
 
           #help-toggle.mt-4.ml-1
             %label.cursor-pointer.flex.items-center
               %input.hidden.peer{ type: 'checkbox', data: { controller: 'toggle-class', action: 'toggle-class#toggle context:help@window->toggle-class#off', toggle_class_class_value: 'tooltip-highlight', toggle_class_target_value: '#edit-character' } }
               = inline_svg_tag('icons/info.svg', class: 'h-12 w-12 md:h-6 md:w-6 text-gray-400 peer-checked:text-blue-500 font-light')
               .hidden.md:block.text-white.text-sm.ml-1 Need More Info?
-      
+
       .w-full.mr-3{ class: 'ml-[4.25rem] sm:ml-[12.75rem]' }
         = turbo_frame_tag(:character_editor, src: edit_team_character_path(team_id: @team.id, id: 0))
 

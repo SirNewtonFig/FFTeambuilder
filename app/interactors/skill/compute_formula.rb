@@ -28,7 +28,7 @@ class Skill::ComputeFormulaContext < ActiveInteractor::Context::Base
   end
 
   def formula_expression
-    expression[:expression]
+    expression[:expression].gsub(/%/, '')
   end
 
   memoize def scalar_min
@@ -103,7 +103,7 @@ class Skill::ComputeFormula < ActiveInteractor::Base
 
     computed = min == max ? min.to_i : min.to_i..max.to_i
 
-    context.result = "(#{computed.to_s})"
+    context.result = computed.to_s
   end
 
   def compute(xa, **binding_overrides)
@@ -119,7 +119,7 @@ class Skill::ComputeFormula < ActiveInteractor::Base
     x0 = calc('x * 5/4', x: x0) if character.strengthens.include?(skill.data['element']) || (skill.data['element'] =~ /weapon/i && character.weapon.present? && character.strengthens.include?(character.weapon&.data['element']))
     x0 = calc('x * 3/2', x: x0) if skill.data['two_hands'].present? && character.two_hands_engaged? && !character.weapon.data['flags']&.match('2-hands only')
     x0 = calc('x * 4/3', x: x0) if skill.data['atk_up'].present? && character.attack_up?
-    x0 = calc('x * 4/3', x: x0) if skill.requires_sword? && character.weapon&.name == 'Materia Blade'
+    x0 = calc('x * 3/2', x: x0) if skill.requires_sword? && character.weapon&.name == 'Materia Blade'
     x0 = calc('x * 5/4', x: x0) if skill.data['matk_up'].present? && character.m_attack_up?
     x0 = calc('x * 3/2', x: x0) if character.martial_arts? && (skill.data['martial_arts']&.match?(/yes/i) || skill.data['martial_arts']&.match?(/barehanded/i) && character.weapon.blank?)
     x0 = calc('x * 4/3', x: x0) if skill.data['atk_up'].present? && character.sniper? && character.weapon.bow?
