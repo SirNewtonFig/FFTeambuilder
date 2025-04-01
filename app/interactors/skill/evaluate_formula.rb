@@ -5,7 +5,7 @@ class Skill::EvaluateFormulaContext < ActiveInteractor::Context::Base
   attribute :skill
   attribute :result
 end
-  
+
 class Skill::EvaluateFormula < ActiveInteractor::Base
   delegate :character, :skill, to: :context
 
@@ -19,10 +19,9 @@ class Skill::EvaluateFormula < ActiveInteractor::Base
 
       next unless c.success?
 
-      parsed_formula.sub!(c.formula_expression, c.result)
+      parsed_formula.sub!(expression[:expression], [expression[:expression], "[#{c.result}]"].join(''))
     end
 
     context.result = parsed_formula
   end
 end
-  
