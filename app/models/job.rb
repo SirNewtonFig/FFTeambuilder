@@ -25,12 +25,12 @@ class Job < ApplicationRecord
   has_many :monster_passives, class_name: 'MonsterPassive'
 
   scope :valid, ->(char) { where("(jobs.data -> '#{char.sex}') is not null") }
-  
+
   scope :secondary, ->(char) {
     s = where.not(name: 'Mime')
           .where.not(id: char.data['job'])
 
-    s = s.none if char.job.name == 'Mime'
+    # s = s.none if char.job.name == 'Mime' # April format
 
     s
   }

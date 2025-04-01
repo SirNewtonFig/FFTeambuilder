@@ -24,7 +24,6 @@ Knight,Icewolf Bite,0100,200,3,,Any,,,35,Weapon,,,PA,Dmg_(PA*WP/2) Break Accesso
 Knight,Shellbust Stab,0080,400,3,,Any,,,35,Weapon,,,PA,Dmg_(PA*WP/2) Break Armor ELSE miss (20% break failure rate) Requires Sword,,,Yes,,Yes,Yes,,,Yes,,If barehanded,Yes,,Yes,
 Knight,R:Counter,01BA,300,,,,,,,,,,,Counter with attack command if in range,,,,,,Yes,,,Yes,,If barehanded,Yes,Yes,Yes,
 Knight,E:Equip Shield,01C7,200,,,,,,,,,,,Can equip shield regardless of job,,,,,,Yes,,,,,,,,,
-Knight,E:Equip Armor,01C6,400,,,,,,,,,,,Can equip heavy armor or helmets regardless of class,,,,,,Yes,,,,,,,,,
 Knight,S:Equip Sword,01C8,350,,,,,,,,,,,Can equip sword and knight sword regardless of job,,,,,,Yes,,,,,,,,,
 Thief,Gil Toss,8000,100,3,,Any,3,,,,,,PA,Add: Don't Act or Berserk Hit_(PA+60)%,,,Yes,,Yes,Yes,,,Yes,,Yes,,,,
 Thief,Steal Energy,4000,100,1,,Any,,,,,,,SP,Leech 50% target max_MP Hit_(SP+50),,,,,Yes,Yes,,,,,,,,,
@@ -297,3 +296,5 @@ Dancer,Terrifying Dance,0100,100,ALL,ALL,Enemies,ALL,6,,,,,,Brave moves 7 toward
 Dancer,R:MP Switch,01BD,350,,,,,,,,,,,Take all damage from an attack to your MP instead of HP if you have more than 0 MP,,,,,,Yes,,,,,,,,,
 Dancer,R:PA Save,01A6,550,,,,,,,,,,,Gain 2 PA on HP Damage,,,,,,Yes,,,,,,,,,
 Dancer,S:Fly,01FB,600,,,,,,,,,,,"Fly over units, obstacles, and ignore height when moving",,,,,,Yes,,,,,,,,,
+Mime,Mimic,8000,0,,,,,,,,,,,"Copies the last mimickable ability used by your team",,,,,,No,,,,,,,,,
+Mime,E:Equip Any Armor,01C6,0,,,,,,,,,,,Can equip any head and body gear regardless of job,,,,,,Yes,,,,,,,,,

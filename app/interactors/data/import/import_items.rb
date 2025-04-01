@@ -59,6 +59,9 @@ class Data::Import::ImportItems < ActiveInteractor::Base
           Job.none
         end
 
+        # April format
+        equippable_jobs = equippable_jobs.or(Job.where(name: 'Mime')) unless equippable_jobs.none?
+
         item.job_ids = equippable_jobs.pluck(:id)
         item.skill_ids = Skill.where(name: row['Skill']).pluck(:id)
       end

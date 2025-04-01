@@ -43,6 +43,16 @@ class Skill < ApplicationRecord
     data['formula'].match?(/requires sword/i)
   end
 
+  def memgen_id(slot = 0)
+    return nil if data['memgen_id'].blank?
+
+    return data['memgen_id'] unless name == 'Mimic'
+
+    return '8000' if slot < 4
+
+    '4000'
+  end
+
   def data=(value)
     self[:data] = value.is_a?(String) ? JSON.parse(value) : value
   end

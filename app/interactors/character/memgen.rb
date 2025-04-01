@@ -154,7 +154,7 @@ class Character::Memgen < ActiveInteractor::Base
       block << str_to_hex(character.job.data.dig(character.sex, 'character_set'), default: '80')
     end
 
-    def serialize_roster_slot!      
+    def serialize_roster_slot!
       block << "%02x" % (slot + 8)
     end
 
@@ -179,7 +179,7 @@ class Character::Memgen < ActiveInteractor::Base
     end
 
     def backup_secondary
-      return '00' if character.job.name == 'Mime' || character.job.monster?
+      return '00' if character.job.monster?
 
       return '05' unless character.job.name == 'Squire'
 
@@ -194,13 +194,13 @@ class Character::Memgen < ActiveInteractor::Base
 
     def serialize_support!
       support = str_to_hex(character.support&.data&.dig('memgen_id'), bytes: 2)
-      
+
       block << little_endian(support, 2)
     end
 
     def serialize_movement!
       movement = str_to_hex(character.movement&.data&.dig('memgen_id'), bytes: 2)
-      
+
       block << little_endian(movement, 2)
     end
 
@@ -278,7 +278,7 @@ class Character::Memgen < ActiveInteractor::Base
       mp = character.generic? ? character.job_data['mp'].to_i : character.mp
 
       mp = solve_for_x('mp', mp).to_s(16)
-      
+
       block << little_endian(mp, 3)
     end
 
@@ -286,7 +286,7 @@ class Character::Memgen < ActiveInteractor::Base
       sp = character.generic? ? character.job_data['speed'].to_i : character.speed
 
       sp = solve_for_x('sp', sp).to_s(16)
-      
+
       block << little_endian(sp, 3)
     end
 
@@ -294,7 +294,7 @@ class Character::Memgen < ActiveInteractor::Base
       pa = character.generic? ? character.job_data['attack'].to_i : character.attack
 
       pa = solve_for_x('pa', pa).to_s(16)
-      
+
       block << little_endian(pa, 3)
     end
 
@@ -302,7 +302,7 @@ class Character::Memgen < ActiveInteractor::Base
       ma = character.generic? ? character.job_data['magic'].to_i : character.magic
 
       ma = solve_for_x('ma', ma).to_s(16)
-      
+
       block << little_endian(ma, 3)
     end
 
@@ -312,7 +312,7 @@ class Character::Memgen < ActiveInteractor::Base
 
     def serialize_inventory!
       inventory = character.job.name == 'Chemist' ? 16 : 8
-        
+
       inventory += character.items.sum {|item| item.data['extra_items'].to_i }
 
       block << str_to_hex(inventory.to_s(16))
@@ -342,7 +342,7 @@ class Character::Memgen < ActiveInteractor::Base
 
     def encode_skills!(skills)
       value = skills
-        .map{|s| s.data.dig('memgen_id')&.to_i(16) }
+        .map{|s| s.memgen_id(slot)&.to_i(16) }
         .compact
         .sum
 

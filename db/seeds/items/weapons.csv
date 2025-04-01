@@ -30,7 +30,7 @@ Demon Hilt,Equip Sword,1C,11,25,2-swords 2-hands,Pd Sq Kn Sb Sg Ge,,,,,,,,,Fire,
 Ice Brand,Equip Sword,1D,11,25,2-swords 2-hands,Pd Sq Kn Sb Sg Ge,,,,,,,,,Water,Ice Breath,,,,,,PA,PA*WP,MA*12,17.00%,
 Slasher,Equip Sword,1E,10,25,2-swords 2-hands,Pd Sq Kn Sb Sg Ge,,,,,,,,,,Demi,,,,,,PA,PA*WP,"(25% target max HP, magic evade)",50.00%,
 Nagrarock,Equip Sword,1F,7,25,2-swords 2-hands,Pd Sq Kn Sb Sg Ge,1,1,1,1,1,,,,,,,,,,,PA,PA*WP,,,
-Materia Blade,Equip Sword,20,9,30,2-hands only,Pd Sq Kn Sb,,,,,,,,,,,,,,,,(PA * BR)/70,(PA * BR)/70 * WP,,,+33% XA on Swordskills
+Materia Blade,Equip Sword,20,10,30,2-hands only,Pd Sq Kn Sb,,,,,,,,,,,,,,,,(PA * BR)/70,(PA * BR)/70 * WP,,,+33% XA on Swordskills
 Defender,Equip Sword,21,9,30,2-hands only,Pd Sq Kn Sb,,,-1,,,,,,,,,,,,Defending,(PA * BR)/70,(PA * BR)/70 * WP,,,
 Save the Queen,Equip Sword,22,11,30,2-hands only,Pd Sq Kn Sb,,,,,,,,,Holy,,,,Holy,,,(PA * BR)/70,(PA * BR)/70 * WP,,,
 Excalibur,Equip Sword,23,13,30,2-hands only,Pd Sq Kn Sb,,,,,,,,,,,,,,,,(PA * BR)/70,(PA * BR)/70 * WP,,,

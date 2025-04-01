@@ -11,7 +11,7 @@ Job ID,Secondary ID,Sex,Class,Abbreviation,Secondary Name,Innate,Evade,MEvade,HP
 4d,8,M,Archer,Ar,Precision,,10,5,207,46,10,3,4,10,6,,100,65,110,115,80,80
 4e,9,F,Monk,Mk,Punch Art,Martial Arts,20,5,205,72,10,3,4,14,6,,135,80,110,130,80,81
 4e,9,M,Monk,Mk,Punch Art,Martial Arts,20,5,241,55,10,3,4,14,6,,135,80,110,130,80,80
-16,26,F,Engineer,En,Snipe,Concentrate,5,5,183,30,9,3,3,10,5,,100,75,110,115,100,0c 
+16,26,F,Engineer,En,Snipe,Concentrate,5,5,183,30,9,3,3,10,5,,100,75,110,115,100,0c
 16,26,M,Engineer,En,Snipe,Concentrate,5,5,212,24,9,3,3,10,5,,100,75,110,115,100,16
 58,13,F,Samurai,Sm,Draw Out,Two Hands,20,10,173,75,9,3,3,12,9,,85,100,100,128,140,81
 58,13,M,Samurai,Sm,Draw Out,Two Hands,20,10,190,60,9,3,3,12,9,,85,100,100,128,140,80
@@ -44,6 +44,6 @@ Job ID,Secondary ID,Sex,Class,Abbreviation,Secondary Name,Innate,Evade,MEvade,HP
 5b,16,M,Bard,Bd,Sing,,30,10,205,60,9,4,3,8,10,,100,50,115,100,140,80
 5a,15,F,Sage,Sg,Planar Magic,Regenerates CT while charging spells,5,25,180,100,10,3,3,9,12,,100,120,100,110,125,81
 5a,15,M,Sage,Sg,Planar Magic,Regenerates CT while charging spells,5,25,197,80,10,3,3,9,12,,100,120,100,110,125,80
-5d,,F,Mime,Mi,Mimic,"Counter, Martial Arts, Concentrate, Immune to Negative Status",33,15,360,0,9,6,7,10,12,4000,180,50,120,140,140,81
-5d,,M,Mime,Mi,Mimic,"Counter, Martial Arts, Concentrate, Immune to Negative Status",33,15,360,0,9,6,7,12,10,4000,180,50,120,140,140,80
+0d,29,F,Mime,Mi,Mimic,"Counter, Martial Arts, Concentrate, Immune to Negative Status",15,15,200,40,9,4,4,9,9,,180,50,120,140,140,0d
+0d,29,M,Mime,Mi,Mimic,"Counter, Martial Arts, Concentrate, Immune to Negative Status",15,15,180,50,9,4,4,9,9,,180,50,120,140,140,0f
 5c,17,F,Dancer,Dc,Dance,,30,10,200,72,9,4,3,10,8,,100,50,115,140,100,81

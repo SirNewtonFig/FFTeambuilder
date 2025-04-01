@@ -315,11 +315,13 @@ class Character
   end
 
   memoize def can_equip_skills?
-    job.name != 'Mime'
+    # job.name != 'Mime'
+    true # April format
   end
 
   memoize def can_equip_items?
-    job.name != 'Mime'
+    # job.name != 'Mime'
+    true # April format
   end
 
   memoize def two_hands_engaged?
@@ -359,7 +361,7 @@ class Character
   end
 
   memoize def two_fists?
-    two_swords? && unarmed? && shield.blank?
+    two_swords? && unarmed?
   end
 
   def sum_passive(stat)
