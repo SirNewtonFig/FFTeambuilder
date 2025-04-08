@@ -1,26 +1,26 @@
 Name,Item ID,Classes,HP,MP,PA,MA,Speed,Move,Jump,Immune:,Absorbs:,Weak:,Halves:,Strengthens:,Start:,Always:,Skill
-Bronze Helmet,91,Pd Kn Ln Sm,160,0,-2,,,,,Don't Act,,,,,,,Equip Armor
-Iron Helmet,92,Pd Kn Ln Sm,120,0,,,,,,Charm / Berserk,,,,,Don't Move,,Equip Armor
-Barbuta,93,Pd Kn Ln Sm,110,0,,,,,,Confusion / Frog,,,,,,,Equip Armor
-Mythril Helmet,94,Pd Kn Ln Sm,130,0,,1,,,,,,,,,,,Equip Armor
-Gold Helmet,95,Pd Kn Ln Sm,110,50,,,,,,,,,,,,,Equip Armor
-Cross Helmet,96,Pd Kn Ln Sm,100,0,,,,,,,,,,Holy,,,Equip Armor
-Diamond Helmet,97,Pd Kn Ln Sm,90,0,1,1,,,,,,,,,,,Equip Armor
-Platina Helmet,98,Pd Kn Ln Sm,130,0,,,,,,,,,Fire Holy,,,,Equip Armor
-Crystal Helmet,9A,Pd Kn Ln Sm,130,0,,,,,,Frog / Don't Move,,,,,,,Equip Armor
-Genji Helmet,9B,Pd Kn Ln Sm,110,0,,,,,,Charm / Confusion,,,,,,,Equip Armor
-Grand Helmet,9C,Pd Kn Ln Sm,130,0,,,,,,Sundown,,,,,,,Equip Armor
-Leather Hat,9D,Th Ar En Nj Ch Wi Or Me Bd Sq Dc Sb Pr Sg TM Ge BM Su Wk,80,20,1,1,,,,,,,,,,,Equip Armor
-Leather Helmet,90,Th Ar En Nj Ch Wi Or Me Bd Sq Dc Sb Pr Sg TM Ge BM Su Wk,110,0,,,,,,Frog / Berserk,Water,,,,,,Equip Armor
-Feather Hat,9E,Th Ar En Nj Ch Wi Or Me Bd Sq Dc Sb Pr Sg TM Ge BM Su Wk,80,30,,,,,,Don't Act / Don't Move,,,,,,,Equip Armor
-Red Hood,9F,Th Ar En Nj Ch Wi Or Me Bd Sq Dc Sb Pr Sg TM Ge BM Su Wk,90,70,,,,,,,,,,,,,Equip Armor
-Headgear,A0,Th Ar En Nj Ch Wi Or Me Bd Sq Dc Sb Pr Sg TM Ge BM Su Wk,120,0,1,,,,,,,,Holy,,,,Equip Armor
-Triangle Hat,A1,Th Ar En Nj Ch Wi Or Me Bd Sq Dc Sb Pr Sg TM Ge BM Su Wk,90,30,,1,,,,,,,,,,,Equip Armor
-Green Beret,A2,Th Ar En Nj Ch Wi Or Me Bd Sq Dc Sb Pr Sg TM Ge BM Su Wk,90,0,,,,,,Confusion / Charm,,,,,,,Equip Armor
-Twist Headband,A3,Th Ar En Nj Ch Wi Or Me Bd Sq Dc Sb Pr Sg TM Ge BM Su Wk,90,0,2,,,,,,,,,,,,Equip Armor
-Holy Miter,A4,Th Ar En Nj Ch Wi Or Me Bd Sq Dc Sb Pr Sg TM Ge BM Su Wk,84,20,-2,,,,,Fatigue / Don't Act,,,,,,Faith,Equip Armor
-Circlet,99,Th Ar En Nj Ch Wi Or Me Bd Sq Dc Sb Pr Sg TM Ge BM Su Wk,110,0,,1,,,,,,,,,,,Equip Armor
-Black Hood,A5,Th Ar En Nj Ch Wi Or Me Bd Sq Dc Sb Pr Sg TM Ge BM Su Wk,135,0,,,,,,Don't Act,,,,,,,Equip Armor
-Golden Hairpin,A6,Th Ar En Nj Ch Wi Or Me Bd Sq Dc Sb Pr Sg TM Ge BM Su Wk,100,50,,,,,,Don't Act,,,,,,,Equip Armor
-Flash Hat,A7,Th Ar En Nj Ch Wi Or Me Bd Sq Dc Sb Pr Sg TM Ge BM Su Wk,40,50,,1,1,,,,,,,,,,Equip Armor
-Thief Hat,A8,Th Ar En Nj Ch Wi Or Me Bd Sq Dc Sb Pr Sg TM Ge BM Su Wk,55,0,,,1,,,,,,,,,,Equip Armor
+Bronze Helmet,91,Pd Kn Ln Sm Mi,100,0,1,,,,,,,,Lightning,,,,Equip Armor
+Iron Helmet,92,Pd Kn Ln Sm Mi,120,0,,,,,,Berserk / Don't Act,,,,,Don't Move,,Equip Armor
+Barbuta,93,Pd Kn Ln Sm Mi,120,0,,,,,,Charm / Confusion,,,,,,,Equip Armor
+Mythril Helmet,94,Pd Kn Ln Sm Mi,135,10,,1,,,,,,,,,,,Equip Armor
+Gold Helmet,95,Pd Kn Ln Sm Mi,100,40,,,,,,Fatigue,,,,,,,Equip Armor
+Cross Helmet,96,Pd Kn Ln Sm Mi,100,20,,,,,,Undead,,,,Holy,,,Equip Armor
+Diamond Helmet,97,Pd Kn Ln Sm Mi,110,0,1,1,,,,,,,,,,,Equip Armor
+Platina Helmet,98,Pd Kn Ln Sm Mi,125,0,,,,,,,,,Fire / Holy,,,,Equip Armor
+Crystal Helmet,9A,Pd Kn Ln Sm Mi,125,0,,,,,,Don't Move,,,Water,,,,Equip Armor
+Genji Helmet,9B,Pd Kn Ln Sm Mi,130,0,,,,,,Frog / Chicken,,,,,,,Equip Armor
+Grand Helmet,9C,Pd Kn Ln Sm Mi,150,0,,,,,,Sundown,,,,,,,Equip Armor
+Leather Hat,9D,Th Ar En Nj Ch Wi Or Me Bd Sq Dc Sb Pr Sg TM Ge BM Su Wk Mi,90,15,1,1,,,,,,,,,,,Equip Armor
+Leather Helmet,90,Th Ar En Nj Ch Wi Or Me Bd Sq Dc Sb Pr Sg TM Ge BM Su Wk Mi,100,0,,,,,,Frog,Water,,,,,,Equip Armor
+Feather Hat,9E,Th Ar En Nj Ch Wi Or Me Bd Sq Dc Sb Pr Sg TM Ge BM Su Wk Mi,80,30,,,,,,Don't Act / Don't Move,,,,,,,Equip Armor
+Red Hood,9F,Th Ar En Nj Ch Wi Or Me Bd Sq Dc Sb Pr Sg TM Ge BM Su Wk Mi,95,0,,,,,,,,,,,,Berserk,Equip Armor
+Headgear,A0,Th Ar En Nj Ch Wi Or Me Bd Sq Dc Sb Pr Sg TM Ge BM Su Wk Mi,110,0,1,,,,,,,,Holy,,,,Equip Armor
+Triangle Hat,A1,Th Ar En Nj Ch Wi Or Me Bd Sq Dc Sb Pr Sg TM Ge BM Su Wk Mi,75,40,,1,,,,,,,,,,,Equip Armor
+Green Beret,A2,Th Ar En Nj Ch Wi Or Me Bd Sq Dc Sb Pr Sg TM Ge BM Su Wk Mi,110,0,,,,,,Confusion / Charm,,,,,,,Equip Armor
+Twist Headband,A3,Th Ar En Nj Ch Wi Or Me Bd Sq Dc Sb Pr Sg TM Ge BM Su Wk Mi,95,0,2,,,,,,,,,,,,Equip Armor
+Holy Miter,A4,Th Ar En Nj Ch Wi Or Me Bd Sq Dc Sb Pr Sg TM Ge BM Su Wk Mi,80,25,-1,,,,,Fatigue,,,,,,Faith,Equip Armor
+Circlet,99,Th Ar En Nj Ch Wi Or Me Bd Sq Dc Sb Pr Sg TM Ge BM Su Wk Mi,100,0,,1,,,,,,,,Holy / Dark,,,Equip Armor
+Black Hood,A5,Th Ar En Nj Ch Wi Or Me Bd Sq Dc Sb Pr Sg TM Ge BM Su Wk Mi,125,0,,,,,,,,,Dark,,,,Equip Armor
+Golden Hairpin,A6,Th Ar En Nj Ch Wi Or Me Bd Sq Dc Sb Pr Sg TM Ge BM Su Wk Mi,90,60,,,,,,,,,,,Regen,,Equip Armor
+Flash Hat,A7,Th Ar En Nj Ch Wi Or Me Bd Sq Dc Sb Pr Sg TM Ge BM Su Wk Mi,40,30,,1,1,,,,,,,,,,Equip Armor
+Thief Hat,A8,Th Ar En Nj Ch Wi Or Me Bd Sq Dc Sb Pr Sg TM Ge BM Su Wk Mi,50,0,,,1,,,,,,,,,,Equip Armor
