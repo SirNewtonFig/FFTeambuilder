@@ -23,7 +23,8 @@ class Data::Export::Items::ExportAccessories < ActiveInteractor::Base
       'Halves:',
       'Strengthens:',
       'Start:',
-      'Always:'
+      'Always:',
+      'Extra Effects:'
     ]
 
     io << CSV.generate_line(headers, encoding: 'utf-8')
@@ -46,7 +47,8 @@ class Data::Export::Items::ExportAccessories < ActiveInteractor::Base
         item.data['halves'],
         item.data['strengthens'],
         item.data['start'],
-        item.data['always']
+        item.data['always'],
+        item.data['extra_effects']
       ]
 
       io << CSV.generate_line(row, encoding: 'utf-8')
