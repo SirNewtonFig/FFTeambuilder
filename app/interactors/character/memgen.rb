@@ -311,7 +311,7 @@ class Character::Memgen < ActiveInteractor::Base
     end
 
     def serialize_inventory!
-      inventory = character.job.name == 'Chemist' ? 16 : 8
+      inventory = character.job.name == 'Chemist' ? 12 : 6
 
       inventory += character.items.sum {|item| item.data['extra_items'].to_i }
 
