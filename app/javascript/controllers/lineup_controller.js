@@ -2,16 +2,15 @@ import { Controller } from "@hotwired/stimulus"
 import { Sortable } from '@shopify/draggable'
 
 export default class LineupController extends Controller {
-  static targets = ['form', 'character']
+  static targets = ['form', 'character', 'index']
 
   connect() {
     this.sortable = new Sortable(this.element, { draggable: '.draggable', distance: 15 })
 
     this.sortable.on('drag:stopped', () => {
-      fetch(this.formTarget.action, {
-        method: 'PATCH',
-        body: new FormData(this.formTarget)
-      }).then(() => this.refresh())
+      this.formTarget.requestSubmit()
+
+      this.refresh()
     })
   }
 
@@ -20,12 +19,15 @@ export default class LineupController extends Controller {
   }
 
   select(event) {
-    let path
-    
+    let index = event.currentTarget.dataset.index,
+      path
+
+    this.indexTarget.value = index
+
     if (this.element.dataset.readonly) {
-      path = `/submissions/${event.currentTarget.dataset.team}/characters/${event.currentTarget.dataset.index}`
+      path = `/submissions/${event.currentTarget.dataset.team}/characters/${index}`
     } else {
-      path = `/teams/${event.currentTarget.dataset.team}/characters/${event.currentTarget.dataset.index}/edit`
+      path = `/teams/${event.currentTarget.dataset.team}/characters/${index}/edit`
     }
 
     document.querySelector('#character_editor').src = path
@@ -42,15 +44,4 @@ export default class LineupController extends Controller {
       char.querySelector('input[name="chars[]"').value = i
     })
   }
-
-  // get formData() {
-  //   const data = new FormData(this.formTarget),
-  //     plain = Object.fromEntries(data.entries())
-
-  //   delete plain['chars[]']
-
-  //   plain.chars = []
-
-  //   return JSON.stringify(plain)
-  // }
 }

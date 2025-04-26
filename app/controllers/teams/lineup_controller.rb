@@ -1,19 +1,14 @@
 class Teams::LineupController < ApplicationController
   def update
-    team = Team.find(params[:team_id])
+    @team = Team.find(params[:team_id])
 
-    raise 'unauthorized' unless team.mine?
-    
-    new_lineup = params[:chars].map{|i| team.data[i.to_i] }
+    raise 'unauthorized' unless @team.mine?
 
-    team.update(data: new_lineup)
+    new_lineup = params[:chars].map{|i| @team.data[i.to_i] }
 
-    head :ok
+    @team.update(data: new_lineup)
+
+    @index = params[:chars].index(params[:index])
+    @reload_src = request.referer.match?(/submissions/) ? submission_character_path(submission_id: @team.id, id: @index) : edit_team_character_path(team_id: @team.id, id: @index)
   end
-
-  private
-
-    def i
-      params[:character_id].to_i
-    end
 end
