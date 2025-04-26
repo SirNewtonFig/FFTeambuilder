@@ -1,0 +1,4 @@
+= turbo_stream.turbo_frame_set_src(:character_editor, @reload_src)
+
+= turbo_stream.replace('lineup_index') do
+  %input{ id: 'lineup_index', type: 'hidden', name: 'index', value: @index, data: { lineup_target: 'index' } }

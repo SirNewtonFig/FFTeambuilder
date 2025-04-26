@@ -1,5 +1,5 @@
 #formula-toggle.mt-4.ml-1
   %label.cursor-pointer.flex.items-center
-    %input.hidden.peer{ type: 'checkbox', data: { controller: 'toggle-class', action: 'toggle-class#toggle', toggle_class_class_value: 'eval-formula', toggle_class_target_value: '#edit-character' } }
+    %input.hidden.peer{ type: 'checkbox', data: { controller: 'toggle-class', action: 'toggle-class#toggle', toggle_class_class_value: 'eval-formula', toggle_class_target_value: target } }
     = inline_svg_tag('icons/calculate.svg', class: 'h-12 w-12 md:h-6 md:w-6 text-gray-400 peer-checked:text-blue-500 font-light')
     .hidden.md:block.text-white.text-sm.ml-1 Calculate Formulas?

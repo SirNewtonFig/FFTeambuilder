@@ -45,6 +45,7 @@
 
           = turbo_frame_tag(:lineup) do
             = form_with(url: team_lineup_path(team_id: @team), method: :patch, data: { controller: 'form lineup', lineup_target: 'form', turbo_frame: :lineup}) do
+              %input{ id: 'lineup_index', type: 'hidden', name: 'index', value: 0, data: { lineup_target: 'index' } }
               - 4.times do |i|
                 .draggable{ data: { team: @team.id, index: i, action: 'click->lineup#select:stop', lineup_target: 'character' }}
                   = render 'teams/characters/summary', selected: i == params[:id].to_i, char: @team.characters[i], i: i
@@ -53,7 +54,7 @@
           #colors.flex.sm:flex-col.sm:px-1.mt-3.sm:mt-0
             = render 'teams/colors', team: @team
 
-          = render 'teams/calculate_toggle'
+          = render 'teams/calculate_toggle', target: '#edit-character'
 
           #help-toggle.mt-4.ml-1
             %label.cursor-pointer.flex.items-center
