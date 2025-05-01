@@ -6,10 +6,10 @@
     - if hide_player_name
       = submission.team.name || 'Unnamed Team'
     - else
-      = submission.team_name_override.presence || submission.team.name || 'Unnamed Team'
+      = submission.team_display_name
 
   %div
-    %span.text-white= submission.player_name_override.presence || submission.team.player_name
+    %span.text-white= submission.player_display_name
     - if submission.team.guest?
       %span.text-orange-200= '(guest)'
 

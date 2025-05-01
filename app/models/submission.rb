@@ -1,4 +1,6 @@
 class Submission < ApplicationRecord
+  extend Memoist
+
   belongs_to :event
   belongs_to :team
 
@@ -21,6 +23,14 @@ class Submission < ApplicationRecord
     return t.paper_trail.version_at(event.deadline) if t.present? && !event.open?
 
     PaperTrail::Version.where(item_id: team_id, item_type: 'Team').last.reify.paper_trail.version_at(event.deadline)
+  end
+
+  memoize def team_display_name
+    team_name_override.presence || team.name || 'Unnamed Team'
+  end
+
+  memoize def player_display_name
+    player_name_override.presence || team.player_name || 'Unknown Player'
   end
 
   private

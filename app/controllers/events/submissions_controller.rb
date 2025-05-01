@@ -6,7 +6,7 @@ class Events::SubmissionsController < ApplicationController
   def index
     load_submissions
   end
-  
+
   def show
     params[:external] ? load_bracket_submission : load_submission
   end
@@ -52,16 +52,16 @@ class Events::SubmissionsController < ApplicationController
 
   def destroy
     load_submission
-    
+
     redirect_to event_path(@event) and return if @event.deadline.past?
     redirect_to event_path(@event) and return unless @event.mine? || @team.mine?
-    
+
     @submission.destroy
   end
 
   def approve
     redirect_to event_path(@event) and return unless @event.mine?
-    
+
     load_submission
 
     @submission.update(approved: true)
@@ -96,11 +96,19 @@ class Events::SubmissionsController < ApplicationController
       team_attributes = YAML.safe_load_file(file)
 
       team = Team.create(**team_attributes)
-      
+
       Submission.create(event: @event, team:)
     end
 
     redirect_to event_path(@event)
+  end
+
+  def download
+    raise 'unauthorized' unless @event.show_bracket?
+
+    result = Event::ExportTeams.perform(event: @event)
+
+    send_data(result.io.read, filename: "#{@event.title} Teams.zip")
   end
 
   private
