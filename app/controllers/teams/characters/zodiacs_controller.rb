@@ -7,13 +7,11 @@ class Teams::Characters::ZodiacsController < ApplicationController
 
   def update
     raise 'unauthorized' unless @team.mine?
-    
+
     @char.data.merge!(zodiac_params)
-    
+
     @team.data[i] = @char.data
     @team.save
-
-    redirect_to edit_character_path(params[:character_id])
   end
 
   private

@@ -19,3 +19,7 @@
 
 = turbo_stream.replace('secondary-skills') do
   = render 'teams/characters/secondary', char: @char, team: @team, i: i
+
+- 4.times do |n|
+  = turbo_stream.replace("character-#{n}") do
+    = render 'teams/characters/summary', selected: n == i, team: @team, char: @team.characters[n], i: n
