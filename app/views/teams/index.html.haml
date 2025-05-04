@@ -5,10 +5,10 @@
         %div
           .flex.items-center
             %h1.text-white.text-xl.font-semibold My Teams
-        
+
         = render 'teams/index/actions'
 
-  #teams.divide-y.divide-gray-500{ class: 'md:mt-[5rem]' }
+  #teams.divide-y.divide-gray-500{ class: 'mt-[5rem]' }
     - @teams.each do |team|
       = render 'teams/index/team', team:
 
