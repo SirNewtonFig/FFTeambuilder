@@ -16,3 +16,6 @@
 
 = turbo_stream.replace('secondary-skills') do
   = render 'teams/characters/secondary', char: @char, team: @team
+
+= turbo_stream.update('flags') do
+  = render 'teams/characters/flags', char: @char, team: @team

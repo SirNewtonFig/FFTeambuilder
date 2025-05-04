@@ -304,14 +304,44 @@ class Character
     data.dig('skills', 'secondary').map(&:to_i)
   end
 
-  memoize def strengthens
-    return ELEMENTS if items.any? { |item| item.data['strengthens']&.match?(/all/i) }
+  def flag_sources
+    items | monster_passives
+  end
 
-    items.flat_map { |item| item.data['strengthens']&.split(/[\s\/]+/) }.compact.uniq
+  memoize def strengthens
+    return ELEMENTS if flag_sources.any? { |item| item.data['strengthens']&.match?(/all/i) }
+
+    flag_sources.flat_map { |item| item.data['strengthens']&.split(/\s*\/\s*/) }.compact.uniq.sort
+  end
+
+  memoize def absorbs
+    return ELEMENTS if flag_sources.any? { |item| item.data['absorbs']&.match?(/all/i) }
+
+    flag_sources.flat_map { |item| item.data['absorbs']&.split(/\s*\/\s*/) }.compact.uniq.sort
+  end
+
+  memoize def halves
+    return ELEMENTS if flag_sources.any? { |item| item.data['halves']&.match?(/all/i) }
+
+    flag_sources.flat_map { |item| item.data['halves']&.split(/\s*\/\s*/) }.compact.uniq.sort
+  end
+
+  memoize def weaknesses
+    return ELEMENTS if flag_sources.any? { |item| item.data['weakness']&.match?(/all/i) }
+
+    flag_sources.flat_map { |item| item.data['weakness']&.split(/\s*\/\s*/) }.compact.uniq.sort
   end
 
   memoize def always
-    items.flat_map { |item| item.data['always']&.split(/[\s\/]+/) }.compact.uniq
+    flag_sources.flat_map { |item| item.data['always']&.split(/\s*\/\s*/) }.compact.uniq.sort
+  end
+
+  memoize def starts
+    flag_sources.flat_map { |item| item.data['start']&.split(/\s*\/\s*/) }.compact.uniq.sort
+  end
+
+  memoize def immune
+    flag_sources.flat_map { |item| item.data['immune']&.split(/\s*\/\s*/) }.compact.uniq.sort
   end
 
   memoize def can_equip_skills?
