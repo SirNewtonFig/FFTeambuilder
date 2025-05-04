@@ -3,16 +3,22 @@
 
 .container.p-2.cursor-pointer.hover:bg-gray-700.text-gray-300.hover:text-white.rounded-sm.border-r-4.border-transparent{ id: "character-#{i}", class: ('bg-gray-700 border-r-blue-600' if selected) }
   %input{ type: 'hidden', name: 'chars[]', value: i }
-  .flex
+  .flex.relative
     .w-12
       - if char.generic?
         = image_tag("sprites/generics/#{char.job.name}-#{char.sex}.png".downcase, class: 'h-16')
       - else
         = image_tag("sprites/monsters/#{char.job.name}.png".downcase, class: 'object-cover h-16')
-    .w-32.ml-1.text-white.hidden.sm:block
-      .text-sm.truncate #{char.name}
-      .text-sm JP: #{char.jp_total}
-      .flex.mt-1
-        = inline_svg_tag("zodiacs/#{char.zodiac}.svg", class: 'h-4 w-4')
-        .ml-1.text-sm.truncate= char.zodiac.titleize
+    .w-4.absolute.bottom-0.-right-3.sm:relative.sm:right-0.sm:w-36.ml-1.text-white.flex.flex-col.justify-end
+      .text-sm.truncate.hidden.sm:block #{char.name}
+      .text-sm.hidden.sm:block JP: #{char.jp_total}
+      .flex.mt-1.items-center.justify-between
+        .items-center.hidden.sm:flex
+          = inline_svg_tag("zodiacs/#{char.zodiac}.svg", class: 'h-4 w-4')
+          .ml-1.text-sm.truncate= char.zodiac.titleize
+        - if @char && @char != char
+          - compat = compat_between(@char, char)
+          - puts compat
+          .flex.flex-col
+            = inline_svg_tag("icons/#{compat}.svg", class: "flex-1 h-4 w-4 #{compat_class(compat)}", title: "#{compat.titleize} compatibility")
 

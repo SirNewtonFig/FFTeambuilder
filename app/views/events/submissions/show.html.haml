@@ -23,7 +23,7 @@
               .mr-2.text-sm Copy to My Teams
               = inline_svg_tag('icons/copy.svg', class: 'h-5 w-5 text-white')
 
-  .relative{ class: 'max-w-[50rem]'}
+  .relative
     .flex.mt-1
       .relative
         .fixed.flex.flex-col.fixed.top-0{ class: 'top-[3.75rem] h-[calc(100vh-72px)]' }
@@ -48,7 +48,7 @@
               = inline_svg_tag('icons/info.svg', class: 'h-12 w-12 md:h-6 md:w-6 text-gray-400 peer-checked:text-blue-500 font-light')
               .hidden.md:block.text-white.text-sm.ml-1 Need More Info?
 
-      .w-full.mr-3{ class: 'ml-[4.25rem] sm:ml-[12.75rem]' }
+      .w-full.mr-3{ class: 'ml-[4.5rem] sm:ml-[13.75rem]' }
         = turbo_frame_tag(:character_editor, src: submission_character_path(submission_id: @submission.id, id: 0))
 
 #overlay.hidden.fixed.w-full.h-full.top-0.left-0.right-0.z-10.bg-gray-700.opacity-70

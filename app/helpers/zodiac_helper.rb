@@ -1,4 +1,12 @@
 module ZodiacHelper
+  COMPAT_CLASSES = {
+    best: 'text-green-400',
+    good: 'text-yellow-400',
+    neutral: 'text-gray-400',
+    bad: 'text-blue-400',
+    worst: 'text-red-400'
+  }.with_indifferent_access
+
   def zodiacs
     Character::ZODIACS.keys
   end
@@ -40,5 +48,22 @@ module ZodiacHelper
   def worst_compat_teammates(char, team, zodiac)
     (team.characters - [char])
       .select{|c| best_worst_compat(zodiac) == c.zodiac && c.sex == char.sex && c.sex != 'x'}
+  end
+
+  def compat_between(char1, char2)
+    index1 = zodiacs.find_index(char1.zodiac)
+    index2 = zodiacs.find_index(char2.zodiac)
+
+    return 'neutral' if index1 == index2
+    return 'good' if index1 % 4 == index2 % 4
+    return 'best' if index1 % 6 == index2 % 6 && [char1.sex, char2.sex].sort == ['f', 'm']
+    return 'worst' if index1 % 6 == index2 % 6 && char1.sex != 'x' && char1.sex == char2.sex
+    return 'bad' if index1 % 3 == index2 % 3
+
+    'neutral'
+  end
+
+  def compat_class(compat)
+    COMPAT_CLASSES[compat]
   end
 end
