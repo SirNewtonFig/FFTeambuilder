@@ -1,39 +1,43 @@
 = turbo_frame_tag(:character_editor) do
-  .flex-col.space-y-3
-    .flex.flex-col.sm:flex-row.space-y-3.sm:space-y-0.sm:space-x-3
-      .flex.flex-1
-        = render 'teams/characters/portrait', char: @char, team: @team
-        = render 'teams/characters/vitals', char: @char, team: @team, readonly: true
-      .flex.flex-1
-        = render 'teams/characters/meta', char: @char, team: @team, readonly: true
+  .flex
+    .flex-col.space-y-3.w-xs.sm:w-xl
+      .flex.flex-col.sm:flex-row.space-y-3.sm:space-y-0.sm:space-x-3
+        .flex.flex-1
+          = render 'teams/characters/portrait', char: @char, team: @team
+          = render 'teams/characters/vitals', char: @char, team: @team, readonly: true
+        .flex.flex-1
+          = render 'teams/characters/meta', char: @char, team: @team, readonly: true
 
-    #attributes.flex.flex-col.sm:flex-row.space-y-3.sm:space-y-0.sm:space-x-3.sm:bg-menu-texture.sm:border-2.sm:border-menu-dark.sm:px-4.sm:py-2
-      .flex.flex-1.space-x-10.bg-menu-texture.border-2.border-menu-dark.flex.px-4.py-2.sm:bg-transparent.sm:border-0.sm:p-0
-        = render 'teams/characters/mobility', char: @char, team: @team
-        = render 'teams/characters/weapons', char: @char, team: @team
-      .flex.flex-1.bg-menu-texture.border-2.border-menu-dark.flex.px-4.py-2.sm:bg-transparent.sm:border-0.sm:p-0
-        = render 'teams/characters/attack_evasion', char: @char, team: @team
+      #attributes.flex.flex-col.sm:flex-row.space-y-3.sm:space-y-0.sm:space-x-3.sm:bg-menu-texture.sm:border-2.sm:border-menu-dark.sm:px-4.sm:py-2
+        .flex.flex-1.space-x-10.bg-menu-texture.border-2.border-menu-dark.flex.px-4.py-2.sm:bg-transparent.sm:border-0.sm:p-0
+          = render 'teams/characters/mobility', char: @char, team: @team
+          = render 'teams/characters/weapons', char: @char, team: @team
+        .flex.flex-1.bg-menu-texture.border-2.border-menu-dark.flex.px-4.py-2.sm:bg-transparent.sm:border-0.sm:p-0
+          = render 'teams/characters/attack_evasion', char: @char, team: @team
 
-    .flex-col.space-y-3
-      .flex.flex-col.sm:flex-row.space-y-3.sm:space-y-0.sm:space-x-3.sm:bg-menu-texture.sm:border-2.sm:border-menu-dark
+      .flex-col.space-y-3
+        .flex.flex-col.sm:flex-row.space-y-3.sm:space-y-0.sm:space-x-3.sm:bg-menu-texture.sm:border-2.sm:border-menu-dark
+          - if @char.generic?
+            = render 'teams/characters/equipment', char: @char, team: @team, readonly: true
+            = render 'teams/characters/skills', char: @char, team: @team, readonly: true
+
+          - else
+            = render 'teams/characters/equipment_monster', char: @char, team: @team, readonly: true
+            = render 'teams/characters/skills_monster', char: @char, team: @team, readonly: true
+
         - if @char.generic?
-          = render 'teams/characters/equipment', char: @char, team: @team, readonly: true
-          = render 'teams/characters/skills', char: @char, team: @team, readonly: true
+          .flex.flex-col.sm:flex-row.space-y-3.sm:space-x-3.sm:space-y-0
+            = render 'teams/characters/primary', char: @char, team: @team, readonly: true
+            = render 'teams/characters/secondary', char: @char, team: @team, readonly: true
 
         - else
-          = render 'teams/characters/equipment_monster', char: @char, team: @team, readonly: true
-          = render 'teams/characters/skills_monster', char: @char, team: @team, readonly: true
+          .flex.flex-col.sm:flex-row.space-y-3.sm:space-x-3.sm:space-y-0
+            = render 'teams/characters/primary_monster', char: @char, team: @team, readonly: true
 
-      - if @char.generic?
-        .flex.flex-col.sm:flex-row.space-y-3.sm:space-x-3.sm:space-y-0
-          = render 'teams/characters/primary', char: @char, team: @team, readonly: true
-          = render 'teams/characters/secondary', char: @char, team: @team, readonly: true
+      = render 'teams/characters/ai_values', char: @char, team: @team, readonly: true
 
-      - else
-        .flex.flex-col.sm:flex-row.space-y-3.sm:space-x-3.sm:space-y-0
-          = render 'teams/characters/primary_monster', char: @char, team: @team, readonly: true
-
-    = render 'teams/characters/ai_values', char: @char, team: @team, readonly: true
+    #flags.flex-col.ml-2.space-y-4.w-32.hidden.sm:flex
+      = render 'teams/characters/flags', char: @char, team: @team
 
 
   - 4.times do |i|

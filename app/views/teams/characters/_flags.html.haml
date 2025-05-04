@@ -1,0 +1,7 @@
+- [:strengthens, :absorbs, :halves, :weaknesses, :always, :starts, :immune].each do |category|
+  - next if char.send(category).blank?
+
+  .space-y-1
+    .text-gray-500.text-sm= category.to_s.titleize
+    - char.send(category).each do |prop|
+      .text-gray-200.text-sm= prop
