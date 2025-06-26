@@ -51,7 +51,7 @@ class Event::ExportTeams < ActiveInteractor::Base
       FileUtils.mkdir_p(File.join(tmp_dir, 'Bracket'))
 
       bracket.each do |submission|
-        team = submission.team.paper_trail.version_at(event.deadline)
+        team = submission.team
         filename = "#{submission.player_display_name} - #{submission.team_display_name}.yml"
 
         File.write(File.join(tmp_dir, 'Bracket', filename), team.attributes.except('id', 'created_at', 'updated_at', 'user_id').to_yaml)
@@ -66,7 +66,7 @@ class Event::ExportTeams < ActiveInteractor::Base
       FileUtils.mkdir_p(File.join(tmp_dir, 'Preseason'))
 
       preseason.each do |submission|
-        team = submission.team.paper_trail.version_at(event.deadline)
+        team = submission.team
         filename = "#{submission.player_display_name} - #{submission.team_display_name}.yml"
 
         File.write(File.join(tmp_dir, 'Preseason', filename), team.attributes.except('id', 'created_at', 'updated_at', 'user_id').to_yaml)

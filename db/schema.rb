@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2025_02_24_142206) do
+ActiveRecord::Schema[7.1].define(version: 2025_06_26_231707) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -160,8 +160,23 @@ ActiveRecord::Schema[7.1].define(version: 2025_02_24_142206) do
     t.text "team_name_override"
     t.integer "external_id"
     t.integer "rank"
+    t.bigint "team_snapshot_id", null: false
     t.index ["event_id"], name: "index_submissions_on_event_id"
     t.index ["team_id"], name: "index_submissions_on_team_id"
+    t.index ["team_snapshot_id"], name: "index_submissions_on_team_snapshot_id"
+  end
+
+  create_table "team_snapshots", force: :cascade do |t|
+    t.uuid "user_id"
+    t.text "name"
+    t.text "player_name"
+    t.integer "palette_a", default: 0
+    t.integer "palette_b", default: 0
+    t.jsonb "data"
+    t.integer "jp_total", default: 0
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_team_snapshots_on_user_id"
   end
 
   create_table "teams", force: :cascade do |t|
@@ -192,14 +207,6 @@ ActiveRecord::Schema[7.1].define(version: 2025_02_24_142206) do
     t.index ["user_id"], name: "index_users_roles_on_user_id"
   end
 
-  create_table "versions", force: :cascade do |t|
-    t.bigint "whodunnit"
-    t.datetime "created_at"
-    t.bigint "item_id", null: false
-    t.string "item_type", null: false
-    t.string "event", null: false
-    t.text "object"
-    t.index ["item_type", "item_id"], name: "index_versions_on_item_type_and_item_id"
-  end
-
+  add_foreign_key "submissions", "team_snapshots"
+  add_foreign_key "team_snapshots", "users"
 end

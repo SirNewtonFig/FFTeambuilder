@@ -8,8 +8,8 @@ class Events::MemgenController < ApplicationController
       sub_a = @event.submissions.find_by(external_id: x[:team_a])
       sub_b = @event.submissions.find_by(external_id: x[:team_b])
       {
-        team_a: sub_a.team.paper_trail.version_at(@event.deadline),
-        team_b: sub_b.team.paper_trail.version_at(@event.deadline),
+        team_a: sub_a.team,
+        team_b: sub_b.team,
         title: [sub_a.player_name_override, sub_b.player_name_override].join(' v ')
       }
     end

@@ -82,6 +82,6 @@ test:
 #
 production:
   <<: *default
-  database: fftb
+  database: ffteambuilder_beta
   username: ffteambuilder
   password: <%= ENV["FFTEAMBUILDER_DATABASE_PASSWORD"] %>

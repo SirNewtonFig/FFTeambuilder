@@ -3,6 +3,7 @@ class Submission < ApplicationRecord
 
   belongs_to :event
   belongs_to :team
+  belongs_to :team_snapshot
 
   validates :team, :event, presence: true
 
@@ -16,13 +17,7 @@ class Submission < ApplicationRecord
   }
 
   def team
-    t = super
-
-    return t if t.present? && event.open?
-
-    return t.paper_trail.version_at(event.deadline) if t.present? && !event.open?
-
-    PaperTrail::Version.where(item_id: team_id, item_type: 'Team').last.reify.paper_trail.version_at(event.deadline)
+    team_snapshot
   end
 
   memoize def team_display_name

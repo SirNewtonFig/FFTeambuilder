@@ -1,6 +1,5 @@
 class ApplicationController < ActionController::Base
   before_action :authenticate_user!, unless: :bypass_auth?
-  before_action :set_paper_trail_whodunnit
   protect_from_forgery
 
   include CurrentValues
@@ -11,7 +10,7 @@ class ApplicationController < ActionController::Base
   end
 
   def after_sign_out_path_for(...)
-    new_user_session_path    
+    new_user_session_path
   end
 
   private

@@ -1,19 +1,30 @@
 - readonly ||= false
 
-= form_for(@team, method: :patch, data: { controller: 'form' }) do |f|
+- if readonly
   .flex.flex-col.items-center.sm:flex-row.sm:items-start
     .text-gray-400.sm:hidden A
     %label.relative.flex.items-center.p-2.hover:bg-gray-800.rounded-md.sm:w-full
       .rounded-full.h-4.w-4.border.border-white{ class: palette_class(@team.palette_a) }
       .hidden.sm:block.sm:flex-1.text-sm.text-white.ml-1= @team.palette_a.titleize
-      - unless readonly
-        = f.select(:palette_a, options_for_select(Team.palette_as.keys, @team.palette_a), {}, { class: "absolute opacity-0 capitalize inset-0", data: { action: 'change->form#submit' } })
 
-= form_for(@team, method: :patch, data: { controller: 'form' }) do |f|
   .flex.flex-col.items-center.sm:flex-row.sm:items-start
     .text-gray-400.sm:hidden B
     %label.relative.flex.items-center.mt-0.sm:mt-1.p-2.hover:bg-gray-800.rounded-md.sm:w-full
       .rounded-full.h-4.w-4.border.border-white{ class: palette_class(@team.palette_b) }
       .hidden.sm:block.sm:flex-1.text-sm.text-white.ml-1= @team.palette_b.titleize
-      - unless readonly
+- else
+  = form_for(@team, method: :patch, data: { controller: 'form' }) do |f|
+    .flex.flex-col.items-center.sm:flex-row.sm:items-start
+      .text-gray-400.sm:hidden A
+      %label.relative.flex.items-center.p-2.hover:bg-gray-800.rounded-md.sm:w-full
+        .rounded-full.h-4.w-4.border.border-white{ class: palette_class(@team.palette_a) }
+        .hidden.sm:block.sm:flex-1.text-sm.text-white.ml-1= @team.palette_a.titleize
+        = f.select(:palette_a, options_for_select(Team.palette_as.keys, @team.palette_a), {}, { class: "absolute opacity-0 capitalize inset-0", data: { action: 'change->form#submit' } })
+
+  = form_for(@team, method: :patch, data: { controller: 'form' }) do |f|
+    .flex.flex-col.items-center.sm:flex-row.sm:items-start
+      .text-gray-400.sm:hidden B
+      %label.relative.flex.items-center.mt-0.sm:mt-1.p-2.hover:bg-gray-800.rounded-md.sm:w-full
+        .rounded-full.h-4.w-4.border.border-white{ class: palette_class(@team.palette_b) }
+        .hidden.sm:block.sm:flex-1.text-sm.text-white.ml-1= @team.palette_b.titleize
         = f.select(:palette_b, options_for_select(Team.palette_as.keys, @team.palette_b), {}, { class: "absolute opacity-0 capitalize inset-0", data: { action: 'change->form#submit' } })

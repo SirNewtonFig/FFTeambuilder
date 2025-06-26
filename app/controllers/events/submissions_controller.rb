@@ -25,7 +25,12 @@ class Events::SubmissionsController < ApplicationController
     redirect_to event_path(@event) and return unless @event.deadline.future?
 
     @submission = Submission.new(params.require(:submission).permit(:team_id))
+
+    team = Team.find(@submission.team_id)
+    snapshot = TeamSnapshot.create(team.attributes.except('id'))
+
     @submission.event = @event
+    @submission.team_snapshot = snapshot
 
     @submission.save
 
@@ -120,12 +125,10 @@ class Events::SubmissionsController < ApplicationController
     def load_bracket_submission
       @submission = Submission.find_by(external_id: params[:id])
       @team = @submission.team
-      @team = @team.paper_trail.version_at(@event.deadline) if @event.deadline.past?
     end
 
     def load_submission
       @submission = Submission.find(params[:id])
       @team = @submission.team
-      @team = @team.paper_trail.version_at(@event.deadline) if @event.deadline.past?
     end
 end

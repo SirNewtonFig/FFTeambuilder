@@ -1,8 +1,6 @@
 class Team < ApplicationRecord
   extend Memoist
 
-  has_paper_trail
-
   has_many :submissions, inverse_of: :team
   has_many :events, through: :submissions
 
@@ -13,6 +11,7 @@ class Team < ApplicationRecord
 
   before_create :cache_jp
   before_update :cache_jp
+  after_update :update_snapshots
   before_destroy :wipe_submissions
 
   scope :for_event, ->(event) {
@@ -89,5 +88,11 @@ class Team < ApplicationRecord
 
     def wipe_submissions
       submissions.joins(:event).where(events: { deadline: Time.current..} ).destroy_all
+    end
+
+    def update_snapshots
+      submissions.joins(:event).where(events: { deadline: ..Time.current} ).each do |submission|
+        submission.team_snapshot.update(attributes.except('id'))
+      end
     end
 end

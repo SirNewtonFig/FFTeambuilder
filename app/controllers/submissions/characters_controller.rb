@@ -8,7 +8,7 @@ class Submissions::CharactersController < ApplicationController
 
     render template: 'teams/characters/show'
   end
-  
+
   def jp_summary
     @char = @team.characters[i]
 
@@ -20,9 +20,8 @@ class Submissions::CharactersController < ApplicationController
     def load_team
       @submission = Submission.find(params[:submission_id])
       event = @submission.event
-      
+
       @team = @submission.team
-      @team = @team.paper_trail.version_at(event.deadline) if event.deadline.past?
     end
 
     def load_statuses
