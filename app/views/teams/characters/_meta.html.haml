@@ -2,7 +2,7 @@
 - readonly ||= false
 
 #meta.py-2.px-4.flex-1.flex.bg-menu-texture.border-2.border-menu-dark.h-30
-  .space-y-2.flex.flex-col.justify-between.w-full    
+  .space-y-2.flex.flex-col.justify-between.w-full
     .flex
       = form_with(url: team_character_path(team_id: team.id, id: i), method: :patch, data: { controller: 'form' }) do |f|
         %select.bg-right.cursor-pointer.py-0.px-0.pr-4.bg-transparent.border-0.border-b-2.border-transparent.hover:border-menu-dark.appearance-none.focus:outline-none.focus:ring-0.focus:border-menu-dark.peer{ name: 'character[sex]', disabled: readonly, data: { action: 'change->form#submit' } }
@@ -11,14 +11,18 @@
           %option{ selected: ('selected' if char.sex == 'x'), value: 'x' } Monster
 
       = link_to(char.job.name, edit_team_character_job_path(team_id: team.id, character_id: i), data: { turbo_frame: 'modal' }, class: "flex-1 border-0 border-b-2 border-transparent hover:border-menu-dark #{'pointer-events-none' if readonly}")
-    
+
     = form_with(url: team_character_meta_path(team_id: team.id, character_id: i), method: :patch, data: { controller: 'form' }, class: 'w-full') do |f|
       .flex
-        %div
-          %label.mr-1{ for: 'brave' } Brave
+        %div{ data: { controller: 'context', action: 'keydown.esc@window->context#close' } }
+          %label.mr-1{ for: 'brave', data: { action: 'contextmenu->context#open:prevent' } } Brave
+          = wrap_tooltip do
+            = render 'teams/characters/brave_help'
           %input#brave.bg-right.w-10.py-0.px-0.bg-transparent.border-0.border-b-2.border-transparent.hover:border-menu-dark.appearance-none.focus:outline-none.focus:ring-0.focus:border-menu-dark.peer{ type: 'number', max: 70, min: 30, name: 'character[brave]', value: char.brave.to_i, disabled: readonly, data: { action: 'change->form#submit' } }
-        .ml-1
-          %label.mr-1{ for: 'faith' } Faith
+        .ml-1{ data: { controller: 'context', action: 'keydown.esc@window->context#close' } }
+          %label.mr-1{ for: 'faith', data: { action: 'contextmenu->context#open:prevent' } } Faith
+          = wrap_tooltip do
+            = render 'teams/characters/faith_help'
           %input#faith.bg-right.w-10.py-0.px-0.bg-transparent.border-0.border-b-2.border-transparent.hover:border-menu-dark.appearance-none.focus:outline-none.focus:ring-0.focus:border-menu-dark.peer{ type: 'number', max: 70, min: 30, name: 'character[faith]', value: char.faith.to_i, disabled: readonly, data: { action: 'change->form#submit' } }
 
     .flex.items-center.justify-between
