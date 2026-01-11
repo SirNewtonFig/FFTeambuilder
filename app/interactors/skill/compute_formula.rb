@@ -1,13 +1,13 @@
 class Skill::ComputeFormulaContext < ActiveInteractor::Context::Base
   extend Memoist
 
-  UNFAITH_MIN = '(100 - (faith-30) - 40)/100'
-  FAITH_MIN = '(100 - (70-faith) - 40)/100'
-  PALADIN_MIN = '(100 - (70-faith) - 40)/100'
+  UNFAITH_MIN = '(100 + (50-faith) - 20)/100'
+  FAITH_MIN = '(100 + (faith-50) - 20)/100'
+  PALADIN_MIN = '(100 + (faith-50) - 20)/100'
 
-  UNFAITH_MAX = '(100 - (faith-30))/100'
-  FAITH_MAX = '(100 - (70-faith))/100'
-  PALADIN_MAX = '(100 - (70-faith))/100'
+  UNFAITH_MAX = '(100 + (50-faith) + 20)/100'
+  FAITH_MAX = '(100 + (faith-50) + 20)/100'
+  PALADIN_MAX = '(100 + (faith-50) + 20)/100'
 
   attribute :character
   attribute :skill
