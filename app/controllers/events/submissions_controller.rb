@@ -101,8 +101,9 @@ class Events::SubmissionsController < ApplicationController
       team_attributes = YAML.safe_load_file(file)
 
       team = Team.create(**team_attributes)
+      team_snapshot = TeamSnapshot.create(**team_attributes.except('id'))
 
-      Submission.create(event: @event, team:)
+      Submission.create(event: @event, team:, team_snapshot:)
     end
 
     redirect_to event_path(@event)
