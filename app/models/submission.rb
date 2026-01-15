@@ -20,6 +20,10 @@ class Submission < ApplicationRecord
     team_snapshot
   end
 
+  def raw_team
+    association(:team).target
+  end
+
   memoize def team_display_name
     team_name_override.presence || team.name || 'Unnamed Team'
   end

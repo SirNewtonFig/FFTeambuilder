@@ -1,5 +1,5 @@
 - hide_player_name ||= false
-- href = submission.team.mine? && submission.team.persisted? ? edit_team_path(submission.team) : event_submission_path(event_id: @event.id, id: submission.id)
+- href = submission.team.mine? && @event.open? ? edit_team_path(submission.raw_team) : event_submission_path(event_id: @event.id, id: submission.id)
 
 .py-3
   %a.block.font-semibold.text-orange-400.hover:text-orange-300.count-submission{ href: }
