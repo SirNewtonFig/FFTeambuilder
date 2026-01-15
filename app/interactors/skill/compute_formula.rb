@@ -5,8 +5,8 @@ class Skill::ComputeFormulaContext < ActiveInteractor::Context::Base
   FAITH_MIN = '(100 + (faith-50) - 20)/100'
   PALADIN_MIN = '(100 + (faith-50) - 20)/100'
 
-  UNFAITH_MAX = '(100 + (50-faith) + 20)/100'
-  FAITH_MAX = '(100 + (faith-50) + 20)/100'
+  UNFAITH_MAX = '(100 + (50-faith))/100'
+  FAITH_MAX = '(100 + (faith-50))/100'
   PALADIN_MAX = '(100 + (faith-50) + 20)/100'
 
   attribute :character
