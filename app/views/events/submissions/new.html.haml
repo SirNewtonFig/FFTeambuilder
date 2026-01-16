@@ -1,13 +1,15 @@
 - content_for :heading do
   .flex.items-center
     %h2.text-xl Submit a Team
-    
+
 = form_for(@submission, url: event_submissions_path(event_id: @event.id), data: { controller: 'form', form_modal_outlet: '.modal-controller' }) do |f|
   .space-y-6
     %div
       = f.label(:team_id, 'Team', class: 'text-xs block')
       - if @teams.any?
-        = f.select(:team_id, options_for_select(@teams.pluck(:name, :id), @submission.team_id), {}, { class: "w-full #{select_classes_neutral}" })
+        %select.dark{ name: 'submission[team_id]', class: "w-full #{select_classes_neutral}" }
+          - @teams.each do |team|
+            %option.bg-gray-800.hover:bg-blue-600{ value: team.id }= team.name.presence || 'Unnamed Team'
       - else
         %span.text-white.italic
           You have no unsubmitted teams.

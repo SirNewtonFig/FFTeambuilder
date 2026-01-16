@@ -55,6 +55,58 @@
   scrollbar-color: rgb(0, 0, 0) rgb(31, 41, 55);
 }
 
+@media only screen and (min-width: 992px) {
+  select.dark {
+    appearance: base-select;
+
+    & > button {
+      display: flex;
+      width: 100%;
+      font-family: inherit;
+      color: currentColor;
+    }
+
+    &::picker-icon {
+      display: none;
+    }
+
+    &::picker(select) {
+      appearance: base-select;
+      @apply p-1 mt-1 rounded-md cursor-default bg-gray-800 border border-gray-700;
+
+      transition: opacity 225ms ease-in-out, transform 225ms ease-in-out;
+      opacity: 1;
+
+      @starting-style {
+        opacity: 0;
+      }
+    }
+
+    & option {
+      @apply text-white p-1 rounded-md text-sm font-sans;
+
+      outline: none;
+
+      &::after {
+        content: "";
+        width: 1rem;
+        height: 1.5rem;
+        margin-left: auto;
+        opacity: 0;
+      }
+
+      &::checkmark {
+        display: none;
+      }
+
+      &:hover,
+      &:focus-visible {
+        @apply bg-blue-600;
+      }
+    }
+  }
+}
+
 .modal-content .overflow-y-auto {
   scrollbar-gutter: stable;
 }
