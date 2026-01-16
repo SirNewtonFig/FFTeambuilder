@@ -23,7 +23,12 @@
         .flex.mr-6.text-sm
           .text-red-900.capitalize #{stat_label(prop)}:
           .ml-1= "%+d" % skill.data[prop].to_i
-    
+
   %p.text-left.text-sm
     %span.text-red-900.capitalize Description:
     %span= skill.data['formula']
+
+  - if skill.reaction?
+    %p.text-left.text-sm
+      %span.text-red-900.capitalize Reaction Rate:
+      %span= "#{character.reaction_rate}%"

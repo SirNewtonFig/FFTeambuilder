@@ -304,6 +304,10 @@ class Character
     data.dig('skills', 'secondary').map(&:to_i)
   end
 
+  memoize def reaction_rate
+    (100 - brave)/2 + (35 - (50 - faith).abs)
+  end
+
   def flag_sources
     items | monster_passives
   end
