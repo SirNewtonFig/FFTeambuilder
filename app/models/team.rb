@@ -87,12 +87,16 @@ class Team < ApplicationRecord
     end
 
     def wipe_submissions
-      submissions.joins(:event).where(events: { deadline: Time.current..} ).destroy_all
+      pending_submissions.destroy_all
     end
 
     def update_snapshots
-      submissions.joins(:event).where(events: { deadline: ..Time.current} ).each do |submission|
+      pending_submissions.each do |submission|
         submission.team_snapshot.update(attributes.except('id'))
       end
+    end
+
+    def pending_submissions
+      submissions.joins(:event).where(events: { deadline: Time.current..} )
     end
 end
