@@ -39,6 +39,7 @@ class Character
     'Fire',
     'Water',
     'Lightning',
+    'Earth',
     'Dark',
     'Holy'
   ]
