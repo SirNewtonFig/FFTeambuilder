@@ -366,27 +366,27 @@ class Character
   end
 
   memoize def sniper?
-    movement&.name&.match?('Sniper') || job.innate_skills.exists?(name: 'Sniper')
+    all_res.any?{|skill| skill.name.match?('Sniper')}
   end
 
   memoize def attack_up?
-    support&.name&.match?('Attack UP') || job.innate_skills.exists?(name: 'Attack UP')
+    all_res.any?{|skill| skill.name.match?('Attack UP')}
   end
 
   memoize def m_attack_up?
-    support&.name&.match?('Magic AttackUP') || job.innate_skills.exists?(name: 'Magic AttackUP')
+    all_res.any?{|skill| skill.name.match?('Magic AttackUP')}
   end
 
   memoize def two_hands?
-    support&.name&.match('Two Hands') || job.innate_skills.exists?(name: 'Two Hands')
+    all_res.any?{|skill| skill.name.match?('Two Hands')}
   end
 
   memoize def martial_arts?
-    support&.name&.match('Martial Arts') || job.innate_skills.exists?(name: 'Martial Arts')
+    all_res.any?{|skill| skill.name.match?('Martial Arts')}
   end
 
   memoize def two_swords?
-    support&.name&.match('Two Swords') || job.innate_skills.exists?(name: 'Two Swords')
+    all_res.any?{|skill| skill.name.match?('Two Swords')}
   end
 
   memoize def unarmed?
@@ -395,6 +395,15 @@ class Character
 
   memoize def two_fists?
     two_swords? && unarmed? && shield.blank?
+  end
+
+  memoize def all_res
+    [
+      reaction,
+      support,
+      movement,
+      *job.innate_skills
+    ].compact
   end
 
   def sum_passive(stat)
