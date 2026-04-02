@@ -3,7 +3,7 @@ class Skill::ComputeFormulaContext < ActiveInteractor::Context::Base
 
   UNFAITH_MIN = '(100 + (50-faith) - 20)/100'
   FAITH_MIN = '(100 + (faith-50) - 20)/100'
-  PALADIN_MIN = '(100 + (faith-50) - 20)/100'
+  PALADIN_MIN = '(100 + (brave-50))/100'
 
   UNFAITH_MAX = '(100 + (50-faith))/100'
   FAITH_MAX = '(100 + (faith-50))/100'
@@ -15,7 +15,7 @@ class Skill::ComputeFormulaContext < ActiveInteractor::Context::Base
   attribute :result
 
   memoize def bindings
-    stats = [:pa, :ma, :sp, :wp, :br, :jmp, :faith].index_with { |key| character.send(key) }
+    stats = [:pa, :ma, :sp, :wp, :br, :jmp, :faith, :brave].index_with { |key| character.send(key) }
 
     stats[:faith] = 0 if character.always.include?('Innocent')
     stats[:faith] = 100 if character.always.include?('Faith')
