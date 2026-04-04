@@ -89,6 +89,14 @@ class Character
   end
   alias_method :fa, :faith
 
+  def versatility
+    (data['faith'].to_i - 50).abs
+  end
+
+  def versatile?
+    all_res.any?{|skill| skill.name.match?('Versatility')}
+  end
+
   def zodiac
     data['zodiac']
   end

@@ -4,10 +4,12 @@ class Skill::ComputeFormulaContext < ActiveInteractor::Context::Base
   UNFAITH_MIN = '(100 + (50-faith) - 20)/100'
   FAITH_MIN = '(100 + (faith-50) - 20)/100'
   PALADIN_MIN = '(100 + (brave-50))/100'
+  VERSATILE_MIN = '(100 + versatility - 20)/100'
 
   UNFAITH_MAX = '(100 + (50-faith))/100'
   FAITH_MAX = '(100 + (faith-50))/100'
   PALADIN_MAX = '(100 + (faith-50) + 20)/100'
+  VERSATILE_MAX = '(100 + versatility)/100'
 
   attribute :character
   attribute :skill
@@ -15,10 +17,11 @@ class Skill::ComputeFormulaContext < ActiveInteractor::Context::Base
   attribute :result
 
   memoize def bindings
-    stats = [:pa, :ma, :sp, :wp, :br, :jmp, :faith, :brave].index_with { |key| character.send(key) }
+    stats = [:pa, :ma, :sp, :wp, :br, :jmp, :faith, :brave, :versatility].index_with { |key| character.send(key) }
 
     stats[:faith] = 0 if character.always.include?('Innocent')
     stats[:faith] = 100 if character.always.include?('Faith')
+    stats[:versatility] = 50 if character.always.intersect?(['Innocent', 'Faith'])
 
     stats
   end
@@ -34,11 +37,11 @@ class Skill::ComputeFormulaContext < ActiveInteractor::Context::Base
   memoize def scalar_min
     case formula_function.downcase
     when 'dmg_f', 'heal_f', 'hit_f'
-      Eqn::Calculator.calc(FAITH_MIN, **bindings)
+      character.versatile? ? Eqn::Calculator.calc(VERSATILE_MIN, **bindings) : Eqn::Calculator.calc(FAITH_MIN, **bindings)
     when 'dmg_p', 'heal_p', 'hit_p'
       Eqn::Calculator.calc(PALADIN_MIN, **bindings)
     when 'dmg_u', 'heal_u', 'hit_u'
-      Eqn::Calculator.calc(UNFAITH_MIN, **bindings)
+      character.versatile? ? Eqn::Calculator.calc(VERSATILE_MIN, **bindings) : Eqn::Calculator.calc(UNFAITH_MIN, **bindings)
     else
       1
     end
@@ -47,11 +50,11 @@ class Skill::ComputeFormulaContext < ActiveInteractor::Context::Base
   memoize def scalar_max
     case formula_function.downcase
     when 'dmg_f', 'heal_f', 'hit_f'
-      Eqn::Calculator.calc(FAITH_MAX, **bindings)
+      character.versatile? ? Eqn::Calculator.calc(VERSATILE_MAX, **bindings) : Eqn::Calculator.calc(FAITH_MAX, **bindings)
     when 'dmg_p', 'heal_p', 'hit_p'
       Eqn::Calculator.calc(PALADIN_MAX, **bindings)
     when 'dmg_u', 'heal_u', 'hit_u'
-      Eqn::Calculator.calc(UNFAITH_MAX, **bindings)
+      character.versatile? ? Eqn::Calculator.calc(VERSATILE_MAX, **bindings) : Eqn::Calculator.calc(UNFAITH_MAX, **bindings)
     else
       1
     end
