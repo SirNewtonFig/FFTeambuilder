@@ -8,7 +8,7 @@
               Delete
 
             %span.text-gray-500= '|'
-            
+
           - if submission.event.show_memgen?
             %a.hidden.items-center.text-xs.text-orange-400.hover:text-orange-300.cursor-pointer{ class: 'group-[.memgen]/tabs:flex', data: { action: 'click->bracket#pick', player_id: submission.external_id } }
               = inline_svg_tag('icons/memory-card.svg', class: 'h-4 mr-1')
@@ -28,7 +28,9 @@
             %a.group.block.text-orange-400.hover:text-orange-300{ href: cut_event_submission_path(event_id: event.id, id: submission.id), data: { turbo_method: :patch } }
               Cut
 
-      = render 'events/submissions/submission', submission:, actions:
+      - display_priority = submission.priority.to_i >= 2
+
+      = render 'events/submissions/submission', submission:, actions:, display_priority:
 
   - if submissions.blank?
     .py-4.text-gray-400.italic There are no confirmed teams for this event yet

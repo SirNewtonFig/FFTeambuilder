@@ -8,7 +8,7 @@
               Delete
 
             %span.text-gray-500= '|'
-            
+
           - if submission.event.show_memgen?
             %a.hidden.items-center.text-xs.text-orange-400.hover:text-orange-300.cursor-pointer{ class: 'group-[.memgen]/tabs:flex', data: { action: 'click->bracket#pick', player_id: submission.external_id } }
               = inline_svg_tag('icons/memory-card.svg', class: 'h-4 mr-1')
@@ -17,7 +17,7 @@
                 = submission.player_name_override.presence || submission.team.player_name
 
             %span.hidden.text-gray-500{ class: 'group-[.memgen]/tabs:inline' }= '|'
-          
+
           - if event.state == 'open' || event.mine?
             %a.group.block.text-orange-400.hover:text-orange-300{ href: edit_event_submission_path(event_id: event.id, id: submission.id), data: { turbo_frame: :modal } }
               Rename
@@ -28,7 +28,9 @@
             %a.group.block.text-orange-400.hover:text-orange-300{ href: approve_event_submission_path(event_id: event.id, id: submission.id), data: { turbo_method: :patch } }
               Approve
 
-      = render 'events/submissions/submission', submission:, actions:
+      - display_priority = submission.priority.to_i == 0
+
+      = render 'events/submissions/submission', submission:, actions:, display_priority:
 
   - if submissions.blank?
     .py-4.text-gray-400.italic There are no cut submissions for this event yet

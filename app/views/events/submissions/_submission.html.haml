@@ -1,12 +1,19 @@
+- display_priority ||= false
 - hide_player_name ||= false
 - href = submission.team.mine? && @event.open? ? edit_team_path(submission.raw_team) : event_submission_path(event_id: @event.id, id: submission.id)
 
 .py-3
-  %a.block.font-semibold.text-orange-400.hover:text-orange-300.count-submission{ href: }
-    - if hide_player_name
-      = submission.team.name || 'Unnamed Team'
-    - else
-      = submission.team_display_name
+  .flex.items-center.gap-3
+    %a.block.font-semibold.text-orange-400.hover:text-orange-300.count-submission{ href: }
+      - if hide_player_name
+        = submission.team.name || 'Unnamed Team'
+      - else
+        = submission.team_display_name
+
+    - if display_priority
+      - priority = submission.priority + 1
+      .text-red-400
+        = "(#{priority.ordinalize} pick)"
 
   %div
     %span.text-white= submission.player_display_name

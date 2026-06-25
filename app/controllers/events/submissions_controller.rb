@@ -31,6 +31,7 @@ class Events::SubmissionsController < ApplicationController
 
     @submission.event = @event
     @submission.team_snapshot = snapshot
+    @submission.priority = @event.submissions.joins(:team).where(teams: { user_id: team.user_id }).count
 
     @submission.save
 

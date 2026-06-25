@@ -85,21 +85,21 @@
           %span.ml-1.opacity-85.text-xs{ data: { counter_target: 'counter', scope: 'mine' } }
 
       - if @event.show_standings?
-        #standings.space-y-2.px-4.bg-gray-800.rounded.rounded-tl-none.hidden{ data: { tab_target: 'pane' } }
+        #standings.px-4.bg-gray-800.rounded.rounded-tl-none.hidden{ data: { tab_target: 'pane' } }
           = render 'events/show/standings', submissions: @standings, event: @event
 
       - if @event.mine? && !@event.show_bracket?
-        #pending-submissions.space-y-2.px-4.bg-gray-800.rounded.rounded-tl-none.hidden{ data: { tab_target: 'pane' } }
+        #pending-submissions.px-4.bg-gray-800.rounded.rounded-tl-none.hidden{ data: { tab_target: 'pane' } }
           = render 'events/show/submissions', submissions: @submissions, event: @event
 
       - if @event.mine? || @event.show_bracket?
-        #confirmed-submissions.space-y-2.px-4.bg-gray-800.rounded.rounded-tl-none.hidden{ data: { tab_target: 'pane' } }
+        #confirmed-submissions.px-4.bg-gray-800.rounded.rounded-tl-none.hidden{ data: { tab_target: 'pane' } }
           = render 'events/show/bracket', submissions: @bracket, event: @event
 
-        #cut-submissions.space-y-2.px-4.bg-gray-800.rounded.rounded-tl-none.hidden{ data: { tab_target: 'pane' } }
+        #cut-submissions.px-4.bg-gray-800.rounded.rounded-tl-none.hidden{ data: { tab_target: 'pane' } }
           = render 'events/show/cut_submissions', submissions: @cut_submissions, event: @event
 
-      #my-submissions.space-y-2.px-4.bg-gray-800.rounded.rounded-tl-none.hidden{ data: { tab_target: 'pane' } }
+      #my-submissions.px-4.bg-gray-800.rounded.rounded-tl-none.hidden{ data: { tab_target: 'pane' } }
         = render 'events/show/my_submissions', submissions: @my_submissions, event: @event
 
   .z-10
