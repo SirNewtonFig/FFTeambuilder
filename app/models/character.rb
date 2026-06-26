@@ -314,6 +314,10 @@ class Character
   end
 
   memoize def reaction_rate
+    return brave if lionheart?
+
+    return faith if piety?
+
     (100 - brave)/2 + (35 - (50 - faith).abs)
   end
 
@@ -403,6 +407,18 @@ class Character
 
   memoize def two_fists?
     two_swords? && unarmed? && shield.blank?
+  end
+
+  memoize def piety?
+    all_res.any?{|skill| skill.name.match?('Piety')}
+  end
+
+  memoize def lionheart?
+    all_res.any?{|skill| skill.name.match?('Lionheart')}
+  end
+
+  memoize def lucky?
+    all_res.any?{|skill| skill.name.match?('Lucky')}
   end
 
   memoize def all_res
