@@ -10,12 +10,12 @@
         .ml-1.text-cyan-900
           #{skill.jp_cost} JP
 
-  .text-left.text-sm
+  .text-left.text-sm.flex.items-start
     %span.text-red-900 Effect:
     - result = eval_skill_formula(character:, skill:)
     - if result != skill.formula
-      %span.ml-1{ class: 'group-[.eval-formula]:hidden' }= skill.formula
-      %span.ml-1.hidden.text-cyan-900{ class: 'group-[.eval-formula]:inline' }= result
+      %span.ml-1{ class: 'group-[.eval-formula]:hidden' }= simple_format(skill.formula, { class: 'inline-block' })
+      %span.ml-1.hidden.text-cyan-900{ class: 'group-[.eval-formula]:inline' }= simple_format(result, { class: 'inline-block' })
     - else
       %span.ml-1= skill.formula
 

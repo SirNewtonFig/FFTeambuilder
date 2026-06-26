@@ -19,7 +19,8 @@ class Skill::EvaluateFormula < ActiveInteractor::Base
 
       next unless c.success?
 
-      parsed_formula.sub!(expression[:expression], [expression[:expression], "[#{c.result}]"].join(''))
+      parsed_formula.gsub!(expression[:expression], [expression[:expression], "[#{c.result}]"].join(''))
+      parsed_formula.gsub!(/(\[#{c.result}\])+/, "[#{c.result}]")
     end
 
     context.result = parsed_formula
