@@ -6,7 +6,7 @@ class Weapon::EvaluateFormulaContext < ActiveInteractor::Context::Base
   attribute :result
   attribute :wp_modifier, default: 0
 end
-  
+
 class Weapon::EvaluateFormula < ActiveInteractor::Base
   delegate :character, :weapon, :wp_modifier, to: :context
 
@@ -19,7 +19,11 @@ class Weapon::EvaluateFormula < ActiveInteractor::Base
 
     return unless c.success?
 
-    context.result = c.result
+    damage = c
+    damage *= 2 if weapon.name == 'Unarmed Strike' && character.two_fists?
+
+    parsed_formula.gsub!(expression, [expression, "[#{c.result}]"].join(' '))
+
+    context.result = parsed_formula
   end
 end
-  

@@ -1,3 +1,5 @@
+- scope ||= nil
+
 .-mx-2.px-2.py-3.space-y-2.cursor-pointer{ class: 'hover:bg-menu-dark/25' }
 
   .flex.justify-between.items-center
@@ -5,7 +7,11 @@
 
   .text-left.text-sm
     %span.text-red-900 Damage:
-    - result = eval_weapon_formula(character:, weapon: item)
+    :ruby
+      tmpchar = Character.new(character.data)
+      tmpchar.data[scope] = item.id if scope.present?
+      result = eval_weapon_formula(character: tmpchar, weapon: item)
+
     - if result != item.formula
       %span.ml-1{ class: 'group-[.eval-formula]:hidden' }= item.formula
       %span.ml-1.hidden.text-cyan-900{ class: 'group-[.eval-formula]:inline' }= result
@@ -47,9 +53,6 @@
       %span.ml-1
         - if item.data['proc_rate'].present?
           - result = eval_procrate(character:, procrate: item.data['proc_rate'])
-          - puts "DEBUG"
-          - puts result.inspect
-          - puts item.data['proc_rate'].inspect
           - if result != item.data['proc_rate']
             %span{ class: 'group-[.eval-formula]:hidden' }= item.data['proc_rate']
             %span.hidden.text-cyan-900{ class: 'group-[.eval-formula]:inline' }= result
