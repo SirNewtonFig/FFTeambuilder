@@ -8,7 +8,10 @@
   = render 'teams/summary', team: @team
 
 = turbo_stream.replace("skills") do
-  = render 'teams/characters/skills', team: @team, char: @char, i: i
+  - if @char.generic?
+    = render 'teams/characters/skills', team: @team, char: @char, i: i
+  - else
+    = render 'teams/characters/skills_monster', team: @team, char: @char, i: i
 
 - if @char.generic?
   = turbo_stream.replace('equipment') do
