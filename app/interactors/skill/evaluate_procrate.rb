@@ -1,14 +1,14 @@
 class Skill::EvaluateProcrateContext < ActiveInteractor::Context::Base
   extend Memoist
 
-  PROCRATE_PATTERN = /(\d+)%/
+  PROCRATE_PATTERN = /(\d+)(?:\.00)?%/
 
   attribute :character
   attribute :expression
   attribute :result
 
   memoize def brave
-    return 70 if ['Lionheart', 'Lucky'].include?(character.support&.name)
+    return 70 if character.lucky?
 
     character.brave.to_i
   end

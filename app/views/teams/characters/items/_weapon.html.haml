@@ -1,5 +1,5 @@
 .-mx-2.px-2.py-3.space-y-2.cursor-pointer{ class: 'hover:bg-menu-dark/25' }
-  
+
   .flex.justify-between.items-center
     %div= item.name
 
@@ -11,7 +11,7 @@
       %span.ml-1.hidden.text-cyan-900{ class: 'group-[.eval-formula]:inline' }= result
     - else
       %span.ml-1= item.formula
-  
+
   .flex.items-center.space-x-4
     - ['wp', 'w_ev'].each do |prop|
       - next if item.data[prop].blank?
@@ -46,11 +46,19 @@
       %span.text-red-900.capitalize #{prop}:
       %span.ml-1
         - if item.data['proc_rate'].present?
-          = item.data['proc_rate']
+          - result = eval_procrate(character:, procrate: item.data['proc_rate'])
+          - puts "DEBUG"
+          - puts result.inspect
+          - puts item.data['proc_rate'].inspect
+          - if result != item.data['proc_rate']
+            %span{ class: 'group-[.eval-formula]:hidden' }= item.data['proc_rate']
+            %span.hidden.text-cyan-900{ class: 'group-[.eval-formula]:inline' }= result
+          - else
+            %span= item.data['proc_rate']
         = item.data[prop]
         - if item.data['proc_formula'].present?
           (#{item.data['proc_formula']})
-  
+
   .flex.space-x-4.flex-wrap.text-sm
     - if item.data['flags'].present?
       %div= item.data['flags']
