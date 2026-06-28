@@ -32,12 +32,12 @@
         .flex.mr-4.text-sm
           .text-red-900.capitalize #{stat_label(prop)}:
           .ml-1= "%+d" % item.data[prop].to_i
-  - if ['element', 'strengthens', 'absorbs', 'halves', 'weakness', 'immune', 'start', 'always'].any? { |prop| item.data[prop].present? }
+  - if ['element', 'strengthens', 'absorbs', 'halves', 'weakness', 'immune', 'start', 'always', 'extra_items'].any? { |prop| item.data[prop].present? }
     .flex.flex-wrap
-      - ['element', 'strengthens', 'absorbs', 'halves', 'weakness', 'immune', 'start', 'always'].each do |prop|
+      - ['element', 'strengthens', 'absorbs', 'halves', 'weakness', 'immune', 'start', 'always', 'extra_items'].each do |prop|
         - next if item.data[prop].blank?
         .flex.mr-4.text-sm
-          .text-red-900.capitalize #{prop}:
+          .text-red-900.capitalize #{prop.titleize}:
           .ml-1= item.data[prop]
 
   - if item.data['extra_effects'].present?
