@@ -11,6 +11,7 @@ class Team < ApplicationRecord
 
   before_create :cache_jp
   before_update :cache_jp
+  before_update :validate_color
   after_update :update_snapshots
   before_destroy :wipe_submissions
 
@@ -98,5 +99,17 @@ class Team < ApplicationRecord
 
     def pending_submissions
       submissions.joins(:event).where(events: { deadline: Time.current..} )
+    end
+
+    def validate_color
+      return unless palette_a == palette_b
+
+      if palette_a_changed?
+        puts palette_a_change.inspect
+        self.palette_b = palette_a_change.first
+      else
+        puts palette_b_change.inspect
+        self.palette_a = palette_b_change.first
+      end
     end
 end
