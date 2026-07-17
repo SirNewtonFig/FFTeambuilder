@@ -1,2 +1,6 @@
 = turbo_stream.update('colors') do
   = render 'teams/colors', team: @team
+
+- 4.times do |i|
+  = turbo_stream.replace("character-#{i}") do
+    = render 'teams/characters/summary', selected: i == params[:index].to_i, char: @team.characters[i], team: @team, i: i

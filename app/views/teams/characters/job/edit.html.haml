@@ -21,13 +21,9 @@
           = tag.button(class: 'w-full', data: { action: 'form#submit' }) do
             %input{ type: 'hidden', name: "character[job]", value: job.id }
               .flex
-                .px-2
-                  - if job.generic?
-                    = image_tag("sprites/generics/#{job.name}-#{@char.sex}.png".downcase, class: 'object-cover h-22 w-14')
-                  - else
-                    = image_tag("sprites/monsters/#{job.name}.png".downcase, class: 'object-cover h-24 w-24')
+                .sprite.scale-200.mt-2{ style: sprite_style_for(@team, job, @char.sex)}
 
-                .ml-4
+                .ml-8
                   .flex-1.flex
                     - ['hp', 'mp'].each do |prop|
                       .flex.flex-col.text-left.w-12

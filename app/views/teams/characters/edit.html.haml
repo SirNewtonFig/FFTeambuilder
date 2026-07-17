@@ -45,3 +45,8 @@
 
   = turbo_stream.replace("team-summary") do
     = render 'teams/summary', team: @team
+
+  = turbo_stream.replace('palette_a_index') do
+    %input{ id: 'palette_a_index', type: 'hidden', name: 'index', value: params[:id] }
+  = turbo_stream.replace('palette_b_index') do
+    %input{ id: 'palette_b_index', type: 'hidden', name: 'index', value: params[:id] }

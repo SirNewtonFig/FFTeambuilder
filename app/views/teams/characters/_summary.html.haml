@@ -1,15 +1,12 @@
 :ruby
   selected ||= false
 
-.container.p-2.cursor-pointer.hover:bg-gray-700.text-gray-300.hover:text-white.rounded-sm.border-r-4.border-transparent{ id: "character-#{i}", class: ('bg-gray-700 border-r-blue-600' if selected) }
+.container.py-2.pr-2.sm:pl-1.cursor-pointer.hover:bg-gray-700.text-gray-300.hover:text-white.rounded-sm.border-r-4.border-transparent{ id: "character-#{i}", class: ('bg-gray-700 border-r-blue-600' if selected) }
   %input{ type: 'hidden', name: 'chars[]', value: i }
   .flex.relative
-    .w-12
-      - if char.generic?
-        = image_tag("sprites/generics/#{char.job.name}-#{char.sex}.png".downcase, class: 'h-16')
-      - else
-        = image_tag("sprites/monsters/#{char.job.name}.png".downcase, class: 'object-cover h-16')
-    .w-4.absolute.bottom-0.-right-3.sm:relative.sm:right-0.sm:w-36.ml-1.text-white.flex.flex-col.justify-end
+    .sprite.scale-125.sm:scale-150{ style: sprite_style_for(team, char.job, char.sex)}
+
+    .w-4.absolute.bottom-0.-right-3.sm:relative.sm:w-36.ml-1.text-white.flex.flex-col.justify-end
       .text-sm.truncate.hidden.sm:block #{char.name}
       .text-sm.hidden.sm:block JP: #{char.jp_total}
       .flex.mt-1.items-center.justify-between

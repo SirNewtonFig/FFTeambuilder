@@ -130,3 +130,10 @@ input[type=number] {
 .bg-menu-texture {
   background-image: url('bg.gif');
 }
+
+.sprite {
+  background: url('sprites/sprites_all_colors_45x45.png');
+  display: inline-block;
+  width: 45px;
+  height: 50px;
+}

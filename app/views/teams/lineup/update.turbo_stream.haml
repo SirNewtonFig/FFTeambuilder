@@ -2,3 +2,7 @@
 
 = turbo_stream.replace('lineup_index') do
   %input{ id: 'lineup_index', type: 'hidden', name: 'index', value: @index, data: { lineup_target: 'index' } }
+= turbo_stream.replace('palette_a_index') do
+  %input{ id: 'palette_a_index', type: 'hidden', name: 'index', value: @index }
+= turbo_stream.replace('palette_b_index') do
+  %input{ id: 'palette_b_index', type: 'hidden', name: 'index', value: @index }

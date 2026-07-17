@@ -3,7 +3,7 @@ class TeamsController < ApplicationController
     @teams = Team.where(user_id: Current.user.id).order(updated_at: :desc)
       .includes(:events)
   end
-  
+
   def edit
     load_team
 
@@ -24,7 +24,7 @@ class TeamsController < ApplicationController
 
   def destroy
     load_team
-      
+
     @team.destroy
 
     @referer_attrs = Rails.application.routes.recognize_path(request.referrer)
@@ -33,7 +33,7 @@ class TeamsController < ApplicationController
   def metadata
     load_team
 
-    render layout: 'modal'    
+    render layout: 'modal'
   end
 
   def clone
@@ -84,6 +84,8 @@ class TeamsController < ApplicationController
     raise 'unauthorized' unless @team.mine?
 
     @team.update(team_attributes)
+
+    @char = @team.characters[params[:index].to_i] if params[:index].present?
   end
 
   private
