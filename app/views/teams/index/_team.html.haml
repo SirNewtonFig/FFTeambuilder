@@ -8,14 +8,10 @@
     - if team.events.present?
       = render 'teams/index/submissions', team:
 
-  .flex-2.hidden.sm:flex.items-center.space-x-2
+  .flex-2.hidden.sm:flex.items-center.space-x-3
     - team.characters.each do |char|
-      .w-12
-        - if char.generic?
-          = image_tag("sprites/generics/#{char.job.name}-#{char.sex}.png".downcase, class: 'h-16')
-        - else
-          = image_tag("sprites/monsters/#{char.job.name}.png".downcase, class: 'object-cover h-16')
-  
+      .sprite.scale-125{ style: sprite_style_for(team, char.job, char.sex)}
+
   .ml-4.flex.space-x-2
     %a.p-1.rounded-md.bg-gray-700.hover:bg-gray-600.h-8.w-8.flex{ href: edit_team_path(team) }
       = inline_svg_tag('icons/edit.svg', class: 'h-6 w-6 text-white')
