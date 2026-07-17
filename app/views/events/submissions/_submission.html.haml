@@ -21,19 +21,24 @@
       %span.text-orange-200= '(guest)'
 
   .flex.items-end.justify-between
-    %div
-      .text-gray-300.font-light Updated: #{relative_time2(submission.team.updated_at)}
+    .flex.space-x-12
+      %div
+        .text-gray-300.font-light Updated: #{relative_time2(submission.team.updated_at)}
 
-      .flex
-        %span.text-gray-300.font-light JP Spent:
-        .ml-1.flex.items-center
-          %span{ class: (submission.team.jp_total > 18000 ? 'text-red-400' : 'text-white') }
-            #{submission.team.jp_total}
-          .ml-1
-            - if submission.team.jp_total > 18000
-              = inline_svg('icons/cancel.svg', class: 'h-4 w-4 text-red-500')
-            - else
-              = inline_svg('icons/check-circle.svg', class: 'h-4 w-4 text-green-500')
+        .flex
+          %span.text-gray-300.font-light JP Spent:
+          .ml-1.flex.items-center
+            %span{ class: (submission.team.jp_total > 18000 ? 'text-red-400' : 'text-white') }
+              #{submission.team.jp_total}
+            .ml-1
+              - if submission.team.jp_total > 18000
+                = inline_svg('icons/cancel.svg', class: 'h-4 w-4 text-red-500')
+              - else
+                = inline_svg('icons/check-circle.svg', class: 'h-4 w-4 text-green-500')
+
+      .hidden.sm:block
+        - submission.team.characters.each do |char|
+          .sprite.scale-125{ style: sprite_style_for(submission.team, char.job, char.sex)}
 
     %div
       = actions
