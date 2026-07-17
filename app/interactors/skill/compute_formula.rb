@@ -76,7 +76,7 @@ class Skill::ComputeFormula < ActiveInteractor::Base
         w = weapon.dup
         w.data['wp'] = character.wp if weapon.name == Item.fist.name
 
-        Weapon::EvaluateFormula.perform(character:, weapon: w, wp_modifier:).result
+        Weapon::EvaluateFormula.perform(character:, weapon: w, wp_modifier:, resolve_two_fist: false).damage
       }
 
       min = weapon_results.map{ |r| r.try(:min) || r }.sum
