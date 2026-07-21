@@ -118,6 +118,17 @@ class Events::SubmissionsController < ApplicationController
     send_data(result.io.read, filename: "#{@event.title} Teams.zip")
   end
 
+  def clone
+    load_submission
+
+    new_team = Team.new(@team.attributes.except('id', 'user_id'))
+    new_team.user = Current.user
+
+    new_team.save
+
+    head :ok
+  end
+
   private
 
     def load_event

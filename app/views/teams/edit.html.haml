@@ -19,11 +19,16 @@
           %svg.w-6.h-6{fill: "none", stroke: "currentColor", "stroke-width" => "1.5", viewbox: "0 0 24 24", xmlns: "http://www.w3.org/2000/svg"}
             %path{d: "M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5", "stroke-linecap" => "round", "stroke-linejoin" => "round"}
 
-        #file-actions.pt-2.flex.flex-col.items-end.hidden.space-y-2{ data: { context_target: 'tooltip' } }
+        #file-actions.w-40.pt-2.flex.flex-col.items-end.hidden.space-y-2{ data: { context_target: 'tooltip' } }
           = link_to(export_team_path, class: 'flex items-center group cursor-pointer', data: { action: 'context#close' }) do
             .px-4.h-10.flex.justify-center.items-center.text-white.bg-gray-700.rounded-full.shadow-sm.hover:bg-gray-600.focus:ring-4.focus:ring-gray-300.focus:outline-none{ for: 'upload-team' }
               .mr-2.text-sm Download
               = inline_svg_tag('icons/download.svg', class: 'h-5 w-5 text-white')
+
+          = link_to(clone_team_path(@team), class: 'flex items-center group cursor-pointer', data: { action: 'context#close', turbo_method: :post } ) do
+            .px-4.h-10.flex.justify-center.items-center.text-white.bg-gray-700.rounded-full.shadow-sm.hover:bg-gray-600.focus:ring-4.focus:ring-gray-300.focus:outline-none
+              .mr-2.text-sm Clone Team
+              = inline_svg_tag('icons/copy.svg', class: 'h-5 w-5 text-white')
 
           = form_with(url: team_memgen_path(team_id: @team.id), method: :post, multipart: true, data: { turbo: false, controller: 'form' }) do
             %label.cursor-pointer{ for: 'upload-teams' }

@@ -18,7 +18,7 @@
             %path{d: "M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5", "stroke-linecap" => "round", "stroke-linejoin" => "round"}
 
         #file-actions.pt-2.flex.flex-col.items-end.hidden.space-y-2{ data: { context_target: 'tooltip' } }
-          = link_to(clone_team_path(@team), class: 'flex items-center group cursor-pointer w-52', data: { action: 'context#close', turbo_method: :post } ) do
+          = link_to(clone_event_submission_path(event_id: @event.id, id: @submission.id), class: 'flex items-center group cursor-pointer w-52', data: { action: 'context#close', turbo_method: :post } ) do
             .px-4.h-10.flex.justify-center.items-center.text-white.bg-gray-700.rounded-full.shadow-sm.hover:bg-gray-600.focus:ring-4.focus:ring-gray-300.focus:outline-none
               .mr-2.text-sm Copy to My Teams
               = inline_svg_tag('icons/copy.svg', class: 'h-5 w-5 text-white')

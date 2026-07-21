@@ -76,6 +76,7 @@ Rails.application.routes.draw do
       member do
         patch :approve
         patch :cut
+        post :clone
       end
 
       collection do
