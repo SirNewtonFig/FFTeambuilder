@@ -1,0 +1,91 @@
+.py-4
+  .chart.rounded-lg.p-2.w-full.border.border-gray-700{ data: { controller: 'chart', chart: { target: 'chart', chart_data_value: stacked_chart_data(event, :job_counts, title: 'Jobs With and Without Primary Skills', labels: ['With Skills', 'Without Skills'], limit: 255).to_json } } }
+  .chart.my-4.rounded-lg.p-2.w-full.border.border-gray-700{ data: { controller: 'chart', chart: { target: 'chart', chart_data_value: stacked_chart_data(event, :secondary_counts, title: 'Secondaries With and Without Skills', labels: ['With Skills', 'Without Skills'], limit: 255).to_json } } }
+  .chart.my-4.rounded-lg.p-2.w-full.border.border-gray-700{ data: { controller: 'chart', chart: { target: 'chart', chart_data_value: stacked_chart_data(event, :generics_by_gender, title: 'Generics By Gender', labels: ['Male', 'Female'], limit: 255).to_json } } }
+
+  .chart.my-4.rounded-lg.p-2.w-full.border.border-gray-700{ data: { controller: 'chart', chart: { target: 'chart', chart_data_value: chart_data(event, :reactions, limit: 255).to_json } } }
+  .chart.my-4.rounded-lg.p-2.w-full.border.border-gray-700{ data: { controller: 'chart', chart: { target: 'chart', chart_data_value: chart_data(event, :empowers, limit: 255).to_json } } }
+  .chart.my-4.rounded-lg.p-2.w-full.border.border-gray-700{ data: { controller: 'chart', chart: { target: 'chart', chart_data_value: chart_data(event, :supports, limit: 255).to_json } } }
+
+  .chart.my-4.rounded-lg.p-2.w-full.border.border-gray-700{ data: { controller: 'chart', chart: { target: 'chart', chart_data_value: chart_data(event, :weapons, limit: 255).to_json } } }
+  .chart.my-4.rounded-lg.p-2.w-full.border.border-gray-700{ data: { controller: 'chart', chart: { target: 'chart', chart_data_value: chart_data(event, :shields, limit: 255).to_json } } }
+  .chart.my-4.rounded-lg.p-2.w-full.border.border-gray-700{ data: { controller: 'chart', chart: { target: 'chart', chart_data_value: chart_data(event, :helmets, limit: 255).to_json } } }
+  .chart.my-4.rounded-lg.p-2.w-full.border.border-gray-700{ data: { controller: 'chart', chart: { target: 'chart', chart_data_value: chart_data(event, :armors, limit: 255).to_json } } }
+  .chart.my-4.rounded-lg.p-2.w-full.border.border-gray-700{ data: { controller: 'chart', chart: { target: 'chart', chart_data_value: chart_data(event, :accessories, limit: 255).to_json } } }
+
+  .rounded-lg.p-4.w-full.border.border-gray-700
+    .text-sm.text-white.font-bold Hall of Shame
+    .text-xs.text-gray-400 These are the options nobody decided to use this event.
+
+    .mt-4
+      .flex.flex-row.items-start
+        .flex.flex-col.md:flex-row
+          .mr-2.w-40.mb-2
+            .mb-1.text-sm.text-white.font-bold Jobs
+            - jobs = unused_jobs(event)
+            - jobs.each do |job|
+              .text-xs.text-gray-300= job.name
+
+          .mr-2.w-40.mb-2
+            .mb-1.text-sm.text-white.font-bold Reactions
+            - skills = unused_reactions(event)
+            - skills.each do |skill, job|
+              .text-xs.text-gray-300.text-nowrap
+                = skill
+                %span.text-gray-500 • #{job}
+
+        .flex.flex-col.md:flex-row
+          .mr-2.w-40.mb-2
+            .mb-1.text-sm.text-white.font-bold Empowers
+            - skills = unused_empowers(event)
+            - skills.each do |skill, job|
+              .text-xs.text-gray-300.text-nowrap
+                = skill
+                %span.text-gray-500 • #{job}
+
+          .mr-2.w-40.mb-2
+            .mb-1.text-sm.text-white.font-bold Supports
+            - skills = unused_supports(event)
+            - skills.each do |skill, job|
+              .text-xs.text-gray-300.text-nowrap
+                = skill
+                %span.text-gray-500 • #{job}
+
+      .mt-4
+        - unused_skills = unused_actions(event).in_groups(4)
+        .mb-1.text-sm.text-white.font-bold Skills
+        .flex.flex-row.items-start
+          .flex.flex-col.md:flex-row
+            - unused_skills.first(2).each do |skills|
+              .mr-2.w-40.mb-2
+                - skills.each do |skill, job|
+                  .text-xs.text-gray-300.text-nowrap
+                    = skill
+                    %span.text-gray-500 • #{job}
+          .flex.flex-col.md:flex-row
+            - unused_skills.last(2).each do |skills|
+              .mr-2.w-40.mb-2
+                - skills.each do |skill, job|
+                  .text-xs.text-gray-300.text-nowrap
+                    = skill
+                    %span.text-gray-500 • #{job}
+
+      .mt-4
+        - unused_items = unused_items(event).in_groups(4)
+        .mb-1.text-sm.text-white.font-bold Items
+        .flex.flex-row.items-start
+          .flex.flex-col.md:flex-row
+            - unused_items.first(2).each do |items|
+              .mr-2.w-40.mb-2
+                - items.compact.each do |item|
+                  .text-xs.text-gray-300.text-nowrap
+                    = item.name
+                    %span.text-gray-500 • #{item.item_type}
+          .flex.flex-col.md:flex-row
+            - unused_items.last(2).each do |items|
+              .mr-2.w-40.mb-2
+                - items.compact.each do |item|
+                  .text-xs.text-gray-300.text-nowrap
+                    = item.name
+                    %span.text-gray-500 • #{item.item_type}
+

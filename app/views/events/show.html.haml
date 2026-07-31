@@ -83,6 +83,10 @@
         #my-tab.text-sm.font-semibold.px-4.rounded-t-lg.py-1.cursor-pointer{ data: { tab_target: 'tab', action: 'click->tab#click' } }
           My Teams
           %span.ml-1.opacity-85.text-xs{ data: { counter_target: 'counter', scope: 'mine' } }
+        - if @event.mine? || @event.show_bracket?
+          #statistics-tab.text-sm.font-semibold.px-4.rounded-t-lg.py-1.cursor-pointer{ data: { tab_target: 'tab', action: 'click->tab#click' } }
+            Statistics
+            %span.text-orange-400.font-normal (beta)
 
       - if @event.show_standings?
         #standings.px-4.bg-gray-800.rounded.rounded-tl-none.hidden{ data: { tab_target: 'pane' } }
@@ -101,6 +105,10 @@
 
       #my-submissions.px-4.bg-gray-800.rounded.rounded-tl-none.hidden{ data: { tab_target: 'pane' } }
         = render 'events/show/my_submissions', submissions: @my_submissions, event: @event
+
+      - if @event.mine? || @event.show_bracket?
+        #statistics.px-4.bg-gray-800.rounded.rounded-tl-none.hidden{ data: { tab_target: 'pane' } }
+          = render 'events/show/statistics', event: @event
 
   .z-10
     = render 'users/menu', back_path: dashboard_path

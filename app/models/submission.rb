@@ -10,6 +10,7 @@ class Submission < ApplicationRecord
   before_validation :set_names, on: :create
 
   scope :active, -> { where(active: true) }
+  scope :approved, -> { where(approved: true) }
 
   scope :queue_ordered, -> {
     left_joins(:team)

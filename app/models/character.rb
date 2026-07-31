@@ -64,7 +64,7 @@ class Character
   end
 
   memoize def job
-    Job.find(data['job'])
+    Job.find_by(id: data['job'])
   end
 
   def sex
@@ -242,39 +242,39 @@ class Character
   end
 
   memoize def rhand
-    Item.find(data['rhand']) if data['rhand'].present?
+    Item.find_by(id: data['rhand']) if data['rhand'].present?
   end
 
   memoize def lhand
-    Item.find(data['lhand']) if data['lhand'].present?
+    Item.find_by(id: data['lhand']) if data['lhand'].present?
   end
 
   memoize def helmet
-    Item.find(data['helmet']) if data['helmet'].present?
+    Item.find_by(id: data['helmet']) if data['helmet'].present?
   end
 
   memoize def armor
-    Item.find(data['armor']) if data['armor'].present?
+    Item.find_by(id: data['armor']) if data['armor'].present?
   end
 
   memoize def accessory
-    Item.find(data['accessory']) if data['accessory'].present?
+    Item.find_by(id: data['accessory']) if data['accessory'].present?
   end
 
   memoize def secondary
-    Job.find(data['secondary']) if data['secondary'].present?
+    Job.find_by(id: data['secondary']) if data['secondary'].present?
   end
 
   memoize def reaction
-    Skill.find(data['reaction']) if data['reaction'].present?
+    Skill.find_by(id: data['reaction']) if data['reaction'].present?
   end
 
   memoize def support
-    Skill.find(data['support']) if data['support'].present?
+    Skill.find_by(id: data['support']) if data['support'].present?
   end
 
   memoize def movement
-    Skill.find(data['movement']) if data['movement'].present?
+    Skill.find_by(id: data['movement']) if data['movement'].present?
   end
 
   memoize def rsm
@@ -402,6 +402,8 @@ class Character
   end
 
   memoize def unarmed?
+    return false if monster?
+
     [rhand, lhand].compact.none?(&:weapon?)
   end
 

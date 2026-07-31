@@ -4,6 +4,7 @@ module ApplicationHelper
   include FormulaHelper
   include SpriteHelper
   include StatHelper
+  include StatisticsHelper
   include ZodiacHelper
 
   def modal_classes
