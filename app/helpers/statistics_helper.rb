@@ -118,7 +118,7 @@ module StatisticsHelper
   end
 
   memoize def unused_jobs(event)
-    Job.where.not(name: job_counts(event).map(&:first))
+    Job.where.not(name: job_counts(event).map(&:first)).load
   end
 
   memoize def used_skills(event)
@@ -129,8 +129,36 @@ module StatisticsHelper
     characters_for(event).flat_map(&:items).uniq
   end
 
-  memoize def unused_items(event)
-    Item.where.not(id: used_items(event).map(&:id)).order(Arel.sql "item_type, data ->> 'memgen_id'")
+  memoize def unused_items(event, type)
+    Item.where.not(id: used_items(event).map(&:id))
+      .order(Arel.sql "item_type, data ->> 'memgen_id'")
+      .pluck(:name, :item_type)
+      .group_by(&:last)[type] || []
+  end
+
+  memoize def unused_weapons(event)
+    unused_items(event, 'weapon')
+      .map(&:first)
+  end
+
+  memoize def unused_shields(event)
+    unused_items(event, 'shield')
+      .map(&:first)
+  end
+
+  memoize def unused_helmets(event)
+    unused_items(event, 'helmet')
+      .map(&:first)
+  end
+
+  memoize def unused_armors(event)
+    unused_items(event, 'armor')
+      .map(&:first)
+  end
+
+  memoize def unused_accessories(event)
+    unused_items(event, 'accessory')
+      .map(&:first)
   end
 
   memoize def unused_skills(event)
@@ -138,33 +166,27 @@ module StatisticsHelper
       .joins(:job)
       .order(Arel.sql "jobs.id, skills.data ->> 'memgen_id'")
       .where.not(jobs: { id: unused_jobs(event) })
+      .pluck(Arel.sql 'skills.name, jobs.name, skills.skill_type')
+      .group_by(&:last)
   end
 
   memoize def unused_actions(event)
-    unused_skills(event)
-      .pluck(Arel.sql 'skills.name, jobs.name, skills.skill_type')
-      .group_by(&:last)['action']
+    unused_skills(event)['action']
       .map{|x| x.first(2) }
   end
 
   memoize def unused_reactions(event)
-    unused_skills(event)
-      .pluck(Arel.sql 'skills.name, jobs.name, skills.skill_type')
-      .group_by(&:last)['reaction']
+    unused_skills(event)['reaction']
       .map{|x| x.first(2) }
   end
 
   memoize def unused_empowers(event)
-    unused_skills(event)
-      .pluck(Arel.sql 'skills.name, jobs.name, skills.skill_type')
-      .group_by(&:last)['support']
+    unused_skills(event)['support']
       .map{|x| x.first(2) }
   end
 
   memoize def unused_supports(event)
-    unused_skills(event)
-      .pluck(Arel.sql 'skills.name, jobs.name, skills.skill_type')
-      .group_by(&:last)['movement']
+    unused_skills(event)['movement']
       .map{|x| x.first(2) }
   end
 

@@ -25,6 +25,8 @@
             - jobs = unused_jobs(event)
             - jobs.each do |job|
               .text-xs.text-gray-300= job.name
+            - if jobs.blank?
+              .text-xs.text-gray-500.italic All in use!
 
           .mr-2.w-40.mb-2
             .mb-1.text-sm.text-white.font-bold Reactions
@@ -33,6 +35,8 @@
               .text-xs.text-gray-300.text-nowrap
                 = skill
                 %span.text-gray-500 • #{job}
+              - if skills.blank?
+                .text-xs.text-gray-500.italic All in use!
 
         .flex.flex-col.md:flex-row
           .mr-2.w-40.mb-2
@@ -42,6 +46,8 @@
               .text-xs.text-gray-300.text-nowrap
                 = skill
                 %span.text-gray-500 • #{job}
+              - if skills.blank?
+                .text-xs.text-gray-500.italic All in use!
 
           .mr-2.w-40.mb-2
             .mb-1.text-sm.text-white.font-bold Supports
@@ -50,6 +56,8 @@
               .text-xs.text-gray-300.text-nowrap
                 = skill
                 %span.text-gray-500 • #{job}
+              - if skills.blank?
+                .text-xs.text-gray-500.italic All in use!
 
       .mt-4
         - unused_skills = unused_actions(event).in_groups(4)
@@ -71,21 +79,55 @@
                     %span.text-gray-500 • #{job}
 
       .mt-4
-        - unused_items = unused_items(event).in_groups(4)
-        .mb-1.text-sm.text-white.font-bold Items
+        - weapons = unused_weapons(event).in_groups(4)
+        .mb-1.text-sm.text-white.font-bold Weapons
         .flex.flex-row.items-start
           .flex.flex-col.md:flex-row
-            - unused_items.first(2).each do |items|
+            - weapons.first(2).each do |items|
               .mr-2.w-40.mb-2
                 - items.compact.each do |item|
-                  .text-xs.text-gray-300.text-nowrap
-                    = item.name
-                    %span.text-gray-500 • #{item.item_type}
-          .flex.flex-col.md:flex-row
-            - unused_items.last(2).each do |items|
-              .mr-2.w-40.mb-2
-                - items.compact.each do |item|
-                  .text-xs.text-gray-300.text-nowrap
-                    = item.name
-                    %span.text-gray-500 • #{item.item_type}
+                  .text-xs.text-gray-300
+                    = item
 
+          .flex.flex-col.md:flex-row
+            - weapons.last(2).each do |items|
+              .mr-2.w-40.mb-2
+                - items.compact.each do |item|
+                  .text-xs.text-gray-300
+                    = item
+
+      .mt-4
+        .flex.flex-row.items-start
+          .flex.flex-col.md:flex-row
+            .mr-2.w-40.mb-2
+              .mb-1.text-sm.text-white.font-bold Shields
+              - shields = unused_shields(event)
+              - shields.each do |shield|
+                .text-xs.text-gray-300= shield
+              - if shields.blank?
+                .text-xs.text-gray-500.italic All in use!
+
+            .mr-2.w-40.mb-2
+              .mb-1.text-sm.text-white.font-bold Helmets
+              - helmets = unused_helmets(event)
+              - helmets.each do |helmet, job|
+                .text-xs.text-gray-300= helmet
+              - if helmets.blank?
+                .text-xs.text-gray-500.italic All in use!
+
+          .flex.flex-col.md:flex-row
+            .mr-2.w-40.mb-2
+              .mb-1.text-sm.text-white.font-bold Armor
+              - armors = unused_armors(event)
+              - armors.each do |armor|
+                .text-xs.text-gray-300= armor
+              - if armors.blank?
+                .text-xs.text-gray-500.italic All in use!
+
+            .mr-2.w-40.mb-2
+              .mb-1.text-sm.text-white.font-bold Accessories
+              - accessories = unused_accessories(event)
+              - accessories.each do |accessory, job|
+                .text-xs.text-gray-300= accessory
+              - if accessories.blank?
+                .text-xs.text-gray-500.italic All in use!
