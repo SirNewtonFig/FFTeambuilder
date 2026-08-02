@@ -1,5 +1,5 @@
 %div{ class: 'w-[40rem]' }
-  = form_for(event, data: { controller: 'form', form_modal_outlet: '.modal-controller' }) do |f|
+  = form_for(event, data: { controller: 'form', form_modal_outlet: '.modal-controller', turbo_frame: '_top' }) do |f|
     .space-y-6
       %div
         = f.label(:title, 'Event Title', class: 'text-xs block')
@@ -8,10 +8,14 @@
       %div
         = f.label(:slug, 'Event Slug', class: 'text-xs block')
         = f.text_field(:slug, placeholder: 'PizzafestJan2025', class: text_field_classes_neutral)
-      
+
       %div
         = f.label(:description, 'Event Description', class: 'text-xs block')
         = f.text_area(:description, rows: 3, class: text_area_classes_neutral)
+
+      %div
+        = f.label(:format, 'Event Format', class: 'text-xs  block')
+        = f.select(:format, ['double elimination', 'single elimination', 'round robin', 'swiss'], {}, { class: "w-full #{select_classes_neutral}" })
 
       %div
         = f.label(:deadline, 'Submission Deadline', class: 'text-xs  block')

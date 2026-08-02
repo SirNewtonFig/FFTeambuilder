@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2025_06_26_231707) do
+ActiveRecord::Schema[7.1].define(version: 2026_08_02_010235) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -34,6 +34,7 @@ ActiveRecord::Schema[7.1].define(version: 2025_06_26_231707) do
     t.text "state", default: "open"
     t.integer "external_id"
     t.text "bracket_url"
+    t.text "format", default: "double elimination"
     t.index ["user_id"], name: "index_events_on_user_id"
   end
 

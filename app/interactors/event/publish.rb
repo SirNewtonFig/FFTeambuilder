@@ -18,7 +18,7 @@ class Event::Publish < Event::ChallongeBaseInteractor
       t = Challonge::Tournament.new
       t.name = event.title
       t.url = event.slug
-      t.tournament_type = 'double elimination'
+      t.tournament_type = event.format
       t.prediction_method = 1
       t.save
 
