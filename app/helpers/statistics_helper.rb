@@ -31,34 +31,26 @@ module StatisticsHelper
       .reverse
   end
 
-  def empowers(event)
+  def res_for(event, type)
     characters_for(event)
-      .select{|c| c.support.present? }
-      .group_by(&:support)
+      .filter_map{ |c| c.send(type) }
+      .map(&:name)
+      .group_by(&:itself)
       .transform_values(&:count)
-      .transform_keys(&:name)
       .sort_by(&:last)
       .reverse
+  end
+
+  def empowers(event)
+    res_for(event, :support)
   end
 
   def reactions(event)
-    characters_for(event)
-      .select{|c| c.reaction.present? }
-      .group_by(&:reaction)
-      .transform_values(&:count)
-      .transform_keys(&:name)
-      .sort_by(&:last)
-      .reverse
+    res_for(event, :reaction)
   end
 
   def supports(event)
-    characters_for(event)
-      .select{|c| c.movement.present? }
-      .group_by(&:movement)
-      .transform_values(&:count)
-      .transform_keys(&:name)
-      .sort_by(&:last)
-      .reverse
+    res_for(event, :movement)
   end
 
   def weapons(event)
